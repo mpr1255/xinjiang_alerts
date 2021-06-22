@@ -87,6 +87,8 @@ for (i in 1:nrow(feeds)){
     mutate(html_file_names = str_remove_all(html_file_names, "\\/"))
   
   fwrite(df_input, paste0(data_dir,topic,".csv"))
+  
+  print(glue("found {nrow(df_for_output)} URLs, removed dupes, now got {nrow(df_input)} in queue...."))
 
   
   for (j in 1:nrow(df_input)){
