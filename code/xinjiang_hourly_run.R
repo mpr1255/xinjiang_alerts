@@ -152,8 +152,9 @@ for (i in 1:nrow(feeds)){
       print("var TRUE. sent to archive already")
     }
       
+    fwrite(df_input, paste0(data_dir,topic,".csv")) # I think it's OK to write it out here....
     # this is still in the j loop.
   }
-  fwrite(df_input, paste0(data_dir,topic,".csv")) # end of the j loop; it's going to write out everything that happened in the j
+  # fwrite(df_input, paste0(data_dir,topic,".csv")) # end of the j loop; it's going to write out everything that happened in the j
   # this is in the i loop
 }
