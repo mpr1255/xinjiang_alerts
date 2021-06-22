@@ -16,15 +16,15 @@ Then, it opens that RSS feed, dumps all the URLs into `{topic}.csv`, eliminates 
 I will probably add a twitter bot later so it also tweets out all the new links it's finding. 
 
 ## Why?
-Because important data is quite often deleted soon after being published. I originally wrote this for my own topic, organ trafficking, but it is obviously useful for the Xinjiang issue so I'm making it publish with that research community in mind. 
+Because important data is quite often deleted soon after being published. I originally wrote this for my own topic, organ trafficking, but it is obviously useful for the Xinjiang issue so I'm making it public with that research community in mind. 
 
 ## User guide
 Several ways to use this: 
 
-1. Just check the data/{topic} folder and you'll see a tonne of URLS -- that is going to get unwieldy soon though; 
-2. Check the xinjiang.csv and you'll be able to see the title and excerpt that google alerts originally served up. You'll also see if there's a html file saved or not (and if it was successful; i.e. 0 or 1), plus the size of the html file. It's likely that very small files failed and what's saved is a corrupt file.
+1. Just check the `data/{topic}` folder and you'll see a tonne of URLS -- that is going to get unwieldy soon though; 
+2. Check the `data/xinjiang.csv` or `data/uyghur.csv` and you'll be able to see the title and excerpt that google alerts originally served up. You'll also see if there's a html file saved or not (and if it was successful; i.e. 0 or 1), plus the size of the html file. It's likely that very small files failed and what's saved is a corrupt file.
 3. Clone the entire repo locally and get updates to your machine; 
-4. Etc.
+4. etc.
 
 # Low-hanging fruit for development
 ## integrate the archive link
