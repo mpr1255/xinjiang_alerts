@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+try {
+var errorsSent = {};
+var errorsCount = {};
+const errorHandlingScript =
+(function () {
+function sendError(data) {
+var oReq = new XMLHttpRequest();
+oReq.open("POST", "https://ui-logs.glosbe.com/log/error", true);
+oReq.setRequestHeader("Content-type", "application/json;charset=utf-8");
+oReq.send(JSON.stringify(data));
+}
+window.onerror = function (message, file, line, col, error) {
+var gitRevision = (window.glosbe && window.glosbe.gitRevision) || '';
+var key = new String(file)
++ " : " + new String(line)
++ " : " + new String(col)
++ " : " + new String(message)
++ " : " + new String(error);
+errorsCount[key] = (errorsCount[key] || 0) + 1;
+if (Date.now() - errorsSent[key] < 30000) {
+return;
+}
+errorsSent[key] = Date.now();
+var data = {
+message: message,
+file: file,
+line: line,
+col: col,
+url: window.location.toString(),
+userAgent: window.navigator.userAgent,
+source: 'glosbe-ui-server',
+count: errorsCount[key],
+gitRevision: gitRevision };
+if (error) { data.stack = error.stack; }
+sendError(data);
+delete errorsCount[key];
+};
+})()}catch (e) {};
+</script>
+<title>翻译 &#39;%D8%B2%D8%A7%D9%8A%D9%89%D8%B1&#39; – 字典 中文-维吾尔文 | Glosbe</title>
+<meta name="description" content="检查“ %D8%B2%D8%A7%D9%8A%D9%89%D8%B1”到中文的翻译。浏览句子中%D8%B2%D8%A7%D9%8A%D9%89%D8%B1的翻译示例，听发音并学习语法。">
+<link href="https://glosbe.com/ug/zh/%25D8%25B2%25D8%25A7%25D9%258A%25D9%2589%25D8%25B1" rel="alternate" hreflang="x-default" /><link href="https://zh.glosbe.com/ug/zh/%25D8%25B2%25D8%25A7%25D9%258A%25D9%2589%25D8%25B1" rel="alternate" hreflang="zh" />
+<meta name="keywords" content="字典，globe，翻译，定义，发音，例句，翻译记忆库">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link href="/opensearch?l1=ug&l2=zh" rel="search" type="application/opensearchdescription+xml" title="维吾尔文-中文字典">
+<meta name="msapplication-TileColor" content="#9f00a7">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-title" content="Glosbe">
+<meta name="application-name" content="Glosbe">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="https://securepubads.g.doubleclick.net/tag/js/gpt.js" as="script">
+<link rel="preconnect" href="https://www.google-analytics.com" >
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net/">
+<style>@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{75%,to{transform:scale(2);opacity:0}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,to{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1)}}@font-face{font-family:"fontello";font-display:swap;src:url(/assets/fonts/fontello/fontello/fontello.eot?1);src:url(/assets/fonts/fontello/fontello.eot?1#iefix) format("embedded-opentype"),url(/assets/fonts/fontello/fontello.woff2?1) format("woff2"),url(/assets/fonts/fontello/fontello.woff?1) format("woff"),url(/assets/fonts/fontello/fontello.ttf?1) format("truetype"),url(/assets/fonts/fontello/fontello.svg?1#fontello) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]:before,[class^=icon-]:before{font-family:"fontello";font-style:normal;font-weight:400;speak:never;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-loading{border:.25rem solid #f3f3f3;border-top:.25rem solid #e0e0e0;border-radius:50%;animation:spin 2s linear infinite}.icon-add:before{content:'\e81f'}.icon-alert-circle-i:before{content:'\ea3a'}.icon-arrow-down:before{content:'\e81b'}.icon-chevron-left:before{content:'\e81d'}.icon-chevron-right:before{content:'\f142'}.icon-close:before{content:'\f156'}.icon-delete-forever-outline:before{content:'\e802'}.icon-dots-vertical:before{content:'\f1d9'}.icon-keyboard:before{content:'\f30c'}.icon-keyboard-close:before{content:'\f30f'}.icon-magnify:before{content:'\f349'}.icon-menu:before{content:'\f35c'}.icon-pause:before{content:'\f3e4'}.icon-play:before{content:'\f40a'}.icon-settings:before{content:'\f493'}.icon-swap-horizontal:before{content:'\f4e1'}.icon-swap-vertical:before{content:'\f4e2'}.icon-tail-left:before{content:'\ea3e'}.icon-volume-middle:before{content:'\ea11'}html[dir=rtl] .icon-chevron-left:before,html[dir=rtl] .icon-chevron-right:before,html[dir=rtl] .icon-magnify:before,html[dir=rtl] .icon-play:before,html[dir=rtl] .icon-volume-middle:before{transform:scaleX(-1)}*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e4e4e7}:root{-moz-tab-size:4;tab-size:4}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5;scroll-behavior:smooth;font-size:16px}body{font-family:inherit;line-height:inherit;font-family:Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;;color:rgba(24,24,27,1);;background-color:rgba(228,228,231,1)}b,strong{font-weight:bolder}code,pre{font-size:1em}small{font-size:80%}sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,select{text-transform:none}[type=button],[type=submit],button{-webkit-appearance:button}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}body,figure,h1,h2,h3,h4,p,pre{margin:0}button{background-color:transparent;background-image:none;cursor:pointer}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}ul{list-style:none;margin:0;padding:0}img{border-style:solid}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#a1a1aa}h1,h2,h3,h4{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,select,textarea{padding:0;line-height:inherit;color:inherit}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}audio,iframe,img,svg{display:block;vertical-align:middle}img{max-width:100%;height:auto}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.bg-white,.hover\:bg-white:hover{;background-color:rgba(255,255,255,1)}.bg-blue-100,.bg-blue-50{;background-color:rgba(239,246,255,1)}.bg-blue-100{background-color:rgba(219,234,254,1)}.bg-blue-500,.bg-green-100{;background-color:rgba(59,130,246,1)}.bg-green-100{background-color:rgba(220,252,231,1)}.bg-green-500,.bg-yellow-100{;background-color:rgba(34,197,94,1)}.bg-yellow-100{background-color:rgba(254,249,195,1)}.bg-red-100,.bg-red-500{;background-color:rgba(254,226,226,1)}.bg-red-500{background-color:rgba(239,68,68,1)}.bg-gray-100,.bg-gray-50{;background-color:rgba(250,250,250,1)}.bg-gray-100{background-color:rgba(244,244,245,1)}.bg-gray-200,.bg-gray-500{;background-color:rgba(228,228,231,1)}.bg-gray-500{background-color:rgba(113,113,122,1)}.bg-gray-700,.bg-gray-800{;background-color:rgba(63,63,70,1)}.bg-gray-800{background-color:rgba(39,39,42,1)}.bg-gray-900,.bg-primary-50{;background-color:rgba(24,24,27,1)}.bg-primary-50{background-color:rgba(239,246,255,1)}.bg-primary-300,.bg-primary-400{;background-color:rgba(147,197,253,1)}.bg-primary-400{background-color:rgba(96,165,250,1)}.bg-primary-500,.bg-primary-600{;background-color:rgba(59,130,246,1)}.bg-primary-600{background-color:rgba(37,99,235,1)}.bg-primary-800,.bg-secondary-600{;background-color:rgba(30,64,175,1)}.bg-secondary-600{background-color:rgba(217,119,6,1)}.hover\:bg-green-200:hover{;background-color:rgba(187,247,208,1)}.hover\:bg-gray-50:hover{;background-color:rgba(250,250,250,1)}.hover\:bg-gray-100:hover{;background-color:rgba(244,244,245,1)}.hover\:bg-gray-200:hover{;background-color:rgba(228,228,231,1)}.hover\:bg-gray-300:hover{;background-color:rgba(212,212,216,1)}.hover\:bg-gray-600:hover{;background-color:rgba(82,82,91,1)}.hover\:bg-gray-700:hover{;background-color:rgba(63,63,70,1)}.hover\:bg-primary-400:hover{;background-color:rgba(96,165,250,1)}.hover\:bg-secondary-200:hover{;background-color:rgba(253,230,138,1)}.focus\:bg-gray-700:focus{;background-color:rgba(63,63,70,1)}.bg-opacity-50{--tw-bg-opacity: 0.5}.bg-opacity-75{--tw-bg-opacity: 0.75}.hover\:bg-opacity-25:hover{--tw-bg-opacity: 0.25}.border-blue-500,.border-white{;border-color:rgba(255,255,255,1)}.border-blue-500{border-color:rgba(59,130,246,1)}.border-blue-600,.border-green-700{;border-color:rgba(37,99,235,1)}.border-green-700{border-color:rgba(21,128,61,1)}.border-red-700,.border-yellow-700{;border-color:rgba(161,98,7,1)}.border-red-700{border-color:rgba(185,28,28,1)}.border-gray-100,.border-gray-200{;border-color:rgba(244,244,245,1)}.border-gray-200{border-color:rgba(228,228,231,1)}.border-gray-300,.border-gray-500{;border-color:rgba(212,212,216,1)}.border-gray-500{border-color:rgba(113,113,122,1)}.border-transparent{border-color:transparent}.border-primary-200,.border-primary-300{;border-color:rgba(191,219,254,1)}.border-primary-300{border-color:rgba(147,197,253,1)}.hover\:border-secondary-600:hover{;border-color:rgba(217,119,6,1)}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.rounded-full{border-radius:9999px}.page__section .translate-header.translate-header__first,.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.rounded-b{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.rounded-tl{border-top-left-radius:.25rem}.rounded-bl{border-bottom-left-radius:.25rem}.border-2{border-width:2px}.border{border-width:1px}.border-t-0{border-top-width:0}.border-b-0{border-bottom-width:0}.border-b-2{border-bottom-width:2px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-l-8{border-left-width:8px}.border-t{border-top-width:1px}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}#dictionary-search-form.input__with-keyboard .keyboard-activator,.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.table{display:table}.grid{display:grid}#dictionary-search-form.input__without-keyboard .keyboard-activator,.hidden{display:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.order-last{order:9999}.font-medium{font-weight:500}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-12{height:3rem}.h-24{height:6rem}.h-32{height:8rem}.h-full{height:100%}.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg,.text-xl{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.leading-5{line-height:1.25rem}.leading-none{line-height:1}.list-disc{list-style-type:disc}.m-1{margin:.25rem}.m-auto{margin:auto}.my-1{margin-top:.25rem;margin-bottom:.25rem}.my-2{margin-top:.5rem;margin-bottom:.5rem}.my-4{margin-top:1rem;margin-bottom:1rem}.my-8{margin-top:2rem;margin-bottom:2rem}.mx-auto{margin-left:auto;margin-right:auto}.mr-1{margin-right:.25rem}.mb-1{margin-bottom:.25rem}.mt-2{margin-top:.5rem}.mb-2{margin-bottom:.5rem}.mt-4{margin-top:1rem}.mb-4{margin-bottom:1rem}.ml-4{margin-left:1rem}.mb-6{margin-bottom:1.5rem}.mt-8{margin-top:2rem}.mb-8{margin-bottom:2rem}.max-h-screen{max-height:100vh}.max-w-full{max-width:100%}.max-w-screen-sm{max-width:640px}.object-contain{object-fit:contain}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.overflow-y-hidden{overflow-y:hidden}.overflow-y-scroll{overflow-y:scroll}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-4{padding:1rem}.footer-menu li,.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-8{padding-left:2rem;padding-right:2rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-32{padding-top:8rem;padding-bottom:8rem}.pt-1{padding-top:.25rem}.pr-2{padding-right:.5rem}.pb-2{padding-bottom:.5rem}.pl-2{padding-left:.5rem}.pb-4{padding-bottom:1rem}.pl-4{padding-left:1rem}.pt-6{padding-top:1.5rem}.pb-6{padding-bottom:1.5rem}.pl-6{padding-left:1.5rem}.pb-24{padding-bottom:6rem}.pt-32{padding-top:8rem}.page__section .translate-header.static,.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{top:0;right:0;bottom:0;left:0}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}*{--tw-shadow: 0 0 #0000;--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000}.shadow{--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)}.shadow,.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)}.shadow-lg{--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)}.fill-current{fill:currentColor}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}#nav__top a,#nav__top button,.hover\:text-white:hover,.text-white{;color:rgba(255,255,255,1)}.hover\:text-green-700:hover,.text-green-700,.text-yellow-700{;color:rgba(21,128,61,1)}.text-yellow-700{color:rgba(161,98,7,1)}.text-orange-700,.text-red-600{;color:rgba(194,65,12,1)}.text-red-600{color:rgba(220,38,38,1)}.text-gray-300,.text-red-700{;color:rgba(185,28,28,1)}.text-gray-300{color:rgba(212,212,216,1)}.text-gray-500,.text-gray-600{;color:rgba(113,113,122,1)}.text-gray-600{color:rgba(82,82,91,1)}.text-gray-700,.text-gray-800{;color:rgba(63,63,70,1)}.text-gray-800{color:rgba(39,39,42,1)}.hover\:text-gray-900:hover,.text-gray-900{;color:rgba(24,24,27,1)}#simmilar-phrases a,.text-primary-600,.text-primary-700{;color:rgba(37,99,235,1)}.text-primary-700{color:rgba(29,78,216,1)}.text-primary-800,footer a{;color:rgba(30,64,175,1)}.hover\:text-secondary-600:hover,.text-secondary-600,.text-warn-700{;color:rgba(217,119,6,1)}.text-warn-700{color:rgba(194,65,12,1)}.focus\:text-white:focus{;color:rgba(255,255,255,1)}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uppercase{text-transform:uppercase}.normal-case{text-transform:none}.hover\:underline:hover{text-decoration:underline}.visible{visibility:visible}.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-24{width:6rem}.w-48{width:12rem}.translation__example>p,.w-1\/2{width:50%}.w-1\/3{width:33.333333%}.w-2\/3{width:66.666667%}.w-1\/4{width:25%}.w-3\/4{width:75%}.w-full{width:100%}.z-0{z-index:0}.z-10{z-index:10}.z-30{z-index:30}.z-50{z-index:50}.transform{--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}.transition{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;transition-duration:150ms}.ease-in-out,.transition{transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150{transition-duration:150ms}.duration-300{transition-duration:300ms}html body *{-webkit-text-size-adjust:none;text-size-adjust:none;max-height:999999px}.border-b{border-bottom-width:1px}#translation-details-grammar table,.min-width-full{min-width:100%}.min-height-full{min-height:100%;min-height:100vh}.content{max-width:64rem;margin-left:auto;margin-right:auto;width:100%}.footer-header{margin-bottom:.25rem;font-size:1rem;line-height:1.5rem;;color:rgba(39,39,42,1)}a{color:rgba(29,78,216,1)}a,span.link{position:relative;cursor:pointer}a:hover,span.link{color:rgba(59,130,246,1)}#nav__top{height:3rem;;background-color:rgba(255,255,255,1)}#nav__top.nav__top__transparent a,#nav__top.nav__top__transparent button,#simmilar-phrases a:hover{;color:rgba(30,58,138,1)}.section-welcome{color:rgba(24,24,27,1);font-weight:600}.section-join-us,.section-welcome,a,a:hover,span.link{}.section-join-us{background:#19a366 url(/assets/images/world-dotted.png) no-repeat top;background-size:cover;color:rgba(255,255,255,1)}.even\:bg-gray-100:nth-child(even),.odd\:bg-gray-100:nth-child(odd){;background-color:rgba(244,244,245,1)}.even\:bg-gray-200:nth-child(even){;background-color:rgba(228,228,231,1)}.dense{font-size:1.5em;line-height:1.5em}.tmem__item{display:flex;padding-left:.5rem;padding-right:.5rem;position:relative;font-size:.875rem;line-height:1.25rem;;color:rgba(24,24,27,1);overflow-wrap:break-word;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms;padding-top:.5rem}.tmem__item:last-child{border-bottom-width:0}.tmem__item__menu{font-weight:700;font-size:1rem;line-height:1.5rem;width:1.5rem;height:1.5rem}.translations__list>li{margin-bottom:.5rem;position:relative;padding-left:1.5rem}html[dir=rtl] .translations__list>li{padding-left:0;padding-right:1.5rem}.translation__bullet{position:absolute;top:0;left:-.4rem;padding-left:.5rem;padding-right:.5rem;transition-property:all;transition-duration:300ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}html[dir=rtl] .translation__bullet{left:auto;right:-.4rem}.translation__bullet:focus{outline:0}.translation__bullet span{display:inline-block;;color:rgba(255,255,255,1);border-radius:9999px;width:1rem;height:1rem;line-height:1rem;font-size:.9rem;;background-color:rgba(59,130,246,1)}#sidebar-wordlist li.active span,.translation__definition{;color:rgba(39,39,42,1)}.translation__definition{font-size:.875rem;line-height:1.25rem}@media (min-width:768px){#sidebar-wordlist{overflow-y:auto}#translation-with-search-in-sidebar{width:100%;max-width:76rem}}#sidebar-wordlist li,#sidebar-wordlist li a,#sidebar-wordlist li>span{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:300ms}#sidebar-wordlist li{font-size:.875rem;line-height:1.5rem;padding:.125rem 1rem}#sidebar-wordlist li.active,#sidebar-wordlist li:hover{;color:rgba(29,78,216,1);;background-color:rgba(255,255,255,1)}#sidebar-wordlist li a,#sidebar-wordlist li>span{display:flex;width:100%;height:100%;;color:rgba(30,64,175,1);overflow-wrap:break-word}#sidebar-wordlist li.active span{font-weight:500}.translation__definition__language{font-size:.625rem;;color:rgba(113,113,122,1);word-break:keep-all;width:1.25rem;display:inline-block}.glosbe-image{border-radius:.25rem;--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);display:flex;align-items:center;overflow:hidden;flex-direction:column;position:relative;width:100%;height:100%;;background-color:rgba(250,250,250,1)}.glosbe-image:focus,.translation button:focus{outline:2px solid transparent;outline-offset:2px}#search-container,.glosbe__image__active{transition-duration:300ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}.glosbe__image__active{top:0;right:0;bottom:0;left:0;position:absolute;transition-property:opacity;opacity:0;;background-color:rgba(191,219,254,1)}.glosbe__image__active:hover{opacity:.5}.leading-3_5{line-height:.875rem}.left-100p{left:100%!important}.translate-header{text-transform:uppercase;top:3rem;z-index:5;font-size:.75rem;line-height:1rem;align-items:center;display:flex;white-space:nowrap;padding:.5rem;font-weight:700;;color:rgba(161,161,170,1);;background-color:rgba(250,250,250,1)}.phrase__translation .translate-header{margin-bottom:.5rem;margin-left:-.5rem;margin-right:-.5rem;padding-left:.5rem;padding-right:.5rem;border-bottom-width:1px;;border-color:rgba(228,228,231,1);;background-color:rgba(255,255,255,1)}.translate-header__expanded{margin-left:1px;margin-right:1px;;background-color:rgba(244,244,245,1)}.translation__example{margin-top:.25rem;padding-left:.5rem;width:100%;display:flex;;border-color:rgba(161,161,170,1);border-left-width:2px;;color:rgba(82,82,91,1);font-size:.875rem;line-height:1.25rem}html[dir=rtl] .translation__example{padding-left:0;padding-right:.5rem;border-right-width:2px;border-left-width:0}[dir=rtl]{text-align:right}.tmem__item strong,.translation__example strong{;background-color:rgba(255,247,237,1);background-color:#ffefdb;;color:rgba(39,39,42,1);font-weight:500}#search-container{transition-property:all}html[dir=rtl] #search-container{border-left-width:1px;border-right-width:0}.searchWidgetActive #search-container{position:fixed;top:3rem;height:3rem;left:0;right:0;z-index:30}.searchWidgetActive #nav__top{position:fixed;top:0;height:3rem;;background-color:rgba(255,255,255,1);left:0;right:0}.noscroll{overflow:hidden}.noscroll>div:first-child{overflow-y:scroll}#dictionary-search-form.input__with-keyboard input{max-width:calc(100% - 4rem)}#dictionary-search-form.input__without-keyboard input{max-width:calc(100% - 2rem)}@media (min-width:768px){#dictionary-search-form.input__with-keyboard input{max-width:calc(100% - 3rem)}#dictionary-search-form.input__without-keyboard input{max-width:calc(100% - 1.5rem)}}.break-word,p{word-break:break-word}.translation{display:inline-block}.translation button{text-align:inherit;font-size:1rem;line-height:1.5rem;margin-right:.5rem}.translation.dense button{font-size:1.25rem;line-height:1.75rem}#topBanner{display:flex;align-items:center;justify-content:center}#topBanner div{width:auto}.main-container{max-width:100%;width:100%;padding-left:.25rem;padding-right:.25rem}@media (min-width:768px){.main-container{padding-left:.5rem;padding-right:.5rem;max-width:calc(728px + 2rem)}}@media (min-width:1024px){.main-container.main-container-content{width:calc(100% - 160px - 2rem)}}@media (min-width:1280px){.main-container{max-width:calc(56rem + 4rem);padding-left:1.5rem;padding-right:1.5rem}.main-container.main-container-content{width:calc(100% - 336px - 1rem)}}#tb__cont__1,#tb__cont__2{height:104px;padding-top:2px}#tb__cont__2{z-index:20}.cookie-consent #tb__cont__2{height:calc(104px + 2rem);padding-bottom:2rem}@media (min-width:336px){#tb__cont__1{height:calc(280px + 1rem);position:sticky;bottom:-130px;margin-left:-.5rem;margin-right:-.5rem;padding:0;display:flex;align-items:center;justify-content:center;;background-color:rgba(250,250,250,1);border-width:1px;;border-color:rgba(212,212,216,1);border-radius:.25rem;overflow:hidden}}@media (min-width:1000px){#tb__cont__1{height:100px}}@media (min-width:1024px){#tb__cont__1{height:calc(280px + 1rem)}}#tb__cont__2{position:fixed;bottom:0;left:0;right:0;width:100%}.phrase__translation__summary{padding-top:.5rem;border-top-left-radius:.25rem;border-top-right-radius:.25rem;;background-color:rgba(250,250,250,1);;border-color:rgba(191,219,254,1);transition-property:border-color,width,height;transition-duration:300ms;border-bottom-width:1px}.phrase__translation__summary.translation__item-open{border-left-width:4px;padding-left:calc(.5rem - 4px)}.phrase__translation__summary button:focus{outline:2px solid transparent;outline-offset:2px}html[dir=rtl] .phrase__translation__summary ul{margin-left:0;margin-right:1rem}.phrase__translation__section{padding-left:.5rem;padding-right:.5rem;padding-bottom:.5rem}#dictionary-search{;color:rgba(39,39,42,1);font-size:.875rem;line-height:1.25rem;width:100%;padding-left:.25rem;flex:1 1 0%}#dictionary-search.dictionary-search__main{padding-top:.5rem;padding-bottom:.5rem}html[dir=rtl] #dictionary-search{padding-left:0;padding-right:.25rem}html[dir=rtl] #dictionary-search.dictionary-search__main{padding-left:0;padding-right:.75rem}#dictionary-search:focus,.button-sm:focus,.button-xs:focus,.text-button-xs:focus{outline:2px solid transparent;outline-offset:2px}html[dir=rtl] .glosbe-logo{transform:scaleX(-1)}#simmilar-phrases ul.simmilar__list>li{display:flex;padding:.5rem .25rem;word-break:break-word}.simmilar__source,.simmilar__target{font-size:.875rem;line-height:1.25rem}.simmilar__source{width:33.333333%;height:100%;text-align:right;;color:rgba(30,58,138,1)}.simmilar__target{width:66.666667%;padding-left:.5rem;padding-right:.5rem;word-break:break-word}@media (min-width:768px){.simmilar__source{width:25%}.simmilar__target{width:75%}}@media (min-width:1024px){.simmilar__source{width:16.666667%}.simmilar__target{width:83.333333%}}html[dir=rtl] .simmilar__source{text-align:left}#simmilar-phrases .simmilar__source a{;color:rgba(39,39,42,1)}.definition__definitions{font-size:.875rem;line-height:1.25rem;list-style-type:disc;padding-left:1rem}html[dir=rtl] #definition__definitions{padding-right:1rem;padding-left:0}.simmilar__list{padding-left:.5rem;padding-right:.5rem}html[dir=rtl] #sidebar{right:0;border-left-width:1px;border-right-width:0}@media (min-width:768px){#sidebar__inner{top:3rem;margin-top:3rem}#sidebar{top:3rem;;background-color:rgba(244,244,245,1);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:300ms;border-right-width:1px;;border-color:rgba(212,212,216,1)}.keyboard-active #sidebar,.keyboard-active #sidebar__inner{top:6rem}.keyboard-active #keyboard-container{position:sticky;top:3rem;z-index:50}}.fastnav-anchor{margin-top:-3.5rem;padding-top:3.5rem}#fast-nav,#fast-nav a{transition-property:all;transition-duration:300ms;transition-timing-function:cubic-bezier(.4,0,.2,1);border-color:transparent;border-bottom-width:2px}#fast-nav a{;color:rgba(63,63,70,1);border-bottom-width:1px}#fast-nav a,.button-xs#fast-nav a,.button-xs.block{display:block}#fast-nav .active a,#fast-nav a:hover{;color:rgba(29,78,216,1)}#fast-nav .active a{;border-color:rgba(245,158,11,1)}.page__section{margin-bottom:1rem;;background-color:rgba(255,255,255,1);border-radius:.25rem;border-width:1px;;border-color:rgba(212,212,216,1)}.button-sm,.button-xs,.text-button-xs{cursor:pointer;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:300ms;;color:rgba(180,83,9,1);display:inline-block;text-align:center;border-radius:.25rem}.button-xs,.text-button-xs{padding-left:.5rem;padding-right:.5rem;font-size:.75rem;line-height:1rem}.button-sm{font-size:.875rem;line-height:1.25rem;padding:.25rem .5rem}.button-sm:hover,.button-xs:hover,.button-xs__active,.text-button-xs:hover{ !important;background-color:rgba(180,83,9,1)!important; !important;color:rgba(255,255,255,1)!important}.button-sm,.button-xs{border-width:1px;;border-color:rgba(180,83,9,1);;background-color:rgba(255,255,255,1);font-weight:400}.phrase__summary__field{;background-color:rgba(228,228,231,1);;color:rgba(82,82,91,1);display:inline-block;padding-left:.5rem;padding-right:.5rem;border-radius:.25rem}.main__languages__widget{width:100%;text-align:center;padding-left:.5rem;padding-right:.5rem}.main__languages__widget .languages__flip{;color:rgba(217,119,6,1);width:3rem}.main__languages__widget .languages__select{width:calc(50% - 1.5rem)}#rightSidebarFirstBanner,#rightSidebarSecondBanner,#topBannerContainer,.trufla-container{display:flex;align-items:center;justify-content:center;border-width:1px;;border-color:rgba(212,212,216,1);;background-color:rgba(250,250,250,1);border-radius:.25rem;overflow:hidden}.trufla-container{margin-bottom:1rem}@media (min-width:768px){#rightSidebarFirstBanner{width:calc(160px + .5rem);height:calc(600px + .5rem);overflow:hidden}#rightSidebarSecondBanner{display:none}}@media (min-width:1280px){#rightSidebarFirstBanner,#rightSidebarSecondBanner{width:calc(336px + .5rem);height:calc(280px + .5rem);overflow:hidden}#rightSidebarSecondBanner{display:flex}}#topBannerContainer{height:calc(90px + .5rem)}@media (min-width:1024px){#topBannerContainer{min-width:calc(728px + .5rem)}}.author__name,.author__name__truncated{;color:rgba(161,161,170,1);font-size:.75rem;line-height:1rem}.author__name__truncated{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:6rem;display:inline-block;text-align:right}.less-frequent-translations .less-frequent-translations__button-hide,.less-frequent-translations.less-frequent-translations-expanded .less-frequent-translations__button-show,.less-frequent-translations.less-frequent-translations-expanded .less-frequent-translations__list-compact{display:none}.less-frequent-translations h2,.less-frequent-translations__list-compact{cursor:pointer}.less-frequent-translations__list-compact:hover{;background-color:rgba(244,244,245,1)}.less-frequent-translations__list-compact{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:300ms}.less-frequent-translations.less-frequent-translations-expanded .less-frequent-translations__button-hide{display:inline-block}.footer__with__wordlist{margin:none}@media (min-width:768px){.footer__with__wordlist{margin-left:20%;max-width:calc(728px + 2rem);width:calc(100% - 160px - 2rem)}}@media (min-width:1024px){.footer__with__wordlist{margin-left:16.666666667%;width:calc(100% - 336px - 1rem);padding-left:1rem;padding-right:1rem}}@media (min-width:1280px){.footer__with__wordlist{max-width:calc(56rem + 4rem)}}.definition__translations{column-count:2;word-break:break-word}h1,h2,h3{word-break:break-word}@media (min-width:768px){.definition__translations{column-count:4}}.translation__item{;border-color:rgba(255,255,255,1);border-width:1px 1px 1px 4px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:300ms;margin-left:-.25rem}.phrase__translation__summary.translation__item-open,.tmem__item__meta,.translation__item.translation__item-open{;border-color:rgba(147,197,253,1)}html[dir=rtl] .translation__item{border-right-width:4px;border-left-width:1px;padding-left:.5rem;padding-right:.25rem;margin-left:0;margin-right:-.25rem}.tmem__item__meta{position:relative;display:flex;align-items:center;padding-left:.5rem;padding-right:.5rem;padding-bottom:.5rem;border-color:rgba(244,244,245,1);border-bottom-width:1px}.tmem__item__meta:last-child{border-bottom-width:0}#change-dictionary-inline-container{position:sticky;top:-2rem;z-index:100}@media (min-width:768px){#change-dictionary-inline-container{position:absolute}}.search-box-lang{position:relative;flex:1 1 0%;width:calc(50% - 1.75rem)}@media (min-width:768px){.languages-picker-container{height:calc(2rem + .25rem)}}@media (min-width:1280px){.right-sidebar-ads-container{width:calc(336px + .5rem)}}@media (min-width:1536px){.right-sidebar-ads-container{width:20%}}#dictionary-content{max-width:49rem}@media (min-width:640px){.sm\:flex{display:flex}.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:text-left{text-align:left}.sm\:visible{visibility:visible}.sm\:w-64{width:16rem}.sm\:w-1\/2{width:50%}.sm\:w-1\/3{width:33.333333%}.sm\:w-2\/3{width:66.666667%}.sm\:w-3\/4{width:75%}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.md\:block{display:block}.md\:inline-block{display:inline-block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:flex-row{flex-direction:row}.md\:order-first{order:-9999}.md\:h-6{height:1.5rem}.md\:h-auto{height:auto}.md\:text-xs{font-size:.75rem;line-height:1rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:my-0{margin-top:0;margin-bottom:0}.md\:p-4{padding:1rem}.md\:p-20{padding:5rem}.md\:px-1{padding-left:.25rem;padding-right:.25rem}.md\:px-2{padding-left:.5rem;padding-right:.5rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:py-48{padding-top:12rem;padding-bottom:12rem}.md\:pt-24{padding-top:6rem}.md\:absolute{position:absolute}.md\:right-auto{right:auto}.md\:bottom-auto{bottom:auto}.md\:left-auto{left:auto}.md\:shadow-lg{--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.md\:w-6{width:1.5rem}.md\:w-96{width:24rem}.md\:w-auto{width:auto}.md\:w-1\/2{width:50%}.md\:w-1\/3{width:33.333333%}.md\:w-1\/4{width:25%}.md\:w-1\/5{width:20%}.md\:w-4\/5{width:80%}}@media (min-width:1024px){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:w-1\/3{width:33.333333%}.lg\:w-1\/5{width:20%}.lg\:w-1\/6{width:16.666667%}.lg\:w-5\/6{width:83.333333%}}@media (min-width:1280px){.xl\:px-6{padding-left:1.5rem;padding-right:1.5rem}}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-13110733-27"></script>
+<script>
+if (! window.location.hostname.match("(localhost|newui4)")) {
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-13110733-11');
+}
+</script>
+</head>
+<body class="overflow-y-scroll z-0 min-width-full min-height-full relative cookie-consent">
+<div class="fixed bottom-0 right-0 bg-white p-2 text-xs flex shadow items-center z-50 bg-white border-t border-gray-300">
+<div id="cookieconsent-description" class="px-2">Glosbe使用Cookie来确保您获得最佳体验</div>
+<a href="/acceptCookies" aria-label="dismiss cookie message" rel="nofollow"
+class="button-xs">得到它了！</a>
+</div>
+<div class="flex min-width-full min-height-full flex-col">
+<div class="w-full flex-grow min-height-full flex flex-col">
+<nav class="text-primary-700 fill-current flex items-center justify-between h-12 nav__top__transparent" id="nav__top">
+<div class="flex justify-center items-center">
+<button class="py-1 text-2xl focus:outline-none px-2" id="sidenavActivator" aria-label="Navigation menu"><span class="icon-menu"></span></button>
+<div>
+<a href="/" class="block text-2xl px-2 flex items-center">
+<img
+width="24" height="24"
+class="w-6 h-6"
+src="/assets/images/glosbe-logo-bird-2.svg"
+alt="Glosbe bird" />
+<span class="px-2 text-gray-900">Glosbe</span>
+</a>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-center">
+</div>
+<div class="hidden md:flex justify-center items-center">
+<a href="/settings" rel="nofollow" class="py-1 text-2xl focus:outline-none px-2" aria-label="settings"><span class="icon-settings"></span></a>
+<a class="px-2 p-1 text-sm" rel="nofollow" href="https://auth2.glosbe.com/login?returnUrl=https%3A%2F%2Fzh.glosbe.com%2Fug%2Fzh%2F%2525D8%2525B2%2525D8%2525A7%2525D9%25258A%2525D9%252589%2525D8%2525B1" id="navbar__login">
+登录 </a>
+</div>
+</nav>
+<div class="flex items-center justify-center my-2">
+<div id="topBannerContainer">
+<div id="topBanner" ></div>
+</div>
+</div>
+<div class="relative mx-auto w-full md:flex md:px-2 " id="translation-with-search-in-sidebar">
+<nav class="order-last md:order-first md:w-1/5 lg:w-1/5 top-0 left-0 md:rounded side-nav-block">
+<div class="w-full">
+<div class="bg-primary-600 top-0 z-10 md:rounded-t" id="search-container-parent">
+<div class="text-white flex items-center px-2 relative languages-picker-container">
+<span class="search-box-lang">
+<a
+href="/change-dictionary?l1=ug&amp;l2=zh" rel="nofollow"
+class="flex justify-center text-xs text-white focus:outline-none hover:bg-primary-400 hover:text-white rounded transition duration-150 ease-in-out"
+data-element="dictionary__source"
+>
+<span class="dictionary__source__name truncate">维吾尔文</span>
+<span class="icon-arrow-down"></span>
+</a>
+</span>
+<a href="/zh/ug/%25D8%25B2%25D8%25A7%25D9%258A%25D9%2589%25D8%25B1" aria-label="Flip languages" class="p-1 inline-block w-6 languages__flip" rel="nofollow"><span class="icon-swap-horizontal text-white text-md"></span></a>
+<span class="search-box-lang">
+<a
+href="/change-dictionary?l1=ug&amp;l2=zh" rel="nofollow"
+class=" flex justify-center text-xs text-white focus:outline-none hover:bg-primary-400 hover:text-white rounded transition duration-150 ease-in-out"
+data-element="dictionary__target"
+>
+<span class="dictionary__target__name truncate"> 中文
+</span>
+<span class="icon-arrow-down"></span>
+</a>
+</span>
+</div>
+<div class="w-full bg-primary-500 p-2" id="search-container">
+<div class="bg-white rounded px-1 h-full items-center shadow">
+<div class="w-full h-full relative">
+<form
+action="/ug/zh"
+class="flex h-full input__with-keyboard "
+id="dictionary-search-form">
+<input
+aria-label="在维吾尔文-中文词典中搜索"
+type="search"
+id="dictionary-search"
+name="q"
+spellcheck="false"
+autocorrect="off"
+autocomplete="off"
+autocapitalize="none"
+class="h-8 input__with-keyboard "
+placeholder="在维吾尔文-中文词典中搜索"
+lang="ug" dir="rtl" />
+<button class="icon-keyboard py-1 px-2 md:px-1 text-gray-500 focus:outline-none keyboard-activator" data-element="keyboard" type="button" aria-label="keyboard"></button>
+<button class="icon-magnify py-1 px-2 md:px-1 text-gray-500 focus:outline-none" data-element="search" type="submit" aria-label="search"></button>
+</form>
+</div>
+</div>
+<div id="search-suggestions-container"></div>
+</div>
+</div>
+<div class="hidden md:block" id="keyboard-container"></div>
+<div class="bg-gray-100 hidden md:block overflow-hidden border-gray-300 border border-t-0">
+<ul id="sidebar-wordlist" lang="ug" dir="rtl" >
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%D9%83%D8%A7%D8%AA" lang="ug" dir="rtl" >
+زاكات
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%DA%AF%D8%B1%DB%90%D8%A8" lang="ug" dir="rtl" >
+زاگرېب
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%D9%84%D9%89%D9%85%D9%84%D9%89%D9%82" lang="ug" dir="rtl" >
+زالىملىق
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%D9%85%D8%A7%D9%86" lang="ug" dir="rtl" >
+زامان
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%D9%85%D8%A8%D9%89%D9%8A%DB%95" lang="ug" dir="rtl" >
+زامبىيە
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D8%A7%D9%8A%D9%89%D8%B1" lang="ug" dir="rtl" >
+زايىر
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%95%D9%85%D8%A8%DB%87%D8%B1%DB%87%D8%BA" lang="ug" dir="rtl" >
+زەمبۇرۇغ
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%95%D9%85%DA%86%DB%95" lang="ug" dir="rtl" >
+زەمچە
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%95%D9%86%D8%AC%D9%89%D8%B1" lang="ug" dir="rtl" >
+زەنجىر
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%95%DA%BE%DB%95%D8%B1" lang="ug" dir="rtl" >
+زەھەر
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%95%D9%8A%D8%AA%DB%87%D9%86" lang="ug" dir="rtl" >
+زەيتۇن
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D9%88%D8%A6%D9%88%D9%84%D9%88%DA%AF%D9%89%D9%8A%DB%95" lang="ug" dir="rtl" >
+زوئولوگىيە
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D9%88%D9%86%D8%A7" lang="ug" dir="rtl" >
+زونا
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%DB%87%D9%84%DB%87%DA%86%DB%95" lang="ug" dir="rtl" >
+زۇلۇچە
+</a>
+</li>
+<li >
+<a href="/ug/zh/%D8%B2%D9%89%D8%A8%D9%88%20%D8%B4%DB%95%DA%BE%D9%89%D8%B1%D9%89" lang="ug" dir="rtl" >
+زىبو شەھىرى
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main class="flex-1 px-1 md:px-2">
+<div id="dictionary-content">
+<div class="md:rounded page-section my-2 md:my-0">
+<h1 class="text-xl text-gray-900 inline">
+<span data-element="source-phrase" lang="ug" dir="rtl" >%D8%B2%D8%A7%D9%8A%D9%89%D8%B1</span>
+在中文中 </h1>
+<a href="/ug/zh" class="text-xs text-primary-700">维吾尔文-中文字典</a>
+</div>
+<div>
+<div class="page__section phrase__translation py-4">
+<p data-element="no-translations" data-cy="no-translatins-found" class="px-2">
+没有翻译 <button class="button-sm add-translation add-translation-inline" aria-label="add translation">
+<span class="icon-add"></span>加
+</button>
+</p>
+<div>
+</div>
+</div>
+<div class="fast-nav-container trufla">
+<div id="automatic" class="absolute fastnav-anchor"></div>
+<div id="translation_automatic" class=""></div>
+</div>
+<div class="page__section fast-nav-container pb-4" id="examples">
+<div id="example" class="absolute fastnav-anchor"></div>
+<div class="translate-header translate-header__first ">
+<h2 class="flex-1 truncate">例子</h2>
+<span class="flex-1"></span>
+<a href="/add-example?l1=ug&l2=zh" class="button-xs add-tmem add-example-inline" aria-label="add example" rel="nofollow">
+<span class="icon-add"></span>
+加 </a>
+</div>
+<div class="md:flex items-center mb-2 bg-gray-50 p-2 text-sm text-gray-700">
+<label class="flex-1"><input type="checkbox" id="tmem__stem" checked=""> 干</label>
+</div>
+<div id="tmem_first_examples">
+<div>
+<div class="tmem__item ">
+<div class="w-1/2 pr-2 " lang="ug" dir="rtl" >
+دەل مۇشۇ يەر شۇ ، A12 ئەر 8: بولدى
+</div>
+<div class="w-1/2 relative pl-2" >
+<div class="dense">男8:好的,A12,就在那!</div>
+</div>
+</div>
+<div class="tmem__item__meta trufla ">
+<span class="flex-1"></span>
+<span class="author__name__truncated">ted2019</span>
+<button class="icon-dots-vertical tmem__item__menu" data-authorname="ted2019" data-authorid="140848" data-translationId="6633637874077768495" aria-label="Example menu"></button>
+</div>
+<div class="tmem__item bg-gray-50">
+<div class="w-1/2 pr-2 " lang="ug" dir="rtl" >
+Төвәндики мисални көрүп бақайли: “Логос [Сөз] илаһий еди” (“A New Translation of the Bible”).
+</div>
+<div class="w-1/2 relative pl-2" >
+<div class="dense">新约新译修稿)“在太初里是道,又道是与上帝同在,又道是神。”(</div>
+</div>
+</div>
+<div class="tmem__item__meta bg-gray-50">
+<span class="flex-1"></span>
+<span class="author__name__truncated">jw2019</span>
+<button class="icon-dots-vertical tmem__item__menu" data-authorname="jw2019" data-authorid="140708" data-translationId="6782504833174207298" aria-label="Example menu"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-4 text-xs text-gray-700" data-element="topwords-links">
+最受欢迎的查询列表：
+<a class="text-gray-700" href="/topwords/ug/zh/0-1000">1K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/1000-2000">~2K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/2000-3000">~3K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/3000-4000">~4K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/4000-5000">~5K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/5000-10000">~5-10K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/10000-20000">~10-20K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/20000-50000">~20-50K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/50000-100000">~50-100K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/100000-200000">~100k-200K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/200000-500000">~200-500K</a>,
+<a class="text-gray-700" href="/topwords/ug/zh/500000-1000000">~1M</a>
+</div>
+</div>
+</div>
+</main>
+<div class="hidden lg:block right-sidebar-ads-container">
+<div style="top: .5rem; position: sticky">
+<div id="rightSidebarFirstBanner" ></div>
+<div class="p-2"></div>
+<div id="rightSidebarSecondBanner" ></div>
+</div>
+</div>
+</div>
+</div>
+<footer
+class="py-4 text-xs text-gray-900 bg-gray-200 border border-gray-300 flex">
+<div class="flex justify-around content m-auto flex-col md:flex-row footer__with__wordlist">
+<div class="flex-1 px-2">
+<a href="/" class="text-xl text-center text-gray-900 flex items-center">
+<img width="20" height="20"
+src="/assets/images/glosbe-logo-bird-2.svg"
+class="glosbe-logo inline-block w-5 h-5 object-contain"
+alt="Glosbe logo"
+loading="lazy" />
+Glosbe
+</a>
+<div class="mt-2">在波兰以♥制成</div>
+</div>
+<nav class="px-4">
+<p class="footer-header">
+Tools
+</p>
+<ul class="footer-menu">
+<li><a href="https://app.glosbe.com/dictionary-builder" rel="nofollow">Dictionary builder</a></li>
+<li><a href="https://app.glosbe.com/recorder" rel="nofollow">Pronunciation recorder</a></li>
+<li><a href="https://app.glosbe.com/add-multiple" rel="nofollow">Add translations in batch</a></li>
+<li><a href="https://app.glosbe.com/add-examples" rel="nofollow">Add examples in batch</a></li>
+<li><a href="https://app.glosbe.com/transliteration" rel="nofollow">Transliteration</a></li>
+<li>
+<a href="/all-dictionaries" rel="nofollow">
+所有字典 </a>
+</li>
+</ul>
+</nav>
+<nav class="px-4">
+<p class="footer-header">
+关于 </p>
+<ul class="footer-menu">
+<li>
+<a href="/about" rel="nofollow">关于格洛斯贝</a>
+</li>
+<li>
+<a href="/partners" rel="nofollow">伙伴</a>
+</li>
+<li>
+<a href="/privacy-policy" rel="nofollow">
+隐私政策 </a>
+</li>
+<li>
+<a href="/terms" rel="nofollow">服务条款</a>
+</li>
+<li>
+<a href="/help" rel="nofollow">救命</a>
+</li>
+</ul>
+</nav>
+<nav class="px-4">
+<p class="footer-header">
+保持联系 </p>
+<ul class="footer-menu">
+<li>
+<a
+href="https://www.facebook.com/Glosbe/"
+target="_blank"
+rel="noopener nofollow">
+Facebook
+</a>
+</li>
+<li>
+<a href="https://twitter.com/glosbe" rel="noopener nofollow">
+Twitter
+</a>
+</li>
+<li>
+<a href="/contact" rel="nofollow">联系</a>
+</li>
+</ul>
+</nav>
+</div>
+<!-- <app-new-version-message></app-new-version-message> -->
+</footer>
+</div>
+<script>window.appAds = {"topBannerLocation":"ABOVE_CONTENT","device":{"deviceType":"NORMAL","devicePlatform":"UNKNOWN","normal":true,"mobile":false,"tablet":false}}</script>
+<script>setTimeout(function () {!function(a){"function"==typeof define&&define.amd?define(a):a()}(function(){"use strict";var b=new(function(){function J(){this.slotsOnPage=[],this.currentUrl=window.location.pathname.toString(),this.experiment=1}return J.prototype.addSlot=function(K,L,M){this.slotsOnPage.push({id:K,placementName:L,lazy:M||!1})},J.prototype.changeUrlIfNew=function(N){return this.currentUrl!==N&&(this.currentUrl=N,!0)},J}());var c="/172492972/general-au/",d="topBanner",e="rightSidebarFirstBanner",f="rightSidebarSecondBanner",g=[{width:234,experiment:[0,1,2],slots:[{placement:d,sizes:[[234,60]],path:c+"AFT-top-banner/234x0"},{placement:"wordDetailsPageBottom",sizes:[[234,60]],path:c+"BFT-footer/234x0"}]},{width:320,experiment:[0,1,2],slots:[{placement:d,sizes:[[320,100]],path:c+"AFT-top-banner/320x0"}]},{width:336,experiment:[1],slots:[{placement:d,sizes:[[336,280]],path:c+"AFT-top-banner/320x0"}]},{width:468,experiment:[0,1,2],slots:[{placement:d,sizes:[[468,100],[320,100]],path:c+"AFT-top-banner/468x0"}]},{width:768,experiment:[2],slots:[{placement:d,sizes:[[728,90]],path:c+"AFT-top-banner/728x0"}]},{width:960,experiment:[0,1,2],slots:[{placement:d,sizes:[[728,90]],path:c+"AFT-top-banner/728x0"}]},{width:1024,experiment:[0,1,2],slots:[{placement:d,sizes:[[728,90]],path:c+"AFT-top-banner/970x0"},{placement:e,sizes:[[160,600]],path:c+"AFT-sidebar-first/160x600"}]},{width:1280,experiment:[0,2],slots:[{placement:d,sizes:[[728,90]],path:c+"AFT-top-banner/970x0"},{placement:e,sizes:[[336,280],[300,250]],path:c+"AFT-sidebar-first/336x280"},{placement:f,sizes:[[336,280],[300,250]],path:c+"AFT-sidebar-second/336x280"}]},{width:1280,experiment:[1],slots:[{placement:d,sizes:[[336,280],[728,250]],path:c+"AFT-top-banner/970x0"},{placement:e,sizes:[[336,280],[300,250]],path:c+"AFT-sidebar-first/336x280"},{placement:f,sizes:[[336,280],[300,250]],path:c+"AFT-sidebar-second/336x280"}]}];var h=["140"],i=["070","080","090","100","110","120","130","140","150","160","170","180","190","200"],j=Math.random()<.8;var k=function(){var O=h[0];if(location.search&&location.search.indexOf("price_algorithm=")>=0){var P=location.search.substring(location.search.indexOf("price_algorithm=")+"price_algorithm=".length);(P===h[0]||i.indexOf(P)>=0)&&(O=P)}else{var Q=j?h:i;O=Q[Math.floor(Math.random()*Q.length)]}return O}(),l=["-2"],m=Math.random()<.5,n=l[Math.floor(Math.random()*l.length)];for(var o=[],p=0;p<46;p++)if(p%5==0){var q="000"+p;o.push(q.substring(q.length-3))}var r="truflaStep";function s(){var R=window.localStorage.getItem(r);if(null!=R)try{return JSON.parse(R)}catch(R){try{window.localStorage.removeItem(r)}catch(R){}}return{}}function t(S){return S.getAdUnitPath()+"_"+S.getSlotElementId()+"_"+k}function u(T){var U=s(),V=t(T),W=T.getTargeting("algo_step")[0];W&&W.trim().length>0?U[V]=W:delete U[V],function(X){try{window.localStorage.setItem(r,JSON.stringify(X))}catch(X){console.error("Error when trying to save algostepcache",X)}}(U)}function v(Y){var Z=Y.getTargeting("algo_step")[0],$=0;return"fresh"!==n&&($=m?function(_,aa){var ba=s()[t(_)];return parseInt(ba||"",10)||aa}(Y,0):0),parseInt(Z,10)||$}function w(ca){if(!(ca.getAdUnitPath().indexOf("instream")>0)){var da="0";j||(da="1"),da+="00";var ea=v(ca),fa=0==ea?1:ea+1;fa=Math.min(6,fa),ca.setTargeting("algo_cmp",da+""),ca.setTargeting("restart_auction",n),ca.setTargeting("algo_step",fa+""),ca.setTargeting("price_algorithm",k),ca.setTargeting("algo_cache",m+""),ca.setTargeting("algo_floor","000"),u(ca)}}var x="/172492972/general-au/instream",y="/172492972/general-au/Refr";var z=window.appAds||{topBannerLocation:"ABOVE_CONTENT",device:{deviceType:"MOBILE",devicePlatform:"UNKNOWN",mobile:!0,normal:!1,tablet:!1}};function A(){var ga=[];setTimeout(function(){ga=function(){var ja=document.getElementsByClassName("trufla");if(ja&&ja.length>0)for(var ka=[],la=0;la<ja.length;la++){var ma=ja.item(la);null!==ma&&ka.push(ma)}return[]}()},50);var ha=function(){if(window.location.search){var na=window.location.search.indexOf("adsExp=");if(na>0)return Number.parseInt(window.location.search.substr(na+7),10)||0}switch(z.topBannerLocation){case"ABOVE_CONTENT":return 0;case"BELOW_FIRST_TRANSLATION":return 1;case"BELOW_ALL_TRANSLATIONS":return 2;default:return 0}}(),ia=[];window.googletag.cmd.push(function oa(){googletag.pubads||setTimeout(function(){return googletag.cmd.push(oa)},100),window.googletag.pubads().disableInitialLoad();var pa,qa=function(Ba){void 0===Ba&&(Ba=0);var Ca=window.innerWidth,Da=g[0];return g.forEach(function(Ea){Ea.width<=Ca&&Ea.experiment.indexOf(Ba)>=0&&(!Da||Da.width<=Ea.width)&&(Da=Ea)}),Da}(ha).slots.filter(function(Fa){return!Fa.lazy}),ra=new Map;qa.forEach(function(Ga){var Ha=googletag.defineSlot(Ga.path,Ga.sizes,Ga.placement);Ha.addService(googletag.pubads()),w(Ha),ra.set(Ga.placement,Ga.sizes)}),window.googletag.pubads().enableSingleRequest(),(pa=window.location.hostname).match("glosbe.com$")?googletag.pubads().setTargeting("domain",pa):googletag.pubads().setTargeting("domain","unk"),googletag.pubads().setTargeting("gexp",ha+"");var sa=window.googletag.pubads();googletag.pubads().addEventListener("slotResponseReceived",function(Ia){Ia.slot.getResponseInformation()?function(Ja){if("last"!==n)if("fresh"!==n){var Ka=v(Ja),La="-1"===n?2:3;Ja.setTargeting("algo_step",Math.max(Ka-La,0)+"")}else Ja.setTargeting("algo_step",[])}(Ia.slot):v(Ia.slot)<6&&ia.push(Ia.slot)});var ta,ua=new Map;sa.addEventListener("impressionViewable",function(Ma){var Na=Ma.slot,Oa=Na.getAdUnitPath()+Na.getSlotElementId();ua.has(Oa)||ua.set(Oa,{isVisible:!0,totalVisibleTime:0,visibilityStartTimestamp:Date.now(),slot:Na})}),sa.addEventListener("slotVisibilityChanged",function(Pa){var Qa=Pa.slot,Ra=Qa.getAdUnitPath()+Qa.getSlotElementId(),Sa=ua.get(Ra);Sa&&(Pa.inViewPercentage>0&&!Sa.isVisible&&(Sa.isVisible=!0,Sa.visibilityStartTimestamp=Date.now()),Pa.inViewPercentage<=0&&Sa.isVisible&&(Sa.isVisible=!1,Sa.totalVisibleTime+=Date.now()-Sa.visibilityStartTimestamp))});var va=[document.getElementById("topBanner")],wa=window.googletag.sizeMapping().addSize([960,300],[[728,90]]).addSize([320,320],[[300,100]]).addSize([0,0],[300,100]).build(),xa=0;window.addEventListener("scroll",function(Ta){clearTimeout(ta),ta=setTimeout(function(){var Ua;if(ga.forEach(function(Ya){if(function(_a){var ab=_a.getBoundingClientRect();return ab.bottom>=0&&ab.left>=0&&ab.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&ab.right<=(window.innerWidth||document.documentElement.clientWidth)}(Ya)){var Za=Number.MAX_SAFE_INTEGER,$a=Ya.getBoundingClientRect();va.forEach(function(bb){var cb=bb.getBoundingClientRect();Za=Math.min(Za,Math.abs($a.bottom-cb.bottom),Math.abs($a.bottom-cb.top))}),Za>1.3*window.innerHeight&&(Ua=Ya)}}),Ua){var Va=document.createElement("div");if(Va.classList.add("trufla-container"),Va.id="trufla-"+xa++,Ua.parentElement){Ua.parentElement.insertBefore(Va,Ua.nextSibling);var Wa=ra.get("topBanner")||[[300,200]];Va.style.minHeight="calc(90px + 1rem)";var Xa=window.googletag.defineSlot(x,Wa,Va.id).addService(window.googletag.pubads());Xa.defineSizeMapping(wa),window.googletag.pubads().refresh([Xa]),va.push(Ua)}}},100)});var ya=0;setInterval(function(){if(!(Date.now()-ya<2e3)){ya=Date.now();ua.forEach(function(db,eb){var fb=db.totalVisibleTime;db.isVisible&&(fb+=Date.now()-db.visibilityStartTimestamp),fb>3e4&&(ua.delete(eb),ia.push(db.slot))})}},2e3);var za,Aa=0;setInterval(function(){if(!(Date.now()-Aa<200)){Aa=Date.now();var gb=[];ia.forEach(function(hb){var ib=hb.getSlotElementId(),jb=hb.getAdUnitPath();if(jb!==x&&jb!==y){hb.getTargeting("price_algorithm"),hb.getTargeting("algo_cmp"),hb.getTargeting("algo_step");googletag.destroySlots([hb]);var kb=document.getElementById(ib);kb&&(kb.innerHTML="");var lb=googletag.defineSlot("/172492972/general-au/Refr",ra.get(ib)||[[300,200]],ib).addService(window.googletag.pubads());w(lb),gb.push(lb)}else w(hb),gb.push(hb)}),gb.length>0&&window.googletag.pubads&&window.googletag.pubads().refresh(function(){for(var mb=0,nb=0,ob=arguments.length;nb<ob;nb++)mb+=arguments[nb].length;var pb=Array(mb),qb=0;for(nb=0;nb<ob;nb++)for(var rb=arguments[nb],sb=0,tb=rb.length;sb<tb;sb++,qb++)pb[qb]=rb[sb];return pb}(gb)),ia.splice(0,ia.length)}},200),window.googletag.enableServices(),(za=document.getElementById("top-ad-close"))&&za.addEventListener("click",function(){var ub=document.getElementById("tb__cont__2");null!==ub&&(ub.style.position="relative",ub.style.zIndex="0"),za.remove()}),window.googletag.cmd.push(function(){window.googletag&&window.googletag.pubads&&window.googletag.pubads().refresh()})})}var B=/\/[a-z]{2,3}\/[a-z]{2,3}\/[^\/]+/;function C(vb){return!!vb.match(B)}var D=window.location.toString().indexOf("noHeaderBidding")<0;D&&window.location.toString().indexOf("noPrebid"),D&&window.location.toString().indexOf("noAmazonUAM");function E(wb){for(var xb=[],yb=document.querySelectorAll("#tb__cont__1, #tb__cont__2"),zb=0;zb<yb.length;zb++)xb.push(yb.item(zb));var Ab=document.getElementById("topBanner");Ab&&Ab.parentElement&&xb.push(Ab.parentElement),wb||xb.forEach(function(Bb){Bb.style.display="none"})}function F(){var Cb,Db,Eb;C(b.currentUrl)&&(Cb="googletag",Db={cmd:[]},(Eb=window)[Cb]=Eb[Cb]||Db,Eb[Cb],function(Fb,Gb){var Hb=document.createElement("script");Hb.src=Fb,Hb.async=!0,Hb.defer=!0;var Ib="loading";Hb.onerror=function(){Ib="error",Gb(!1)},Hb.onload=function(){Ib="success",Gb(!0)},setTimeout(function(){"loading"===Ib&&Gb(!1)},2e4),window.document.head.appendChild(Hb)}("https://securepubads.g.doubleclick.net/tag/js/gpt.js",E),A())}function G(Jb){if(!googletag)throw new Error("No google tag available")}function H(Kb){if(!googletag)throw new Error("No google tag available");googletag.cmd.push(function(){var Lb=googletag.pubads().getSlots().filter(function(Mb){return Mb.getSlotElementId()===Kb.detail.id});Lb.length>0&&googletag.display(Lb[0])})}function I(Nb){if(!googletag)throw new Error("No google tag available");b.changeUrlIfNew(Nb.detail.url)&&googletag.cmd.push(function(){var Ob=googletag.pubads().getSlots();new Set(Ob.map(function(Pb){return Pb.getSlotElementId()}));googletag.destroySlots(Ob),Ob.forEach(function(Qb){var Rb=Qb.getSlotElementId(),Sb=document.getElementById(Rb);Sb&&(Sb.innerHTML="")}),C(b.currentUrl)&&A()})}!function(Tb){try{F();var Ub=Tb.addEventListener;Ub("adPlacementAvailable",H),Ub("urlChanged",I),Ub("destroySlot",G)}catch(Tb){console.error("Error when initializing ads",Tb)}}(window)});
+}, 0);</script>
+<script>window.glosbe = {"dictionary":{"l1":{"code":"ug","name":"维吾尔文","nameForDictionarySource":"维吾尔文","dativeName":"维吾尔文","dense":false,"hasSpecialChars":true,"rtl":true},"l2":{"code":"zh","name":"中文","nameForDictionarySource":"中文","dativeName":"中文","dense":true,"hasSpecialChars":true,"rtl":false}},"auth":{"loggedIn":false,"loginUrl":"https://auth2.glosbe.com/login?returnUrl=https%3A%2F%2Fzh.glosbe.com%2Fug%2Fzh%2F%2525D8%2525B2%2525D8%2525A7%2525D9%25258A%2525D9%252589%2525D8%2525B1"},"gitRevision":""};window.glosbe.frontendApiUrl = "";window.glosbe.logoutUrl = "https://auth2.glosbe.com/doLogout";</script>
+<script defer src="/assets/js/localized/glosbe-components-zh.js?0efb96ad7d41795fe2ff06574f282a80" type="module"></script><script defer src="/assets/js/localized/glosbe-components-zh.legacy.js?efd5398cbade32a7fc1301cdadecd4ab" nomodule></script>
+<div id="glosbe-components" class="position: absolute;" style="left: -1000px"></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"position":1,"@type":"ListItem","item":{"@id":"https://zh.glosbe.com/","name":"字典"}},{"position":2,"@type":"ListItem","item":{"@id":"https://zh.glosbe.com/ug/zh","name":"维吾尔文-中文字典"}},{"position":3,"@type":"ListItem","item":{"@id":"https://zh.glosbe.com/ug/zh/%25D8%25B2%25D8%25A7%25D9%258A%25D9%2589%25D8%25B1","name":"%D8%B2%D8%A7%D9%8A%D9%89%D8%B1"}}]}</script>
+</body>
+</html>

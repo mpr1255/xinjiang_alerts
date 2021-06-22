@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1"/>
+    <title>微博搜索</title>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/video.css?version=202106011432" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/global.css?version=202106011432" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/module.css?version=202106011432" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/page.css?version=202106011432" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/card.css?version=202106011432" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/css_v6/layer/layer_show_pic.css?version=202106011432"
+          rel="stylesheet"/>
+    
+    <script type="text/javascript">
+        var $PHOTO_TAGS=[]
+        var $CONFIG = {};
+        $CONFIG['islogin'] = '0';
+        $CONFIG['uid'] = '0';
+        $CONFIG['entry'] = 'weisousuo';
+        $CONFIG['setCover'] = 1; //ie6hack
+        $CONFIG['version'] = '202106011432';
+        $CONFIG['bigpipe'] = 'false';
+        $CONFIG['timeDiff'] = (new Date() - 1624337335000);
+        $CONFIG['product'] = 'search';
+        $CONFIG['pageid'] = 'weibo';
+        $CONFIG['skin'] = '';
+        $CONFIG['lang'] = 'zh-cn';
+        $CONFIG['jsPath'] = '//jstest.t.sinajs.cn/t4/';
+        $CONFIG['cssPath'] = '//img.t.sinajs.cn/t4/';
+        $CONFIG['imgPath'] = '//img.t.sinajs.cn/t4/';
+        $CONFIG['servertime'] = 1624337335;
+        $CONFIG['ad_url_jump'] = '';
+        $CONFIG['$webim'] = 0; //1;
+        $CONFIG['mJsPath'] = ['https://js{n}.t.sinajs.cn/t4/', 1, 2];
+        $CONFIG['mCssPath'] = ['https://img{n}.t.sinajs.cn/t4/', 1, 2];
+        $CONFIG['s_domain'] = '//s.weibo.com';
+        $CONFIG['s_search'] = '%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23';
+        $CONFIG['isAuto'] = 0;//0自动播放
+    </script>
+    
+    
+    <script src="//js.t.sinajs.cn/t5/pack/js/bootstrap.js"></script>
+</head>
+<body class="wbs-feed">
+<style>
+    .wrap-continuous{
+        margin-bottom: 0px;
+        border: 0px;
+    }
+</style>
+<div class="m-main">
+    <!--搜索-->
+<div class="m-search" id="pl_feedtop_top">
+    <div class="logo"><a href="/" class="logo_img"></a></div>
+    <div class="searchbox" node-type="searchBar">
+    <div class="search-input">
+        <input type="text" node-type="text" maxlength="40" autocomplete="off" value="?q=#晚上11点的新疆有多美#"/>
+        <div class="m-sug-list" node-type="suggestbox">
+        </div>
+    </div>
+    <button class="s-btn-b" node-type="submit" >搜索</button>
+</div>
+    </div>
+<!--/搜索-->
+        <!--主导航-->
+<div class="m-main-nav s-mt28">
+    <ul>
+        <li><a class="cur" href="/weibo?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&Refer=weibo_weibo" title="综合">综合</a></li>
+        <li><a  href="/user?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&Refer=weibo_user" title="找人">找人</a></li>
+        <li><a  href="/article?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&Refer=weibo_article" title="文章">文章</a></li>
+        <li><a  href="/video?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&xsort=hot&hasvideo=1&tw=video&Refer=weibo_video" title="视频">视频</a></li>
+        <li><a  href="/pic?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&Refer=weibo_pic" title="图片">图片</a></li>
+        <li><a  href="/topic?q=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&pagetype=topic&topic=1&Refer=weibo_topic" title="话题">话题</a></li>
+            </ul>
+</div>
+<!--/主导航-->
+    
+    <div id="pl_feed_main">
+        <!--提示-->
+                <div class="m-note" style="display:none"><a node-type="feed_list_newBar" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=weibo_new">有8条新微博，点击查看</a></div>
+                <!--/提示-->
+        <!--内容-->
+        <div class="m-wrap">
+            <div class="m-con-l" id="pl_feedlist_index">
+                                
+                <!--cate流-->
+                <div>
+                                                                                                                                                                                                                                                </div>
+                <!--/cate流-->
+                                <!--无结果-->
+                <!--无结果-->
+<div class="card-wrap">
+    <div class="card card-no-result s-pt20b40">
+                <p>抱歉，未找到“?q=#晚上11点的新疆有多美#”相关结果。</p>
+                <dl>
+            <dt>建议:</dt>
+            <dd>您可以尝试更换关键词，再次搜索。</dd>
+            <dd>您可以关注萌小搜 <a href="#" title="欢迎调戏最萌官博屌丝~~">@微博搜索</a> 获取搜索技巧。</dd>
+            <dd>您也可以尝试在全网内搜索：
+                <a href="http://www.baidu.com/s?wd=%3Fq%3D%23%E6%99%9A%E4%B8%8A11%E7%82%B9%E7%9A%84%E6%96%B0%E7%96%86%E6%9C%89%E5%A4%9A%E7%BE%8E%23&tn=SE_hldp03222_kc4r0b81" target="_blank">?q=#晚上11点的新疆有多美#</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!--/无结果-->
+
+                                <!--感兴趣提示-->
+                <div class="m-error" style="text-align: center">以下是您可能感兴趣的微博</div>
+                <!--感兴趣提示-->
+                <div>
+                    <!--微博card-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4650844849442819" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/7191533806?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.512.512.50/007QGWsKly8gnrhekh02oj30e80e8wev.jpg?KID=imgbed,tva&Expires=1624347625&ssig=x9bZ2i1obQ" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4650844849442819&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/7191533806?refer_flag=1001030103_" class="name" target="_blank" nick-name="时代少年团-严浩翔" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:user_name">时代少年团-严浩翔</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-g"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="时代少年团-严浩翔">
+                    对着流星许愿 梦想都会实现 <a href="http://t.cn/A6fwE1No"  target="_blank"><i class="wbicon">L</i>时代少年团-严浩翔<em class="s-color-red">的</em>微博视频</a> ​                </p>
+                                                <!--card解析-->
+<!--linkcard 不能播放视频-->
+        <div class="media media-video-a" node-type="feed_list_media_prev">
+        <!--linkcard 不能播放视频-->
+<div class="media media-video-a" node-type="feed_list_media_disp" style="display:none;"></div>
+<!--视频card-->
+<div class="thumbnail" style="height:auto;min-height:281px;">
+    <a href="javascript:void(0);" class="WB_video_h5" node-type="fl_h5_video"   action-data="type=feedvideo&objectid=1034:4650676870119433&keys=4650676918419739&cover_img=https%3A%2F%2Fwx3.sinaimg.cn%2Flarge%2F007QGWsKly1grqbzc7kjlj31hc0u075p.jpg&card_height=1080&card_width=1920&play_count=2599264&short_url=http%3A%2F%2Ft.cn%2FA6fwE1No&encode_mode=&bitrate=277&biz_id=230444&current_mid=4650844849442819&key=tblog_card&title=%E6%97%B6%E4%BB%A3%E5%B0%91%E5%B9%B4%E5%9B%A2-%E4%B8%A5%E6%B5%A9%E7%BF%94%E7%9A%84%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91&full_url=https%3A%2F%2Fvideo.weibo.com%2Fshow%3Ffid%3D1034%3A4650676870119433&object_id=1034:4650676870119433&video_src=%2F%2Ff.video.weibocdn.com%2FKatZ2Ej3lx07NDFfAY9y010412001lcy0E010.mp4%3Flabel%3Dmp4_ld%26template%3D640x360.25.0%26trans_finger%3D40a32e8439c5409a63ccf853562a60ef%26ori%3D0%26ps%3D1CwnkDw1GXwCQx%26Expires%3D1624340413%26ssig%3DvogYukZeAp%26KID%3Dunistore%2Cvideo" action-type="feed_list_third_rend" mediasize="852:480">
+        <div node-type="fl_h5_video_pre">
+            <img src="https://wx3.sinaimg.cn/large/007QGWsKly1grqbzc7kjlj31hc0u075p.jpg" alt="" style="display:block;height: 281px;">
+            <i class="icon-media icon-play-b"></i>
+        </div>
+        <div node-type="fl_h5_video_disp" style="display:none;">
+        </div>
+    </a>
+</div>
+<!--/视频card-->
+
+    </div>
+    
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/7191533806/KlkHODCvx?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:wb_time">
+                        今天11:08
+                        </a>
+                                         &nbsp;来自 <a href="sinaweibo://gotovideo?selected_containerid=231643_11_5009&source=vchannel_verify&extension=%7b%7d" rel="nofollow">微博视频号</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4650844849442819&name=时代少年团-严浩翔&uid=7191533806&suda-data=key%3Dtblog_search_weibo%26value%3Ddefault_sudaclick:do_repost,mid:4650844849442819" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:repost,mid:4650844849442819"> 转发 318651</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:comment" action-type="login">评论 116888</a></li>
+                                                                <li><a title="赞" action-data="mid=4650844849442819" action-type="login" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudampos:1,click:like,mid:4650844849442819,act:add"><i class="icon-act icon-act-praise"></i> <em>448329</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4650844852585058" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/5908064369?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:user_pic"><img src="https://tvax3.sinaimg.cn/crop.0.0.1080.1080.50/006rPDqNly8gnrhg2zmpkj30u00u0t9k.jpg?KID=imgbed,tva&Expires=1624347625&ssig=19dJ7yML5h" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4650844852585058&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/5908064369?refer_flag=1001030103_" class="name" target="_blank" nick-name="时代少年团-张真源" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:user_name">时代少年团-张真源</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-g"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="时代少年团-张真源">
+                    千言万语 都在歌里啦～ <a href="http://t.cn/A6fwE1pV"  target="_blank"><i class="wbicon">L</i>时代少年团-张真源<em class="s-color-red">的</em>微博视频</a> ​                </p>
+                                                <!--card解析-->
+<!--linkcard 不能播放视频-->
+        <div class="media media-video-a" node-type="feed_list_media_prev">
+        <!--linkcard 不能播放视频-->
+<div class="media media-video-a" node-type="feed_list_media_disp" style="display:none;"></div>
+<!--视频card-->
+<div class="thumbnail" style="height:auto;min-height:281px;">
+    <a href="javascript:void(0);" class="WB_video_h5" node-type="fl_h5_video"   action-data="type=feedvideo&objectid=1034:4650677746728984&keys=4650677791096837&cover_img=https%3A%2F%2Fwx1.sinaimg.cn%2Flarge%2F006rPDqNly1grqc2xoz46j31hc0u0q3o.jpg&card_height=1080&card_width=1920&play_count=1213160&short_url=http%3A%2F%2Ft.cn%2FA6fwE1pV&encode_mode=&bitrate=277&biz_id=230444&current_mid=4650844852585058&key=tblog_card&title=%E6%97%B6%E4%BB%A3%E5%B0%91%E5%B9%B4%E5%9B%A2-%E5%BC%A0%E7%9C%9F%E6%BA%90%E7%9A%84%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91&full_url=https%3A%2F%2Fvideo.weibo.com%2Fshow%3Ffid%3D1034%3A4650677746728984&object_id=1034:4650677746728984&video_src=%2F%2Ff.video.weibocdn.com%2Fi0vQRWnQlx07NDFvq8dq010412001mVi0E010.mp4%3Flabel%3Dmp4_ld%26template%3D640x360.25.0%26trans_finger%3D40a32e8439c5409a63ccf853562a60ef%26ori%3D0%26ps%3D4ub7gI97adQ%26Expires%3D1624340376%26ssig%3DZvGR6Eb%252Bgm%26KID%3Dunistore%2Cvideo" action-type="feed_list_third_rend" mediasize="852:480">
+        <div node-type="fl_h5_video_pre">
+            <img src="https://wx1.sinaimg.cn/large/006rPDqNly1grqc2xoz46j31hc0u0q3o.jpg" alt="" style="display:block;height: 281px;">
+            <i class="icon-media icon-play-b"></i>
+        </div>
+        <div node-type="fl_h5_video_disp" style="display:none;">
+        </div>
+    </a>
+</div>
+<!--/视频card-->
+
+    </div>
+    
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/5908064369/KlkHPaQuu?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:wb_time">
+                        今天11:08
+                        </a>
+                                         &nbsp;来自 <a href="sinaweibo://gotovideo?selected_containerid=231643_11_5009&source=vchannel_verify&extension=%7b%7d" rel="nofollow">微博视频号</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4650844852585058&name=时代少年团-张真源&uid=5908064369&suda-data=key%3Dtblog_search_weibo%26value%3Ddefault_sudaclick:do_repost,mid:4650844852585058" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:repost,mid:4650844852585058"> 转发 64496</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:comment" action-type="login">评论 17114</a></li>
+                                                                <li><a title="赞" action-data="mid=4650844852585058" action-type="login" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudampos:2,click:like,mid:4650844852585058,act:add"><i class="icon-act icon-act-praise"></i> <em>163498</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4650844853895370" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/5781292544?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:user_pic"><img src="https://tvax1.sinaimg.cn/crop.0.0.1080.1080.50/006jfIhWly8gnrheu0oywj30u00u00th.jpg?KID=imgbed,tva&Expires=1624347625&ssig=u1%2BvmBh9TX" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4650844853895370&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/5781292544?refer_flag=1001030103_" class="name" target="_blank" nick-name="时代少年团-丁程鑫" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:user_name">时代少年团-丁程鑫</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-g"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="时代少年团-丁程鑫">
+                    怎么样，是不是很惊喜呀<img src="//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/43/2018new_jiyan_org.png" title="[挤眼]" alt="[挤眼]" class="face" /> <a href="http://t.cn/A6fwE1NF"  target="_blank"><i class="wbicon">L</i>时代少年团-丁程鑫<em class="s-color-red">的</em>微博视频</a> ​                </p>
+                                                <!--card解析-->
+<!--linkcard 不能播放视频-->
+        <div class="media media-video-a" node-type="feed_list_media_prev">
+        <!--linkcard 不能播放视频-->
+<div class="media media-video-a" node-type="feed_list_media_disp" style="display:none;"></div>
+<!--视频card-->
+<div class="thumbnail" style="height:auto;min-height:281px;">
+    <a href="javascript:void(0);" class="WB_video_h5" node-type="fl_h5_video"   action-data="type=feedvideo&objectid=1034:4650679558668290&keys=4650679594385581&cover_img=https%3A%2F%2Fwx3.sinaimg.cn%2Flarge%2F006jfIhWly1grqca752kwj30qo0f4gn0.jpg&card_height=544&card_width=960&play_count=1584069&short_url=http%3A%2F%2Ft.cn%2FA6fwE1NF&encode_mode=&bitrate=277&biz_id=230444&current_mid=4650844853895370&key=tblog_card&title=%E6%97%B6%E4%BB%A3%E5%B0%91%E5%B9%B4%E5%9B%A2-%E4%B8%81%E7%A8%8B%E9%91%AB%E7%9A%84%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91&full_url=https%3A%2F%2Fvideo.weibo.com%2Fshow%3Ffid%3D1034%3A4650679558668290&object_id=1034:4650679558668290&video_src=%2F%2Ff.video.weibocdn.com%2FAu7R8RNDlx07NDG0C8uY010412001BYd0E010.mp4%3Flabel%3Dmp4_ld%26template%3D632x360.25.0%26trans_finger%3D40a32e8439c5409a63ccf853562a60ef%26ori%3D0%26ps%3D1CwnkDw1GXwCQx%26Expires%3D1624340412%26ssig%3DPEZCXfV5h%252B%26KID%3Dunistore%2Cvideo" action-type="feed_list_third_rend" mediasize="852:480">
+        <div node-type="fl_h5_video_pre">
+            <img src="https://wx3.sinaimg.cn/large/006jfIhWly1grqca752kwj30qo0f4gn0.jpg" alt="" style="display:block;height: 281px;">
+            <i class="icon-media icon-play-b"></i>
+        </div>
+        <div node-type="fl_h5_video_disp" style="display:none;">
+        </div>
+    </a>
+</div>
+<!--/视频card-->
+
+    </div>
+    
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/5781292544/KlkHPglmy?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:wb_time">
+                        今天11:08
+                        </a>
+                                         &nbsp;来自 <a href="sinaweibo://gotovideo?selected_containerid=231643_11_5009&source=vchannel_verify&extension=%7b%7d" rel="nofollow">微博视频号</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4650844853895370&name=时代少年团-丁程鑫&uid=5781292544&suda-data=key%3Dtblog_search_weibo%26value%3Ddefault_sudaclick:do_repost,mid:4650844853895370" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:repost,mid:4650844853895370"> 转发 131039</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:comment" action-type="login">评论 39487</a></li>
+                                                                <li><a title="赞" action-data="mid=4650844853895370" action-type="login" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudampos:3,click:like,mid:4650844853895370,act:add"><i class="icon-act icon-act-praise"></i> <em>276059</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4650843288113777" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/3900215081?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:user_pic"><img src="https://tvax4.sinaimg.cn/crop.0.0.200.200.50/e8788f29ly8gdi6yp6v6sj205k05kt8n.jpg?KID=imgbed,tva&Expires=1624347625&ssig=oXAFVAphWN" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4650843288113777&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/3900215081?refer_flag=1001030103_" class="name" target="_blank" nick-name="不二大叔说" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:user_name">不二大叔说</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-g"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="不二大叔说">
+                    你知道“ 廿 ” 表示<em class="s-color-red">的</em>数目是？ <a href="http://t.cn/A6fw8mmf"  target="_blank">如题</a> ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/3900215081/KlkFiy2Ln?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:wb_time">
+                        今天11:01
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4650843288113777&name=不二大叔说&uid=3900215081&suda-data=key%3Dtblog_search_weibo%26value%3Ddefault_sudaclick:do_repost,mid:4650843288113777" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:repost,mid:4650843288113777"> 转发 9</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:comment" action-type="login">评论 9</a></li>
+                                                                <li><a title="赞" action-data="mid=4650843288113777" action-type="login" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudampos:4,click:like,mid:4650843288113777,act:add"><i class="icon-act icon-act-praise"></i> <em>7159</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4650844849705580" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/6290114447?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.1080.1080.50/006RGG6Ply8gnrhdya04yj30u00u0dib.jpg?KID=imgbed,tva&Expires=1624347625&ssig=0VEwUhvRpZ" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4650844849705580&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/6290114447?refer_flag=1001030103_" class="name" target="_blank" nick-name="时代少年团队长-马嘉祺" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:user_name">时代少年团队长-马嘉祺</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-g"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="时代少年团队长-马嘉祺">
+                    夏日和音乐，一次梦幻<em class="s-color-red">的</em>相遇 <a href="http://t.cn/A6fwE1NN"  target="_blank"><i class="wbicon">L</i>时代少年团队长-马嘉祺<em class="s-color-red">的</em>微博视频</a> ​                </p>
+                                                <!--card解析-->
+<!--linkcard 不能播放视频-->
+        <div class="media media-video-a" node-type="feed_list_media_prev">
+        <!--linkcard 不能播放视频-->
+<div class="media media-video-a" node-type="feed_list_media_disp" style="display:none;"></div>
+<!--视频card-->
+<div class="thumbnail" style="height:auto;min-height:281px;">
+    <a href="javascript:void(0);" class="WB_video_h5" node-type="fl_h5_video"   action-data="type=feedvideo&objectid=1034:4650680233951292&keys=4650680282513551&cover_img=https%3A%2F%2Fwx3.sinaimg.cn%2Flarge%2F006RGG6Ply1grqcczn6szj30ru0fot9j.jpg&card_height=564&card_width=1002&play_count=1159320&short_url=http%3A%2F%2Ft.cn%2FA6fwE1NN&encode_mode=&bitrate=277&biz_id=230444&current_mid=4650844849705580&key=tblog_card&title=%E6%97%B6%E4%BB%A3%E5%B0%91%E5%B9%B4%E5%9B%A2%E9%98%9F%E9%95%BF-%E9%A9%AC%E5%98%89%E7%A5%BA%E7%9A%84%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91&full_url=https%3A%2F%2Fvideo.weibo.com%2Fshow%3Ffid%3D1034%3A4650680233951292&object_id=1034:4650680233951292&video_src=%2F%2Ff.video.weibocdn.com%2F63sTd3r9lx07NDGausSk0104120014xa0E010.mp4%3Flabel%3Dmp4_ld%26template%3D640x360.25.0%26trans_finger%3D40a32e8439c5409a63ccf853562a60ef%26ori%3D0%26ps%3D1CwnkDw1GXwCQx%26Expires%3D1624340414%26ssig%3DGnSPhxUtbD%26KID%3Dunistore%2Cvideo" action-type="feed_list_third_rend" mediasize="852:480">
+        <div node-type="fl_h5_video_pre">
+            <img src="https://wx3.sinaimg.cn/large/006RGG6Ply1grqcczn6szj30ru0fot9j.jpg" alt="" style="display:block;height: 281px;">
+            <i class="icon-media icon-play-b"></i>
+        </div>
+        <div node-type="fl_h5_video_disp" style="display:none;">
+        </div>
+    </a>
+</div>
+<!--/视频card-->
+
+    </div>
+    
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/6290114447/KlkHOEIRC?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:wb_time">
+                        今天11:08
+                        </a>
+                                         &nbsp;来自 <a href="sinaweibo://gotovideo?selected_containerid=231643_11_5009&source=vchannel_verify&extension=%7b%7d" rel="nofollow">微博视频号</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4650844849705580&name=时代少年团队长-马嘉祺&uid=6290114447&suda-data=key%3Dtblog_search_weibo%26value%3Ddefault_sudaclick:do_repost,mid:4650844849705580" action-type="login" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:repost,mid:4650844849705580"> 转发 128848</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:comment" action-type="login">评论 28225</a></li>
+                                                                <li><a title="赞" action-data="mid=4650844849705580" action-type="login" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudampos:5,click:like,mid:4650844849705580,act:add"><i class="icon-act icon-act-praise"></i> <em>266777</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--/微博card-->
+
+                </div>
+                                <!--/无结果-->
+                                <!--未登录提示-->
+<div class="m-hint"><i class="icon-warn icon-hint-s"></i><a href="javascript:void(0);" action-type="login">立即登录</a>查看更多结果。还没有账号？赶紧<a href="//weibo.com/signup/signup.php?lang=zh-cn&entry=weisousuo" target="_blank">注册微博</a></div>
+<!--未登录提示-->
+
+            </div>
+
+            <div class="m-con-r">
+                <!--话题右侧流加载-->
+                                <!--热搜榜-->
+<div class="card-wrap" id="pl_band_index">
+    <div class="card card-hotrank">
+        <div class="card-head">
+            <a href="/top/summary?cate=realtimehot" target="_blank" class="more s-fr">更多 <i class="wbicon">a</i></a>
+            <h4 class="title">热搜榜</h4>
+        </div>
+        <div class="card-content s-pg16">
+            <ul>
+                                <li>
+                    <i class="num icon-top"></i>
+                    <p>
+                        <a href="/weibo?q=%23%E5%85%9A%E6%97%97%E8%80%80%E6%9C%9D%E9%98%B3%23&Refer=new_time&Refer=newtime">党旗耀朝阳</a>
+                        <i class="icon-txt icon-txt-hot">热</i>
+                    </p>
+                </li>
+                                                <li>
+                                        <span class="num top">1</span>
+                                        <p>
+                        <span class="val">216万</span>
+                                                <a href="/weibo?q=%23%E7%8C%AA%E8%82%89%E9%99%8D%E4%BB%B7%E5%B8%82%E6%B0%91%E5%8F%8D%E5%AD%A3%E7%81%8C%E8%A3%85%E9%A6%99%E8%82%A0%23&Refer=top">猪肉降价市民反季灌装香肠</a>
+                                                <i class="icon-txt icon-txt-new">新</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">2</span>
+                                        <p>
+                        <span class="val">115万</span>
+                                                <a href="/weibo?q=%23%E9%95%BF%E6%9C%9F%E7%86%AC%E5%A4%9C%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8D%B1%E5%AE%B3%23&Refer=top">长期熬夜都有哪些危害</a>
+                                                <i class="icon-txt icon-txt-boil">沸</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">3</span>
+                                        <p>
+                        <span class="val">112万</span>
+                                                <a href="/weibo?q=%E6%9D%A8%E8%BF%AA%20%E6%88%91%E8%BF%9E%E4%B8%8A%E6%B5%B7%E8%B4%AD%E6%88%BF%E8%B5%84%E6%A0%BC%E9%83%BD%E6%B2%A1%E6%9C%89&Refer=top">杨迪 我连上海购房资格都没有</a>
+                                                <i class="icon-txt icon-txt-new">新</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top" style="font-style: normal;font-size: 15px">•</span>
+                                        <p>
+                        <span class="val"></span>
+                                                                        <a href_to="/weibo?q=%23%E6%9D%8E%E7%8E%B0%20%E4%BB%8A%E6%97%A5%E4%B8%8D%E8%90%A5%E4%B8%9A%23&topic_ad=1&Refer=top" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=default_sudaclick:ad_hotword_index,adid:124417" action-data="ad_id=124417&num=4&&cate=PC_realtime" action-type="realtimehot_ad" word="李现 今日不营业" url_show="" url_click="" url2_show="" url2_click="">李现 今日不营业</a>
+                                                <i class="icon-txt icon-txt-recommend">荐</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">4</span>
+                                        <p>
+                        <span class="val">112万</span>
+                                                <a href="/weibo?q=%E7%99%BD%E6%95%AC%E4%BA%AD%20%E8%BF%99%E5%BC%A0%E5%9B%BE%E7%AB%9F%E7%84%B6%E5%8F%91%E8%BF%87%E5%A4%A7%E6%84%8F%E4%BA%86&Refer=top">白敬亭 这张图竟然发过大意了</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">5</span>
+                                        <p>
+                        <span class="val">109万</span>
+                                                <a href="/weibo?q=%23%E5%B0%86%E5%89%83%E8%BF%87%E6%AF%9B%E7%9A%84%E7%8B%97%E8%AF%AF%E8%AE%A4%E6%88%90%E7%8B%AE%E5%AD%90%E6%8A%A5%E8%AD%A6%E6%B1%82%E5%8A%A9%23&Refer=top">将剃过毛的狗误认成狮子报警求助</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">6</span>
+                                        <p>
+                        <span class="val">102万</span>
+                                                <a href="/weibo?q=%23%E8%8B%8F%E5%B7%9E%E7%AB%99%E5%AE%89%E6%A3%80%E5%91%98%E4%B8%8A%E7%8F%AD%E6%97%B6%E9%97%B4%E7%8E%A9%E6%B8%B8%E6%88%8F%E8%A2%AB%E5%BC%80%E9%99%A4%23&Refer=top">苏州站安检员上班时间玩游戏被开除</a>
+                                                <i class="icon-txt icon-txt-new">新</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">7</span>
+                                        <p>
+                        <span class="val">89万</span>
+                                                <a href="/weibo?q=%23%E7%8E%8B%E6%BA%90%E4%B8%BA%E6%97%B6%E4%BB%A3%E5%B0%91%E5%B9%B4%E5%9B%A2%E5%86%99%E6%AD%8C%23&Refer=top">王源为时代少年团写歌</a>
+                                                <i class="icon-txt icon-txt-boil">沸</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">8</span>
+                                        <p>
+                        <span class="val">87万</span>
+                                                <a href="/weibo?q=%23%E7%94%B7%E5%AD%90%E5%BC%83%E9%AB%98%E8%96%AA%E6%8E%A5%E6%9B%BF%E7%88%B6%E4%BA%B2%E5%AE%88%E9%95%BF%E5%9F%8E%23&Refer=top">男子弃高薪接替父亲守长城</a>
+                                                <i class="icon-txt icon-txt-new">新</i>
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">9</span>
+                                        <p>
+                        <span class="val">71万</span>
+                                                <a href="/weibo?q=%23%E5%B9%BF%E5%B7%9E%E8%B6%8555%E4%B8%87%E4%BA%A9%E8%8D%94%E6%9E%9D%E7%86%9F%E4%BA%86%23&Refer=top">广州超55万亩荔枝熟了</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                                        <span class="num top">10</span>
+                                        <p>
+                        <span class="val">66万</span>
+                                                <a href="/weibo?q=%23%E4%B8%AD%E5%9B%BD%E9%A9%BB%E7%BE%8E%E5%A4%A7%E4%BD%BF%E5%B4%94%E5%A4%A9%E5%87%AF%E5%8F%91%E8%A1%A8%E8%BE%9E%E5%88%AB%E4%BF%A1%23&Refer=top">中国驻美大使崔天凯发表辞别信</a>
+                                                
+                    </p>
+                </li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<!--热搜榜-->
+
+<!--广告-->
+<div class="card-wrap">
+    <div class="card card-film">
+        <div class="card-head">
+            <h4 class="title">广告</h4>
+        </div>
+        <div class="card-content">
+            <iframe src="/widget.html?t=1624337335812697798" style="width:300px; height:250px;" border="0" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+        </div>
+    </div>
+</div>
+<!--/广告-->
+<!--搜索历史-->
+<div class="card-wrap">
+    <div class="card card-history" id="pl_history_index">
+    </div>
+</div>
+<!--/搜索历史-->
+                            </div>
+        </div>
+        <!--/内容-->
+    </div>
+    <script>
+        //连续的微博单独处理个微博之间的间隙问题
+        var sCates = document.querySelectorAll('.wrap-continuous');
+        if(sCates.length){
+            sCates[sCates.length-1].style.marginBottom = '10px';
+            if(sCates.length > 1){
+                sCates[0].style.borderBottom = '1px solid #eee';
+            }
+        }
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/base.js?version=202106011432"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/common.js?version=202106011432"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/feed.js?version=202106011432"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/weiboFeedList.js?version=202106011432"></script>
+</div>
+<!--脚部-->
+<div class="m-footer">
+    <div class="bottom">
+        <div class="m-outlink">
+            <div class="link">
+                <a href="http://ir.weibo.com/phoenix.zhtml?c=253076&p=irol-irhome" class="icon-wb" target="_blank" title="关于微博">关于微博</a>
+                <a href="https://kefu.weibo.com/" target="_blank" title="微博帮助">微博帮助</a>
+                <a href="https://s.weibo.com/weibo?q=%23%E5%BE%AE%E5%BB%BA%E8%AE%AE%23&bottomnav=1&wvr=6" target="_blank" title="意见反馈">意见反馈</a>
+                <a href="http://open.weibo.com/?bottomnav=1&wvr=5" target="_blank" title="开放平台">开放平台</a>
+                <a href="http://hr.weibo.com/?bottomnav=1&wvr=5" target="_blank" title="微博招聘">微博招聘</a>
+                <a href="http://news.sina.com.cn/guide/?bottomnav=1&wvr=5" target="_blank" title="新浪网导航">新浪网导航</a>
+                <a href="http://service.account.weibo.com/?bottomnav=1&wvr=5&is_redirected=1" target="_blank" title="社区管理中心">社区管理中心</a>
+                <a href="http://service.account.weibo.com/roles/gongyue?bottomnav=1&wvr=5&is_redirected=1" target="_blank" title="微博社区公约">微博社区公约</a>
+            </div>
+            <p class="copyright">
+                Copyright © 2009-2021 WEIBO 北京微梦创科网络技术有限公司
+                <a href="https://weibo.com/aj/static/jww.html" target="_blank">京网文[2011]0398-130号</a>
+                <a href="http://www.miibeian.gov.cn" target="_blank" target="_blank">京ICP备12002058号</a>
+                <!-- <select id="pl_language_language">
+                    <option value="zh-cn" selected="selected">中文(简体)</option>
+                    <option value="zh-tw">中文(繁体)</option>
+                </select> -->
+                </span>
+            </p>
+        </div>
+    </div>      
+    <!-- <script src="https://js.t.sinajs.cn/t5/pack/static/musicplayer/musicplayer_stk_v6.1.5.js"></script> -->
+    <script>
+    // //设置用户uid 用于同步赞状态
+    // WEIBO_MUSIC_PLAYER.load({page_id:''});
+    // //监听赞事件
+    // //监听分享事件
+    // WEIBO_MUSIC_PLAYER.on('share', function (evt, song) {
+    //     alert(song.copy);
+    //     song //歌曲的所有信息      
+    // });
+    </script>
+
+
+</div>
+<!--脚部-->
+<!--回到顶部-->
+<div id="pl_common_scrollToTop">
+    <div class="m-gotop" node-type="scrollToTop" style="display: none;">
+        <a href="javascript:void(0);" class="wbicon" >Ú</a>
+    </div>
+</div>
+<!--/回到顶部-->
+
+<script src="//js.t.sinajs.cn/t6/home/js/pl/top/topInit.js"></script>
+<script type="text/javascript">
+    (function() {
+        WBtopGlobal && WBtopGlobal.init({
+            'islogin':0,
+            "backurl":"//s.weibo.com"
+        });
+    })();
+</script>
+<script type="text/javascript" charset="utf-8" async="" src="//js.t.sinajs.cn/open/analytics/js/suda.js?version=2018080418263900"></script>
+<!-- SUDA_CODE_START -->
+<noscript><img width="0" height="0" src="//beacon.sina.com.cn/a.gif?noScript" border="0" alt="" /></noscript>
+<!-- SUDA_CODE_END -->
+</body>
+<!-- video -->
+<!-- <script src="//js.t.sinajs.cn/t6/page/js/pl/third/search/index.js?version=2018073117" type="text/javascript"></script> -->
+
+</html>

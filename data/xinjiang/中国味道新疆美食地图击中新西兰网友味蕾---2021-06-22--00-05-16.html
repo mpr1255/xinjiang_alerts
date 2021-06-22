@@ -1,0 +1,446 @@
+
+
+
+
+
+
+
+
+
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>&ldquo;中国味道&middot;新疆美食地图&rdquo;击中新西兰网友味蕾--中国文化中心</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onLoad="initFeedbackList('99f4db2604d846e098bc9963c89d3635')">
+	<div id="containerbox">
+		<div id="header">
+			
+			<div class="logobg"></div>
+			<div class="searchbox">
+				<div class="btnbox">
+					<a href="http://mail.chinaculture.org/">邮箱登录</a>
+					<a href="javascript:void(0)">工作空间</a>
+					<a href="javascript:shoucang('中国海外文化中心','http://cccweb.chinaculture.org')">加入收藏</a>
+					<a href="http://en.cccweb.org">English</a>
+				</div>
+				<div class="inputbox">
+					<form action="/portal/cms/listCmsInfo!luceneSearchResult.action?pageCommand=firstPage" method="post" name="formsearchindex" id="formsearchindex">
+						<input class="btn" type="button" name="submit1" value="" onclick="searchcheck()"/>
+						<p><input class="text" type="text" name="searchContents" id="searchContents" onclick="javascript:this.value=''" value="请输入关键字"/></p>
+
+						
+						
+						
+						<input type="hidden" name="rootTreeCode" id="rootTreeCode" value="001"/>
+						<input type="hidden" name="siteCode" value="openjweb19"/>
+						<input type="hidden" name="searchType" value="titleOrContents"/>
+						<input type="hidden" name="masterTable" value="cms_info"/>
+						<input type="hidden" name="rowPerPage" id="rowPerPage" value="20"/>
+						<input type="hidden" name="luceneSearchResultPage" value="/site/Master/search/search.jsp"/>
+						
+
+						
+						
+						
+						
+					</form>
+				</div>
+			</div>
+			<script>
+				function searchcheck()
+				{
+					if(document.getElementById("searchContents").value=="")
+					{
+						alert('请填写关键字');
+						document.getElementById('searchContents').focus();
+						return false;
+					}
+					document.getElementById("formsearchindex").submit();
+				}
+				function shoucang(sTitle,sURL)
+				{
+					try
+					{
+						window.external.addFavorite(sURL, sTitle);
+					}
+					catch (e)
+					{
+						try
+						{
+							window.sidebar.addPanel(sTitle, sURL, "");
+						}
+						catch (e)
+						{
+							alert("加入收藏失败，请使用Ctrl+D进行添加");
+						}
+					}
+				}
+			</script>
+			<link rel="stylesheet" rev="stylesheet" href="/portal/site/Master/style/public.css"/>
+			<link rel="stylesheet" rev="stylesheet" href="/portal/site/Master/style/block.css"/>
+			<link rel="stylesheet" rev="stylesheet" href="/portal/site/Master/style/news_style.css"/>
+			<script language="javascript" src="/portal/site/Master/js/jquery-1.7.2.js"></script>
+			<script language="javascript" src="/portal/site/Master/js/cn.js"></script>
+			
+			<script type='text/javascript' src='/portal/dwr/util.js'></script>
+			<script type='text/javascript' src='/portal/dwr/engine.js'></script>
+			<script type='text/javascript' src='/portal/dwr/interface/StringUtil.js'></script> 
+			<script type='text/javascript' src='/portal/dwr/interface/SessionUtil.js'></script> 
+			<script type='text/javascript' src='/portal/dwr/interface/CMSUtil.js'></script>
+						<script language="javascript">
+							function getRelateNews(id)
+							{
+								CMSUtil.getRelateNews(
+									id,
+									"IDBSupportService3",
+									1,
+									20,
+									'openjweb19',
+									{
+										callback:function(data){
+									        //回调
+											/*var tmpRelateNewsExpr = ""; //构造相关新闻页面元素
+											for(i=0;i<data.length;i++)
+											{
+												var infTitle = data[i].infTitle;
+												var infSummary = data[i].infSummary;
+												var pubDt = data[i].pubDate;//发布日期
+												var cmsInfoRowId = data[i].rowId;//相关新闻自己的rowId,未发布的可以根据这个构造一个动态url
+												var url = data[i].urlLink;//相关新闻对应的连接---没有发布的返回的是#
+												tmpRelateNewsExpr +="<li><a href='"+url+"' taret='_blank'>"+infTitle.substring(0,30)+"</a></li>";
+											}
+											document.getElementById("relenew").innerHTML = tmpRelateNewsExpr;
+											*/
+		       							 }
+									}
+								);
+							}
+							//getRelateNews();
+							function initFeedbackList(id)
+							{
+								//信息访问量统计
+								CMSUtil.incVisitCount(
+									id,
+									"IDBSupportService3",
+									{
+										callback:function(data){
+											//document.getElementById("visitCount").innerHTML=" "+data+"次 "
+										}
+									}
+								);
+							}
+						</script>
+
+		</div>
+		<div id="bodyer">
+			<div id="nav" class="nav">
+				
+
+			<span class="ico_right"></span>
+			<div class="index"><a href="/portal/site/Master/index.jsp" class="">首页</a></div>
+			<div>
+				<a href="/portal/site/Master/zxjs/index.jsp" class="">中心介绍</a>
+				<ul>
+					<li><a href="/portal/pubinfo/001002011/20150210/0c793f933c364d4c90f8fffb54771d00.html">中心简介</a></li>
+					<li><a href="/portal/pubinfo/001002011/20150210/eccf0ea08d424dc2b48804449b27bc44.html">联系我们</a></li>
+					<li><a href="mailto:ccccweb@culturalink.gov.cn" target="_blank">意见反馈</a></li>
+				</ul>
+			</div>
+			<!--
+				<li><a href="/portal/pubinfo/001002011/20150210/b1e39fce2fe34fa08e3c79ee3f9e8385.html">关于我们</a></li>
+				<li><a href="/portal/pubinfo/001002011/20150210/910e311567aa4616a6b9900a8fab9aa9.html">主要职能</a></li>
+				<li><a href="/portal/site/Master/zxjs/index.jsp">各地分布</a></li>
+			-->
+			<div>
+				<a href="/portal/site/Master/zxdt/index.jsp" class="select">中心动态</a>
+				<ul>
+					<li><a href="/portal/site/Master/zxdt/whhd/index.jsp">文化活动</a></li>
+					<li><a href="/portal/site/Master/zxdt/jxpx/index.jsp">教学培训</a></li>
+					<li><a href="/portal/site/Master/zxdt/mtbd/index.jsp">媒体报道</a></li>
+					<li><a href="/portal/site/Master/zxdt/sxjl/index.jsp">思想交流</a></li>
+				</ul>
+					<!--<li><a href="/portal/site/Master/zxdt/xxfw/index.jsp">信息服务</a></li>-->
+			</div>
+			<div><a href="/portal/site/Master/jcsj/index.jsp" class="">精彩瞬间</a></div>
+			<div><a href="/portal/site/Master/ppzt/index.jsp" class="">品牌专题</a></div>
+			<div><a href="/portal/site/Master/hwhs/index.jsp" class="">海外回声</a></div>
+			<div><a href="http://library.cccweb.org/">数字图书馆</a></div>
+			<script language="javascript">
+				new DropList().Init("nav");
+			</script>
+			</div>
+			<div id="scroll" class="scroll">
+				
+				<div class="scrollbox">
+					<marquee direction="left" onMouseOver="this.stop()" onMouseOut="this.start()" width="500" scrollamount="5">
+					<span>文化活动</span>
+					<span>教学培训</span>
+					<span>信息服务</span>
+					<span>思想交流</span>
+					</marquee>
+				</div>
+			</div>
+			<div id="news" class="news">
+				<div class="box2w split">
+					<div class="navbar">
+						<a href="/portal" class="index">中心首页</a> > <a href="/portal/site/Master/zxdt/index.jsp">中心动态</a> > <a href="/portal/site/Master/zxdt/whhd/index.jsp">文化活动</a> > <span>正文</span>
+					</div>
+					<div class="article">
+						<h4 class="title">&ldquo;中国味道&middot;新疆美食地图&rdquo;击中新西兰网友味蕾</h4>
+						<h5 class="subtitle"></h5>
+						<p class="other">
+							
+							<span>来源：惠灵顿中国文化中心</span>
+							<span>发布时间：2021-06-21</span>
+							<div id="ckepop" style="float:right;height:30px;">
+								<span class="jiathis_txt">分享到：</span>
+								<a class="jiathis_button_weixin">微信</a> 
+								<a href="http://www.jiathis.com/share"  class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+								<a class="jiathis_counter_style"></a> 
+								<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+							</div> 
+						</p>
+						
+						<div class="text">
+							 
+								<label id="infContent1" ><p>　　《中国味道&mdash;新疆美食之旅》系列微纪录片，选取乌鲁木齐、吐鲁番、阿勒泰、伊犁、喀什这5座中国新疆不同区域的代表性城市，采用&ldquo;美食+人文+旅游&rdquo;的叙事方式，以美食为载体，展现新疆不同地区和城市独特的风土人情与自然风光，传递着最鲜活的社会面貌与生活美学。</p>
+
+<p>　　在中国文化和旅游部国际交流与合作局、中外文化交流中心、新疆维吾尔自治区文化和旅游厅支持下，惠灵顿中国文化中心现通过官方脸书Facebook、优兔YouTube、抖音TikTok、微信及其视频号发布这组有关&ldquo;新疆美食地图&rdquo;的精彩视频。新西兰网友有感于美食为生活带来的千般美好，通过脸书发表感言，尤其对阿勒泰地区的鱼羊鲜汤印象深刻，称鱼与羊肉的神奇组合想必会让人&ldquo;留下深刻记忆&rdquo;。</p>
+
+<p>　　<strong>新疆美食地图&middot;喀什：一席流动的盛宴</strong></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__e05179b9c48f4305b0dcec985038b876_1.jpg" /></p>
+
+<p>　　有人说，不到喀什，就不算到新疆。位于新疆西南部的喀什，是中国最西端的城市，也是新疆南疆最具维吾尔族风情的城市。作为中国国家历史文化名城，喀什有着悠久的历史文化遗存，保留和传承着众多文化在长久交融中产生的独特风味。雪山、高原、沙漠、绿洲&hellip;&hellip;你能想像到的壮美景观，都能在这里找到。彩色的木门、嬉戏的孩子、古城里悠闲自在的人们，让时光慢了下来。 喀什的大街小巷、大小巴扎，随处可见当地的美食小吃。当暮色降临，这里的夜市俨然是一席流动的盛宴，小吃荟萃，人潮涌动，汇聚了这里最自信的味道。号称有着数百款最地道的小吃任人挑选，美食琳琅，目不暇接，诸如凉面、烤串、烤鸡蛋、羊奶冰激凌、拉条子、炸鱼块、切糕、新疆各色水果等等，并且价位实在。总之，这里几乎囊括了人们对新疆美食的一切想象，也成为这座千年古城里最具烟火气息的所在，带给人们的，是彼此之间最温暖的维系与日常。</p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__26a0263317bf47d2873430a04977b2ed_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__5669d3c55cb340e0bebdb898a384175a_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__e410ddcbefb24bcf80dd03ae4ab79ce5_1.jpg" /></p>
+
+<p>　　<strong>阿勒泰&middot;鱼羊鲜汤：都是自然的味道</strong></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__057a236ea9a64f03b2eddc3a9c3d3df4_1.jpg" /></p>
+
+<p>　　乌伦古湖里的鱼，搭配这里草场盛产的羊，鱼吸收羊的浓汤，羊吸收鱼的鲜甜，去膻去腥，鲜上加鲜，都是自然的味道&hellip;&hellip;地处新疆北部的阿勒泰地区，有&ldquo;北疆水塔&rdquo;之称，以哈萨克民族为代表的游牧民族在这里世代沿袭、追寻水草丰美的牧场。但辽阔的草原与肥美的牛羊，并不是阿勒泰的全貌。乌伦古湖（也叫福海）湖水面积近900平方公里，鱼产丰富，素有&ldquo;戈壁大海&rdquo;的美称，古老的冬捕习俗，让这里的人们尽享自然的馈赠。</p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__42d74a98074c41b9a646cac835ae00a4_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__fdf57858ef244de39123c68ef61eb9dc_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__444aec2c922f42a08ddec1cf6ba0c4d6_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__7d573cdf809f4a098fd3e1b49fe83b80_1.jpg" /></p>
+
+<p>　　<strong>吐鲁番的馕：一天生活的开始</strong></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__c8478c938d604c09a3d373a02b578c7c_1.jpg" /></p>
+
+<p>　　&ldquo;宁可三日无肉，不可一日无馕。&rdquo;在这个中国最热的地方，亦是丝路古镇，馕是古代商人的必备食物，也是现今众多维吾尔族家庭一天生活的开始。在当地维吾尔族农家中，几乎家家户户都有馕坑，打馕师傅将面团在案板上摔打，用手推出形状，木头雕花模子在馕饼上扎出一圈一圈的花纹，抹上芝麻和清油，将馕甩进馕坑里，精准把控馕坑的烤制温度是打馕至关重要的环节。高温催化下，馕会变得金黄酥脆，麦香扑面而来。这里有火焰山、库木塔格沙漠、葡萄沟、高昌故城、交河故城&hellip;&hellip;神奇的自然风貌与悠久的历史在此相互交织。</p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__d523ddf1d36e4008b1dc94680fd24d99_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__379a22d2459a4161a364840db7ad316c_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__a134b657a60642ae83bb25f930f74f94_1.jpg" /></p>
+
+<p>　　<strong>伊犁&middot;手抓饭：保留极致的西域味道</strong></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__e42a3878ea234ecf96f97506fc4c3632_1.jpg" /></p>
+
+<p>　　北疆西部的伊犁，独特的地貌给这里带来丰沛的降水，也孕育了独特的风物美食。在伊犁众多令人垂涎的美食中，&ldquo;抓饭&rdquo;会在每个去过伊犁的人心中留下一个位置：新疆大米生长周期长、光照充沛，因此颗粒饱满、晶莹剔透，口感丰腴油润；抓饭的配料，讲究羊肉要鲜嫩，当地特有的黄色胡萝卜不可或缺&hellip;&hellip;普通的配料，却保留了极致的西域味道。</p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__6d6f174106f14ee983eaa3e2fd4885be_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__e53b5113f73943f3ba95cd2009de9399_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__cc4f2fd087764bcbbf1c1d47ec280670_1.jpg" /></p>
+
+<p>　　<strong>乌鲁木齐&middot;大盘鸡：浸泽南北食材</strong></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__660f7bcc81ed40bc883e0a9fa850e145_1.jpg" /></p>
+
+<p>　　位于新疆中部、天山北麓的新疆首府乌鲁木齐，是世界上距离海洋最远的城市，已成为连接着中亚、南亚乃至欧洲的现代化都市。在这里，你可以随时品尝到风味正宗的大盘鸡，它融合了天南地北的食材，口味完全不同的人都会被其特有的鲜香热辣所折服，是每个新疆人记忆里最深刻的味道。因盘大料足而得名的大盘鸡，讲究的是鸡肉的香嫩与嚼劲。土豆软糯甜润，配料丰富给力，汤汁浓厚鲜香且辣味十足，盘底衬上的宽软皮带面更是余味生香。种类丰富的食材相互浸泽、十足交融。</p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__dee981691d214b2aa49a4f6db69b69d2_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__b89a03587abc4f5aa284e442c610a42b_1.jpg" /></p>
+
+<p style="text-align:center"><img alt="" src="/upload/cms_info/2021/06/21/1624245752228182642__19de423f211840edb37759c1934db903_1.jpg" /></p>
+
+<p>　　（图文来源：惠灵顿中国文化中心、中外文化交流中心、新疆维吾尔自治区文化和旅游厅）</p></label>
+							
+						</div>
+						<!--<div class="editor">责任编辑:胡梦音</div>-->
+					</div>
+				</div>
+				<div class="box1w">
+					<div class="lib">
+						
+
+
+
+
+
+
+						<h3 class="titlenoico"><a href="/portal/site/Master/jcsj/index.jsp" class="more">更多</a>精彩瞬间</h3>
+						<div class="lib_box">
+							<ul class="simg_news1">
+								<!--<li class="m1">
+									<img src="../images/img_2.jpg"/>
+									<p><a href="#">阿斯顿滴答滴答阿斯顿滴答滴答滴阿斯顿滴答滴答滴阿斯顿滴答滴答滴阿斯顿滴答滴答滴答滴答滴答滴答滴答滴答</a></p>
+								</li>-->
+								<li class='list m1'><a href= target='_blank'><img src='/portal/site/wenhua/uploadImg/2021/03/09/200001003002001/m_1615303870504009093.png' /></a><p class='title' ><a href='' target='_blank' title='绿色、共享、开放、廉洁：惠灵顿中国文化中心分享北京冬奥愿景' >惠灵顿中心分享北京冬奥愿景</a></p><li class='list m1'><a href= target='_blank'><img src='/portal/site/wenhua/uploadImg/2021/03/08/200001003002001/m_1615199585176223618.png' /></a><p class='title' ><a href='' target='_blank' title='“民族音乐、当代气质、国际表达”' >上海民族乐团精品集粹</a></p>
+							</ul>
+						</div>
+					</div>
+					<div class="lib m1">
+						
+
+
+
+
+
+
+						<h3 class="titlenoico">聚焦</h3>
+						<div class="lib_box">
+							<ul class="fontnews m1">
+								<!--<li><a href="#">阿斯顿滴答滴答滴s答滴答答滴答滴答滴答滴答滴答滴答滴答滴答滴答</a></li>-->
+								<li><a href='/portal/pubinfo/2021/06/11/001002003003/3eee14e60ffa43a6929a6bde60bf4d38.html' target='_blank' title='“匠造——设计融入乡村发展”系列短视频展播'>“匠造——设计融入乡村发展”系列短视频展播</a></li><li><a href='/portal/pubinfo/2021/06/11/001002003003/0edd635b9af548ecac88a16f9d29ca08.html' target='_blank' title='荷兰博物馆重新开放'>荷兰博物馆重新开放</a></li><li><a href='/portal/pubinfo/2021/06/11/001002003003/f0af0171946c4fe4b0f958e0a941158d.html' target='_blank' title='2021年“中国旅游文化周”在西班牙精彩上线'>2021年“中国旅游文化周”在西班牙精彩上线</a></li><li><a href='/portal/pubinfo/2021/06/11/001002003003/e00c02ea6a654d3491c88fce56ca9479.html' target='_blank' title='开罗中国文化中心：2021“中国旅游文化周”正式上线'>开罗中国文化中心：2021“中国旅游文化周”正式上线</a></li><li><a href='/portal/pubinfo/2021/06/10/001002003003/3e88e67c02b148b998a7e18d2c97d3c3.html' target='_blank' title='新加坡中国文化中心推介：健康中国游——太极拳微课堂'>新加坡中国文化中心推介：健康中国游——太极拳微课堂</a></li><li><a href='/portal/pubinfo/2021/04/16/001002003003/6d11b091641843afbab9121b898eee47.html' target='_blank' title='海牙中国文化中心成功举办《高罗佩与中国文化》主题展线上闭幕活动'>海牙中国文化中心成功举办《高罗佩与中国文化》主题展线上闭幕活动</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lib m1">
+						
+
+
+
+
+
+
+						<h3 class="titlenoico"><a href="/portal/site/Master/ppzt/index.jsp" class="more">更多</a>品牌专题</h3>
+						<div class="lib_box">
+							<ul class="simg_news1">
+								<!--<li class="m1">
+									<img src="../images/img_2.jpg"/>
+									<p><a href="#">阿斯顿滴答滴答阿斯顿滴答滴答滴阿斯顿滴答滴答滴阿斯顿滴答滴答滴阿斯顿滴答滴答滴答滴答滴答滴答滴答滴答</a></p>
+								</li>-->
+								<li class='m1'><a href=http://cn.chinaculture.org/portal/site/wenhua/special_report/2021/2021lcgc/index.jsp target='_blank'><img src='/portal/site/wenhua/uploadImg/2021/01/07/200001005/m_1610029909465024083.jpg'/></a><p class='title'><a href='http://cn.chinaculture.org/portal/site/wenhua/special_report/2021/2021lcgc/index.jsp' target='_blank' title='探秘5000年前的中国良渚古城遗址'>探秘5000年前的中国良渚古城遗址</a></p><li class='m1'><a href=http://cn.chinaculture.org/portal/site/wenhua/special_report/2020/2020zhmo/index.jsp target='_blank'><img src='/portal/site/wenhua/uploadImg/2021/01/11/001002005/m_1610354048143122017.jpg'/></a><p class='title'><a href='http://cn.chinaculture.org/portal/site/wenhua/special_report/2020/2020zhmo/index.jsp' target='_blank' title='中国——摩洛哥旅游论坛'>中国——摩洛哥旅游论坛</a></p>
+							</ul>
+						</div>
+					</div>
+					<div id="zxjs" class="m1">
+						<h3 class="titleico"><a href="#">中心介绍</a></h3>
+						<div class="map">
+							
+
+
+
+
+
+
+							<img src="/portal/site/Master/images/map_new1.jpg" border="0" usemap="#Map2"/>
+							<map id="Map2" name="Map2">
+								<area shape="rect" id="bmz" coords="28,24,56,56" href="javscript:void(0)" title="北美洲">
+								<area shape="rect" id="nmz" coords="75,96,99,125" href="javscript:void(0)" title="南美洲">
+								<area shape="rect" id="fz" coords="153,97,178,130" href="javscript:void(0)" title="非洲">
+								<area shape="rect" id="oz" coords="141,23,169,57" href="javscript:void(0)" title="欧洲">
+								<area shape="rect" id="yz" coords="215,60,243,92" href="javscript:void(0)" title="亚洲">
+								<area shape="rect" id="dyz" coords="259,117,284,146" href="javscript:void(0)" title="大洋洲">
+</map>
+							<div id="mask">
+								<p></p>
+								<div></div>
+							</div>
+							<div style="display:none;" id="bmzbox">
+								<a href='/portal/pubinfo/001002002/20150215/936c9083136b4e19a6246b2b4a6293af.html' target='_blank'>墨西哥中国文化中心</a>
+							</div>
+							<div style="display:none;" id="nmzbox">
+								
+							</div>
+							<div style="display:none;" id="fzbox">
+								<a href='/portal/pubinfo/001002002/20150215/873827b32aac448eadb3d2283f64c752.html' target='_blank'>毛里求斯中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/d3b8df90e3d545df996319bd6359c922.html' target='_blank'>贝宁中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/4605c27fd31b4fda83d6e8f7cd066edd.html' target='_blank'>开罗中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/c34660360ff24ff3a74e5de220af76a3.html' target='_blank'>尼日利亚中国文化中心</a><a href='/portal/pubinfo/001002002/20151130/aad06136fd594570aae5f530846df630.html' target='_blank'>坦桑尼亚中国文化中心</a><a href='/portal/pubinfo/2020/10/21/001002002/e6dd9f6807144c8f86dc27e9bda90b7e.html' target='_blank'>拉巴特中国文化中心</a>
+							</div>
+							<div style="display:none;" id="ozbox">
+								<a href='/portal/pubinfo/001002002/20150215/d9cd8ef0cd0345238856282e9f19bff2.html' target='_blank'>巴黎中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/16c50b7d04cd46d38289c45211c0ff45.html' target='_blank'>马耳他中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/f964be1efae0451c839edfb9ea5ceca8.html' target='_blank'>柏林中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/092d98e66db64b8c93e788553461e3af.html' target='_blank'>莫斯科中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/83b61818862c41139db8e4d463320bce.html' target='_blank'>马德里中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/4fe1dd8413154250b3b3db976899402f.html' target='_blank'>哥本哈根中国文化中心</a><a href='/portal/pubinfo/001002002/20150924/6c2d005fa1dc4574a12ebf14c43038c4.html' target='_blank'>布鲁塞尔中国文化中心</a><a href='/portal/pubinfo/001002002/20160922/f1aa908312e74fa5a1483853f573a57f.html' target='_blank'>斯德哥尔摩中国文化中心</a><a href='/portal/pubinfo/001002002/20171212/146d72151a89423ea9a786e43320d479.html' target='_blank'>索非亚中国文化中心</a><a href='/portal/pubinfo/001002002/20171222/57cdd94ead854d848ac3cc7ac2ee7ec7.html' target='_blank'>明斯克中国文化中心</a><a href='/portal/pubinfo/001002002/20171222/ebc1d927b152479eb211ee49c39a63e8.html' target='_blank'>海牙中国文化中心</a><a href='/portal/pubinfo/001002002/20171222/faceaf74d49d49479b5aba71fd0858aa.html' target='_blank'>雅典中国文化中心</a>
+							</div>
+							<div style="display:none;" id="yzbox">
+								<a href='/portal/pubinfo/001002002/20150215/d41cd7b8db5148fcb18dc6369f76679c.html' target='_blank'>首尔中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/569007b9185049799177d4d01af409e4.html' target='_blank'>东京中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/e859ec6966374ce39aaaa1cb690bdc97.html' target='_blank'>乌兰巴托中国文化中心</a><a href='/portal/pubinfo/001002002/20150215/c75827c38ad74024b543fa15faf7a5e5.html' target='_blank'>曼谷中国文化中心</a><a href='/portal/pubinfo/001002002/20150226/a3374e99751e416792b074b030f35530.html' target='_blank'>老挝中国文化中心</a><a href='/portal/pubinfo/001002002/20150310/6002e218c4c0422398d1bbbc04ce4630.html' target='_blank'>斯里兰卡中国文化中心</a><a href='/portal/pubinfo/001002002/20150310/277796b650e640169568ceaff47292c5.html' target='_blank'>巴基斯坦中国文化中心</a><a href='/portal/pubinfo/001002002/20150310/8d43d15afbdb47eca8aa0b6b05d69017.html' target='_blank'>尼泊尔中国文化中心</a><a href='/portal/pubinfo/001002002/20150416/7c16696610f343abaa46ef86de88ae38.html' target='_blank'>新加坡中国文化中心</a><a href='/portal/pubinfo/001002002/20161124/313721ac9cde456f82d49af3a696d488.html' target='_blank'>金边中国文化中心</a><a href='/portal/pubinfo/001002002/20171212/0fea73119580498c9c2f3228a88e78c2.html' target='_blank'>特拉维夫中国文化中心</a><a href='/portal/pubinfo/001002002/20171212/19e5e4f4b0b6426aa3c8f1ca50f8ee49.html' target='_blank'>河内中国文化中心</a><a href='/portal/pubinfo/001002002/20171222/1acb08040b26489ba7d03918608fb23e.html' target='_blank'>仰光中国文化中心</a>
+							</div>
+							<div style="display:none;" id="dyzbox">
+								<a href='/portal/pubinfo/001002002/20150215/e6544691e63e47899c7e05d9f39e0354.html' target='_blank'>悉尼中国文化中心</a><a href='/portal/pubinfo/001002002/20151215/4cf12dc9ed044a4f9cf2686268c82ce3.html' target='_blank'>新西兰中国文化中心</a><a href='/portal/pubinfo/001002002/20151218/435a65b4bec74bc584cd8686de2b056b.html' target='_blank'>斐济中国文化中心</a>
+							</div>
+							<script language="javascript">
+								var aa = new Map();
+								var _position = new Array();
+								_position[0] = new Array(["bmz"],["40px"],["-136px"]);
+								_position[1] = new Array(["nmz"],["86px"],["-174px"]);
+								_position[2] = new Array(["fz"],["14px"],["-172px"]);
+								_position[3] = new Array(["oz"],["4px"],["-140px"]);
+								_position[4] = new Array(["yz"],["76px"],["-106px"]);
+								_position[5] = new Array(["dyz"],["120px"],["-152px"]);
+								aa.Init("Map2",_position,"70px");
+							</script>
+						</div>
+						<div class="block m1">
+							
+							<!--<p><img src="/portal/site/Master/images/ico/icon_1_cn.jpg"/><a href="/portal/pubinfo/001002011/20150210/b1e39fce2fe34fa08e3c79ee3f9e8385.html" target="_blank">关于我们</a></p>-->
+							<p><img src="/portal/site/Master/images/ico/icon_2_cn.jpg"/><a href="/portal/pubinfo/001002011/20150210/0c793f933c364d4c90f8fffb54771d00.html" target="_blank">中心简介</a></p>
+							<!--<p><img src="/portal/site/Master/images/ico/icon_3_cn.jpg"/><a href="/portal/pubinfo/001002011/20150210/910e311567aa4616a6b9900a8fab9aa9.html" target="_blank">主要职能</a></p>-->
+							<p><img src="/portal/site/Master/images/ico/icon_4_cn.jpg"/><a href="/portal/pubinfo/001002011/20150210/eccf0ea08d424dc2b48804449b27bc44.html" target="_blank">联系我们</a></p>
+							<!--<p><img src="/portal/site/Master/images/ico/icon_5_cn.jpg"/><a href="/portal/site/Master/zxjs/index.jsp" target="_blank">各地分布</a></p>-->
+							<p><img src="/portal/site/Master/images/ico/icon_6_cn.jpg"/><a href="mailto:ccccweb@culturalink.gov.cn" target="_blank">意见反馈</a></p>
+							<!--/portal/pubinfo/001002011/20150210/eccf0ea08d424dc2b48804449b27bc44.html-->
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="support" class="support">
+				
+				<p>支持机构</p>
+				<div>
+					<a href="http://cn.chinaculture.org" target='_blank'><img src="/portal/site/Master/images/support1.jpg"/></a>　　　
+					<a href="http://cica.chinaculture.org" target='_blank'><img src="/portal/site/Master/images/support2.jpg"/></a>　　　
+					<a href="http://cn.chinaculture.org/portal/site/wenhua/special_report/ccfa/index.jsp" target='_blank'><img src="/portal/site/Master/images/support3.jpg"/></a>　　　
+					<a href="javascript:void(0)"><img src="/portal/site/Master/images/support4.jpg"/></a>　　　
+					<a href="http://www.caeg.cn" target='_blank'><img src="/portal/site/Master/images/support5.jpg"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footerbox">
+		<div id="footer">
+			
+			<ul>
+				<li class="noborder"><img src="/portal/site/Master/images/logo.jpg"/></li>
+				<li class="column2">
+					<p><a href="/portal/pubinfo/001002011/20150210/b1e39fce2fe34fa08e3c79ee3f9e8385.html" target="_blank">关于我们</a></p>
+					<p><a href="/portal/pubinfo/001002011/20150210/0c793f933c364d4c90f8fffb54771d00.html" target="_blank">中心简介</a></p>
+					<p><a href="/portal/pubinfo/001002011/20150210/910e311567aa4616a6b9900a8fab9aa9.html" target="_blank">主要职能</a></p>
+					<p><a href="/portal/site/Master/zxjs/index.jsp" target="_blank">各地分布</a></p>
+					<p><a href="/portal/pubinfo/001002011/20150210/eccf0ea08d424dc2b48804449b27bc44.html" target="_blank">联系我们</a></p>
+				</li>
+				<li class="column2">
+					<p><a href="/portal/pubinfo/001002011/20150210/e63e5cdf9dd74937ba748ac2eb97a1db.html" target="_blank">网站地图</a></p>
+					<p><a href="/portal/pubinfo/001002011/20150210/8fa6fd2c5eac422bbcd646d78874b2ed.html" target="_blank">使用规则</a></p>
+					<p><a href="#">关注我们</a></p>
+					<p class="code"><img src="/portal/site/Master/images/code.jpg" width="70"/></p>
+					<!--<a href="#"><img src="/portal/site/Master/images/ico/weixin.gif"/></a><a href="#"><img src="/portal/site/Master/images/ico/weibo.gif"/></a>-->
+				</li>
+				<li class="column4 noborder">
+					<p class="mt">China Cultural Center</p>
+					<p>中国文化中心</p>
+					<p>公安备案号 <a href="http://www.beian.gov.cn/" target="_blank">11040202440046</a></p>
+					<p><a href="https://beian.miit.gov.cn" target="_blank">京ICP备12045974号-7</a></p>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</body>
+</html>
