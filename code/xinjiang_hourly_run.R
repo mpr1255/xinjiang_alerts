@@ -27,7 +27,7 @@ for (i in topics){
 }
 
 for (i in 1:nrow(feeds)){
-i <- 8  
+
   col1 <- NULL
   df1 <- data.frame(col1,stringsAsFactors = FALSE)
   

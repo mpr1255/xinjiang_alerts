@@ -4,7 +4,7 @@ This is a simple script that is currently running locally.
 Ideally it would be developed further, and hosted remotely (for example, simply using GitHub Actions, or on GCP. The main reason I haven't done that is cost).* 
 
 ## How it works
-The script checks `feeds.csv` every hour. That has search terms and the corresponding Google Alerts rss feed. This is the extensible side of the project --- you can add more search terms to that. I just used 新疆 and 维吾尔. 
+The script checks `/code/ref_files/feeds.csv` every hour. That has search terms and the corresponding Google Alerts rss feed. This is the extensible side of the project --- you can add more search terms to that. I just used 新疆 and 维吾尔. 
 
 As best I can figure, a google alert is generated every time google finds a news article, web site, blog, or similar that mentions the target term. The entire RSS feed is eventually refreshed at indeterminate intervals (i.e. it does not accumulate to some arbitrary length). Thus, it needs to be checked regularly. Not to mention the entire point of this -- that we're trying to capture official and semi-official internet ephemera on sensitive topics, so we have to be quick.
 
