@@ -75,7 +75,7 @@ for (i in 1:nrow(feeds)){
     titles <- str_remove_all(titles, "\\/")
     titles <- str_remove_all(titles, "\\(")
     titles <- str_remove_all(titles, "\\)")
-    titles <- str_replace_all(titles, "\\W+", " ")
+    titles <- str_remove_all(titles, "\\W+")
     titles <- str_remove_all(titles, "\\p{Arabic}")
     
     dftitles <- tibble(titles)
