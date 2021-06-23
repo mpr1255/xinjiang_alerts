@@ -40,3 +40,6 @@ It could follow-up with missed articles better. The most extreme case would be s
 
 * Some issues re cost and hosting: 
 The code is not tight, it uses lots of dependencies, R is slow anyway, and it has to wait every time it curls the archive.org link. Why? Because trying to do it asychronously (with WAIT=FALSE in the curl call or suppressing stdout) was unreliable. It has automatic timeouts both for the local curl and the archiving, but it's still slow. It would chew up a lot of minutes if I ran it on github actions or google cloud platform or whatever. But yes, that would be better and feel free. 
+
+## make it asynchronous
+Whether in R or if it's rewritten in python, there's no good reason we should have to wait around for either curling the htmls to disk or the archive.org check. It would ideally be asynchronous. 

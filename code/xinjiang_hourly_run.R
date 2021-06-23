@@ -138,7 +138,7 @@ for (i in 1:nrow(feeds)){
     
     var <- df_input$sent_to_archive[j]
     
-    if(identical(NA, var)){
+    if(identical(NULL, var)){
       print("var is NULL. sending it to archive.org")
       system(glue("curl -s -I https://web.archive.org/save/{cur_url}"))
       df_input$sent_to_archive[j] <- TRUE
