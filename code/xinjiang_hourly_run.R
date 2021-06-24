@@ -12,7 +12,7 @@ suppressMessages(library(urltools))
 if(dir.exists("/home/a/")){
   dir <- "/home/a/projects/xinjiang_alerts/"
 }else{
-  dir <- "/mnt/c/projects/xinjiang_alerts/"
+  dir <- "/mnt/c/Users/m/projects/xinjiang_alerts/"
 }
 
 data_dir <- paste0(dir,"data/")
