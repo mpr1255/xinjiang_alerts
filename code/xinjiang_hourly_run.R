@@ -8,8 +8,10 @@ suppressMessages(library(here))
 suppressMessages(library(urltools))
 ######################
 
-# I have to do this to make it work. OK?
-if(dir.exists("/home/a/")){
+`%notin%` <- Negate(`%in%`)
+`%notlike%` <- Negate(`%like%`)
+
+if(dir.exists("/home/a")){
   dir <- "/home/a/projects/xinjiang_alerts/"
 }else{
   dir <- "/mnt/c/Users/m/projects/xinjiang_alerts/"
@@ -94,54 +96,78 @@ for (i in 1:nrow(feeds)){
     
     html_file_names <- paste0(substr(titles, 1, 20),"---", pubdates,".html")
     html_file_names <- tibble(html_file_names)
-    df_for_output <- bind_cols(dflinks, dftitles, dfpubdates, dfcontent, html_file_names)
+    df_new_urls <- bind_cols(dflinks, dftitles, dfpubdates, dfcontent, html_file_names)
     
-    fwrite(df_for_output, paste0(data_dir,topic,".csv"), append=TRUE)
+    fwrite(df_new_urls, paste0(data_dir,topic,"--new.csv"))
     
-  }
-  
-  if(identical(character(0),read_lines(paste0(data_dir, topic, ".csv")))){
-    print("df input is empty")
+  }else{
+    print(glue("there were no new links in {topic}, going to next"))
     next
   }
   
-  df_input <- fread(paste0(data_dir, topic, ".csv"), fill = TRUE)
-  # names(df_input) <- c("links","titles","pubdates","content","html_file_names")
+  # if(identical(character(0),read_lines(paste0(data_dir, topic, "--new.csv")))){
+    # print("df input is empty")
+    # next
+  # }
   
+  # df_input <- fread(paste0(data_dir, topic, "--new.csv"), fill = TRUE)
+  # names(df_input) <- c("links","titles","pubdates","content","html_file_names")
   # ,"file_status","file_size","sent_to_archive"
   
-  if(nrow(df_input) == 0){
-    print("df input is empty")
+  # if it's empty then skip to the next. 
+  if(nrow(df_new_urls) == 0){
+    print("alerts feed is empty")
     next
   }
   
-  
-  
-  df_input <- df_input %>% distinct(links, .keep_all = TRUE)
-  
-  df_input <- df_input %>% 
-    filter(str_detect(links, pattern="http|www"))
-  
-  df_input <- df_input %>% 
+  # clean up the urls and decode them. 
+  df_new_urls <- df_new_urls %>% 
     mutate(html_file_names = str_remove_all(html_file_names, "\\/"),
            links = map_chr(links, ~url_decode(.x))) 
   
-  fwrite(df_input, paste0(data_dir,topic,".csv"))
-
+  # eliminate dupes
+  df_new_urls <- df_new_urls %>% distinct(links, .keep_all = TRUE)
+  
+  # make sure they all have urls
+  df_new_urls <- df_new_urls %>% 
+    filter(str_detect(links, pattern="http|www"))
+  
+  # read in the existing links
+  df_input_old <- fread(paste0(data_dir, topic, ".csv"), fill = TRUE)
+  setDT(df_new_urls)
+  # only include new linkes
+  df_input <- df_new_urls[df_new_urls$links %notin% df_input_old$links]
+  
+  if(nrow(df_input) == 0){
+    print("alerts feed isn't empty, but has no new articles")
+    next
+  }
+  
+  # write out the new ones to the main csv
   
   for (j in 1:nrow(df_input)){
 
     cur_url <- df_input$links[j]
-    print(glue("working on {cur_url}"))
+    print(glue("\n\n ******************* \n\nworking on {cur_url}"))
+    
     file_name <- df_input$html_file_names[j]
+    
     file_name_dir <- paste0(data_dir,topic,"/",file_name) 
     
     timenow <- strftime(Sys.time(), format="%Y%m%d%H%M")
-    if(!file.exists(file_name_dir)){
+    
+    # check if the filename exists in any of the dirs, to avoid some projects having more than others. 
+    
+    if(length(Sys.glob(paste0(dir,'data/*/',file_name))) == 0){
       tryCatch(
         expr = {
           # system(glue("./monolith-gnu-linux-x86_64 {cur_url} -o {file_name_dir} -s"))
-          system(glue("curl {cur_url} -o {file_name_dir}"))
+          # system(glue("curl {cur_url} -o {file_name_dir}"))
+          
+          res <- curl_fetch_disk(cur_url, tempfile())
+          
+          write_lines(read_lines(res$content), file_name_dir)
+          
           message(glue("wrote    {file_name} | {timenow}"))
         },
         error = function(e){
@@ -187,10 +213,18 @@ for (i in 1:nrow(feeds)){
     var <- df_input$sent_to_archive[j]
     
     archiveit <- function(x){
-      print("checking archiving and archiving if necessary....")
+      print("checking archive and archiving if necessary....")
       
       checkarchive <<- curl_fetch_disk(glue("http://archive.org/wayback/available?url={x}"), tempfile())
-      parsed_response <<- jsonlite::parse_json(read_lines(checkarchive$content))
+      
+      bad_request <- ifelse(grepl("Your browser sent an invalid request", read_file(checkarchive$content)), TRUE, FALSE)
+      
+      if(bad_request == FALSE){
+        
+        parsed_response <<- jsonlite::parse_json(read_lines(checkarchive$content))
+        
+      }
+      
       
       if(length(parsed_response$archived_snapshots) == 0){
         print("there is no archive url. Trying now...")
@@ -214,8 +248,23 @@ for (i in 1:nrow(feeds)){
       }
     } #end archiveit function
     
+    
     tryCatch(
       expr = {
+        
+        if(identical(NULL, var)){
+          archiveit(cur_url)
+        }else if(identical(NA, var)){
+          archiveit(cur_url)
+        }else if(identical(FALSE, var)){
+          archiveit(cur_url)
+        }else if(identical(TRUE, var)){
+          archiveit(cur_url)
+        }else if(grepl("TRUE", var)){
+          archiveit(cur_url)
+        }else if(var == ""){
+          archiveit(cur_url)
+        }
 
         if(!grepl("web\\.archive", var)){
           if(!grepl("failed", var)){
@@ -227,19 +276,7 @@ for (i in 1:nrow(feeds)){
         }else{
             print("already archived")
           }
-          # if(identical(NULL, var)){
-          #   archiveit(cur_url)
-          # }else if(identical(NA, var)){
-          #   archiveit(cur_url)
-          # }else if(identical(FALSE, var)){
-          #   archiveit(cur_url)
-          # }else if(identical(TRUE, var)){
-          #   archiveit(cur_url)
-          # }else if(grepl("TRUE", var)){
-          #   archiveit(cur_url)
-          # }else if(var == ""){
-          #   archiveit(cur_url)
-          # }
+
           # else if (grepl("failed", var)){
           #   print(paste0("archive previously failed on", str_split(var, '\\|')[[1]][2], " but trying again anyway"))
           #   archiveit(cur_url)
@@ -259,7 +296,7 @@ for (i in 1:nrow(feeds)){
   
   } # close j loop
   
-  fwrite(df_input, paste0(data_dir,topic,".csv")) # end of the j loop; it's going to write out everything that happened in the j
+  fwrite(df_input, paste0(data_dir,topic,".csv"), append = TRUE) # end of the j loop; it's going to write out everything that happened in the j
   
 } # close i loop
 
