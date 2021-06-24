@@ -21,6 +21,9 @@ Because important data is quite often deleted soon after being published. I orig
 ### Why curl?
 I tried monolith (https://github.com/Y2Z/monolith) and the html files it grabbed were indeed perfect -- but way too big. 8mb, 28mb etc. Just curling the text is orders of magnitude smaller. Assuming this will eventually grow to hundreds of thousands of links, it will get unwieldy. For historical purposes there may be a case for using monolith for perfect preservation of the content --- someone should do that and host it. 
 
+### Why R?
+Cause that's what I know.... sorry.
+
 ## User guide
 Several ways to use this: 
 
