@@ -37,7 +37,7 @@ DONE
 
 ~~## integrate the archive link~~
 
-~~Right now the curl packet goes off to archive the link, but I haven't tried to capture that and integrate it back into the csv file. That would be a good idea. ~~
+~~ ~~Right now the curl packet goes off to archive the link, but I haven't tried to capture that and integrate it back into the csv file. That would be a good idea.
 
 ~~That could also be done through the curl library inside R itself, but I just opted for the shell because it is simpler (and I was expecting to be able to do it asynchronously).~~
 
