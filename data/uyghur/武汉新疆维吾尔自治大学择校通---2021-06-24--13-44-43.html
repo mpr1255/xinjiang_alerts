@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>武汉新疆维吾尔自治大学-择校通</title>
+
+    <!--全局通用框架样式 begin-->
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telphone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link type="text/css" rel="stylesheet" href="/static/css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/aos.css">
+    <link type="text/css" rel="stylesheet" href="/static/wap/css/weui.css">
+    <link type="text/css" rel="stylesheet" href="/static/wap/css/style.css?v=201906031554">
+    <!--[if IE 8]>
+    <link type="text/css" rel="stylesheet" href="/static/css/style_ie.css?v=201906031554">
+    <style>
+    </style>
+    <![endif]-->
+    <!--[if IE 9]>
+    <link type="text/css" rel="stylesheet" href="/static/css/style_ie.css?v=201906031554">
+    <style>
+    </style>
+    <![endif]-->
+    <!--全局通用框架样式 111 end-->
+
+    <meta name="keywords"  content="武汉新疆维吾尔自治大学,新疆维吾尔自治大学,武汉新疆维吾尔自治区大学,新疆维吾尔自治区大学"><meta name="description" content="新疆维吾尔自治大学学校查询,新疆维吾尔自治附近有哪些大学，新疆维吾尔自治哪一家大学最好，新疆维吾尔自治哪一家大学离家最近，找武汉大学，就上择校通">
+    
+    <link rel="canonical" href="https://zxtsch.com/baike?city=1850">
+    <!--&lt;!&ndash;/* Per-page placeholder for additional styles */&ndash;&gt;-->
+    <!--<th:block th:replace="${styles}" />-->
+
+
+</head>
+<body>
+<div class="container page page-baike page-nopaddingbottom" >
+    <div class="nav-header">
+    <div class="nav-bd">
+        <div class="nav">
+            <input type="hidden" value="1850" id="nav-city-id" />
+            
+            <div class="nav-logo">
+                <a href="/wap/wuhan?type=5">
+                    <img src="/static/wap/images/logo.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div>
+        <div class="search-box-2" id="searchLocation">
+            <input type="hidden" id="view-school-type" value="5" />
+            <i class="icon-search"></i>
+            <span>请输入学校名称</span>
+        </div>
+        <!--学校列表-->
+        <div class="result-box">
+            <div class="weui-flex result-box-hd">
+                <div class="result-box-col1 weui-flex__item" onclick="showFilterModal(1)">
+                    <div class="result-sequence overflow-ellipsis-one">
+                        
+                            
+                                
+                                    <span>大学</span>
+                                
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+
+                        <i class="icon-arrow icon-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="result-box-col4 weui-flex__item" onclick="showFilterModal(4)">
+                    <div class="result-sequence overflow-ellipsis-one">
+                        
+                            
+                                <span>综合排序</span>
+                            
+                        
+                            
+                        
+                            
+                        
+                        <i class="icon-arrow icon-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="result-box-col2 weui-flex__item" onclick="showFilterModal(2)">
+                    <div class="result-sequence overflow-ellipsis-one">
+                        
+                            
+                        
+                            
+                                
+                                    <span class="overflow-ellipsis-one" style="display:inline-block;max-width:75px">新疆维吾尔自治区</span>
+                                
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                        <i class="icon-arrow icon-arrow-down" style="position:absolute;top:5px"></i>
+                    </div>
+                </div>
+                <div class="result-box-col3 weui-flex__item" onclick="showFilterModal(3)" :class=" filterVar.other.tags.length > 0 ? 'active':''">
+                    <div class="result-filter">
+                        <span>筛选</span>
+                        <i class="icon-filter" :class=" filterVar.other.tags.length > 0 ? 'on':''"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="school-list result-box-bd" id="result-box-bd">
+                <div>
+                    <a class="result-box-item"  href="/wap/school/23850.html">
+                        <div class="result-box-item__image">
+                            <img src="https://youcai-bos.felink.com.cn/test/res/image/2019052110593244225573.jpg@h_112,w_150,q_100,s_2">
+                        </div>
+                        <div class="result-box-item__info">
+                            <div class="result-box-item__title">新疆大学</div>
+                            <div class="result-box-item__tag">
+                                <span>本科</span><span>专科</span><span>地方</span><span>双一流</span><span>211高校</span><span>综合</span>
+                            </div>
+                            <div class="result-box-item__address">新疆乌鲁木齐市胜利路666号</div>
+                            <!-- <div class="result-box-item__address" v-if="filterVar.school.key==5" v-show="filterVar.comprehensive.key != 0">排名：{{item.ranking}}</div> -->
+                        </div>
+                    </a>
+                </div>
+                <div class="result-none" style="display:none;">
+                    <noSearchData :message="'没有查询到结果'"></noSearchData>
+                </div>
+            </div>
+            <!--<div class="result-box-ft"></div>-->
+        </div>
+        <div class="page-load-status">
+            <div class="loader-ellips infinite-scroll-request">
+                <div id="school_updating" class="school_updating result-none">
+                    查询中...
+                </div>
+            </div>
+            <div class="infinite-scroll-last">
+                <div class="weui-loadmore weui-loadmore_line">
+                    <span class="weui-loadmore__tips">亲，已经到底了哦~~</span>
+                </div>
+            </div>
+            <div class="infinite-scroll-error">No more pages to load</div>
+        </div>
+        <!--/学校列表-->
+        <!--筛选弹窗-->
+        <div class="modal modal-school" id="schoolFilterModal" style="display:none;">
+            <div class="modal-mask" onclick="showFilterModal(0)"></div>
+            <div class="modal-body">
+                <div class="result-box">
+                    <div class="weui-flex result-box-hd" id="schoolFilterHead" style="padding:25rpx">
+                        <div class="result-box-col2  weui-flex__item" id="schoolFilterHeadType1" onclick="showFilterModal(1)">
+                            <div class="result-sequence overflow-ellipsis-one">
+                                
+                                    
+                                        大学
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <i class="icon-arrow icon-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="result-box-col4  weui-flex__item" id="schoolFilterHeadType4" onclick="showFilterModal(4)">
+                            <div class="result-sequence overflow-ellipsis-one">
+                                
+                                    综合排序
+                                
+                                    
+                                
+                                    
+                                
+                                <i class="icon-arrow icon-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="result-box-col2  weui-flex__item" id="schoolFilterHeadType2" onclick="showFilterModal(2)">
+                            <div class="result-sequence overflow-ellipsis-one">
+                                
+                                    
+                                
+                                    
+                                        
+                                            <span class="overflow-ellipsis-one" style="display:inline-block;max-width:75px">新疆维吾尔自治区</span>
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <i class="icon-arrow icon-arrow-up" style="position:absolute;top:10px"></i>
+                            </div>
+                        </div>
+                        <div class="result-box-col2  weui-flex__item" id="schoolFilterHeadType3" onclick="showFilterModal(3)">
+                            <div class="result-filter">筛选
+                                <i class="icon-filter" :class="filterModal == 3 ? 'on' : ''"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-box-bd" id="schoolFilterItem" :style="'max-height:' + sourceHeight +'px'">
+                        <div class="filter-type1" id="schoolFilterItemType1">
+                            
+                                
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=3" class="filter-type1-item">幼儿园</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=0" class="filter-type1-item">小学</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=1" class="filter-type1-item">初中</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=2" class="filter-type1-item">高中</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=6" class="filter-type1-item">中专</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3390&amp;type=5" class="filter-type1-item selected">大学</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;type=4" class="filter-type1-item">培训机构</a>
+                                    
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </div>
+                        <div class="filter-type1" id="schoolFilterItemType4">
+                            
+                                <a href="/wap/baike?city=1850&amp;area=3390&amp;yuanxiao=173,157&amp;type=5&amp;order=0" class="filter-type1-item selected">综合排序</a>
+                            
+                                <a href="/wap/baike?city=1850&amp;area=3390&amp;yuanxiao=173,157&amp;type=5&amp;order=1" class="filter-type1-item">距离优先</a>
+                            
+                                <a href="/wap/baike?city=1850&amp;area=3390&amp;yuanxiao=173,157&amp;type=5&amp;order=2" class="filter-type1-item">评分排序</a>
+                            
+                        </div>
+                        <div class="filter-type1" id="schoolFilterItemType2" style="overflow-y: scroll;">
+                            
+                                
+                            
+                                
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=-1&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">全国</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1255&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">福建省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">北京市</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2826&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">云南省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=19&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">天津市</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3357&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">宁夏回族自治区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=37&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">河北省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1849&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">湖北省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3390&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item selected">新疆维吾尔自治区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1359&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">江西省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2129&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">广东省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=859&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">上海市</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1117&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">安徽省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=878&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">江苏省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=627&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">吉林省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=374&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">内蒙古自治区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1654&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">河南省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3191&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">甘肃省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2429&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">海南省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2460&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">重庆市</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2723&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">贵州省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2980&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">西藏自治区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3507&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">台湾省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3508&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">香港特别行政区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3509&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">澳门特别行政区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1979&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">湖南省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=705&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">黑龙江省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2500&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">四川省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1482&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">山东省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=232&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">山西省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3304&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">青海省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=1004&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">浙江省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=498&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">辽宁省</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=2290&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">广西壮族自治区</a>
+                                    
+                                        <a href="/wap/baike?city=1850&amp;area=3063&amp;yuanxiao=173,157&amp;type=5" class="filter-type1-item">陕西省</a>
+                                    
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </div>
+                        <div class="filter-type1" id="schoolFilterItemType3">
+                            <div id="schoolFilterItemType3Box" style="overflow-y:auto;">
+                                
+                                    
+                                
+                                    
+                                
+                                    <div class="filter-type2-block">
+                                        <div class="filter-type2-block__title">院校特性</div>
+                                        <div class="filter-type2-block__items">
+                                            
+
+                                                <a href="javascript:void(0);" data-key="yuanxiao" data-value="158">211高校</a>
+                                            
+
+                                                <a href="javascript:void(0);" class="selected" data-key="yuanxiao" data-value="157">985高校</a>
+                                            
+
+                                                <a href="javascript:void(0);" class="selected" data-key="yuanxiao" data-value="173">双一流</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="yuanxiao" data-value="160">独立学院</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="yuanxiao" data-value="159">研究生院</a>
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <div class="filter-type2-block">
+                                        <div class="filter-type2-block__title">学历层次</div>
+                                        <div class="filter-type2-block__items">
+                                            
+
+                                                <a href="javascript:void(0);" data-key="xueli" data-value="151">专科</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="xueli" data-value="150">本科</a>
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <div class="filter-type2-block">
+                                        <div class="filter-type2-block__title">院校隶属</div>
+                                        <div class="filter-type2-block__items">
+                                            
+
+                                                <a href="javascript:void(0);" data-key="lishu" data-value="155">军校</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="lishu" data-value="154">地方</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="lishu" data-value="152">教育部</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="lishu" data-value="156">民办</a>
+                                            
+
+                                                <a href="javascript:void(0);" data-key="lishu" data-value="153">部委</a>
+                                            
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                            <div class="filter-type2-ft">
+                                <div class="btn-confirm" hover-class="btn-confirm-active" onclick="confirmFilterModal()">
+                                    确定
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="filter-type2" id="schoolFilterItemType3" v-show="filterModal == 3">-->
+                            <!--<div :style="'overflow-y:auto; max-height:' + boxInnerHeight  + 'px'">-->
+                                <!--<div class="filter-type2-block" v-for="(block,blockIndex) in otherArray" :key="block.type">-->
+                                    <!--<div class="filter-type2-block__title">{{block.name}}</div>-->
+                                    <!--<div class="filter-type2-block__items">-->
+                                        <!--<span :class="item.selected ? 'selected':''" @click="setFilterOther(item)" v-for="(item,itemIndex) in block.list" :key="item.id">{{item.name}}</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="result-none" style="border-bottom:1rpx solid #ddd;" v-if="filterType.other.length <= 0">-->
+                                    <!--此类学校无可筛选项！-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="filter-type2-ft">-->
+                                <!--<div class="btn-confirm" hover-class="btn-confirm-active" @click="showFilterModal(0)">-->
+                                    <!--确定-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/筛选弹窗-->
+    </div>
+    <div class="footer-section">
+    <span>福建风灵创景科技有限公司 Felink.com 版权所有</span>
+    <span>Copyright © 2017 - 2019 Felink. All Rights Reserved</span>
+    <span>闽ICP备15026663号-4</span>
+</div>
+    <!-- <backToIndex :status="isShowBack"></backToIndex> -->
+</div>
+</body>
+<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/static/js/aos.js"></script>
+<script type="text/javascript" src="/static/js/lib/clipboard/clipboard.min.js"></script>
+<script type="text/javascript" src="/static/wap/js/lib/infinite-scroll/infinite-scroll.pkgd.js"></script>
+<script type="text/javascript" src="/static/wap/js/common.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?98d96461b8f7ae8d501551f6506d7388";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+    function showFilterModal(type) {
+        if (type == 0) {
+            $("#schoolFilterModal").hide();
+            $(".container").removeClass("page-noscroll");
+        } else {
+            $(".container").addClass("page-noscroll")
+            $("#schoolFilterModal").show();
+
+            $("#schoolFilterItem>div").hide();
+
+            $("#schoolFilterItemType" + type).show();
+
+            $("#schoolFilterHead>div").removeClass('active');
+            $("#schoolFilterHeadType" + type).addClass('active');
+            $("#schoolFilterHeadType3 > div> .icon-filter").removeClass('on');
+            if(type == 3) {
+                $("#schoolFilterHeadType3 > div > .icon-filter").addClass('on');
+            }
+        }
+    }
+    function confirmFilterModal() {
+        var list = $("a[data-key]");
+        var map = {}
+        for(var i = 0; i < list.length; i++) {
+            var item = $(list[i]);
+            var paramKey = item.attr("data-key");
+            console.log(paramKey);
+            if(map[paramKey] == undefined) {
+                map[paramKey] = [];
+            }
+
+            if(item.hasClass("selected")) {
+                map[paramKey].push(item.attr("data-value"));
+            }
+        }
+        console.log(map);
+        console.log(window.location)
+
+        var paramNews = [];
+
+        if(window.location.search != '') {
+            var search = window.location.search;
+            if(search.startsWith("?")) {
+                search = search.substring(1);
+            }
+            console.log(search);
+            var arrParam = search.split('&');
+            for(var k = 0; k < arrParam.length; k++) {
+                var paramData = arrParam[k].split("=");
+                if(map[paramData[0]] == undefined) {
+                    paramNews.push(arrParam[k])
+                }
+            }
+        }
+        console.log(paramNews);
+        for(key in map) {
+            console.log(key);
+            if(map[key].length > 0) {
+                paramNews.push(key + "=" + map[key].join(','));
+            }
+        }
+        console.log(paramNews);
+        var url = window.location.origin + window.location.pathname + '?' + paramNews.join("&");
+        console.log(url);
+        window.location.href = url;
+    }
+
+    $(function () {
+        var height = window.innerHeight - 100 - $(".nav-header").height() - $(".search-box-2").height() - $(".result-box-hd").height() - $(".page-load-status").height();
+        //$(".school-list").css("height", height+'px');
+
+        $("#schoolFilterItemType2").css("height", (window.innerHeight - 124 - $("#schoolFilterHead").height()) + 'px');
+        $("#schoolFilterItemType3Box").css("max-height", (window.innerHeight - 124 - $("#schoolFilterHead").height()) + 'px');
+
+        $("a[data-key]").click(function(item){
+            console.log(item);
+            var hrefObj = $(item.target);
+            if(hrefObj.hasClass("selected")) {
+                hrefObj.removeClass("selected");
+            } else {
+                hrefObj.addClass("selected");
+            }
+        });
+        var $container = $('.school-list').infiniteScroll({
+            path: function() {
+//                if(this.pageIndex > 3) {
+//                    return;
+//                }
+                var paramNews = [];
+                if(window.location.search != '') {
+                    var search = window.location.search;
+                    if(search.startsWith("?")) {
+                        search = search.substring(1);
+                    }
+                    console.log(search);
+                    var arrParam = search.split('&');
+                    for(var k = 0; k < arrParam.length; k++) {
+                        var paramData = arrParam[k].split("=");
+                        if(paramData[0] != "page") {
+                            paramNews.push(arrParam[k])
+                        }
+                    }
+                }
+                var url = window.location.origin + window.location.pathname + '?' + paramNews.join("&") + "&page=" + (this.pageIndex + 1) + "&ajax=true";
+                return url; //window.location.href + "&page=" + (this.pageIndex + 1);
+            },
+            append: '.result-box-item',
+            // button: '.view-more-button',
+            // using button, disable loading on scroll
+            scrollThreshold: 50,
+            status: '.page-load-status',
+//            elementScroll: true,
+            // loadOnScroll: false
+        });
+        $container.on('scrollThreshold.infiniteScroll', function (event) {
+            console.log('Scroll at bottom');
+        });
+
+        $container.on( 'request.infiniteScroll', function( event, path ) {
+            console.log( 'Loading page: ' + path );
+//            $(".infinite-scroll-request").show();
+        });
+
+
+        $container.on('load.infiniteScroll', function (event, response, path) {
+//            $(".infinite-scroll-request").hide();
+//            $(".infinite-scroll-last").hide();
+            console.log( 'Loaded: ' + path);
+//            var infScroll = $container.data('infiniteScroll');
+//            console.log('load.infiniteScroll.....', event, infScroll)
+//            console.log('.......................................................')
+//            console.log(path);
+            // parse response text into JSON data
+            // var data = JSON.parse(response);
+            // put that data into template
+            // var itemsHTML = template.compile(data);
+            // convert to jQuery object
+            // var $items = $(itemsHTML);
+            // append items
+            var $items = $(response).find('.result-box-item');
+            $container.infiniteScroll('appendItems', $items);
+        });
+
+        $container.on( 'last.infiniteScroll', function( event, response, path ) {
+//            $(".infinite-scroll-request").hide();
+//            $(".infinite-scroll-last").show();
+            console.log( 'last: ' + path );
+        });
+//        $(".infinite-scroll-last").hide();
+//        $(".infinite-scroll-request").hide();
+    });
+</script>
+</html>
