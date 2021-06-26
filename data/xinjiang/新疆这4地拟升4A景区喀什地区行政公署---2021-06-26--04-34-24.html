@@ -1,0 +1,443 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新疆这4地，拟升4A景区！-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/news.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)" class="act"><script type="text/javascript" language="javascript">var currentId=2;</script><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)"><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+
+  <div class="side fr" id="list">
+    <div class="side_nav">
+      <div class="tit">走进喀什</div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_16/Index.aspx">喀什概况</a></li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a></li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a></li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+    <div class="hd">
+      <h3>点击排行</h3>
+    </div>
+    <div class="bd">
+      <ul class="hot">
+        
+            <li><a href="/Item/46529.aspx" target="_blank" title="标题：喀什概况&#xD;点击数：47646&#xD;发表时间：21年06月11日"><font style="color:#444444;">喀什概况</font></a></li><li><a href="/Item/24263.aspx" target="_blank" title="标题：喀什地区2014年国民经济和社会发展统计公报&#xD;点击数：25978&#xD;发表时间：15年03月25日"><font style="color:#444444;">喀什地区2014年国民经济和社会…</font></a></li><li><a href="/Item/41122.aspx" target="_blank" title="标题：喀什地区2016年国民经济和社会发展统计公报&#xD;点击数：24944&#xD;发表时间：17年05月19日"><font style="color:#444444;">喀什地区2016年国民经济和社会…</font></a></li><li><a href="/Item/47217.aspx" target="_blank" title="标题：喀什地区2018年国民经济和社会发展统计公报&#xD;点击数：24856&#xD;发表时间：19年04月30日"><font style="color:#444444;">喀什地区2018年国民经济和社会…</font></a></li><li><a href="/Item/49038.aspx" target="_blank" title="标题：喀什地区2019年国民经济和社会发展统计公报&#xD;点击数：22611&#xD;发表时间：20年05月09日"><font style="color:#444444;">喀什地区2019年国民经济和社会…</font></a></li><li><a href="/Item/45558.aspx" target="_blank" title="标题：喀什地区2017年国民经济和社会发展统计公报&#xD;点击数：22074&#xD;发表时间：18年04月27日"><font style="color:#444444;">喀什地区2017年国民经济和社会…</font></a></li><li><a href="/Item/11405.aspx" target="_blank" title="标题：喀什地区2012年国民经济和社会发展统计公报&#xD;点击数：18207&#xD;发表时间：13年03月09日"><font style="color:#444444;">喀什地区2012年国民经济和社会…</font></a></li><li><a href="/Item/21342.aspx" target="_blank" title="标题：喀什地区2013年国民经济和社会发展统计公报&#xD;点击数：17181&#xD;发表时间：14年06月16日"><font style="color:#444444;">喀什地区2013年国民经济和社会…</font></a></li><li><a href="/Item/32010.aspx" target="_blank" title="标题：喀什地区2015年国民经济和社会发展统计公报&#xD;点击数：16185&#xD;发表时间：16年04月19日"><font style="color:#444444;">喀什地区2015年国民经济和社会…</font></a></li><li><a href="/Item/21343.aspx" target="_blank" title="标题：新疆维吾尔自治区2013年国民经济和社会发展统计公报&#xD;点击数：10723&#xD;发表时间：14年06月16日"><font style="color:#444444;">新疆维吾尔自治区2013年国民经…</font></a></li>
+          
+ </ul>
+    </div>
+<!--<div class="clear h10"></div>
+    <div class="hd"> <a href="/Category_0/Index.aspx" class="fr">更多>></a>
+      <h3>热点专题</h3>
+    </div>
+    <div class="bd">
+             <ul class="special">
+
+</ul>
+        </div>-->
+  </div>
+  <div class="list_wrap fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    
+    <a href="/Category_9/Index.aspx" target="_self">走进喀什</a>&gt;&gt;
+    <a href="/Category_122/Index.aspx" target="_self">文化旅游</a>&gt;&gt;
+    <a href="/Category_983/Index.aspx" target="_self">喀什旅游</a> >> 正文内容 </div>
+      <div class="bd">
+        <h1>新疆这4地，拟升4A景区！</h1>
+        <div class="line"> <span>来源：新疆新闻网</span>
+                           <span> 作者：</span>
+                           <span> 发布时间：2021年06月25日</span>
+                           <span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=52000"></script>
+   </span>
+                       <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                           <span> 【<a href="/Print.aspx?id=52000">打印</a>】</span>--></div>
+        <div class="content" id="fontzoom"> 
+      
+     <section data-id="102371" data-tools="135编辑器" ft-size="16px" style="letter-spacing: 0.54px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">6月21日</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">自治区文化和旅游厅发布公示</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">阿克苏地区温宿县</span><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">柯柯牙纪念馆</span></strong></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">伊犁哈萨克自治州昭苏县</span><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">知青馆景区</span></strong></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">喀什地区塔什库尔干塔吉克自治县</span><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">红其拉甫国门旅游景区</span></strong></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">克拉玛依市</span><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">黑油山</span></strong></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">4家红色旅游景区达到国家4A级旅游景区标准要求</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">拟确定为国家4A级旅游景区</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">↓↓↓</span></strong></p><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">  <img _width="556px" alt="图片" class="rich_pages" crossorigin="anonymous" data-="" data-fail="0" data-galleryid="" data-ratio="0.48896434634974534" data-s="300,640" data-type="png" data-w="1178" src="/UploadFiles/Overview/2021/6/202106251153578655.png" style="overflow-wrap: break-word; width: 1080px; visibility: visible !important; box-sizing: border-box !important; height: 528px;" /></p><p style="text-align: center; line-height: normal; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </p><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">下面让我们一起</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">走进这<span style="color: rgb(68, 68, 68); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">4家红色旅游景区</span></span></section><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-role="outer" label="Powered by 135editor.com" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-color="#d82821" data-id="104012" data-tools="135编辑器" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="margin: 10px auto; text-align: center; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: inline-block; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: flex; max-width: 100%; box-sizing: border-box !important; justify-content: center; align-items: center; overflow-wrap: break-word;"><section style="padding: 6px 18px; border: 1px solid rgb(216, 40, 33); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-brushtype="text" style="color: rgb(144, 144, 144); letter-spacing: 1.5px; font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">柯柯牙纪念馆</span></strong></section></section><section style="width: 20px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 11px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section><section data-width="50%" style="width: 81.5px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 7px; margin-left: -20px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section></section></section></section></section></section></section></section></section></section><section data-id="104562" data-tools="135编辑器" ft-size="16px" style="letter-spacing: 0.54px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-autoskip="1" ft-size="14px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">柯柯牙，书写了新疆版的“塞罕坝”荒漠绿化奇迹。</span></section><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><img _width="556px" alt="图片" class="rich_pages" crossorigin="anonymous" data-="" data-fail="0" data-ratio="0.75" data-s="300,640" data-type="png" data-w="1080" src="/UploadFiles/Overview/2021/6/202106251157104054.png" style="border: 1px solid rgb(238, 237, 235); overflow-wrap: break-word; width: 480px; background-position: center center !important; visibility: visible !important; box-sizing: border-box !important; background-repeat: no-repeat !important; background-size: 22px !important; background-color: rgb(238, 237, 235) !important; height: 360px;" /></p><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(0, 122, 170); font-size: 14px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">资料图</span></p><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">在柯柯牙纪念馆里</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">柯柯牙植树初期干部群众使用过的</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">坎土曼、铁锨、十字镐、独轮车、水壶、</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">饭盒、马灯等劳动生活工具</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">虽已经锈迹斑斑</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">却无声地诉说着当年干部群众</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">为植树造林付出的艰辛努力</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">　　</span></section><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><img _width="556px" alt="图片" class="rich_pages" crossorigin="anonymous" data-="" data-fail="0" data-ratio="0.75" data-s="300,640" data-type="png" data-w="1080" src="/UploadFiles/Overview/2021/6/202106251157218308.png" style="border: 1px solid rgb(238, 237, 235); overflow-wrap: break-word; width: 480px; background-position: center center !important; visibility: visible !important; box-sizing: border-box !important; background-repeat: no-repeat !important; background-size: 22px !important; background-color: rgb(238, 237, 235) !important; height: 360px;" /></p><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(0, 122, 170); font-size: 14px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">资料图</span></section><section style="line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">走进纪念馆</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">您可通过展厅内的物品展示、图片记录、</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">场景还原、文字叙述、艺术造型和声光影像</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">来近距离感受“柯柯牙精神”</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">全方位了解阿克苏的变化</span></section><section style="line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </section></section><section data-width="100%" ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><p ft-size="16px" style="min-height: 1em; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important; text-align: center;" type="app_image_wrap"> </p><p ft-size="16px" style="min-height: 1em; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important; text-align: center;" type="app_image_wrap"><img alt="" src="/UploadFiles/Overview/2021/6/202106251158178011.png" style="width: 480px; height: 360px;" /></p><p ft-size="16px" style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;" type="app_image_wrap"><span style="color: rgb(0, 122, 170); font-size: 14px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">资料图</span></p><p style="min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </p></section></section></section></section></section><section data-id="104562" data-tools="135编辑器" ft-size="16px" style="letter-spacing: 0.54px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-role="outer" label="Powered by 135editor.com" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-color="#d82821" data-id="104012" data-tools="135编辑器" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="margin: 10px auto; text-align: center; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: inline-block; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: flex; max-width: 100%; box-sizing: border-box !important; justify-content: center; align-items: center; overflow-wrap: break-word;"><section style="padding: 6px 18px; border: 1px solid rgb(216, 40, 33); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-brushtype="text" style="color: rgb(144, 144, 144); letter-spacing: 1.5px; font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">知青馆景区</span></strong></section></section><section style="width: 20px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 11px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section><section data-width="50%" style="width: 72.75px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 7px; margin-left: -20px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section></section></section></section></section><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-autoskip="1" ft-size="14px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">知青馆景区位于昭苏县城西部7公里处的吐格勒勤村</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">馆内打造的</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">“小花电影院”和“西去的列车”等场景</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">可以让游客们在这里扮演一回奔赴边疆的知青</span></section><section style="line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">　　</span></section><p style="min-height: 1em; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important; text-align: center;"> </p><p style="min-height: 1em; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important; text-align: center;"><img alt="" src="/UploadFiles/Overview/2021/6/202106251158042749.png" style="width: 480px; height: 316px;" /></p><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(61, 170, 214); font-size: 15px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">资料图</span></p><section style="text-align: center; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">知青馆采用图文、实物结合的展览形式</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">生动形象地展现了昭苏镇吐格勒勤村的发展轨迹</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">让人们重温当年知青们的艰苦生活</span></section><section style="line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </section></section></section></section></section></section><section data-id="104562" data-tools="135编辑器" ft-size="16px" style="letter-spacing: 0.54px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-autoskip="1" ft-size="14px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-role="outer" label="Powered by 135editor.com" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-color="#d82821" data-id="104012" data-tools="135编辑器" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="margin: 10px auto; text-align: center; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: inline-block; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: flex; max-width: 100%; box-sizing: border-box !important; justify-content: center; align-items: center; overflow-wrap: break-word;"><section style="padding: 6px 18px; border: 1px solid rgb(216, 40, 33); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-brushtype="text" style="color: rgb(144, 144, 144); letter-spacing: 1.5px; font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">红其拉甫国门旅游景区</span></strong></section></section><section style="width: 20px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 11px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section><section data-width="50%" style="width: 116.5px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 7px; margin-left: -20px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section></section></section></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">红其拉甫既是高原酷寒、</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">艰苦卓绝的代名词</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">更象征着稳固边塞钢铁屏障</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">象征着守护祖国西北边陲的忠诚</span></section></section><section data-width="100%" ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><p ft-size="16px" style="min-height: 1em; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important; text-align: center;" type="app_image_wrap"><img alt="" src="/UploadFiles/Overview/2021/6/202106251158373340.png" style="width: 480px; height: 320px;" /></p><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </p></section></section></section></section></section><section data-id="104562" data-tools="135编辑器" ft-size="16px" style="letter-spacing: 0.54px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; max-width: 100%; overflow-wrap: break-word; box-sizing: border-box !important;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section ft-size="16px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-autoskip="1" ft-size="14px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-role="outer" label="Powered by 135editor.com" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-color="#d82821" data-id="104012" data-tools="135编辑器" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="margin: 10px auto; text-align: center; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: inline-block; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="display: flex; max-width: 100%; box-sizing: border-box !important; justify-content: center; align-items: center; overflow-wrap: break-word;"><section style="padding: 6px 18px; border: 1px solid rgb(216, 40, 33); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section data-brushtype="text" style="color: rgb(144, 144, 144); letter-spacing: 1.5px; font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><strong style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(171, 25, 66); max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">黑油山</span></strong></section></section><section style="width: 20px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 11px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section><section data-width="50%" style="width: 55.25px; height: 5px; color: rgb(255, 255, 255); overflow: hidden; margin-top: 7px; margin-left: -20px; max-width: 100%; box-sizing: border-box !important; background-image: none; background-color: rgb(212, 68, 63); overflow-wrap: break-word;"> </section></section></section></section></section><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">位于克拉玛依市区东北两公里处的黑油山景区</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">是世界地质奇观</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">也是克拉玛依工业游的核心景区之一</span></p><p style="text-align: center; line-height: 2em; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">每年都有大批游客慕名而来</span></p></section><p style="text-align: center; min-height: 1em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><img _width="556px" alt="图片" class="rich_pages" crossorigin="anonymous" data-="" data-fail="0" data-ratio="0.6585144927536232" data-s="300,640" data-type="png" data-w="1104" src="/UploadFiles/Overview/2021/6/202106251158531609.png" style="overflow-wrap: break-word; width: 480px; visibility: visible !important; box-sizing: border-box !important; height: 316px;" /></p><section data-autoskip="1" ft-size="14px" style="max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(0, 122, 170); font-size: 14px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">资料图</span></span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"> </section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">黑油山</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">整个山丘成黑色</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">地表凹凸不平</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">山丘上还有多处油泉</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">形成众多小油沼</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">中间是不断涌出的油泡</span></section><section style="text-align: center; line-height: 2em; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;"><p><span style="color: rgb(68, 68, 68); font-size: 16px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word;">油呈黏稠状，色泽黝黑</span></p></section></section></section></section></section></section>
+    
+    </div>
+        <ul class="pn">
+          <li><span>【上一篇】：</span><a href="/Item/51956.aspx" target="_self">旅游魅力彰显 产业活力迸发</a></li>
+          <li><span>【下一篇】：没有了！</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+
+</body>
+</html>
