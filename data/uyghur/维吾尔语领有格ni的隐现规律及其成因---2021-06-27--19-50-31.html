@@ -1,0 +1,1805 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta name="format-detection" content="telephone=no" />
+<title>维吾尔语领有格“-ni■”的隐现规律及其成因</title>
+<link rel="stylesheet" type="text/css" media="screen" href="/styleV2/style.css?t=20180821" media="screen" />
+<script type="text/javascript" src="/jsV2/jquery.js"></script>
+<script type="text/javascript" src="/jsV2/JSClassLibrary.js"></script>
+<script type="text/javascript" src="/jsV2/Common.js"></script>
+<script type="text/javascript" src="/jsV2/window.js?t=123"></script>
+
+    <!--微信窗口设置开始-->
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+	wx.config({
+		//debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		appId: "wx7d00660ce462f8f9",
+		timestamp: parseInt("1624885469"),
+		nonceStr: "oeWmFCyqE2UCHGee",
+		signature: "da10e8d6b91082465a67956887d1f4d0313bb828",
+		jsApiList: [
+		  // 所有要调用的 API 都要加到这个列表中
+			'checkJsApi',
+			'onMenuShareTimeline',
+			'onMenuShareAppMessage',
+			'onMenuShareQQ',
+			'onMenuShareWeibo',
+			'hideMenuItems',
+			'showMenuItems',
+			'hideAllNonBaseMenuItem',
+			'showAllNonBaseMenuItem',
+			'translateVoice',
+			'startRecord',
+			'stopRecord',
+			'onRecordEnd',
+			'playVoice',
+			'pauseVoice',
+			'stopVoice',
+			'uploadVoice',
+			'downloadVoice',
+			'chooseImage',
+			'previewImage',
+			'uploadImage',
+			'downloadImage',
+			'getNetworkType',
+			'openLocation',
+			'getLocation',
+			'hideOptionMenu',
+			'showOptionMenu',
+			'closeWindow',
+			'scanQRCode',
+			'chooseWXPay',
+			'openProductSpecificView',
+			'addCard',
+			'chooseCard',
+			'openCard'
+		]
+	});
+    function escape2Html(str) {
+        var arrEntities = { 'lt': '<', 'gt': '>', 'nbsp': ' ', 'amp': '&', 'quot': '"', '#183': '·', '#91': '[', '#93': ']' };
+        return str.replace(/&(lt|gt|nbsp|amp|quot|#183|#91|#93);/ig, function (all, t) { return arrEntities[t]; });
+    }
+	//微信分享信息设置
+	var shareData = {
+	    title: JSCL.escapeSingleQuotesForJS(JSCL.RemoveHtmlTag(escape2Html("维吾尔语领有格“-ni■”的隐现规律及其成因-李素秋"))), // 分享标题
+	    desc: JSCL.escapeSingleQuotesForJS(JSCL.RemoveHtmlTag(escape2Html("《维吾尔语领有格“-ni■”的隐现规律及其成因》[李素秋]语言文字学"))), // 分享描述
+		link: "https://www.1xuezhe.exuezhe.com/Qk/art/10330920?dbcode=4&amp;flag=2&amp;logohome=1".replace(/(&amp;)/ig, "&"), // 分享链接
+		imgUrl: "https://www.1xuezhe.exuezhe.com/imagesV2/logo132.png", // 分享图标
+		type: "", // 分享类型,music、video或link，不填默认为link
+		dataUrl: "", // 如果type是music或video，则要提供数据链接，默认为空
+		trigger: function (res) {
+			// 监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。
+			//alert("trigger \n\r" + JSON.stringify(res) + "\n\r" + res.errMsg);
+		},
+		success: function (res) {
+			// 接口调用成功时执行的回调函数。
+		    //alert("success---" + JSON.stringify(res) + "\n\r" + res.errMsg);
+		    //alert(JWeixinHelper.isShareSuccess(res).success);
+		    if (JWeixinHelper.isShareSuccess(res).success) {
+
+				//分享成功
+				//$.messager.alert("分享成功。" + res.errMsg, "", null, 30000);
+		        share("0", "10330920", "1", "0", shareData.title, shareData.link);
+		        
+		        //特殊对待
+		    	if ("False".toLowerCase() == "true") {
+		    		$("#returnButton").text("已寄出，去壹学者");
+		    	};
+
+		    }
+		},
+		fail: function (res) {
+			// 接口调用失败时执行的回调函数。
+			//alert("fail---" + JSON.stringify(res) + "\n\r" + res.errMsg);
+			//alert("分享失败！\n\r" + res.errMsg);
+			$.messager.alert("分享失败！<br />" + res.errMsg, "", null, 0);
+		},
+		cancel: function (res) {
+			// 用户点击取消时的回调函数，仅部分有用户取消操作的api才会用到。
+			//alert("cancel---" + JSON.stringify(res) + "\n\r" + res.errMsg);
+		},
+		complete: function (res) {
+			// 接口调用完成时执行的回调函数，无论成功或失败都会执行。
+			//alert("complete---" + JSON.stringify(res) + "\n\r" + res.errMsg);
+		},
+	};
+
+	//初始化选项
+	$(document).ready(function () {
+		
+	});
+</script>
+<script type="text/javascript" src="/jsV2/jweixinHelper.js?t=33"></script>
+<!--微信窗口设置结束-->
+<!--记录微信分享开始-->
+<script type="text/javascript">
+	function share(mid, metaid, metatype, isall, title, shareUrl) {
+		//alert("mid=" + mid + "，" + metaid + "，" + metatype + "，\n\isall=" + isall + "，\n\rshareUrl=" + shareUrl);
+		if (!!mid && !!metaid && !!metatype && !!shareUrl) {
+			$.ajax({
+				url: "/Academic/share",
+				type: "post",
+				dataType: "json",
+				timeout: 30000,
+				data: {
+					mid: mid,
+					metaid: metaid,
+					metatype: metatype,
+					isall: isall,
+					title: encodeURIComponent(title),
+					url: encodeURIComponent(shareUrl),
+					time: new Date().getTime()
+				},
+				success: function (result, textStatus) {
+					if (textStatus == "success" && !!result) {
+						//alert("分享（转发）成功");
+						if (result.errno == 0) {
+							//$.messager.alert("分享（转发）成功<br />" + result.errmsg, "", null, 2000);
+						}
+						else {
+							$.messager.alert("分享（转发）失败！<br />" + result.errmsg, "", null, 0);
+						}
+					}
+					else {
+						alert("分享（转发）失败！");
+					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					//alert(XMLHttpRequest.status);
+					//alert(XMLHttpRequest.readyState);
+					//alert(textStatus);
+					//alert('网络请求失败或超时请重新尝试');
+				},
+				complete: function (XMLHttpRequest, textStatus) {
+					//alert('执行完成了');
+				}
+			});
+		}
+		else {
+			//alert("分享（转发）方法参数错误！");
+		}
+	}
+</script>
+<!--记录微信分享结束-->
+    <link rel="stylesheet" type="text/css" media="screen" href="/styleV2/ipub.css" />
+    <script type="text/javascript" src="/jsV2/DetailPage.js"></script>
+    <script type="text/javascript" src="/jsV2/CommonReview.js"></script>
+    <script type="text/jscript" src="/jsV2/window.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            if (!window.localStorage.orderset && window.localStorage.orderset == "") {
+                window.localStorage.isDelete = "false";
+            }
+        });
+
+
+        $(function () {
+
+            $(".article_m").find("img").each(function () {
+                $(this).css("max-width", document.body.clientWidth * 0.75);
+            });
+        });
+
+
+
+        function MarkClick() {
+            $.messager.loading("");
+            $.ajax({
+                url: "/BusinessCommon/MarkSubmit",
+                data: {
+                    metaid: '10330920',
+                    metatype: '1',
+                    title: encodeURIComponent('维吾尔语领有格“-ni■”的隐现规律及其成因'),
+                    description: '',
+                    author: encodeURIComponent('李素秋'),
+                    classname: '',
+                    isall: '0',
+                    t: (new Date()).getTime()
+                },
+                type: "POST",
+                dataType: "json",
+                success: function (result, textStatus) {
+                    if (textStatus == "success" && result) {
+                        if (result.errno == 0) {
+                            $.messager.alert("已收藏到个人中心！", "", null, 0);
+                        }
+                        else {
+                            $.messager.alert(result.errmsg, "", null, 0);
+                        }
+                    }
+                    else {
+                        $.messager.alert("操作失败！", "", null, 0);
+                    }
+                },
+                complete: function () {
+                    $.messager.loadcomplete();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            setFontSize();
+            //添加阅读量
+            $.post('/QK/GetArtTreeCode', { pdcCode: 'H1' }).done(function (res) {
+
+                $.post('/QK/SetReadViewCount', { metaid: '10330920', title: '维吾尔语领有格“-ni■”的隐现规律及其成因', metatype: 1, treeCode: res, author: '李素秋' });
+            });
+
+        });
+
+        /*** 字体大小 ***/
+        function setFontSize() {
+            var _fontsize = JSCL.GetCookie("fontsize") || 1;
+            setSize();
+            $("#changesize").click(function () {
+                _fontsize = _fontsize || 1;
+                switch (parseInt(_fontsize)) {
+                    case 1:
+                        _fontsize = 2;
+                        break;
+                    case 2:
+                        _fontsize = 3;
+                        break;
+                    case 3:
+                        _fontsize = 1;
+                        break;
+                }
+                setSize();
+            })
+            function setSize() {
+                _fontsize = _fontsize || 1;
+                switch (parseInt(_fontsize)) {
+                    case 1:
+                        $(".article_con p,.article_con h2,.article_con r").css("font-size", "16px");
+                        $(".article_con p,.article_con h2,.article_con r").css("line-height", "28px");
+                        _fontsize = 1;
+                        break;
+                    case 2:
+                        $(".article_con p,.article_con h2,.article_con r").css("font-size", "18px");
+                        $(".article_con p,.article_con h2,.article_con r").css("line-height", "34px");
+                        _fontsize = 2;
+                        break;
+                    case 3:
+                        $(".article_con p,.article_con h2,.article_con r").css("font-size", "22px");
+                        $(".article_con p,.article_con h2,.article_con r").css("line-height", "38px");
+                        _fontsize = 3;
+                        break;
+                }
+                JSCL.SetCookie("fontsize", _fontsize, 30);
+            }
+        }
+
+        //关注、取消关注事件
+        function fav(obj, followindex, mid) {
+            if (parseInt("0") > 0 && $(obj).html() == "+关注") {
+                $.messager.confirm("使用该功能，请先完善资料", "马上完善", "取消", function (flag) {
+                    if (flag) {
+                        JSCL.GoToLocation("/Member/wszl");
+                    }
+                });
+                
+                return false;
+            }
+            else {
+                var isadd = 0;
+                if (mid && obj) {
+                    if ($(obj).html() == "+关注") {
+                        isadd = 1;
+                        gzEvent(mid, isadd, obj);
+                    }
+                    else {
+                        $.messager.confirm("点击确认后，将不再关注该学者。", "确认", "取消", function (flag) {
+                            if (flag) {
+                                isadd = 0;
+                                gzEvent(mid, isadd, obj);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+        //关注操作(mid：关注的学者id, isadd：0取消关注，1添加关注)
+        function gzEvent(mid, isadd, obj) {
+
+            $.messager.loading("");
+            $.ajax({
+                url: "/Member/mfollow",
+                type: "get",
+                dataType: "text",
+                timeout: 15000,
+                data: {
+                    mid: mid,
+                    funmid: "0",
+                    isadd: isadd,
+                    time: new Date().getTime()
+                },
+                success: function (result, textStatus) {
+                    if (textStatus == "success" && result == "success") {
+                        if (isadd == 1) {
+                            $(obj).addClass("btn-bgblue-light");
+                            $(obj).html("已关注");
+                        }
+                        else {
+                            $(obj).removeClass("btn-bgblue-light");
+                            //$(obj).addClass("btn-bgblue");
+                            $(obj).html("+关注");
+                        }
+                    }
+                    else if (result == "tongyige") {
+
+                        $.messager.alert("操作失败！", "", null, 0);
+                    }
+                    else {
+                        $.messager.alert("处理失败！", "确认", function () { }, 0);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.messager.alert("网络请求失败或超时请重新尝试！", "确认", function () { }, 0);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                    $.messager.loadcomplete();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            //document.body.addEventListener('click', function (e) {
+            //    closeDiv('pop_share', 'mask');
+
+            //}, true);
+            $("#mask").click(function () {
+                closeDiv('pop_share', 'mask');
+                $("#pop_yiwen").hide();
+            });
+            $("#iquestion").click(function () {
+                $("#mask").show();
+                $("#pop_yiwen").show();
+                //$.messager.alert("有问题请联系编辑小壹：</br><a href=\'tel://010-62515008\'>010-62515008-8202</a>。", "确认", function () { }, 0);
+            });
+        });
+        function shareartclick(obj) {
+            var tempurl = "%2fqk%2fart%3fid%3d10330920%26dbcode%3d4";
+            var temptitle = "%e7%bb%b4%e5%90%be%e5%b0%94%e8%af%ad%e9%a2%86%e6%9c%89%e6%a0%bc%e2%80%9c-ni%e2%96%a0%e2%80%9d%e7%9a%84%e9%9a%90%e7%8e%b0%e8%a7%84%e5%be%8b%e5%8f%8a%e5%85%b6%e6%88%90%e5%9b%a0";
+            if (obj == 1) {
+                window.location.href = "/Community/SelectMyGroup?isall=0&artid=10330920";
+            }
+            else if (obj == 2) {
+                window.location.href = "/home/SelectFriendUser?urlstr=" + tempurl + "&title=" + temptitle;
+            }
+        }
+        function tiaozhuanmemcard(id) {
+            window.location.href = "/MemberCard/index?id=" + id;
+        }
+    </script>
+
+
+<span style="display: none;">
+
+<script>
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?71cb5942188a1dc4247b9fd75ba81d9c";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+</span>
+</head>
+<body  id="bg" >
+	<noscript>对不起，您的浏览器不支持或禁用了JavaScript脚本</noscript>
+
+
+<script type="text/jscript">
+    var array = ["A", "BUTTON", "INPUT", "TEXTAREA"];
+    $(document).ready(function () {
+    	//touch_move	
+    	//$('body').on('touchmove', function (e) {
+    	//	var event = e ? e : window.event;
+    	//	if (event.preventDefault) {
+    	//		event.preventDefault();
+    	//	} else {
+    	//		event.returnValue = false;
+    	//	}
+    	//	if (event.stopPropagation) {
+    	//		event.stopPropagation();
+    	//	} else {
+    	//		event.cancelBubble = true;
+    	//	}
+    	//});
+    	$("#txtCommentReplyContents").unbind("focus");
+    	function bodyMove(e) {
+    		var event = e ? e : window.event;
+    		if (event.preventDefault) {
+    			event.preventDefault();
+    		} else {
+    			event.returnValue = false;
+    		}
+    		if (event.stopPropagation) {
+    			event.stopPropagation();
+    		} else {
+    			event.cancelBubble = true;
+    		}
+    	}
+
+    	document.body.addEventListener('click', function (e) {
+    		//禁用滑动
+    		// $('body').on('touchmove', bodyMove);
+    		//var event = e ? e : window.event;
+    		//if (event.preventDefault) {
+    		//    event.preventDefault();
+    		//} else {
+    		//    event.returnValue = false;
+    		//}
+    		//if (event.stopPropagation) {
+    		//    event.stopPropagation();
+    		//} else {
+    		//    event.cancelBubble = true;
+    		//}
+    		//var obj = e.srcElement || e.target;
+    		//if ($(obj).parents("#window").length >= 1) {
+    		//    if (obj.getAttribute("id") == "closeQRWindow") {
+    		//        $("#mask").css("display", "none");
+    		//        $("#window").css("display", "none");
+    		//        $("#window").attr("isShow", "false");
+    		//        $('body').unbind('touchmove', bodyMove);
+    		//        return false;
+    		//    }
+    		//    return false;
+    		//}
+    		//if ($("#window").attr("isShow") != null && $("#window").attr("isShow") == "true") {
+    		//    $("#mask").css("display", "none");
+    		//    $("#window").css("display", "none");
+    		//    $("#window").attr("isShow", "false");
+    		//    $('body').unbind('touchmove', bodyMove);
+    		//}
+    		//if (array.indexOf(obj.tagName) > -1 || $(obj).parents("a").length>0) {
+    		//    if ($("#window").attr("isShow") == null || $("#window").attr("isShow") == "false") {
+    		//        $("#mask").css("display", "block");
+    		//        $("#window").css("display", "block");
+    		//        $("#window").attr("isShow", "true");
+    		//        $("#window").css("top", document.body.scrollTop + $(window).height()*0.1);
+    		//        $('body').unbind('touchmove',bodyMove);
+    		//    }
+
+
+    		//    var elementId = obj.getAttribute("id");
+    		//    if (elementId == 'windowButtonQueDing' || elementId == 'windowButtonQuXiao') {
+    		//        return false;
+    		//    }
+    		//}
+
+    	}, true);
+    	
+
+    });
+
+</script>
+
+<!--window-->
+<div class="window" style="top:10%;position:absolute;display: none" id="window">
+   <a href="javascript:;" class="close_1104" id="closeQRWindow">&times;</a>
+    <h2 style="margin-left:30px">温馨提示</h2>
+    <p>使用该功能请关注公众号“壹学者”<br>长按二维码识别关注</p>
+    <p><img src="http://image.1xuezhe.com/logo/QRcode.jpg" style="width:42%"></p>
+    <p><a href="http://mp.weixin.qq.com/s?__biz=MzA3NTU5NzMwNw==&mid=204452033&idx=1&sn=65b76d90d41bae9c046ce1c3b5aeae7c#rd">如无法识别，请点此关注</a></p>
+<div class="clear"></div> 
+</div>
+<div class="mask" id="mask" style="display: none"></div>
+<link rel="stylesheet" type="text/css" media="screen" href="/styleV2/index4.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/styleV2/ipub4.css?t=20180202" />
+
+<header class="box top_t">
+    
+    <a href="javascript:JSCL.GoToBack();"><i class="i_back"></i></a>
+    <i></i>
+        <div class="box_w top_con">索引详情</div>
+    
+    <a href="javascript:void(0);" onclick="showDiv('pop_share','mask')"><i class="i_share"></i></a>
+    <a href="/home/indexv4"><i class="i_home"></i></a>
+    
+</header>
+<article class="con_w">
+
+    <h1 class="article_head">维吾尔语领有格“-ni■”的隐现规律及其成因</h1>
+    <div class="con_os_tr flex-between bordT0  marB" style="border-top: 0;">
+        <a href="javascript:void(0);" onclick="showDiv('sm_pop','mask')" style="margin-left: 0;">关注“壹学者”微信 >></a>
+        <div>
+                <span><i class="i_browse"></i>&nbsp;</span>
+                            <span class="addzan" id="zanheader"><i class="i_praise"></i><s>&nbsp;</s></span>
+                            <span><i class="i_reply"></i>&nbsp;</span>
+        </div>
+    </div>
+    
+
+    <div class="article_link clearfix"></div>
+        <div class="claim-no clearfix marB">
+            <a class="first-author" href="javascript:void(0);" id="first_author">第一作者认领本论文</a>
+            <a class="invite-author" id="share">邀请作者认领本论文</a>
+        </div>
+    <div class="article_info">
+            <p class="author_one clearfix">
+                <span class="fl">第一作者：<a href="/qk/pdflist?key=李素秋&type=2&Isaccur=1&relaship=1" class="ml_5">李素秋</a></span><i id="iquestion" class="fl i-question"></i>
+                
+
+            </p>
+                            <p>索引收录：<a href="/qk/pdflist?key=&pdccode=H1&pdcname=语言文字学">《语言文字学》</a>2013 年</p>
+                    <p>原发期刊：<a href="/qk/pdflist?key=中央民族大学学报：哲学社会科学版&type=6&Isaccur=1&relaship=1&pdccode=&pdcname=中央民族大学学报：哲学社会科学版">《中央民族大学学报：哲学社会科学版》</a>2013 年第 3 期 第 124-128 页</p>
+
+
+
+
+    </div>
+    <div class="tr_c" style="display: none"><a href="/Order/PresentIndex?metapattern=2&amp;pdcyear=2013&amp;pdcno=&amp;metaid=10330920&amp;title=维吾尔语领有格“-ni■”的隐现规律及其成因&amp;money=1.00&amp;author=李素秋&amp;describe=《语言文字学》2013年期&amp;isall=0&amp;urlstr=%2fqk%2fart%3fid%3d10330920%26code%3dH1%26pdcyear%3d2013%26pdcno%3d%26flag%3d2" class="btn_s">赠送</a><a href="javascript:void(0)" class="btn_s marL" onclick="showDiv('pop','mask')">推荐</a></div>
+    <div class="article_con">
+        
+    </div>
+    
+</article>
+<h2 class="title-normal">近期<am id="readusecount">0</am>位学者阅读过本论文</h2>
+<div class="reader-con clearfix marB" id="readuserlist">
+    
+</div>
+<div class="read-print">
+</div>
+
+
+
+
+<input type="hidden" id="hidisall" value="0" />
+<input type="hidden" id="hidID" value="10330920" />
+<input type="hidden" id="hidmetatype" value="2" />
+<link type="text/css" rel="stylesheet" href="/styleV2/style.css" />
+<script type="text/javascript">
+    function TuijianClick() {
+        var contents = $("#contents").val();
+        var metaid = $("#hidID").val();
+        var metatype = $("#hidmetatype").val();
+        var isall = $("#hidisall").val();
+
+        if (JSCL.IsEmpty(contents)) {
+            $.messager.alert("请填写推荐理由", "", null, 0);
+            return;
+        }
+        $.messager.loading("");
+        $.ajax({
+            url: "/Order/UpdateMMoving",
+            type: "post",
+            dataType: "json",
+            timeout: 30000,
+            data: {
+                metaid: metaid,
+                contents: contents,
+                metatype: metatype,
+                mmovingtype: 0,
+                isall: isall
+            },
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    if (result.errno == 0) {
+                        closeDiv('pop', 'mask');
+                        $.messager.alert("推荐成功！", "知道了", null, 30000);
+
+                    }
+                }
+                else {
+                    $.messager.alert("操作失败！", "", null, 0);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                }
+                else {
+                }
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+                //alert('执行完成了');
+                $.messager.loadcomplete();
+            }
+        });
+    }
+
+    function successRedict() {
+        closeDiv('pop', 'mask');
+    }
+</script>
+<div class="mask" id="mask" style="display: none"></div>
+<div class="window_new" id="pop" style="display: none">
+    <div class="pop_con">
+        <textarea id="contents" name="contents" cols="" rows="" class="mytextarea" placeholder="推荐理由将发布在首页最新动态"></textarea>
+    </div>
+    <div class="link_btn"><a class="mybtn marR" onclick="TuijianClick()">确认</a><a class="btn_dis marL" onclick="closeDiv('pop','mask')">取消</a></div>
+</div>
+
+
+
+
+
+
+
+<h2 class="title"><i></i>回应区(<span id="countall">0</span>条)</h2>
+<article class="reply_sel" id="searcharticle">
+    <label>
+        <input type="radio" onclick="searchChange(false)" name="RadioGroup1" value="全部" id="RadioGroup1_0" checked>全部
+    </label>
+    <label>
+        <input type="radio" onclick="searchChange(true)" name="RadioGroup1" value="精选" id="RadioGroup1_1">精选
+    </label>
+</article>
+<div id="DataList">
+    
+</div>
+<div class="more_up" id="more" style="display: none;"><a href="javascript:;">展开更多+</a></div>
+
+<article class="con_w mt_10">
+    <p>
+        <a id="anchor_pl" name="anchor_pl"></a>
+        <textarea name="txtCommentReplyContents" id="txtCommentReplyContents" cols="" rows="" class="textarea_input" placeholder="请输入回应的内容，限1000个字"></textarea>
+    </p>
+    <input type="hidden" id="pictures" name="pictures" />
+    <p class="tr_r clearfix"><a href="javascript:chooseImage('#previewImage');" class="icon_cam"></a><a href="javascript:inputVoiceTxtID='textarea[name=txtCommentReplyContents]'; inputVoice();" class="icon_mro"></a><span id="previewImage"></span><a class="btn_confirm" id="btnCommentReplySubmit" onclick="submitForm();">确定</a></p>
+</article>
+<div class="footer_blank"></div>
+<div class="bottom_btn pfix">
+    <a href="javascript:;" onclick="Comment();">回应</a>
+</div>
+
+<div class="mask" id="mask" style="display: none;"></div>
+<link href="/styleV2/style.css" rel="stylesheet" />
+<link href="/styleV2/community4.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/jsV2/inputVoice.js"></script>
+<script type="text/javascript" src="/jsV2/inputImage.js"></script>
+<style type="text/css">
+    body {
+        background-color: #FFF;
+    }
+
+    .l_like_off span {
+        color: #ccc;
+    }
+
+    .l_like_on span {
+        color: #ff6600;
+    }
+
+
+
+    .btn, .fr {
+        margin-right: 0;
+    }
+</style>
+<!--回复区·开始-->
+<script type="text/javascript">
+    $(function () {
+        /*评论框获得焦点的时候*/
+        $("#txtCommentReplyContents").focus(function () {
+            isSubAndCom();
+        });
+    });
+    function searchChange(isexcellent) {
+        //var s = document.getElementsByName("RadioGroup1");
+        //for (i = 0; i < s.length; i++) {
+        //    alert(s[i].checked);
+        //    if (s[i].checked == true && s[i].value == "全部") {
+        //        //window.location.href = (s[i].value + '');
+        //        tempisexcellent = false;
+        //        pageindex = 0;
+        //        getData(tempisexcellent);
+        //    }
+        //    else if (s[i].checked == true && s[i].value == "精选") {
+        //        tempisexcellent = true;
+        //        pageindex = 0;
+        //        getData(tempisexcellent);
+        //    }
+        //}
+        tempisexcellent = isexcellent;
+        pageindex = 0;
+        getData(tempisexcellent);
+    }
+    /*是回复，否则是评论*/
+    var isCommentReply = false;
+    var gid = 0;
+    var metaid = "10330920";
+    var metatype = "1";
+    var meta_mid = "0";
+    var isall = "0";
+    var title = "维吾尔语领有格“-ni■”的隐现规律及其成因";
+
+    var contents = "";
+    var pictures = "";
+
+    /*评论id*/
+    var commentid = 0;
+    /*评论人mid*/
+    var commentmid = 0;
+    /*回复人mid*/
+    var replymid = 0;
+
+    /*回复级别*/
+    var level = 2;
+
+    function isSubAndCom() {
+        
+        if ("0" == "0") {
+            $.messager.alert("请用微信客户端打开，并关注壹学者公众号。", "知道了", function () { }, 0);
+            return false;
+        }
+        else if (parseInt("0") > 0) {
+            $.messager.confirm("使用该功能，请先完善个人资料。", "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+            //JSCL.GoToLocation("/Member/wszl");
+            return false;
+        }
+        return true;
+    }
+
+    /*评论*/
+    function Comment() {
+        
+        if ("0" == "0") {
+            $.messager.alert("请用微信客户端打开，并关注壹学者公众号。", "知道了", function () { }, 0);
+            return false;
+        }
+        else if (parseInt("0") > 0) {
+            $.messager.confirm("使用该功能，请先完善个人资料。", "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+            //JSCL.GoToLocation("/Member/wszl");
+            return false;
+        }
+
+        isCommentReply = false;
+        commentid = 0;
+        commentmid = 0;
+        replymid = 0;
+
+        /*滚动条置底*/
+        window.location.href = "#anchor_pl";
+        //$(document).scrollTop($(document).height() - $(window).height());
+        var _placeholder = "请输入评论内容，限1000个字";
+        $("#txtCommentReplyContents").val("").attr("placeholder", _placeholder);
+        $("#txtCommentReplyContents").focus();
+    }
+    /*评论回复*/
+    function CommentReply(_commentid, _commentmid, commentname, commentlevel) {
+        
+        if ("0" == "0") {
+            $.messager.alert("请用微信客户端打开，并关注壹学者公众号。", "知道了", function () { }, 0);
+            return false;
+        }
+        else if (parseInt("0") > 0) {
+            $.messager.confirm("使用该功能，请先完善个人资料。", "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+            //JSCL.GoToLocation("/Member/wszl");
+            return false;
+        }
+
+        isCommentReply = true;
+        commentid = _commentid;
+        commentmid = _commentmid;
+        replymid = 0;
+        if (!!commentlevel) { level = commentlevel; }
+        if (!commentid || !commentmid) { return false; }
+        //$(document).scrollTop($(document).height() - $(window).height());
+        window.location.href = "#anchor_pl";
+        $("#txtCommentReplyContents").val("").attr("placeholder", ("回复" + commentname + "："));
+        $("#txtCommentReplyContents").focus();
+    }
+
+    /*提交评论回复*/
+    function SubmitContent() {
+        $.messager.loadcomplete();
+        contents = $.trim($("#txtCommentReplyContents").val());
+        pictures = $("#pictures").val();
+        if ((!contents && JSCL.IsEmpty(contents)) && (!pictures && JSCL.IsEmpty(pictures))) {
+            $.messager.alert("请输入内容", "", null, 30000);
+            return false;
+        }
+        else {
+            if (!!contents && !JSCL.IsEmpty(contents)) {
+                if (Reg_Special.test(contents)) {
+                    $.messager.alert("暂不支持特殊字符，请修订内容。", "", null, 30000);
+                    return false;
+                }
+                else if (JSCL.RealLength(contents) > 1000 * 2) {
+                    $.messager.alert("您已超出字数限制，请删除" + (JSCL.RealLength(contents) - 1000 * 2) + "个字。", "", null, 0);
+                    return false;
+                }
+                //else if (contents.length > 300) {
+                //    $.messager.alert("您已超出字数限制，请删除" + (contents.length - 300) + "个字。", "", null, 0);
+                //    return false;
+                //}
+                contents = contents.replace(/\s*(\n\r|\n|\r)\s*/, "<br />");
+            }
+            if (!!pictures && !JSCL.IsEmpty(pictures)) {
+                if (JSCL.RealLength(pictures) > 1024) {
+                    $.messager.alert("图片太多啦，请重新输入", "", null, 0);
+                    return false;
+                }
+            }
+        }
+
+        $("#btnCommentReplySubmit").attr("disabled", "disabled");
+        $.messager.loading("");
+        $.ajax({
+            url: "/Community/CommentReply",
+            type: "post",
+            dataType: "json",
+            timeout: 30000,
+            data: {
+                isCommentReply: isCommentReply,
+                metaid: metaid,
+                metatype: metatype,
+                meta_mid: meta_mid,
+                isall: isall,
+                title: encodeURIComponent(title),
+                contents: encodeURIComponent(contents),
+                pictures: encodeURIComponent(pictures),
+                commentid: commentid,
+                commentmid: commentmid,
+                replymid: replymid,
+                t: (new Date()).getTime(),
+                level: level
+            },
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    if (result.errno == 0) {
+                        //静态评论/回复成功
+
+                        var hash = window.location.hash;
+                        if (hash != "") {
+                            var url = window.location.href.replace(hash, "");
+                            window.sessionStorage.hash = hash;
+                            window.location.href = url;
+                        } else {
+                            JSCL.Reload();
+                        }
+                    }
+                    else {
+                        if (result.errno == 50001) {
+                            if (result.errmsg == "no subscribe") {
+                                $.messager.confirm("您还没有关注壹学者公众号", "马上关注", "取消", function (flag) { if (flag) { JSCL.GoToLocation('http://mp.weixin.qq.com/s?__biz=MzA3NTU5NzMwNw==&mid=204452033&idx=1&sn=65b76d90d41bae9c046ce1c3b5aeae7c#rd'); } else { } });
+                                return;
+                            }
+                            else (result.errmsg == "no complete")
+                            {
+                                $.messager.confirm("使用该功能，请先完善个人资料。", "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+                                //JSCL.GoToLocation("/Member/wszl");
+                                return;
+                            }
+                        }
+                        $.messager.alert(result.errmsg, "", null, 0);
+                        return;
+                    }
+                }
+                else {
+                    $.messager.alert("操作失败！", "", null, 0);
+                }
+                $("#btnCommentReplySubmit").removeAttr("disabled");
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //alert(XMLHttpRequest.status);
+                //alert(XMLHttpRequest.readyState);
+                //alert(textStatus);
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                }
+                else {
+                    //$.messager.alert(JSCL.RequestState(XMLHttpRequest, textStatus, errorThrown), "", null, 0);
+                }
+                $("#btnCommentReplySubmit").removeAttr("disabled");
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+                //alert('执行完成了');
+                $.messager.loadcomplete();
+            }
+        });
+
+    }
+
+    //提交表单
+    function submitForm() {
+        
+        if ("0" == "0") {
+            $.messager.alert("请用微信客户端打开，并关注壹学者公众号。", "知道了", function () { }, 0);
+            return false;
+        }
+        else if ("False" == "False") {
+            $.messager.alert("您已被禁言", "知道了", function () { }, 0);
+            return false;
+        }
+        else if (parseInt("0") > 0) {
+            $.messager.confirm("使用该功能，请先完善个人资料。", "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+            //JSCL.GoToLocation("/Member/wszl");
+            return false;
+        }
+        //if (!isSubAndCom()) {
+        //    return false;
+        //};
+        $.messager.loading("");
+        if (!!images && typeof (images) == "object" && images.localId.length > 0) {
+            uploadImage('comment', "#pictures", SubmitContent);
+        }
+        else {
+            SubmitContent();
+        }
+    }
+    function verifyIcon(vt) {
+        var icon = "";
+        if (vt === 1) {
+            icon = "<img src='/imagesV2/v_scholl.png' style='vertical-align:baseline; margin-left:5px;' />";
+        }
+        else if (vt === 9) {
+            icon = "<img src='/imagesV2/v_instl.png' style='vertical-align:baseline; margin-left:5px;' />";
+        }
+        return icon;
+    }
+    var pageindex = 0;
+    var pagesize = 5;
+    var tempisexcellent = false;
+    var finalmeta_isreward = '0';
+    function getData(isexcellent) {
+        //if ($("#more > a").html() == "加载中...") {
+        //    $.messager.alert("正在加载，请稍后！", "", null, 1000);
+        //    return false;
+        //}
+
+        $("#more > a").html("加载中...");
+        pageindex++;
+        if (pageindex > 1) { //第二次全部加载完
+            //pageindex = 1;
+            //pagesize = 1000000;
+        }
+        $.ajax({
+            url: "/Community/CommentReplyListNewV4",
+            type: "post",
+            dataType: "json",
+            timeout: 30000,
+            data: {
+                gid: gid,
+                metaid: metaid,
+                metatype: metatype,
+                isall: isall,
+                isexcellent: isexcellent,
+                pi: pageindex,
+                ps: pagesize,
+                t: (new Date()).getTime()
+            },
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    $("#searcharticle").show();
+                    if (pageindex == 1) { $("#DataList").html(""); }
+                    if (result.errno == 0 && result.count > 0) {
+                        if (result.count > pagesize && result.count > (pageindex * pagesize))
+                            $("#more").show();
+                        else
+                            $("#more").hide();
+                        //var countoneandsecond = result.count;
+                        if (result.data && result.data.length > 0) {
+                            var htmlDataList = "";
+                            for (var i = 0; i < result.data.length; i++) {
+                                var tempzanhtml = '<i class="i_praise"></i>' + result.data[i].comment_zancount;
+
+                                if (result.data[i].comment_followindex == 4) {
+                                    tempzanhtml = '<i class="i_praised"></i>' + result.data[i].comment_zancount;
+                                }
+                                var tempisvarify = '';
+                                var tempisvip = '';
+                                var tempzuanshi = '';
+                                if (result.data[i].comment_isvip == 1) {
+                                    tempzuanshi = '<span class="i_jewel"></span>';
+                                    tempisvip = 'user-huang';
+                                    if (result.data[i].comment_nameverify == 1) {
+                                        tempisvarify = '<span class="card_s_v"></span>';
+                                    }
+                                    else if (result.data[i].comment_nameverify == 9) {
+                                        tempisvarify = '<span class="card_s_s"></span>';
+                                    }
+                                    else if (result.data[i].comment_nameverify == 8) {
+                                        tempisvarify = '<span class="card_s_e"></span>';
+                                    }
+                                }
+                                else {
+                                    tempisvip = 'user-normal';
+                                    if (result.data[i].comment_nameverify == 1) {
+                                        tempisvarify = '<span class="card_v"></span>';
+                                    }
+                                    else if (result.data[i].comment_nameverify == 9) {
+                                        tempisvarify = '<span class="card_s"></span>';
+                                    }
+                                    else if (result.data[i].comment_nameverify == 8) {
+                                        tempisvarify = '<span class="card_e"></span>';
+                                    }
+                                }
+                                var tempIsexcellent = '';
+                                if (result.data[i].comment_isexcellent == true) {
+                                    tempIsexcellent = '<span class="tag_jx">精选</span>';
+                                }
+
+                                var tempcomment_contents = "";
+                                var htmlmore = "";
+                                if (result.data[i].comment_contents.length > 35) {
+                                    tempcomment_contents = result.data[i].comment_contents.substring(0, 35) + "...";
+                                    htmlmore = '<a href="/Community/CommentReplyNewDetailV4RemoveReward?gid=' + result.data[i].gid + '&metaid=' + result.data[i].comment_metaid + '&metatype=' + result.data[i].comment_metatype + '&meta_mid=' + result.data[i].comment_mid + '&isall=1&title=' + encodeURI(result.data[i].comment_title) + '&HTmeta_mid=' +0 +'"><i class="reply_more"></i></a>';
+                                } else {
+                                    tempcomment_contents = result.data[i].comment_contents;
+                                }
+                                var tempcontents = "";
+                                if (result.data[i].replyid != 0) {
+                                    tempcontents = "回复<a href='/MemberCard/" + result.data[i].reply_mid + "'>" + result.data[i].reply_name + "</a>：" + tempcomment_contents + htmlmore;
+                                } else {
+                                    tempcontents = tempcomment_contents + htmlmore;
+                                    // tempcontents = result.data[i].comment_contents.length > 35 ? result.data[i].comment_contents.substring(0, 35)+"..." : result.data[i].comment_contents;
+                                }
+
+                                //===========================
+                                htmlDataList += '<article class="con_b_line"><div class="img_topic"><a href="' + result.data[i].comment_membercard + '"><img src="' + result.data[i].comment_avater + '" class="' + tempisvip + '">' + tempisvarify + '</a></div><div class="con_topic"><span class="praise" onclick="movingplus(this,\'' + result.data[i].commentid + '\')">' + tempzanhtml + '</span><h3 class="clearfix"><a href="' + result.data[i].comment_membercard + '">' + result.data[i].comment_name + '</a>' + tempzuanshi + tempIsexcellent + '</h3><p class="job">' + result.data[i].comment_description + '</p><p class="reply_text">' + tempcontents + htmlmore + '</p>';
+
+                                if (!!result.data[i].comment_pictures) {
+                                    var picArrSmall = JSCL.RegexSplit(result.data[i].comment_pictures, JSCL.Regex_splitComma);
+                                    var picArr = result.data[i].comment_pictures.toString().replace(/_small\./ig, ".");
+                                    htmlDataList += "<p class='clearfix'><a href=\"javascript:JWeixinHelper.previewImage('" + picArrSmall[0].replace(/_small\./ig, ".") + "', '" + picArr + "');\"><i class='reply_img'></i></a></p>";
+                                }
+
+                                //----------------------------
+                                htmlDataList += '<div class="reply_os_tr"><z class="time">' + result.data[i].comment_time + '</z>';
+                                if ('0' != result.data[i].comment_mid) {
+                                    htmlDataList += '<a class="btn_fblue" href="javascript:;" onclick="CommentReply(\'' + result.data[i].commentid + '\',\'' + result.data[i].comment_mid + '\',\'' + JSCL.escapeSingleQuotesForJS(result.data[i].comment_name) + '\')">回复</a>';
+                                } else {
+                                    htmlDataList += '<a class="btn_fblack" href="javascript:;" onclick="deletemartcomment(' + result.data[i].commentid + ');">删除</a>';
+                                }
+                                htmlDataList += '</div>';
+
+                                // ------------------------------------
+                                if (result.data[i].secondlist && result.data[i].secondlist.length > 0) {
+                                    // countoneandsecond = countoneandsecond + result.data[i].secondlist.length;
+                                    htmlDataList += '<div class="reply_con">';
+                                    var secondcount = result.data[i].secondlist.length >= 2 ? 2 : result.data[i].secondlist.length
+                                    for (var j = 0; j < secondcount; j++) {
+                                        var tempsecondcomment_contents = "";
+                                        var htmlsecondmore = "";
+                                        if (result.data[i].secondlist[j].comment_contents.length > 35) {
+                                            tempsecondcomment_contents = result.data[i].secondlist[j].comment_contents.substring(0, 35) + "...";
+                                            htmlsecondmore = '<a href="/Community/CommentReplyNewDetailV4RemoveReward?gid=' + result.data[i].secondlist[j].gid + '&metaid=' + result.data[i].secondlist[j].comment_metaid + '&metatype=' + result.data[i].secondlist[j].comment_metatype + '&meta_mid=' + result.data[i].secondlist[j].comment_mid + '&isall=1&title=' + encodeURI(result.data[i].secondlist[j].comment_title) + '&HTmeta_mid=' +0 +'"><i class="reply_more"></i></a>';
+                                        } else {
+                                            tempsecondcomment_contents = result.data[i].secondlist[j].comment_contents;
+                                        }
+                                        if (result.data[i].secondlist[j].replyid == result.data[i].commentid) {
+
+                                            htmlDataList += '<p class="reply_text"><span class="fblue"><a href="' + result.data[i].secondlist[j].comment_membercard + '">' + result.data[i].secondlist[j].comment_name + '</a>:</span><span  href="javascript:;" onclick="CommentReply(\'' + result.data[i].secondlist[j].commentid + '\',\'' + result.data[i].secondlist[j].comment_mid + '\',\'' + JSCL.escapeSingleQuotesForJS(result.data[i].secondlist[j].comment_name) + '\')">' + tempsecondcomment_contents + '</span>' + htmlsecondmore + '</p>';
+
+                                        } else {
+                                            htmlDataList += '<p class="reply_text"><span class="fblue"><a href="' + result.data[i].secondlist[j].comment_membercard + '">' + result.data[i].secondlist[j].comment_name + '</a>：</span>回复<span class="fblue"><a href="' + result.data[i].secondlist[j].comment_membercard + '">' + result.data[i].secondlist[j].reply_name + '</a></span>：<span  href="javascript:;" onclick="CommentReply(\'' + result.data[i].secondlist[j].commentid + '\',\'' + result.data[i].secondlist[j].comment_mid + '\',\'' + JSCL.escapeSingleQuotesForJS(result.data[i].secondlist[j].reply_name) + '\')">' + tempsecondcomment_contents + '</span>' + htmlsecondmore + '</p>';
+                                        }
+                                        if (!!result.data[i].secondlist[j].comment_pictures) {
+                                            var picArrSmall = JSCL.RegexSplit(result.data[i].secondlist[j].comment_pictures, JSCL.Regex_splitComma);
+                                            var picArr = result.data[i].secondlist[j].comment_pictures.toString().replace(/_small\./ig, ".");
+                                            htmlDataList += "<p class='clearfix'><a href=\"javascript:JWeixinHelper.previewImage('" + picArrSmall[0].replace(/_small\./ig, ".") + "', '" + picArr + "');\"><i class='reply_img'></i></a></p>";
+                                        }
+                                    }
+                                    if (result.data[i].secondlist.length > 2) {
+                                        htmlDataList += '</div><p class="tr_r"><a href="/Community/CommentReplyNewDetailV4RemoveReward?gid=' + result.data[i].gid + '&metaid=' + result.data[i].comment_metaid + '&metatype=' + result.data[i].comment_metatype + '&meta_mid=' + result.data[i].comment_mid + '&isall=1&title=' + encodeURI(result.data[i].comment_title) + '&HTmeta_mid=' +0 +'">查看' + result.data[i].secondlist.length + '条评论 ></a></p>';
+                                    }
+                                }
+                                htmlDataList += '</div></article>';
+                            }
+                            htmlDataList += '</div>';
+                            //-------------------------
+                            $("#DataList").html($("#DataList").html() + htmlDataList);
+                            //$("#countall").text(countoneandsecond);
+                            $("#countall").text(result.oneAndsecondCount);
+                        }
+                        else {
+                            $("#more").hide();
+                            $.messager.alert("哎呀，见底啦。", "", null, 0);
+                        }
+                    }
+                    else {
+                        $("#countall").text(0);
+                        $("#more").hide();
+                        if (!isexcellent) {
+                            $("#searcharticle").hide();
+                        }
+                        //$("#DataList").html("没有回复。");
+                        return;
+                    }
+                }
+                else {
+                    $.messager.alert("回复加载失败！", "", null, 0);
+                }
+
+                $("#more > a").html("展开更多+");
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //alert(XMLHttpRequest.status);
+                //alert(XMLHttpRequest.readyState);
+                //alert(textStatus);
+                $("#more > a").html("展开更多+");
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                }
+                else {
+                    //$.messager.alert(JSCL.RequestState(XMLHttpRequest, textStatus, errorThrown), "", null, 0);
+                }
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+                //alert('执行完成了');
+            }
+        });
+    }
+    function movingplus(obj, id) {
+        $.messager.loading("");
+        $.ajax({
+            url: "/Community/IndexmovingPlus",
+            data: {
+                id: id,
+                page: pageindex,
+                rtn: pagesize,
+                t: (new Date()).getTime()
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    if (result.errno == 0) {
+                        if (result.errmsg == "0") {
+                            $(obj).html('<i class="i_praised"></i>' + result.data);
+                        }
+                        else if (result.errmsg == "1") {
+                            $(obj).html('<i class="i_praise"></i>' + result.data);
+                        }
+                        else {
+                            $.messager.alert(result.errmsg, "", null, 0);
+                        }
+                    }
+                    else {
+                        $.messager.alert(result.errmsg, "", null, 0);
+                    }
+                }
+                else {
+                    $.messager.alert("操作失败！", "", null, 0);
+                }
+                $.messager.loadcomplete();
+            },
+            complete: function () {
+                $.messager.loadcomplete();
+            }
+        });
+    }
+
+    //递归得到所有html
+    function GetDataList(data, otherData, tempLevel) {
+        var tempLevel = tempLevel + 1;
+        if (!data || data.length <= 0) {
+            return "";
+        }
+        var tempString = "<div id=\"DataListReplay" + (otherData.commentid + "_" + otherData.comment_mid) + "\">";
+
+        for (var i = 0; i < data.length; i++) {
+
+            var tempClass = "l_like_off";
+            if (data[i].plusIndex == "yes") {
+                tempClass = "l_like_on";
+            }
+            var tempisvarify = "";
+            if (result.data[i].comment_nameverify == 1) {
+                tempisvarify = "v_svip";
+            }
+            else if (result.data[i].comment_nameverify == 9) {
+                tempisvarify = "s_szj";
+            }
+            //if (tempLevel > 3) {
+            //    tempString += "		<div class=\"user_news_replay\" name=" + data[i].reply_name + " level=" + tempLevel + " replyid=" + data[i].replyid + " mid=" + data[i].reply_mid + " style='padding-left:0'>";
+
+            //} else {
+            //    tempString += "		<div class=\"user_news_replay\" name=" + data[i].reply_name + " level=" + tempLevel + " replyid=" + data[i].replyid + " mid=" + data[i].reply_mid + ">";
+            //}
+            tempString += "		<div class=\"user_news_replay\" name=" + data[i].reply_name + " level=" + tempLevel + " replyid=" + data[i].replyid + " mid=" + data[i].reply_mid + ">";
+            tempString += "			<div class=\"user_news-l tr_c\"><p><a class=\"user_head\" href=\"" + data[i].reply_membercard + "\"><em class=\"headIcoBg2_w\"><img src=\"" + data[i].reply_avater + "\" class=\"per\"><span class=\"headIcoBg3\"></span></em><span class=\"" + tempisvarify + "\"></span></a></p></a><a href=\"javascript:void(0);\" class=\"" + tempClass + "\" onclick=\"movingplus($(this)," + result.data[i].commentid + ")\"><i></i><br><span>" + result.data[i].pluscount + "</span></a></div>";
+            tempString += "			<div class=\"user_news_mainl ml_2\" style='width:74%'>";
+            tempString += "				<h2><a href=\"" + data[i].reply_membercard + "\">" + data[i].reply_name + "</a> " + data[i].reply_description + "</h2>";
+            tempString += "				<time>" + data[i].reply_time + "</time>";
+            tempString += "			</div>";
+            //  tempString += "		<div class=\"user_news_mainr\"><button class=\"btn fr\" type=\"button\" id=\"" + (data[i].replyid + "_" + data[i].reply_mid) + "\" onclick=\"javascript:CommentReply(" + data[i].replyid + ", " + data[i].reply_mid + ", '" + JSCL.escapeSingleQuotesForJS(data[i].reply_name) + "'," + tempLevel + ");\">回复</button></div>";
+
+            tempString += "			<div class=\"clear\"></div>";
+            tempString += "			<div class=\"mt_10\"><p><span>回复" + data[i].comment_name + "：</span>" + data[i].reply_contents + "</p>";
+            if (!!data[i].reply_pictures) {
+                var picArrSmall = JSCL.RegexSplit(data[i].reply_pictures, JSCL.Regex_splitComma);
+                var picArr = data[i].reply_pictures.toString().replace(/_small\./ig, ".");
+                $.each(picArrSmall, function (index, element) {
+                    if (!JSCL.IsEmpty(element) && !JSCL.Regex_splitComma.test(element))
+                        tempString += "		<a href=\"javascript:JWeixinHelper.previewImage('" + picArrSmall[index].replace(/_small\./ig, ".") + "', '" + picArr + "');\"><img src=\"" + element + "\"></a>";
+                });
+            }
+            tempString += "			</div>";
+            tempString += GetDataList(data[i].ReplyList, data[i], tempLevel);
+            tempString += "			<div class=\"clear\"></div>";
+            tempString += "		</div>";
+        }
+        tempString += "</div>";
+        return tempString;
+    }
+
+    //初始化选项
+    $(document).ready(function () {
+        getData(tempisexcellent);
+        $("#more > a").click(function () {
+            getData(tempisexcellent);
+        });
+        if (!!window.sessionStorage.hash) {
+            document.getElementById("btnComment").click();
+            window.location.hash = window.sessionStorage.hash;
+            window.sessionStorage.removeItem('hash');
+        }
+    });
+
+    function deletemartcomment(id) {
+        $.messager.confirm("确定删除吗？", "确定", "取消", function (flag) {
+            if (flag) {
+                $.ajax({
+                    url: "/Community/deleteCommentReplyNewV4",
+                    data: {
+                        id: id
+                    },
+                    type: "POST",
+                    dataType: "json",
+                    success: function (result, textStatus) {
+                        if (textStatus == "success" && result) {
+                            if (result.errno == 0) {
+                                if (result.errmsg == "") {
+                                    //window.location.reload();
+                                    pageindex = 0;
+                                    pagesize = 5;
+                                    tempisexcellent = false;
+                                    finalmeta_isreward = '0';
+                                    getData(tempisexcellent);
+                                }
+                            }
+                            else {
+                                $.messager.alert(result.errmsg, "", null, 0);
+                            }
+                        }
+                        else {
+                            $.messager.alert("操作失败！", "", null, 0);
+                        }
+                    }
+                });
+            }
+            else {
+                return;
+            }
+        })
+
+    }
+
+</script>
+<!--回复区·结束-->
+
+
+<div class="footer_blank"></div>
+<div class="news_bottom footer_4 pfix">
+        <a href="javascript:;" id="zanfooter" class="dianzanone">
+            <i class="i_zan beforeone"><span>0</span></i><br />
+            点赞
+        </a>
+    <a href="javascript:;" id="changesize">
+        <i class="i_fsize"></i>
+        <br />
+        字号
+    </a>
+    <a href="javascript:;" onclick="MarkClick()">
+        <i class="i_fav"></i>
+        <br />
+        收藏
+    </a>
+    <a href="/Notes/add?types=3&amp;targetid=10330920&amp;isall=0">
+        <i class="i_note"></i>
+        <br />
+        笔记
+    </a>
+</div>
+
+<div id="pop_share" class="pop_show" style="display: none;">
+    <ul class="share-list-2">
+        <li class="fg9" onclick="shareartclick(1);">
+            <img src="/imagesV2/share-team.png" class="bord-blue marB"><br />
+            小组
+        </li>
+        <li class="fg9" onclick="shareartclick(2);">
+            <img src="/imagesV2/share-friend.png" class="bord-org marB"><br />
+            站内好友
+        </li>
+    </ul>
+</div>
+
+<div class="sz_float_w" id="sz_vote" style="display:none">
+    <div>
+        <span class="vote_close" onclick="turnoff('sz_vote')">关闭</span>
+        <p>首届“全国高校思想政治理论课优秀教学论文”推选活动正在进行中!</p>
+        <p class="tr_c"><a href="/activity/ArticleSpots2017" class="vote_btn">进入投票页面 >></a></p>
+    </div>
+</div>
+<div class="sm_attention_w" id="sm_pop" style="display: none;">
+    <div>
+        <span class="sm_close" onclick="closeDiv('sm_pop','mask')">关闭</span>
+        <img src="/imagesV2/sm_attention.png">
+    </div>
+</div>
+<div class="mask" id="mask" style="display: none;"></div>
+<div id="pop_ts" class="pop_window" style="display: none;">
+    <h2>&nbsp;&nbsp;</h2>
+    <p class="tr_c">我是该篇论文的作者，认领该篇文章。</p>
+    <div class="pop_bottom clearfix footer_2_grey">
+        <a href="javascript:void(0);" onclick="closeDiv('pop_ts','mask')">取消</a>
+        <a href="javascript:void(0);" onclick="claim();">确认</a>
+    </div>
+</div>
+<div id="pop_yiwen" class="pop_s" style="display:none;">
+    <h2>温馨提示</h2>
+    <p class="tr_c">如有疑问请留言，或在工作日<br>联系小壹：<a href="tel:010-62515008-8202">010-62515008-8202</a>。</p>
+    <div class="pop_bottom clearfix footer_2_grey">
+        <a href="javascript:void(0);" onclick="closeDiv('pop_yiwen','mask')">返回</a>
+        <a href="/member/feedback">前往留言</a>
+    </div>
+</div>
+
+
+<div id="share_show" class="share" style="display: none;">
+    <div class="share_main">
+    <h3>请点击右上角按钮<span class="share_img"></span></h3>
+    <h4>提示</h4>
+    <span class="Prompt_l"></span>
+    <h5><a href="javascript:;"><span class="share_img friend"></span>分享给朋友圈</a><a href="javascript:;"><span class="share_img"></span>发送给好友</a></h5>
+    </div>
+</div>
+<script type="text/javascript">
+	//初始化选项
+	$(document).ready(function () {
+		$("#share").click(function () {
+			$("#share_show").fadeIn(500).delay(3000).fadeOut(500);
+		});
+	});
+</script>
+
+<script>
+    (function () {
+        _hmt.push(['_trackEvent', '浏览_论文详情页_未知会员状态', '浏览页面', '浏览_论文详情页_未知会员状态_维吾尔语领有格“-ni■”的隐现规律及其成因']);
+    })();
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    //是否显示页面下方的遮罩层
+    $(function () {
+
+        //$.get('/qk/CheckVisited', {type:1}, function (data, status) {
+        //    if (status = 'success') {
+        //        if (data.errno == 0) {
+        //            $('#sz_vote').show();
+        //        }
+        //    } else {
+        //        $('#sz_vote').show();
+        //    }
+
+        //}, 'json');
+
+        $('#first_author').on('click', function () {
+            $.post('/qk/CheckUserISAuthorByArtId', { id: '10330920', dbcode: '4' }, function (data, status) {
+                if (status == 'success') {
+
+                    if (data.errno == 50005) {
+                        $.messager.confirm("您还未完善资料，不能领取该文章。", "取消", "前往完善资料", function (flag) { if (flag) { } else { JSCL.GoToLocation("/Member/wszl"); } });
+                    }
+                    else if (data.errno == 1) {
+                        $.messager.confirm("我是该篇论文的作者，认领该篇文章。", "取消", "确认", function (flag) { if (flag) { } else { claim(); } });
+                        $('#mask').show();
+                    } else {
+                        $.messager.alert("抱歉，您不是该篇论文的作者，不能领取。", "", null, 2000);
+                    }
+                } else {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 2000);
+                }
+            }, 'json');
+        });
+
+
+
+    });
+
+
+    //认领文章
+    function claim() {
+        //$('#pop_ts').hide();
+        $('#mask').hide();
+        var data = {
+            artid: '10330920',
+            title: '维吾尔语领有格“-ni■”的隐现规律及其成因',
+            pdccode: 'H1',
+            jname: '语言文字学',
+            issueyear: '2013',
+            qksubnumber: '3',
+            isall: '0'
+        };
+        $.post('/qk/UpdateMyArticle', data, function (result, status) {
+            if (status == 'success') {
+                if (result.errno == 50005) {
+                    $.messager.confirm(result.errmsg, "去完善", "不用了", function (flag) { if (flag) { JSCL.GoToLocation("/Member/wszl"); } else { } });
+                }
+                else if (result.errno == 50000) {
+                    $.messager.alert(result.errmsg, "知道了", reloadnowpage, 30000);
+                }
+                else {
+                    $.messager.alert(result.errmsg, "", null, 2000);
+                }
+            } else {
+                $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 2000);
+            }
+        }, 'json');
+
+    }
+    function reloadnowpage() {
+        window.location.reload();
+    }
+</script>
+
+
+<script type="text/javascript">
+
+    //$(".dianzan").click(function () {
+    //    if ($(this).children('i').hasClass("after")) {
+    //        $(this).children('i').addClass("before").removeClass("after");
+    //        $(this).children('span').css("color", "#999999");
+    //        var oldValue = parseInt($(this).children('span').text());
+    //        if (oldValue > 0) {
+    //            oldValue--;
+    //        }
+    //        $(this).children('span').text(oldValue);
+    //        dianzanclick(0);
+    //    }
+    //    else {
+    //        $(this).children('i').addClass("after").removeClass("before");
+    //        $(this).children('span').css("color", "#ff6600");
+    //        var oldValue = parseInt($(this).children('span').text());
+    //        oldValue++;
+    //        $(this).children('span').text(oldValue);
+    //        dianzanclick(1);
+    //    }
+    //})
+    $("#zanheader").click(function () {
+        if ($(this).hasClass("addzaned")) {
+            $(this).addClass("addzan").removeClass("addzaned");
+            $("#zanfooter").children('i').addClass("beforeone").removeClass("afterone");
+            $("#zanfooter").removeClass('zan_on');
+            //$(this).children('span').css("color", "#ff6600");
+            var oldValue = parseInt($(this).children('s').text());
+            if (oldValue > 0) {
+
+                oldValue--;
+            }
+            if (oldValue == 0) {
+                $(this).children('s').text(" ");
+            } else {
+                $(this).children('s').text(oldValue);
+            }
+            $("#zanfooter").children().children('span').text(oldValue);
+            dianzanclick(0);
+        }
+        else {
+            $(this).addClass("addzaned").removeClass("addzan");
+            $("#zanfooter").children('i').addClass("afterone").removeClass("beforeone");
+            $("#zanfooter").addClass('zan_on');
+            // $(this).children('span').css("color", "#ff6600");
+            //alert(" " == $(this).children('s').text());
+            var oldValue = " " == $(this).children('s').text() ? 0 : parseInt($(this).children('s').text());
+            oldValue++;
+            $(this).children('s').text(oldValue);
+            $("#zanfooter").children().children('span').text(oldValue);
+            dianzanclick(1);
+        }
+    })
+    function nbsp2Space(str) {
+        var arrEntities = { 'nbsp': ' ' };
+        return str.replace(/&(nbsp);/ig, function (all, t) { return arrEntities[t] })
+    }
+    $(".dianzanone").click(function () {
+        if ($(this).children('i').hasClass("afterone")) {
+            $(this).children('i').addClass("beforeone").removeClass("afterone");
+            $(this).removeClass('zan_on');
+            $("#zanheader").addClass("addzan").removeClass("addzaned");
+            //$(this).children('span').css("color", "#ff6600");
+            var oldValue = parseInt($(this).children().children('span').text());
+            if (oldValue > 0) {
+
+                oldValue--;
+            }
+            $(this).children().children('span').text(oldValue);
+            if (oldValue == 0) {
+                $("#zanheader").children('s').text(" ");
+            } else {
+                $("#zanheader").children('s').text(oldValue);
+            }
+            dianzanclick(0);
+        }
+        else {
+            $(this).children('i').addClass("afterone").removeClass("beforeone");
+            $(this).addClass('zan_on');
+            $("#zanheader").addClass("addzaned").removeClass("addzan");
+            // $(this).children('span').css("color", "#ff6600");
+            var oldValue = parseInt($(this).children().children('span').text());
+            oldValue++;
+            $(this).children().children('span').text(oldValue);
+            $("#zanheader").children('s').text(oldValue);
+            dianzanclick(1);
+        }
+    })
+
+    
+
+    //$('.dianzanone').click(function () {
+    //    var oldValue = parseInt($('.dianzan').find("span").text());
+    //    if ($(this).hasClass("zan_on")) {
+    //        $(this).removeClass('zan_on');
+    //        oldValue--;
+    //        $(this).find("span").text(oldValue);
+    //    }
+    //    else {
+    //        $(this).addClass('zan_on');
+    //        oldValue++;
+    //        $(this).find("span").text(oldValue);
+    //    }
+
+    //});
+
+
+    function dianzanclick(isdelete) {
+        $.ajax({
+            url: "/Community/good",
+            type: "post",
+            dataType: "text",
+            data: { metaid: "10330920", metatype: 1, flag: isdelete, isall: "0", page: 2, mid: "0", title: "维吾尔语领有格“ni■”的隐现规律及其成因" },
+            async: false,
+            success: function (data) {
+                if (data != "") {
+                    switch (data) {
+                        case "success":
+                            break;
+                        case "fail":
+                            $.messager.alert("内部错误");
+                            break;
+                        case "success1":
+                            break;
+                    }
+                } else {
+                    $("#more_good a:first").attr("disabled", "disabled");
+                    $("#goodzan").attr("onclick", "IsPresenceGood(" + flag + ");");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                } else {
+                    //$.messager.alert(JSCL.RequestState(XMLHttpRequest, textStatus, errorThrown), "", null, 0);
+                }
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+                //alert('执行完成了');
+            }
+        });
+    }
+    //操作间隙时间
+    //var SleepTime = 0;
+    var SleepTime = 1;
+    function dakaclick() {
+        //if (SleepTime > 0 && ((new Date()).getTime() - SleepTime) < 10000) {
+        //    $.messager.alert("您已经点击过了，请稍等", "", null, 10000);
+        //    return false;
+        //} else {
+        //    SleepTime = (new Date()).getTime();
+        //}
+        if (SleepTime) {
+            var tempurl = "/Community/dakasubmit";
+            $.ajax({
+                url: tempurl,
+                data: {
+                id: "10330920",
+                    title: "维吾尔语领有格“ni■”的隐现规律及其成因",
+                    isall: "0",
+                    t: (new Date()).getTime()
+                },
+                type: "POST",
+                dataType: "json",
+                success: function (result, textStatus) {
+                    if (textStatus == "success" && result) {
+                        if (result.errno == 0) {
+                            //if ($("#clock").children('i').hasClass("i_clocked")) {
+                            //    return false;
+                            //}
+                            //else {
+                            //    $("#clock").children('i').addClass("i_clocked").removeClass("i_clock");
+                            //    $("#clock").css("color", "#ff6600");
+                            //    $("#clock").children('span').css("color", "#ff6600");
+                            //    $(".dakacount").text(result.data);
+                            //}
+                            $("#btndaka").text("已打卡");
+                            //$("#btndaka").addClass("btn_g").remove("btn_w");
+                            //getDakaData();
+                            window.location.href = "/Community/dakaShare"+"?metaid=10330920&mid=0";
+                        }
+                        else {
+                            $.messager.alert(result.errmsg, "", null, 0);
+                        }
+                    }
+                    else {
+                        $.messager.alert("数据加载失败！", "", null, 0);
+                    }
+                },
+                complete: function () {
+                    $.messager.loadcomplete();
+                }
+            });
+            SleepTime = 0;
+        }
+    }
+
+
+
+    //初始化选项
+    $(document).ready(function () {
+        getReadhistoryData();
+    });
+
+    function getReadhistoryData() {
+        $.ajax({
+            url: "/QK/ReadHistoryUserList",
+            data: {
+                id: "10330920", alt: "json", pageindex: 1, pagesize: 5,
+                isall: "0",
+                t: (new Date()).getTime()
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    if (result.errno == 0 && result.count > 0) {
+                        var tempStr = "";
+                        $("#readusecount").text(result.count);
+                        if (result.data && result.data.length > 0) {
+                            for (var i = 0; i < result.data.length; i++) {
+                                var tempisvarify = '';
+                                if (result.data[i].metayear == "1") {
+                                    tempisvarify = '<span class="user-header user-v">V</span>';
+                                }
+                                else if (result.data[i].metayear == "9") {
+                                    tempisvarify = '<span class="user-header user-s">S</span>';
+                                }
+                                else if (result.data[i].metayear == "8") {
+                                    tempisvarify = '<span class="user-header user-e">E</span>';
+                                }
+                                tempStr = tempStr + '<dl><dt><a href="javascript:;" onclick="membercardclick(' + result.data[i].mid + ');"><img src="' + result.data[i].metajournalid + '" class="user-normal">' + tempisvarify + '</a></dt><dd>' + result.data[i].author + '</dd></dl>';
+
+                            }
+                            if (result.count > 4) {
+                                tempStr = tempStr + '<a href="/QK/ReadHistoryUser?id=10330920&isall=0" class="jump-more">></a>';
+                            }
+                            $("#readuserlist").html(tempStr);
+                        }
+                        else {
+                            if (result.errmsg == "没有了") {
+                                $.messager.alert("哎呀，见底啦。", "", null, 0);
+                            }
+                            else if (result.errmsg) {
+                                $.messager.alert(result.errmsg, "", null, 0);
+                            }
+                        }
+                    }
+                    else {
+                        //$("#DataList").html("没有内容。");
+                        return;
+                    }
+                }
+                else {
+                    $.messager.alert("数据加载失败！", "", null, 0);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                }
+                else {
+                    //$.messager.alert(JSCL.RequestState(XMLHttpRequest, textStatus, errorThrown), "", null, 0);
+                }
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+            }
+        });
+    }
+    function getDakaData() {
+        $.ajax({
+            url: "/Community/DakaUserList",
+            data: {
+                id: "10330920", alt: "json", pagesize: 10,
+                t: (new Date()).getTime()
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (result, textStatus) {
+                if (textStatus == "success" && result) {
+                    if (result.errno == 0 && result.count > 0) {
+                        var tempStr = "";
+                        if (result.data && result.data.length > 0) {
+                            for (var i = 0; i < result.data.length; i++) {
+                                var tempisvarify = '';
+                                if (result.data[i].username == "1") {
+                                    tempisvarify = '<span class="card_v"></span>';
+                                }
+                                else if (result.data[i].username == "9") {
+                                    tempisvarify = '<span class="card_s"></span>';
+                                }
+                                else if (result.data[i].username == "8") {
+                                    tempisvarify = '<span class="card_e"></span>';
+                                }
+                                tempStr = tempStr + '<li><img title="' + result.data[i].realname + '" onclick="membercardclick(' + result.data[i].mid + ');" src="' + result.data[i].avater + '">' + tempisvarify + '</li>';
+                            }
+                            $("#dakauserlist").html(tempStr);
+                        }
+                        else {
+                            if (result.errmsg == "没有了") {
+                                $.messager.alert("哎呀，见底啦。", "", null, 0);
+                            }
+                            else if (result.errmsg) {
+                                $.messager.alert(result.errmsg, "", null, 0);
+                            }
+                        }
+                    }
+                    else {
+                        //$("#DataList").html("没有内容。");
+                        return;
+                    }
+                }
+                else {
+                    $.messager.alert("数据加载失败！", "", null, 0);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (textStatus == "timeout") {
+                    $.messager.alert("网络请求失败或超时请重新尝试！", "", null, 0);
+                }
+                else {
+                    //$.messager.alert(JSCL.RequestState(XMLHttpRequest, textStatus, errorThrown), "", null, 0);
+                }
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+            }
+        });
+    }
+    function membercardclick(mid) {
+        window.location.href = "/MemberCard/Index?id=" + mid;
+    }
+</script>
+
+    <script type="text/javascript">
+
+        //初始化选项
+        $(document).ready(function () {
+            $(".i_jewel").live("click", function () {
+                window.location.href = "/WeiXinPay/vip";
+            });
+
+        });
+    </script>
+</body>
+</html>
