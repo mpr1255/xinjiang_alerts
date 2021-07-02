@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>跳转提示</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit" />
+  <title></title>
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="//static.yaozh.com/css/app.css">
+  <link rel="stylesheet" href="/Public/css/db.css">
+  <script>
+    document.domain = location.host.replace(/(\w|-)+\./,'');
+    var config = {
+      baseUrl : '//static.yaozh.com/js',
+      deps : ['/Public/js/pages/public_noUdesk.js']
+    }
+    var user = {
+      name : "",
+      isVip : "",
+      VipMessage : ""
+    }
+  </script>
+  <script src="//static.yaozh.com/js/app.js"></script>
+  <script src="/Public/js/config.js"></script>
+  <!--[if lt IE 9]><script src="http://static.yaozh.com/js/special/html5shiv.js"></script><![endif]-->
+
+</head>
+<body>
+  <div class="system-msg">
+      <!-- 这个是服务器压力过大的临时跳转页面 -->
+    <div class="msg-error tc dn jump01" style="position: absolute;left: 50%;top: 50%;margin: -68.5px 0 0 -111.5px;">
+      <img src="/Public/images/loading.gif">
+      <p class="mt10 fs14">
+        <span>页面努力加载中</span>
+        <a id="href" class="cl-blue" href="javascript:;">跳转</a>
+        <span>等待时间：</span>
+        <b id="wait">3</b>
+      </p>
+    </div>
+  
+    <!-- 这个是登录的临时跳转页面 -->
+             <div class="msg-error dn jump02 t45P">
+            <p class="fs22">时效过期，重新加载！<br>欢迎使用药智数据！</p>
+            <p class="mt10 fs14">
+              <span>页面自动</span>
+              <a id="href" class="cl-blue" href="javascript:;">跳转</a>
+              <span>等待时间：</span>
+              <b id="wait">3</b>
+            </p>
+          </div>
+        </div>
+  <script type="text/javascript">
+    var JUMPURL = '//db.yaozh.com:80/shengchanqiye';
+    var WAIT = "3";
+    require(['jquery'],function($){
+      $(function(){
+        // 根据 pathname 区分跳转页面
+        if (location.pathname == "/") {
+          $(".jump01").show();
+          $(".jump02").remove();
+        } else {
+          $(".jump02").show();
+          $(".jump01").remove();
+        }
+        // ---------------------------------------------------
+        $("#href").on('click',action);
+        var wait = document.getElementById('wait');
+        var interval = setInterval(function(){
+          var time = --wait.innerHTML;
+          if(time <= 0) {
+            clearInterval(interval);
+            action();
+          };
+        }, 1000);
+
+      });
+
+      function action(){
+        switch(JUMPURL){
+          case "close":{
+            window.frameElement && window.frameElement.trigger && window.frameElement.trigger("close");
+            break;
+          }
+          case "refresh":{
+            window.frameElement && window.frameElement.trigger && window.frameElement.trigger("refresh") || window.location.replace(document.referrer);
+            break;
+          }
+          default:{
+            var backUrl = window.location.href;
+            if(JUMPURL.indexOf('.com/login')===-1){
+              window.location.href = JUMPURL
+            }else{
+              window.location.href = JUMPURL+'?backurl='+backUrl;
+            }
+            /*if(history.length <= 1){
+              window.location.href = '/';
+            }else{
+              window.location.href = JUMPURL;
+            }*/
+          }
+        }
+      }
+
+    });
+  </script>
+</body>
+</html>
