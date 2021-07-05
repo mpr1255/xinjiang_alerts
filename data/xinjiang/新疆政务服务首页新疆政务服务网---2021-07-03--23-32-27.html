@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="SiteName" content="">
+    <meta name="SiteDomain" content="">
+    <meta name="SiteIDCode" content="">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <title>新疆政务服务首页</title>
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="/css/common_new.css">
+    <link rel="stylesheet" href="/js/lib/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/index_new.css">
+    <link rel="stylesheet" href="/css/popAD.css">
+    <link rel="stylesheet" href="/css/ADcss.css">
+    <!-- jquery -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="/js/mustache.js"></script>
+  
+    <script src="/OAuth/js/js.cookie.min.js"></script>
+    <script src="/OAuth/js/OAuthCommon.js"></script>
+    <script src="/OAuth/js/OAuth.js"></script>
+    <script src="/js/extranetCommon.js"></script>
+    <script src="/js/initpages.js"></script>
+
+   <link rel="stylesheet" href="/css/webBuilderCommonGray.css"></head>
+
+<body>
+    <!-- banner -->
+    <div class="ewb-banner">
+        <!-- 轮播 -->
+        <div id="slider" class="owl-carousel">
+            <div class="item" style="background-image: url(images/banner01.png);"></div>
+            <!-- <div class="item" style="background-image: url(images/banner02.png);"></div>-->
+           
+        </div>
+        <!-- banner内容 -->
+        <div id="header"></div>
+        <div style="display:none">
+            <!-- topbar -->
+<div class="ewb-page-top">
+    <div class="ewb-container">
+        <div class="clearfix" id="position">
+            <div class="l">
+                欢迎来到
+            </div>
+            <div class="l ewb-top-city">
+                <span></span>
+                <div class="ewb-garden">
+                    <div class="ewb-address">
+                        <div class="ewb-address-mod clearfix">
+                            <span class="ewb-address-name">
+                                自治区:
+                            </span>
+                            <div class="ewb-address-info">
+                                <ul class="ewb-address-items clearfix" id="zizhiqu">
+                                    <li class="ewb-address-item" onclick="bb(this);">
+                                        <a id="650000" href="javascript:void(0);">新疆维吾尔自治区</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ewb-address-mod clearfix">
+                            <span class="ewb-address-name">
+                                地（州、市）:
+                            </span>
+                            <div class="ewb-address-info">
+                                <ul class="ewb-address-items clearfix" id="di">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ewb-address-mod clearfix">
+                            <span class="ewb-address-name">
+                                县（市、区）:
+                            </span>
+                            <div class="ewb-address-info">
+                                <ul class="ewb-address-items clearfix" id="xian">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ewb-address-mod clearfix">
+                            <span class="ewb-address-name">
+                                乡镇（街道）:
+                            </span>
+							<div class="ewb-address-info">
+                                <ul class="ewb-address-items clearfix" id="xiang">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ewb-address-mod clearfix">
+                            <span class="ewb-address-name">
+                                村（社区）:
+                            </span>
+							<div class="ewb-address-info">
+                                <ul class="ewb-address-items clearfix" id="cun">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="l ewb-top-department">
+                <span>部门</span>
+                <div class="ewb-garden">
+                    <div class="ewb-top-depart">
+                        <div class="ewb-top-depart-hd">
+                            <h3 id="bumencity">乌鲁木齐市部门</h3>
+                        </div>
+                        <div class="ewb-top-depart-bd">
+                            <ul class="ewb-top-depart-items clearfix" id="bumenname">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ewb-top-log r">
+                <a href="javascript:void(0)" onclick="userLogin()" >登录</a><span>|</span><a href="javascript:void(0)" onclick="gohref('zhuce');">注册</a>
+            </div>
+            <div class="r ewb-top-links">
+				<div class="l ewb-username"   style="display:none">
+                    <a href="javascript:void(0);" id="username"  style="display:none">
+                        用户名称
+                    </a>
+                    <div class="ewb-username-info">
+                        <ul class="ewb-person-info">
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('bjzx');">办件中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('glzx');">管理中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="https://zwfw.xinjiang.gov.cn/usercenter.html?childrenpage=zlzx&category=0">资料中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="https://zwfw.xinjiang.gov.cn/usercenter.html?childrenpage=wdzj&category=0">我的足迹</a>
+			   							</li>
+			   							<li class="ewb-person-line">
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('zhzx');">账号中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="https://zwfw.xinjiang.gov.cn/usercenter.html?childrenpage=xxzx&category=4">消息中心</a>
+			   							</li>
+			   							<li class="ewb-person-line">
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="goout();">退出登录</a>
+			   							</li>
+			   						</ul>
+                    </div>
+                </div>
+				<!-- <a href="javascript:void(0);" id="username" class="l" style="display:none">用户名</a>
+				<span class="l" id="usernamefenge" style="display:none">，</span>
+                <a href="javascript:void(0);" onclick="goout();" class="l" id="tuichu" style="display:none">退出</a>
+                <span class="l" id="tuichufenge" style="display:none">|</span> -->
+                <a href="javascript:void(0);" onclick="mybanjian();" class="l">我的办件</a>
+                <span class="l">|</span>
+                <div class="l ewb-platform-nav">
+                    <span>平台导航</span>
+                    <div class="ewb-garden" style="left: -300px;width: 620px;">
+                        <div class="ewb-garden-mod clearfix">
+                            <div class="ewb-grade-line ewb-grade-line1"></div>
+                            <!-- <div class="ewb-grade-line ewb-grade-line2"></div>
+                            <div class="ewb-grade-line ewb-grade-line3"></div> -->
+                            <div class="ewb-wt316">
+                                <div class="ewb-garden-hd">
+                                    <h3>政务服务网</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                     <ul class="ewb-graden-items clearfix">
+                                       
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-首页');}catch(e){};window.location.href = '/'">首页</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-个人办事');}catch(e){};window.location.href = '/personal.html'">个人办事</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-法人办事');}catch(e){};window.location.href = '/personalfaren.html'">法人办事</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-跨省通办');}catch(e){};window.location.href = '/platform/platform_index.html'">跨省通办</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-便民服务');}catch(e){};window.location.href = '/bmfw/010004/convenientService.html'">便民服务</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-特色专区');}catch(e){};window.location.href = '/tszq/index.html'">特色专区</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-好差评');}catch(e){};window.location.href = '/newAppraise/review.html'">好差评</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-效能监督');}catch(e){};window.location.href = '/potency/potency.html'">效能监督</a>
+																</li>
+																<li class="ewb-graden-item">
+											<a href="javascript:void(0);"
+												onclick="try{Common.setcode('平台导航-政务公开');}catch(e){};window.location.href = '/governmentInformation.html'">政务公开</a>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ewb-wt220 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>12345政务在线</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                    <ul class="ewb-graden-items clearfix">
+                                        </ul>
+                                </div>
+                            </div> -->
+                            <div class="ewb-wt235 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>公共资源交易网</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                      <ul class="ewb-graden-items clearfix">
+                                         
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-首页');}catch(e){};window.location.href = '/xinjiangggzy/'">首页</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-交易信息');}catch(e){};window.location.href = '/xinjiangggzy/jyxx/tradeinfo.html'">交易信息</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-招投标主体登陆');}catch(e){};window.location.href = '/TPBidder/memberLogin'">招投标主体登陆</a>
+																</li>
+																</ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ewb-wt110 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>数据开放平台</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                    <ul class="ewb-graden-items clearfix">
+                                        </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <span class="l">|</span>
+                <div class="l ewb-mobile-gov">
+                    <span>移动政务</span>
+                    <div class="ewb-garden">
+                        <div class="ewb-phone">
+                            <div class="ewb-phone-hd">
+                                <img src="http://zwfw.xinjiang.gov.cn/images/pages/app_tt.jpg" alt="">
+                            </div>
+                            <div class="ewb-phone-bd clearfix">
+                            	 <div class="ewb-phone-mod">
+			   										<div class="ewb-weixin">
+			   											<img src="http://zwfw.xinjiang.gov.cn/images/zwfwbaidu.png" alt=""/>
+			   										</div>
+			   										<p>关注政务服务百度小程序</p>
+			   									</div>
+                                <div class="ewb-phone-mod">
+			   										<div class="ewb-weixin">
+			   											<img src="http://zwfw.xinjiang.gov.cn/images/app.png" alt=""/>
+			   										</div>
+			   										<p>扫码下载移动政务APP</p>
+			   									</div>
+												<div class="ewb-phone-mod">
+													<div class="ewb-weixin">
+														<img src="http://zwfw.xinjiang.gov.cn/images/xiaochxu.png" alt="">
+													</div>
+													<p>关注政务服务微信小程序</p>
+												</div>
+												<div class="ewb-phone-mod">
+													<div class="ewb-weixin">
+														<img src="http://zwfw.xinjiang.gov.cn/images/alipay.png" alt="">
+													</div>
+													<p>关注政务服务支付宝小程序</p>
+												</div>
+											
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 搜索 -->
+<div class="ewb-container">
+    <div class="ewb-row ewb-logo-area">
+        <div class="l ewb-page-logo">
+            <img src="http://zwfw.xinjiang.gov.cn/images/pages/page_logo.png" alt="" onclick="window.location.href='/'" style="cursor:pointer">
+        </div>
+        <div class="r ewb-userCenter-search">
+            <div class="input-tips ewb-top-search">
+                <label class="input-placeholder" data-id="searchInfo" for="searchInfo">搜索服务、资讯、办件</label>
+                <input type="text" class="ewb-form-input" id="searchInfo" name="searchInfo">
+            </div>
+            <button type="button" class="ewb-search-btn" onclick="search();"></button>
+        </div>
+    </div>
+</div>
+<!-- 导航 -->
+<!--<div class="ewb-user-nav">
+    <div class="ewb-container">
+        <ul class="ewb-usernav-items clearfix">
+            <li>
+                <a href="/">
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="/personal.html">
+                    个人办事
+                </a>
+            </li>
+            <li>
+                <a href="/personalfaren.html">
+                    法人办事
+                </a>
+            </li>
+            <li>
+                <a href="/bmfw/010004/convenientService.html">
+                    便民服务
+                </a>
+            </li>
+            <li>
+                <a href="/governmentInformation.html">
+                    政务公开
+                </a>
+            </li>
+            <li class="ewb-nav-node" id="tszq">
+					<a href="/tszq/index.html" class="ewb-nav-name">特色专区</a>
+			</li>
+			<li class="ewb-nav-node">
+			   <a href="/newAppraise/review.html" class="ewb-nav-name">好差评</a>
+			</li>
+        </ul>
+    </div>
+</div>-->
+
+
+<div class="ewb-nav">
+        <div class="ewb-container clearfix">
+            <ul class="ewb-nav-list">
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/" class="ewb-nav-name current">首页</a>
+                </li>
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/personal.html" class="ewb-nav-name">个人办事</a>
+                </li>
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/personalfaren.html" class="ewb-nav-name">法人办事</a>
+                </li>
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/platform/platform_index.html" target="_blank" class="ewb-nav-name">跨省通办</a>
+                </li>
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/bmfw/010004/convenientService.html" class="ewb-nav-name">便民服务</a>
+                </li>
+                <li class="ewb-nav-node" id="tszq">
+                    <a href="https://zwfw.xinjiang.gov.cn/tszq/index.html" class="ewb-nav-name">特色专区</a>
+                </li>
+                <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/newAppraise/review.html" class="ewb-nav-name">好差评</a>
+                </li>
+				<li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/potency/potency.html" class="ewb-nav-name">效能监督</a>
+                </li>
+				  <li class="ewb-nav-node">
+                    <a href="https://zwfw.xinjiang.gov.cn/xinjiangggzy/" target="_blank" class="ewb-nav-name isggzy">公共资源</a>
+                </li>
+            </ul>
+        </div>
+</div>
+    
+
+
+<!-- 工具 -->
+<!--<div class="ewb-tool">
+        <ul class="ewb-tool-items">
+                <li class="ewb-tool-item">
+                        <a target="_blank" href="http://zwfw.xinjiang.gov.cn/workPublicity.html" class="ewb-tool-a7">办件查询</a>
+                    </li> 
+			<li class="ewb-tool-item">
+                <a href="#" class="ewb-tool-a5">移动APP</a>
+                <div class="ewb-phones-ma">
+                    <div class="ewb-phones-mod">
+                        <i></i>
+                        <div class="ewb-phones-hd">
+                            <h3>移动政务·方便快捷</h3>
+                        </div>
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="images/zwfwbaidu.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">关注政务服务百度小程序</p>
+                        </div>
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="http://zwfw.xinjiang.gov.cn/images/app.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码下载移动政务APP</p>
+                        </div>
+						<div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="http://zwfw.xinjiang.gov.cn/images/xiaochxu.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码关注政务服务小程序</p>
+                        </div>
+							<div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="/images/alipay.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">关注政务服务支付宝小程序</p>
+                        </div>
+						
+                    </div>
+                </div>
+            </li>
+            <li class="ewb-tool-item">
+                <a  target="_blank" href="/intelligence.html" class="ewb-tool-a1">AI客服</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a  target="_blank" href="/commonProblem.html" class="ewb-tool-a2">常见问题</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a href="javascript:void(0);" class="ewb-tool-a3" onmouseover="$('.seek').attr('style','display:block !important');" onmouseout="$('.seek').attr('style','display:none !important');">咨询投诉</a>
+				<div class="seek clearfix" onmouseover="$('.seek').attr('style','display:block !important');" onmouseout="$('.seek').attr('style','display:none !important');">
+					<a href="javascript:void(0);" onclick="gozxts(1);" class="half newseek">新增咨询</a>
+
+					<a href="javascript:void(0);" onclick="gozxts(2);" class="half newcomplain">新增投诉</a>
+				</div>
+            </li>
+            <li class="ewb-tool-item">
+                <a href="javascript:void(0)" class="ewb-tool-a4" id="get-phonecode2">纠错</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a target="_blank" href="/appraise.html" class="ewb-tool-a6" id="gotojudge">好差评</a>
+            </li>
+        </ul>
+        <div class="ewb-tool-back">
+			<a href="javascript:void(0)" class=""><img src="/images/jt.png"></a>
+		</div>
+    </div>
+    <a class="ewb-reback-top" href="javascript:void(0)">
+        <img src="http://zwfw.xinjiang.gov.cn/images/pages/back_icon.png" alt="">
+    </a>
+    <script>
+        (function (win, $) {
+            // 返回顶部
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 0) {
+                    $('.ewb-reback-top').fadeIn(500);
+                } else {
+                    $('.ewb-reback-top').fadeOut(500);
+                }
+            });
+    
+            $('.ewb-reback-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+        }(this, jQuery));
+    </script>-->
+	<script type="text/x-template" id="dxxcimpl">
+        {{#areas}}
+			<li class="ewb-address-item1" onclick="bb(this);" onmouseover="aa(this);" onmouseout="cc();">
+			   										<a id="{{areacode}}" href="javascript:void(0);">{{name}}</a>
+			   									</li>
+        {{/areas}}
+    </script>
+	<script type="text/x-template" id="bumenimpl">
+        {{#oulist}}
+			<li>
+		   										<a href="https://zwfw.xinjiang.gov.cn/departmentnew.html?orgcode={{orgcode}}&orgname={{orgname}}&orgshortname={{orgshortname}}">{{orgshortname}}</a>
+		   									</li>
+        {{/oulist}}
+    </script>
+</div>
+        <div style="display:none">
+            <!-- topbar -->
+<div class="ewb-userCenter-head">
+    <div class="ewb-container">
+        <div class="clearfix">
+            <div class="l ewb-user-home" style="cursor:pointer" onclick="window.location.href='/'">
+                新疆政务服务网
+            </div>
+            <div class="r ewb-user-tools">
+                <div class="r ewb-mobile-gov">
+                    <span>移动政务</span>
+                    <div class="ewb-garden">
+                        <div class="ewb-phone">
+                            <div class="ewb-phone-hd">
+                                <img src="http://zwfw.xinjiang.gov.cn/images/pages/app_tt.jpg" alt="">
+                            </div>
+                            <div class="ewb-phone-bd clearfix">
+								<div class="ewb-phone-mod">
+			   										<div class="ewb-weixin">
+			   											<img src="http://zwfw.xinjiang.gov.cn/images/zwfwbaidu.png" alt=""/>
+			   										</div>
+			   										<p>关注政务服务百度小程序</p>
+			   									</div>
+                                <div class="ewb-phone-mod">
+			   										<div class="ewb-weixin">
+			   											<img src="http://zwfw.xinjiang.gov.cn/images/app.png" alt="">
+			   										</div>
+			   										<p>扫码下载移动政务APP</p>
+			   									</div>
+												<div class="ewb-phone-mod">
+													<div class="ewb-weixin">
+														<img src="http://zwfw.xinjiang.gov.cn/images/xiaochxu.png" alt="">
+													</div>
+													<p>关注政务服务微信小程序</p>
+												</div>
+												<div class="ewb-phone-mod">
+													<div class="ewb-weixin">
+														<img src="http://zwfw.xinjiang.gov.cn/images/alipay.png" alt="">
+													</div>
+													<p>关注政务服务支付宝小程序</p>
+												</div>
+						
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r ewb-platform-nav">
+                    <span>平台导航</span>
+                    <div class="ewb-garden" style="left: -500px;width: 620px;">
+                        <div class="ewb-garden-mod clearfix">
+                            <div class="ewb-grade-line ewb-grade-line1"></div>
+                            <div class="ewb-grade-line ewb-grade-line2"></div>
+                            <div class="ewb-grade-line ewb-grade-line3"></div>
+                             <div class="ewb-wt316">
+                                <div class="ewb-garden-hd">
+                                    <h3>政务服务网</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                     <ul class="ewb-graden-items clearfix">
+                                       
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-首页');}catch(e){};window.location.href = '/'">首页</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-个人办事');}catch(e){};window.location.href = '/personal.html'">个人办事</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-法人办事');}catch(e){};window.location.href = '/personalfaren.html'">法人办事</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-跨省通办');}catch(e){};window.location.href = '/platform/platform_index.html'">跨省通办</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-便民服务');}catch(e){};window.location.href = '/bmfw/010004/convenientService.html'">便民服务</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-特色专区');}catch(e){};window.location.href = '/tszq/index.html'">特色专区</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-好差评');}catch(e){};window.location.href = '/newAppraise/review.html'">好差评</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-效能监督');}catch(e){};window.location.href = '/potency/potency.html'">效能监督</a>
+																</li>
+																<li class="ewb-graden-item">
+											<a href="javascript:void(0);"
+												onclick="try{Common.setcode('平台导航-政务公开');}catch(e){};window.location.href = '/governmentInformation.html'">政务公开</a>
+										</li>
+																</ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ewb-wt220 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>12345政务在线</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                    <ul class="ewb-graden-items clearfix">
+                                        </ul>
+                                </div>
+                            </div> -->
+                            <div class="ewb-wt235 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>公共资源交易网</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                      <ul class="ewb-graden-items clearfix">
+                                         
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-首页');}catch(e){};window.location.href = '/xinjiangggzy/'">首页</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-交易信息');}catch(e){};window.location.href = '/xinjiangggzy/jyxx/tradeinfo.html'">交易信息</a>
+																</li>
+																
+																<li class="ewb-graden-item">
+																	<a href="javascript:void(0);" onclick="try{Common.setcode('平台导航-招投标主体登陆');}catch(e){};window.location.href = '/TPBidder/memberLogin'">招投标主体登陆</a>
+																</li>
+																</ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ewb-wt110 ewb-ml25">
+                                <div class="ewb-garden-hd">
+                                    <h3>数据开放平台</h3>
+                                </div>
+                                <div class="ewb-graden-bd">
+                                    <ul class="ewb-graden-items clearfix">
+                                        </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" onclick="mybanjian();" class="r ewb-tool-link">我的办件</a>
+                <div class="r ewb-username"    style="display:none">
+                    <a href="javascript:void(0);" id="username"   style="display:none">
+                        用户名称
+                    </a>
+                    <div class="ewb-username-info">
+                        <ul class="ewb-person-info">
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('bjzx');">办件中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('glzx');">管理中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="/usercenter.html?childrenpage=zlzx&category=0">资料中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="/usercenter.html?childrenpage=wdzj&category=0">我的足迹</a>
+			   							</li>
+			   							<li class="ewb-person-line">
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="gohref('zhzx');">账号中心</a>
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="/usercenter.html?childrenpage=xxzx&category=5">消息中心</a>
+			   							</li>
+			   							<li class="ewb-person-line">
+			   							</li>
+			   							<li class="ewb-person-item">
+			   								<a href="javascript:void(0);" onclick="goout();">退出登录</a>
+			   							</li>
+			   						</ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 搜索 -->
+<div class="ewb-container">
+    <div class="ewb-row">
+        <div class="l ewb-userCenter-title">
+            用户中心
+        </div>
+        <div class="r ewb-userCenter-search">
+            <div class="input-tips input-parents ewb-top-search">
+                <label class="input-placeholder" data-id="searchInfo" for="searchInfo">搜索服务、资讯、办件</label>
+                <input type="text" class="ewb-form-input" id="searchInfo" name="searchInfo">
+            </div>
+            <button type="button" class="ewb-search-btn" onclick="search();"></button>
+        </div>
+    </div>
+</div>
+
+
+<!-- 导航 -->
+<div class="ewb-user-nav">
+    <div class="ewb-container">
+        <ul class="ewb-usernav-items clearfix">
+            <li>
+                <a href="javascript:void(0);" onclick="try{Common.setcode('政务服务');}catch(e){};gohref('bjzx');">
+                    政务服务
+                </a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:void(0);" onclick="try{Common.setcode('12345');}catch(e){};gohref('12345');">
+                    12345
+                </a>
+            </li>
+			<li id="ggzytab" style="display:none">
+                <a href="javascript:void(0);" onclick="try{Common.setcode('公共资源');}catch(e){};gohref('ggzy');">
+                    公共资源
+                </a>
+            </li>
+            <li id="sjkftab" style="display:none">
+                <a href="javascript:void(0);" onclick="try{Common.setcode('数据开放');}catch(e){};gohref('sjkf');">
+                    数据开放
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="try{Common.setcode('账户中心');}catch(e){};gohref('zhzx');">
+                    账户中心
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="try{Common.setcode('消息中心');}catch(e){};window.location.href = '/usercenter.html?childrenpage=xxzx&category=5'">
+                    消息中心
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- 工具 -->
+<!-- <div class="ewb-tool">
+    <ul class="ewb-tool-items">
+            <li class="ewb-tool-item">
+                    <a target="_blank" href="http://zwfw.xinjiang.gov.cn/workPublic.html" class="ewb-tool-a7">办件查询</a>
+                </li> 
+		<li class="ewb-tool-item">
+                <a href="#" class="ewb-tool-a5">移动APP</a>
+                <div class="ewb-phones-ma">
+                    <div class="ewb-phones-mod">
+                        <i></i>
+                        <div class="ewb-phones-hd">
+                            <h3>移动政务·方便快捷</h3>
+                        </div>
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="/images/app.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码下载移动政务APP</p>
+                        </div>
+						<div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="/images/xiaochxu.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码关注政务服务小程序</p>
+                        </div>
+						<div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="/images/alipay.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">关注政务服务支付宝小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="ewb-tool-item">
+            <a target="_blank" href="/intelligence.html" class="ewb-tool-a1">AI客服</a>
+        </li>
+        <li class="ewb-tool-item">
+            <a target="_blank" href="/commonProblem.html" class="ewb-tool-a2">常见问题</a>
+        </li>
+        <li class="ewb-tool-item">
+                <a href="javascript:void(0);" class="ewb-tool-a3" onmouseover="$('.seek').attr('style','display:block !important');" onmouseout="$('.seek').attr('style','display:none !important');">咨询投诉</a>
+				<div class="seek clearfix" onmouseover="$('.seek').attr('style','display:block !important');" onmouseout="$('.seek').attr('style','display:none !important');">
+					<a href="javascript:void(0);" onclick="gozxts(1);" class="half newseek">新增咨询</a>
+
+					<a href="javascript:void(0);" onclick="gozxts(2);" class="half newcomplain">新增投诉</a>
+				</div>
+            </li>
+        <li class="ewb-tool-item">
+            <a href="javascript:void(0)" class="ewb-tool-a4" id="get-phonecode3">纠错</a>
+        </li>
+        <li class="ewb-tool-item">
+            <a target="_blank" href="/appraise.html" class="ewb-tool-a6" id="gotojudge">好差评</a>
+        </li>
+    </ul>
+</div>
+<a class="ewb-reback-top" href="javascript:void(0)">
+    <img src="images/userCenter/back_icon.png" alt="">
+</a> -->
+<script>
+    (function (win, $) {
+        // 返回顶部
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 0) {
+                $('.ewb-reback-top').fadeIn(500);
+            } else {
+                $('.ewb-reback-top').fadeOut(500);
+            }
+        });
+
+        $('.ewb-reback-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 1000);
+            return false;
+        });
+    }(this, jQuery));
+</script>
+</div>
+    </div>
+    <div id="qijiandian"></div>
+    <!-- 侧边工具 -->
+    <!--<div class="ewb-tool">
+        <ul class="ewb-tool-items">
+            <li class="ewb-tool-item">
+                <a target="_blank" href="http://zwfw.xinjiang.gov.cn/workPublic.html" class="ewb-tool-a7">办件查询</a>
+            </li> 
+            <li class="ewb-tool-item">
+                <a href="javascript:void(0)" class="ewb-tool-a5">移动APP</a>
+                <div class="ewb-phones-ma">
+                    <div class="ewb-phones-mod">
+                        <i></i>
+                        <div class="ewb-phones-hd">
+                            <h3>移动政务·方便快捷</h3>
+                        </div>
+                         <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="images/app.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码下载移动政务APP</p>
+                        </div>
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="images/zwfwbaidu.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">关注政务服务百度小程序</p>
+                        </div>
+                       
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="images/xiaochxu.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码关注政务服务小程序</p>
+                        </div>
+                        <div class="ewb-phones-bd">
+                            <div class="ewb-phones-img">
+                                <img src="images/alipay.png" alt="">
+                            </div>
+                            <p class="ewb-phones-p">扫码关注支付宝小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="ewb-tool-item">
+                <a target="_blank" href="/intelligence.html" class="ewb-tool-a1">AI客服</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a target="_blank" href="/commonProblem.html" class="ewb-tool-a2">常见问题</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a href="javascript:void(0);" class="ewb-tool-a3"
+                    onmouseover="$('.seek').attr('style','display:block !important');"
+                    onmouseout="$('.seek').attr('style','display:none !important');">咨询投诉</a>
+                <div class="seek clearfix" onmouseover="$('.seek').attr('style','display:block !important');"
+                    onmouseout="$('.seek').attr('style','display:none !important');">
+                    <a href="javascript:void(0);" onclick="gozxts(1);" class="half newseek">新增咨询</a>
+
+                    <a href="javascript:void(0);" onclick="gozxts(2);" class="half newcomplain">新增投诉</a>
+                </div>
+            </li>
+            <li class="ewb-tool-item">
+                <a href="javascript:void(0)" class="ewb-tool-a4" id="get-phonecode">纠错</a>
+            </li>
+            <li class="ewb-tool-item">
+                <a target="_blank" href="/appraise.html" class="ewb-tool-a6 new" id="gotojudge">好差评</a>
+            </li>
+        </ul>
+        <div class="ewb-tool-back">
+			<a href="javascript:void(0)" class=""><img src="/images/jt.png"></a>
+		</div>
+	</div>-->
+    <!-- main -->
+    <!-- 专题服务 -->
+    <div class="ewb-floor1">
+        <div class="ewb-container">
+            <!--<div class="ewb-cm-hd clearfix">
+                <a href="javascript:void(0)" class="ewb-cm-tt current">专题服务</a>
+            </div>-->
+            <div class="ewb-super" id="ewb-super">
+                <a class="next"></a>
+                <a class="prev"></a>
+                <div class="ewb-super-bd">
+                    <ul class="ewb-super-imgitem">
+					<!--<li class="ewb-special-node bg9 new">
+						<a href="javascript:void(0)" class="ewb-special-name" onclick="try{Common.push('03','点击专题服务-健康码','首页');}catch(e){};gojkm();">健康码</a>
+					</li>-->
+					<li class="ewb-special-node bg6 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon0" 
+							onclick="try{Common.push('03','点击专题服务-企业注销专区','首页');}catch(e){};window.open('https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=d965b4d3-88ab-4916-b0ae-5101713bf7d1&redirect_uri=http://222.82.232.233:8088/entservice/accpetUserserver?taskcode=2');">企业注销专区</a>
+					</li>
+					<li class="ewb-special-node bg1 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon0" 
+							onclick="try{Common.push('03','点击专题服务-企业开办专区','首页');}catch(e){};window.open('https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=d965b4d3-88ab-4916-b0ae-5101713bf7d1&redirect_uri=http://222.82.232.233:8088/entservice/accpetUserserver?taskcode=1');">企业开办专区</a>
+					</li>
+					<li class="ewb-special-node bg5 new">
+                        <a href="javascript:void(0)"
+							class="ewb-special-name icon11"
+                            onclick="try{Common.push('03','点击专题服务-老年人办事服务专区','首页');}catch(e){};window.open('/eldertopics/elderTopics.html');" >老年人办事服务专区</a>
+                    </li>
+			        <li class="ewb-special-node bg2 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon1" 
+							onclick="try{Common.push('03','点击专题服务-小微企业和个体工商户服务专栏','首页');}catch(e){};window.open('/service.html');">小微企业和个体工商户服务专栏</a>
+					</li>
+                    <li class="ewb-special-node bg3">
+                        <a href="javascript:void(0)"
+                        onclick="try{Common.push('03','点击专题服务-一网通办','首页');}catch(e){};window.open('http://zwfw.xinjiang.gov.cn/networkOffices.html')"
+                            class="ewb-special-name icon2">一网通办</a>
+                    </li>
+                    <li class="ewb-special-node bg4">
+                        <a href="javascript:void(0)" 
+                        onclick="try{Common.push('03','点击专题服务-套餐服务','首页');}catch(e){};window.open('http://zwfw.xinjiang.gov.cn/setMeal.html')"
+                            class="ewb-special-name icon3">套餐服务</a>
+                    </li>
+					<!-- 521hrr增加 -->
+					<li class="ewb-special-node bg20 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon20" 
+							onclick="try{Common.push('03','点击专题服务-缴存单位开户申请','首页');}catch(e){};window.open('http://124.88.171.65:7001/wt-web-dw/jcdwzzkh');">缴存单位开户申请</a>
+					</li>
+                    <li class="ewb-special-node bg5">
+                        <a href="javascript:void(0)"
+                            onclick="try{Common.push('03','点击专题服务-投资项目监管平台按钮','首页');}catch(e){};window.open('http://www.xjtzxm.gov.cn/')"
+                            ; class="ewb-special-name icon5">投资监管平台</a>
+                    </li>
+                    <li class="ewb-special-node bg6">
+                        <a href="javascript:void(0)" class="ewb-special-name icon4"
+                        onclick="try{Common.push('03','点击专题服务-工程并联审批按钮','首页');}catch(e){};window.open('http://220.171.42.88:8084/aplanmis-mall/');">工程并联审批</a>
+                    </li>
+					<li class="ewb-special-node bg7">
+                        <a href="javascript:void(0)" class="ewb-special-name"
+                        onclick="try{Common.push('03','点击专题服务-疫情防控专题按钮','首页');}catch(e){};window.open('http://www.xinjiang.gov.cn/xinjiang/c100223/fkxxgzbdgz.shtml');">疫情防控专题</a>
+                    </li>
+                    <li class="ewb-special-node bg8">
+                        <a href="javascript:void(0)" class="ewb-special-name icon7"
+                        onclick="try{Common.push('03','点击专题服务-出入境服务','首页');}catch(e){};window.open('http://zwfw.xinjiang.gov.cn/entryExitService.html');"></a>
+                    </li>
+					<!-- 603hrr增加 -->
+					<li class="ewb-special-node bg20 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon20" 
+							onclick="try{Common.push('03','点击专题服务-不动产登记资料查询','首页');}catch(e){};window.open('https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=df10b3f4-38df-48a9-a906-d3068b2fe81d&redirect_uri=http://117.190.86.31:9000/internet-estate-web/iebdc.html#/home/info-search/newQuanSZM-query?wycx=ZWWWYCX');">不动产登记资料查询</a>
+					</li>
+                    <li class="ewb-special-node bg9">
+                        <a href="javascript:void(0)" class="ewb-special-name icon8"
+                        onclick="try{Common.push('03','点击专题服务-物流快递','首页');}catch(e){};window.open('http://zwfw.xinjiang.gov.cn/logisticsQuery.html');">物流快递</a>
+                    </li>
+                    <li class="ewb-special-node bg10">
+                        <a href="javascript:void(0)" class="ewb-special-name icon9"
+                        onclick="try{Common.push('03','点击专题服务-信用信息查询','首页');}catch(e){};);">信用信息查询</a>
+                    </li>
+					<li class="ewb-special-node bg11 new">
+                        <a href="javascript:void(0)" class="ewb-special-name"
+                        onclick="try{Common.push('03','点击专题服务-我为群众办实事','首页');}catch(e){};window.open('/peoplework/work_for_people.html');"></a>
+                    </li>
+                    <li class="ewb-special-node bg2 new" style="float: left; width: 208px;">
+						<a href="javascript:void(0)" class="ewb-special-name icon19" onclick="try{Common.push('03','点击专题服务-新疆金融综合服务平台','首页');}catch(e){};window.open('http://xyxyd.creditxj.gov.cn/');">新疆金融综合服务平台</a>
+					</li>
+					<!-- 521hrr增加 -->
+					<li class="ewb-special-node bg20 new">
+						<a href="javascript:void(0)" 
+							class="ewb-special-name icon20" 
+							onclick="try{Common.push('03','点击专题服务-公积金业务专区','首页');}catch(e){};window.open('http://124.88.171.65:7001/wt-web-ythzw/ythzwLoginChk');">公积金业务专区</a>
+					</li>
+					
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- 个人服务、法人服务和便民服务 -->
+    <!--<div class="ewb-floor2">
+        <div class="ewb-container tab-view">
+            <div class="ewb-cm-hd clearfix" data-role="head">
+                <a href="javascript:void(0)" class="ewb-cm-tt current" data-role="tab" data-target="tab-a">个人服务</a>
+                <a href="javascript:void(0)" class="ewb-cm-tt" data-role="tab" data-target="tab-b">法人服务</a>
+                <a href="javascript:void(0)" class="ewb-cm-tt" data-role="tab" data-target="tab-c">便民服务</a>
+            </div>
+            <div class="ewb-service clearfix" data-role="body">
+                
+                <div class="ewb-service-wrap" data-role="tab-content" data-id="tab-a">
+                    <ul class="clearfix" id="personaltasklist">
+
+                    </ul>
+                </div>
+            
+                <div class="ewb-service-wrap hidden" data-role="tab-content" data-id="tab-b">
+                    <ul class="clearfix" id="legalpersontasklist">
+
+                    </ul>
+                </div>
+               
+                <div class="ewb-service-wrap hidden" data-role="tab-content" data-id="tab-c">
+                    <ul class="clearfix">
+                        <li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010004/convenientService.html" target="_blank"
+                                class="ewb-service-name icon16">教育服务</a>
+                            <div class="link">
+                            
+								<a href="https://www.chsi.com.cn/cet/" target="_blank" title="英语四、六级查询">
+                            		英语四、六级查询</a>
+                            	<span>|</span>
+								
+					            <a href="https://www.chsi.com.cn/xlrz/index.jsp" target="_blank" title="在线学历认证">
+                            		在线学历认证</a>
+                            	<span style="display: none;">|</span>
+					            </div>
+                        </li>
+                        <li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010005/convenientService.html" target="_blank"
+                                class="ewb-service-name icon17">社会保险</a>
+                            <div class="link">
+                            
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡解挂&cxtype=sbkjg" target="_blank" title="社保卡解挂">
+                            		社保卡解挂</a>
+                            	<span>|</span>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡激活&cxtype=sbkjh" target="_blank" title="社保卡激活">
+                            		社保卡激活</a>
+                            	<span>|</span>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡挂失&cxtype=sbkgs" target="_blank" title="社保卡挂失">
+                            		社保卡挂失</a>
+                            	<span>|</span>
+								
+					            <a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡应用状态查询&cxtype=sbztcx" target="_blank" title="社保卡应用状态查询">
+                            		社保卡应用状态查询</a>
+                            	<span style="display: none;">|</span>
+					            </div>
+                        </li>
+                        <li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010009/convenientService.html" target="_blank"
+                                class="ewb-service-name icon18">纳税缴费</a>
+                            <div class="link">
+                            </div>
+                        </li>
+                        <li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010010/convenientService.html" target="_blank"
+                                class="ewb-service-name icon19">交通旅游</a>
+                            <div class="link">
+                            
+								<a href="http://xj.122.gov.cn/views/inquiry.html" target="_blank" title="机动车违法查询">
+                            		机动车违法查询</a>
+                            	<span>|</span>
+								
+					            <a href="http://xj.122.gov.cn/" target="_blank" title="机动车状态查询">
+                            		机动车状态查询</a>
+                            	<span style="display: none;">|</span>
+					            </div>
+                        </li>
+                        <li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010015/convenientService.html" target="_blank"
+                                class="ewb-service-name icon20">生活缴费</a>
+                            <div class="link">
+                            
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1501" target="_blank" title="交通罚款">
+                            		交通罚款</a>
+                            	<span>|</span>
+								
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1401" target="_blank" title="社保">
+                            		社保</a>
+                            	<span>|</span>
+								
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1208" target="_blank" title="政府非税收入">
+                            		政府非税收入</a>
+                            	<span>|</span>
+								
+					            <a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1201" target="_blank" title="党费">
+                            		党费</a>
+                            	<span style="display: none;">|</span>
+					            </div>
+                        </li>
+						<li class="ewb-service-node">
+                            <a href="http://zwfw.xinjiang.gov.cn/bmfw/010016/convenientService.html" target="_blank"
+                                class="ewb-service-name icon21">公积金查询</a>
+                            <div class="link">
+                            
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundOverdue" target="_blank" title="逾期还款明细">
+                            		逾期还款明细</a>
+                            	<span>|</span>
+								
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundPlan" target="_blank" title="贷款还款计划">
+                            		贷款还款计划</a>
+                            	<span>|</span>
+								
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundPayments" target="_blank" title="贷款还款信息">
+                            		贷款还款信息</a>
+                            	<span>|</span>
+								
+					            <a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundDebtSchedule" target="_blank" title="贷款进度信息查询">
+                            		贷款进度信息查询</a>
+                            	<span style="display: none;">|</span>
+					            </div>
+                        </li>
+                    </ul>
+                </div>
+              
+                <div class="ewb-want">
+                    <div class="ewb-want-hd clearfix">
+                        <a href="javascript:void(0)" class="ewb-want-tt">猜你想办</a>
+                        <a class="ewb-refresh" id="cnxb-refresh"></a>
+                    </div>
+                    <ul class="ewb-want-list" id="cnxb">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="service-line container">
+        <div class="tab" id="tab">
+            <ul class="service-list clearfix">
+                <li class="service-item"><a href="/personal.html">个人服务</a></li>
+                <li class="service-item"><a href="/personalfaren.html">法人服务</a></li>
+                <li class="service-item"><a href="/bmfw/010004/convenientService.html">便民服务</a></li>
+            </ul>
+            <div class="service-content-list">
+                <div class="service-content-item clearfix" id="personaltasklist">
+                    <!--<div class="service-content-box">
+                        <span class="service-title" style="background-image:url('images/service-icon1.png');">设立变更
+                        </span>
+                        <div class="service-content clearfix">
+                            <a href="javascript:;">这里是事项内容</a>
+                            <a href="http://www.baidu.com">这里是事项内容</a>
+                            <a href="javascript:;">这里是事项内容</a>
+                        </div>
+                    </div>
+                   -->
+                </div>
+
+                <div class="service-content-item" id="legalpersontasklist">
+                	
+                </div>
+                <div class="service-content-item" >
+                	<div class="service-content-box">
+                		<a href="http://zwfw.xinjiang.gov.cn/bmfw/010004/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon1.png');">
+                                                教育服务
+                        </a>
+                        <!--<span class="service-title" style="background-image:url('images/service-icon1.png');">
+                        	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010004/convenientService.html" target="_blank">教育服务</a>
+                        </span>-->
+                        <div class="service-content clearfix">
+                        	 
+								<a href="https://www.chsi.com.cn/cet/" target="_blank" title="英语四、六级查询">
+									英语四、六级查询</a>
+								
+								<a href="https://www.chsi.com.cn/xlrz/index.jsp" target="_blank" title="在线学历认证">
+									在线学历认证</a>
+								</div>
+                    </div>
+                    <div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010005/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon2.png');">
+                                                社会保险
+                        </a>
+                       
+                        <div class="service-content clearfix">
+                        	 
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡解挂&cxtype=sbkjg" target="_blank" title="社保卡解挂">
+									社保卡解挂</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡激活&cxtype=sbkjh" target="_blank" title="社保卡激活">
+									社保卡激活</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡挂失&cxtype=sbkgs" target="_blank" title="社保卡挂失">
+									社保卡挂失</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=社保卡应用状态查询&cxtype=sbztcx" target="_blank" title="社保卡应用状态查询">
+									社保卡应用状态查询</a>
+								</div>
+                    </div>
+                    <div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010017/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon3.png');">
+                                                医疗服务
+                        </a>
+                    
+                        <div class="service-content clearfix">
+                        	 
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=医疗个人账户划入明细查询&cxtype=Q043" target="_blank" title="医疗个人账户划入明细查询">
+									医疗个人账户划入明细查询</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=个人医疗账户余额查询&cxtype=Q027" target="_blank" title="个人医疗账户余额查询">
+									个人医疗账户余额查询</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=医疗住院结算记录查询&cxtype=Q021" target="_blank" title="医疗住院结算记录查询">
+									医疗住院结算记录查询</a>
+								
+								<a href="https://zwfw.xinjiang.gov.cn/flagsearch/flagsearch.html?cxname=医疗账户支出记录查询&cxtype=Q018" target="_blank" title="医疗账户支出记录查询">
+									医疗账户支出记录查询</a>
+								</div>
+                    </div>
+                    <div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010010/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon4.png');">
+                                                交通旅游
+                        </a>
+                        
+                        <div class="service-content clearfix">
+                        	 
+								<a href="http://xj.122.gov.cn/views/inquiry.html" target="_blank" title="机动车违法查询">
+									机动车违法查询</a>
+								
+								<a href="http://xj.122.gov.cn/" target="_blank" title="机动车状态查询">
+									机动车状态查询</a>
+								</div>
+                    </div>
+                    <div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010015/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon5.png');">
+                                                生活缴费
+                        </a>
+                        
+                        <div class="service-content clearfix">
+                        	 
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1501" target="_blank" title="交通罚款">
+									交通罚款</a>
+								
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1401" target="_blank" title="社保">
+									社保</a>
+								
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1208" target="_blank" title="政府非税收入">
+									政府非税收入</a>
+								
+								<a href="https://enjoy.abchina.com/jf-pc/PaymentRecharge/1201" target="_blank" title="党费">
+									党费</a>
+								</div>
+                    </div>
+                    <div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010016/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon6.png');">
+                                                公积金查询
+                        </a>
+                        
+                        <div class="service-content clearfix">
+                        	 
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundOverdue" target="_blank" title="逾期还款明细">
+									逾期还款明细</a>
+								
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundPlan" target="_blank" title="贷款还款计划">
+									贷款还款计划</a>
+								
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundPayments" target="_blank" title="贷款还款信息">
+									贷款还款信息</a>
+								
+								<a href="http://zwfw.xinjiang.gov.cn/providentFundQuery.html?target=fundDebtSchedule" target="_blank" title="贷款进度信息查询">
+									贷款进度信息查询</a>
+								</div>
+                    </div>
+					<div class="service-content-box">
+                    	<a href="http://zwfw.xinjiang.gov.cn/bmfw/010016/convenientService.html" target="_blank" class="service-title"
+                            style="background-image:url('images/service-icon7.png');">
+                                                司法公正
+                        </a>
+                        
+                        <div class="service-content clearfix">
+                        	 
+								<a href="http://xj.12348.gov.cn/sites/xinjiang/team.jsp?active=0f4806060c7e4b669ea3f997525cacd7" target="_blank" title="新疆法治地图">
+									新疆法治地图</a>
+								
+								<a href="http://12348.moj.gov.cn/#/publicies/sfks/sfks" target="_blank" title="国家统一法律职业资格考试">
+									国家统一法律职业资格考试</a>
+								</div>
+                    </div>
+                    
+                    <div class="service-content-box">
+	                    <a href="/bmfw/010016/convenientService.html" target="_blank" class="service-title" style="background-image:url('images/corporate-service-icon8.png');">
+		                                      查看更多
+	                    </a>
+	                    <div class="service-content clearfix">
+	                    </div>
+                    </div>
+          
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 服务清单 -->
+    <div class="ewb-floor3">
+        <div class="ewb-container">
+            <div class="ewb-cm-hd clearfix">
+                <a href="/fwqdnew/inventory.html" class="ewb-cm-tt current">服务清单</a>
+                <a href="/fwqdnew/inventory.html" class="ewb-cm-link">进入专题</a>
+            </div>
+            <div class="ewb-inventory">
+                <div id="inventory" class="owl-carousel">
+                    <a href="javascript:void(0)" class="item bg1"
+                        onclick="try{Common.push('03','点击政务公开-行政权力事项清单按钮','首页');}catch(e){};window.location.href = '/personalxzqlqd.html'">
+                        <span>行政权力事项清单</span>
+                        <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg2"
+                        onclick="try{Common.push('03','点击政务公开-公共服务事项清单按钮','首页');}catch(e){};window.location.href = '/personalggfwsxqd.html'">
+                        <span>公共服务事项清单</span>
+                        <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg3"
+                        onclick="try{Common.push('03','点击政务公开-最多跑一趟事项清单按钮','首页');}catch(e){};window.location.href = '/personalzdpycqd.html'">
+                        <span>最多跑一趟事项清单</span>
+                        <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg4"
+                        onclick="try{Common.push('03','点击政务公开-不见面办理事项清单按钮','首页');}catch(e){};window.location.href = '/personalbjmqd.html'">
+                        <span>不见面办理事项清单</span>
+                        <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg5"
+                        onclick="try{Common.push('03','点击政务公开-收费清单按钮','首页');}catch(e){};window.location.href = '/personalpriceSheet.html'">
+                        <span>收费清单</span>
+                        <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg6"
+                        onclick="try{Common.push('03','点击政务公开-中介清单按钮','首页');}catch(e){};window.location.href = '/personalagencySheet.html'">
+                    <span>中介清单</span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg7"
+                        onclick="try{Common.push('03','点击政务公开-移动办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_ydb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg8"
+                        onclick="try{Common.push('03','点击政务公开-通办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_tb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg9"
+                        onclick="try{Common.push('03','点击政务公开-网上办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_wsb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg10"
+                        onclick="try{Common.push('03','点击政务公开-预约办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_yyb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg11"
+                        onclick="try{Common.push('03','点击政务公开-就近办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_jjb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg12"
+                        onclick="try{Common.push('03','点击政务公开-自助办清单按钮','首页');}catch(e){};window.location.href = '/fwqdnew/fwqd_zzb.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg13"
+                        onclick="try{Common.push('03','点击政务公开-市场主体登记后置审批事项目录按钮','首页');}catch(e){};window.location.href = '/scztdjhzspsxml.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                    <a href="javascript:void(0)" class="item bg14"
+                        onclick="try{Common.push('03','点击政务公开-权责清单','首页');}catch(e){};window.location.href = '/qzqdnew/responsibility_list.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+					<a href="javascript:void(0)" class="item bg15"
+                        onclick="try{Common.push('03','点击政务公开-政务服务事项精简申报材料清单（2020年度）','首页');}catch(e){};window.location.href = '/sxcljj.html'">
+                    <span></span>
+                    <i></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- 数据统计 -->
+    <div class="ewb-floor4">
+        <div class="ewb-container">
+            <!-- 效能监督 -->
+            <div class="ewb-cm-block potency">
+
+
+                <div class="ewb-cm-hd clearfix">
+                    <a href="/potency/potency.html" class="ewb-cm-tt current">效能监督</a>
+                   <!-- <p class="ewb-cm-unit">单位：个</p>-->
+                    <a href="/potency/potency.html" class="ewb-cm-link">进入专题</a>
+                </div>
+
+                <div class="ewb-cm-body">
+                    <ul class="data-list">
+                        <li>
+                            <p class="data-label data-icon1">进驻部门总量</p>
+                            <span class="data-num" id="jzbmnum"></span>
+                        </li>
+                        <li>
+                            <p class="data-label data-icon2">事项实施清单总量</p>
+                            <span class="data-num" id="ssqdnum"></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 好差评 -->
+            <div class="ewb-cm-block reviews">
+
+                <div class="ewb-cm-hd clearfix">
+                    <a href="/newAppraise/review.html" class="ewb-cm-tt current">好差评</a>
+                   <!-- <p class="ewb-cm-unit">单位：个</p>-->
+                    <a href="/newAppraise/review.html" class="ewb-cm-link">进入专题</a>
+                </div>
+
+                <div class="ewb-cm-body">
+                    <ul class="data-list">
+                        <li>
+                            <p class="data-label data-icon3">评价总数</p>
+                            <span class="data-num" id="hcpnum"></span>
+                        </li>
+                        <li>
+                            <p class="data-label data-icon4">满意度</p>
+                            <span class="data-num" id="satis"></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 回到顶部 -->
+    
+    <!-- footer -->
+    <div id="footer"></div>
+    <!-- 两侧广告 -->
+    <div class="moveAd">
+    </div>
+	
+    <!-- 浮动广告 -->
+      <div id="floatAd" class="float-img" style="width:200px;height:550px;">  <a href=""><p><a href="https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/72b27411-937e-4f8e-95f1-fa888ad0a3a2.html"><img src="/uploadfile/7824c4f0-5db8-4ee1-98fe-2b3bb630985a/2021年公开招聘-2.jpg" from="webresource" style="width: 200px; height: 100px;" border="0"></a></p>
+<p><a href="https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/f5e90c60-dfd1-4d58-a71c-c56335b5f700.html"><img src="/uploadfile/7824c4f0-5db8-4ee1-98fe-2b3bb630985a/QQ图片20210312165009.png" border="0"></a><br>
+</p>
+<p><a href="https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/3a24d1e8-b2eb-4c13-b13e-3c7affe324fd.html"><img src="/uploadfile/7824c4f0-5db8-4ee1-98fe-2b3bb630985a/200x100.png" border="0"></a><br>
+</p>
+<p><a href="https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/cf91006f-9586-4995-9cbd-3685504c508a.html"><img src="/uploadfile/7824c4f0-5db8-4ee1-98fe-2b3bb630985a/200x100(1).png" border="0"></a></p>
+<p><a href="https://zwfw.xinjiang.gov.cn/wdzx/005001/20210615/0420384a-8135-4579-a064-9b18f98d85fe.html"><img src="/uploadfile/7824c4f0-5db8-4ee1-98fe-2b3bb630985a/微信图片_20210615192045-2.png" border="0"></a><br>
+</p></a> <span class="close"></span></div><script src="/js/popAD.js"></script>
+    <script src="/js/floatAD.js"></script>
+    <script src="/js/moveAD.js"></script>
+    <script type="text/javascript">
+        new MoveAd({
+            // 浮动元素dom
+            dom: '.move-list',
+            // 元素宽度
+            width: 100,
+            // 元素高度
+            height: 300,
+            // 初始高度
+            sTop: 383,
+            // 关闭按钮
+            closeDom: '.close'
+        });
+        new FloatAd({
+            // 浮动元素dom
+            dom: '#floatAd',
+            // 元素宽度
+            width: $('#floatAd').width(),
+            //元素高度
+            height: $('#floatAd').height(),
+            // 步长
+            step: 1,
+            // 延时
+            delay: 30
+        });
+    </script>
+    <!--个人主题事项-->
+    <script type="text/x-template" id="tasklist-tmpl">
+       {{#items}}
+            <div class="service-content-box">
+                        <a href="{{url}}" class="service-title"
+                            style="background-image:url('images/corporate-service-{{icon}}.png');">
+                            {{text}}
+                        </a>
+                        <div class="service-content clearfix">
+                        	{{#task}}
+				            <a href="{{taskcodehref}}" target="_blank" title="{{taskname}}">
+                                 {{shorttaskname}}
+                           </a>
+                            {{/task}} 
+                        </div>
+            </div>
+        {{/items}}
+    </script>
+    <!--猜你想办-->
+    <script type="text/x-template" id="cnxbimpl">
+        {{#tasklist}}
+			<li class="ewb-want-item">
+                                <a href="/newWork/workDetails.html?taskcode={{taskcode}}&category=2" class="ewb-want-a{{index}} trans">{{taskname}}</a>
+                            </li>
+        {{/tasklist}}
+    </script>
+    <!--顶部地区-->
+    <script type="text/x-template" id="dxxcimpl">
+    {{#areas}}
+        <li class="ewb-address-item1" onclick="bb(this);" onmouseover="aa(this);" onmouseout="cc();">
+            <a id="{{areacode}}" href="javascript:void(0);">{{name}}</a>
+        </li>
+    {{/areas}}
+</script>
+    <!--顶部部门-->
+    <script type="text/x-template" id="bumenimpl">
+    {{#oulist}}
+        <li>
+            <a href="https://zwfw.xinjiang.gov.cn/departmentnew.html?orgcode={{orgcode}}&orgname={{orgname}}&orgshortname={{orgshortname}}">{{orgshortname}}</a>
+        </li>
+    {{/oulist}}
+</script>
+    <!-- 页面脚本 -->
+	<!-- 提示 -->
+    <div class="tips">
+        <div class="tips-hd clearfix">
+            <h3 class="tips-tt">提示</h3>
+            <div class="tips-close"></div>
+        </div>
+        <div class="tips-bd">
+            <p class="tips-content">
+                您尚未通过三级实名认证，<br/>请先通过实名认证再申请健康码
+            </p>
+        </div>
+        <div class="tips-btns">
+            <button type="button" class="cancel-btn">取消</button>
+            <button type="button" class="continue-btn">立即前往</button>
+        </div>
+    </div>
+    <script src="/js/lib/placeholder.min.js"></script>
+    <script src="/js/common_new.js"></script>
+    <script src="/js/lib/layer/layer.js"></script>
+    <script src="/js/layercom.js"></script>
+    <script src="/js/lib/owl/owl.carousel.js"></script>
+    <script src="/js/lib/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="/js/lib/tabview.js"></script>
+    <script src="/js/lib/echarts4.1.0.min.js"></script>
+    <script src="/js/util.js"></script>
+	<script src="/js/aes.js"></script>
+	<script src="js/lib/jquery-tab.js"></script>
+    <script src="/js/index_new.js"></script>
+</body>
+
+</html>
