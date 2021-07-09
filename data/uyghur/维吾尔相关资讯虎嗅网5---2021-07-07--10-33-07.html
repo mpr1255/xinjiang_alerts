@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+                        <title>维吾尔-相关资讯-虎嗅网-5</title>
+            <meta name="applicable-device" content="mobile">
+            
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="author" content="虎嗅网">
+    <meta name="keywords" content="科技资讯,商业评论,明星公司,动态,宏观,趋势,创业,精选,有料,干货,有用,细节,内幕">
+    <meta name="description" content="国内的现场记者表现十分有限，被公知质疑为无良。而从整体来看，从现场发回来的报道的信息量十分有限">
+        <link href="https://static.huxiucdn.com/m/css/m.css?v=202107011850" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/m_list_common.css?v=202005152010" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/common.css?v=202006221745" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/activity.css?v=201909051654" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/vip.css?v=202012101930" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/login.css?v=201909051753" rel="stylesheet" media="screen">
+    <link href="https://static.huxiucdn.com/m/css/m_video.css?v=202104262030" rel="stylesheet" media="screen">
+    
+
+
+
+
+
+    <link href="https://static.huxiucdn.com/m/css/vip_column.css?v=202103111550" rel="stylesheet" media="screen">
+
+<!--作者榜单 & 往期榜单 & 拉票-->
+
+
+    <script>
+    var uid = '0';
+    var uidName = '';
+    var userHead = ''  // 用户头像
+    var isBindMobile = '0';
+    var is_vip = '';
+    var huxiu_hash_code = "8392fb71ed5fca27d6aa36f4da55b055";
+    var aid=0;
+    
+
+    var newsId=0;
+
+    var itemId = '0';
+    var signAna = '0';
+    var signTime = '0';
+    var productId = 0;
+    var channel = 'huxiu';
+    var refer = '';
+    var relatedArticle = '';
+    var url=window.location.href;
+    var str1=new RegExp('rec=man');
+    var str2=new RegExp('rec=sim');
+    if(str1.test(url)){
+        relatedArticle = 'manual';
+    } else if (str2.test(url)) {
+        relatedArticle = 'similar';
+    }
+
+    // 长连接 JWT
+    var clientId = 0; // token
+    // var clientIp = ''; // 公网ip
+
+    var static_url = 'https://static.huxiucdn.com';
+    var huxiu_url = 'https://m.huxiu.com';
+    var order_api_host = 'https://order-api.huxiu.com';
+    var comment_api_url = "https://comment-api.huxiu.com";
+    var moment_api_url = "https://moment-api.huxiu.com";
+    var action_api_url = "https://action-api.huxiu.com";
+    var vip_api_url = "https://vip-api.huxiu.com";
+    var to_app_url = "https://app-m.huxiu.com";
+    var to_app_android_url = "huxiu://com.huxiu.app";
+    var account_api_url = "https://account-api.huxiu.com";
+    var log_api_url = "https://log-api.huxiu.com";
+    var log_api_mn_url = "https://log-api-mn.huxiu.com";
+    var article_api_url = "https://article-api.huxiu.com";
+    var live_api_url = "https://live-api.huxiu.com";
+    var hodor_api_url="https://hodor-api.huxiu.com"
+    var live_socket_api_url = 'socket.huxiu.com';
+    var live_web_socket_port = 8087;
+</script>
+
+    <link rel="apple-touch-icon" sizes="76x76"   href="https://static.huxiucdn.com/common/image/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://static.huxiucdn.com/common/image/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://static.huxiucdn.com/common/image/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.huxiucdn.com/common/image/apple-touch-icon-180x180.png" />
+    <script>
+        /*解决微信设置字体大小改变布局*/
+        (function() {
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                handleFontSize();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+                }
+            }
+
+            function handleFontSize() {
+                // 设置网页字体为默认大小
+                WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+                // 重写设置网页字体大小的事件
+                WeixinJSBridge.on('menu:setfont', function() {
+                    WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+                });
+            }
+        })();
+    </script>
+</head>
+
+<div id="wx_pic" style="margin:0 auto;display:none;">
+            <img src="https://img.huxiucdn.com/share/article2020.png">
+    </div>
+
+
+<link rel="stylesheet" href="https://static.huxiucdn.com/m/css/search.css?v=202008251640">
+<body>
+<div class="htmlBox js-so-wrap">
+    <nav>
+    <div class="nav-box"></div>
+</nav>
+
+<!--导航-->
+<div class="user-wrap">
+
+    <div class="information">
+        <a  href="/">资讯</a>
+    </div>
+    
+        <ul class="subclass-ul">
+                                                <li><a  href="/channel/10.html" class="transition">视频</a></li>
+                                    <li><a  href="/channel/21.html" class="transition">车与出行</a></li>
+                                    <li><a  href="/channel/106.html" class="transition">年轻一代</a></li>
+                                    <li><a  href="/channel/103.html" class="transition">十亿消费者</a></li>
+                                    <li><a  href="/channel/105.html" class="transition">前沿科技</a></li>
+                                    <li><a  href="/channel/115.html" class="transition">财经</a></li>
+                                    <li><a  href="/channel/22.html" class="transition">娱乐淘金</a></li>
+                                    <li><a  href="/channel/111.html" class="transition">医疗健康</a></li>
+                                    <li><a  href="/channel/113.html" class="transition">文化教育</a></li>
+                                    <li><a  href="/channel/114.html" class="transition">出海</a></li>
+                                    <li><a  href="/channel/102.html" class="transition">金融地产</a></li>
+                                    <li><a  href="/channel/110.html" class="transition">企业服务</a></li>
+                                    <li><a  href="/channel/2.html" class="transition">创业维艰</a></li>
+                                    <li><a  href="/channel/112.html" class="transition">社交通讯</a></li>
+                                    <li><a  href="/channel/107.html" class="transition">全球热点</a></li>
+                                    <li><a  href="/channel/4.html" class="transition">生活腔调</a></li>
+                                        <li><a href="/blackboard/index" class="transition">榜单</a></li>
+        </ul>
+
+    <ul class="navbar-nav-ul">
+        <li>
+            <a class="js-content-open-app js-hmt-detection"
+               data-ios-href="https://app-m.huxiu.com/moment.html?download=1"
+               data-android-href="/moment"
+               data-detection="M导航,24小时,点击">24小时</a>
+        </li>
+        <li>
+            <div class="nums-nav nums-nav-active"></div>
+            <a class="js-hide-num-active" href="/active">活动</a>
+        </li>
+            </ul>
+    <div class="vip-nav-content">
+        <div class="title js-click-userBehavior-log" data-param="[1,0,0,0,0,'虎嗅Pro会员',0]">
+            <a href="/vipColumn/vip/1">
+                虎嗅丨妙投会员
+                <div class="pull-right time">
+                                                                                    <i class="icon icon-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="vip-nav-content pro-app-nav-content">
+        <div class="title">
+            <a href="https://pro.huxiu.com/download.html">
+                妙投APP
+                <div class="pull-right">
+                    <i class="icon icon-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="user-face-wrap">
+        
+            <div class="text-center">
+                <a class="login-link c3 border-1px" href="/user/login">登录</a>
+                <a class="login-link b1 border-1px" href="/user/register">极速注册</a>
+            </div>
+            </div>
+
+</div>
+
+<div class="search-wrap">
+    <div class="search-input-box">
+        <form action="/search.html" method="get">
+            <button class="input-sm-search js-search js-hmt-detection" data-detection="搜索页,点击,确认搜索"><i class="icon icon-sm-search"></i>
+            </button>
+            <input type="search" name="s" id="top-search" class="search-input" placeholder="输入关键词">
+            <a class="close-box js-search-cancel">取消</a>
+        </form>
+    </div>
+    <div class=" search-act search-history-act ">
+        <div class="search-history-title">
+            <div>搜索历史</div>
+            <div class="show-delete js-show-delete">删除</div>
+            <div class="delete-all-finish-box">
+                <div class="delete-finish js-delete-finish">完成</div>
+                <div class="search-history-delele-all js-search-history-delele-all">全部删除</div>
+            </div>
+        </div>
+    </div>
+    <ul class="search-ul search-history">
+        <li><a href="/search.html?s=数码">数码</a></li>
+        <li><a href="/search.html?s=互联网">互联网</a></li>
+        <li><a href="/search.html?s=数码">数码</a></li>
+        <li><a href="/search.html?s=数互联网码">互联网</a></li>
+    </ul>
+    </div>
+<header class="js-header js-module-report-log" data-module="1" data-expose="out" data-param="[16,0,0,0,1,'菜单栏',1]">
+
+            <!-- 默认 -->
+        <div class="top-bar">
+            <div class="nums"></div>
+            <button class="navbar-toggle js-open-nav" type="button" data-param="[1,0,0,0,1,'菜单下拉按钮',0]">
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+            </button>
+            <div class="logo-box">
+                <a href="/">
+                    <img src="https://static.huxiucdn.com/m/image/m_logo.png?v=201712121525">
+                </a>
+            </div>
+            <div class="pull-right search-box js-search-cancel js-hmt-detection" data-detection="首页-搜索按钮,点击,点击">
+                <i class="icon icon-search"></i>
+            </div>
+        </div>
+    
+    </header><div class="modal-message">
+    <span class="title">账号或密码错误</span>
+</div>    <!-- 聚合页轮播 -->
+    <div class="article-detail-swiper-container so-detail-swiper-container bgW js-so-topic-article">
+        <div class="swipe-index-top js-swipe-index"></div>
+        <div class="js-lr-swipe">
+            <ul class="swiper-wrapper">
+                                    <!--data-param: action_type, object_type, object_id, aid_type  module content subscribe  -->
+                    <li class="swiper-slide js-click-userBehavior-log js-module-report-log js-hmt-detection"
+                        data-detection="聚合详情页吸顶,点击,热文引导"
+                        data-param="[1,1,438982,,0,438982,1]"
+                        data-expose="out">
+                        <a class="flexBox flex-center js-content-open-app" data-id="438982"
+                           data-ios-href="https://app-m.huxiu.com/article/438982.html?download=1"
+                           data-android-href="/article/438982">
+                            <img src="https://img.huxiucdn.com/article/cover/202107/06/070748188529.jpg" alt="">
+                            <div class="article-top-content">
+                                <p class="ellipsis">格力“翻盘”无望了</p>
+                                <p class="c90 f11">热度：1240783</p>
+                            </div>
+                            <div class="btn-open flexBox flex-center c-f60 border-1px">
+                                <span>打开</span>
+                            </div>
+                        </a>
+                    </li>
+                                    <!--data-param: action_type, object_type, object_id, aid_type  module content subscribe  -->
+                    <li class="swiper-slide js-click-userBehavior-log js-module-report-log js-hmt-detection"
+                        data-detection="聚合详情页吸顶,点击,热文引导"
+                        data-param="[1,1,439195,,0,439195,2]"
+                        data-expose="out">
+                        <a class="flexBox flex-center js-content-open-app" data-id="439195"
+                           data-ios-href="https://app-m.huxiu.com/article/439195.html?download=1"
+                           data-android-href="/article/439195">
+                            <img src="https://img.huxiucdn.com/article/cover/202107/06/082519337042.jpg" alt="">
+                            <div class="article-top-content">
+                                <p class="ellipsis">花十几万“换脸”的男生</p>
+                                <p class="c90 f11">热度：484526</p>
+                            </div>
+                            <div class="btn-open flexBox flex-center c-f60 border-1px">
+                                <span>打开</span>
+                            </div>
+                        </a>
+                    </li>
+                                    <!--data-param: action_type, object_type, object_id, aid_type  module content subscribe  -->
+                    <li class="swiper-slide js-click-userBehavior-log js-module-report-log js-hmt-detection"
+                        data-detection="聚合详情页吸顶,点击,热文引导"
+                        data-param="[1,1,439211,,0,439211,3]"
+                        data-expose="out">
+                        <a class="flexBox flex-center js-content-open-app" data-id="439211"
+                           data-ios-href="https://app-m.huxiu.com/article/439211.html?download=1"
+                           data-android-href="/article/439211">
+                            <img src="https://img.huxiucdn.com/article/cover/202107/06/095805122236.jpg" alt="">
+                            <div class="article-top-content">
+                                <p class="ellipsis">郭老师之后，这个00后女生成了土味顶流</p>
+                                <p class="c90 f11">热度：460782</p>
+                            </div>
+                            <div class="btn-open flexBox flex-center c-f60 border-1px">
+                                <span>打开</span>
+                            </div>
+                        </a>
+                    </li>
+                                    <!--data-param: action_type, object_type, object_id, aid_type  module content subscribe  -->
+                    <li class="swiper-slide js-click-userBehavior-log js-module-report-log js-hmt-detection"
+                        data-detection="聚合详情页吸顶,点击,热文引导"
+                        data-param="[1,1,439102,,0,439102,4]"
+                        data-expose="out">
+                        <a class="flexBox flex-center js-content-open-app" data-id="439102"
+                           data-ios-href="https://app-m.huxiu.com/article/439102.html?download=1"
+                           data-android-href="/article/439102">
+                            <img src="https://img.huxiucdn.com/article/cover/202107/05/172514336833.png" alt="">
+                            <div class="article-top-content">
+                                <p class="ellipsis">19个免费网站，帮你找到所有想要资源</p>
+                                <p class="c90 f11">热度：450712</p>
+                            </div>
+                            <div class="btn-open flexBox flex-center c-f60 border-1px">
+                                <span>打开</span>
+                            </div>
+                        </a>
+                    </li>
+                            </ul>
+        </div>
+    </div>
+
+            
+                    <div class="recommended-box">
+                                <h1 class="search-title"><em>维吾尔</em> 的相关文章</h1>
+                <span class="span-mark"></span>
+
+                <ul class="search-feed-ul search-seo-feed-ul search-article search-append">
+                                            <li>
+                            <div class="author-info">
+                                <a class="name js-hmt-detection" data-detection="聚合详情页,点击,文章标题和摘要" href="/article/29279.html">马航失联航班事件后的信息混乱</a>
+                                <div class="info">马来和印尼人较多，还有澳、美、加、欧的乘客。从马航公布的名单来看，只有一位乘客名字超过4个字，为<em>维吾尔</em>族买买提江·阿布拉，其身份为新疆喀什师范学校年轻画家，他的画作在马来得了奖，并参加了由24位中国画</div>
+                            </div>
+
+                            <div class="time">
+                                <span>
+                                    <a href="/member/298799.html">浑水ICT</a>
+                                </span>
+                                <span>2014-03-08</span>
+                            </div>
+                            <div class="line-grey ss-line"></div>
+                                                    </li>
+                                            <li>
+                            <div class="author-info">
+                                <a class="name js-hmt-detection" data-detection="聚合详情页,点击,文章标题和摘要" href="/article/23832.html">科大讯飞，站在十字路口</a>
+                                <div class="info">来看，讯飞在语音合成、语音识别以及语音评测上的效果以及工业化的程度确实已经到了相当惊艳的程度。对<em>维吾尔</em>族等少数名族语言、四川话广东话等方言的支持，更是做到业界独一无二。在车载系统的现场演示中，尽管车内</div>
+                            </div>
+
+                            <div class="time">
+                                <span>
+                                    <a href="/member/15227.html">罗超</a>
+                                </span>
+                                <span>2013-11-28</span>
+                            </div>
+                            <div class="line-grey ss-line"></div>
+                                                            <div class="fresh-article-box">
+                                    <a class="btn-join-vip c-f60 border-radius-1 other-sty js-content-open-app js-hmt-detection"
+                                       data-ios-href="https://app-m.huxiu.com/home.html?download=1"
+                                       data-android-href="/home"
+                                       data-detection="聚合详情页,点击,打开虎嗅APP查看更多按钮">打开虎嗅APP，查看更多</a>
+                                </div>
+
+                                <div class="placeholder-line line-grey"></div>
+                                <div class="article-recommend-wrap">
+                                    <h2 class="title detail-rec-title">大&nbsp;家&nbsp;都&nbsp;在&nbsp;搜</h2>
+                                </div>
+                                <div class="hot-so-wrap c30">
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=消费者"
+                                           data-android-href="/vip/search&searchKeywords=消费者"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class="i-icon3 so-hot-icon"></i>
+                                            <span>消费者</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=西游记"
+                                           data-android-href="/vip/search&searchKeywords=西游记"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class="i-icon3 so-hot-icon"></i>
+                                            <span>西游记</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=美的"
+                                           data-android-href="/vip/search&searchKeywords=美的"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>美的</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=MUJI无印良品"
+                                           data-android-href="/vip/search&searchKeywords=MUJI无印良品"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>MUJI无印良品</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=蓝领"
+                                           data-android-href="/vip/search&searchKeywords=蓝领"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>蓝领</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=牛仔裤"
+                                           data-android-href="/vip/search&searchKeywords=牛仔裤"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>牛仔裤</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=Boss直聘"
+                                           data-android-href="/vip/search&searchKeywords=Boss直聘"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>Boss直聘</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=网络监管"
+                                           data-android-href="/vip/search&searchKeywords=网络监管"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>网络监管</span>
+                                        </a>
+                                                                            <a class="hot-so-content ellipsis js-content-open-app js-hmt-detection"
+                                           data-ios-href="https://app-m.huxiu.com/vip/search.html?download=1&searchKeywords=走红"
+                                           data-android-href="/vip/search&searchKeywords=走红"
+                                           data-detection="聚合详情页,点击,热门搜索词">
+                                            <i class=""></i>
+                                            <span>走红</span>
+                                        </a>
+                                                                    </div>
+                                <div class="placeholder-line line-grey"></div>
+                                                    </li>
+                                    </ul>
+            </div>
+            
+    <a class="mod-sidebar mod-sidebar-app js-mod-sidebar js-hmt-detection js-content-open-app"
+       data-ios-href="https://app-m.huxiu.com/home.html?download=1"
+       data-android-href="/home"
+       data-detection="聚合详情页,点击,悬浮打开APP按钮">
+        <div class="go-to-box"><i class="i-icon3 icon-to-app"></i></div>
+    </a>
+
+    <a class="mod-sidebar js-mod-sidebar js-hmt-detection" href="/" data-detection="聚合详情页,点击,悬浮进入主页按钮">
+        <div class="go-to-box"><i class="i-icon3 icon-goTo"></i></div>
+    </a>
+
+
+    
+            <ul class="search-seo-pagination">
+                            <li class= "">
+                    <a href="https://m.huxiu.com/so/162127_1.html">1</a>
+                </li>
+                            <li class= "">
+                    <a href="https://m.huxiu.com/so/162127_2.html">2</a>
+                </li>
+                            <li class= "">
+                    <a href="https://m.huxiu.com/so/162127_3.html">3</a>
+                </li>
+                            <li class= "">
+                    <a href="https://m.huxiu.com/so/162127_4.html">4</a>
+                </li>
+                            <li class= "active">
+                    <a href="https://m.huxiu.com/so/162127_5.html">5</a>
+                </li>
+                    </ul>
+        <footer>
+    <ul>
+        <li><a href="/about.html">关于我们</a></li>
+        <li><a href="/joinus.html">加入我们</a></li>
+        <li><a href="/">手机版</a></li>
+        <li><a href="https://www.huxiu.com/?mobile_view_web=1">桌面版</a></li>
+        <li><a class="btn-open js-content-open-app"
+               data-ios-href="https://app-m.huxiu.com?download=1"
+               data-android-href="/home">客户端</a></li>
+    </ul>
+    <div class="copyright-box">
+        ©<span class="js-foot-year"></span> 虎嗅网 m.huxiu.com
+    </div>
+</footer>
+<script>
+    function isIpad(){
+        var ua = navigator.userAgent.toLowerCase();
+        if(/ipad/i.test(ua)) {
+            return true;
+        } else{
+            return false;
+        }
+    }
+    var w = document.documentElement.clientWidth;
+    if(w > 640){
+        w = 640;
+
+        var qr_code_pc = document.getElementById('qr_code_pc');
+        if(!isIpad() && qr_code_pc){
+            qr_code_pc.style.display="block";
+        }
+    }
+    document.documentElement.style.fontSize=20/375*w+'px';
+    window.onresize=function(){
+        document.documentElement.style.fontSize=20/375*w+'px';
+    }
+</script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/jquery_lazyload/jquery.lazyload.js?v=201711291818"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/fastclick/fastclick.js"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/jquery.cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/m/js/module/jquery.detection.js?v=202010222048"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/jquery-qrcode/jquery-qrcode.min.js"></script>
+<script src="https://static.huxiucdn.com/common/sha1/sha1.js"></script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/sea/sea.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        base: !!static_url ? static_url+'/m/js/module' : '/m/js/module',
+        comboSyntax: ['??', ','],
+        alias: {
+            'sea_combo_flush': static_url+'/common/sea/sea_combo_flush.js',
+            'nativeShare': 'nativeShare.js'
+        },
+        'map': [
+            [/^(.*\.(?:css|js))(.*)$/i, '$1?v=202106221140']
+        ],
+        charset: 'utf-8'
+    });
+    seajs.use(['init']);
+</script>
+<script type="text/javascript" src="https://static.huxiucdn.com/common/sea/seajs_css.js"></script>
+<script>
+    (function(){
+        $('.js-foot-year').html(new Date().getFullYear());
+    })();
+</script>
+    <script type="text/javascript" src="https://static.huxiucdn.com/common/Swiper/swiper.min.js"></script>
+</div>
+</body>
+</html>
