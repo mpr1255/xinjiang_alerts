@@ -1,0 +1,691 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>遂宁检索</title>
+    <link href="css/was.css" rel="stylesheet" type="text/css"/>
+    <link href="css/timeline.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="js/suggest-yui2.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var ispromptshown = $.cookie('ispromptshown');
+            if (ispromptshown == "false") return ;
+
+            var dataUrl = 'searchsuggest?result=false';
+            new TRSWAS.Suggest('textfield', dataUrl,
+                    {
+                        useShim:false,
+                        resultFormat: '约%result%条结果'
+                    });
+        };
+    </script>
+    <script type="text/javascript">
+        function goto(channelid)
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                if(channelid=='282695'){
+                    window.location.href='news.jsp';
+                }
+                else{
+                    window.location.href='index.jsp?channelid='+channelid;
+                }
+            }
+            else{
+                document.searchform.channelid.value = channelid;
+                if(channelid=='242241'){
+                    document.searchform.perpage.value = 8;
+                }
+                else{
+                    document.searchform.perpage.value = '';
+                }
+                document.searchform.submit();
+            }
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+        function checkInput()
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                document.searchform.searchword.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+    <script language="javascript">
+        function setAdvancedWords()
+        {
+            document.outlinesearchform.andsen.value = '';
+            document.outlinesearchform.total.value = '';
+            document.outlinesearchform.orsen.value = '';
+            document.outlinesearchform.exclude.value = '';
+        }
+        function setSearchScope(type) {
+            setAdvancedWords();
+            document.outlinesearchform.searchscope.value = type;
+            document.outlinesearchform.submit();
+        }
+        function setTimeScope(type,column) {
+            setAdvancedWords();
+            document.outlinesearchform.timescope.value = type;
+            document.outlinesearchform.timescopecolumn.value = column;
+            document.outlinesearchform.submit();
+        }
+        function setOrderBy(type) {
+            setAdvancedWords();
+            document.outlinesearchform.orderby.value = type;
+            document.outlinesearchform.submit();
+        }
+    </script>
+    <!--444====_-->
+<!--333====-->
+<!--&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime-->
+<!--1111--新疆维吾尔自治区---1111111111111111111====-->
+
+</head>
+<body style="width: 760px;margin:0 auto;background-image: url();">
+<div id="main">
+<!--<div id="header">
+    <form name="searchform" action="search" method="get" style="margin-bottom:15px;"  onsubmit="return checkInput();">
+        <div style="float: right">
+            
+            <a href="login.jsp" class="toplink"><img src="images/ico1.png" width="10" height="12" border="0"/>登录</a>&nbsp;&nbsp;
+            
+        </div>
+        <div style="clear: both;"></div>
+        <table>
+            <tr>
+                <td id="logo" rowspan="2"><a href="index.jsp"><img src="images/logo.gif" alt=""/></a></td>
+                <td>
+                    <ul id="g_tab">
+                        <li class="index_tab_div_h"><a href="#" onclick="goto(282695)">新 闻 </a></li>
+                        <li class="index_tab_div_s"><a href="#" onclick="goto(234439)">网 页 </a></li>
+                        <li class="index_tab_div_h"><a href="#" onclick="goto(261346)">图 片 </a></li>
+                        <li class="index_tab_div_h"><a href="hotword_list.jsp">热搜排行榜 </a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="channelid" value="242241">
+                    <input type="text" id="textfield" name="searchword" class="forminput" value="新疆维吾尔自治区"/>
+                    <input type="hidden" name="perpage" value="">
+                    <input type="hidden" name="templet" value="">
+                    <input type="hidden" name="token" value="">
+                    <input type="submit" value="" class="submitbutton"/>
+                    <a href="preferences.jsp?goto=search&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" class="searchbarlink">设置 </a>
+                    <a href="advanced.jsp" class="searchbarlink">高级搜索 </a>
+                </td>
+            </tr>
+        </table>
+        <div style="clear: both; margin-bottom: 6px;"></div>
+    </form>
+</div>-->
+<div class="column" id="column1" style="width: 720px;">
+<div class="outline">
+<div style="float: left; margin-bottom: 15px;"></div>
+
+<div style="float: right; margin-bottom: 15px;">找到相关结果约165条 用时0.017秒
+</div>
+
+<div style="clear: both;"></div>
+<table>
+    <tr>
+                <td class="searchtools">
+	<style>
+	.searchtoolsactive a {
+    color: #ff9a00;
+    background-color: #f7f7f7;
+    border-left: 3px solid #46a3ff;
+    padding-left: 5px;
+    }
+	</style>
+            <table class="searchtoolstable" style="width: 120px;">
+                <tr>
+                    <td id="tdscopenolimit" >
+                        <a href="#" onclick="setSearchScope('');">所有结果</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdscopetitle" >
+                        <a href="#" onclick="setSearchScope('doctitle');">标题</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdscopecontent">
+                        <a href="#" onclick="setSearchScope('doccontent');">正文</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <script type="text/javascript">
+                    var searchScope = '';
+                    if(searchScope == '' && document.getElementById("tdscopenolimit")!=null){
+                        document.getElementById("tdscopenolimit").className="searchtoolsactive" ;
+                    }
+                    else if(searchScope=='doctitle' && document.getElementById("tdscopetitle")!=null){
+                        document.getElementById("tdscopetitle").className="searchtoolsactive" ;
+                    }
+                    else if(searchScope=='doccontent' && document.getElementById("tdscopecontent")!=null){
+                        document.getElementById("tdscopecontent").className="searchtoolsactive" ;
+                    }
+                </script>
+<tr>
+                    <td id="tdtimenolimit" >
+                        <a href="#" onclick="setTimeScope('','docpubtime');">时间不限</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime1day" >
+                        <a href="#" onclick="setTimeScope('date','docpubtime');">1天内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime7days">
+                        <a href="#" onclick="setTimeScope('week','docpubtime');">1周内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime30days">
+                        <a href="#" onclick="setTimeScope('month','docpubtime');">1个月内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <script type="text/javascript">
+                    var timeScope = '';
+                    if(timeScope=='' && document.getElementById("tdtimenolimit")!=null){
+                        document.getElementById("tdtimenolimit").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='date' && document.getElementById("tdtime1day")!=null){
+                        document.getElementById("tdtime1day").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='week' && document.getElementById("tdtime7days")!=null){
+                        document.getElementById("tdtime7days").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='month' && document.getElementById("tdtime30days")!=null){
+                        document.getElementById("tdtime30days").className="searchtoolsactive" ;
+                    }
+                </script>
+                <tr>
+                    <td id="tdsortrelevance" >
+                        <a href="#" onclick="setOrderBy('RELEVANCE');">按相关度排序</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdsorttime">
+                        <a href="#" onclick="setOrderBy('-docpubtime');">按时间排序</a>
+                    </td>
+                </tr>
+                <script type="text/javascript">
+                    var orderBy = '-docpubtime';
+                    if(orderBy=='RELEVANCE' && document.getElementById("tdsortrelevance")!=null){
+                        document.getElementById("tdsortrelevance").className="searchtoolsactive" ;
+                    }
+                    else if(orderBy=='-docpubtime' && document.getElementById("tdsorttime")!=null){
+                        document.getElementById("tdsorttime").className="searchtoolsactive" ;
+                    }
+                </script>
+
+            </table>
+        </td>
+
+        <td class="searchresult">
+                        <script type="text/javascript">
+                jQuery(document).ready(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "timeline.jsp",
+                        data: "timeline=&showtype=11&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime",
+                        success: function(data, textStatus)
+                        {
+                            $("#div_timeline").html(data);
+                        },
+                        error:function (XMLHttpRequest, textStatus, errorThrown)
+                        {
+                        }
+                    });
+                });
+                function setTimeLine(date){
+                    setAdvancedWords();
+                    document.outlinesearchform.timeline.value = date;
+                    document.outlinesearchform.submit();
+                }
+            </script>
+            <div id="div_timeline" style="width: 600px">
+            </div>
+            
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202011/t20201101_656265.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202011/t20201101_656265.html' style="color: blue;">
+新疆新增61例无症状感染者且发现跨州病例，专家：应保持高度警惕
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+根据31日<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室召开的喀什疫情防控工作新闻发布会通报，10月30日24时至10月31日18时，新疆新报告无症状感染者61例，
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202011/t20201101_656265.html
+</td>
+<td style="" >
+<!--2020.11.01 08:57:10
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201031_656192.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201031_656192.html' style="color: blue;">
+新疆昨日新增“6+15”
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+　　<font color=#FF0000>新疆维吾尔自治区</font>卫生健康委最新通报，10月30日0时至24时，<font color=#FF0000>新疆维吾尔自治区</font>（含新疆生产建设兵团）新增新冠肺炎确诊病例6例（均为无症状感染...
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201031_656192.html
+</td>
+<td style="" >
+<!--2020.10.31 10:43:07
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201028_655380.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201028_655380.html' style="color: blue;">
+新疆喀什通报与此次疫情关联度较高的工厂具体情况
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+10月28日下午，<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室举行第四场喀什地区疏附县新冠肺炎疫情防控工作新闻发布会介绍有关情况。发布会上，喀什地区行
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201028_655380.html
+</td>
+<td style="" >
+<!--2020.10.28 19:56:53
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201028_655082.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201028_655082.html' style="color: blue;">
+新疆（含兵团）27日报告新增新冠肺炎确诊病例22例
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+　　<font color=#FF0000>新疆维吾尔自治区</font>卫生健康委最新通报，10月27日0时至24时，<font color=#FF0000>新疆维吾尔自治区</font>（含新疆生产建设兵团）报告新增新冠肺炎确诊病例22例（均为无症状...
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201028_655082.html
+</td>
+<td style="" >
+<!--2020.10.28 08:59:41
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201027_654762.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201027_654762.html' style="color: blue;">
+新疆喀什新增无症状感染者26例 均在疏附县
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+据<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室官方微博消息，10月26日晚，<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室举行喀什地区疏附县新冠肺炎疫情和疫情防控...
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201027_654762.html
+</td>
+<td style="" >
+<!--2020.10.27 07:42:57
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201026_654674.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201026_654674.html' style="color: blue;">
+喀什地区疏附县已全部完成核酸检测
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+　　10月26日晚，<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室举行喀什地区疏附县新冠肺炎疫情和疫情防控工作新闻发布会介绍有关情况。　　发布会上，喀什
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201026_654674.html
+</td>
+<td style="" >
+<!--2020.10.26 20:33:12
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201026_654334.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201026_654334.html' style="color: blue;">
+外地游客离开喀什，需持七日内有效核酸检测阴性报告
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+　　10月25日，<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室召开喀什疫情新闻发布会，通报相关情况。　　<font color=#FF0000>新疆维吾尔自治区</font>卫健委副主任顾莹苏介绍，目前，...
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201026_654334.html
+</td>
+<td style="" >
+<!--2020.10.26 07:18:58
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201026_654331.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201026_654331.html' style="color: blue;">
+新疆喀什：新增137例无症状感染者 已启动一级应急响应
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+　　10月25日下午19时50分，<font color=#FF0000>新疆维吾尔自治区</font>人民政府新闻办公室召开喀什疫情新闻发布会通报了相关情况。　　<font color=#FF0000>新疆维吾尔自治区</font>卫健委副主任顾莹苏...
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201026_654331.html
+</td>
+<td style="" >
+<!--2020.10.26 06:12:00
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/snzb/202010/t20201024_654238.html')">[即时新闻
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/snzb/202010/t20201024_654238.html' style="color: blue;">
+新疆喀什新增报告1例无症状感染者
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+<font color=#FF0000>新疆维吾尔自治区</font>卫生健康委最新通报，2020年10月24日，喀什地区疏附县对“应检尽检”人员进行定期检测中，发现1例新冠肺炎无症状感染者。该例无症
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/snzb/202010/t20201024_654238.html
+</td>
+<td style="" >
+<!--2020.10.24 22:08:00
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/xwzx/gn/202010/t20201022_653607.html')">[国内
+]</span><a target="_blank" href='http://www.snxw.com/xwzx/gn/202010/t20201022_653607.html' style="color: blue;">
+2021国考 基层岗位受大学生青睐
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+16时，还有281个职位无人报考，这些职位集中在消防及公安系统，<font color=#FF0000>新疆维吾尔自治区</font>消防救援总队招录空缺最大，其次是铁路公安、森林消防总队。此外，
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/xwzx/gn/202010/t20201022_653607.html
+</td>
+<td style="" >
+<!--2020.10.22 14:31:34
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+            <div style="max-width: 100%;margin-top: -10px;" id="outlinebar"><nobr><a class="first-page" href="search?page=1&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" target="_self">首页</a>&nbsp;<a class="prev-page" href="search?page=3&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" target="_self">上一页</a>&nbsp;<a target="_self" href="search?page=1&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">1</a>&nbsp;<a target="_self" href="search?page=2&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">2</a>&nbsp;<a target="_self" href="search?page=3&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">3</a>&nbsp;<span style="font-weight: bold;border: none;background: none">4</span>&nbsp;<a target="_self" href="search?page=5&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">5</a>&nbsp;<a target="_self" href="search?page=6&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">6</a>&nbsp;<a target="_self" href="search?page=7&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">7</a>&nbsp;<a target="_self" href="search?page=8&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">8</a>&nbsp;<a target="_self" href="search?page=9&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">9</a>&nbsp;<a target="_self" href="search?page=10&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime">10</a>&nbsp;<a class="next-page" href="search?page=5&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" target="_self">下一页</a>&nbsp;<a class="last-page" href="search?page=17&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&perpage=10&outlinepage=10&&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" target="_self">尾页</a>&nbsp;</nobr></div>
+            
+            <form action="search" method="get" name="outlinesearchform">
+                <input type="hidden" name="searchscope" value="">
+                <input type="hidden" name="timescope" value="">
+                <input type="hidden" name="timescopecolumn" value="">
+                <input type="hidden" name="orderby" value="-docpubtime">
+                <input type="hidden" name="channelid" value="242241">
+                <input type="hidden" name="andsen" value="" />
+                <input type="hidden" name="total" value="" />
+                <input type="hidden" name="orsen" value="" />
+                <input type="hidden" name="exclude" value="" />
+                <input type="hidden" name="docchannel" value="_" />
+                <input name="searchword" type="hidden" value="新疆维吾尔自治区"/>
+                <input type="hidden" name="perpage" value="">
+                <input type="hidden" name="templet" value="">
+                <input type="hidden" name="token" value="">
+                <input type="hidden" name="timeline" value="">
+            </form>
+     
+            <div style="BACKGROUND-COLOR: #eff2fa; width:100%">
+                                
+                    <table height="60px" cellSpacing=0 cellPadding=0 border=0>
+                        <tr>
+                            <th rowspan="2" valign="top" style="padding-top:6px; FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 75px; HEIGHT: 40px;padding-left:8px;">相关搜索</th>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    <a href="search?&channelid=242241&searchword=%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime">维吾尔自治区</a>
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    <a href="search?&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime">新疆维吾尔族自治区</a>
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                        </tr>
+                        <tr>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                        </tr>
+                    </table>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+<div class="column" id="column2" style="width: 240px;">
+
+</div>
+<div class="column" id="column3" style="display: none;"></div>
+<style>
+#outlinebar a, #outlinebar span {width: 1.8em;}
+.nav {float: left;width: 600px;height: 1.2em;line-height: 1.2em;}
+</style>
+<!--<script type="text/javascript">
+var first=document.getElementById("outlinebar").children[0];
+first1=first.children[0];
+first.setAttribute('class','nav');
+first1.setAttribute('class','cur');
+</script>-->
+<script>
+    $("#outlinebar a:first-child").css("margin-top", "20px");
+	$("#outlinebar span:first-child").css("margin-top", "20px");
+	
+function gotoUrl(url) {
+    var urls = url.split("/");
+    url = urls[0];
+    for (var i = 1; i < urls.length-2; i++) {
+        url += "/"+ urls[i];
+    }
+    url = url+"/";
+    window.open(url);
+}
+	
+</script>
+<!--<div id="footer">
+    <div style="background-color: #C6E0EF; color: #039; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+        &copy;2012 北京拓尔思信息技术股份有限公司
+    </div>
+</div>-->
+</div>
+</body>
+</html>

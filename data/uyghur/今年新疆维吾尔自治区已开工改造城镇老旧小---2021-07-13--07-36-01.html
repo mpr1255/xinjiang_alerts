@@ -1,0 +1,239 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="gb2312">
+		<title>今年新疆维吾尔自治区已开工改造城镇老旧小区1526个</title>
+		<link rel="stylesheet" href="css/style.css" />
+        <link href="images01/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+	</head>
+
+	<body>
+
+		<header>
+			<div class="container">
+				<div class="top-bar">
+					<div class="row ">
+						<div class="col-xs-8">
+							<!--时间-->
+							<div class="time-bar">
+								<p class="nowtime"></p>
+								<script type="text/javascript">
+									//时间显示
+									(function() {
+										var nowtime = document.querySelector('.nowtime');
+										var weekTxt = ["天", "一", "二", "三", "四", "五", "六"];
+										toDate(); //立马执行
+										setInterval(toDate, 1000); //间隔一秒钟执行一次
+										function toDate() {
+											var date = new Date();
+											var year = date.getFullYear();
+											var month = toDB(date.getMonth() + 1);
+											var day = toDB(date.getDate());
+											var hours = toDB(date.getHours());
+											var minutes = toDB(date.getMinutes());
+											var seconds = toDB(date.getSeconds());
+											var week = weekTxt[date.getDay()];
+											nowtime.innerHTML = year + '年' + month + '月' + day + '日' + ' 星期' + week + ' ' + hours + ':' + minutes + ':' + seconds;
+										}
+									})();
+
+									function toDB(nub) {
+										if(nub < 10) {
+											return "0" + nub;
+										}
+										return "" + nub;
+									}
+									window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+			
+								</script>
+
+
+							</div>
+
+						</div>
+						<div class="col-xs-4">
+							<!--服务连接-->
+							<div class=" link-bar">
+								<a href="/yjzj/index_hzxx.htm" alt="会长信箱"  target="_blank"><i class="iconfont icon-mail"></i></a>
+								<a href="contact.html" alt="联系我们"  target="_blank"><i class="iconfont icon-zixun"></i></a>
+								<a href="weixin.html" alt="官方微信"  target="_blank"><i class="iconfont icon-weix"></i></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="top-wrap">
+					<div class="row">
+						<div class="col-xs-8">
+							<div class="logo">
+								<img src="images/logo.png" alt="" />
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<!--搜索-->
+							<form action='/xwzx.jsp' method="post" name="form1" id="form1">
+								<div class="search-wrap">
+									<input type="search" name="keywords" class="sear1" id="" value="" placeholder="信息搜索" />
+									<input type="submit" id="" value="搜素" />
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<!--导航菜单-->
+                <!--
+				<div class="nav-bar">
+					<ul>
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">关于协会</a>
+						</li>
+						<li>
+							<a href="javascript:;">新闻中心<i></i></a>
+							<div class="sub-nav">
+								<a href="#">协会动态</a>
+								<a href="#">通知通告</a>
+								<a href="#">时事要闻</a>
+								<a href="#">党建工作</a>
+								<a href="#">招投标动态</a>
+								<a href="#">政府采购动态</a>
+								<a href="#">招标公告</a>
+								<a href="#">项目信息</a>
+								<a href="#">地方协会动态</a>
+								<a href="#">警钟长鸣</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;">从业人员能力建设<i></i></a>
+							<div class="sub-nav">
+								<a href="#">证书登记</a>
+								<a href="#">继续教育</a>
+								<a href="#">网络学习</a>
+							</div>
+						</li>
+						<li>
+							<a href="#">招标采购管理</a>
+						</li>
+						<li>
+							<a href="javascript:;">学习园地<i></i></a>
+							<div class="sub-nav">
+								<a href="#" class="mlxx">政策法规</a>
+								<a href="#">学习探讨</a>
+								<a href="#">实务问答</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;">会员中心<i></i></a>
+							<div class="sub-nav">
+								<a href="#" class="mlhy">会员信息</a>
+								<a href="#">招聘信息</a>
+								<a href="#">会员管理</a>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+                               
+			</div>-->
+            <script src="js/menu.js" language="javascript" type="text/javascript" ></script>
+            
+		</header>
+		<section>
+		<div class="container">
+					<div class="guide-bar">
+					<p>当前位置：
+						<a href="/index.jsp">首页</a> > <a href='xwzx.jsp?tn=XMXX'>项目信息</a> ><span>正文</span>
+					</p>
+				</div>
+				<div class="article-wrap">
+					<div class="hd">
+						<h1>今年新疆维吾尔自治区已开工改造城镇老旧小区1526个</h1>
+						<div class="time" >
+							<span >2021-07-13</span>
+							<span></span>
+						</div>
+					</div>
+					<div class="bd">
+						<p>
+           <p>&nbsp;</p><p style="margin: 0px; padding: 0px 0px 10px; border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 2em; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">记者从自治区住房和城乡建设厅获悉：截至目前，今年我区已开工改造城镇老旧小区1526个，惠及居民21.43万户，开工率达92.6%。</p><p style="margin: 0px; padding: 0px 0px 10px; border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">　　为改善群众居住生活环境，今年，自治区住房和城乡建设厅把城镇老旧小区改造作为“我为群众办实事”实践活动的重要内容，计划改造城镇老旧小区1714个，涉及居民23.15万户，分别较去年增加57.2%和19.7%。</p><p style="margin: 0px; padding: 0px 0px 10px; border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">　　城镇老旧小区改造集中解决了群众反映强烈的小区道路破损、管网老化、上下水不畅、绿化空间不够、停车设施不足、公共活动空间缺失、建筑外立面陈旧等突出问题，补齐了老旧小区公共服务设施的“短板”。改造后的老旧小区旧貌换新颜，功能更完善、环境更优美，居住品质大幅提升。</p><p style="margin: 0px; padding: 0px 0px 10px; border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">　　为充分保障城镇老旧小区改造工程质量，自治区住房和城乡建设厅编制了《新疆维吾尔自治区城镇老旧小区改造工程建设技术导则》《自治区既有建筑加装电梯工程建设技术导则（试行）》等标准规范。各地通过政府出资补助与业主合理分担相结合的方式，结合城镇老旧小区改造工程，已为既有建筑加装电梯640部，改善了高楼层住户上下楼不便的问题，特别是为老年人、残障人士等创造了良好出行环境。</p><p style="margin: 0px; padding: 0px 0px 10px; border: 0px currentColor; border-image: none; text-align: right; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">摘自　《新疆日报》　2021.07.12　记者　王玉召</p><p></p><p><br/></p><p>&nbsp;&nbsp;来源：住建部</p>
+           <br/>
+		  
+         
+            </p>
+            <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+
+<!-- JiaThis Button END -->
+      	<br />
+   
+
+					</div>
+				</div>
+					
+					
+		</section>
+		<footer>
+			
+            <!--footer-->
+            <!--
+			<div class="footer-tt">
+				主管单位：中华人民共和国国家发展和改革委员会 京ICP备17043692号-1 京公网安备110102000033<br>主办单位：中国招标投标协会 CHINA TENDERING &amp; BIDDING ASSOCIATION <br> 技术支持：中国采购与招标网
+				<a href="http://www.chinabidding.com.cn" target="_blank">www.chinabidding.com.cn</a> <br>Copyright &copy;2005--2017&nbsp;&nbsp;中国招标投标协会 版权所有，未经许可，不得擅自转载、引用本网站内容</div>
+
+		</footer>
+        -->
+        <SCRIPT language=javascript src="js/foot.js" type=text/javascript></SCRIPT>
+		<script type="text/javascript">
+			//焦点图
+			jQuery(".focusBox").slide({
+				titCell: ".num li",
+				mainCell: ".pic",
+				effect: "fold",
+				autoPlay: true,
+				trigger: "click",
+				interTime: 5700,
+				//下面startFun代码用于控制文字上下切换
+				startFun: function(i) {
+					jQuery(".focusBox .txt li").eq(i).animate({
+						"bottom": 0
+					}).siblings().animate({
+						"bottom": -36
+					});
+				}
+			});
+		</script>
+
+	</body>
+
+</html>
+

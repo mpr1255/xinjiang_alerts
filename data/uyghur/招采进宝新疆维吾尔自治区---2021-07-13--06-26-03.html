@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>招采进宝 新疆维吾尔自治区</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="/staticRes/css/cms/zcjb4xjwwe/css/dl-base.css" />
+    <link rel="stylesheet" type="text/css" href="/staticRes/css/cms/zcjb4xjwwe/css/base2.css" />
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/jquery-1.7.2.js"></script>
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/jQuery.blockUI.js"></script>
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/jquery.SuperSlide.js"></script>
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/index.js"></script>
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/page.js"></script>
+    <script src="/staticRes/css/cms/zcjb4xjwwe/js/search.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.inp-txt').focus(function() {
+                var keyval = $('.inp-txt').val();
+                if (keyval == '请输入关键字') {
+                    $('.inp-txt').val('');
+                }
+            })
+            $('.sea-ul li').hover(function() {
+                $(this).addClass('on');
+            }, function() {
+                $(this).removeClass('on');
+            })
+            $('.inp-txt').focusout(function() {
+                var keyval = $('.inp-txt').val();
+                if (keyval == '') {
+                    $('.inp-txt').val('请输入关键字');
+                }
+            })
+            $('.mkey').click(function() {
+                $('.sea-ul').show();
+                $('.sea-ul li').click(function() {
+                    var keyval = $(this).text();
+                    $('.mkey').text(keyval);
+                    $('.sea-ul').hide();
+                })
+            })
+            $('.submit-btn').click(function() {
+                var mval = $('.mkey').text();
+                var keyval = $('.inp-txt').val();
+            })
+            $(document).mouseup(function() {
+                $('.sea-ul').hide();
+            });
+        })
+    </script>
+</head>
+
+<body>
+<!--  顶部版块，登录、链接  -->
+<div class="toparea">
+    <!--  头部版块，logo、搜索、热线  -->
+    <div class="header">
+        <!--  logo  -->
+        <div class="logo"><a href="/" ref="cms/index">招采进宝</a></div>
+		<!-- 一、导航菜单模板-->
+		<div class="navigate">
+			<ul class="menu">
+			<!-- 是否为内部栏目不为1 -->
+
+				<li  
+					onMouseOver="document.getElementById('bidMenu675').style.display='block';" onMouseOut="document.getElementById('bidMenu675').style.display='none';"
+				>
+				<!--当id=292时候单独给个c.link链接,238是首页 -->
+					<a  href="/cms/index.htm"  ref="xjwwe/index" >
+					<!--传送后台路径去判断 -->
+					首页
+					</a>
+					
+				</li>
+			<!-- 是否为内部栏目不为1 -->
+
+				<li  
+					onMouseOver="document.getElementById('bidMenu691').style.display='block';" onMouseOut="document.getElementById('bidMenu691').style.display='none';"
+				>
+				<!--当id=292时候单独给个c.link链接,238是首页 -->
+					<a  href="/cms/channel/zd4=jyxx/index.htm" ref="zd4=jyxx" >
+					<!--传送后台路径去判断 -->
+					交易信息
+					</a>
+					
+				</li>
+			<!-- 是否为内部栏目不为1 -->
+
+				<li  
+					onMouseOver="document.getElementById('bidMenu687').style.display='block';" onMouseOut="document.getElementById('bidMenu687').style.display='none';"
+				>
+				<!--当id=292时候单独给个c.link链接,238是首页 -->
+					<a  href="/cms/channel/zd4=tool/index.htm" ref="zd4=tool" >
+					<!--传送后台路径去判断 -->
+					常用工具
+					</a>
+					
+				</li>
+			<!-- 是否为内部栏目不为1 -->
+
+				<li  
+					onMouseOver="document.getElementById('bidMenu690').style.display='block';" onMouseOut="document.getElementById('bidMenu690').style.display='none';"
+										class="m1cur"
+				>
+				<!--当id=292时候单独给个c.link链接,238是首页 -->
+					<a  href="/cms/channel/zd4=rdzt/index.htm"  ref="zd4=ywzx" >
+					<!--传送后台路径去判断 -->
+					业务资讯
+					</a>
+					
+				</li>
+			<!-- 是否为内部栏目不为1 -->
+
+				<li  
+					onMouseOver="document.getElementById('bidMenu692').style.display='block';" onMouseOut="document.getElementById('bidMenu692').style.display='none';"
+				>
+				<!--当id=292时候单独给个c.link链接,238是首页 -->
+					<a  href="/cms/channel/zd4=tbzn/index.htm"  ref="zd4=help" >
+					<!--传送后台路径去判断 -->
+					帮助中心
+					</a>
+					
+				</li>
+			</ul>
+		</div>
+        <!--  搜索  -->
+        <div class="search">
+
+            <div class="search-area"><input class="inp-txt" type="text"  placeholder="输入关键字" autocomplete="off" ></div>
+            <div class="search-button"><button type="submit" onclick="if(document.getElementById('txtKey').value=='') return false;" id="btnSearch" class="submit-btn"><i class="iconfont"></i></button></div>
+        </div>
+
+    </div>
+</div>
+<div class="banner banner1">
+    <!-- <img src="./images/zixunzhongx_02.jpg" alt=""> -->
+</div>
+
+<div class="insidepage">
+    <div class="location"> 您当前位置：<a href="/cms/channel/zd4=ywzx/index.htm">业务资讯</a><em>></em><em>目录</em> </div>
+
+
+    <!--  内页右侧  -->
+    <div class="insidepage-right">
+        <!--边栏导航-->
+        <div class="sideMenu2">
+            <div class="sm-title">
+                <span>业务资讯</span>
+
+            </div>
+            <ul class="sm-list">
+                <li class="sm-cur first"><a href="/cms/channel/zd4=rdzt/index.htm">热点专题</a></li>
+                <li class="sm-cur "><a href="/cms/channel/zd4=zbhy/index.htm">招标行业</a></li>
+                <li class="sm-cur "><a href="/cms/channel/zd4=gsdt/index.htm">公司动态</a></li>
+                <li class="sm-cur "><a href="/cms/channel/zd4=notice/index.htm">通知公告</a></li>
+                <li class="sm-cur "><a href="/cms/channel/zd4=zcfg/index.htm">政策法规</a></li>
+        </ul>
+    </div>
+    <div class="ads">
+        <div class="ad">
+            <a href=""></a>
+        </div>
+    </div>
+
+</div>
+<!--  内页右侧-END  -->
+
+<!--  内页左侧  -->
+<div class="insidepage-left">
+
+
+    <!--  招标信息列表  -->
+    <div class="infolist">
+        <!--  列表页tab选项  -->
+        <div class="infolist-main bidlist">
+            <ul>
+            </ul>
+        </div>
+<div class="infolist-paging">
+
+
+    <div class="paging-nav">
+        <a disabled="disabled">上一页</a>
+        <div class="pages">
+                <span class="on" onclick="page(1)")>1</span>
+                
+                
+                
+                </div>
+        <a disabled="disabled">下一页</a>
+
+    </div>
+</div>
+
+</div>
+</div>
+<!--  内页左侧-END  -->
+
+
+
+</div>
+
+<!--foot底部-->
+<div class="footer">
+    <div class="foot-menu">
+        <div class="fm-left">
+            <div class="fm-title">平台导航</div>
+            <div class="fm-contentlist">
+                <a href="/cms/index.htm" target="_blank">网站首页</a>
+                <a href="http://www.ebidding.com.cn/" target="_blank">关于我们</a>
+                <!--<a href="">加入我们</a>
+                <a href="">意见反馈</a>-->
+            </div>
+        </div>
+        <div class="fm-right">
+            <div class="fm-title">友情链接</div>
+            <div class="fm-contentlist">
+                <table>
+                    <tr>
+                        <td><a href="http://www.cebpubservice.com/" target="_blank">中国招标投标公共服务平台</a></td>
+                        <td><a href="http://www.ctba.org.cn/" target="_blank">中国招标投标协会</a></td>
+                        <td><a href="http://www.ndrc.gov.cn/" target="_blank">国家发改委</a></td>
+                        <td><a href="http://www.mohurd.gov.cn/" target="_blank">住建部</a></td>
+                        <td><a href="http://www.mwr.gov.cn/" target="_blank">水利部</a></td>
+                        <td><a href="http://www.mot.gov.cn/" target="_blank">交通部</a></td>
+                        <td><a href="http://www.mof.gov.cn/index.htm" target="_blank">财政部</a></td>
+                        <td><a href="http://www.mofcom.gov.cn/" target="_blank">商务部</a></td>
+                    </tr>
+                    <!--<tr>
+                        <td><a href="http://www.nmgztb.com.cn/index" target="_blank">内蒙古招标投标公共服务平台</a></td>
+                        <td><a href="http://www.nmgztb.com.cn/index" target="_blank">内蒙古招标投标协会</a></td>
+                        <td><a href="http://www.nmgfgw.gov.cn/" target="_blank">内蒙古发改委</a></td>
+                        <td><a href="http://www.nmgjsw.gov.cn/website/main/index.aspx" target="_blank">内蒙古住建厅</a></td>
+                        <td><a href="http://www.nmgslw.gov.cn/" target="_blank">内蒙古水利厅</a></td>
+                        <td><a href="http://www.nmjt.gov.cn/" target="_blank">内蒙古交通厅</a></td>
+                        <td><a href="http://czt.nmg.gov.cn/nmczt/" target="_blank">内蒙古财政厅</a></td>
+                        <td><a href="http://swt.nmg.gov.cn/index.shtml" target="_blank">内蒙古商务厅</a></td>
+                    </tr>-->
+                    <tr>
+                      <td><a href="http://zwfw.xinjiang.gov.cn/xinjiangggzy/" target="_blank">新疆公共资源交易网</a></td>
+                        <td><a href="http://www.xinjiang.gov.cn/xinjiang/zbtb/common_list.shtml" target="_blank">新疆维吾尔自治区人民政府网</a></td>
+                        <td><a href="http://xjdrc.xinjiang.gov.cn/" target="_blank">新疆发改委</a></td>
+                        <td><a href="http://zjt.xinjiang.gov.cn/" target="_blank">新疆住建厅</a></td>
+                        <td><a href="http://slt.xinjiang.gov.cn/" target="_blank">新疆水利厅</a></td>
+                        <td><a href="http://jtyst.xinjiang.gov.cn/" target="_blank">新疆交通厅</a></td>
+                        <td><a href="http://czt.xinjiang.gov.cn/" target="_blank">新疆财政厅</a></td>
+                        <td><a href="https://swt.xinjiang.gov.cn/" target="_blank">新疆商务厅</a></td>
+                   </tr>
+                </table>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="coptright">
+        <span>©2012-2021 zcjb.com.cn(V3.5) .</span>
+        <span>招采进宝|霍尔果斯©</span>
+        <span>2012-2021</span>    
+        <span>版权所有</span>   
+        <span>上海汇招信息技术有限公司 </span>   
+        <span>沪ICP备12042911号-3 </span>
+        <span>      <em>技术支持</em>      <a href="http://www.ebidding.com.cn/" target="_blank"> 上海汇招信息技术有限公司</a></span>
+    </div>
+</div>
+<div class="fixed">
+
+    <div class="img">
+      <a href="https://ebidding.s2.udesk.cn/im_client/?web_plugin_id=29063" target="_blank">
+            <img src="/staticRes/css/cms/default/images/rightBanner/1.gif" alt="">
+        </a>
+    </div>
+    <div class="tsdh qq">
+        <img src="/staticRes/css/cms/default/images/rightBanner/2.png" alt="">
+        <div class="assBarWrap" style="height:115px;"><!-- 20200713mark 修改: 365改115 -->
+            <div class="assBarService" id="">
+
+                <div class="g-item">
+                    <img src="/staticRes/css/cms/default/images/rightBanner/icon1.png" alt="">
+                    <p>投标人问题咨询：</p>
+                    <span>400-616-6620</span>
+
+                    <p>上午：8:30~21:00</p>
+                </div>
+				<div class="g-item" style="display:none;">
+                    <img src="/staticRes/css/cms/default/images/rightBanner/icon2.png" alt="">
+                    <p>CA办理咨询：</p>
+                    <span>400-707-3355</span>
+                    <p class="g-adress">衡水市南外环128号<br>市民中心2楼b18窗口</p>
+                    <span>0319-2686110</span>
+                    <p class="g-adress">邢台泉北西大街2868号<br>邢台市公共资源交易中心四楼416</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="qq zxkf tsdh">
+        <img src="/staticRes/css/cms/default/images/rightBanner/3.png" alt="">
+        <div class="assBarWrap" style="height:100px;">
+            <div class="assBarService" id="assBarService">
+                <div class="g-item">
+                    <img src="/staticRes/css/cms/default/images/rightBanner/icon2.png" alt="">
+                    <p>招标代理业务咨询：</p>
+					<span>186-1657-5467</span>
+                    <!--<a href='http://china.zcjb.com.cn/cms/channel/zd10=notice/2079260.htm' target="_blank" style="width:160px">点击获取联系方式>>></a> -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="qq tsdh" style="display:none;">
+        <img src="/staticRes/css/cms/default/images/rightBanner/4.png" alt="">
+        <div class="assBarWrap" style="height:125px;">
+            <div class="assBarService" id="">
+
+                <div class="g-item" >
+                    <img src="/staticRes/css/cms/default/images/rightBanner/icon3.png" alt="">
+                    <p>会员增值服热线：</p>
+                    <span>4006166620</span> <span></span>
+<span><a href="http://hb.zcjb.com.cn/cms/channel/notice/2068912.htm" target="_blank">查看详情</a></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="img" style="display:none;">
+        <a href="/cms/channel/cpyc/index.htm" target="_blank">
+            <img src="/staticRes/css/cms/default/images/rightBanner/cpyc.jpg" alt="">
+        </a>
+    </div>
+    <div class="qr tsdh">
+        <img src="/staticRes/css/cms/default/images/rightBanner/5.png" alt="">
+        <div class="assBarWrap">
+          <div class="assBarService" id="">
+            <div>
+              <img src="/staticRes/css/cms/default/images/e-bidding.jpg" alt="">
+
+            </div>
+            <p>微信公众号</p>
+          </div>
+        </div>
+    </div>
+    <div class="back" id="scroll" style="display: block;">
+        <img src="/staticRes/css/cms/default/images/rightBanner/6.png" alt="">
+    </div>
+</div>
+<style>
+    .fixed {bottom: 10%;height: 450px;right: 30px}
+    .fixed > div img {width: 50px;position: relative;z-index: 2;}
+    .fixed > div > div {font-size: 14px;}
+    .fixed .back img {width: 50px;cursor: pointer;}
+    .fixed > div {width: 50px;height: auto;padding: 0;font-size: 0;margin-bottom: 5px;position: relative;}
+    .tsdh .assBarWrap {top: -10px;}
+    .fixed .assBarService .g-item span {color: #ff8a00;font-size: 16px;}
+    .fixed .assBarWrap {right: 50px;box-shadow: 0 0 3px rgba(0,0,0,0.05);}
+    .fixed .assBarWrap img {width: 38px;}
+    .fixed .qr .assBarWrap img {width: 92px;}
+</style>
+<style>
+    .car {
+		font-size: 22px;
+		padding: 20px 0;
+	}
+</style>
+
+
+</body>
+
+</html>
