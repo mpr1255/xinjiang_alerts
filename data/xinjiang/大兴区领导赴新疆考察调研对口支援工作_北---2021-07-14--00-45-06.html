@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<!--
+ * @(#)content.html
+ * Copyright (C) 2017 Neusoft Corporation All rights reserved.
+ *
+ * VERSION        DATE       BY              CHANGE/COMMENT
+ * @version 1.00  2016/01/27 tai.bs          初版
+ *
+ -->
+<html lang="zh_CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+    <meta name="channelName" content="北京日报APP北京号" />
+    <meta name="columnName" content="北京大兴官方发布" />
+    <meta name="description" />
+    <meta name="origin" content="北京号" />
+    <meta name="category" />
+    <meta name="reporter" />
+    
+	<title>大兴区领导赴新疆考察调研对口支援工作_北京日报APP北京号</title>
+    <meta property="og:type" content="news" />
+    <meta property="og:title" content="大兴区领导赴新疆考察调研对口支援工作" />
+    <meta property="og:reporter" />
+    <meta property="og:category" />
+    <meta property="og:description" />
+    <meta property="og:publishTime" content="2021-07-12 21:58:43" />
+	<link rel="stylesheet" href="/asset/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/asset/css/style.min.css" />
+	<link rel="stylesheet" href="/asset/css/bjh-author-info.min.css" />
+	<link rel="stylesheet" href="/asset/css/jaudio.min.css" />
+	<link rel="stylesheet" href="/asset/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/asset/css/reporter-card.min.css" />
+	<!--[if lt IE 9]>
+	<script th:src="@{/asset/js/html5shiv.js}"></script>
+	<script th:src="@{/asset/js/respond.min.js}"></script>
+	<![endif]-->
+	<style>
+		main {
+			over-flow: auto; /* winphone8和android4+ */
+			-webkit-overflow-scrolling: touch; /* ios5+ */
+			overflow-y: scroll;
+			z-index: 1;
+		}
+
+		.swiper-container {
+			width: calc(100vw);;
+			height: calc(100vh);
+		}
+
+		#page {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		window.$AppContext = '/bjrbbeijinghao' + "/";
+		var imgDate = {};
+		var flag = true;
+
+		function imgShow(outerdiv, _this) {
+			var src = _this.attr("src");
+			var objs = document.querySelectorAll(".storyContent img");
+			UpdateImgSrc();
+			$("<img/>").attr("src", src).load(function () {
+				var windowW = $(window).width();
+				var windowH = $(window).height();
+				var realWidth = this.width;
+				var realHeight = this.height;
+				var imgWidth, imgHeight;
+				var scale = 0.8;
+				if (realHeight > windowH * scale) {
+					imgHeight = windowH * scale;
+					imgWidth = imgHeight / realHeight * realWidth;
+					if (imgWidth > windowW * scale) {
+						imgWidth = windowW * scale;
+					}
+				} else if (realWidth > windowW * scale) {
+					imgWidth = windowW * scale;
+					imgHeight = imgWidth / realWidth * realHeight;
+				} else {
+					imgWidth = realWidth;
+					imgHeight = realHeight;
+				}
+				$(outerdiv).fadeIn("fast");
+			});
+			var index = src.lastIndexOf("/");
+			src = src.substring(index + 1, src.length);
+			var i = 0;
+			for (i = 0; i < objs.length; i++) {
+				if (objs[i].src.indexOf(src) != -1 || src.indexOf(objs[i].src) != -1) {
+					break;
+				}
+			}
+			mySwiper.slideTo(i);
+			$(outerdiv).click(function () {
+				$(this).fadeOut("fast");
+				mySwiper.zoom.out();
+			});
+		};
+
+		function UpdateImgSrc() {
+			if (flag) {
+				var objs = document.querySelectorAll(".swiper-wrapper img");
+				var otherObjs = document.querySelectorAll(".storyContent img");
+				for (var i = 0; i < objs.length; i++) {
+					var src = $(otherObjs[i]).attr("src");
+					$(objs[i]).attr("src", src);
+				}
+				flag = false;
+			} else {
+				return;
+			}
+
+		};
+
+		function AddImgClickEvent() {
+			//var objss = document.querySelectorAll(".storyContent img");
+			//(objss[objss.length-1]).onload = function() {
+			var objs = document.querySelectorAll(".storyContent img");
+			for (var i = 0; i < objs.length; i++) {
+				var div = document.getElementsByClassName("swiper-wrapper")[0];
+				//添加 li
+				var divtwo = document.createElement('div');
+				divtwo.setAttribute("class", "swiper-slide");
+
+				var divthree = document.createElement('div');
+				divthree.setAttribute("class", "swiper-zoom-container");
+				//添加 img
+				var img = document.createElement("img");
+				//设置 img 图片地址
+				img.id = "img" + i;
+				img.src = $(objs[i]).attr("src");
+				img.onload = function (index, item) {
+					var maxWidth = $(window).width(); // 图片最大宽度
+					var maxHeight = $(window).height();    // 图片最大高度
+					var ratio = 0;  // 缩放比例
+					var width = this.width;    // 图片实际宽度
+					var height = this.height;  // 图片实际高度
+
+					// 检查图片是否超宽
+					if (width > maxWidth) {
+						ratio = maxWidth / width;   // 计算缩放比例
+						$(this).css("width", maxWidth); // 设定实际显示宽度
+						width = maxWidth;
+						height = height * ratio;    // 计算等比例缩放后的高度
+						$(this).css("height", height);  // 设定等比例缩放后的高度
+					}
+					if (height > maxHeight) {
+						ratio = maxHeight / height; // 计算缩放比例
+						$(this).css("height", maxHeight);   // 设定实际显示高度
+						height = maxHeight;
+						width = width * ratio;    // 计算等比例缩放后的高度
+						$(this).css("width", width * ratio);    // 设定等比例缩放后的高度
+					}
+					if (width != maxWidth && height != maxHeight) {
+						if (width != 0 && height != 0) {
+							ratio = maxWidth / width;   // 计算缩放比例
+							var other = maxHeight / height;
+							if (ratio > other) {
+								ratio = other;
+								$(this).css("height", maxHeight);   // 设定实际显示高度
+								width = width * ratio;    // 计算等比例缩放后的高度
+								$(this).css("width", width);    // 设定等比例缩放后的高度
+							} else {
+								$(this).css("width", maxWidth); // 设定实际显示宽度
+								height = height * ratio;    // 计算等比例缩放后的高度
+								$(this).css("height", height);  // 设定等比例缩放后的高度
+							}
+						}
+					}
+				}
+				divthree.appendChild(img);
+				divtwo.appendChild(divthree);
+				div.appendChild(divtwo);
+			}
+			//}
+		};
+		window.onload = function check() {
+			/*$(".storyContent img").click(function(){
+              var _this = $(this);//将当前的pimg元素作为_this传入函数
+              imgShow("#outerdiv", _this);
+            });*/
+			//AddImgClickEvent();
+			<!-- 只有isshare=2时才不显示下载信息,解决QQ、微信再分享的问题-->
+			if (document.getElementById('ad') != null) {
+				if (window.location.href.indexOf("isshare=2") == -1) {
+					document.getElementById('ad').style.display = "block";
+				} else {
+					document.getElementById('ad').style.display = "none";
+				}
+			}
+			textDotMore();
+
+			$('.storyContent img').each(function () {
+				if ($(this).data("src") != null) {
+					$(this).attr('src', $(this).data("src"));
+				}
+				if ($(this).width() > 200) {
+					$(this).width('100%');
+					$(this).height('auto');
+				}
+			});
+			$('.storyContent video').each(function () {
+				if ($(this).width() > 100) {
+					$(this).width('100%');
+					$(this).height('auto');
+					// 重新设置video高度
+					var style_width = parseInt($(this).css("width"));
+					var style_height = parseInt($(this).css("height"));
+					if (style_width < style_height) {
+						// 移除元素宽高
+						$(this).removeAttr("width");
+						$(this).removeAttr("height");
+						var height = style_width;
+						$(this).css("height", height);
+					}
+				}
+			});
+			$('.storyContent iframe').each(function () {
+				if ($(this).data("bjrb") != null) {
+					$(this).attr('src', $(this).data("bjrb"));
+				}
+			});
+
+			$('.commentContent img').each(function () {
+				if ($(this).data("src") != null) {
+					$(this).attr('src', $(this).data("src"));
+				}
+			});
+
+			videoAudioClickfunction(); // video,audio控制，多个时不同时播放
+
+			var referrer = window.location.href;
+			var udid = getCookie('udid');
+			var visitId = getCookie('vId');
+			var now = new Date();
+			var screenRatio = getScreenRatio();
+
+			if (!udid) {
+				udid = getUdid('/');
+				var expires = new Date();
+				expires.setTime(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+				addCookie('udid', udid, expires.toUTCString());
+			}
+
+				if (!visitId) {
+					visitId = udid + now.getTime();
+					addCookie('vId', visitId);
+				}
+
+				postData('/', udid, referrer, visitId);
+
+				// second
+				var hasSquareImgthumb = false;
+				var imgUrl = '/asset/img/logo1.png';
+				var imgthumbs = [{'prUrl':'//ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9d.jpeg','proportion':'2','thumbnailUrl':'https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9d.jpeg','type':'2','uri':'/images/202107/12/60ec4a94e4b003a0ed5c0e9d.jpeg','url':'https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9d.jpeg'},{'prUrl':'//ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9f.jpeg','proportion':'1','thumbnailUrl':'https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9f.jpeg','type':'1','uri':'/images/202107/12/60ec4a94e4b003a0ed5c0e9f.jpeg','url':'https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9f.jpeg'}];
+				if (imgthumbs && imgthumbs.length > 0) {
+					imgUrl = imgthumbs[0].thumbnailUrl;
+					for (let index in imgthumbs) {
+						if (imgthumbs[index].type == 4) {
+							imgUrl = imgthumbs[index].thumbnailUrl;
+							hasSquareImgthumb = true;
+							break;
+						}
+					}
+					if (!hasSquareImgthumb){
+						for (let index in imgthumbs) {
+							if (imgthumbs[index].type == 1) {
+								imgUrl = imgthumbs[index].thumbnailUrl;
+								break;
+							}
+						}
+					}
+				}
+				var params = {};
+				params.wxsignurl = 'https://ie.bjd.com.cn:443/rest/site/api/wxshare/sign';
+				params.url = location.href.split('#')[0];
+				params.title = '\u5927\u5174\u533A\u9886\u5BFC\u8D74\u65B0\u7586\u8003\u5BDF\u8C03\u7814\u5BF9\u53E3\u652F\u63F4\u5DE5\u4F5C';
+				params.imgUrl = imgUrl;
+				params.desc = '';
+				$WxShareController.secondShare(params);
+
+				// 计算图说字号
+				$("figure figcaption").each(function () {
+					$(this).css("font-size", ".14rem");
+					$(this).css("line-height", ".20rem");
+				});
+			}
+
+				window.onresize = function () {
+					if ($BrowerController.check() != "other") {
+						if (document.documentElement.clientWidth < 750) {
+							document.documentElement.style.fontSize = document.documentElement.clientWidth / 4.14 + 'px';
+						} else {
+							document.documentElement.style.fontSize = 750 / 4.14 + 'px';
+						}
+					}
+					textDotMore();
+				};
+
+				function textDotMore() {
+					$('span.commentSummary').each(function (i) {
+						var dotLnes = countTextLines($(this)[0])
+						var ori = $(this).clone()
+								.css({
+									display: '-webkit-box',
+									overflow: 'hidden',
+									'text-overflow': 'ellipsis',
+									'word-break': 'normal',
+									'-webkit-line-clamp': '6',
+									'-webkit-box-orient': 'vertical',
+									"font-size": '11pt',
+									visibility: 'hidden'
+								})
+								.appendTo('.commentSummaryArea')
+						var lc = countTextLines(ori[0]);
+						ori.remove();
+
+						var summaryMore = $(this).parents('.commentSummaryArea').find('.commentSummaryMore');
+						var eleMore = summaryMore[0];
+						if (lc > dotLnes) {
+							eleMore.style.display = "block";
+						} else {
+							eleMore.style.display = "none";
+						}
+					});
+				}
+
+				function isTextDot() {
+					var ele = document.getElementById("commentSummaryId");
+					var dotLnes = countTextLines(ele)
+					var ele = $("span.commentSummary");
+					var ori = ele.clone()
+							.css({
+								display: '-webkit-box',
+								overflow: 'hidden',
+								'text-overflow': 'ellipsis',
+								'word-break': 'normal',
+								'-webkit-line-clamp': '6',
+								'-webkit-box-orient': 'vertical',
+								"font-size": '11pt',
+								visibility: 'hidden'
+							})
+							.appendTo('.commentSummaryArea')
+							.attr("id", "commentSummaryFreeId");
+					var lc = countTextLines(ori.context);
+					ori.remove();
+					return lc > dotLnes;
+				};
+
+				function countTextLines(ele) {
+					var styles = window.getComputedStyle(ele, null);
+					var lh = parseInt(styles.lineHeight, 10);
+					var h = parseInt(styles.height, 10);
+					var lc = Math.round(h / lh);
+					return lc;
+				};
+
+				function closeCarousel() {
+					document.getElementById("ad-bottom").style.display = "none";
+				};
+
+				function reinitIframe() {
+					var iframe = document.getElementById("voteiframe");
+					try {
+						if (iframe.contentDocument != null) {
+							iframe.height = iframe.contentDocument.body.scrollHeight;
+						} else {
+							var bHeight = document.body.scrollHeight;
+							var dHeight = document.documentElement.scrollHeight;
+							var height = Math.max(bHeight, dHeight);
+							iframe.height = height;
+						}
+					} catch (ex) {
+					}
+				}
+
+				//完毕后干掉定时器
+				function changeFrameHeight() {
+					reinitIframe();
+				}
+
+				// 查看全部正文
+				function readMore() {
+					$(".sharePage").removeClass("sharePage");
+					$(".read-more").remove();
+				}
+
+				// 在app中打开滚动新闻详情页
+				function oppenItemStory(channelId, columnId, storyId, contentType, bjhChannelId, bjhColumnId, transverse) {
+					var isBjh = 0;
+					if (bjhChannelId && bjhColumnId) {
+						isBjh = 1;
+					}
+					var isHuati = transverse == '4' ? 1 : 0;
+					var pUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone";
+					var paramStr = "bjrbschemes://?storyId=" + storyId + "&channelId=" + channelId + "&columnId=" + columnId + "&contentType=" + contentType + "&isBjh=" + isBjh + "&isHuati=" + isHuati;
+
+					// ios测试代码
+					var u = navigator.userAgent
+					var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+					var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+					if (isAndroid) { //如果是安卓
+						var encodeStr = encodeURIComponent(paramStr);
+
+						var contentTypeIsNull = $("#contentTypeIsNull").val();
+						if (contentTypeIsNull) {
+							pUrl = pUrl + "&android_schema=" + encodeStr + "&ios_scheme=" + encodeStr;
+						}
+						window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+// 					if(is_weibo()){
+// 						console.log(pUrl);
+// // 						showGuideDiv(pUrl);
+// 						window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+// 						return;
+// 					}
+					} else if (isiOS) { //
+						// document.querySelector(".openApp a").href="https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId="+'AP60ec4a94e4b003a0f66811ca'+"&channelId="+'bjrbbeijinghao';
+						pUrl = "https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId=" + storyId + "&channelId=" + channelId;
+						window.location.href = pUrl;
+						return;
+					} else {
+						window.location.href = "https://ie.bjd.com.cn/appstore/download";
+						return;
+					}
+					window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+				}
+
+				// 引导页显示
+				function showGuideDiv(pUrl) {
+					$(".guide").css("width", document.documentElement.clientWidth + "px");
+					$(".guide").css("height", document.documentElement.clientHeight + "px");
+					$("body>*").css("display", "none");
+					$(".guide").css("display", "block");
+					setTimeout(function () {
+						window.location.href = pUrl;
+					}, 3000);
+				}
+
+				/**-- 判断是否在微信浏览器中打开 --**/
+				function is_weixin() {
+					var ua = navigator.userAgent.toLowerCase();
+					if (ua.match(/MicroMessenger/i) == "micromessenger") {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
+				/**-- 判断是否在新浪微博浏览器中打开 --**/
+				function is_weibo() {
+					var ua = navigator.userAgent;
+					if (ua.indexOf('Weibo') > -1) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
+				function videoAudioClickfunction() {
+					$("video").on("play", function () {
+						var $video = $(this)[0];
+
+						$('.storyContent video').each(function () {
+							if ($(this)[0] !== $video) {
+								$(this)[0].pause();
+							}
+						});
+					});
+
+					$("audio").on("play", function () {
+						var $audio = $(this)[0];
+
+						$('.storyContent audio').each(function () {
+							if ($(this)[0] !== $audio) {
+								$(this)[0].pause();
+							}
+						});
+					});
+				}
+
+		/*]]>*/
+	</script>
+	<style type="text/css">
+		.sharePage {
+			position: relative;
+			height: 1200px;
+			overflow: hidden;
+			margin-bottom: 40px;
+		}
+
+		.read-more {
+			display: none;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-image: linear-gradient(-180deg, hsla(0, 0%, 100%, 0) 6%, hsla(0, 0%, 100%, .48) 56%, hsla(0, 0%, 100%, .96) 92%);
+		}
+
+		.read-more .read-more-mask {
+			position: relative;
+			height: 236px;
+		}
+
+		.read-more .read-more-mask .read-more-zhankai {
+			position: absolute;
+			bottom: 6px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			animation: jump 1s ease-in-out infinite forwards;
+		}
+
+		.read-more-zhankai img {
+			width: 0.5rem;
+			height: auto;
+		}
+
+		.read-more-btm {
+			position: relative;
+			/* 			bottom: 0.53rem; */
+			height: 0.5rem;
+		}
+
+		.openApp {
+			width: 100%;
+			height: 0.4rem;
+			line-height: 0.4rem;
+			border: 1px solid #e92110;
+			background-color: #e92110;
+			border-radius: 5px;
+		}
+
+		@keyframes jump {
+			0% {
+				transform: translateY(0)
+			}
+			50% {
+				transform: translateY(5px)
+			}
+			to {
+				transform: translateY(0)
+			}
+		}
+
+		@media screen and (max-width: 374px) {
+			html {
+				font-size: 74px
+			}
+		}
+
+		@media screen and (min-width: 375px) and (max-width: 413px) {
+			html {
+				font-size: 90px
+			}
+		}
+
+		@media screen and (min-width: 414px) and (max-width: 767px) {
+			html {
+				font-size: 100px
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 833px) {
+			html {
+				font-size: 182px
+			}
+		}
+
+		@media screen and (min-width: 834px) and (max-width: 1023px) {
+			html {
+				font-size: 186px
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			html {
+				font-size: 240px
+			}
+		}
+	</style>
+</head>
+<body style="max-width: 750px;min-width: 310px;margin: 0 auto;overflow-y: auto;">
+<section id="about" class="page" style="padding-top:0.60rem; background-color: #ffffff;">
+	<div style="padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;">
+		<div id="outerdiv" style="position:fixed;top:0;left:0;background:#000000;z-index:2;width:100%;height:100%;display:none;touch-action:none;">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+
+				<!-- 如果需要滚动条 -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+		<div class="content2">
+			<input type="hidden" id="shareApp" name="shareApp" value="1" />
+			<input type="hidden" id="contentTypeIsNull" name="contentTypeIsNull" value="bjrbschemes%3A%2F%2F%3FstoryId%3DAP60ec4a94e4b003a0f66811ca%26channelId%3Dbjrbbeijinghao%26columnId%3D5ddf58fbe4b0ab28c844c36e%26contentType%3D0%26isBjh%3D1" />
+			<div class="row">
+				<div class="col-lg-12" data-animation="fadeInRight" data-delay="600">
+					<!-- style="padding-left:0.167rem;padding-right:0.167rem;" -->
+					
+					
+					<div style="margin: 0 auto; text-align: left">
+						<div class="title">大兴区领导赴新疆考察调研对口支援工作</div>
+					</div>
+					
+					<div class="infomation">
+                        <span style="width:38%">2021-07-12 21:58</span>
+						<span style="float:right; text-align:right; width:54%">来源:  北京号</span>
+					</div>
+					<div class="bjh-author">
+						<div class="bjh-author-head" onclick="$BjhAuthorController.showAuthorInfo('brower');">
+							<img class="bjh-author-header-url" id="bjhAuthorHeadUrl" src="#" alt="" data-flag="bjh-author" />
+						</div>
+						<div class="bjh-author-info">
+							<div class="bjh-author-info-name" id="bjhAuthorName" onclick="$BjhAuthorController.showAuthorInfo('brower');"></div>
+							<div class="bjh-author-info-intro" id="bjhAuthorIntro"></div>
+						</div>
+						<div class="bjh-author-button-focus" id="focusStatus" onclick="$BjhAuthorController.focusAuthor('brower');" focus_status="false">
+							关注
+						</div>
+					</div>
+					<hr class="hr1" style="margin-top:0.22rem" />
+					<div class="storyContent" style="text-align:justify;word-break:normal;word-wrap: break-word;"><html>
+ <head></head>
+ <body>
+  <div> 
+   <p>为认真落实北京市委市政府工作部署，做好大兴区对口支援工作，7月9日至7月11日，区委书记周立云、区人大常委会主任邵恒，以及区相关部门、镇街负责人赴新疆维吾尔自治区和田地区和田县、新疆生产建设兵团第十四师昆玉市224团进行考察调研，深入对接对口支援工作。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e81" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e81.jpeg"> 
+   </figure> 
+   <p>7月9日，大兴区考察团参观了昆玉市224团红枣文化产业园，调研了解红枣生产全产业链、特色产品、玉枣文化以及品牌战略。在红枣标准化示范园，刚过花期的枣树已结出小枣，万亩枣园景象壮观。周立云询问了枣农种植、销售情况，并预祝他们今年硕果丰收。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e83" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e83.jpeg"> 
+   </figure> 
+   <p>今年5月，昆玉市224团利用大兴区帮扶资金，对18座大棚进行维护修缮，发展菌菇种植项目，迄今为止，已成功引进20万菌棒，预计年产4批次，经济效益可观。在昆玉市224团六连菌菇种植大棚，大兴区考察团听取了项目介绍，看到展台上摆放的鲜菌菇、菌菇干、香菇酱等产品，周立云表示，产品做的好，还要销路好，下一步，大兴区会协助加强市场推广，帮扶产业项目成长，帮助菌菇种植农户增收。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h132.jpg" width="877" height="583" data-caption="" id="img-60ec4a94e4b003a0ed5c0e85" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e85.png"> 
+   </figure> 
+   <p>随后，考察团参观了由大兴区扶持改造的昆玉市224团兴昆养殖小区，周立云详细询问养殖小区的经营情况和发展思路，并到牧民家中走访慰问。养殖小区改造建成后，牧民们不仅改变了畜牧方式，实现了标准化，而且搬迁上楼，生活环境也得到了很大改善。在牧民艾力·艾麦尔家中，周立云与牧民拉家常，了解他们的生产生活情况，牧民们也热情地迎接来自北京大兴的客人，表达他们对帮扶工作的感激之情。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e8a" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e8a.jpeg"> 
+   </figure> 
+   <p>座谈会上，两地有关领导分别介绍了大兴区对口支援工作开展情况和224团乡村振兴工作开展情况，并就乡村振兴发展思路进行了深入交流。周立云表示，要整合资源、创新思路，探索以企业运营为主体的可持续性发展模式，让对口协作工作取得实在成效。下一步，大兴区会把对疆支援工作重点放在开拓市场、打开销路上，发挥大兴优势，做好产品推介工作，帮企业搭桥，帮产品铺路。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e8c" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e8c.jpeg"> 
+   </figure> 
+   <p>7月10日上午，大兴区考察团来到新疆果业（和田）红枣交易市场，调研了解新疆红枣产业合作模式和销售情况；在新疆枣兔农牧发展有限公司，调研了解兔产业养殖规模，育种养殖、包装销售、冷链物流培训“全产业链”；在和田县布扎克乡坎特艾日克村坎恩特农民专业合作社，调研了解援疆项目资金使用效益，合作社养殖规模、运行收益等情况，并慰问了养殖户。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e8e" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e8e.jpeg"> 
+   </figure> 
+   <p>随后，大兴区考察团参观了拉依喀乡无花果王文化产业基地项目和罕艾日克镇肉鸡养殖基地建设项目，调研了解援疆项目资金投入使用、项目建设等情况。看到正在施工中的新建肉鸡养殖基地拔地而起，周立云表示，项目很好，后期经营管理一定要跟得上，希望这些产业项目能够真正给当地老百姓带来实实在在的经济效益。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h127.jpg" width="719" height="457" data-caption="" id="img-60ec4a94e4b003a0ed5c0e90" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e90.png"> 
+   </figure> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h121.jpg" width="716" height="436" data-caption="" id="img-60ec4a94e4b003a0ed5c0e94" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e94.png"> 
+   </figure> 
+   <p>当天下午，大兴区考察团还参观了和田县现代农业产业园、和田县英阿瓦提乡艾吉克村扶贫创业基地。在农户布阿依夏木·吾甫尔家，这个曾经的困难户已经住上了新房，还开了一间小超市，过上了自给自足的幸福生活。为了表达对帮扶创业的感激之情，她还特意向大兴区献上了一面锦旗，写着“感恩无私援助，助我发家致富。”周立云接过锦旗并表示，一定将这份情谊带回北京。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e97" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e97.jpeg"> 
+   </figure> 
+   <p>当晚，大兴区考察团与和田县主要领导召开座谈会，分别介绍了大兴区对口支援工作开展情况、和田县乡村振兴工作开展情况。周立云表示，这次新疆考察感慨良多，看到脱贫攻坚带来的变化既感动又兴奋，作为和田脱贫发展的见证者、参与者非常荣幸。下一步，大兴区将持续助力和田巩固脱贫攻坚成果，更加精准有效地深化与和田县的对口帮扶交流，全面提升合作协作水平，推动乡村振兴工作落地见效。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e99" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e99.jpeg"> 
+   </figure> 
+   <p>大兴区考察团此次新疆之行除了考察调研对口支援工作开展情况，还前往和田县人民医院看望了援疆医生，到援疆干部驻地慰问了援疆干部人才、援疆教师，为他们带去了党和家乡的关心。周立云殷切叮嘱，作为大兴区的优秀人才，在援疆期间要注意身体健康，也要时刻注意自己的一言一行，时刻谨记支援任务和原则，注重开展党史学习教育，将“我为群众办实事”落实到实践中，认真完成对口支援任务。</p> 
+   <figure style="margin: auto auto 4px auto; max-width: 100%; width: 100%;"> 
+    <img src="https://ie.bjd.com.cn:443/water/water_w200h133.jpg" width="1080" height="720" data-caption="" id="img-60ec4a94e4b003a0ed5c0e9b" style="max-width: 100%; width: 100%; height: auto;" data-src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9b.jpeg"> 
+   </figure> 
+   <p>记者：郝新颖</p> 
+   <p>编辑：韩 绪</p> 
+  </div>
+ </body>
+</html></div>
+					<hr class="hr1" style="margin-top:0.22rem;margin-bottom:0.28rem;border-top:1px solid #999999;" />
+					
+					<div class="infomationFooterContainer">
+						<div class="infomationFooterLeft" style="width: auto;">
+							<div>
+								<span style="margin-right:0.03rem;float:left">作者：</span>
+								<p>北京大兴官方发布</p>
+							</div>
+						</div>
+					</div>
+<!--                    <div class="infomationFooterContainer"-->
+<!--                         th:if="${!#maps.containsKey(story.mapProperties, 'bjhChannelId') || story.mapProperties.bjhChannelId==null || !#maps.containsKey(story.mapProperties, 'bjhColumnId') || story.mapProperties.bjhColumnId==null}">-->
+<!--                        <div class="story-swipe-container">-->
+<!--                            <div class="reporter-card-wrapper" th:each="reporter,reporterStat:${reporters}" th:style="|${#lists.size(reporters)==1?'margin-right:0px;':''}|">-->
+<!--                                <div class="reporter-card-item" th:style="|${#lists.size(reporters)==1?'width:100%;':''}|">-->
+<!--                                    <div class="reporter-card-item-left">-->
+<!--                                        <img class="reporter-avatar" th:src="${reporter.avatar}"-->
+<!--                                             th:onclick="'oppenItemStory(\''+${story.channelId}+'\',\''+${story.columnId}+'\',\''+${story.id}+'\',\''+${story.contentType}+'\',\''+${bjhChannelId}+'\',\''+${bjhColumnId}+'\',\''+${transverse}+'\');'"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="reporter-card-item-middle">-->
+<!--                                        <div class="reporter-name" th:text="${reporter.name}"-->
+<!--                                             th:onclick="'oppenItemStory(\''+${story.channelId}+'\',\''+${story.columnId}+'\',\''+${story.id}+'\',\''+${story.contentType}+'\',\''+${bjhChannelId}+'\',\''+${bjhColumnId}+'\',\''+${transverse}+'\');'"></div>-->
+<!--                                        <div class="reporter-from">北京日报记者</div>-->
+<!--                                        <div class="reporter-story-count" th:text="|${reporter.storyCount}篇文章|"></div>-->
+<!--                                    </div>-->
+<!--                                    <div class="reporter-card-item-right">-->
+<!--                                        <div class="reporter-focus-btn" focus_status="false"-->
+<!--                                             th:id="|reporterFocusStatus_${reporter.uuid}|"-->
+<!--                                             th:onclick="'oppenItemStory(\''+${story.channelId}+'\',\''+${story.columnId}+'\',\''+${story.id}+'\',\''+${story.contentType}+'\',\''+${bjhChannelId}+'\',\''+${bjhColumnId}+'\',\''+${transverse}+'\');'">-->
+<!--                                            <span class="reporter-focus-btn-text">+关注</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+					<hr class="hr1" style="margin-top:0.1rem;margin-bottom:0.1rem;border-top:1px solid white;" />
+					<!--分享点赞用(爱心)(针对老稿件,没有存放判断字段) -->
+					
+					<!--分享点赞用(爱心) -->
+					<div style="border:1px solid #e92110;border-radius:25px;width:44%;margin-left:28%">
+						<div id="dianzanqian" align="center" style="height: 48/14em; width:100%;margin-top:0.1em;cursor: pointer;" onclick="dianzan()">
+							<img data-flag="comment" class="" style="height:1.7em;margin-top:-0.4em;cursor: pointer;" src="/asset/img/feidianzan.png" />
+                            <span id="likecntbefore" style="font-size:16px;margin-left:0.45em;color:#e92110;height:3em;line-height:3em;">1</span>
+						</div>
+						<div id="dianzanhou" align="center" style="height: 48/14em; width:100%;display:none;margin-top:0.1em">
+							<img data-flag="comment" class="" style="height:1.7em;margin-top:-0.4em;cursor: pointer;" src="/asset/img/dianzan.png" />
+                            <span id="likecntafter" style="font-size:16px;margin-left:0.45em;color:#e92110;height:3em;line-height:3em;"></span>
+						</div>
+					</div>
+					<!--分享点赞用(蜡烛) -->
+					
+					<!--分享点赞用(祈福) -->
+					
+				</div>
+			</div>
+			<!-- /*显示更多*/ -->
+			<div class="read-more">
+				<div class="read-more-mask">
+					<div class="read-more-zhankai" onclick="readMore();">
+						<img src="/asset/img/double-down.png" />
+					</div>
+				</div>
+				<div class="read-more-btm text-center">
+					<div class="openApp" style="color:white;font-size:0.18rem;cursor: pointer;" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ec4a94e4b003a0f66811ca&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);">
+						打开APP阅读全文
+					</div>
+					<!-- 						<div class="openApp" th:unless="${encodeOppenAppUrl == null}" > -->
+					<!-- 							<a th:href="'http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone&amp;android_schema='+${encodeOppenAppUrl}+'&amp;ios_scheme='+${encodeOppenAppUrl}" class="atc-block-btn" style="color:white;font-size:0.18rem;">打开APP阅读全文</a> -->
+					<!-- 						</div> -->
+				</div>
+
+				<script type="text/javascript">
+					/*<![CDATA[*/
+					var share = '1';
+					if (share == 1) {
+						// 1790 = 正文1200  +  多余的内外边距290  + 编辑 点赞等高度100  +  最小隐藏高度200
+						var contentH = document.querySelector(".content2").clientHeight - 1790;
+						if (contentH > 0) {
+							document.querySelector(".read-more").style.display = "block";
+							document.querySelector(".content2").className += " sharePage";
+						}
+					}
+
+					// ios打开新闻详情
+					// 						var u = navigator.userAgent
+					// 						var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+					// 						var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+					// 						if(isAndroid){ //如果是安卓
+					// 						    console.log("android");
+					// 						}else if(isiOS) { //
+					// 							document.querySelector(".openApp a").href="https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId="+'AP60ec4a94e4b003a0f66811ca'+"&channelId="+'bjrbbeijinghao';
+					// 						}
+					/*]]>*/
+				</script>
+			</div>
+		</div>
+		<div class="bjh-declare">
+			特别声明：本文为北京日报新媒体平台“北京号”作者上传并发布，仅代表作者观点，北京日报仅提供信息发布平台。未经许可，不得转载。
+		</div>
+		
+		
+		
+		<!--请粘贴到广告位所在位置-->
+		<script type="text/javascript">
+			(function () {
+				document.write('<div id="90010134"></div>');
+				(window.adPosDup = window.adPosDup || []).push({
+					adPosID: '90010134',
+					container: '90010134',
+					async: false
+				});
+			})();
+		</script>
+		<!-- 写死广告 -->
+		<!--
+        <div id="90010134">
+        <div id="90010134">
+        <div style="position:relative;">
+        <img style="width: 100%;" data-flag="ad" src="https://ie.bjd.com.cn/ad/shounong.jpeg">
+        <span style="background:#858585;opacity:0.4;border:1px solid #f0f0f0;padding: 0px 5px;position:absolute;font-size: 0.7em;color: #f0f0f0;left: 2px;top: 2px;">广告</span>
+        </div>
+        </div>
+        </div>
+         -->
+		<!-- <br/><br/> -->
+		<div class="relationContent">
+			
+			
+		</div>
+		<!-- 热门评论 -->
+		<div class="commentContent">
+			
+			
+		</div>
+		<!-- 最新评论 -->
+		<div class="commentContent">
+			
+			
+		</div>
+		<div class="commentJoin" style="text-align:center;">
+			<!-- 北京日报 -->
+			<input type="button" style=";border:none;text-decoration:none;background:#f5f5f5;text-align:center;font-size:10pt;color:red;height:0.30rem;width:100%;margin-top:0.10rem;margin-bottom: 0.10rem;" value="打开北京日报, 参与评论" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ec4a94e4b003a0f66811ca&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+		</div>
+		
+	</div>
+</section>
+<section id="ad" style="max-width:750px;margin: 0 auto;position: fixed; top: 0px; height: 0.65rem; width: 100%; background-color: rgba(255, 255, 255, 1.0)">
+	<div id="ad" style="max-width:750px;margin: 0 auto;position: fixed; top: 0px; height: 0.65rem; width: 100%; background-color: rgba(255, 255, 255, 1.0)">
+		<!-- th:if="${channelId == '5b165687a010550e5ddc0e6a' || channelId == '5b165667a010550e5ddc0e68' }" -->
+		<!-- 北京日报	-->
+		<div style="position: absolute; margin-left: 0.28rem;">
+			<img style="height: 0.55rem; width: 0.55rem; margin-top: 0.06rem; border-radius: 2px; -webkit-border-radius: 2px;" src="/asset/img/logo1.png" />
+			<img style="height: 0.2rem; width: 1.3rem; margin-top: 0.06rem; margin-left: 2px; border-radius: 2px; -webkit-border-radius: 2px;" src="/asset/img/word1.png" />
+		</div>
+		<img style="position: absolute; right:0.30rem; height: 0.20rem; margin-top: 0.22rem; padding-left: 0.06rem; padding-right: 0.06rem;" src="/asset/img/openApp2.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ec4a94e4b003a0f66811ca&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+		<!-- <div
+            style="position: absolute; right: 16px; line-height: 30px; height: 60px">
+            <input type="button" value="点击下载"
+                style="color:#808080; text-align:center; line-height: 16px; height: 22px; margin-top: 18px; padding-left: 10px; padding-right: 10px; font-size: 12px; border: 1; border-radius: 15px; -webkit-border-radius: 15px; background-color: transparent;border-style:solid; border-width:1px; border-color:#e7e7e7;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div> -->
+	</div>
+	<!-- 长安街知事 -->
+	<!-- <div id="ad"  th:if="${channelId == '5a2785b3a0100de51663ea78' || channelId == '5af8ed80a010301f500f153d' }"
+        style="position: fixed; top: 0px; height: 0.60rem; width: 100%; background-color: rgba(0, 0, 0, 0.4)">
+
+        <div style="position: absolute; margin-left: 0.28rem;">
+            <img th:src="@{/asset/img/98.png}"
+                style="height: 0.40rem; width: 0.40rem; margin-top: 0.10rem; border-radius: 2px; -webkit-border-radius: 2px;" />
+        </div>
+        <div
+            style="position: absolute; right: 0.35rem; line-height: 0.30rem; height: 0.60rem">
+            <img th:src="@{/asset/img/openApp.png}"
+                     style="position: absolute; right:0.16rem; height: 0.22rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.06rem;"
+                     onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+            <input type="button" value="点击下载"
+                style="color:white; text-align:center; line-height: 0.16rem; height: 0.22rem; margin-top: 0.20rem; padding-left: 0.20rem; padding-right: 0.20rem; font-size: 0.12rem; border: 1; border-radius: 2px; -webkit-border-radius: 2px; background-color: transparent;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div>
+    </div> -->
+</section>
+<section id="ad-bottom" style="max-width:750px;margin: 0 auto;position: fixed; bottom: 0px; width: 100%; background-color: rgba(0, 0, 0, 0.4)">
+	<div id="carousel-ad" class="carousel slide" data-ride="carousel" style="max-width:750px;margin: 0 auto;position:relative; background-color: rgba(71, 71, 71, 0.4)">
+		<!-- th:if="${channelId == '5b165687a010550e5ddc0e6a' || channelId == '5b165667a010550e5ddc0e68' }" -->
+		<!-- 北京日报	-->
+		<!-- 指示符 -->
+		<ul class="carousel-indicators" style="bottom: -13px;">
+			<li data-target="#carousel-ad" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-ad" data-slide-to="1"></li>
+			<li data-target="#carousel-ad" data-slide-to="2"></li>
+			<li data-target="#carousel-ad" data-slide-to="3"></li>
+			<li data-target="#carousel-ad" data-slide-to="4"></li>
+			<li data-target="#carousel-ad" data-slide-to="5"></li>
+			
+		</ul>
+
+		<!-- 轮播图片 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<div style="margin-left: 0.28rem;;height:0.53rem">
+					<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/13/60ed5622e4b003a0ed5e3da3_w300.jpeg" />
+					
+					<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+						<a style="text-align:left; color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60ed5622e4b003a0f66900f1.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="大兴机场临空区发布4条金融政策支持临空产业发展">大兴机场临空区发布4条金融政策支持临空产业发展</a>
+						<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${firstCarouselNews.title}]]</span> -->
+					</div>
+					
+					<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ed5622e4b003a0f66900f1&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+				</div>
+			</div>
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/12/60ec4a94e4b003a0ed5c0e9f_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60ec4a94e4b003a0f66811ca.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="大兴区领导赴新疆考察调研对口支援工作">大兴区领导赴新疆考察调研对口支援工作</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ec4a94e4b003a0f66811ca&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/12/60ec267ee4b003a0ed5b82f2_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60ec267ee4b003a0f667df07.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="大兴区领导调研养老服务体系建设情况">大兴区领导调研养老服务体系建设情况</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ec267ee4b003a0f667df07&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/12/60ebf19de4b003a0ed5ad28b_w400.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60ebf19de4b003a0f6679ae7.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="点赞！暴雨中的大兴身影！">点赞！暴雨中的大兴身影！</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60ebf19de4b003a0f6679ae7&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/11/60eaba54e4b003a0ed574cd0_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60eaba54e4b003a0f6664586.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="找到了！大兴桃甘甜爽脆的秘密">找到了！大兴桃甘甜爽脆的秘密</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60eaba54e4b003a0f6664586&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202107/10/60e99b00e4b003a0ed554db8_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/bjrbbeijinghao/contentApp/5ddf58fbe4b0ab28c844c36e/AP60e99b00e4b003a0f6655d2e.html?isshare=1&amp;contentType=0&amp;isBjh=1" title="磕红绿CP吗？来大兴这处公园吧~">磕红绿CP吗？来大兴这处公园吧~</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;AP60e99b00e4b003a0f6655d2e&#39;,&#39;0&#39;,&#39;bjrbbeijinghao&#39;,&#39;5ddf58fbe4b0ab28c844c36e&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+
+			<!-- <div class="item" th:if="${carouselNewsList != null and #lists.size(carouselNewsList) > 1}">
+              <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg"/>
+            </div>
+            <div class="item" th:if="${carouselNewsList != null and #lists.size(carouselNewsList) > 2}">
+              <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg"/>
+            </div> -->
+		</div>
+	</div>
+	<!-- 长安街知事 -->
+	<!-- <div id="ad"  th:if="${channelId == '5a2785b3a0100de51663ea78' || channelId == '5af8ed80a010301f500f153d' }"
+        style="position: fixed; bottom: 0px; height: 0.60rem; width: 100%; background-color: rgba(71, 71, 71, 0.4)">
+
+        <div style="position: absolute; margin-left: 0.28rem;">
+            <img th:src="@{/asset/img/98.png}"
+                style="height: 0.40rem; width: 0.40rem; margin-top: 0.10rem; margin-left: 0.16rem; border-radius: 2px; -webkit-border-radius: 2px;" />
+        </div>
+        <div
+            style="position: absolute; right: 0.35rem; line-height: 0.30rem; height: 0.60rem">
+            <input type="button" value="打开客户端"
+                style="color:white; text-align:center; line-height: 0.20rem; height: 0.28rem; margin-top: 0.16rem; padding-left: 0.12rem; padding-right: 0.12rem; font-size: 0.14rem; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: red;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div>
+    </div> -->
+	<input type="button" value="x" id="btn_carousel_close" onclick="closeCarousel()" style="position: absolute; bottom: 0.36rem; right:2px; color:white; text-align:center; line-height: 0.16rem; height: 0.22rem; margin-top: 2px; padding-left: 0.06rem; padding-right: 0.02rem; font-size: 0.12rem; border: none; background-color: transparent;" />
+</section>
+<script src="/asset/js/jquery.min.js"></script>
+<script src="/asset/js/jaudio.min.js"></script>
+<!-- <script th:src="@{/asset/js/ttsaudio.min.js}"></script> -->
+<!--评论点赞用 -->
+<script src="/asset/js/contentAPP.min.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="/asset/js/bootstrap.min.js"></script>
+<script src="/asset/js/isotope.pkgd.min.js"></script>
+<script src="/asset/js/imagesloaded.min.js"></script>
+<script src="/asset/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="/asset/js/WxShareController.min.js"></script>
+<script type="text/javascript" src="/asset/js/statistic.min.js"></script>
+<script type="text/javascript" src="/asset/js/ContentMediaController.js"></script>
+<script type="text/javascript" src="/asset/js/BrowerController.js"></script>
+<script type="text/javascript" src="/asset/js/BjhAuthorController.js"></script>
+<script type="text/javascript" src="/asset/js/reporter-card.min.js"></script>
+<script src="/asset/js/swiper-bundle.min.js"></script>
+
+<!-- 请置于所有广告位代码之后 ,粘贴在网页的最后的</body>之前,每个页面中添加一次即可-->
+<script type="text/javascript" src="//adreq.bjd.com.cn/javascripts/tsw.js" defer="defer" async="async"></script>
+
+<!-- 获取作者信息 -->
+<script>
+	if (true) {
+		var bjhChannelId = 'bjrbbeijinghao';
+		var bjhColumnId = '5ddf58fbe4b0ab28c844c36e';
+		url = "/rest/site/api/" + bjhChannelId + "/bjhStory/getBjhAuthorInfo/{channelUUID}";
+		url = url.replace("{channelUUID}", bjhColumnId);
+		$.ajax({
+			url: url,
+			type: "get",
+			success: function (data) {
+				$("#bjhAuthorHeadUrl").attr("src", data['headUrl']);
+				//测试头像url
+				//$("#bjhAuthorHeadUrl").attr("src", "https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1532308227_9f8c7d8912d972ad499bb426c8e60cf0.png?x-oss-process=style/w180gl");
+				$("#bjhAuthorName").text(data['name']);
+				$("#bjhAuthorIntro").text(data['intro']);
+				$BjhAuthorController.getFocusStatus("brower");
+			}
+		});
+	}
+</script>
+<!-- 处理稿件内容插入稿件链接 -->
+<script>
+	$(".storyContent img").click(function () {
+		var _this = $(this);//将当前的pimg元素作为_this传入函数
+		imgShow("#outerdiv", _this);
+	});
+	AddImgClickEvent();
+	var mySwiper = new Swiper('.swiper-container', {
+		//   direction: 'vertical', // 垂直切换选项
+		loop: false, // 循环模式选项
+		zoom: {
+			minRatio: 1,
+		},
+		// 如果需要分页器
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+			clickable: true
+		},
+		// 如果需要滚动条
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		observer: true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true,
+		on: {
+			slideChangeTransitionStart: function () {
+				if (mySwiper.zoom.scale != 1) {
+					mySwiper.zoom.out();
+				}
+			},
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
+	$(".storyContent a").each(function () {
+		var href = $(this).attr("href");
+		var params = href.split(":");
+		if (params[0] == "innerId") {
+			if (params[3].startsWith("AP")) {
+				var storyShareUrlTemplate = "/" + params[1] + "/contentApp/" + params[2] + "/" + params[3] + "?isshare=1";
+				$(this).attr("href", storyShareUrlTemplate);
+			} else if (params[3].startsWith("WS")) {
+				$(this).attr("href", $(this).attr("data-issueUrl"));
+			}
+		}
+	});
+</script>
+<!-- 针对于文章点赞用 -->
+<script>
+	var dianzan = function() {
+		$('#dianzanqian').css('display', 'none');
+		$('#dianzanhou').css('display', '');
+		var baseUrl = self.origin;
+		var articleid = 'AP60ec4a94e4b003a0f66811ca';
+		var a;
+		if ($("#likecntbefore").text() == '点赞') {
+			a = 0
+		} else {
+			a = Number($("#likecntbefore").text());
+		}
+		var likecntbefore1 = a + 1;
+		$.ajax({
+			url: baseUrl + "/rest/site/api/articlelike/add",
+			async: false,
+			cache: false,
+			data: 'articleid=' + articleid,
+			type: "POST",
+			dataType: "text",
+			success: function (data) {
+				var cnt = data;
+				if (data == 'error') {
+					document.getElementById('likecntafter').innerText = likecntbefore1;
+				} else {
+					document.getElementById('likecntafter').innerText = cnt;
+					dianzan = function() {}
+				}
+			}, error: function () {
+				document.getElementById('likecntafter').innerText = likecntbefore1;
+			}
+		});
+	}
+</script>
+</body>
+</html>
