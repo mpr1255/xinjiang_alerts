@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="publisher" content="TideCMS 9.0">
+	<meta charset="UTF-8">
+	<title>《新疆：我们的故事》 第四期：艺术</title>
+	<meta charset="utf-8">
+	<meta name="data-spm" content="a215s">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta itemprop="name" content="">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	
+	<link rel="stylesheet" href="/css/video_wap_css_0403.css" />	
+	
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?836c6d5709441617e10f1fbce065e708";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    
+    
+    
+</head>
+<body class="page-load">
+	<header>
+	            <input type="hidden" class="videourl" value="http://flv4.people.com.cn/videofile7//pvmsvideo/2021/7/15/ZhangRuoHan_862a339e6ba7e2f759331300769f2044_android_c.mp4" />
+        		<input type="hidden" class="player-cover ttt" value="http://flvimage.people.com.cn/videofile7/pvmsimage/2021/7/15/ZhangRuoHan_8fcc92fe8a1b7e0ae21a63e0b9e38991.png" />
+		<input type="hidden" class="globalid" value="1884949" />
+		<section id="player"></section>		
+	</header>
+	<div class="main-content">
+		<div class="live-detail">
+			<p class="title" >《新疆：我们的故事》 第四期：艺术<img class="arrow-img" id="arrow" src="/images/down1.png" /></p>
+			<p class="intro" id="intro" style="display:none">“舞蹈和音乐不分国界、不分民族，就是美的传播。”“创作一首好曲子，先要我自己觉得感动，否则我不写。”在“歌舞之乡”新疆，热爱艺术的人们如此说。在这里，家人团聚时会弹起“都塔尔”唱歌，夜市里的陌生人也可以一起跳起“麦西来甫”，公园广场舞是各民族群众的联欢……当极具民族风情的音乐响起，旋律里流淌出的是热爱、是梦想、是幸福。人均“歌神”“舞王”的新疆，爱了！</p>
+			<div class="footer clearfix">
+                <div class="source"><span>人民视频</span></div>
+                <div class="time">发布：<span class="time-sp">2021年07月15日</span></div>
+            </div>
+			 
+		</div>
+		
+		<div class="container">
+		    <!--相关推荐-->
+            <div class="relative-news">
+            	<div class="tl">
+            	  <img src="/images/title.png">
+            	    <h5>相关推荐</h5>
+            	</div>		
+            	<div class="news-list">
+            		
+            	</div>
+            </div>	
+		</div>						
+	</div>
+	
+	<footer class="fixed-bottom">
+        <div class="app-top">
+            <div class="top-left">
+                <img class="top-logo" src="/images/tubiao @2x.png" alt="logo">
+                <div>
+                    <h5>人民视频APP</h5>
+                    <p>在现场 看世界 听未来</p>
+                </div>
+            </div>
+            <div class="top-right">
+                <a class="video-btn" id="downloadButton">打开</a>
+            </div>
+        </div>
+    </footer>
+	
+	
+	
+	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/js/fontSize.js"></script>
+	<script type="text/javascript" src="/js/live_wap.js"></script>
+
+	
+	
+	<script type="text/javascript" charset="UTF-8" src="//res.cdn.openinstall.io/openinstall.js"></script>
+   <script type="text/javascript">
+
+    var data = OpenInstall.parseUrlParams();
+    var GlobalID = $(".globalid").val();
+    var appUrl = "1@video@"+GlobalID;
+    data = {'link':appUrl};
+    console.log(data);
+    new OpenInstall({
+       
+        appKey : "be02qo",
+        preferWakeup:true,
+        onready : function() {
+            var m = this, button = document.getElementById("downloadButton");
+            button.style.visibility = "visible";
+            m.schemeWakeup();
+            button.onclick = function() {
+                m.wakeupOrInstall();
+                return false;
+            }
+        }
+    }, data);
+
+</script>
+	
+	
+	<script>
+		$(function(){
+			var videoUrl = $(".videourl").val() ;
+		    var playerCover = $(".player-cover").val() ? $(".player-cover").val() :  "images/videoqj.png" ;
+			H5Player.status = "" ;					
+			H5Player.x5VideoPlay(videoUrl , true, playerCover );	
+		    resizeHeight();  
+		    
+	
+		       var openIntro = false;
+		       $('#arrow').click(function () {
+                    openIntro = !openIntro
+                    if (openIntro) {
+                        // $('#arrow').attr('src', './images/up.png')
+                        $('#arrow').css('transform','scaleY(-1)');
+                        $('#intro').css('display', 'block')
+                        $('.live-detail .title').css('display','block')
+                        // $('.live-detail .title').css('white-space', 'pre-wrap')
+                    } else {
+                        // $('#arrow').attr('src', './images/down1.png')
+                        $('#arrow').css('transform','scaleY(1)');
+                        $('#intro').css('display', 'none')
+                        $('.live-detail .title').css('display','-webkit-box')
+                        // $('.live-detail .title').css('white-space', 'nowrap')
+                    }
+                    resizeHeight();
+                });
+				
+		})
+		
+		function resizeHeight(){
+			var windowHeight = $("body").height(),
+			    headerHeight = $("header").outerHeight(true),
+				introH = $(".live-detail").outerHeight(true),
+				downBoxH = $(".download_box").outerHeight(true),
+				listbox = $('.container') ;
+				listboxH = windowHeight - headerHeight - introH - downBoxH - 5;
+				listbox.css("height",listboxH);				
+		}
+		$(window).resize(function () {
+			H5Player.setX5VideoStyle();
+			resizeHeight();
+			var angle = window.orientation;
+			if (angle == 0) {
+				if (H5Player.isX5Video()) {
+					$("#video").height(document.documentElement.clientHeight);
+				}
+			} else {
+				if (H5Player.isX5Video()) {
+					$("#video").height("100%");
+				}
+			}
+		})
+		
+	</script>
+	<script>
+	    var doctype=1;
+	    
+	    var GlobalID = $(".globalid").val()
+        var siteUrl = "https://apiapp.people.cn";
+        var Title="《新疆：我们的故事》 第四期：艺术";
+        var shareDesc="";
+        var Summary="“舞蹈和音乐不分国界、不分民族，就是美的传播。”“创作一首好曲子，先要我自己觉得感动，否则我不写。”在“歌舞之乡”新疆，热爱艺术的人们如此说。在这里，家人团聚时会弹起“都塔尔”唱歌，夜市里的陌生人也可以一起跳起“麦西来甫”，公园广场舞是各民族群众的联欢……当极具民族风情的音乐响起，旋律里流淌出的是热爱、是梦想、是幸福。人均“歌神”“舞王”的新疆，爱了！";
+        var pImg  = "http://flvimage.people.com.cn/videofile7/pvmsimage/2021/7/15/ZhangRuoHan_8fcc92fe8a1b7e0ae21a63e0b9e38991.png";
+        if(pImg.substr(0,4)!="http"){
+           pImg  = ""+siteUrl + pImg  ;
+        }    
+        
+        
+        function isBrower(){
+           
+                if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                     return true;
+                } else {
+                     return false;
+                }
+           
+        }
+       
+        function getTideAgent(){
+            // 通过ua标识判断
+            var userAgent = navigator.userAgent.toLowerCase();
+            if(userAgent.indexOf("peoplevideo") != -1){
+                 return true;
+            }else{
+                 return false;
+            }
+        }
+        
+        var tideAgentFlag = getTideAgent();
+    
+        var isBrowerFlag  = isBrower();
+       
+        if((isBrowerFlag)&(tideAgentFlag)){
+           $(".fixed-bottom").remove();
+           $(".page-load").css("padding-top","0rem");
+             
+        }else if(!isBrowerFlag){
+              $(".fixed-bottom").remove();
+              $(".page-load").css("padding-top","0rem");
+        }else{
+            $("#banner").show();
+        }
+       
+       
+       
+       
+       
+       
+        //var UrlLink="https://apiapp.people.cn/a/a/n/content_wap_403483.shtml";
+        var shareUrl
+        if(doctype==1){
+            shareUrl = "https://apiapp.people.cn/a/a/n/video_wap_403483.html";
+        }else{
+            shareUrl = "https://apiapp.people.cn/a/a/n/content_wap_403483.shtml";
+        }
+        var Desc;
+        if(shareDesc != ""){
+         	Desc=shareDesc;
+        }else{
+        	Desc=Summary;
+        }
+        if(!Desc){
+            Desc="在现场 看世界 听未来";
+        }
+    </script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/js/js_wap.js"></script>
+    <script>
+        relationNews(); //相关新闻
+    </script>	
+</body>
+
+</html>

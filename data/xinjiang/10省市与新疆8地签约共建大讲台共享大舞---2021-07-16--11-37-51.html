@@ -1,0 +1,416 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10省市与新疆8地签约 共建大讲台 共享大舞台-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/article.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)" class="act"><script type="text/javascript" language="javascript">var currentId=2;</script><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)"><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+  <div class="banner"></div>
+  <div class="clear h10"></div>
+  <div class="side fr">
+    <div class="side_nav">
+      <div class="tit"> 喀什概况 </div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_16/Index.aspx">喀什概况</a></li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a></li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a></li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+   
+  </div>
+  <div class="main fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    
+    <a href="/Category_9/Index.aspx" target="_self">走进喀什</a>&gt;&gt;
+    <a href="/Category_122/Index.aspx" target="_self">文化旅游</a>&gt;&gt;
+    <a href="/Category_151/Index.aspx" target="_self">文化艺术</a> </div>
+      <div class="bd">
+        <h1>10省市与新疆8地签约 共建大讲台 共享大舞台</h1>
+        <div class="line"> <span>来源：天山网-新疆日报</span><span> 作者：记者银璐</span><span> 发布时间：2021年07月16日</span><span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=52291"></script>
+   </span> <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span><span> 【<a href="/Print.aspx?id=52291">打印</a>】</span>--> </div>
+        <div class="content" id="fontzoom"> 
+      
+     <p>　　天山网-新疆日报讯（记者银璐报道）“我们将努力把更多的上海文化艺术精品带到新疆来，让南疆群众在家门口就能看舞台剧、听音乐会、看绘画摄影展。”7月13日，上海市群众艺术馆馆长吴鹏宏在乌鲁木齐参加第八次全国省级、副省级文化（群艺）馆馆长联席会时说。</p><p>　　会上，北京、上海、湖南等10个对口援疆省市与新疆和田地区、哈密市、阿勒泰地区等8个地州市签订文化馆援疆合作协议，共同搭建大舞台、大讲台、云平台。全国公共文化发展中心就“学才艺”项目在新疆落地与新疆文化馆签订合作协议，将为新疆提供优质全民艺术普及教学资源和公益性的数字服务平台资源。</p><p>　　为深入实施“文化润疆”工程，上海市群众艺术馆于2020年10月带着精品文艺节目，在泽普、莎车、巴楚、叶城演出，深受当地群众喜爱。“我们要把这样精品文化巡演持续下去，并提升频次，扩大范围和艺术形式。我相信这种巡演，也是培育新疆文艺精品创作力量的课堂。”吴鹏宏说，他们将着力为新疆优秀文艺团队到上海等省市演出提供更多机会。</p><p>　　“我们今年计划在吐鲁番培训多批次文化干部，还将加大两地文化交流的渠道和平台，让吐鲁番的歌舞演出多走进湖南，也让湖南优质的曲艺文化，比如花鼓戏、山歌等来到吐鲁番观众身边。”湖南省文化馆馆长叶伟平说，他们将以文艺小分队的形式，让演出既能落地城市，也能深入乡村。</p><p>　　“公共文化服务体系建设，要满足群众对文化空间、文化产品、文化活动、文化方式的需求。”江苏省文化馆馆长戴珩说，通过专题讲座、文艺辅导、技能培训，壮大新疆文化人才队伍，打造群众愿意去的文化空间、愿意看的演出展览、愿意参与的文化活动。</p><p>　　“我们的目标是推动新疆全民艺术普及文化创意特色产品的开发和市场化运作新路径，逐步满足新疆各族群众对多品类、多层次艺术普及服务的需求，打造‘云端美育’新疆落地示范模式。”新疆文化馆馆长王曙光说。</p>
+    
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=1170">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="keywords" content="中国地方政府债券信息公开平台,中国地方政府债务信息公开平台,中国地方政府债券公开平台,债务信息,债券信息,债券概况,债券发行,债券发行额,债券还本,债券付息,债券余额,债务余额,一级市场,财政收支,经济社会发展指标,一般公共预算收入,转移性收入,政府性基金预算,地区,全国,年度指标,季度指标,月度指标"/>
+    <meta http-equiv="description" content="本网站是根据党中央、国务院有关文件规定以及推进政务公开的要求，财政部建设的全国统一的地方政府债务（债券）信息公开平台，由地方政府定期公开债务限额、余额以及债券发行、存续期管理、经济财政状况等信息，形成地方政府债券统计数据库。"/>
+    <meta name="baidu-site-verification" content="claK5iQR5b"/>
+    <title>中国地方政府债券信息公开平台</title>
+    <link rel="stylesheet" href="/r/cms/celma/celma/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/r/cms/celma/celma/css/first-lvl/news.css"/>
+    <link type="text/css" rel="stylesheet" href="/r/cms/celma/celma/css/global.css"/>
+    <link type="text/css" rel="stylesheet" href="/r/cms/celma/celma/css/base.css"/>
+    <link href="/r/cms/celma/celma/myEffect/css/datouwang.css" rel="stylesheet" type="text/css"/>
+    <!-- 2021-06-02 guodg 二级页面样式引入-->
+    <link type="text/css" rel="stylesheet" href="/r/cms/celma/celma/css/second-lvl/second-lvl.css"/>
+    <link rel="stylesheet" href="/r/cms/celma/celma/bootstraptable/bootstrap-table.css">
+    <link rel="stylesheet" href="/r/cms/celma/celma/layui/css/layui.css">
+    <link rel="stylesheet" href="/r/cms/celma/celma/bootstrap/css/bootstrap.css">
+    <link href="/r/cms/celma/celma/css/tether.min.css" rel="stylesheet">
+    <link href="/r/cms/celma/celma/layui/layui.all.js"/>
+    <link type="text/css" rel="stylesheet" href="/r/cms/celma/celma/zTree/zTreeStyle.css"/>
+    <!-- 双日历控件-->
+    <link href="/r/cms/celma/celma/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="/r/cms/celma/celma/css/daterangepicker-bs3.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/r/cms/celma/celma/bootstrap-select/bootstrap-select.min.css"/>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <script src="/r/cms/celma/celma/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/r/cms/front.js" type="text/javascript"></script>
+    <script src="/r/cms/celma/celma/js/html5shiv.min.js"></script>
+    <script src="/r/cms/celma/celma/js/respond.min.js"></script>
+    <script src="/r/cms/celma/celma/js/tether.min.js"></script>
+    <script src="/r/cms/celma/celma/js/collapse.js" type="text/javascript"></script>
+    <script src="/r/cms/celma/celma/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/bootstrap-table.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/bootstrap-table-export.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/tableExport/libs/FileSaver/FileSaver.min.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/tableExport/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/table_export/table-export.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/table_export/tableExport.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/table_export/jquery.base64.js"></script>
+    <script src="/r/cms/celma/celma/bootstraptable/table_export/main.js"></script>
+    <script src="/r/cms/celma/celma/js/jquery.cookie.js"></script>
+    <script src="/r/cms/celma/celma/bootstrap/js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="/r/cms/celma/celma/myEffect/js/koala.min.1.5.js"></script>
+    <script src="/r/cms/celma/celma/js/sjcx/sjcx-parent.js"></script>
+    <script src="/r/cms/celma/celma/zTree/ztree.core.min.js"></script>
+    <script type="text/javascript" src="/r/cms/celma/celma/js/echarts.js"></script>
+    <script type="text/javascript" src="/r/cms/celma/celma/js/moment.js"></script>
+    <script type="text/javascript" src="/r/cms/celma/celma/js/daterangepicker.js"></script>
+    <!--bootstrapSelect -->
+    <script type="text/javascript" src="/r/cms/celma/celma/bootstrap-select/bootstrap-select.js"></script>
+    <script type="text/javascript" src="/r/cms/celma/celma/bootstrap-select/defaults-zh_CN.js"></script>
+    <!--layer 弹出框 -->
+    <script type="text/javascript" src="/r/cms/celma/celma/layer/layer.js"></script>
+    <!-- 设置body背景图片 -->
+    <style>
+        body {
+            background: url(/r/cms/celma/celma/images/two-level-page/bj-2-01.png);
+            background-size: cover;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var dataServiceUrl = "http://www.governbond.org.cn:8080";
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            Cms.siteFlow("", location.href, document.referrer, "true");
+            $.cookie("_site_id_cookie", "5", {path: ''});
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        });
+
+        /**
+         * 获取url参数
+         * @param variable
+         * @returns {string}
+         */
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return '';
+        }
+    </script>
+</head>
+<body class="header-img">
+<div class="my-header-banner">
+<div class="my-container clearfix">
+	<a class="my-header-logo" href="/" style="margin-top:34px"><img src="/r/cms/celma/celma/images/banner/dfpt-logo.jpg"></a>
+	<div class="header-r" style="width: 35%">
+		<div class="header-tag-last">
+			<a href="/" target="_blank" style="color: #024278;">网站首页</a> 
+			<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)" style="color: #024278;">收藏本站</a> 
+				<a href="http://www.governbond.org.cn/lxfs/index.jhtml" target="_blank" style="color: #024278;">联系我们</a> 
+		</div>
+		<div class="ie-header-search" style="float: right;">
+			<form action="/search.jspx" target="_blank" name="searchForm"
+				id="searchForm">
+				<div class="search"
+					style="width: 300px; height: 36px; border: 1px solid #97a7a4;">
+					<input type="text" name="q" value="" maxlength="50"
+						autocomplete="off" class="searchCon"
+						style="width: 100%; height: 100%; font-size: 12px; color: #808080"
+						placeholder="请输入您要搜索的关键字"> <input type="hidden"
+						name="token" id="token" value="" />
+				</div>
+				<div class="home-searchMenu search header-img" style="background-color: #49b0d3;">
+					<img src="/r/cms/celma/celma/images/search.png"> <input type="button"
+						value="" class="searchMenu" onclick="query()">
+				</div>
+			</form>
+		</div>
+
+		<div id="show_time"
+			style="height: 20px; text-align: right; font-size: 14px; margin-top: 16px; color: #666; float: right; width: 200px">
+			 访客数总量： <span id="visitor"></span>
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript">
+	var _hmt = _hmt || [];
+	(function() {
+	
+	})();
+
+	function qkeypress() {
+		var q = $("input[name=q]");
+		if (q.val().trim() != "") {
+			$("input[name=q]").autocomplete("enable");
+		} else {
+			$("input[name=q]").autocomplete("disable");
+		}
+	}
+
+	function query() {
+		var q = $("input[name=q]");
+		if (q.val().trim() != "") {
+			$.post("/createToken.jspx", {}, function(data) {
+				$("#token").val(data.token);
+
+				$("#searchForm").submit();
+			}, "json");
+		} else {
+			alert("搜索条件不能为空")
+			//$("input[name=q]").autocomplete("off");
+		}
+
+	}
+	/*function query() {
+		$.post("/createToken.jspx", {}, function(data) {
+			$("#token").val(data.token);
+			$("#searchForm").submit();
+		}, "json");
+	}*/
+
+	$(function() {
+		$("input[name='q']").bind('keypress', function(event) {
+			if (event.keyCode == 13) {
+				event.preventDefault();
+				query();
+			}
+		});
+	});
+	//加入收藏
+	function AddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL);
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+			}
+		}
+	}
+
+	//设为首页
+	function SetHome(url) {
+		if (document.all) {
+			document.body.style.behavior = 'url(#default#homepage)';
+			document.body.setHomePage(url);
+		} else {
+			alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+		}
+	}
+	//获取当前时间，并修改格式，内容放在id为show_time的div中
+	//setInterval("fun(show_time)", 1);
+	function fun(timeID) {
+		var date = new Date(); //创建对象  
+		var y = date.getFullYear(); //获取年份  
+		var m = date.getMonth() + 1; //获取月份  返回0-11  
+		var d = date.getDate(); // 获取日  
+		var w = date.getDay(); //获取星期几  返回0-6   (0=星期天) 
+		var ww = ' 星期' + '日一二三四五六'.charAt(w);//星期几
+		if (m < 10) {
+			m = "0" + m;
+		}
+		if (d < 10) {
+			d = "0" + d;
+		}
+		document.getElementById(timeID.id).innerHTML = y + " 年 " + m + " 月 "
+				+ d + " 日    " + ww;
+	}
+</script></div>
+<div class="my-header-nav">
+<style>
+    .nav_sjcx ul li > a {
+        width: 205px;
+    }
+</style>
+
+<div class="my-header-nav">
+    <div class="my-container">
+        <div class="my-menu nav_sjcx">
+            <ul>
+                <!-- 20210625 guodg 修改网站首页链接 为当前网站-->
+                <li class="nav_sjcx_index">
+                    <a href="/" title="首页">
+                        &nbsp;&nbsp;
+                    </a>
+                </li>
+
+                <li><a href="http://www.celma.org.cn/zqxx/index.jhtml"
+                       style="padding-left: 0px">债券信息</a></li>
+
+                <li><a href="http://www.celma.org.cn/ydsj/index.jhtml"
+                       style="padding-left: 0px">月度数据</a></li>
+
+                <li><a href="http://www.celma.org.cn/jdsj/index.jhtml"
+                       style="padding-left: 0px">季度数据</a></li>
+
+                <li><a href="http://www.celma.org.cn/ndsj/index.jhtml"
+                       style="padding-left: 0px">年度数据</a></li>
+
+                <li><a href="http://www.governbond.org.cn"
+                       style="padding-left: 0px">返回主站</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+<div class="my-container clearfix">
+    <h2 class="h2-top-secondPage">
+        您所在的位置:&nbsp;
+        <a href="/">首页</a>
+        &nbsp;>&nbsp;
+        <a href="http://www.celma.org.cn/zqsc/index.jhtml" target="_blank">债券市场</a>
+         &nbsp;>&nbsp; 
+        <a href="http://www.celma.org.cn/yjsxxgk/index.jhtml" target="_blank">预决算公开</a>
+        
+    </h2>
+    <section class="secondPage-content-title" style="background-color: #ffffff;" id="testPrint">
+        <h1>2020年新疆生产建设兵团当年债务限额提前下达情况</h1>
+        <div class="secondPage-content-inf">
+            2020&nbsp;年&nbsp;06&nbsp;月&nbsp;03&nbsp;日
+            <!--&nbsp;&nbsp;作者：张学刚-->
+            <!-- 债券市场栏目下的子栏目，文章来源隐藏-->
+            <div class="content-action" id="printHide">
+            <span style="float:left;">【字体:
+                    <a onclick="setFontSize('content-txt',20)" style="cursor:pointer;">大</a>&nbsp;&nbsp;|&nbsp;
+                    <a onclick="setFontSize('content-txt',16)" style="cursor:pointer;">中</a>&nbsp;&nbsp;|&nbsp;
+                    <a onclick="setFontSize('content-txt',12)" style="cursor:pointer;">小</a>】
+            </span>
+                <!--分享内容-->
+                <span class="content-share" style="float:right;">
+<ul id="content-share-list">
+    <li>
+        <a class="content_qq"
+           onclick="window.open('http://connect.qq.com/widget/shareqq/index.html?url='+encodeURIComponent(document.location.href));return false;"
+           title="分享到QQ">
+        </a>
+    </li>
+    <li>
+        <a class="content_qqzone"
+           onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location.href));return false;">
+        </a>
+    </li>
+    <li>
+        <a class="content_weixin" data-cmd="weixin"></a>
+    </li>
+    <li>
+        <a class="content_sina"
+           href="javascript:window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title.substring(0,76))+'&url='+encodeURIComponent(location.href)+'&rcontent=','_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes'); void 0">
+        </a>
+    </li>
+</ul>
+<script>
+    window._bd_share_config = {
+    "common": {
+        "bdSnsKey": {},
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": "",
+        "bdStyle": "0",
+        "bdSize": "16"
+    },
+    "share": {},
+    "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["tqq","qzone", "weixin", "tsina",  "renren"]}
+};
+with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>	            </span>
+                <!--邮件/打印等内容-->
+                <span style="float: right;">
+                <a onclick="printTxt()" style="cursor:pointer;"><img
+                        src="/r/cms/celma/celma/images/third-lvl-page/print-third.png"></a>
+                <a onclick="pdfPrint()" style="cursor:pointer;margin: 0px 12px;"><img
+                        src="/r/cms/celma/celma/images/third-lvl-page/pdf-third.png"></a>
+                <a onclick="mailsome1()" style="cursor:pointer;margin-right: 10px;"><img
+                        src="/r/cms/celma/celma/images/third-lvl-page/email-third.png"></a>
+            </span>
+            </div>
+        </div>
+
+        <div class="content-txt" id="content-txt">
+            
+        </div>
+
+        <div class="content-fj">
+            <h4>附件</h4>
+            <ul>
+                <li>
+                    <a id="attach0" href="http://oss.governbond.org.cn/uploadFiles/90/attachFiles/202006/e49b16cc-05be-4c8f-b571-8b3d86c0f858.pdf" title="当年债务限额提前下达情况.pdf">当年债务限额提前下达情况.pdf</a>
+                    <span style="float: right;">
+                        2020-06-03 17:19:19
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 分页 -->
+        <div class="pagebar"></div>
+        <div class="content-link clearfix">
+            <span class="prev-content"><i></i>上一篇：<a
+                    href="http://www.celma.org.cn/yjsxxgk/47699.jhtml">2019年新疆生产建设兵团预决算公开表</a></span>
+            <span class="next-content">下一篇：<a
+                    href="http://www.celma.org.cn/yjsxxgk/50850.jhtml">2020年河北省当年债务限额提前下达情况表</a><i></i></span>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+    });
+</script>
+<div class="my-page-footer clear">
+	<div class="my-container">
+    	<!-- <hr/> -->
+<div style="cursor: pointer;line-height: 54px;font-size: 16px;color: #024278;margin-right: 10px;width: 140px;float: left;">
+	 <img src="/r/cms/celma/celma/images/dsy_yqlj_65.gif" style="margin-top: -3px;margin-left: 30px;">
+               友情链接&nbsp;&nbsp;&nbsp;&nbsp;|
+</div>
+<ul class="nav nav-pills" style="height:56px;border-top: 1px solid #aaaaaa;margin-top: 40px;">
+    <li class="sel" style="height: 100%;font-size: 14px;line-height: 34px;">
+    	<a href="javascript:void();" style="pointer-events: none;color:#666;">政府网站<img src="/r/cms/celma/celma/images/friend_link_sel.png" style="margin-left: 5px"></a>
+    	<ul class="select_content" style="left:-150px;z-index: 111;min-height:240px;width:1170px;background: #e5e5e5;line-height: 30px;padding:10px 30px;position:absolute;display:none;">
+				<li style="width: 20%;float: left;"><a href="http://www.mof.gov.cn" onclick="$.get('/friendlink_view.jspx?id=10026')" target="_blank" style="color:#666;text-decoration: none;">中华人民共和国财政部</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.audit.gov.cn/index.html" onclick="$.get('/friendlink_view.jspx?id=10027')" target="_blank" style="color:#666;text-decoration: none;">中华人民共和国审计署</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.pbc.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10028')" target="_blank" style="color:#666;text-decoration: none;">中国人民银行</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.cbirc.gov.cn" onclick="$.get('/friendlink_view.jspx?id=10029')" target="_blank" style="color:#666;text-decoration: none;">中国银行保险监督管理委员会</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.csrc.gov.cn/pub/newsite/" onclick="$.get('/friendlink_view.jspx?id=10030')" target="_blank" style="color:#666;text-decoration: none;">中国证券监督管理委员会</a></li>
+		</ul> 
+    </li>
+    <li class="sel" style="height: 100%;font-size: 14px;line-height: 34px;">
+    	<a href="javascript:void();" style="pointer-events: none;color:#666;">地方财政<img src="/r/cms/celma/celma/images/friend_link_sel.png" style="margin-left: 5px"></a>
+    	<ul class="select_content" style="left:-257px;z-index: 111;min-height:240px;width:1170px;background: #e5e5e5;line-height: 30px;padding:10px 30px;position:absolute;display:none;">
+				<li style="width: 20%;float: left;"><a href="http://czj.beijing.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10049')" target="_blank" style="color:#666;text-decoration: none;">北京市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://cz.tj.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10050')" target="_blank" style="color:#666;text-decoration: none;">天津市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.czj.sh.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10051')" target="_blank" style="color:#666;text-decoration: none;">上海市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czj.cq.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10052')" target="_blank" style="color:#666;text-decoration: none;">重庆市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.hebei.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10053')" target="_blank" style="color:#666;text-decoration: none;">河北省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.shanxi.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10054')" target="_blank" style="color:#666;text-decoration: none;">山西省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.ln.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10055')" target="_blank" style="color:#666;text-decoration: none;">辽宁省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.jl.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10056')" target="_blank" style="color:#666;text-decoration: none;">吉林省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.hljczt.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10057')" target="_blank" style="color:#666;text-decoration: none;">黑龙江省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.jiangsu.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10058')" target="_blank" style="color:#666;text-decoration: none;">江苏省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.czj.dl.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10083')" target="_blank" style="color:#666;text-decoration: none;">大连市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://qdcz.qingdao.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10084')" target="_blank" style="color:#666;text-decoration: none;">青岛市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czj.ningbo.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10085')" target="_blank" style="color:#666;text-decoration: none;">宁波市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://cz.xm.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10086')" target="_blank" style="color:#666;text-decoration: none;">厦门市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://szfb.sz.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10087')" target="_blank" style="color:#666;text-decoration: none;">深圳市财政局</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.zjczt.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10059')" target="_blank" style="color:#666;text-decoration: none;">浙江省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.ah.gov.cn/portal/index.htm" onclick="$.get('/friendlink_view.jspx?id=10060')" target="_blank" style="color:#666;text-decoration: none;">安徽省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.fujian.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10061')" target="_blank" style="color:#666;text-decoration: none;">福建省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.jxf.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10062')" target="_blank" style="color:#666;text-decoration: none;">江西省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.shandong.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10063')" target="_blank" style="color:#666;text-decoration: none;">山东省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.hncz.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10064')" target="_blank" style="color:#666;text-decoration: none;">河南省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.hubei.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10065')" target="_blank" style="color:#666;text-decoration: none;">湖北省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.hunan.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10066')" target="_blank" style="color:#666;text-decoration: none;">湖南省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.gd.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10067')" target="_blank" style="color:#666;text-decoration: none;">广东省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://mof.hainan.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10068')" target="_blank" style="color:#666;text-decoration: none;">海南省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.sc.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10069')" target="_blank" style="color:#666;text-decoration: none;">四川省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.guizhou.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10070')" target="_blank" style="color:#666;text-decoration: none;">贵州省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.yn.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10071')" target="_blank" style="color:#666;text-decoration: none;">云南省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.shaanxi.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10072')" target="_blank" style="color:#666;text-decoration: none;">陕西省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.gansu.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10073')" target="_blank" style="color:#666;text-decoration: none;">甘肃省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.qinghai.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10074')" target="_blank" style="color:#666;text-decoration: none;">青海省财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.nmg.gov.cn/nmczt/" onclick="$.get('/friendlink_view.jspx?id=10076')" target="_blank" style="color:#666;text-decoration: none;">内蒙古自治区财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.gxzf.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10077')" target="_blank" style="color:#666;text-decoration: none;">广西壮族自治区财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://czt.nx.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10079')" target="_blank" style="color:#666;text-decoration: none;">宁夏回族自治区财政厅</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.xjcz.gov.cn/" onclick="$.get('/friendlink_view.jspx?id=10080')" target="_blank" style="color:#666;text-decoration: none;">新疆维吾尔自治区财政厅</a></li>
+		</ul> 
+    </li>
+    <li class="sel" style="height: 100%;font-size: 14px;line-height: 34px;">
+    	<a href="javascript:void();" style="pointer-events: none;color:#666;">研究机构<img src="/r/cms/celma/celma/images/friend_link_sel.png" style="margin-left: 5px"></a>
+    	<ul class="select_content" style="left:-364px;z-index: 111;min-height:240px;width:1170px;background: #e5e5e5;line-height: 30px;padding:10px 30px;position:absolute;display:none;">
+				<li style="width: 20%;float: left;"><a href="http://www.nifd.cn/" onclick="$.get('/friendlink_view.jspx?id=10032')" target="_blank" style="color:#666;text-decoration: none;">国家金融发展实验室</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.chineseafs.org/" onclick="$.get('/friendlink_view.jspx?id=10033')" target="_blank" style="color:#666;text-decoration: none;">中国财政科学研究院</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.ucass.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10034')" target="_blank" style="color:#666;text-decoration: none;">中国社会科学院大学</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.nankai.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10035')" target="_blank" style="color:#666;text-decoration: none;">南开大学</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.cufe.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10036')" target="_blank" style="color:#666;text-decoration: none;">中央财经大学</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.uibe.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10037')" target="_blank" style="color:#666;text-decoration: none;">对外经济贸易大学</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.bfsu.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10038')" target="_blank" style="color:#666;text-decoration: none;">北京外国语大学</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.sufe.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10039')" target="_blank" style="color:#666;text-decoration: none;">上海财经大学</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.swufe.edu.cn/" onclick="$.get('/friendlink_view.jspx?id=10040')" target="_blank" style="color:#666;text-decoration: none;">西南财经大学</a></li>
+		</ul> 
+    </li>
+    <li class="sel" style="height: 100%;font-size: 14px;line-height: 34px;">
+    	<a href="javascript:void();" style="pointer-events: none;color:#666;">其他机构<img src="/r/cms/celma/celma/images/friend_link_sel.png" style="margin-left: 5px"></a>
+    	<ul class="select_content" style="left:-471px;z-index: 111;min-height:240px;width:1170px;background: #e5e5e5;line-height: 30px;padding:10px 30px;position:absolute;display:none;">
+				<li style="width: 20%;float: left;"><a href="https://www.chinabond.com.cn/" onclick="$.get('/friendlink_view.jspx?id=10041')" target="_blank" style="color:#666;text-decoration: none;">中国债券信息网</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.sse.com.cn/" onclick="$.get('/friendlink_view.jspx?id=10042')" target="_blank" style="color:#666;text-decoration: none;">上海证券交易所</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.szse.cn/" onclick="$.get('/friendlink_view.jspx?id=10043')" target="_blank" style="color:#666;text-decoration: none;">深圳证券交易所</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.cfen.com.cn/" onclick="$.get('/friendlink_view.jspx?id=10044')" target="_blank" style="color:#666;text-decoration: none;">中国财经报社</a></li>
+		</ul> 
+    </li>
+	<li class="sel" style="height: 100%;font-size: 14px;line-height: 34px;">
+		<a href="javascript:void();" style="pointer-events: none;color:#666;">国际组织<img src="/r/cms/celma/celma/images/friend_link_sel.png" style="margin-left: 5px"></a>
+		<ul class="select_content" style="left:-578px;z-index: 111;min-height:240px;width:1170px;background: #e5e5e5;line-height: 30px;padding:10px 30px;position:absolute;display:none;">
+				<li style="width: 20%;float: left;"><a href="https://www.shihang.org/" onclick="$.get('/friendlink_view.jspx?id=10045')" target="_blank" style="color:#666;text-decoration: none;">世界银行（WB）</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.adb.org/" onclick="$.get('/friendlink_view.jspx?id=10046')" target="_blank" style="color:#666;text-decoration: none;">亚洲开发银行（ADB）</a></li>
+				<li style="width: 20%;float: left;"><a href="https://www.imf.org/external/chinese/index.htm" onclick="$.get('/friendlink_view.jspx?id=10047')" target="_blank" style="color:#666;text-decoration: none;">国际货币基金组织（IMF）</a></li>
+				<li style="width: 20%;float: left;"><a href="http://www.oecdchina.org/" onclick="$.get('/friendlink_view.jspx?id=10048')" target="_blank" style="color:#666;text-decoration: none;">经合组织（OECD）</a></li>
+		</ul> 
+	</li>
+</ul>   
+
+<script>
+
+$(function(){
+
+	$(".sel").hover(function(){		
+		$(this).css("background","#e5e5e5");
+		$(this).find(".select_content").show();		
+	},function(){
+		$(this).css("background","");
+		$(this).find(".select_content").hide();
+	});
+	
+	$(".nav-pills>li>ul>li>a").hover(function(){
+		$(this).css("color","#337ab7");
+	},function(){
+		$(this).css("color","#666666");
+	});
+
+});
+</script>	</div>	
+
+<!-- <div class="my-footer-site">
+			<a style="margin-left: 0;" href="http://www.celma.org.cn/gywm/index.jhtml">关于我们</a> 
+	 <span>|</span> 
+	<a href="#">站点地图</a> <span>|</span> 
+	<a onclick="SetHome(window.location)"
+		href="javascript:void(0)">设为首页</a> <span>|</span> 
+	<a onclick="AddFavorite(window.location,document.title)"
+		href="javascript:void(0)">收藏本站</a>
+</div> -->
+<div class="my-footer-copyright" style="color: white;margin-top:10px;background: url('/r/cms/celma/celma/images/celma_footer.jpg');">
+	<div class="my-container" style="margin-top:20px">
+		<p>主办： 财政部政府债务研究和评估中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术支持：财政部信息网络中心</p>
+		<p><a href="https://beian.miit.gov.cn" target="_blank">京ICP备19045915号-2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202008369" target="_blank">京公网安备	11010202008369号</a></p>
+		<img src="/r/cms/celma/celma/images/sydw.png" style="width: 94px; height: 94px;">
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript">
+	//加入收藏
+	function AddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL);
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+			}
+		}
+	}
+
+	//设为首页
+	function SetHome(url) {
+		if (document.all) {
+			document.body.style.behavior = 'url(#default#homepage)';
+			document.body.setHomePage(url);
+		} else {
+			alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+		}
+	}
+</script></div>
+</body>
+</html>
