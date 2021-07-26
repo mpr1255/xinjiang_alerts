@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>水利部网站 | 黄河水利委员会开展新疆部批生产建设项目水土保持跟踪检查——水土保持生态环境建设网</title>
+<meta name="keywords" content="" />
+<meta name="description" content="水利部网站 | 黄河水利委员会开展新疆部批生产建设项目水土保持跟踪检查" />
+	<link rel="stylesheet" href="/temp/css/by_jcpj.css" />
+		<link rel="stylesheet" href="/temp/css/by_sbspej.css" />
+		<link rel="stylesheet" href="/temp/css/by_arctive.css" />
+		<link rel="stylesheet" href="/temp/css/by_bast.css" /> 
+		<link rel="stylesheet" href="/temp/css/by_header.css" />
+		<link rel="stylesheet" href="/temp/css/by_footer.css" />
+		<link rel="stylesheet" href="/temp/css/by_master.css" />
+</head>
+	<body style="background:url(/templets/default/img/by_1.png)no-repeat center top #e2e2e2;">
+		
+		<body style="background:url(/templets/default/img/by_1.png)no-repeat center top #e2e2e2;">
+		<!--header-->
+		<div class="header">
+          		<img src="/uploads/181204/1-1Q204153053M5.jpg" width="1200" height="220" />
+		<!--	<div class="logo">
+				<img src="/temp/images/by_logo.png" alt="水土保持生态环境建设网" />
+			</div>-->
+          
+			<div class="item" style="background:#126635;">
+				水保要闻  	</div>
+			<!--搜索框-->
+			<div class="search">
+			 <form class="search-box" id="searchBox" name="search_js1" method="post" action="/e/search/index.php" nsubmit='return search_check(document.search_js1);'>   
+			 <div class="phone-text">
+					 <select id="rid"  class="search-option" style="display: none" name=show>       
+			 <option value=title selected="selected">标题</option>       
+			 <option value=title,smalltext,newstext,writer>搜索全部</option>     
+			 </select>   
+					   <input name="keyboard" type="text"  class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+						<select id="rid"  class="search-option" style="display: none" name=show>       
+			 <option value="title" selected="selected">检索标题</option>       
+			 <option value="title,smalltext,newstext,writer">智能模糊</option>     
+			 </select>  
+			 <div class="button">
+               <button  id="searchsubmit" name="Submit" type="submit" class="search-submit" style="background-color: transparent;border:0;"> <img src="/temp/images/by_search.png" alt="" style="margin: 0 15px -11px;"></button>
+               </div>
+			</div>
+        </form>
+		</div>
+			
+		</div>
+		
+		<!--nva-->
+		<div class="menu">
+         
+			 <ul>
+        <li>  <a href="/">  <img class="home" src="/temp/images/by_home.png" alt=""></a></li>
+ 						 <li><a href="/sbyw">水保要闻</a></li>
+								 
+							   						 <li><a href="/dfxw">地方新闻</a></li>
+								 
+							   						 <li><a href="/gglm">通知公告</a></li>
+								 
+							   						 <li><a href="/e/action/ListInfo/?classid=195">专题报道</a></li>
+								 
+							   						 <li><a href="/sbgh">水保规划</a></li>
+								 
+							   						 <li><a href="/jcpj">监测评价</a></li>
+								 
+							   						 <li><a href="/zhzl/zhzl/">综合治理</a></li>
+								 
+							   						 <li><a href="/jdzf">监督执法</a></li>
+								 
+							   						 <li><a href="/scjsxmgl">生产建设项目管理</a></li>
+								 
+							   						 <li><a href="/sbsp">水保视频</a></li>
+								 
+							   						 <li><a href="/zcfg">政策法规</a></li>
+								 
+							   						 <li><a href="/qgstbcgg">全国水土保持公报</a></li>
+								 
+							   						 <li><a href="/sbtu">水保图片</a></li>
+								 
+							   				 
+
+        </ul>
+		</div>
+
+<!--封装好的视频布局样式-->
+<link rel="stylesheet" href="/temp/video/jsmodern.min.css">
+<script src="/temp/video/jquery.min.js"></script>
+<!--mp4视频插件-->
+<script src="/temp/video/jsmodern.min.js"></script>
+<style>
+#video {
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+#video video {
+	width: 100%;
+	object-fit: fill;
+}
+
+.VideoBtn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-left: -35px;
+	margin-top: -35px;
+	cursor: pointer;
+	z-index: 10;
+}
+</style>
+
+<!--视频插件调用方法-->
+<script>
+$(function () {
+	//视频
+	jsModern.video("#video");
+	//播放视频
+	$(".VideoBtn").click(function () {
+		var video = document.getElementById("videoShow");
+		video.play();
+		$('.VideoBtn').hide();
+	})
+	//监听视频的播放状态
+	var video = document.getElementById("videoShow");
+	video.oncanplay = function () {
+		$(".VideoBtn").show();
+		//$("#video").attr("poster","");
+	}
+	//视频播放事件
+	video.onplay = function () {
+		$("#videoShow").attr("poster", "");
+		$(".VideoBtn").hide();
+	};
+	video.onplaying = function () {
+		$(".VideoBtn").hide();
+	};
+
+	//视频暂停事件
+	video.onpause = function () {
+		$(".VideoBtn").show();
+	};
+	//点击视频周围暂停播放图片出现
+	video.onclick = function () {
+		if (video.paused) {
+			$(".VideoBtn").hide();
+			video.play();
+		} else {
+			$(".VideoBtn").show();
+			video.pause();
+		}
+	};
+})
+</script>
+
+
+		
+		<!--主体-->
+		<div class="main">
+			
+			<!--左-->
+			<div class="left">
+				<!--导航-->
+				<div class="nav">
+					<p><a href="/index.html">首页</a>&nbsp;>&nbsp;<a href="/sbyw/">水保要闻</a> > </p>
+				</div>
+				<style>
+					#big,#mid,#sma{display:inline-block;}
+				</style>
+				<!--内容-->
+				<div class="arctive" style="margin:36px 80px 0 52px;padding:0;">
+					
+					<div class="title">
+						<h1>水利部网站 | 黄河水利委员会开展新疆部批生产建设项目水土保持跟踪检查</h1>
+						<span>来源：
+                          水土保持生态环境建设网&nbsp;&nbsp;&nbsp;上传日期:2021-07-23&nbsp;&nbsp;&nbsp;<a href="#" onClick="javascript:window.print();">打印本文章</a>
+						<span id="big">&nbsp;&nbsp;【字体】 大 &nbsp;&nbsp;</span><span id="mid">中 &nbsp;&nbsp;</span><span id="sma">小&nbsp;&nbsp;</span>
+						</span>
+						
+					
+					</div>					
+					<div id="text" style="line-height:40px;">
+                      						<p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">&nbsp;为认真贯彻落实《中华人民共和国水土保持法》，按照水利部全面加强水土保持监管等要求，切实做好黄河流域生产建设项目水土保持事中事后监管，7月15日至19日，黄河水利委员会组织对新疆维吾尔自治区昭苏民用机场、新疆生产建设兵团奎屯河引水、中哈霍尔果斯河友谊联合引水等3个工程水土保持工作开展现场跟踪检查。</span></p><p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">&nbsp;本次检查，坚持问题导向，充分应用无人机手段全方位获取项目弃渣场、取料场、施工道路等水土保持重点防治区航拍图像，逐一检查核实地表扰动、水土保持措施落实等情况。结合查阅资料、座谈交流等方式，详细了解工程水土保持组织管理、后续设计、防治措施实施、监测监理工作开展等情况。同时，以查代培，采用PPT形式，为建设单位解读水保方案要求，宣讲水利部近期出台的有关生产建设项目水土保持监督管理制度要求，进一步增强建设单位自觉履行水土保持法律责任的意识。</span></p><p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">&nbsp;针对检查发现工程建设中存在的水土保持变更、防治措施落实、监测监理等问题，检查组分别提出明确的限期整改意见。强调各建设单位要提高认识，积极落实水土流失防治主体责任，组织各参建单位对照批复的水土保持方案，不折不扣落实各项水土保持措施，特别是施工过程中的临时防护措施，坚决消除水土流失问题和隐患。同时要求项目涉及地方各级水行政主管部门，依法履责，主动服务，督促和协助生产建设单位完成整改。</span></p><p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">&nbsp;工作期间，检查组一行充分利用当地阿拉马力边防站红色资源，开展党史学习教育，传承拥军爱军的传统美德，增强爱国主义情怀。</span></p><p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">&nbsp;新疆维吾尔自治区水利厅和新疆生产建设兵团水利局及项目涉及有关市、县水行政主管部门代表参加检查。</span></p><p style="margin-top: 0px; margin-bottom: 1em; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 15px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">（水利部网站7月23日）</span></p><p><br/></p>
+					</div>
+				</div>
+				
+			</div>
+			 <script>
+  //查找触发元素
+	var big=document.getElementById("big");
+	var mid=document.getElementById("mid");
+	var sma=document.getElementById("sma");
+	var text=document.getElementById("text");
+//绑定事件处理函数
+//查找要修改的元素
+//修改其内容属性样式
+big.onclick=e=>{text.style.fontSize="30px";}
+mid.onclick=e=>{text.style.fontSize="20px";}
+sma.onclick=e=>{text.style.fontSize="15px";}
+
+  </script>
+			<!--右-->
+		<div class="right">
+				
+				<div class="title">
+					<h1>最近更新</h1>
+				</div>
+				<ul>
+							
+			<li>
+				<a href="/sbyw/20210723/72321.html">水利部网站 | 黄河水利委员会开展新疆部批...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210723/72320.html">江西省水利厅副厅长廖瑞钊调度水土保持重点...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210723/72308.html">黄河上中游管理局开展内蒙古自治区部管生产...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210723/72310.html">青海省长岭沟水土保持科技示范园开展“追梦...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210723/72311.html">黄委水保局完成山西省淤地坝安全度汛第二轮...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210721/72207.html">江苏省水利厅来太湖局交流水土保持、农村水...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210721/72205.html">黄委晋陕蒙监督局与北京林业大学座谈交流新...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210720/72189.html">水利部开展青海省黄河流域生产建设项目水土...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210720/72187.html">水利部水土保持监测中心赴青海开展水土保持...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210719/72184.html">福建省水土保持工作站持续开展“送法上门”...	</a>
+			</li> 
+						
+			<li>
+				<a href="/sbyw/20210719/72182.html">水利部网站 | 长江水利委员会开展云南宁蒗...	</a>
+			</li> 
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<!--相关链接-->
+	    
+			<!--联系-->
+			<div class="contact">
+				<p>您是本站第 <script src="/e/wap/index.php" type="text/javascript"></script>位访客</p>
+				<h1>本网站由水利部沙棘开发管理中心（水利部水土保持植物开发管理中心）维护</h1>
+				<p>E-mail:information@mwr.gov.cn; swcc4364@mwr.gov.cn    联系电话:010-63205007</p>
+				<span><a href="https://beian.miit.gov.cn/" target=_blank>京ICP备05006256号-1</a></span><div style="width:300px;margin:0 auto; padding:20px 0;"><img src="/temp/images/by_1020.png" alt="">		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802028785" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802028785号</p></a>
+		 	</div>
+			</div>
+		</div>
+			<!--微信-->
+		<div class="wechat">
+			<img src="/temp/images/by_WeChat.jpg" alt="微信" />
+		</div>
+		
+	
+		
+	</body>
+</html>

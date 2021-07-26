@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>中国临床试验注册中心 - 世界卫生组织国际临床试验注册平台一级注册机构</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link href="/templates/default/css/Css.css" rel="stylesheet" type="text/css" />
+    <link href="/Lib/UI/jquery-ui-1.8.6.custom/css/ui-lightness/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
+    <link href="/templates/default/css/WdatePicker.css" rel="stylesheet" type="text/css" />
+    <script src="/templates/default/js/jquery.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.query.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.form.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="/templates/default/js/messages_cn.js" type="text/javascript"></script>
+    <script src="/templates/default/js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/Lib/UI/jquery-ui-1.8.6.custom/js/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
+     
+<script type="text/javascript" src="/js/saas.js"></script>
+    <script type="text/javascript">
+        $("#clickEn").click(function () {
+            var url = location.pathname;
+            var iurl = url.substring(0, url.length - 1);
+            if (iurl == "index.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+            if (iurl == "enIndex.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+        });
+        $("#clickCn").click(function () {
+            var url = location.pathname;
+            var iurl = url.substring(0, url.length - 1);
+            if (iurl == "index.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+            if (iurl == "enIndex.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header_area">
+        <a class="logo" title="中国临床试验注册中心" href="/"></a>
+        <div class="r">
+            
+            <p>
+                今天是：2021-07-23&nbsp;星期五</p>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="l">
+            <ul>
+                
+                <li class="menuitem"><a href='index.aspx'>网站首页</a>|</li>
+                
+                <li class="menuitem"><a href='about.aspx'>ChiCTR简介</a>|</li>
+                
+                <li class="menuitem"><a href='searchproj.aspx'>检索入口</a>|</li>
+                
+                <li class="menuitem"><a href='filelist.aspx'>重要文件</a>|</li>
+                
+                <li class="menuitem"><a href='registry.aspx'>注册指南</a>|</li>
+                
+                <li class="menuitem"><a href='question.aspx'>常见问题</a></li>
+                
+            </ul>
+        </div>
+        <div class="r">
+            <a href="index.aspx" id="clickCn" class="selected">简体中文</a>|<a href="enIndex.aspx" id="clickEn">English</a>
+        </div>
+    </div>
+<script type="text/javascript">
+    function CascadeCheck(allSelector, itemSelector, checkedVals) {
+        var rootThis = this;
+        this.Parent = $(allSelector);
+        this.Children = $(itemSelector);
+        var load = function () {
+            var allChecked = false;
+            if (checkedVals && checkedVals.length > 0) {
+                allChecked = true;
+                rootThis.Children.each(function () {
+                    var checked = false;
+                    for (var i = 0; i < checkedVals.length; i++) {
+                        var $this = $(this);
+                        if ($this.val() == checkedVals[i]) {
+                            $this.attr("checked", "checked");
+                            checked = true;
+                            break;
+                        }
+                    }
+                    allChecked = allChecked && checked;
+                    return true;
+                });
+            }
+            rootThis.Parent.attr("checked", allChecked ? "checked" : "");
+        };
+        this.Init = function () {
+            load();
+            rootThis.Children.click(function () {
+                var allChecked = true;
+                if (this.checked) {
+                    rootThis.Children.each(function () {
+                        if (this.checked)
+                            return true;
+                        allChecked = false;
+                        return false;
+                    });
+                }
+                else
+                    allChecked = false;
+                rootThis.Parent.attr("checked", allChecked ? "checked" : "");
+            });
+            rootThis.Parent.click(function () {
+                var status = this.checked;
+                rootThis.Children.each(function () {
+                    this.checked = status;
+                });
+            });
+        };
+        this.GetCheckedChildren = function () {
+            return rootThis.Children.filter(function () {
+                return this.checked;
+            });
+        };
+        this.GetCheckedValues = function () {
+            var array = new Array();
+            this.GetCheckedChildren().each(function () {
+                array.push(this.value);
+            });
+            return array;
+        };
+        this.CheckAll = function () {
+            rootThis.Children.attr("checked", "checked");
+            rootThis.Parent.attr("checked", "checked");
+        };
+        this.ClearAll = function () {
+            rootThis.Children.attr("checked", "");
+            rootThis.Parent.attr("checked", "");
+        };
+        this.Inverse = function () {
+            return rootThis.Children.attr("checked", function () {
+                return !this.checked;
+            });
+        };
+    };
+</script>
+
+
+<link href="/templates/default/css/projStatisticCss.css" rel="stylesheet" type="text/css" />
+<link href="/templates/default/css/projStatisticShowCss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    function serchPage(page) {
+        var query = $.query.set("createyear", $.trim($("#CreateYear1_listCreateYear").val()))
+            .set("page", page);
+        location.href = query.toString();
+    }
+    $(function () {
+        var total = "20";
+        $(".count").each(function () {
+            var $this = $(this);
+            var count = parseFloat($this.text());
+            var rate;
+            if (total <= 0)
+                rate = "0.00%";
+            else
+                rate = ((count / total) * 100).toFixed(2) + "%";
+            var $process = $this.next("span").text(rate).next("div.process").children();
+            try {
+                $process.animate({ width: rate }, 1000);
+            }
+            catch (e) {
+                $process.width(rate);
+            }
+        });
+    });
+</script>
+<div class="index_part2">
+    <ul>
+        <li>
+            <p>
+                <a href="searchproj.aspx">
+                    <img src="/templates/default/cn/images/ico_0.jpg" alt="检索试验" /></a></p>
+            <p>
+                <a href="searchproj.aspx">检索试验</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="countryproj.aspx">
+                    <img src="/templates/default/cn/images/ico_1.jpg" alt="按国家、省（市）统计" /></a></p>
+            <p>
+                <a href="countryproj.aspx">按国家、省（市）统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="ailmentcodeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_2.jpg" alt="按疾病代码统计" /></a></p>
+            <p>
+                <a href="ailmentcodeproj.aspx">按疾病代码统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="sponsorproj.aspx">
+                    <img src="/templates/default/cn/images/ico_3.jpg" alt="按试验实施单位统计" /></a></p>
+            <p>
+                <a href="sponsorproj.aspx">按试验实施单位统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="secsponsorproj.aspx">
+                    <img src="/templates/default/cn/images/ico_4.jpg" alt="按试验主办单位统计" /></a></p>
+            <p>
+                <a href="secsponsorproj.aspx">按试验主办单位统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="sourceofspendsproj.aspx">
+                    <img src="/templates/default/cn/images/ico_5.jpg" alt="按经费或物资来源统计" /></a></p>
+            <p>
+                <a href="sourceofspendsproj.aspx">按经费或物资来源统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="recruitmentstatusproj.aspx">
+                    <img src="/templates/default/cn/images/ico_6.jpg" alt="按征募研究对象情况统计" /></a></p>
+            <p>
+                <a href="recruitmentstatusproj.aspx">按征募研究对象情况统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="regstatusproj.aspx">
+                    <img src="/templates/default/cn/images/ico_7.jpg" alt="按注册状态统计" /></a></p>
+            <p>
+                <a href="regstatusproj.aspx">按注册状态统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="measureproj.aspx">
+                    <img src="/templates/default/cn/images/ico_8.jpg" alt="按干预措施统计" /></a></p>
+            <p>
+                <a href="measureproj.aspx">按干预措施统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="ethicalcommitteeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_9.jpg" alt="按伦理委员会统计" /></a></p>
+            <p>
+                <a href="ethicalcommitteeproj.aspx">按伦理委员会统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="studytypeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_10.jpg" alt="按研究类型统计" /></a></p>
+            <p>
+                <a href="studytypeproj.aspx">按研究类型统计</a>
+            </p>
+        </li>
+    </ul>
+    <div class="divclear">
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        function ChangeQueryValue(key, val) {
+            var query = $.query.set(key, val)
+            .set("page", "1");
+            location.href = query.toString();
+        }
+        $("#CreateYear1_listCreateYear").change(function () {
+            ChangeQueryValue("createyear", this.value);
+        });
+    });
+</script>
+<div>
+    <div class="main">
+        <div class="title_wj">
+            按试验主办单位统计在全球实施的试验
+        </div>
+        <div class="qitem">
+            年份：<select id="CreateYear1_listCreateYear" name="CreateYear1_listCreateYear">
+                <option value="0" selected="selected">所有</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+            </select>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆维吾尔自治区科学技术厅
+                    <a title="查看试验主办单位为&quot;新疆维吾尔自治区科学技术厅&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆维吾尔自治区科学技术厅&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar1" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第一附属医院妇产超声科
+                    <a title="查看试验主办单位为&quot;新疆医科大学第一附属医院妇产超声科&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第一附属医院妇产超声科&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar2" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第一附属医院心衰科
+                    <a title="查看试验主办单位为&quot;新疆医科大学第一附属医院心衰科&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第一附属医院心衰科&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar3" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学公共卫生学院
+                    <a title="查看试验主办单位为&quot;新疆医科大学公共卫生学院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学公共卫生学院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar4" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆银朵兰维药股份有限公司
+                    <a title="查看试验主办单位为&quot;新疆银朵兰维药股份有限公司&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆银朵兰维药股份有限公司&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar5" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆自治区中医医院
+                    <a title="查看试验主办单位为&quot;新疆自治区中医医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆自治区中医医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar6" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆自治区自然科学基金项目
+                    <a title="查看试验主办单位为&quot;新疆自治区自然科学基金项目&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆自治区自然科学基金项目&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar7" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第三临床医学院
+                    <a title="查看试验主办单位为&quot;新疆医科大学第三临床医学院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第三临床医学院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar8" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第三临床医学院（附属肿瘤医院）
+                    <a title="查看试验主办单位为&quot;新疆医科大学第三临床医学院（附属肿瘤医院）&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第三临床医学院（附属肿瘤医院）&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar9" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第三临床医学院（附属肿瘤医院）&#32;
+                    <a title="查看试验主办单位为&quot;新疆医科大学第三临床医学院（附属肿瘤医院）&#32;&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第三临床医学院（附属肿瘤医院）&#32;&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar10" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第四附属医院
+                    <a title="查看试验主办单位为&quot;新疆医科大学第四附属医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第四附属医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar11" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第四临床医学院
+                    <a title="查看试验主办单位为&quot;新疆医科大学第四临床医学院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第四临床医学院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar12" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第五附属医院
+                    <a title="查看试验主办单位为&quot;新疆医科大学第五附属医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第五附属医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar13" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学第一附属
+                    <a title="查看试验主办单位为&quot;新疆医科大学第一附属&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学第一附属&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar14" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆维吾尔药业有限责任公司
+                    <a title="查看试验主办单位为&quot;新疆维吾尔药业有限责任公司&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆维吾尔药业有限责任公司&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar15" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    石河子大学附属第一医院
+                    <a title="查看试验主办单位为&quot;石河子大学附属第一医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=石河子大学附属第一医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar16" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆维吾尔自治区中医医院肾病科
+                    <a title="查看试验主办单位为&quot;新疆维吾尔自治区中医医院肾病科&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆维吾尔自治区中医医院肾病科&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar17" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆乌鲁木齐解放军第474医院
+                    <a title="查看试验主办单位为&quot;新疆乌鲁木齐解放军第474医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆乌鲁木齐解放军第474医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar18" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆乌鲁木齐市眼鼻喉科医院
+                    <a title="查看试验主办单位为&quot;新疆乌鲁木齐市眼鼻喉科医院&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆乌鲁木齐市眼鼻喉科医院&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar19" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aitem">
+                <div class="ainfortitle">
+                    新疆医科大学
+                    <a title="查看试验主办单位为&quot;新疆医科大学&quot;的试验列表在&quot;全球&quot;实施的试验列表"
+                        class="more" href="searchproj.aspx?ishtml=secsponsorpr&amp;type=cn&amp;secsponsor=新疆医科大学&amp;country=中国&amp;province=新疆维吾尔自治区&amp;city=&amp;createyear=0">查看详情</a>
+                            
+                <span class="count">1</span>(<span>0.00%</span>)
+                <div class="process">
+                    <div class="bar20" style="width: 0.00%;">
+                    </div>
+                </div>
+            </div>
+            <div id="pgProj" class="pagearea">
+    
+    <a style="margin-right: 5px;" onclick="serchPage(1)"  href="javascript:;">首页</a> 
+    <a style="margin-right: 5px;" onclick="serchPage(1)" href="javascript:;">上一页</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(1)" href="javascript:;">1</a>
+    
+    <a style="margin-right: 5px;background-color: #3399FF;color: #FFFFFF;" href="javascript:;">2</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(3)" href="javascript:;">3</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(3)" href="javascript:;">下一页</a> 
+    <a style="margin-right: 5px;" onclick="serchPage(3)"    href="javascript:;" >尾页</a> 
+    <span><label>第2页 共3页</label></span>
+    
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="footer_links">
+    <a target="_blank" href="http://www.medresman.org">
+        <img alt="临床试验公共管理平台 Clinical Trial Management Public Platform" src="/templates/default/images/ecrf.jpg"/></a>
+    <a target="_blank" href="http://www.chictrdb.org/">
+        <img alt="中国注册临床试验伦理审查委员会 chinese ethics committee of registering clinical trials"
+            src="/templates/default/images/chictrdb.jpg"/></a> <a target="_blank" href="http://www.mjpe.net/">
+                <img alt="医学期刊出版与编辑伦理网 Medical Journal Publication and Edite Ethics Network" src="/templates/default/images/mjpe.jpg"/></a>
+    <a target="_blank" href="http://www.who.int/ictrp/zh/">
+        <img alt="欢迎访问WHO国际临床试验注册平台" src="/templates/default/images/who.jpg"/></a> <a target="_blank"
+            href="http://www.cct.cuhk.edu.hk">
+            <img alt="Clinical Trials Hong Kong" src="/templates/default/images/cuhk.jpg"/></a>
+    <a target="_blank" href="http://ottawagroup.ohri.ca/">
+        <img alt="Ottawa Statement on Trial Registration" src="/templates/default/images/ottawagroup.jpg"/></a>
+
+    <a href="http://www.acmctr.org" target="_blank" alt="北京针灸临床试验注册中心">
+<img alt="北京针灸临床试验注册中心" src="/templates/default/images/amcrt.jpg"/>
+
+    </a>
+
+</div>
+<div class="footer_nav">
+    <ul>
+        <li><a href="index.aspx">网站首页</a>| </li>
+        <li><a href="about.aspx">ChiCTR简介</a>| </li>
+        <li><a href="searchproj.aspx">检索入口</a>| </li>
+        <li><a href="filelist.aspx">重要文件</a>| </li>
+        <li><a href="registry.aspx">注册指南</a>| </li>
+        <li><a href="question.aspx">常见问题</a> </li>
+    </ul>
+</div>
+<div class="footer">
+    
+    <p>
+        <b>中国临床试验注册中心 - 世界卫生组织国际临床试验注册平台一级注册机构</b></p> 
+    <p>
+        Copyright(c) (2005 - 2015) Chictr.org.All rights reserved. 中国临床试验注册中心 版权所有  <a href="" target="_blank"></a>
+    </p>
+    <p>
+        <a href="" title="系统支持" target="_blank">深圳启奥华科技有限公司</a></p>
+    <p>
+        粤ICP备13012814号-2</p>
+    <p>
+        提示：推荐使用IE8.0以上版本 宽屏显示分辨率下使用系统。</p>
+    <p>
+        
+        
+    </p>
+    <p>
+    </p>
+</div>
+</body> </html>

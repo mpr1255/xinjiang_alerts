@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新疆政务服务-办件指南</title>
+     <link rel="stylesheet" href="/css/subcom.css" />
+    <link rel="stylesheet" href="/css/pageCommon.css" />
+    <link rel="stylesheet" href="./js/libs/chosen/chosen.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/guide.css">
+    <script src="/js/lib/jquery.min.js"></script>
+	<script src="/js/mustache.js"></script>
+    <script src="/js/lib/jquery.qrcode.min.js"></script>
+	<!-- 登录相关 -->
+	<script type="text/javascript"
+		src="/xjssojkfw/rest/outsidesso/getUserBasicInfo?isScript=true">
+	</script>
+	<script src="/OAuth/js/js.cookie.min.js"></script>
+    <script src="/OAuth/js/OAuthCommon.js"></script>
+    <script src="/OAuth/js/OAuth.js"></script>
+	<script src="/js/extranetCommon.js"></script>
+	<script src="/js/initpages.js"></script>
+</head>
+
+<body>
+	<!-- 头部 -->
+    <div id="pageHead"></div>
+    <div class="banner">
+        <div class="container" id="matter-info">
+            <div class="clearfix">
+                <h3 class="matter-title" id="matter-taskname"></h3>
+                <div class="matter-operation">
+                    <div class="matter-code">
+                        <a class="matter-btn code" href="javascript:;" title="分享"></a>
+                        <div class="code-wrap ewb-qr-code">
+                        	
+                        </div>
+                    </div>
+                    <a class="matter-btn msg" href="javascript:;" title="咨询"></a>
+                    <a class="matter-btn collect" href="javascript:;" title="收藏"></a>
+                    <a class="matter-btn deal" href="javascript:;" title="立即办理">立即办理</a>
+                </div>
+            </div>
+            <div class="matter-info" id="matter-info">
+                <p>
+                    <span>事项编码：</span>
+                    <span>事项类型：</span>
+                    <span>办理类型：</span>
+                </p>
+                <p>
+                    <span>实施主体：</span>
+                    <span>办理地点：<a class="location-link" href="javascript:;"></a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main container">
+        <ul class="guide-nav" id="nav">
+            <li class="nav-litem current"><a href="#basicInfo">基本信息</a></li>
+            <li class="nav-litem"><a href="#condition">受理条件</a></li>
+            <li class="nav-litem"><a href="#material">办理材料</a></li>
+            <li class="nav-litem"><a href="#flow">办理流程</a></li>
+            <li class="nav-litem"><a href="#fee">收费标准</a></li>
+            <li class="nav-litem"><a href="#basis">设定依据</a></li>
+            <!-- <li class="nav-litem"><a href="#law">法律救济</a></li> -->
+            <li class="nav-litem question"><a href="#question">常见问题</a></li>
+        </ul>
+        <div class="clearfix">
+            <div class="guide-content">
+                <!-- 基本信息 -->
+                <div class="guide-section" id="basicInfo">
+                    <div class="section-head">
+                        <span class="section-title">基本信息</span>
+                    </div>
+                    <div class="section-body">
+                        <table class="info-tbl"></table>
+                        <!-- <a class="show-more" href="javascript:;">显示更多</a> -->
+                    </div>
+                </div>
+                <div class="guide-section" id="condition">
+                    <div class="section-head">
+                        <span class="section-title">受理条件</span>
+                    </div>
+                    <div class="section-body">
+                        <div id="condition-wrap"></div>
+                    </div>
+                </div>
+                <div class="guide-section" id="material">
+                    <div class="section-head">
+                        <span class="section-title">办理材料</span>
+                        <!--<a class="download-btn r" href="javascrpt:;">全部下载</a>-->
+                    </div>
+                    <div class="section-body">
+                        <!--<p class="warning-tip">请先选择您想要办理的事项清晰情形，我们会根据您所选的情形精确展示办理事项所需提供的申报材料</p>
+                        <div class="material-select">材料情形：<select name="" id="material-case"></select></div>-->
+                        <div class="material-wrap">
+                            <table class="material-tbl">
+                                <colgroup>
+                                    <col width="60">
+                                    <col width="110">
+                                    <!--<col width="160">
+                                    <col width="140">
+                                    <col width="160">
+                                    <col width="160">
+                                    <col width="160">
+                                    <col width="160">
+                                    <col width="160">-->
+                                    <col width="120">
+                                    <col width="120">
+                                    <col width="90">
+                                    <!--<col width="90">-->
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>序</th>
+                                        <th>材料名称</th>
+                                        <!--<th>来源渠道</th>
+                                        <th>材料形式</th>
+                                        <th>纸质材料份数</th>
+                                        <th>纸质材料规格</th>
+                                        <th>填报须知</th>
+                                        <th>受理标准</th>
+                                        <th>要求材料提供的依据</th>-->
+                                        <th>材料必要性</th>
+                                        <th>表格下载</th>
+                                        <th>详情</th>
+                                        <!--<th>详情</th>-->
+                                    </tr>
+                                </thead>
+                                <tbody id="material-list"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-section" id="flow">
+                    <div class="section-head">
+                        <span class="section-title">网上办理流程</span>
+                        <span class="section-title">窗口办理流程</span>
+                    </div>
+                    <div class="section-body" id="flow-wrap"></div>
+                    <div class="material-wrap">
+                        <table class="material-tbl">
+                            <colgroup>
+                                <col width="80">
+                                <col width="80">
+                                <col width="80">
+                                <col width="160">
+                                <col width="160">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>环节名称</th>
+                                    <th>环节办理时限</th>
+                                    <th>办理人员</th>
+                                    <th>审批标准</th>
+                                    <th>办理结果</th>
+                                </tr>
+                            </thead>
+                            <tbody id="process-list"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="guide-section" id="fee">
+                    <div class="section-head">
+                        <span class="section-title">收费标准</span>
+                    </div>
+                    <div class="section-body" id="fee-wrap"></div>
+                </div>
+                <div class="guide-section" id="basis">
+                    <div class="section-head">
+                        <span class="section-title">设定依据</span>
+                    </div>
+                    <div class="section-body" id="basis-wrap"></div>
+                </div>
+                <!-- <div class="guide-section" id="law"> -->
+                    <!-- <div class="section-head"> -->
+                        <!-- <span class="section-title">法律救济</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="section-body"> -->
+                        <!-- <div class="basis-wrap" id="law-wrap"></div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <div class="guide-section" id="question">
+                    <div class="section-head">
+                        <span class="section-title">常见问题</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="basis-wrap" id="question-wrap"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-fixed">
+                <div class="guide-fixed-wrap">
+                    <div class="guide-fixed-content">
+                        <div class="block reviews">
+                            <h3 style="cursor: pointer;">好差评</h3>
+                            <div class="block-body" id="reviews"></div>
+                        </div>
+
+                        <div class="block guide" id="guide">
+                            <h3>
+                                评价指南
+                                <p class="guide-alert">提示：请对办事指南内容是否规范、准确、清晰、合理等方面进行评价。</p>
+                            </h3>
+                            <div class="guide-line">
+                                <div class="clearfix">
+                                    <span class="block-title">我的评价：</span>
+                                    <div class="evaluate-stars star0"></div>
+                              
+                                    <span class="evaluate-item"><span class="evaluate-score">0</span> 分</span>
+                                    <a href="javascript:;" class="evaluate-btn">我要评价</a>
+                                </div>
+                                
+       
+
+                                <div class="evaluate-copy-box clearfix">
+                                    <span class="block-title">评价内容：<span class="evaluate-copy"></span></span>
+                                </div>
+                            </div>
+                            <ul class="evaluate-list clearfix" id="evaluate-list">
+                            </ul>
+                            <div class="guide-line evaluate-box  clearfix">
+                                <span class="block-title">评价内容：</span>
+                                <textarea class="evaluate-content" placeholder="请输入评价内容"></textarea>
+                            </div>
+                            <div class="evaluate-btns clearfix">
+                                <a class="evaluate-submit disabled" href="javascript:;">提交</a>
+                                <a class="evaluate-cancle" href="javascript:;">取消</a>
+                            </div>
+                        </div>
+
+
+                        <div class="block" id="xgshixiang">
+                            <h3>相关事项</h3>
+                            <div class="block-body">
+                                <ul class="event-list clearfix" id="event"></ul>
+                            </div>
+                        </div>
+
+                        <div class="operate-btns clearfix">
+                           <!-- <a class="operate-btn l" href="">分享指南</a>-->
+                            <a class="operate-btn upload-btn l" id="xzzn" href="javaScript:void(0);">下载指南</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+       </div>
+ <!-- 底部 -->
+    <div id="footer"></div>
+        <!-- 头部事项信息 -->
+        <script type="text/x-tpl" id="matterInfo-tpl">
+            <div class="clearfix">
+                <h3 class="matter-title" id="matter-taskname">{{taskname}}</h3>
+               
+            </div>
+            <div class="matter-info">
+            	 <div class="matter-operation">
+                    <div class="matter-code">
+                        <a class="matter-btn code" href="javascript:;" title="分享"></a>
+                        <div class="code-wrap ewb-qr-code">
+                        	
+                        </div>
+                    </div>
+                    <a class="matter-btn msg" href="javascript:void(0);" onclick="zixun();" title="咨询"></a>
+                    <a class="matter-btn collect{{#iscollection}} collected{{/iscollection}}" href="javascript:void(0);" onclick="shoucang();" title="{{#iscollection}}取消{{/iscollection}}收藏"></a>
+                    <a class="matter-btn deal" href="javascript:void(0);" onclick="shenbao();" title="立即办理">立即办理</a>
+                    <p class="fixed-info"><span class="label">事项名称：</span><span id="taskname" title="{{taskname}}">{{taskname}}</span></p>
+                    <p class="fixed-info"><span class="label">办理地点：</span><span title="{{transactaddr}}">{{transactaddr}}</span></p>
+                </div>
+                <p>
+                    <span>事项编码：{{code}}</span>
+                    <span>事项类型：{{tasktype}}</span>
+                    <span>办理类型：{{projecttype}}</span>
+                </p>
+                <p>
+                    <span>实施主体：{{deptname}}</span>
+                    <span>办理地点：<span class="handle-location" title="{{transactaddr}}">{{transactaddr}}</span><a class="location-link" href="{{mapurl}}" target="_blank"></a></span>
+                </p>
+            </div>
+        </script>
+
+        <!-- 基本信息 -->
+        <script type="text/x-tpl" id="basic-tpl">
+            <colgroup>
+                <col width="140">
+                <col width="280">
+                <col width="140">
+                <col width="280">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <!-- <td class="info-label">事项名称</td> -->
+                    <!-- <td> -->
+                    	<!-- {{taskname}} -->
+                      <!-- {{^taskname}}无{{/taskname}} -->
+                    <!-- </td> -->
+                    <td class="info-label">事项类型</td>
+                    <td>{{tasktype}}  
+                    	{{^tasktype}}无{{/tasktype}}</td>
+					<td class="info-label">办件类型</td>
+                    <td>{{projecttype}}{{^projecttype}}无{{/projecttype}}</td>
+                </tr>
+                <tr>
+				    <td class="info-label">实施主体</td>
+                    <td>{{deptname}}{{^deptname}}无{{/deptname}}</td>
+					<td class="info-label">行使层级</td>
+                    <td>{{uselevel}}
+                    {{^uselevel}}无{{/uselevel}}</td>
+                    <!-- <td class="info-label">基本编码</td> -->
+                    <!-- <td>{{catalogcode}} -->
+                      <!-- {{^catalogcode}}无{{/catalogcode}}</td> -->
+                    <!-- <td class="info-label">实施编码</td> -->
+                    <!-- <td>{{taskcode}} -->
+                      <!-- {{^taskcode}}无{{/taskcode}}</td> -->
+                </tr>
+                <tr>
+				    <td class="info-label">承诺办结时限</td>
+                    <td>{{promiseday}}{{^promiseday}}无{{/promiseday}}</td>
+					<td class="info-label">法定办结时限</td>
+                    <td>{{anticipateday}}{{^anticipateday}}无{{/anticipateday}}</td>
+                    <!-- <td class="info-label">业务办理项编码</td> -->
+                    <!-- <td>  -->
+                    <!-- {{taskhandleitem}} -->
+                    <!-- {{^taskhandleitem}}无{{/taskhandleitem}} -->
+                    <!-- </td> -->
+                </tr>
+                <tr>
+				    <td class="info-label">到办事现场次数</td>
+                    <td colspan="3" class="iswsbl">{{limitscenenum}}
+                    	{{^limitscenenum}}无{{/limitscenenum}}次</td>
+                    <!-- <td class="info-label">服务对象</td> -->
+                    <!-- <td>{{servertype}} {{^servertype}}无{{/servertype}}</td> -->
+
+                </tr>
+                <tr>
+				    <td class="info-label">咨询方式</td>
+                    <td colspan="3">{{{linkway}}}{{^linkway}}无{{/linkway}}</td>
+                    <!-- <td class="info-label">实施主体性质</td> -->
+                    <!-- <td>{{depttype}}{{^depttype}}无{{/depttype}}</td> -->
+                </tr>
+                <tr>
+                    <td class="info-label">监督投诉方式</td>
+                    <td colspan="3">{{{superviseway}}}{{^superviseway}}无{{/superviseway}}</td>
+                    <!-- <td class="info-label">法定办结时限单位</td> -->
+                    <!-- <td>{{anticipatetype}}{{^anticipatetype}}无{{/anticipatetype}}</td> -->
+                </tr>
+                <tr>
+					<td class="info-label">办理时间</td>
+                    <td colspan="3">{{{transacttime}}}{{^transacttime}}无{{/transacttime}}</td>
+                    <!-- <td class="info-label">承诺办结时限单位</td> -->
+                    <!-- <td>{{promisetype}}{{^promisetype}}无{{/promisetype}}</td> -->
+                </tr>
+				<tr>
+                    <td class="info-label">办理地点</td>
+                    <td colspan="3">
+                        <div class="clearfix">
+                            <div class="place-text">{{transactaddr}}{{^transactaddr}}无{{/transactaddr}}</div>
+                            <a class="location-map" href="{{mapurl}}" target="_blank"></a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- <tr> -->
+                    <!-- <td class="info-label">承诺办结时限说明</td> -->
+                    <!-- <td>{{promiseexplain}}{{^promiseexplain}}无{{/promiseexplain}}</td> -->
+                    <!-- <td class="info-label">中介服务</td> -->
+                    <!-- <td>{{servicetype}}{{^servicetype}}无{{/servicetype}}</td> -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+                	<!-- <td class="info-label">网上办理深度</td> -->
+                    <!-- <td>{{onlinehandledepth}}{{^onlinehandledepth}}无{{/onlinehandledepth}}</td> -->
+                    <!-- <td class="info-label">特别程序</td> -->
+                    <!-- <td>{{specialprocedure}}{{^specialprocedure}}无{{/specialprocedure}}</td> -->
+                <!-- </tr> -->
+               
+            </tbody>
+            <!-- <tbody class="more-basic"> -->
+                 
+                <!-- <tr> -->
+                    <!-- <td class="info-label">权力来源</td> -->
+                    <!-- <td>{{powersource}} -->
+                    <!-- {{^powersource}}无{{/powersource}}</td> -->
+
+                <!-- </tr> -->
+                <!-- <tr> -->
+                    <!-- <td class="info-label">事项版本</td> -->
+                    <!-- <td>{{taskversion}}{{^taskversion}}无{{/taskversion}}</td> -->
+                    <!-- <td class="info-label">事项状态</td> -->
+                    <!-- <td>{{taskstate}}{{^taskstate}}无{{/taskstate}}</td> -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+                    <!-- <td class="info-label">办理形式</td> -->
+                    <!-- <td>{{handletype}}{{^handletype}}无{{/handletype}}</td>                    -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+
+                    
+                <!-- </tr> -->
+                <!-- <tr> -->
+                <!-- <td class="info-label">是否进驻政务大厅</td> -->
+                <!-- <td>{{{isentrycenter}}}</td> -->
+                <!-- <td class="info-label">必须现场办理原因说明</td> -->
+                <!-- <td class="iswsbl">{{{limitSceneexplain}}}{{^limitSceneexplain}}无{{/limitSceneexplain}}</td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td class="info-label">通办范围</td> -->
+                <!-- <td>{{{handlearea}}}{{^handlearea}}无{{/handlearea}}</td> -->
+                <!-- <td class="info-label">联办机构</td> -->
+                <!-- <td>{{{otherdept}}}{{^otherdept}}无{{/otherdept}}</td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td class="info-label">数量限制</td> -->
+                <!-- <td>{{{limitexplain}}}{{^limitexplain}}无{{/limitexplain}}</td> -->
+                <!-- <td class="info-label">申请人义务</td> -->
+                <!-- <td>{{{applicationobligation}}}{{^applicationobligation}}无{{/applicationobligation}}</td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td class="info-label">申请人权利</td> -->
+                <!-- <td colspan="3">{{{applicationrights}}}{{^applicationrights}}无{{/applicationrights}}</td> -->
+            <!-- </tr> -->
+            <!-- </tbody> -->
+        </script>
+
+        <!-- 材料情形模板 -->
+        <script type="text/x-tpl" id="case-tpl">
+            {{#.}}
+            <option value="{{caseguid}}">{{casename}}</option>
+            {{/.}}
+        </script>
+        <!-- 办理材料模板 -->
+        <script type="text/x-tpl" id="material-tpl">
+            {{#.}}
+            <tr data-taskguid="{{taskguid}}"  data-materialname="{{materialname}}" data-taskcode="{{taskcode}}">
+            <td>{{index}}</td>
+            <td><p class="text-ellipsis">{{materialname}}</p></td>
+            <!--<td><p class="text-ellipsis">{{sourceexplain}}{{^sourceexplain}}无{{/sourceexplain}}</p></td>
+            <td><p class="text-ellipsis">{{materialformat}}</p></td>
+            <td><p class="text-ellipsis">{{masternum}}</p></td>
+            <td><p class="text-ellipsis">{{pageformat}}</p></td>
+            <td><p class="text-ellipsis">{{fillexplain}}</p></td>
+            <td><p class="text-ellipsis">{{acceptstand}}</p></td>
+            <td> 
+            	<p class="text-ellipsis">{{bylaw}}</p>	
+            </td>-->
+            <td><span class="{{isneedCls}}">{{isneed}}</span></td>
+            <td>{{{exampletable}}} {{{blanktable}}}</td>
+            <td>
+            	<a class="material-detail"  href="javascript:;">详情</a>
+            </td>
+            </tr>
+            {{/.}}
+        </script>
+
+        <!-- 办理流程 -->
+        <script type="text/x-tpl" id="flow-tpl">
+            <div>
+                <p>{{{onlineflowexplain}}}</p>
+               {{#onlineflowexplain}} <a class="lookup-btn" href="/xjzwdt/rest/attach/openAttach?client={{onlineflowguid}}">查看流程图</a> {{/onlineflowexplain}}
+            </div>
+            <div>
+                <p>{{{handleflow}}}</p>
+                {{#handleflow}}<a class="lookup-btn" href="/xjzwdt/rest/attach/openAttach?client={{handleflowguid}}">查看流程图</a>  {{/handleflow}}
+            </div>
+        </script>
+        
+        
+         <!-- 流程表格模板 -->
+    <script type="text/x-tpl" id="process-tpl">
+        {{#.}}
+        <tr>
+            <td>{{process_name}}</td>
+            <td>{{process_time}}</td>
+            <td>{{user_name}}</td>
+            <td>{{approval_standard}}</td>
+            <td>{{result}}</td>
+        </tr>
+        {{/.}}
+    </script>
+
+        <!-- 收费标准 -->
+        <script type="text/x-tpl" id="fee-tpl">
+            <div class="fee-item">
+                <p class="fee-label">是否收费</p>
+                <div class="fee-content">
+                    {{#feeproject}}
+                    <table class="info-tbl">
+                        <colgroup>
+                            <col width="140">
+                            <col width="280">
+                            <col width="140">
+                            <col width="280">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="info-label">收费项目名称</td>
+                                <td>{{feename}}</td>
+                                <td class="info-label">是否允许减免</td>
+                                <td>{{#isdesc}}是{{/isdesc}}{{^isdesc}}否{{/isdesc}}</td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">收费依据</td>
+                                <td colspan="3">{{bylaw}}</td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">收费标准</td>
+                                <td colspan="3">{{feestand}}</td>
+                            </tr>
+                            {{#isdesc}}
+                            <tr>
+                                <td class="info-label">允许减免依据</td>
+                                <td colspan="3">{{descexplain}}</td>
+                            </tr>
+                            {{/isdesc}}
+                            <tr>
+                                <td class="info-label">备注</td>
+                                <td colspan="3">{{remark}}</td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                    </table>
+                    {{/feeproject}} {{^feeproject}}不收费{{/feeproject}}
+                </div>
+            </div>
+            {{#hasfeeproject}}
+            <div class="fee-item">
+                <p class="fee-label">收费依据</p>
+                <p class="fee-content">{{feebasis}}</p>
+            </div>
+            <div class="fee-item">
+                <p class="fee-label">是否支持网上收费</p>
+                <p class="fee-content">不支持</p>
+            </div>
+            {{/hasfeeproject}}
+        </script>
+
+        <!-- 设定依据 -->
+        <script type="text/x-tpl" id="basis-tpl">
+            <div class="defult-show">
+                {{#default}}
+                <div class="item-block">
+                    <p class="block-title">设定依据{{index}}</p>
+                    <div class="block-content">
+                        <div class="info-item">
+                            <span class="info-label">法律法规名称：</span>
+                            <div class="info-content">
+                                <span class="law-name">{{lawname}}</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">依据文号：</span>
+                            <div class="info-content">{{accordingnumber}}</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">条款号：</span>
+                            <div class="info-content">{{termsnumber}}</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">条款内容：</span>
+                            <div class="info-content">
+                                <div class="law-content text-ellipsis">{{{termscontent}}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/default}}
+            </div>
+            <div class="more-basis">
+                {{#more}}
+                <div class="item-block">
+                    <p class="block-title">设定依据{{index}}</p>
+                    <div class="block-content">
+                        <div class="info-item">
+                            <span class="info-label">法律法规名称：</span>
+                            <div class="info-content">
+                                <span class="law-name">{{lawname}}</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">依据文号：</span>
+                            <div class="info-content">{{accordingnumber}}</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">条款号：</span>
+                            <div class="info-content">{{termsnumber}}</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">条款内容：</span>
+                            <div class="info-content">
+                                <div class="law-content text-ellipsis">{{{termscontent}}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/more}}
+            </div>
+            <a class="show-more" id="slyj-more" href="javascript:;">显示更多</a>
+        </script>
+
+        <!-- 法律救济 -->
+        <script type="text/x-tpl" id="law-tpl">
+            {{#litigation}}
+            <div class="item-block">
+                <p class="block-title">行政诉讼</p>
+                <div class="block-content">
+                    <div class="info-item">
+                        <span class="info-label">部门：</span>
+                        <div class="info-content">
+                            <span class="law-name">{{litigationouname}}{{^litigationouname}}无{{/litigationouname}}</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">地区：</span>
+                        <div class="info-content">{{litigationaddress}}{{^litigationaddress}}无{{/litigationaddress}}</div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">电话：</span>
+                        <div class="info-content">{{litigationcontact}}{{^litigationcontact}}无{{/litigationcontact}}</div>
+                    </div>
+                </div>
+            </div>
+            {{/litigation}} {{#reconsider}}
+            <div class="item-block">
+                <p class="block-title">行政复议</p>
+                <div class="block-content">
+                    <div class="info-item">
+                        <span class="info-label">部门：</span>
+                        <div class="info-content">
+                            <span class="law-name">{{reconsiderouname}}{{^reconsiderouname}}无{{/reconsiderouname}}</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">地区：</span>
+                        <div class="info-content">{{reconsideraddress}}{{^reconsideraddress}}无{{/reconsideraddress}}</div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">电话：</span>
+                        <div class="info-content">{{reconsidercontact}}{{^reconsidercontact}}无{{/reconsidercontact}}</div>
+                    </div>
+                </div>
+            </div>
+            {{/reconsider}}
+        </script>
+
+        <!-- 常见问题 -->
+        <script type="text/x-tpl" id="question-tpl">
+            {{#.}}
+            <div class="item-block">
+                <p class="block-title">{{question}}</p>
+                <div class="block-content">
+                    <div class="info-item">
+                        <div class="answer">{{{answer}}}</div>
+                    </div>
+                </div>
+            </div>
+            {{/.}}
+        </script>
+
+
+        <!-- 好差评模板 -->
+        <script id="reviews-tpl" type="text/x-mustache">
+            {{#proeva}}
+            <div class="block-line">
+                <div class="review-details clearfix">
+                    <span class="block-title">办件服务：</span>
+                    <div class="evaluate-stars star0">
+                        {{#pjl}}
+                        <div class="evaluate-stars" style="width:{{width}}%"></div>{{/pjl}}
+                    </div>
+                    {{#pjl}}<span class="evaluate-item">{{grade}} 分</span>{{/pjl}}
+                    <a href="javaScript:void(0);" class="reviews-num propj">{{pjl}}条评价</a>
+                </div>{{#evacontant}}
+                <div class="review-content">
+                    <p class="info-value">{{evacontant}}</p>
+                </div>{{/evacontant}}
+            </div>
+            {{/proeva}} 
+            {{#taskeva}}
+            <div class="block-line">
+                <div class="review-details clearfix">
+                    <span class="block-title">办事指南：</span>
+                    <div class="evaluate-stars star0">
+                        {{#pjl}}
+                        <div class="evaluate-stars" style="width:{{width}}%"></div>{{/pjl}}
+                    </div>
+                    {{#pjl}}<span class="evaluate-item">{{grade}} 分</span>{{/pjl}}
+                    <a href="javaScript:void(0);" class="reviews-num taskpj">{{pjl}}条评价</a>
+                </div>{{#evacontant}}
+                <div class="review-content">
+                    <p class="info-value">{{evacontant}}</p>
+                </div>{{/evacontant}}
+            </div>
+            {{/taskeva}}
+        </script>
+
+
+        <!-- 相关事项模板 -->
+        <script id="event-tpl" type="text/x-mustache">
+            {{#.}}
+            <li class="info-value" style="cursor:pointer" onclick="try{Common.push('03','点击你可能要办：'+'{{taskname}}','事项详情');}catch(e){};window.location.href='/newWork/workDetails.html?taskcode={{taskcode}}&category={{tasktype}}'">{{taskname}}</li>
+            {{/.}}
+        </script>
+
+        <!-- 评价模板 -->
+        <script id="evaluate-tpl" type="text/x-mustache">
+            {{#.}}
+            <li data-guid="{{value}}">{{text}}</li>
+            {{/.}}
+        </script>
+        <script src="/js/lib/jquery.actual.min.js"></script>
+	<script src="/js/lib/jquery.dotdotdot.min.js"></script>
+	<script src="/js/webBuilderCommon.js"></script>
+    <script src="/js/lib/placeholder.js"></script>
+    <script src="/js/lib/tabviewworkdetail.js"></script>
+    <script src="/js/lib/layer/layer.js"></script>
+	<script src="/js/lib/jquery.raty.min.js"></script>
+	<script src="/js/layercom.js"></script>
+        <script src="./js/libs/layer/layer.js"></script>
+        <script src="./js/libs/jquery-tab.js"></script>
+        <script src="./js/libs/jquery.nav.js"></script>
+        <script src="./js/libs/chosen/chosen.jquery.min.js"></script>
+        <script src="./js/libs/mustache.js"></script>
+        <script src="./js/libs/jquery.dotdotdot.js"></script>
+        <script src="./js/libs/jquery.nicescroll.js"></script>
+		<script src="/js/pageCommon.js"></script>
+		<script src="./js/common.js"></script>
+        <script src="./js/guide.js"></script>
+
+
+</body>
+
+</html>

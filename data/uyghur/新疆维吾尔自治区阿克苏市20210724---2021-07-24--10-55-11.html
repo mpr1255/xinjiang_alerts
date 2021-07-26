@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="2021年07月24日_天气预警_天气网"/>
+    <!-- <meta name="referrer" content="origin"> -->
+    <title>新疆维吾尔自治区阿克苏市2021-07-24 18:38发布高温橙色预警_2021年07月24日_天气预警_天气网</title>
+    <script type="text/javascript" src="//static.tianqistatic.com/static/tianqi2018/js/jQuery.1.8.2.min.js"></script>
+    <script type="text/javascript" src="//static.tianqistatic.com/static/js/jQselect.js"></script>
+    <link href="//static.tianqistatic.com/static/tianqi2018/css/news.css?v=20190315" rel="stylesheet" type="text/css">
+    <script language="javascript" src="//static.tianqistatic.com/static/js/new_rili.js"></script>
+    <link rel="stylesheet" type="text/css" href="//static.tianqistatic.com/static/tianqi2018/yujing/css/detail.css?v=20191212">
+    <script type="text/javascript" src="//ip.tianqi.com/ipdb/"></script>
+    <script type="text/javascript" src="//static.tianqistatic.com/static/tianqi2018/js/toutiao.js?v=20190716"></script>
+    <script type="text/javascript" src="//static.tianqistatic.com/static/tianqi2018/js/common.js"></script>
+
+    <script type="text/javascript">
+        jQuery.fn.selectCity = function (targetId) {
+            var _seft = this;
+            var targetId = $(targetId);
+
+            this.click(function () {
+                var A_top = $(this).offset().top + $(this).outerHeight(true);  //  1
+                var A_left = $(this).offset().left;
+                targetId.bgiframe();
+                targetId.show().css({ "position": "absolute"});
+            });
+
+            targetId.find("#selectItemClose").click(function () {
+                targetId.hide();
+            });
+
+            targetId.find("#selectSub :checkbox").click(function () {
+                targetId.find(":checkbox").attr("checked", false);
+                $(this).attr("checked", true);
+                _seft.val($(this).val());
+                targetId.hide();
+            });
+
+            $(document).click(function (event) {
+                if (event.target.id != _seft.selector.substring(1)) {
+                    targetId.hide();
+                }
+            });
+
+            targetId.click(function (e) {
+                e.stopPropagation(); //  2
+            });
+
+            return this;
+        }
+
+        $(function () {
+            //test1:
+            $("#address").selectCity("#selectItem");
+        });
+    </script>
+</head>
+<body>
+<!--  公共头部s -->
+
+<!-- 新增顶部 2018/6/1 -->
+
+<div class="hhx_newheader">
+	<div class="hhx_midBox">
+		<div class="tit1 fl">天气网提全国国内城市天气预报，旅游景点天气预报，国际城市天气预报以及历史天气预报查询</div>
+		<div class="tit2 right" style="width: auto;">
+			<ul>
+				<li class="t1 hhx_aHoverBlue">
+						<span class="tq_wx_txt" id="tq_wx_txt">
+                            <a href="http://app.tianqijun.com/" rel="nofollow" target="_blank">天气APP下载</a>
+                            <i class="newapp_ico"></i>
+							<div class="wx_box01" style="display:none;">
+                                <div class="r_h01"></div>
+                                <div class="wxpic">
+                                    <a href="http://app.tianqijun.com/" rel="nofollow" target="_blank">
+                                        <img src="//static.tianqistatic.com/static/images/tq_wxpic_appLoad.png" style="width: 100%;height: 100%;" alt="扫码下载天气APP">
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="http://app.tianqijun.com/" rel="nofollow" target="_blank">扫码下载天气APP</a>
+                                </h4>
+                            </div>
+						</span>
+					<span class="hhx_appLoadSpan"><i>|</i>
+							<a href="http://lishi.tianqi.com/chongqing/index.html" target="_blank">历史天气</a> <i>|</i>
+							<a href="http://m.tianqi.com/" target="_blank">手机天气网</a> <i>|</i>
+							<a href="http://www.tianqi.com/history/" target="_blank" id="todayHistory">历史上的今天</a><i>|</i>
+                            <a href="http://www.tianqi.com/tag/" target="_blank">TAG标签</a>
+						</span>
+				</li>
+			</ul>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</div>
+
+<div class="tiaqni_header_box">
+	<div class="tianqi_log_box">
+		<a id="tq_logo" href="http://www.tianqi.com" target="_blank"> <img src="//static.tianqistatic.com/static/img/logo_210.png" alt="天气网"></a>
+	</div>
+
+	<div class="tianqi_top_search_box">
+		<select name="" value="">
+			<option value="" selected = "selected" >天气</option>
+		</select>
+		<form id="index_serch" method="get" action="/tianqi/search" name="index_serch" class="clearfix" onkeydown="if(event.keyCode==13)return false;">
+			<input type="text" autocomplete='off'
+				   value="输入中文/拼音、城市/景点名称"  name="keyword" />
+			<button class="tianqi_search_btn"></button>
+			
+			
+		</form>
+
+		<div class="tianqi_weather_box">
+		</div>
+
+	</div>
+
+</div>
+<script>
+	(function(){
+		var rightUrl = '/tianqi/headweather/';
+		cityPy = getCookie('cityPy');
+		if(cityPy) rightUrl = rightUrl + cityPy + '/';
+		$(".tianqi_weather_box").eq(0).prepend('<iframe src="'+ rightUrl +'" width="290" scrolling="no" height="88" frameborder="0" allowtransparency="true"></iframe>');
+	})();
+    function nofind(_this){
+        _this.src="//content.pic.tianqistatic.com/20190103/abb98987d531cc5f07c3c521d50ee64b.jpg";
+        _this.onerror=null;
+    }
+</script>
+
+<div style="clear: both;"></div>
+<div class="tianqi_pub_nav_box">
+	    <ul class="tianqi_nav_content_box">
+		<li  ><a href="//www.tianqi.com" target="_blank" title="天气网">首页</a></li>
+        <li class="target_ li_tianqi">
+        	<a href="https://www.tianqi.com/chinacity.html" target="_blank" title="天气" class="tianqi_nav_tianqiblank" style="background-image: url(//static.tianqistatic.com/static/wap2018/ico1/arrow_down.png);">天气</a>      	    
+        </li>
+        <li  ><a href="https://www.tianqi.com/air/" title="空气质量" target="_blank">空气质量</a></li>
+        <li class="target_ li_news" ><a href="https://www.tianqi.com/news/" title="天气新闻" target="_blank" style="background: url(//static.tianqistatic.com/static/wap2018/ico1/arrow_down.png) no-repeat 86% 50%">天气新闻</a></li>
+        
+        <li class="target_ li_life">
+        	<a href="https://www.tianqi.com/toutiao/" title="天气生活" class="tianqi_nav_tianqiblank_life" target="_blank" style="background-image: url(//static.tianqistatic.com/static/wap2018/ico1/arrow_down.png);">天气生活</a>
+        </li>
+		<li class="target_ li_shipin">
+			<a href="https://www.tianqi.com/video/" title="视频" target="_blank" style="background-image: url(//static.tianqistatic.com/static/wap2018/ico1/arrow_down.png);" class="tianqi_nav_tianqiblank">视频</a></li>
+		<!-- <li class="target_ nav_jingdian">
+			<a href="https://www.tianqi.com/jingdian.html" title="旅游景点" target="_blank" style="background-image: url(//static.tianqistatic.com/static/wap2018/ico1/arrow_down.png);" class="tianqi_nav_tianqiblank_jingdian">旅游景点</a>
+		</li>
+        <li ><a href="https://www.tianqi.com/meishi.html" title="美食" target="_blank">美食</a></li>
+        <li ><a href="https://www.tianqi.com/techan.html" title="特产" target="_blank">特产</a></li> -->
+        <li><a href="https://wannianli.tianqi.com/" title="万年历" target="_blank">万年历</a></li>   
+    </ul>
+    <!-- 二级导航 -->
+    <!-- 天气 -->
+	<div class="tianqi_nav_next_box tianqi_nav_next_box_tianqi" style="display: none;">
+		<div class="tianqi_nav_hover_box clearfix">
+			<a href="https://www.tianqi.com/chinacity.html" title="全国天气" target="_blank">全国天气</a>
+			<a href="https://www.tianqi.com/worldcity.html" title="国际天气" target="_blank">国际天气</a>
+			<a href="https://lishi.tianqi.com/" title="历史天气" target="_blank">历史天气</a>
+			<a href="https://www.tianqi.com/qiwen/" title="气温查询" target="_blank">气温查询</a>
+			<a href="https://www.tianqi.com/changshi/" title="天气常识" target="_blank">天气常识</a>
+			<a href="https://tf.tianqi.com/" title="台风路径图" target="_blank">台风路径图</a>
+		</div>
+	</div>
+	<!-- 新闻 -->
+	<div class="tianqi_nav_next_box tianqi_nav_next_box_news" style="display: none;">
+		<div class="tianqi_nav_hover_box clearfix">
+			<a href="https://www.tianqi.com/tianqi/chinanews.html" title="天气资讯" target="_blank">天气资讯</a>
+		</div>
+	</div>
+	<!-- 生活 -->
+	<div class="tianqi_nav_next_box tianqi_nav_next_box_life" style="display: none;">
+		<div class="tianqi_nav_hover_box clearfix" style="width: auto;padding-left: 420px;">
+			<a href="https://www.tianqi.com/toutiao/" title="推荐" target="_blank">推荐</a>			
+			<a href="https://www.tianqi.com/toutiao/hots/" title="热点" target="_blank">热点</a>
+			<a href="https://www.tianqi.com/toutiao/shenghuo/" title="生活" target="_blank">生活</a>
+			<a href="https://www.tianqi.com/toutiao/lvyou/" title="旅游" target="_blank">旅游</a>
+			<a href="https://www.tianqi.com/toutiao/yangsheng/" title="养生" target="_blank">养生</a>
+			<a href="https://www.tianqi.com/toutiao/haowu/" title="好物" target="_blank">好物</a>
+			<a href="https://www.tianqi.com/toutiao/jiankang/" title="健康" target="_blank">健康</a>
+			<a href="https://www.tianqi.com/toutiao/jujia/" title="居家" target="_blank">居家</a>
+			<a href="https://www.tianqi.com/toutiao/wenhua/" title="城市文化" target="_blank">城市文化</a>
+			<a href="https://www.tianqi.com/toutiao/keji/" title="科技" target="_blank">科技</a>
+			<a href="https://www.tianqi.com/toutiao/meishi/" title="美食" target="_blank">美食</a>
+			<a href="https://www.tianqi.com/toutiao/jiaoyu/" title="教育" target="_blank">教育</a>
+			<a href="https://www.tianqi.com/toutiao/yingshi/" title="影视" target="_blank">影视</a>
+			<a href="https://www.tianqi.com/toutiao/zhiwu/" title="植物" target="_blank">植物</a>
+		</div>
+	</div>
+
+	<!-- 旅游景点 -->
+	<!-- <div class="tianqi_nav_next_box tianqi_nav_box_jingdian"   style="display: none;">
+		<div class="tianqi_nav_hover_box clearfix">
+			<a href="https://www.tianqi.com/jingdian.html" title="景点天气" target="_blank">景点天气</a>
+			<a href="https://www.tianqi.com/worldcity/jingdian.html" title="国际景点天气" target="_blank">国际景点天气</a>
+			<a href="https://www.tianqi.com/huaxue.html" title="滑雪天气" target="_blank">滑雪天气</a>
+			<a href="https://www.tianqi.com/jingdian/5a.html" title="5A级景点" target="_blank">5A级景点</a>
+			<a href="https://www.tianqi.com/jingdian/4a.html" title="4A级景点" target="_blank">4A级景点</a>
+			<a href="https://www.tianqi.com/jingdian/3a.html" title="3A级景点" target="_blank">3A级景点</a>
+			<a href="https://www.tianqi.com/jingdian/2a.html" title="2A级景点" target="_blank">2A级景点</a>
+			<a href="https://www.tianqi.com/jingdian/1a.html" title="1A级景点" target="_blank">1A级景点</a>
+		</div>
+	</div> -->
+
+	<!--视频-->
+	<div class="tianqi_nav_next_box tianqi_nav_box_shipin tianqi_nav_next_box_shipin"   style="display: none;">
+		<div class="tianqi_nav_hover_box clearfix">
+			<a href="https://www.tianqi.com/video/" title="推荐" target="_blank">推荐</a>			
+			<a href="https://www.tianqi.com/video/tianqibaike/" title="天气百科" target="_blank">天气百科</a>
+			<a href="https://www.tianqi.com/video/shuma/" title="数码百科" target="_blank">数码百科</a>
+			<a href="https://www.tianqi.com/video/shenghuo/" title="生活常识" target="_blank">生活常识</a>
+			<a href="https://www.tianqi.com/video/meishi/" title="美食" target="_blank">美食</a>
+
+			<a href="https://www.tianqi.com/video/techan/" title="特产" target="_blank">特产</a>
+			<a href="https://www.tianqi.com/video/jiemeng/" title="解梦" target="_blank">解梦</a>
+			<a href="https://www.tianqi.com/video/xingzuo/" title="星座" target="_blank">星座</a>
+		</div>
+	</div>
+</div>
+<!-- 公共头部e -->
+<div class="locadiv">
+    <img class='locationimg' src="//static.tianqistatic.com/static/tianqi2018/images/crumbs_ico.png" alt="">
+    <div class="nowlocation">当前位置：<a href="/">天气网</a>  >  <a href="/alarmnews/">天气预警</a>  </div>
+</div>
+
+<div class="content">
+    <div class="contleft">
+        <div class="contborder">
+            <div class="warsend">
+                <div>
+                                            <img src="//static.tianqistatic.com/static/img/yujing_img/biggaowen_ico3.jpg">
+                                        </div>
+                <div>
+                    <span>
+                        					新疆维吾尔自治区阿克苏市2021-07-24 18:38发布高温橙色预警                    </span>
+                    <!--<span class="sendteo">2021-07-24 18:38:00  来源：天气网  【字体：<span class="bluetext1">大</span>  <span class="bluetext2">中</span>  <span class="bluetext3">小</span>】 </span>-->
+                    <span class="sendteo">2021-07-24 18:38:00  来源：天气网 </span>
+                </div>
+            </div>
+            <div class="banner760"><script type="text/javascript">read_760_150();</script></div>
+            <div  class="richtext">
+                <p>　　<p style="text-indent: 2em;">新和县气象台2021年7月24日18时38分发布高温橙色预警信号：预计未来24小时内新和县气温持续上升，英买力、尤鲁都斯巴格镇、桑塔木、通古孜巴什等大部分乡镇最高气温将升至37℃或以上，请做好森林防火和融雪型洪水及地质灾害的预防工作。</p></p><p>　　<p style="text-indent: 2em;"><strong>防御指南：</strong></p> 1.有关部门和单位按照职责落实防暑降温保障措施； <br>2.尽量避免在高温时段进行户外活动，高温条件下作业的人员应当缩短连续工作时间； <br>3.对老、弱、病、幼人群提供防暑降温指导，并采取必要的防护措施； <br>4.有关部门和单位应当注意防范因用电量过高，以及电线、变压器等电力负载过大而引发的火灾。 </p>            </div>
+                        <div class="message">
+                                <div><b>今日阿克苏天气概述：</b>阿克苏市，晴,气温19℃~33℃,南风2级，当前温度33℃。</div>
+                                <div><b>关注晋中天气：</b></div>
+                <ul class="today">
+                    <li class="diandian"><a href="/akesu/today/" target="_blank">• 阿克苏24小时天气预报</a></li>
+                    <li class="diandian"><a href="/akesu/3/" target="_blank">• 阿克苏明天天气预报</a></li>
+                    <li class="diandian"><a href="/akesu/7/" target="_blank">• 阿克苏未来一周天气</a></li>
+                    <li class="diandian"><a href="/akesu/10/" target="_blank">• 阿克苏未来10天天气</a></li>
+                    <li class="diandian"><a href="/akesu/15/" target="_blank">• 阿克苏未来15天天气</a></li>
+                    <li class="diandian"><a href="/akesu/30/" target="_blank">• 阿克苏未来30天天气</a></li>
+                </ul>
+                            </div>
+                        <div class="brighten">
+                <a href="http://www.tianqi.com/alarmnews/2107241865292941.html">上一篇：新疆维吾尔自治区阿克苏市发布高温黄色预警</a>
+                <a href="http://www.tianqi.com/alarmnews/440233.html">下一篇：广东省韶关市发布黄色暴雨预警</a>
+            </div>
+        </div>
+        <div><script>read_760_05()</script></div>
+        <div class="listside">
+            <div>最新预警信息 <div class="dinblue"></div></div>
+            <span><a href="/alarmnews/" target="_blank" title="预警"> 更多 >></a></span>
+        </div>
+        <ul class="leftlist">
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242053292941.html" target="_blank" title="云南省大理白族自治州云龙县2021-07-24 20:46发布雷电黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigleidian_ico2.jpg"/>云南省大理白族自治州云龙县2021-07-24 20:46发布雷电黄色预警                            </div>
+                            <span>2021-07-24 20:46</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242033072641.html" target="_blank" title="浙江省金华市2021-07-24 20:45发布暴雨黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigbaoyu_ico2.jpg"/>浙江省金华市2021-07-24 20:45发布暴雨黄色预警                            </div>
+                            <span>2021-07-24 20:45</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242063272441.html" target="_blank" title="青海省玉树藏族自治州治多县2021-07-24 20:44发布雷电黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigleidian_ico2.jpg"/>青海省玉树藏族自治州治多县2021-07-24 20:44发布雷电黄色预警                            </div>
+                            <span>2021-07-24 20:44</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242044060841.html" target="_blank" title="广东省佛山市2021-07-24 20:41发布暴雨黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigbaoyu_ico2.jpg"/>广东省佛山市2021-07-24 20:41发布暴雨黄色预警                            </div>
+                            <span>2021-07-24 20:41</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242036112241.html" target="_blank" title="江西省上饶市2021-07-24 20:41发布大风蓝色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigdafeng_ico1.jpg"/>江西省上饶市2021-07-24 20:41发布大风蓝色预警                            </div>
+                            <span>2021-07-24 20:41</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242022072441.html" target="_blank" title="吉林省松原市2021-07-24 20:39发布雷电黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigleidian_ico2.jpg"/>吉林省松原市2021-07-24 20:39发布雷电黄色预警                            </div>
+                            <span>2021-07-24 20:39</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242053032541.html" target="_blank" title="云南省曲靖市2021-07-24 20:36发布暴雨蓝色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigbaoyu_ico1.jpg"/>云南省曲靖市2021-07-24 20:36发布暴雨蓝色预警                            </div>
+                            <span>2021-07-24 20:36</span>
+                        </a>
+                </li>
+                            <li>
+                        <a href="http://www.tianqi.com/alarmnews/2107242045032441.html" target="_blank" title="广西壮族自治区桂林市2021-07-24 20:35发布雷电黄色预警">
+                            <div>
+                                <img src="//static.tianqistatic.com/static/img/yujing_img/bigleidian_ico2.jpg"/>广西壮族自治区桂林市2021-07-24 20:35发布雷电黄色预警                            </div>
+                            <span>2021-07-24 20:35</span>
+                        </a>
+                </li>
+                    </ul>
+        <div class="banner760 b760_300"><script type="text/javascript">read_760_300();</script></div>
+        <div class="tit03"><h4 class="fl">最新资讯</h4>
+<a class="fr" href="/news/" title="天气新闻" target="_blank">更多 <font>&gt;&gt;</font></a>
+</div>
+<ul class="ranews">
+    <script type="text/javascript">toutiaolist();</script>
+    <script>banner_760_0904()</script>
+                <li>
+                <a class="title-info" href="/news/295260.html" title="2021上海好玩的地方有哪些  上海好玩的地方景点推荐" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/ZQNdsDvb6WjU7edCZEBPwd6V.jpg" alt="2021上海好玩的地方有哪些  上海好玩的地方景点推荐"></b></a>
+                <span>
+                                <a href="/news/295260.html" title="2021上海好玩的地方有哪些  上海好玩的地方景点推荐" target="_blank">
+                                    <h3>2021上海好玩的地方有哪些  上海好玩的地方景点推荐</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295258.html" title="2021厦门有什么好玩的 厦门好玩的地方有哪些" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/y0S8XbuljCgh30KbU8rEuctW.jpg" alt="2021厦门有什么好玩的 厦门好玩的地方有哪些"></b></a>
+                <span>
+                                <a href="/news/295258.html" title="2021厦门有什么好玩的 厦门好玩的地方有哪些" target="_blank">
+                                    <h3>2021厦门有什么好玩的 厦门好玩的地方有哪些</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295254.html" title="2021青岛好玩的地方 青岛有啥好玩的景点推荐" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/ema2bIIii1AeH7GR0APIIal0.jpg" alt="2021青岛好玩的地方 青岛有啥好玩的景点推荐"></b></a>
+                <span>
+                                <a href="/news/295254.html" title="2021青岛好玩的地方 青岛有啥好玩的景点推荐" target="_blank">
+                                    <h3>2021青岛好玩的地方 青岛有啥好玩的景点推荐</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                            <script>banner_760_0904()</script>
+                        <li>
+                <a class="title-info" href="/news/295251.html" title="地震是什么波产生的 地震是先横波还是纵波" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/ARS0Q11uyC3Hb1lzsonSEiqO.jpg" alt="地震是什么波产生的 地震是先横波还是纵波"></b></a>
+                <span>
+                                <a href="/news/295251.html" title="地震是什么波产生的 地震是先横波还是纵波" target="_blank">
+                                    <h3>地震是什么波产生的 地震是先横波还是纵波</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295248.html" title="地震来了怎么办 地震时正确的逃生方法" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/jGOKTry9NLrMpbr5WbYI4dsK.jpg" alt="地震来了怎么办 地震时正确的逃生方法"></b></a>
+                <span>
+                                <a href="/news/295248.html" title="地震来了怎么办 地震时正确的逃生方法" target="_blank">
+                                    <h3>地震来了怎么办 地震时正确的逃生方法</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295244.html" title="地震来了有哪些征兆  地震来临的前兆" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/YcQCQGr2X5fvOZCl0iomJKZR.jpg" alt="地震来了有哪些征兆  地震来临的前兆"></b></a>
+                <span>
+                                <a href="/news/295244.html" title="地震来了有哪些征兆  地震来临的前兆" target="_blank">
+                                    <h3>地震来了有哪些征兆  地震来临的前兆</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                            <script>banner_760_0904()</script>
+                        <li>
+                <a class="title-info" href="/news/295242.html" title="中国台风等级划分  台风分为几级" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/pJ9cNL9UHJAiAngoFcoRGrNy.jpg" alt="中国台风等级划分  台风分为几级"></b></a>
+                <span>
+                                <a href="/news/295242.html" title="中国台风等级划分  台风分为几级" target="_blank">
+                                    <h3>中国台风等级划分  台风分为几级</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295241.html" title="水下飞天舞蹈的飞天动作与什么有关 水下飞天舞蹈动作来源什么" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/p8jOApIjg4cKhJGBwbxjZ98Q.jpg" alt="水下飞天舞蹈的飞天动作与什么有关 水下飞天舞蹈动作来源什么"></b></a>
+                <span>
+                                <a href="/news/295241.html" title="水下飞天舞蹈的飞天动作与什么有关 水下飞天舞蹈动作来源什么" target="_blank">
+                                    <h3>水下飞天舞蹈的飞天动作与什么有关 水下飞天舞蹈动作来源什么</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                        <li>
+                <a class="title-info" href="/news/295240.html" title="为什么夜空中有些星星像在眨眼 星星为什么会眨眼睛呢" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/X3obiI35ey0CiD9Xf0t7e4hB.jpg" alt="为什么夜空中有些星星像在眨眼 星星为什么会眨眼睛呢"></b></a>
+                <span>
+                                <a href="/news/295240.html" title="为什么夜空中有些星星像在眨眼 星星为什么会眨眼睛呢" target="_blank">
+                                    <h3>为什么夜空中有些星星像在眨眼 星星为什么会眨眼睛呢</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+                            <script>banner_760_0904()</script>
+                        <li>
+                <a class="title-info" href="/news/295239.html" title="浙江每年几月有台风  浙江台风一般在几月份" target="_blank"><b><img onerror="nofind(this)" src="https://oimg.tianqistatic.com/content/20210724/evcxMEfFGAGjdBTUVMY2di9z.jpg" alt="浙江每年几月有台风  浙江台风一般在几月份"></b></a>
+                <span>
+                                <a href="/news/295239.html" title="浙江每年几月有台风  浙江台风一般在几月份" target="_blank">
+                                    <h3>浙江每年几月有台风  浙江台风一般在几月份</h3>
+                                </a>
+                                <h5>
+                                    2021-07-24                                </h5>
+                            </span>
+            </li>
+            </ul>
+    </div>
+    <div class="contright">
+        <div class="tq_yj_ss"><form name="form1" method="GET" id="form1" action="/alarmnews/search">
+            <input autocomplete="off" type="text" name="address" id="address" class="txt" value="输入省市名称、预警名称或预警级别" onfocus="this.value='';" onblur="if(this.value==''){this.value='输入省市名称、预警名称或预警级别';}">
+            <div id="selectItem" class="selectItemhidden" style="display:none; position: absolute;">
+                <div id="selectItemAd" class="selectItemtit bgc_ccc">
+                    <h2 id="selectItemTitle" class="selectItemleft">选择省市</h2>
+                    <div id="selectItemClose" class="selectItemright">关闭</div>
+                </div>
+                <div class="selectItemcont">
+                    <!--<?{foreach from=$prov item=item key=key}?>
+                    <a href="http://www.tianqi.com/alarmnews_<?9?>/"><?Array?></a>
+                    <?{/foreach}?>-->
+                    <a href="/alarmnews_01/">北京</a>
+                    <a href="/alarmnews_02/">上海</a>
+                    <a href="/alarmnews_03/">天津</a>
+                    <a href="/alarmnews_04/">重庆</a>
+                    <a href="/alarmnews_06/">吉林</a>
+                    <a href="/alarmnews_07/">辽宁</a>
+                    <a href="/alarmnews_09/">河北</a>
+                    <a href="/alarmnews_10/">山西</a>
+                    <a href="/alarmnews_11/">陕西</a>
+                    <a href="/alarmnews_12/">山东</a>
+                    <a href="/alarmnews_13/">新疆</a>
+                    <a href="/alarmnews_14/">西藏</a>
+                    <a href="/alarmnews_15/">青海</a>
+                    <a href="/alarmnews_16/">甘肃</a>
+                    <a href="/alarmnews_17/">宁夏</a>
+                    <a href="/alarmnews_18/">河南</a>
+                    <a href="/alarmnews_05/">黑龙江</a>
+                    <a href="/alarmnews_19/">江苏</a>
+                    <a href="/alarmnews_20/">湖北</a>
+                    <a href="/alarmnews_21/">浙江</a>
+                    <a href="/alarmnews_22/">安徽</a>
+                    <a href="/alarmnews_23/">福建</a>
+                    <a href="/alarmnews_24/">江西</a>
+                    <a href="/alarmnews_25/">湖南</a>
+                    <a href="/alarmnews_26/">贵州</a>
+                    <a href="/alarmnews_27/">四川</a>
+                    <a href="/alarmnews_28/">广东</a>
+                    <a href="/alarmnews_29/">云南</a>
+                    <a href="/alarmnews_30/">广西</a>
+                    <a href="/alarmnews_31/">海南</a>
+                    <a href="/alarmnews_32/">香港</a>
+                    <a href="/alarmnews_33/">澳门</a>
+                    <a href="/alarmnews_34/">台湾</a>
+                    <a href="/alarmnews_08/">内蒙古</a>
+                </div>
+            </div>
+            <input class="btn" onclick="selectJump();" value="" type="button"></form></div>
+            <script>
+                function setQueryString(){
+                    var city = document.getElementById('address').value;
+                    if (city == ''){
+                        alert("输入城市名")
+                        return '';
+                    }
+                    var queryString="/alarmnews/search?keyword="+city;
+                    return queryString;
+                }
+                function selectJump(){
+                    var data = setQueryString();
+                    if (data == ''){
+                        return false
+                    }
+                    var newWeb=window.open('_blank');
+                    newWeb.location=decodeURI(data);
+                }
+            </script>
+
+        <div class="banner300 b300_14"><script>banner_300_14();</script></div>
+        <div class="rightone">
+            <div class="onetitle">天气预报实况</div>
+            <ul class="rilistone">
+                <li><a href="http://www.tianqi.com/index.php?c=other&amp;a=tqbb" target="_blank"><span></span>中央台天气预报视频</a></li>
+                <li><a href="http://www.tianqi.com/gaowen/" target="_blank"><span></span>全国高温分布图</a></li>
+                <li><a href="http://www.tianqi.com/jiangshuiliang/" target="_blank"><span></span>全国降水量24小时预报图</a></li>
+                <li><a href="http://lishi.tianqi.com" target="_blank"><span></span>全国城市历史天气查询</a></li>
+                <li><a href="http://www.tianqi.com/jiaotongtianqi/" target="_blank"><span></span>全国高速公路天气（24小时）</a></li>
+                <li><a href="http://www.tianqi.com/kongqiwuran/" target="_blank"><span></span>空气污染条件预报图</a></li>
+                <li><a href="http://www.tianqi.com/wumai/" target="_blank"><span></span>雾霾天气预报</a></li>
+                <li><a href="http://www.tianqi.com/haiyangtianqi/" target="_blank"><span></span>海洋气象</a></li>
+            </ul>
+        </div>
+
+        <div class="banner300 b300_04" style="margin: 20px 0;"><script>lvyou_tianqi_jingdian_right_top();</script></div>
+        <div class="clear15"></div>
+        <div class="righttwo rightone">
+            <div class="onetitle">天气预警符号说明</div>
+            <ul class="rilisttwo">
+                <li><a href="/yujingjibie/tiafeng/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788212cQjafT.jpg"><div>台风预警信号</div></a></li>
+                <li><a href="/yujingjibie/baoyu/"><img src="//static.tianqistatic.com/upload/article/20140127/13907883175Lgpi4.jpg"><div>暴雨预警信号</div></a></li>
+                <li><a href="/yujingjibie/baoxue/"><img src="//static.tianqistatic.com/upload/article/20140127/13907883739IIu9n.jpg"><div>暴雪预警信号</div></a></li>
+                <li><a href="/yujingjibie/hanchao/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788418g7NCkC.jpg"><div>寒潮预警信号</div></a></li>
+                <li><a href="/yujingjibie/dafeng/"><img src="//static.tianqistatic.com/upload/article/20140127/13907884559enjdx.jpg"><div>大风预警信号</div></a></li>
+                <li><a href="/yujingjibie/gaowen/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788497kdFU85.jpg"><div>高温预警信号</div></a></li>
+                <li><a href="/yujingjibie/leidian/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788551jBHrUw.jpg"><div>雷电预警信号</div></a></li>
+                <li><a href="/yujingjibie/shuangdong/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788607eguK8u.jpg"><div>霜冻预警信号</div></a></li>
+                <li><a href="/yujingjibie/dawu/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788650fwkWuQ.jpg"><div>大雾预警信号</div></a></li>
+                <li><a href="/yujingjibie/bingbao/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788758TW9Ezy.jpg"><div>冰雹预警信号</div></a></li>
+                <li><a href="/yujingjibie/ganhan/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788809g2He2G.jpg"><div>干旱预警信号</div></a></li>
+                <li><a href="/yujingjibie/mai/"><img src="//static.tianqistatic.com/upload/article/20140127/1390788845qn3tCf.jpg"><div>霾预警信号</div></a></li>
+            </ul>
+        </div>
+        <div class="rightrre rightone">
+            <div class="onetitle">全国省份天气预报</div>
+            <ul class="rilistree">
+                <li class="diandian"><a href="http://beijing.tianqi.com/" target="_blank" title="北京天气">北京</a></li>
+                <li class="diandian"><a href="http://shanghai.tianqi.com/" target="_blank" title="上海天气">上海</a></li>
+                <li class="diandian"><a href="http://tianjin.tianqi.com/" target="_blank" title="天津天气">天津</a></li>
+                <li class="diandian"><a href="http://chongqing.tianqi.com/" target="_blank" title="重庆天气">重庆</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/heilongjiang/" target="_blank" title="黑龙江天气">黑龙江</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/jilin/" target="_blank" title="吉林天气">吉林</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/liaoning/" target="_blank" title="辽宁天气">辽宁</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/neimenggu/" target="_blank" title="内蒙古天气">内蒙古</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/hebei/" target="_blank" title="河北天气">河北</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/shanxi/" target="_blank" title="山西天气">山西</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/shanxi1/" target="_blank" title="陕西天气">陕西</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/shandong/" target="_blank" title="山东天气">山东</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/xinjiang/" target="_blank" title="新疆天气">新疆</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/xizang/" target="_blank" title="西藏天气">西藏</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/qinghai/" target="_blank" title="青海天气">青海</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/gansu/" target="_blank" title="甘肃天气">甘肃</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/ningxia/" target="_blank" title="宁夏天气">宁夏</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/henan/" target="_blank" title="河南天气">河南</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/jiangsu/" target="_blank" title="江苏天气">江苏</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/hubei/" target="_blank" title="湖北天气">湖北</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/zhejiang/" target="_blank" title="浙江天气">浙江</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/anhui/" target="_blank" title="安徽天气">安徽</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/fujian/" target="_blank" title="福建天气">福建</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/jiangxi/" target="_blank" title="江西天气">江西</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/hunan/" target="_blank" title="湖南天气">湖南</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/guizhou/" target="_blank" title="贵州天气">贵州</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/sichuan/" target="_blank" title="四川天气">四川</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/guangdong/" target="_blank" title="广东天气">广东</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/yunnan/" target="_blank" title="云南天气">云南</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/guangxi/" target="_blank" title="广西天气">广西</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/hainan/" target="_blank" title="海南天气">海南</a></li>
+                <li class="diandian"><a href="http://hongkong.tianqi.com/" target="_blank" title="香港天气">香港</a></li>
+                <li class="diandian"><a href="http://aomen.tianqi.com/" target="_blank" title="澳门天气">澳门</a></li>
+                <li class="diandian"><a href="http://www.tianqi.com/province/taiwan/" target="_blank" title="台湾天气">台湾</a></li>
+
+
+            </ul>
+        </div>
+        <div class="banner300 b300_15"><script>banner_300_15();</script></div>
+        <div class="clear15"></div>
+        <div class="righfore rightone">
+            <div class="onetitle">热门城市天气</div>
+            <ul class="rilistfore">
+                <li class="diandian"><a href="http://beijing.tianqi.com/">北京天气</a></li>
+                <li class="diandian"><a href="http://shanghai.tianqi.com/">上海天气</a></li>
+                <li class="diandian"><a href="http://tianjin.tianqi.com/">天津天气</a></li>
+                <li class="diandian"><a href="http://chongqing.tianqi.com/">重庆天气</a></li>
+                <li class="diandian"><a href="http://haerbin.tianqi.com/">哈尔滨天气</a></li>
+                <li class="diandian"><a href="http://changchun.tianqi.com/">长春天气</a></li>
+                <li class="diandian"><a href="http://shenyang.tianqi.com/">沈阳天气</a></li>
+                <li class="diandian"><a href="http://huhehaote.tianqi.com/">呼和浩特天气</a></li>
+                <li class="diandian"><a href="http://shijiazhuang.tianqi.com/">石家庄天气</a></li>
+                <li class="diandian"><a href="http://taiyuan.tianqi.com/">太原天气</a></li>
+                <li class="diandian"><a href="http://xian.tianqi.com/">西安天气</a></li>
+                <li class="diandian"><a href="http://jinan.tianqi.com/">济南天气</a></li>
+                <li class="diandian"><a href="http://wulumuqi.tianqi.com/">乌鲁木齐天气</a></li>
+                <li class="diandian"><a href="http://lasa.tianqi.com/">拉萨天气</a></li>
+                <li class="diandian"><a href="http://xining.tianqi.com/">西宁天气</a></li>
+                <li class="diandian"><a href="http://lanzhou.tianqi.com/">兰州天气</a></li>
+                <li class="diandian"><a href="http://yinchuan.tianqi.com/">银川天气</a></li>
+                <li class="diandian"><a href="http://zhengzhou.tianqi.com/">郑州天气</a></li>
+                <li class="diandian"><a href="http://nanjing.tianqi.com/">南京天气</a></li>
+                <li class="diandian"><a href="http://nanchang.tianqi.com/">南昌天气</a></li>
+                <li class="diandian"><a href="http://changsha.tianqi.com/">长沙天气</a></li>
+                <li class="diandian"><a href="http://guiyang1.tianqi.com/">贵阳天气</a></li>
+                <li class="diandian"><a href="http://chengdu.tianqi.com/">成都天气</a></li>
+                <li class="diandian"><a href="http://guangzhou.tianqi.com/">广州天气</a></li>
+
+            </ul>
+        </div>
+        <div class="banner300 b300_14"><script>banner_300_14();</script></div>
+    </div>
+</div>
+<div style="width:100%;background:#f6f6f6;float:left;margin-top: 30px;">
+    <div style="CLEAR: both"></div>
+
+    <div id="footer">
+       
+            <div>
+                <div class="hhx_footer_box">
+                    <div class="hhx_fontfff16">导航网址：</div>
+                    <div class="hhx_flexaBox">
+                        <div class="hhx_flex_a clearfix" id="newindex_b1">
+                            <a href="https://www.tianqi.com/chinacity.html" target="_blank">全国天气</a>
+                            <a href="https://www.tianqi.com/beijingjingdian/" target="_blank">旅游天气</a>
+                            <a href="https://www.tianqi.com/worldcity.html" target="_blank">国际天气</a>
+                            <a href="https://lishi.tianqi.com" target="_blank">历史天气</a>
+                            <a href="https://www.tianqi.com/news/" target="_blank">天气新闻</a>
+                            <a href="https://www.tianqi.com/changshi/" target="_blank">天气常识</a>
+                            <a href="https://www.tianqi.com/toutiao/" target="_blank">天气生活</a>
+                        </div>
+                        <div class="hhx_flex_a clearfix" id="newindex_b2">
+                        	<a href="https://www.tianqi.com/toutiao/meishi/" target="_blank">城市美食</a>
+                            <a href="https://www.tianqi.com/toutiao/techan/" target="_blank">城市特产</a>
+                            <a href="https://www.tianqi.com/toutiao/lvyou/" target="_blank">城市景点</a>
+                             <a href="https://www.tianqi.com/zhuanti/" target="_blank">最新专题</a>
+                            <a href="https://www.tianqi.com/latest/" target="_blank">最近更新</a>
+                            <a href="https://www.tianqi.com/air/" target="_blank">空气质量</a>
+                            <a href="https://wannianli.tianqi.com" target="_blank">万年历查询</a>
+                            <a href="https://wannianli.tianqi.com/jiemeng/" target="_blank">周公解梦</a>
+                            
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="newIndex_load">
+                	<div>客户端下载</div>
+                	<img src="//static.tianqistatic.com/static/wap2018/ico1/erweimaCode.png"/>
+                    <div class="large-img">
+                        <img src="//static.tianqistatic.com/static/wap2018/ico1/erweimaCode.png"/>
+                    </div>
+                </div>
+                <div class="newIndex_load">
+                    <div>天气网公众号</div>
+                    <img src="//static.tianqistatic.com/static/wap2018/ico1/wxerweima.jpg"/>
+                    <div class="large-img">
+                        <img src="//static.tianqistatic.com/static/wap2018/ico1/wxerweima.jpg"/>
+                    </div>
+                </div>
+
+                <div class="newIndex_sugg">
+                	<img src="//static.tianqistatic.com/static/wap2018/ico1/newIndex_sugg.png"/>
+                	<a style="display: inline-block;" href="https://www.tianqi.com/fankui.html" target="_blank" title="意见反馈" rel="nofollow">
+                		<div>意见反馈</div>
+                		<div>举报邮箱:kf@tianqi.com</div> 
+                	</a>
+                </div>
+                <div style="clear: both;"></div>
+               </div>
+            </div>
+    </div>
+
+    <div id="hhx_footer">
+        <div class="hhx_footer_mid">
+            Copyright &copy; 2009-2021            <a href="https://www.tianqi.com" target="_blank">www.tianqi.com 天气网</a>
+            . All Rights Reserved. <a href="http://beian.miit.gov.cn" target="_blank">渝ICP备18012671号-2</a>
+            <p style="margin: 16px 0 18px 0;text-align: center;">
+            	温馨提示：数据来源中国气象局，仅供参考 
+            	<a style="color:#fff" href="https://www.tianqi.com/fankui.html" target="_blank" title="意见反馈" rel="nofollow">联系邮箱:kf@tianqi.com</a>
+            </p>
+			 
+			<p style="margin: 16px 0 18px 0;text-align: center;">
+				<text style="color:#666;white-space: nowrap;magin-bottom:10px">部分图片来自互联网，如有侵权请联系删除</text>
+			</p>
+            <a href="http://www.12377.cn/node_552908.htm" target="_blank" title="举报链接" style="width:110px;height:32px;border: 1px solid #636363;display:inline-block;background:url('//static.tianqistatic.com/static/wap2018/ico1/index_jubao.png') no-repeat center center;">
+            </a>
+			<div style="width:300px;margin:0 auto; padding: 0 0 20px 0;">
+				<img src="//static.tianqistatic.com/static/tianqi2018/images/beian.png" />
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010302002269" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">渝公网安备 50010302002269号</p></a>
+			</div>
+        </div>
+    </div>
+</div>
+
+
+<script language="javascript">
+    // $(function(){
+    //     $(".newIndex_load > img").mouseover(function(){
+    //         $(this).siblings('.large-img').css('display','block');
+    //     });
+    //     $(".newIndex_load > img").mouseout(function(){
+    //         $(this).siblings('.large-img').css('display','none');
+    //     });
+    // });
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ab6a683aa97a52202eab5b3a9042a8d2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+	document.onselectstart = new Function("event.returnValue=false");
+
+</script>
+<div style="display: none;">
+    <script src="https://s96.cnzz.com/z_stat.php?id=1275796416&web_id=1275796416" language="JavaScript"></script>
+</div>
+<script src="//static.tianqistatic.com/static/common/js/headerCommon.js"></script>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    // 禁用f12及复制
+    document.onselectstart=function(){return false;};
+          window.oncontextmenu=function(){return false;}  
+        //   window.onkeydown = window.onkeyup = window.onkeypress = function (event) { 
+        //  if(event.code == 'F12'){
+        //    window.event.returnValue = false; 
+        //     return false;
+        //   }
+        //  } 
+</script>
+<!--<script src="//static.tianqistatic.com/static/dist/js/search.3e996.js"></script>-->
+<script src="//static.tianqistatic.com/static/tianqi2018/js/search.js"></script>
+</body>
+</html>

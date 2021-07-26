@@ -1,0 +1,878 @@
+<!DOCTYPE HTML>
+<html>
+	<!DOCTYPE html>
+	<html lang="zh">
+		<head>
+			<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="/case/favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script type="text/javascript">
+			var ctx = "/case/";
+			if (ctx.indexOf('jsessionid') > 0) {
+				location.reload();
+			}
+		</script>
+		<style>
+			.nav-main #bannerida.layui-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+            height: 96px;
+            font-size: 18px;
+        }
+
+        .nav-main #bannerida.layui-nav a span {
+            font-size: 18px;
+        }
+			.erweima_hover{
+				position: relative;
+			}
+			.erweima_hover:hover .erweiBox{
+				display: block;
+			}
+			.erweiBox{
+				position: absolute;
+				top: 30px;
+				z-index: 999;
+				padding: 20px;
+				background:#fff;
+				color: #000;
+				width: 120px;
+				text-align: center;
+				display: none;
+			}
+			.erweiBox p{
+				font-size: 12px;
+			}
+    </style>
+	</head>
+			<link rel="stylesheet" href="/case/assets/pc/css/layui.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/iconfont.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/swiper.min.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/base.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/public.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/CourtJudge.css">
+			<link rel="stylesheet" href="/case/assets/pc/css/icon.css">
+
+			<title>律所详情-新疆维吾尔自治区博尔塔拉蒙古自治州爱博律师事务所-中国审判案例数据库</title>
+		</head>
+		<body>
+			<div class="header">
+		<div class="layui-main header-main">
+			<ul class="layui-nav layui-layout-right" id="tabb">
+				
+				
+				<li class="layui-nav-item ">
+					<a href="/case/login" id="login" onclick="loginCookie()">登录</a>
+				</li>
+				<li class="layui-nav-item ">
+					<a href="/case/user/mobileRester" id="register">注册</a>
+				</li>
+				<li class="layui-nav-item ">
+					
+				</li>
+
+				<li class="layui-nav-item erweima_hover" >
+					<a href="javascript:void(0);" >APP</a>
+					<div class="erweiBox">
+						<p>欢迎下载审判案例APP</p>
+						<img src="/case/assets/pc/images/coder1.png" alt="" style="width: 120px;height: 120px;">
+						<p>扫描二维码下载</p>
+					</div>
+				</li>
+
+				<li class="layui-nav-item ">
+					<a href="/case/help/searchHelp" target="_blank">帮助</a>
+				</li>
+
+				<li class="layui-nav-item layui-form currentb" id="select">
+					<select name="city" lay-verify="required" class="selectable" lay-filter="selectable">
+						<option value="0" selected="">简体中文</option>
+					</select>
+				</li>
+
+			</ul>
+		</div>
+		<script src="/case/assets/pc/js/jquery-3.2.1.min.js"></script>
+		<script>
+        $(document).on("click", "#logout", function () {
+
+            layer.confirm('确定退出登录？', {
+                title:'退出提示',
+                skin : "pop_outLogin",
+                btn: ['确定','取消'] //按钮
+            }, function(index){
+                window.location.href = ctx + 'logout';
+            }, function(){
+                console.log(arguments)
+            })
+
+        });
+        //设置本地缓存地址
+        function  loginCookie() {
+            localStorage.setItem("loginUrl", window.location.href);
+        }
+    </script>
+	</div>
+			<div class="nav layui-row">
+		<div class="layui-col-xs4 layui-bg-red">
+		</div>
+		<div class="layui-main nav-main">
+			<div class="layui-layout-left layui-bg-red logo flex align-center" style="height: 100%;">
+				<img src="/case/assets/pc/images/logo.png">
+			</div>
+			<ul class="layui-nav layui-layout-right" id="bannerid">
+				
+				<li class="layui-nav-item"><a href="/case/">首页</a></li>
+				
+				<li class="layui-nav-item"><a href="/case/cases">要览案例</a></li>
+				
+				<li class="layui-nav-item"><a href="/case/bulletins">司法案例</a></li>
+				
+				<li class="layui-nav-item"><a href="/case/laws">法律法规</a></li>
+				<li class="layui-nav-item active"><a href="/case/institution/list">机构</a></li>
+				
+				
+				<li class="layui-nav-item"><a href="/case/figure/list">人物</a></li>
+			</ul>
+			<ul class="layui-nav layui-layout-right" id="bannerida" style="display:none">
+				
+				<li class="layui-nav-item"><a href="/case/">Home</a></li>
+				
+				<li class="layui-nav-item"><a href="/case/cases">
+						<span>Trial</span><span>Cases</span></a></li>
+				
+				<li class="layui-nav-item"><a href="/case/bulletins"> <span>Judicial</span><span>Cases</span></a>
+				</li>
+				
+				<li class="layui-nav-item"><a href="/case/laws">
+						<span>Laws</span><span>and</span><span>Regulations</span> </a></li>
+				<li class="layui-nav-item active"><a href="/case/institution/list"><span>Courts</span><span>and</span><span>Law
+							Firms</span></a></li>
+				
+				
+				<li class="layui-nav-item"><a href="/case/figure/list">
+						<span>Judges</span><span>and</span><span>Lawyers</span> </a></li>
+			</ul>
+		</div>
+	</div>
+			<div class="search_banner">
+				<div class="layui-main">
+					<div class="searchXs_div">
+						<div class="searchXs fl">
+							<input id="dataType" name="dataType" type="hidden" searchPageParams="true" value="0">
+							<input id="dataId" name="dataId" type="hidden" searchPageParams="true" value="2004794">
+							<input id="keyword" name="keyword" type="text" searchPageParams="true" class="serch_input" value=""
+							 onblur="if(this.value==''){this.value='请输入案由、关键词、法院、当事人、律师'}" onfocus="if(this.value=='请输入案由、关键词、法院、当事人、律师'){this.value=''}">
+							<input id="casereasonId" name="casereasonId" type="hidden" searchPageParams="true" value="">
+							<input id="casetype" name="casetype" type="hidden" searchPageParams="true" value="">
+							<input id="courtLevel" name="courtLevel" type="hidden" searchPageParams="true" value="">
+							<input id="courtId" name="courtId" type="hidden" searchPageParams="true" value="">
+							<input id="judgelevel" name="judgelevel" type="hidden" searchPageParams="true" value="">
+							<input id="finalOutcome" name="finalOutcome" type="hidden" searchPageParams="true" value="">
+							<input id="closeyear" name="closeyear" type="hidden" searchPageParams="true" value="">
+							<input id="lawLevel" name="lawLevel" type="hidden" searchPageParams="true" value="">
+							<input id="lawIssuedby" name="lawIssuedby" type="hidden" searchPageParams="true" value="">
+							<input id="lawTimeliness" name="lawTimeliness" type="hidden" searchPageParams="true" value="">
+							<input id="lawIssueYear" name="lawIssueYear" type="hidden" searchPageParams="true" value="">
+							<input id="lawImplementYear" name="lawImplementYear" type="hidden" searchPageParams="true" value="">
+							<input id="region" name="region" type="hidden" searchPageParams="true" value="">
+							<input id="alphabet" name="alphabet" type="hidden" searchPageParams="true" value="">
+							<span class="btn-search layui-bg-red" onclick="reloadPageData()"><i class="iconfont">&#xe6db;</i></span>
+						</div>
+						<div class="btnxs fr">
+							<button type="button" class="layui-btn layui-btn-danger" onclick="advansearch('03')">高级检索</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="term clearfix border">
+				<div class="layui-main clearfix">
+					<div class="term-content fl">
+						<div>
+							<span class="fl bold Ft20">新疆维吾尔自治区博尔塔拉蒙古自治州爱博律师事务所</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nav-bar-full">
+				<div class="nav-bar">
+					<div class="labelC">
+<!--						<span class="btnRed"><span th:onclick="|compareList(${lawfirmId}, '${lawfirm.title}', 'lawfirm')|" class="bold">+</span> 加入对比</span>-->
+					</div>
+					<div class="label-right">
+						<a href="javascript:window.print();"><i class="my-icon icon-print">打印</i></a>
+<!--						<i class="my-icon icon-yin">引</i>-->
+						<!--<i  th:class="${judge.isFlagging eq 1?'my-icon icon-stara ':'my-icon icon-star'}" th:onclick="|addOrRemoveFlagging(this, 'judge', ${judge.id});|">星星</i>-->
+						<i class="iconfont iconfontba " onclick="addOrRemoveFlagging(this, &#39;lawfirm&#39;, 2004794);">&#xe607;</i>
+						<i class="my-icon icon-share" onclick="sharefun(this, &#39;judge&#39;, 2004794);">分享</i>
+					</div>
+				</div>
+			</div>
+			<div class="layui-main clearfix">
+				<div class="mainTopLeft " style="margin-left: 0">
+					<div class="Bgcolor_FBEDED padding_20">
+						<div class="lineDiv">
+							<div class="twoline">代理要览案例：1篇</div>
+							<!--<div class="twoline">代理要览扩展案例：0篇</div>-->
+						</div>
+						<div class="lineDiv">
+							<div class="twoline">代理司法案例：0篇</div>
+							<div class="twoline">律师：26位</div>
+						</div>
+						<div class="lineDiv">
+							<div class="twoline">上传辩护词：0篇</div>
+						</div>
+					</div>
+					<div class="chartTitleDiv">
+						<div><span class="chartTitle">历年要览案例</span></div>
+						<div id="main" style="width: 1000px;height:520px;"></div>
+					</div>
+				</div>
+
+				<div class="lnList mainTopRight border_all">
+
+					<div class="lnListTop">
+						<div class="title fl">相关推荐<span>/RECOMMEND</span></div>
+						<span class="layui-nav-more"></span>
+					</div>
+
+					<div class="lnListContent">
+						<ul class="sideMenu">
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001211" target="_blank"  class="Ft14 text_5E5E5E" title="新疆天圆律师事务所">新疆天圆律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001212" target="_blank"  class="Ft14 text_5E5E5E" title="新疆中天律师事务所">新疆中天律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001213" target="_blank"  class="Ft14 text_5E5E5E" title="新疆国通律师事务所">新疆国通律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001235" target="_blank"  class="Ft14 text_5E5E5E" title="新疆同济律师事务所">新疆同济律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001236" target="_blank"  class="Ft14 text_5E5E5E" title="新疆维吾尔自治区商务律师事务所">新疆维吾尔自治区商务律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001278" target="_blank"  class="Ft14 text_5E5E5E" title="新疆北方律师事务所">新疆北方律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001279" target="_blank"  class="Ft14 text_5E5E5E" title="新疆恒瑞律师事务所">新疆恒瑞律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001281" target="_blank"  class="Ft14 text_5E5E5E" title="新疆商务律师事务所">新疆商务律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001282" target="_blank"  class="Ft14 text_5E5E5E" title="新疆国字律师事务所">新疆国字律师事务所</a>
+							</li>
+							<li class="border padding_lr_10 text-center" style="height: 45px;line-height: 45px">
+								&nbsp;<a href="/case/search/lawfirm/2001307" target="_blank"  class="Ft14 text_5E5E5E" title="新疆天阳律师事务所">新疆天阳律师事务所</a>
+							</li>
+
+						</ul>
+					</div>
+
+
+				</div>
+
+			</div>
+			<div class="essay_buttonBox text-center margin_50">
+				<button type="button" class="layui-btn Bg_color" style="background: #ba162e" onclick="loginPopUp(2004794)">查看更多内容</button>
+			</div>
+			
+			<div id="bshrediv">
+				<div class="bshare-custom">
+					<a title="分享至" id="bshare-shareto" class="bshare-more">分享到</a>
+					<a title="分享到QQ空间" class="bshare-qzone">QQ空间</a>
+					<a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a>
+					<a title="分享到人人网" class="bshare-renren">人人网</a>
+					<a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a>
+					<a title="分享到微信" class="bshare-weixin" href="javascript:void(0);">微信</a>
+				</div>
+			</div>
+			<div class="footer">
+		<div class="layui-main" style="padding-left:7%;">
+			<div class="footerS clearfix">
+				<div class="footerlogo fl">
+					<img src="/case/assets/pc/images/logobot.png" alt="">
+				</div>
+				<div class="footerNav fr">
+					<a href="/case/us/searchUs" target="_blank" class="marginL25">关于我们</a>
+					<a href="/case/product/searchProduct" target="_blank" class="marginL10">产品介绍</a>
+					<a href="/case/guidebook/searchGuidebook" target="_blank" class="marginL10">关于《要览》</a>
+					<a href="/case/help/searchHelp" target="_blank" class="marginL10">帮助中心</a>
+					<a href="/case/contact/searchContact" target="_blank" class="marginR25">联系我们</a>
+				</div>
+			</div>
+			<div class="footerM clearfix marginT40">
+				<div class="footerlist border" style="padding-bottom: 2px;">
+					<span class="fl iconF"><i class="iconfont">&#xe602;</i></span>
+					<div class="text">
+						<p class="Ft20 textWhite">商务咨询：</p>
+						<p id="contact_telOrgan" class="Ft16 textD">010-62515610（机构用户）</p>
+						<p id="contact_telUser" class="Ft16 textD">010-62514898（个人用户）</p>
+					</div>
+				</div>
+				<div class="footerlist border">
+					<span class="fl iconF"><i class="iconfont">&#xe605;</i></span>
+					<div class="text">
+						<p class="Ft20 textWhite">商务邮箱：</p>
+						<p id="contact_email" class="Ft16 textD">rd100@crup.com.cn</p>
+					</div>
+				</div>
+				<div class="footerlist border">
+					<span class="fl iconF"><i class="iconfont">&#xe62c;</i></span>
+					<div class="text">
+						<p class="Ft20 textWhite">联系地址：</p>
+						<p id="contact_addr" class="Ft16 textD">北京市海淀区中关村大街31号</p>
+					</div>
+				</div>
+			</div>
+			<div class="footerM clearfix marginT10" style="margin-bottom:40px;">
+                <div class="footerlist">
+                    <p class="Ft20 textWhite">相关数据库：</p>
+                    <div class="marginT20">
+                        <a class="Ft15 textD" href="http://www.cnthinkers.com/" target="_blank">中国思想与文化名家数据库</a> <br/>
+                        <a class="Ft15 textD marginT5" href="http://www.ztzyk.com/" target="_blank">人大社专题资源库</a>
+                    </div>
+                    
+                    <p class="Ft20 textWhite" style="margin-top: 30px;">电子出版物专用书号：</p>
+                    <div class="marginT20">
+                        <a class="Ft15 textD">978-7-89417-264-8</a>
+                    </div>
+                </div>
+                <div class="footerlist">
+                    <p class="Ft20 textWhite">友情链接：</p>
+                    <div class="marginT20">
+<!--                        <a class="Ft15 textD" href="http://www.chncase.cn/law/pages/index.html" target="_blank">中国法律应用案例网</a> <br/>-->
+                        <a class="Ft15 textD marginT10" href="http://www.crup.com.cn/" target="_blank">中国人民大学出版社</a> <br/>
+                        <a class="Ft15 textD marginT10" href="http://www.rucdigit.com/" target="_blank">北京人大数字科技有限公司</a> <br/>
+                        <a class="Ft15 textD marginT10" href="http://njc.chinacourt.org/" target="_blank">国家法官学院</a> <br/>
+                        <a class="Ft15 textD marginT10" href="http://www.law.ruc.edu.cn/" target="_blank">中国人民大学法学院</a>
+                    </div>
+                </div>
+				<div class="footerlist">
+					<p class="Ft20 textWhite">关注我们：</p>
+					<div class="marginT20">
+						<div class="coder fl">
+							<p><img src="/case/assets/pc/images/coder1.png" alt=""></p>
+							<p class="marginT10">扫码下载APP</p>
+						</div>
+						<div class="coder fl">
+							<p><img src="/case/assets/pc/images/coderGZH.png" alt=""></p>
+							<p class="marginT10">关注我们</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footerB">
+			<span>© 2012 - 2020, RucDigt Inc. - All Rights Reserved</span>
+			<span class="marginL25"><a href="https://beian.miit.gov.cn/" style="color: white;" target="_blank">京ICP备12035694号-3</a></span>
+		</div>
+		<script src="/case/assets/pc/js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(function () {
+            $.post(ctx + '/contact', function (data) {
+                if (data.entity) {
+                    var telOrgan = data.entity.telOrgan;
+                    var telUser = data.entity.telUser;
+                    var email = data.entity.email;
+                    var addr = data.entity.addr;
+                    if (telOrgan && telOrgan != '') {
+                        $("#contact_telOrgan").text(telOrgan);
+                    }
+                    if (telUser && telUser != '') {
+                        $("#contact_telUser").text(telUser);
+                    }
+                    if (email && email != '') {
+                        $("#contact_email").text(email);
+                    }
+                    if (addr && addr != '') {
+                        $("#contact_addr").text(addr);
+                    }
+                    
+                    var db = data.entity.db;
+                    if (db) {
+                    	var dbHtml = '';
+                    	var dbs = db.split(/[\n,]/g);
+                    	for (var i in dbs) {
+                    		var tmp = dbs[i].split('>');
+                    		dbHtml += '<a class="Ft15 textD" href="' + tmp[1] + '" target="_blank">' + tmp[0] + '</a> <br/>';
+                    	}
+                    	$('#relevant_db').html(dbHtml);
+                    }
+                    
+                    var link = data.entity.link;
+                    if (link) {
+                    	var linkHtml = '';
+                    	var links = link.split(/[\n,]/g);
+                    	for (var i in links) {
+                    		var tmp = links[i].split('>');
+                    		linkHtml += '<a class="Ft15 textD" href="' + tmp[1] + '" target="_blank">' + tmp[0] + '</a> <br/>';
+                    	}
+                    	$('#relevant_link').html(linkHtml);
+                    }
+                }
+            });
+        });
+    </script>
+	</div>
+			</div>
+			<script src="/case/assets/pc/js/layui.all.js"></script>
+			<script src="/case/assets/pc/js/swiper.min.js"></script>
+			<script src="/case/assets/pc/js/jquery-3.2.1.min.js"></script>
+			<script src="/case/assets/pc/js/public.js"></script>
+			<script src="/case/assets/pc/js/echarts.min.js"></script>
+			<script type="text/javascript">
+				var oneChartData;
+				var towChartData;
+				$(function() {
+					layui.use(['form'], function() {
+					var form = layui.form;
+					form.on('select(order)', function(data) {
+						reloadPageData();
+					});
+					form.on('select(pageSize)', function(da) {
+						reloadPageData();
+					})
+				});
+					$(".mainContent").on("click", ".all_checkbox", function() {
+						if (this.checked) {
+							$(".mainContent .checkbox").prop('checked', true);
+						} else {
+							$(".mainContent .checkbox").prop('checked', false);
+						}
+					});
+
+
+					$(".mainContent").on("click", ".checkbox", function() {
+						if ($(".mainContent .checkbox:checked").length == $(".mainContent .checkbox").length) {
+							$(".mainContent .all_checkbox").prop('checked', true);
+						} else {
+							$(".mainContent .all_checkbox").prop('checked', false);
+						}
+					});
+					$('.close').click(function() {
+						console.log('1111')
+						$(this).closest('.lnListPop').hide()
+					})
+					$('.screenTwo a,.screenOne a').click(function() {
+						if (oneChartData) {
+							$(this).addClass('active').siblings().removeClass('active');
+							showChartData();
+						}
+					})
+					$('.btnOpen').click(function() {
+						var text = $(this).find('em').html()
+						if (text == "展开") {
+							$(this).find('em').html('收起');
+							$(this).find('i').html('&#xe606;');
+							$(this).parent('div').prev().css("height", "auto");
+							$(this).parent('div').prev().css("overflow", "none");
+						} else {
+							$(this).find('em').html('展开');
+							$(this).find('i').html('&#xe62a;');
+							$(this).parent('div').prev().css("height", "215px");
+							$(this).parent('div').prev().css("overflow", "hidden");
+						}
+
+					});
+
+
+					//高级检索回车事件
+					$('#keyword').keydown(function(e) {
+						if (e.keyCode == 13) {
+							reloadPageData();
+						}
+
+					});
+
+					var Accordion = function(el, multiple) {
+						this.el = el || {};
+						this.multiple = multiple || false;
+
+						// Variables privadas
+						var links = this.el.find('.link');
+						// Evento
+						links.on('click', {
+							el: this.el,
+							multiple: this.multiple
+						}, this.dropdown)
+					};
+
+					Accordion.prototype.dropdown = function(e) {
+						var $el = e.data.el;
+						$this = $(this);
+						$next = $this.next();
+
+						$next.slideToggle();
+						$this.parent().toggleClass('open');
+
+						if (!e.data.multiple) {
+							//$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+						}
+					};
+                    var accordion = new Accordion($('.accordion'), false);
+
+					var dataId = "2004794";
+					$.post(ctx + "search/lawfirm/closeyearList", {
+						dataId: dataId,
+                        type: 1
+					}, function(data) {
+						console.log(data)
+						var myChart = echarts.init(document.getElementById('main'));
+
+						var yearStrList = [];
+						var yearNumStrList = [];
+						var closeyearList = data.list;
+						for (var i = 0; i < closeyearList.length; i++) {
+							yearStrList[i] = closeyearList[closeyearList.length - i - 1].closeyear;
+							yearNumStrList[i] = closeyearList[closeyearList.length - i - 1].caseNum;
+						}
+						option = {
+							xAxis: {
+								name: '年份',
+								type: 'category',
+								data: yearStrList
+							},
+							tooltip: {},
+							dataZoom: [{
+								type: 'slider',
+								show: true,
+								xAxisIndex: [0],
+								left: '9%',
+								bottom: -5
+							}],
+							yAxis: {
+								name: '案例数量',
+								type: 'value'
+							},
+							grid: {
+								x: 70
+							},
+							series: [{
+								data: yearNumStrList,
+								type: 'line'
+							}]
+						};
+
+
+						// 使用刚指定的配置项和数据显示图表。
+						myChart.setOption(option);
+					})
+					$(".InListAuto, .InListAuto1").find(".lnListContent .sideMenu").each(function () {
+						if($(this).height() < 215) {
+							$(this).parents(".lnListContent").addClass("heightAuto");
+						}
+					})
+
+				});
+                //高级搜索跳转
+                function advansearch(params) {
+                    console.log('params::'+params);
+                    var  url=ctx + 'search/senior?type='+params
+                    console.log('url:23:'+url);
+                    console.log('params:23:'+params);
+                    window.location.href = url
+
+                }
+				function updateSearchParams(id, value) {
+					var oldValue = $("#" + id).val();
+					if (oldValue == value) {
+						return false;
+					}
+					if (value) {
+						$("#" + id).val(value);
+					} else {
+						$("#" + id).val('');
+					}
+
+					reloadPageData();
+					return false;
+				}
+
+				function updateSearchDataTypeParams(dataType) {
+					var keyword = $("#keyword").val();
+					var pageSize = $("#pageSize").val();
+					var dataId = $("#dataId").val();
+					var url = ctx + '/search/lawfirm/' + dataId + '?pageNum=1'
+					if (keyword && keyword != '') {
+						url = url + '&keyword=' + keyword;
+					}
+					url = url + '&dataType=' + dataType;
+					if (pageSize && pageSize != '') {
+						url = url + '&pageSize=' + pageSize;
+					}
+					if (dataId && dataId != '') {
+						url = url + '&dataId=' + dataId;
+					}
+
+					window.location.href = url.replace("//", "/");
+					return false;
+				}
+
+				function cleanSearchParams() {
+					var dataType = $("#dataType").val();
+					var pageSize = $("#pageSize").val();
+					var order = $("#order").val();
+					var dataId = $("#dataId").val();
+					var url = ctx + '/search/lawfirm'+2004794+'?pageNum=1&dataType=' + dataType + '&order=' + order + '&pageSize=' + pageSize +
+						'&dataId=' + dataId;
+					window.location.href = url.replace("//", "/");
+				}
+
+				function reloadPageData() {
+					var url = ctx + '/search/lawfirm/'+2004794+'?pageNum=1';
+					var searchPageParams = $('[searchPageParams]');
+					if (searchPageParams && searchPageParams.length > 0) {
+						for (var i = 0; i < searchPageParams.length; i++) {
+							var key = $(searchPageParams[i]).attr("name");
+							var value = $(searchPageParams[i]).val();
+							if (value && value != '') {
+								url = url + '&' + key + '=' + value;
+							}
+						}
+					}
+
+					window.location.href = url.replace("//", "/");
+				}
+
+				// 收藏或取消收藏
+				function addOrRemoveFlagging(item, entityType, entityId) {
+					$.post(ctx + "flagging/addOrRemoveFlagging", {
+						entityType: entityType,
+						entityId: entityId
+					}, function(result) {
+						if (result.code == '200') {
+							if (result.status == 0) {
+								window.location.href = ctx + "login";
+							} else if (result.status == 1) {
+								if (!$(item).hasClass("active")) {
+									$(item).addClass("active")
+								}
+								layer.msg("收藏成功");
+							} else if (result.status == 2) {
+								$(item).removeClass("active")
+								layer.msg("取消收藏成功");
+							}
+						} else {
+							layer.msg(result.msg);
+						}
+					})
+				}
+				//分享功能
+				//#bshrediv
+				function sharefun(item, entityType, entityId) {
+					$("#bshrediv").css({
+						'display': 'block'
+					});
+				}
+
+				function loadChartData(item, type) {
+					$(".lnListPop").hide();
+					$(item).closest('.lnList').find('.lnListPop').show();
+					var params = {};
+					params["chartType"] = type;
+					var searchPageParams = $('[searchPageParams]');
+					if (searchPageParams && searchPageParams.length > 0) {
+						for (var i = 0; i < searchPageParams.length; i++) {
+							var key = $(searchPageParams[i]).attr("name");
+							var value = $(searchPageParams[i]).val();
+							if (value && value != '') {
+								params[key] = value;
+							}
+						}
+					}
+					oneChartData = null;
+					towChartData = null;
+					var dataId = $("#dataId").val();
+					$.post(ctx + '/search/lawfirm/' + dataId + '/findLeftChartData', params, function(data) {
+						if (data.entity) {
+							oneChartData = data.entity.oneChartData
+							if (type == 'casereason') {
+								towChartData = data.entity.towChartData
+							}
+							showChartData();
+						}
+					});
+				}
+
+				function showChartData() {
+					var chartData = oneChartData;
+					if ($(".lnListPop:visible .screenOne .active")) {
+						var level = $(".lnListPop:visible .screenOne .active").attr("data-value");
+						if (level == 2) {
+							chartData = towChartData;
+						}
+					}
+					var size = $(".lnListPop:visible .screenTwo .active").text();
+					if (chartData.length > size) {
+						chartData = chartData.slice(0, size);
+					}
+					option = {
+						tooltip: {
+							trigger: 'item',
+							formatter: '{b} : {c} ({d}%)'
+						},
+						toolbox: {
+							show: true,
+							feature: {
+								saveAsImage: {
+									show: true,
+									excludeComponents: ['toolbox'],
+									pixelRatio: 2
+								}
+							}
+						},
+						legend: {
+							type: 'scroll',
+							orient: 'vertical',
+							right: 10,
+							top: 20,
+							bottom: 20
+						},
+						series: [{
+							type: 'pie',
+							radius: '55%',
+							center: ['40%', '50%'],
+							data: chartData,
+							emphasis: {
+								itemStyle: {
+									shadowBlur: 10,
+									shadowOffsetX: 0,
+									shadowColor: 'rgba(0, 0, 0, 0.5)'
+								}
+							}
+						}]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					echarts.init($(".lnListPop:visible .chartDiv")[0]).setOption(option);
+				}
+
+				//预览
+				function dialogPreview(item, id) {
+					console.log(item, id)
+					var id = id
+					$.post(ctx + "/cases/getCaseInfo", {
+						id: id
+					}, function(data) {
+						console.log(data, id)
+						var list = data.entity;
+						if (list.isUser == 1) {
+							//时间戳转时间
+							function time(time) {
+								time = +new Date()
+								var date = new Date(time + 8 * 3600 * 1000); // 增加8小时
+								return date.toJSON().substr(0, 19).replace('T', ' ');
+							}
+							var str = '<div class="bfbqdiv" style="overflow: hidden;border-radius: 4px;"><ul class="bfbqul">'
+							str += '<li><div class="title">' + list.title + '</div></li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">文书字号：</span><span class="textCentent">' + list.docid +
+									'</span></div></li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">案由：</span><span class="textCentent">' + list.casereason +
+									'</span> </div> </li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">审级：</span><span class="textCentent">' + list.judgelevel +
+									'</span> </div> </li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">审理法院：</span><span class="textCentent">' + list.court +
+									'</span></div></li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">审结时间：</span><span class="textCentent">' + time(
+									list.closedate) + '</span></div></li>'
+							str += '<li> <div class="contentBox"> <span class="textTitle">定案结论：</span><span class="textCentent">' + list.conclusion +
+									'</span></div></li>'
+							str += '</ul>';
+							str +=
+									'<div class="btn-box"><button type="button" class="layui-btn layui-btn-sm layui-btn-danger" onclick="Rulinglerical(this,' +
+									list.id +
+									', "case")"><i class="my-icon icon-cjws"></i> 裁判文书</button><button type="button" class="layui-btn layui-btn-sm layui-btn-danger" onclick="relevantRegulation(this,' +
+									list.id +
+									', "case")"><i class="my-icon icon-xgfg"></i> 相关法规</button><button type="button" class="layui-btn layui-btn-sm layui-btn-danger" onclick="reading(' +
+									list.id + ', "case")"><i class="my-icon icon-ybyd"></i> 原版阅读</button></div></div>'
+							layui.use(['form', 'layer'], function() {
+								var form = layui.form,
+										layer = layui.layer;
+								layer.open({
+									type: 1,
+									skin: "pop_up",
+									title: '<p><i class="icon_png icon_wh_20 margin_r_10 icon_preview_png"></i>预览</p>', //不显示标题栏
+									area: ['820px', 'auto'],
+									offset: 'auto', //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+									// id: list.id ,//防止重复弹出
+									content: str,
+									closeBtn: 1,
+									// btn: false,
+									shade: 0.3, //遮罩
+									// yes: function () {
+									//     layer.closeAll();
+									// }
+								});
+
+							});
+						} else {
+							loginPopUp(id);
+						}
+					})
+				}
+				//案例对比 1:要览案例 2：司法案例
+				function batchCaseContrast(type) {
+					var sids = [];
+					$("[name=checkbox]:checked").each(function(i) {
+						sids.push($(this).val());
+					});
+					if (sids.length != 2) {
+						layer.msg('请选择两个进行对比');
+					} else {
+			            window.location.href = ctx + "contrast/caseList?type=" + type + "&caseOneid=" + sids[0] + "&caseTwoid=" + sids[1];
+					}
+				}
+
+                function downCases(params) {
+                    var cids = "";
+                    var bids = "";
+                    $("[name=checkbox]:checked").each(function(i) {
+                        var type = $(this).attr("data-type")
+                        if(type == 1) {
+                            if(cids == "") {
+                                cids = $(this).val();
+                            } else {
+                                cids = cids + ","+ $(this).val();
+                            }
+                        } else {
+                            if(bids == "") {
+                                bids = $(this).val();
+                            } else {
+                                bids = bids + ","+ $(this).val();
+                            }
+                        }
+                    });
+                    checkUserLogin("downCases", function(){
+                        window.location.href = ctx + "search/downloadLawfirmDetasilListExcel?cids=" + cids + "&bids=" + bids + params;
+                    });
+                }
+				
+				 // 人物对比  1:法官  2:律师
+				function batchContrast(type) {
+					var sid = "";
+					var num = 0;
+					$("[name=checkbox]:checked").each(function() {
+						num++;
+						sid += $(this).val() + ",";
+					})
+					if (num > 3 || num < 2) {
+						layer.msg("最多选择三个进行对比,最少选择两个进行对比")
+					} else {
+                        window.location.href = ctx + "figure/contrast?type=" + type + "&ids=" + sid
+					}
+				}
+			</script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+
+		</body>
+	</html>

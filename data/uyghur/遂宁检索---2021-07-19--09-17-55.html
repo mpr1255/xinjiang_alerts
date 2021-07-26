@@ -1,0 +1,459 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>遂宁检索</title>
+    <link href="css/was.css" rel="stylesheet" type="text/css"/>
+    <link href="css/timeline.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="js/suggest-yui2.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var ispromptshown = $.cookie('ispromptshown');
+            if (ispromptshown == "false") return ;
+
+            var dataUrl = 'searchsuggest?result=false';
+            new TRSWAS.Suggest('textfield', dataUrl,
+                    {
+                        useShim:false,
+                        resultFormat: '约%result%条结果'
+                    });
+        };
+    </script>
+    <script type="text/javascript">
+        function goto(channelid)
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                if(channelid=='282695'){
+                    window.location.href='news.jsp';
+                }
+                else{
+                    window.location.href='index.jsp?channelid='+channelid;
+                }
+            }
+            else{
+                document.searchform.channelid.value = channelid;
+                if(channelid=='242241'){
+                    document.searchform.perpage.value = 8;
+                }
+                else{
+                    document.searchform.perpage.value = '';
+                }
+                document.searchform.submit();
+            }
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+        function checkInput()
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                document.searchform.searchword.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+    <script language="javascript">
+        function setAdvancedWords()
+        {
+            document.outlinesearchform.andsen.value = '';
+            document.outlinesearchform.total.value = '';
+            document.outlinesearchform.orsen.value = '';
+            document.outlinesearchform.exclude.value = '';
+        }
+        function setSearchScope(type) {
+            setAdvancedWords();
+            document.outlinesearchform.searchscope.value = type;
+            document.outlinesearchform.submit();
+        }
+        function setTimeScope(type,column) {
+            setAdvancedWords();
+            document.outlinesearchform.timescope.value = type;
+            document.outlinesearchform.timescopecolumn.value = column;
+            document.outlinesearchform.submit();
+        }
+        function setOrderBy(type) {
+            setAdvancedWords();
+            document.outlinesearchform.orderby.value = type;
+            document.outlinesearchform.submit();
+        }
+    </script>
+    <!--444====_-->
+<!--333====-->
+<!--&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime-->
+<!--1111--新疆维吾尔族自治区---1111111111111111111====-->
+
+</head>
+<body style="width: 760px;margin:0 auto;background-image: url();">
+<div id="main">
+<!--<div id="header">
+    <form name="searchform" action="search" method="get" style="margin-bottom:15px;"  onsubmit="return checkInput();">
+        <div style="float: right">
+            
+            <a href="login.jsp" class="toplink"><img src="images/ico1.png" width="10" height="12" border="0"/>登录</a>&nbsp;&nbsp;
+            
+        </div>
+        <div style="clear: both;"></div>
+        <table>
+            <tr>
+                <td id="logo" rowspan="2"><a href="index.jsp"><img src="images/logo.gif" alt=""/></a></td>
+                <td>
+                    <ul id="g_tab">
+                        <li class="index_tab_div_h"><a href="#" onclick="goto(282695)">新 闻 </a></li>
+                        <li class="index_tab_div_s"><a href="#" onclick="goto(234439)">网 页 </a></li>
+                        <li class="index_tab_div_h"><a href="#" onclick="goto(261346)">图 片 </a></li>
+                        <li class="index_tab_div_h"><a href="hotword_list.jsp">热搜排行榜 </a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="channelid" value="242241">
+                    <input type="text" id="textfield" name="searchword" class="forminput" value="新疆维吾尔族自治区"/>
+                    <input type="hidden" name="perpage" value="">
+                    <input type="hidden" name="templet" value="">
+                    <input type="hidden" name="token" value="">
+                    <input type="submit" value="" class="submitbutton"/>
+                    <a href="preferences.jsp?goto=search&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime" class="searchbarlink">设置 </a>
+                    <a href="advanced.jsp" class="searchbarlink">高级搜索 </a>
+                </td>
+            </tr>
+        </table>
+        <div style="clear: both; margin-bottom: 6px;"></div>
+    </form>
+</div>-->
+<div class="column" id="column1" style="width: 720px;">
+<div class="outline">
+<div style="float: left; margin-bottom: 15px;"></div>
+
+<div style="float: right; margin-bottom: 15px;">找到相关结果约2条 用时0.042秒
+</div>
+
+<div style="clear: both;"></div>
+<table>
+    <tr>
+                <td class="searchtools">
+	<style>
+	.searchtoolsactive a {
+    color: #ff9a00;
+    background-color: #f7f7f7;
+    border-left: 3px solid #46a3ff;
+    padding-left: 5px;
+    }
+	</style>
+            <table class="searchtoolstable" style="width: 120px;">
+                <tr>
+                    <td id="tdscopenolimit" >
+                        <a href="#" onclick="setSearchScope('');">所有结果</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdscopetitle" >
+                        <a href="#" onclick="setSearchScope('doctitle');">标题</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdscopecontent">
+                        <a href="#" onclick="setSearchScope('doccontent');">正文</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <script type="text/javascript">
+                    var searchScope = '';
+                    if(searchScope == '' && document.getElementById("tdscopenolimit")!=null){
+                        document.getElementById("tdscopenolimit").className="searchtoolsactive" ;
+                    }
+                    else if(searchScope=='doctitle' && document.getElementById("tdscopetitle")!=null){
+                        document.getElementById("tdscopetitle").className="searchtoolsactive" ;
+                    }
+                    else if(searchScope=='doccontent' && document.getElementById("tdscopecontent")!=null){
+                        document.getElementById("tdscopecontent").className="searchtoolsactive" ;
+                    }
+                </script>
+<tr>
+                    <td id="tdtimenolimit" >
+                        <a href="#" onclick="setTimeScope('','docpubtime');">时间不限</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime1day" >
+                        <a href="#" onclick="setTimeScope('date','docpubtime');">1天内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime7days">
+                        <a href="#" onclick="setTimeScope('week','docpubtime');">1周内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdtime30days">
+                        <a href="#" onclick="setTimeScope('month','docpubtime');">1个月内</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <script type="text/javascript">
+                    var timeScope = '';
+                    if(timeScope=='' && document.getElementById("tdtimenolimit")!=null){
+                        document.getElementById("tdtimenolimit").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='date' && document.getElementById("tdtime1day")!=null){
+                        document.getElementById("tdtime1day").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='week' && document.getElementById("tdtime7days")!=null){
+                        document.getElementById("tdtime7days").className="searchtoolsactive" ;
+                    }
+                    else if(timeScope=='month' && document.getElementById("tdtime30days")!=null){
+                        document.getElementById("tdtime30days").className="searchtoolsactive" ;
+                    }
+                </script>
+                <tr>
+                    <td id="tdsortrelevance" >
+                        <a href="#" onclick="setOrderBy('RELEVANCE');">按相关度排序</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdsorttime">
+                        <a href="#" onclick="setOrderBy('-docpubtime');">按时间排序</a>
+                    </td>
+                </tr>
+                <script type="text/javascript">
+                    var orderBy = '-docpubtime';
+                    if(orderBy=='RELEVANCE' && document.getElementById("tdsortrelevance")!=null){
+                        document.getElementById("tdsortrelevance").className="searchtoolsactive" ;
+                    }
+                    else if(orderBy=='-docpubtime' && document.getElementById("tdsorttime")!=null){
+                        document.getElementById("tdsorttime").className="searchtoolsactive" ;
+                    }
+                </script>
+
+            </table>
+        </td>
+
+        <td class="searchresult">
+                        <script type="text/javascript">
+                jQuery(document).ready(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "timeline.jsp",
+                        data: "timeline=&showtype=11&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime&andsen=&total=&orsen=&exclude=&searchscope=&timescope=&timescopecolumn=&orderby=-docpubtime",
+                        success: function(data, textStatus)
+                        {
+                            $("#div_timeline").html(data);
+                        },
+                        error:function (XMLHttpRequest, textStatus, errorThrown)
+                        {
+                        }
+                    });
+                });
+                function setTimeLine(date){
+                    setAdvancedWords();
+                    document.outlinesearchform.timeline.value = date;
+                    document.outlinesearchform.submit();
+                }
+            </script>
+            <div id="div_timeline" style="width: 600px">
+            </div>
+            
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/ztbd/sjd/sjdtt/201711/t20171113_216282.html')">[头条
+]</span><a target="_blank" href='http://www.snxw.com/ztbd/sjd/sjdtt/201711/t20171113_216282.html' style="color: blue;">
+解读十九大精神 中央宣讲团10天完成31省份宣讲
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+服务，永远把人民对美好生活的向往作为奋斗目标。　　11月6日，<font color=#FF0000>新疆维吾尔族自治区</font>举行党的十九大精神报告会，全国政协社会和法制委员会副主任施芝鸿
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/ztbd/sjd/sjdtt/201711/t20171113_216282.html
+</td>
+<td style="" >
+<!--2017.11.13 09:24:59
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+                
+<table style="line-height:150%;width:100%;color: blue;font-size: 16px;" >
+<tr>
+<td style="" >
+<span style="cursor: pointer;" onclick="gotoUrl('http://www.snxw.com/ztbd/sjd/sjdzxbd/201711/t20171113_216081.html')">[最新报道
+]</span><a target="_blank" href='http://www.snxw.com/ztbd/sjd/sjdzxbd/201711/t20171113_216081.html' style="color: blue;">
+解读十九大精神 中央宣讲团10天完成31省份宣讲
+</a>
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;font-size: 13px;max-height:42px;" >
+<tr>
+<td style="" >
+服务，永远把人民对美好生活的向往作为奋斗目标。　　11月6日，<font color=#FF0000>新疆维吾尔族自治区</font>举行党的十九大精神报告会，全国政协社会和法制委员会副主任施芝鸿
+</td></tr>
+</table>
+<table style="line-height:150%;width:100%;color: green;font-size: 13px;">
+<tr>
+<td style="" >
+http://www.snxw.com/ztbd/sjd/sjdzxbd/201711/t20171113_216081.html
+</td>
+<td style="" >
+<!--2017.11.13 09:24:59
+--></td></tr>
+</table>
+
+                    <br>
+                
+            
+            <div style="max-width: 100%;margin-top: -10px;" id="outlinebar"><nobr></nobr></div>
+            
+            <form action="search" method="get" name="outlinesearchform">
+                <input type="hidden" name="searchscope" value="">
+                <input type="hidden" name="timescope" value="">
+                <input type="hidden" name="timescopecolumn" value="">
+                <input type="hidden" name="orderby" value="-docpubtime">
+                <input type="hidden" name="channelid" value="242241">
+                <input type="hidden" name="andsen" value="" />
+                <input type="hidden" name="total" value="" />
+                <input type="hidden" name="orsen" value="" />
+                <input type="hidden" name="exclude" value="" />
+                <input type="hidden" name="docchannel" value="_" />
+                <input name="searchword" type="hidden" value="新疆维吾尔族自治区"/>
+                <input type="hidden" name="perpage" value="">
+                <input type="hidden" name="templet" value="">
+                <input type="hidden" name="token" value="">
+                <input type="hidden" name="timeline" value="">
+            </form>
+     
+            <div style="BACKGROUND-COLOR: #eff2fa; width:100%">
+                                
+                    <table height="60px" cellSpacing=0 cellPadding=0 border=0>
+                        <tr>
+                            <th rowspan="2" valign="top" style="padding-top:6px; FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 75px; HEIGHT: 40px;padding-left:8px;">相关搜索</th>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    <a href="search?&channelid=242241&searchword=%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime">维吾尔自治区</a>
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    <a href="search?&channelid=242241&searchword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&keyword=%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA&orderby=-docpubtime">新疆维吾尔自治区</a>
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal; height:20px; padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                        </tr>
+                        <tr>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                                <th style="white-space:nowrap;font-weight:normal;height:20px;padding-left: 8px;FONT-SIZE: 14px;" align="left">
+                                    
+                                </th>
+                                <td width="5%"></td>
+                            
+                        </tr>
+                    </table>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+<div class="column" id="column2" style="width: 240px;">
+
+</div>
+<div class="column" id="column3" style="display: none;"></div>
+<style>
+#outlinebar a, #outlinebar span {width: 1.8em;}
+.nav {float: left;width: 600px;height: 1.2em;line-height: 1.2em;}
+</style>
+<!--<script type="text/javascript">
+var first=document.getElementById("outlinebar").children[0];
+first1=first.children[0];
+first.setAttribute('class','nav');
+first1.setAttribute('class','cur');
+</script>-->
+<script>
+    $("#outlinebar a:first-child").css("margin-top", "20px");
+	$("#outlinebar span:first-child").css("margin-top", "20px");
+	
+function gotoUrl(url) {
+    var urls = url.split("/");
+    url = urls[0];
+    for (var i = 1; i < urls.length-2; i++) {
+        url += "/"+ urls[i];
+    }
+    url = url+"/";
+    window.open(url);
+}
+	
+</script>
+<!--<div id="footer">
+    <div style="background-color: #C6E0EF; color: #039; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+        &copy;2012 北京拓尔思信息技术股份有限公司
+    </div>
+</div>-->
+</div>
+</body>
+</html>

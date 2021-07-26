@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--> <html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>知识点-学知搜索</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="pg_keypoint.css" />
+<!--[if IE]>
+<style>
+html {
+zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true);}(this));
+}
+</style>
+<script>
+(function(){if(!/*@cc_on!@*/0)return;var e ="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i=i-1){document.createElement(e[i])}})()
+</script>
+<![endif]-->
+<style>
+#knowledgeTree text {
+  text-anchor: middle;
+}
+
+#knowledgeTree text.title {
+  font-family: "微软雅黑";
+  font-size: 18px;
+  fill: #3581be;
+}
+
+#knowledgeTree text.title:hover {
+  cursor: pointer;
+}
+
+#knowledgeTree circle.node {
+  stroke: #3581be;
+  stroke-width: 1px;
+}
+
+#knowledgeTree circle.main {
+  fill: url(#radialGradient1);
+}
+
+#knowledgeTree text.main {
+  font-family: "微软雅黑";
+  font-size: 18px;
+  fill: #444444;
+}
+
+#knowledgeTree text.main:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#knowledgeTree text.bub {
+  font-family: "微软雅黑";
+  font-size: 12px;
+  fill: #444444;
+  cursor: pointer;
+}
+
+#knowledgeTree circle.bub {
+  fill: url(#radialGradient3);
+}
+
+#knowledgeTree circle.bub:hover {
+  fill: url(#radialGradient2);
+  stroke: rgb(223,168,70);
+  cursor: pointer;
+}
+
+#knowledgeTree circle.cloud {
+  fill: url(#radialGradient4);
+}
+
+#knowledgeTree text.cloud {
+  font-family: "宋体";
+  font-size: 12px;
+  fill: #296799;
+}
+
+#knowledgeTree text.cloud:hover {
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+#knowledgeTree .link {
+  stroke-width: 0;
+}
+</style>
+    <script src="/sis-js/sis.js"></script>
+    <script src="/sis-js/EasyServiceClientFullZ.js"></script>
+    <script src="http://cuas.calis.edu.cn:8090/easyservice/com.cnebula.common.security.auth.ILoginService?json"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="/xuezhi/js/config.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/style/js/login.js"></script>
+    <script type="text/javascript" src="/style/js/scheduling.js"></script>
+    <script type="text/javascript" src="/style/js/knowledge/ktools.js"></script>
+    <script type="text/javascript" src="js/identification.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/auto.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/port.js"></script>
+    <script type="text/javascript" src="js/log.js"></script>
+    <!--[if (gt IE 8)|!(IE)]>
+    <!--> 
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="js/knowledgeTree.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/knowledgeRelations.js"></script>
+    <script type="text/javascript" src="js/resourceTabs.js"></script>
+    <script type="text/javascript" src="js/categoryMapping.js"></script>
+    <script type="text/javascript" src="js/knowledge.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="/style/js/jquery.lazyload.min.js"></script>
+</head>
+<body>
+    <!-- header begin -->
+    <header>
+	    <div id="header">
+		    <div id="logo" class="fl">
+			    <a href="javascript:mainPage();">
+				    <img src="images/logo.png"  width="230"  alt="" />
+			    </a>
+		    </div>
+		    <div class="searchbox fl">
+            <span class="search-text">
+			    <input type="text" class="stext f16" id="q" name="q"/>
+                </span>
+                <span class="sbtn">检索</span>
+		    </div>
+		    <div id="dvContent" class="searchlist" style="display: none; "></div>
+		    <div class="bread"><span>您当前的位置：</span><span class="ph5"><a href="javascript:mainPage();" title="首页" class="colorb">首页</a></span><span class="ph5">></span><span class="ph5">知识点：</span><span class="ph5" id="mianbaoxian"></span></div>
+            <div class="userinfobox">
+                <a href="javascript:xuezhi.loginService.login(getOrg())" title="" class="logout" id="loginuser">登录</a>
+	        </div>
+	    </div>
+    </header>
+    <!-- header end-->
+<!-- wrap begin -->
+<div class="mgline"></div>
+<div id="wrap" class="pg-keypoint">
+<!-- 知识点解释 -->
+	<div class="mod">
+		<!-- 知识点推荐 -->
+		<div class="unit-circle" style="display: none;">
+			<h2 class="ks-r-tt f18b">同级次级 知识点推荐</h2>
+			<ul class="ks-r-con f16b clearfix">
+				<li class="on"><strong class="splitline bgn">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+				<li><strong class="splitline">　</strong></li>
+			</ul>
+			<div class="" id="knowledgeTree"></div>
+		</div>
+
+		<div class="explainbox clearfix">
+			<!-- 知识关联 -->
+			<div class="ks-relate fr">
+				<h2 class="ks-r-tt f18b">知识关联</h2>
+				<ul class="ks-r-con f16b clearfix" id="relationTabs">
+					<li data-index="-1" class="on"><strong class="splitline bgn">全部分类</strong></li>
+				</ul>
+				<div class="tagbox" id="relationGraph"></div>
+			</div>
+			<div class="knoledge">
+				<div class="ks-explain clearfix">
+                 <h1 class="ks-exptt f24b fh" ></h1>
+				<!-- 滚动图片-->
+				<div class="tabbox ks-tab" style="display: none;">
+					<div class="tabtt optdiv"><h2 class="f14b">相关图片</h2></div>
+					<div class="tabpic" id="knowledgepic">
+						<div class="widthless clearfix">
+						</div>
+					</div>
+					<div class="tabdot">
+						<div class="fr">
+							<!--<ul>
+								<li class="tabdots on"></li>
+								<li class="tabdots"></li>
+								<li class="tabdots"></li>
+								<li class="tabdots"></li>
+								<li class="tabdots"></li>
+							</ul>-->
+						</div>
+					</div>
+					<div class="tableft"></div>
+					<div class="tabright"></div>
+				</div>
+				<!-- 知识点解释 -->
+				<article class="mainexp">
+					<div class="ks-expcon f14 long"></div>
+					<div class="ks-expcon f14 short" style="display: none;"></div>
+                    <span class="extend colorb fr morebut" onclick="javascript:_body.info.openInfo();">更多</span>
+				</article>
+				<div class="ks-expcondetail shadowdiv" style="display: none;" id="moreknowledgecontent">
+					<p class="ks-expcondetail-con"></p><span class="closeksdiv extend colorb fr" onclick="javascript:_body.info.closeInfo();">关闭</span>
+				</div>
+			</div>
+			<!-- 知识关联 -->
+		</div>
+		</div>
+        <!-- 知识点分类 -->
+		<div class="mod">
+			<div class="ks-typebox">
+				<h2 class="ks-typett"></h2>
+				<h3 class="f14b acktx" id="jzwz" style="display:none;">精准文章</h3>
+				<div class="unit-loading"><img src="images/loading.gif"></div>
+			</div>
+		</div>
+    </div>
+</div>
+<!-- wrap end -->
+<!-- footer begin -->
+    <footer>
+	    <div id="footer">
+		    <p class="foot-nav"></p>
+		    <p class="copyright"></p>
+	    </div>
+    </footer>
+</body>
+</html>

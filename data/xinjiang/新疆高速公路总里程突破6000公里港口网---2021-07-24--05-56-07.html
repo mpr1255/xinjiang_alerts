@@ -1,0 +1,813 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/static/">
+	<meta charset="UTF-8">
+	<title>新疆高速公路总里程突破6000公里-港口网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="航运经济" />
+	<meta name="description" content="新疆高速公路 6000公里" />
+	<link rel="icon" href="/static/images/logo1.png" type="image/png"/>
+	<link rel="stylesheet" href="/static/css/default.css?v=1.0" />
+	<link rel="stylesheet" href="/static/css/third-class.css" />
+	<link rel="stylesheet" href="/static/css/iconfont.css" />
+	<link rel="stylesheet" href="/static/js/layui-v2.0.2/css/layui.css" />
+	<style type="text/css">
+		input.reply-input-text{
+			border:1px solid #3b3b47;
+			height:46px;
+			padding-left:10px;
+			display:block;
+			font-size:14px;
+			width:400px;
+			background:#fff;
+		}
+		select.reply-input-text{
+			border:1px solid #3b3b47;
+			height:46px;
+			padding-left:10px;
+			display:block;
+			font-size:14px;
+			width:130px;
+			background:#fff;
+			margin-right: -1px;
+		}
+		input.reply-button{
+			width:100px;
+			height:46px;
+			background:#3b3b47;
+			border:#0095D8;
+			color:#fff;
+			font-size:14px;
+			cursor:pointer;
+		}
+	</style>
+	<script>
+        /**
+         * 判断是PC浏览器还是手机端浏览器
+         */
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+            } else {
+                window.location.href="/mobile/news/detail/8566";
+            }
+        }
+        browserRedirect();
+	</script>
+</head>
+<body>
+	
+<div class="nheader nheader-scroll">
+    <div class="nh-top">
+        <div class="w1200 pivs">
+            <span class="fr" id="loginen"></span>
+            <a href="javascript:void(0);" class="n-app" id="app-em">APP下载</a>
+            <a href="http://www.chinaports.com/en/web/user/toChinaports">En</a>
+            <div class="napp-img ndisnone" id="napp-img"><img src="/static/images/appdownload.png" width="128" height="128" alt="中国港口网app二维码"></div>
+        </div>
+    </div>
+        <div class="nh-nav">
+        <div class="w1200 cl" >
+            <div class="n-logo fl">
+                <a href="/"><img src="/static/images/n-logo.png" width="79" height="48" alt="中国港口网"></a>
+            </div>
+            <div class="nh-navc fl">
+                    <a href="/">推荐</a>
+                    
+                    
+                    <a href="/ports" target="_blank">搜港</a>
+                    <a href="/portlspnews" target="_blank">独家</a>
+                    <a href="/company" target="_blank">企业秀</a>
+                    <a href="/thinkTank" target="_blank">研究院</a>
+            </div>
+            <div class="nh-right fr">
+                <input type="text" value="" placeholder="请输入搜索的内容" class="n-searcher-input"   id="search_input">
+                <input type="button" value="搜索" class="n-searcher-but" onclick="searchClick();">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nmaph"></div>
+<!--右侧悬浮钮-->
+<div class="ns-icon">
+    <span href="#" class="ns-icon1"></span>
+    <span href="#" class="ns-icon2"></span>
+    <a href="http://www.chinaports.com/en/web/user/toChinaports">
+    <span href="#" class="ns-icon3"></span>
+    </a>
+    <div class="ns-ewm ndisnone" id="nsEwn"><img src="/static/images/appdownload.png" width="128" height="128" alt=""></div>
+    <div class="ns-dz ndisnone" id="nsdz">
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
+<script>
+
+
+
+    function searchClick(){
+        var search_key_words = $("#search_input").val();
+        window.location.href="/portlspnews/0-8/blurSearchNewsByPage?key_word="+encodeURI(encodeURI(search_key_words));
+    }
+
+
+    var clickShFn = function(clN,idN,cln2){
+        $(clN).mouseover(function(e){
+            $(".ndisnone").hide();
+            $(idN).show();
+            if(cln2){
+                $(clN).addClass(cln2);
+                $(clN).siblings().removeClass(cln2)
+            }
+        });
+
+        $(document).bind("click", function (e) {
+            if($(e.target).closest(idN).length>0){
+                $(idN).show();
+            }else{
+                $(idN).hide();
+                if(cln2){
+                    $(clN).removeClass(cln2)
+                }
+            }
+        });
+    };
+
+    $(function () {
+        var urlstr = window.location.pathname;
+        $(".nh-navc a").each(function(){
+            var url = $(this).attr('href');
+            if(url=='/'){
+                url = '/index';
+            }
+            if (urlstr== url) {
+                $(this).addClass('n-active');
+            } else {
+                $(this).removeClass('n-active');
+            }
+        });
+
+        $("#search_input").keydown(function (e) {
+            if (e.keyCode == 13) {
+                searchClick();
+            }
+        });
+
+        clickShFn(".n-app","#napp-img");
+        clickShFn(".ns-icon1","#nsEwn","ns-active");
+        clickShFn(".ns-icon2","#nsdz","ns-active");
+        $(window).scroll(function(){
+            if ($(window).scrollTop() > 0){
+                $(".nheader-scroll .nh-top").hide();
+                $(".nheader-scroll").height(71);
+                $(".nmaph").height(88);
+                $(".ns-icon").show();
+                if($(window).scrollTop() > 380){
+                    $(".ntop-menu").show();
+                }else{
+                    $(".ntop-menu").hide()
+                }
+            }
+            else{
+                $(".nheader-scroll .nh-top").show();
+                $(".nheader-scroll").height(99);
+                $(".nmaph").height(116);
+                $(".ns-icon").hide();
+            }
+        });
+        $(".ntop-menu").click(function(){
+            $(window).scrollTop(0);
+            $(".ntop-menu").hide()
+        });
+
+        $("#loginen").empty();
+
+
+        $.ajax({
+            type: "GET",
+            url: '/web/user/getUsercod',
+            dataType: 'json',
+            success: function (result) {
+                var userCod = result.userCod;
+                var headimageurl = result.headimageurl;
+                var nick_name = result.nick_name;
+                if (userCod != "null" && userCod != "") {
+                    $("#loginen").append('<a href="http://sso.chinaports.com/admin/index?lang=zh_CN" target="_blank">'+ userCod +'</a><a href="javascript:" onclick="logout()">退出</a>');
+                    $("#nsdz").append('<a href="http://sso.chinaports.com/admin/index?lang=zh_CN" target="_blank">'+ userCod +'</a><a href="javascript:" onclick="logout()">退出</a>');
+                } else {
+                    $("#loginen").append('<a href="/web/user/toLogin">登录</a><a href="http://sso.chinaports.com/admin/turnToRegist?state=chinaports&lang=zh_CN">注册</a>');
+                    $("#nsdz").append('<a href="/web/user/toLogin">登录</a><a href="http://sso.chinaports.com/admin/turnToRegist?state=chinaports&lang=zh_CN">注册</a>');
+                }
+            }
+        });
+    });
+
+    //登陆按钮
+    function login(){
+        window.location.href = "/web/user/toLogin";
+    }
+
+    //退出登录
+    function logout() {
+        if (confirm("您确定退出系统吗？")) {
+            $.ajax({
+                type: "GET",
+                url: '/web/user/logout',
+                success: function (req) {
+                    delCookie("userCod");
+                    window.location.reload();
+                }
+            });
+        }
+    }
+
+    function delCookie(name)//删除cookie
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval = getCookie(name);
+        if (cval != null) {
+            document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+            document.cookie = name + "=" + cval + ";path=/;expires=" + exp.toGMTString();
+        }
+    }
+
+    /**
+     * 取cookie
+     * @param name
+     * @return
+     */
+    function getCookie(name)//取cookies函数
+    {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) return unescape(arr[2]);
+        return null;
+
+    }
+</script>
+
+	
+	<div class="banner w1200">
+		<a href="http://www.boyunscm.com/" rel="nofollow" target="_blank">
+			<img src="/static/images/boyun01.jpg" height="110px" width="1200px">
+		</a>
+	</div>
+	<div class="presentPosition w1200">当前位置：<a href="/">中国港口网</a> > <a href="/portlspnews/list/2-1-8">航运&经济</a> > 新疆高速公路总里程突破6000公里</div>
+	<div class="news-box w1200 cl">
+		<input type="hidden" id="news_id" value="8566">
+		<div class="news-left fl">
+			<h1 class="news-tit" id="news_title">新疆高速公路总里程突破6000公里</h1>
+			<h3 class="news-intrc">
+				<div style="float:left;">
+					<span>来源：
+						
+							新疆日报 石榴云
+							
+						
+					</span>
+					<span>发布时间：昨天 8:00:00 PM</span>
+					<span style="margin-right:0;">分享至：</span>
+				</div>
+				<div class="bdsharebuttonbox" data-tag="share_1">
+					<a class="bds_sqq" data-cmd="sqq" title="分享到QQ"></a>
+					
+					<a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+					<a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+				</div>
+			</h3>
+			<div class="news-con-box" id="news_content"><p>近期随着多个公路项目建成通车，全疆高速公路总里程突破6000公里，“疆内环起来，进出疆快起来”目标加快实现。</p><p style="text-align: center;"><img src="http://service.chinaports.com/hdd_chinaports/news_files/news_img_1627031955092.jpg" title="" alt="" width="600" height="399" border="0" vspace="0" style="width: 600px; height: 399px;"/></p><p style="text-align: center;"><span style="font-size: 14px;">京新高速（G7）梧桐大泉至木垒段在施工</span></p><p>“今年以来，我区各公路项目建设加快推进，多个项目陆续建成通车，路网构架更加完善。”自治区交通运输厅建设管理处处长孙宪魁说。</p><p>6月30日京新高速（G7）梧桐大泉至木垒段高速公路建成，打通了京新高速的“最后一公里”，第二条进出疆高速公路通道形成。</p><p style="text-align: center;"><img src="http://service.chinaports.com/hdd_chinaports/news_files/news_img_1627031968830.jpg" title="" alt="" width="600" height="399" border="0" vspace="0" style="width: 600px; height: 399px;"/></p><p style="text-align: center;"><span style="font-size: 14px;">6月30日，车辆在天山脚下已通车的京新高速公路上行驶。</span></p><p>目前环塔里木盆地高速公路的重要一环——若羌至民丰高速公路项目正在加紧施工。</p><p>“项目已全面进入沥青上面层施工阶段，我们将发扬铁军精神，确保9月底全线路面贯通、年底投入运营。”中铁城市发展投资集团有限公司若民高速公路项目总负责人梁庆表示。</p><p>预计今年年底，全新疆将有15个公路项目建成，高速（一级）公路总里程将明显增加，离“疆内环起来，进出疆快起”目标实现更近一步。</p><p style="text-align: center;"><img src="http://service.chinaports.com/hdd_chinaports/news_files/news_img_1627031985171.jpg" title="" alt="" width="600" height="399" border="0" vspace="0" style="width: 600px; height: 399px;"/></p><p style="text-align: center;"><span style="font-size: 14px;">6月30日，一列火车从京新高速（G7）野生动物通道上方驶过。</span></p><p>除了公路建设项目，铁路、民航多个建设项目加紧施工，推动“疆内环起来，进出疆快起来”目标加快实现。</p><p>环塔里木盆地铁路环线最后一段——和田至若羌铁路目前正加紧铺轨，全线已铺轨650多公里，计划明年6月开通运营，届时南北疆铁路双环线将形成。</p><p>机场方面，在全疆22个机场基础上，乌鲁木齐机场改扩建工程、吐鲁番机场改扩建工程等正在加快建设，昭苏、塔什库尔干机场计划年内建成，巴里坤机场、巴音布鲁克民用机场等项目正在加快推进前期工作，以乌鲁木齐国际机场为核心，“疆内成网、东西成扇”的航线网络逐步成形。</p></div>
+			<div>
+				
+					<a href="/portlspnews/0-8/blurSearchNewsByPage?key_word=航运经济"><span style="font-weight: 700;line-height: 30px;">本文关键词：航运经济</span></a>
+				
+				
+					<a href="/portlspnews/0-8/blurSearchNewsByPage?key_word=新疆高速公路 6000公里"><span style="padding-left: 10px;font-weight: 700;line-height: 30px;">标签：新疆高速公路 6000公里</span></a>
+				
+			</div>
+			<div class="newsway cl">
+				
+					<a href="/portlspnews/8547">上一篇：风雨同舟 &ldquo;豫&rdquo;难而上 &mdash;&mdash;？河南交通人冲在防汛救灾第一线</a>
+				
+				
+					<a href="/portlspnews/8551">下一篇：中交集团向河南灾区捐款1200万元</a>
+				
+			</div>
+			<div style="color: #993200;">
+				声明：凡本网注明稿件来源为<a href="/">“中国港口网”</a>、<a href="/">“www.chinaports.com”</a>的所有文字、图片等作品，版权均属中国港口网所有，转载必究。若转载使用，须同时注明稿件来源和作者信息，并承担相应的法律责任。
+			</div>
+			<div class="discuss-num"><em id="reviews_num">0</em>条评论</div>
+			<div class="discuss-input cl">
+				<div class="discuss-img fl">
+					<img src="images/news-photo.png" width="40" height="40">
+				</div>
+				<input type="text" id="content" placeholder="写下您的评论" maxlength="500" class="discuss-input-text fl">
+				<input type="button" class="discuss-button fl" value="评 论" onclick="comit_review('8566');">
+			</div>
+			<div class="discuss-box" id="review_div">
+				<ul></ul>
+				
+			</div>
+			<div class="xg-discuss">相关推荐</div>
+			<div class="xg-discuss-list">
+				<ul>
+					
+						<li class="cl">
+							<div class="video-li-left fl">
+								<img src="http://service.chinaports.com/hdd_chinaports/news_files/news_title_img_1601560874496.jpg" width="185" height="105">
+							</div>
+							<div class="video-li-right fr">
+								<div class="video-li-rhbox" style="height: 72px;">
+									<h2><a href="/portlspnews/6106" target="_blank">陈刚：维护船员合法权益 护航航运经济发展</a></h2>
+								</div>
+								<h4><a href="/portlspnews/6106" style="color: #0998fe;" target="_blank">
+									
+										
+										人民法院新闻传媒总社
+									
+									|&nbsp;2020-10-02
+									&nbsp;&nbsp;船员合法权益</a>
+								</h4>
+							</div>
+						</li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		<div class="video-right-list fr martop">
+			<h3 class="hot-intrc-h3">头条</h3>
+			<ul class="intrc-list-box">
+				
+					<li><span>1</span><a href="/portlspnews/8565" target="_blank">沿着高速看中国 | 七月，追寻大美新疆</a></li>
+				
+					<li><span>2</span><a href="/portlspnews/8559" target="_blank">台风&ldquo;烟花&rdquo;直指浙江！应急响应提升至Ⅲ级，浙江交通港航人全力备战</a></li>
+				
+					<li><span>3</span><a href="/portlspnews/8560" target="_blank">灾情就是命令！中国电建迅速投入郑州抗洪抢险</a></li>
+				
+					<li><span>4</span><a href="/portlspnews/8556" target="_blank">疫情就是命令！江苏省港口集团坚决筑牢疫情防控钢铁长城！</a></li>
+				
+					<li><span>5</span><a href="/portlspnews/8554" target="_blank">风里&ldquo;豫&rdquo;里，我们同在！中国能建闻&ldquo;汛&rdquo;而动</a></li>
+				
+					<li><span>6</span><a href="/portlspnews/8552" target="_blank">岸电建设，绿色护航！CSP长江系码头在努力</a></li>
+				
+					<li><span>7</span><a href="/portlspnews/8564" target="_blank">中国铁建向河南灾区捐款1000万元 中国铁建风&ldquo;豫&rdquo;同&ldquo;州&rd</a></li>
+				
+					<li><span>8</span><a href="/portlspnews/8551" target="_blank">中交集团向河南灾区捐款1200万元</a></li>
+				
+					<li><span>9</span><a href="/portlspnews/8550" target="_blank">智慧港口的拓荒人 记山东省港口集团高级别专家张连钢</a></li>
+				
+					<li><span>10</span><a href="/portlspnews/8549" target="_blank">向&ldquo;发展生态&rdquo;要动力 上半年辽宁经济形成&ldquo;稳中加固&rdquo;</a></li>
+				
+			</ul>
+			<div class="third-r-tit news-rr-tit">特约撰稿人</div>
+			<div class="third-r-nav cl news-rr-box" style="padding-top:10px;">
+				<ul class="photo830">
+					
+						<li>
+							<a href="/personage/66bf69fb-09cc-48aa-b4c4-f5760ff6f658/3" target="_blank"><img src="https://service.chinaports.com//hdd_chinaports/personage_files/personage_img_1536049028970.png" width="95" height="90"></a>
+							<h3 class="man-intrc"><a href="/personage/66bf69fb-09cc-48aa-b4c4-f5760ff6f658/3" target="_blank"><b>陈祥锋</b></a></h3>
+							
+						</li>
+					
+						<li>
+							<a href="/personage/2f9ef4b4-09b1-44a8-90dd-cea790b97fa0/3" target="_blank"><img src="http://service.chinaports.com//hdd_chinaports/personage_files/personage_img_1542261127889.jpeg" width="95" height="90"></a>
+							<h3 class="man-intrc"><a href="/personage/2f9ef4b4-09b1-44a8-90dd-cea790b97fa0/3" target="_blank"><b>黄有方</b></a></h3>
+							
+						</li>
+					
+						<li>
+							<a href="/personage/edd1454e-7c40-44fa-9711-4a186cd42103/3" target="_blank"><img src="https://service.chinaports.com//hdd_chinaports/personage_files/personage_img_1536051301389.png" width="95" height="90"></a>
+							<h3 class="man-intrc"><a href="/personage/edd1454e-7c40-44fa-9711-4a186cd42103/3" target="_blank"><b>刘斌</b></a></h3>
+							
+						</li>
+					
+						<li>
+							<a href="/personage/6bbe7f45-51d8-46f3-ace4-536ea6b78c84/3" target="_blank"><img src="https://service.chinaports.com//hdd_chinaports/personage_files/personage_img_1535102663780.png" width="95" height="90"></a>
+							<h3 class="man-intrc"><a href="/personage/6bbe7f45-51d8-46f3-ace4-536ea6b78c84/3" target="_blank"><b>沙梅</b></a></h3>
+							
+						</li>
+					
+						<li>
+							<a href="/personage/d2fa16ca-afbf-4e9e-9d0b-7a2f567f0522/3" target="_blank"><img src="https://service.chinaports.com//hdd_chinaports/personage_files/personage_img_1535103451052.png" width="95" height="90"></a>
+							<h3 class="man-intrc"><a href="/personage/d2fa16ca-afbf-4e9e-9d0b-7a2f567f0522/3" target="_blank"><b>谢燮</b></a></h3>
+							
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<div class="ntop-menu"></div>
+<div class="footer">
+    <div class="footer-nav">
+        <div class="footer-left fl">
+            <h3>友情链接：<a href="http://ceis.xinhua08.com" target="_blank" rel="nofollow">中国经济信息社</a>
+                <a href="http://www.ljzfin.com" target="_blank" rel="nofollow">陆家嘴金融网</a>
+                <a href="http://silkroad.news.cn" target="_blank" rel="nofollow">新华丝路</a>
+                
+                <a href="http://www.shmtu.edu.cn" target="_blank" rel="nofollow">上海海事大学</a>
+                <a href="http://www.wti.ac.cn" target="_blank" rel="nofollow">交通部水运科学研究院</a>
+                <a href="http://www.zgjtb.com" target="_blank" rel="nofollow">中国交通报</a>
+                
+                <a href="http://www.huadong.net" target="_blank" rel="nofollow">烟台华东电子</a>
+                
+				
+                
+                <a href="http://www.portcontainer.com" target="_blank" rel="nofollow">中国港口集装箱网</a>
+                
+                
+                <a href="/websites" target="_blank" rel="nofollow">更多>></a></h3>
+            <h3>合作单位：上海海事大学</h3>
+            <h3>运营商：上海舶云供应链管理有限公司&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;媒体服务热线：18021070250</h3>
+            <style>
+                .footerh3 img{display:inline-block;}
+                h3.footerh3 a{
+                    margin-right:2px;
+                }
+            </style>
+                <h3 class="footerh3">
+                    <a href="http://beian.miit.gov.cn" target="_blank">鲁ICP备05016100号-1</a>
+                    &nbsp;&nbsp;经营许可证：鲁B2-20170088
+
+                    <script type="text/javascript">
+                        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_3453251'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D3453251%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+                        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        document.write(decodeURIComponent("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F112cc63ae7d0082ab4d30ec2c3a16614' type='text/javascript'%3E%3C/script%3E"));
+                    </script>
+                </h3>
+        </div>
+        <div class="footer-right fr">
+            <img src="/static/images/qijie.jpg" width="128" height="128" alt="企界">
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/static/js/action.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/layui-v2.0.2/layui.js"></script>
+<script type="text/javascript" src="/static/js/layui-v2.0.2/layui.all.js"></script>
+<script type="text/javascript">
+    //分享
+    var newsTitle = "新疆高速公路总里程突破6000公里";
+    //var newsTitleImg = "http://service.chinaports.com/hdd_chinaports/news_files/news_title_img_1627031948214.jpg";
+    var newsTitleImg ="http://www.chinaports.com/static/images/user-default.png"
+    var urlStr = "http://www.chinaports.com/portlspnews/8566";
+    var urlStrWeixin = "http://www.chinaports.com/mobile/news/detail/8566";
+
+    window._bd_share_config = {
+        "common" : {
+            "bdText" : newsTitle,  //分享时的标题
+            "bdMini" : "1",
+            "bdMiniList" : false,
+            "bdPic" : newsTitleImg,//此处为分享时自带的图片
+            "bdStyle" : "0",
+            "bdSize" : "32",
+            "bdUrl" : urlStr, //此处为后台要进行分享的内容的定义
+            //"bdDesc":'分享时的文本摘要',  //分享时的文本摘要
+            onBeforeClick: function(id, config) {
+                if (id == 'weixin') {
+                    config.bdUrl = urlStrWeixin;
+                    return config;
+                }
+            }
+        },
+        "share" : {
+            "tag" : "share_1",
+            "bdSize":16
+        },
+        "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","tsina","weixin"]}
+    };
+    //此处为需要引入的百度分享的js文件
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+    //评论显示页数，默认显示第一页
+    var pageNum = 1;
+    //评论每页显示个数
+    var pageLimit = 5;
+
+    //------页面初始化------
+	$(function(){
+		//评论分页查询
+        getReviewByPage(pageNum);
+	});
+	//----页面初始化结束----
+
+    //评论-点击"更多信息"增加显示下一页
+    function showMoreReview() {
+        pageNum++;
+        getReviewByPage(pageNum);
+    }
+
+    //提交评论
+    function comit_review(id) {
+        var userid = '';
+        if(userid == null || userid == ""){
+            //屏蔽浏览器滚动条
+            login();
+            return;
+        }
+       var content = $("#content").val();
+        if(content == null || content == ''){
+            layer.msg("请输入评论");
+            return;
+        }
+       var param = {content:content,fid:id,type:1};
+       hdd_ajax("POST", "/cpreview/commitreview", "text", param, function (data) {
+           layer.msg("已评论");
+           $("#review_div ul").empty();
+           getReviewByPage(1);
+        });
+
+    }
+
+    //按照页码查询评论
+	function getReviewByPage(pageNum) {
+        var params = {"pageNum": pageNum, "pageLimit": pageLimit,"news_id":$("#news_id").val()};
+        hdd_ajax("POST", "/portlspnews/detailGetReviewByPage", "json", params, showReviewCallBack);
+    }
+
+    //按照页码查询评论回调
+	 function showReviewCallBack(data) {
+	  var htmlScroll = '';
+        var newsArr = data.rows;
+        $.each(newsArr, function (i, n) {
+            //转换时间
+            var review_time = timeChange(stringToTimestamp(n.review_time));
+            var likeNum = 0;
+            if(null != n.like_num){likeNum = n.like_num;}
+            var act= "";
+            if(n.is_like == 1)  {
+                act = "active";
+            }
+            var photo_img = n.user_img_path;
+            if(null == n.user_img_path )
+                photo_img = 'images/news-photo.png';
+            var tip_top_html = '<a href="javascript: tipOff(\''+n.id+'\');" title="举报"><i class="iconfont icon-07f3d66ee41cf70d5d84b0606cb8dc7fpng"></i></a>' ;
+            if(""==n.reviewer){
+                tip_top_html = '';
+            }
+            htmlScroll = htmlScroll + '<li class="cl">' +
+                '<img src="'+photo_img+'" width="30" height="30">' +
+                '<div class="disnav-right fr" id="review_block_'+n.id+'">' +
+                '<h3 class="dis-name-time">'+n.nick_name+'&nbsp;&nbsp;'+review_time+'</h3>' +
+                '<p class="dis-p-nav">'+n.content+'</p>' +
+				'<div class="reply-box"><span>' +
+				'<a href="javascript:like_it(\''+n.id+'\','+n.is_like+')" title="点赞"><i id="like_status_'+n.id+'" class="iconfont icon-zan '+act	+'"></i><em id="like_num_em_'+n.id+'"> '+likeNum+'</em></a>'
+				+tip_top_html+
+				'</span><a href="javascript:void(0);" onclick="reply1(null,\''+n.id+'\');">回复</a><a href="javascript:showRepaly1(\''+n.id+'\')" class="reply-xiala" ><em id="reply1_num'+n.id+'">'+n.reply_count+'</em>条回复</a></div></div></li>'
+        });
+         $("#reviews_num").text(data.total);
+        //"更多"按钮前插入上面生成的动态HTML
+        //$("#more_review").before(htmlScroll);
+        $("#review_div ul").append(htmlScroll);
+        //点到最后一页，隐藏"更多"按钮
+        if (pageNum == data.rowNum) {
+            $("#more_review").hide();
+        }else{
+            $("#more_review").show();
+        }
+    }
+
+    //点击回复
+	function reply1(pid,id){
+
+        if(null == pid){
+            var com_flag = $("#review_block_" + id +" div[id^='replay_commit1_']");
+            if(com_flag.length != 0){
+                return;
+            }
+            $(".disnav-right" ).find("div[id^='replay_commit']").remove();
+            var flag = $("#review_block_" + id +" div[id^='reply_block_']");
+            if(flag.length != 0){
+                $("#review_block_"+ id).find("div[id^='reply_block_all']").remove();
+            }
+            var reply_html = '<div class="discuss-input cl" id="replay_commit1_'+id+'"> <input type="text" id="reply1_content'+id+'" placeholder="写下回复" class="reply-input-text fl" maxlength="1000">'+
+                ' <input type="button" class="reply-button fl" value="回复" onclick="comit_reply(null,\''+id+'\')"> </div>';
+            $("#review_block_"+id).append(reply_html);
+        }else{
+            var com_flag = $("#reply_block1_"  +pid +" div[id^='replay_commit_']");
+            if(com_flag.length != 0){
+                return;
+            }
+            $(".disnav-right" ).find("div[id^='replay_commit']").remove();
+            var flag = $("#reply_block1_" + pid +" div[id^='reply_block2_']");
+            if(flag.length != 0){
+                $("#reply_block1_" + pid).find("div[id^='reply_block2_']").remove();
+            }
+            var reply_html = '<div class="discuss-input cl" id="replay_commit_'+pid+'"> <input type="text" id="reply1_content'+pid+'" placeholder="写下回复" class="reply-input-text fl" maxlength="1000">'+
+                ' <input type="button" class="reply-button fl" value="回复" onclick="comit_reply(\''+pid+'\',\''+id+'\')"> </div>';
+            $("#reply_block1_" +pid).append(reply_html);
+		}
+
+	}
+
+	//提交回复
+	function comit_reply(pid,id){
+        var userid = '';
+        if(userid == null || userid == ""){
+            //屏蔽浏览器滚动条
+            login();
+            return;
+        }
+        var content;
+        if(null == pid){
+            content = $("#reply1_content"+id).val();
+        }else{
+            content = $("#reply1_content"+pid).val();
+        }
+        if(content == null || content == ''){
+            layer.msg("请输入回复");
+            return;
+        }
+        var param = {content:content,id:id,pid:pid };
+        hdd_ajax("POST", "/cpreview/commitreply", "json", param, function (data) {
+            if("success" == data.state){
+                if(null == pid){
+                    $("#reply1_num"+id).text(data.reply_num);
+                    $("#review_block_"+ id).find("div[id^='replay_commit1_']").remove();
+                    $("#review_block_"+ id).find("div[id^='replay_commit_']").remove();
+                    $("#review_block_"+ id).find("div[id^='reply_block_all']").remove();
+                    showRepaly1(id);
+                }else{
+                    $("#reply1_num"+pid).text(data.reply_num);
+                    $("#reply_block1_"+ pid).find("div[id^='replay_commit1_']").remove();
+                    $("#reply_block1_"+ pid).find("div[id^='replay_commit_']").remove();
+                    $("#reply_block1_"+ pid).find("div[id^='reply_block2_']").remove();
+                    showRepaly2(id,pid);
+                }
+                layer.msg("已回复");
+			}
+
+        });
+	}
+
+    //点击查看一级回复
+	function showRepaly1(review_id){
+        var flag = $("#review_block_" + review_id +" div[id^='reply_block_']");
+        if(flag.length == 0){
+            var params = {"review_id": review_id};
+            hdd_ajax("POST", "/portlspnews/detailGetReplay", "json", params, function(data) {
+                $.each(data, function (i, n) {
+                    //转换时间
+                    var reply_time = timeChange(stringToTimestamp(n.reply_time));
+                    var photo_img = n.user_img_path;
+                    if(null == n.user_img_path )
+                        photo_img = 'images/news-photo.png';
+                    var repaly1_html = '<div class="dis-discuss cl" id="reply_block_all'+review_id+'_'+n.id+'">' +
+                        ' <img src="' + photo_img + '" width="30" height="30"> ' +
+                        '<div class="disnav-right fr" id="reply_block1_'+n.id+'">' +
+                        '<h3 class="dis-name-time"> ' + n.nick_name   + reply_time + '</h3>' +
+                        '<p class="dis-p-nav">' + n.content + '</p>' +
+                        '<div class="reply-box"><a href="javascript:void(0);" onclick="reply1(\''+n.id+'\',\''+review_id+'\')">回复</a><a href="javascript:showRepaly2(\''+review_id+'\',\''+n.id+'\')" class="reply-xiala"><em id="reply1_num'+n.id+'">'+n.reply_child_count+'</em>条回复</a></div></div></div>';
+                    $("#review_block_" + review_id).append(repaly1_html);
+                });
+            });
+		} else {
+            //$("div[id^='reply_block_']").remove();
+            $("#review_block_"+ review_id).find("div[id^='reply_block_all']").remove();
+		}
+	}
+
+    //点击查看二级回复
+    function showRepaly2(review_id,reply_parent_id){
+        var flag2 = $("#reply_block1_" + reply_parent_id +" div[id^='reply_block2_']");
+        if(flag2.length == 0){
+            var params = {"review_id": review_id,"parent_id": reply_parent_id};
+            hdd_ajax("POST", "/portlspnews/detailGetReplay", "json", params, function(data) {
+                $.each(data, function (i, n) {
+                    //转换时间
+                    var reply_time = timeChange(stringToTimestamp(n.reply_time));
+                    var photo_img = n.user_img_path;
+                    if(null == n.user_img_path )
+                        photo_img = 'images/news-photo.png';
+                    var repaly2_html = '<div class="dis-discuss cl" id="reply_block2_'+reply_parent_id+'_'+n.id+'">' +
+                        '<img src="' + photo_img + '" width="30" height="30">' +
+                        '<div class="disnav-right fr" style="width:620px">' +
+                        '<h3 class="dis-name-time">' + n.nick_name  + reply_time + '</h3>' +
+                        '<p class="dis-p-nav">' + n.content + '</p></div></div>';
+                    $("#reply_block1_" + reply_parent_id).append(repaly2_html);
+                });
+            });
+        } else {
+            $("#reply_block1_"+ reply_parent_id).find("div[id^='reply_block2_']").remove();
+        }
+    }
+    //评论举报
+    function tipOff(id){
+        var com_flag = $("#review_block_" + id +" div[id^='tip_top_']");
+        if(com_flag.length != 0){
+           return;
+        }
+        $(".disnav-right" ).find("div[id^='tip_top_']").remove();
+        var flag = $("#review_block_" + id +" div[id^='reply_block_']");
+        if(flag.length != 0){
+            $("#review_block_"+ id).find("div[id^='reply_block_all']").remove();
+        }
+        hdd_ajax("POST", "/cpreview/tiptypes", "json", null, function (data) {
+            var select_type = '<select id="tiptypes'+id+'" class="reply-input-text fl" width="60%" onchange="change_tip(this,\''+id+'\');">' +
+				'<option value="">--选择举报类型--</option>';
+            $.each(data,function(i,n){
+                select_type += '<option value="'+n.value+'">'+n.name+'</option>' ;
+			});
+            select_type += "</select>";
+            var tips_html = '<div class="discuss-input cl" id="tip_top_'+id+'">' +select_type + ' <input type="text" id="tip_top_content'+id+'" placeholder="写下举报信息" class="reply-input-text fl" maxlength="25" style="display:none"  >'+
+                ' <input type="button" class="reply-button fl" value="举报" onclick="comit_tips(\''+id+'\')"> </div>';
+            $("#review_block_"+id).append(tips_html);
+        });
+    }
+
+    //选择举报类型
+    function change_tip(sel,id){
+        if(sel.value == 6){
+            $("#tip_top_content"+id).show();
+		}else{
+            $("#tip_top_content"+id).hide();
+		}
+
+	}
+
+    //举报提交
+    function comit_tips(id){
+        var userid = '';
+        if(userid == null || userid == ""){
+            //屏蔽浏览器滚动条
+            login();
+            return;
+        }
+        var content = $("#tip_top_content"+id).val();
+        var type = $("#tiptypes"+id).val();
+        var param = {content:content,id:id,type:type};
+        if("" == type || null == type){
+            layer.msg("请选择举报类型！");
+            return;
+		}
+        hdd_ajax("POST", "/cpreview/committip", "text", param, function (data) {
+            if(1 == data)
+                layer.msg("举报成功！");
+            else{
+                layer.msg("网络异常");
+            }
+            $("#review_block_"+ id).find("div[id^='tip_top_']").remove();
+        });
+    }
+
+    //点赞
+    function like_it(id,is_like){
+        var likes= 0;
+        var check_like = $("#like_status_"+id).hasClass("active");
+        if(!check_like ){
+            likes = 1;
+
+        }else  if(check_like){
+            likes = 0;
+		}
+		var param = {is_like:likes,id:id,status:is_like};
+        hdd_ajax("POST", "/cpreview/islike", "json", param, function (data) {
+            if(0 == data.state){
+                $("#like_status_"+id).removeClass("active");
+                $("#like_num_em_"+id).text(data.like_num);
+                layer.msg("已取消点赞");
+            }else if(1== data.state){
+                $("#like_status_"+id).addClass("active");
+                $("#like_num_em_"+id).text(data.like_num);
+                layer.msg("已点赞");
+            }else{
+                layer.msg("网络异常");
+            }
+        });
+    }
+
+    //登陆按钮
+    function login(){
+        window.location.href = "/web/user/toLogin";
+    }
+
+
+</script>
+</html>
