@@ -1,0 +1,1187 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="renderer" content="webkit" /><link href="../ACss/SJCss/Main.css?ver=5" rel="stylesheet" /><link href="../ACss/SJCss/List.css?ver=5" rel="stylesheet" />
+    <script src="../AJs/jquery-1.8.3.min.js?ver=5"></script>
+    <script src="../AJs/SJJs/NWeb.js?ver=5"></script>
+    <link href="../ACss/new/mainSJ.css" rel="stylesheet" />
+
+
+    <script>
+        //后退不执行JS的问题
+        window.onpageshow = function (event) {
+
+            if (event.persisted) {
+
+                window.location.reload();
+
+            }
+
+        };
+
+        /*置顶*/
+        $(document).ready(function () {
+            $("#top").hide();
+            $(function () {
+                //检测屏幕高度  
+                var height = $(window).height();
+                //scroll() 方法为滚动事件  
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > height) {
+                        $("#top").fadeIn(500);
+                    } else {
+                        $("#top").fadeOut(500);
+                    }
+                });
+                $("#top").click(function () {
+                    $('body,html').animate({ scrollTop: 0 }, 1000);
+                    return false;
+                });
+            });
+
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    var a = $(document).scrollTop();
+                    var scrollBottom = $(window).scrollTop() + $(window).height();
+                    var height = $(document.body).height();
+                    if (a > 0 && height > 900) {
+                        $(".search_navs").css("position", "sticky");
+                        //$(".search_nav").css("position", "fixed");
+                        $(".sss").css("position", "fixed");
+                        $(".sss").css("top", "96px");
+
+                        $(".head").css("position", "fixed");
+                        $(".index_icon").css("position", "fixed");
+                        $(".index_icon").css("top", "62px");
+                        $(".index_icon").css("width", "96%");
+
+                        if (a > 300) {
+                            $(".in_searchs").css("display", "block");
+                        }
+                    }
+                    else {
+                        $(".search_navs").removeAttr("style", "");
+                        $(".in_searchs").css("display", "none");
+                        $(".search_nav").removeAttr("style", "");
+                        $(".index_icon").removeAttr("style", "");
+                        $(".sss").css("top", "");
+                        $(".sss").css("position", "relative");
+
+                        $(".head").css("position", "relative");
+                        $(".index_icon").css("position", "relative");
+                    }
+                })
+            });
+
+            //$(function () {
+            //    $(document).keypress(function (e) {
+            //        if (e.keyCode == 13) {
+            //            var val = $("#ctl00_MasterTop_txtName").val();
+            //            window.location.href = "/JkCommerce/Index_u" + val + ".html";
+            //            return false;
+            //        }
+            //    })
+            //});
+        });
+
+        function Tis(secs, val) {
+            $("#erweima").css("display", "none");
+            //var jumpTo = document.getElementById('sum');
+            //jumpTo.innerHTML = secs;
+            if (--secs > 0) {
+                setTimeout("Tis(" + secs + ",'" + val + "')", 1000);
+            }
+            else {
+                $("#erweima").css("display", "block");
+                //location.href = val;
+            }
+        }
+
+    </script>
+    
+    
+    <link href="../ACss/new/itembanner.css" rel="stylesheet" />
+    <script src="../AJs/slider.js"></script>
+    <script>
+
+        //onload时，取出并滚动到上次保存位置
+        window.onload = function () {
+            var offset = sessionStorage.getItem("offsetTop");
+            $(document).scrollTop(offset);
+            //if ($("#ctl00_ContentPlaceHolder1_hdfSpot").val()!="") {
+            //    $("#ctl00_ContentPlaceHolder1_PMyFun").css("display", "none");
+            //}
+            $(function () {
+                pushHistory();
+                window.addEventListener("popstate", function (e) {
+                    //alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能  
+                    location.replace(location.href);
+                }, false);
+                function pushHistory() {
+                    var state = {
+                        title: "title",
+                        url: "#"
+                    };
+                    window.history.pushState(state, "title", "#");
+                }
+
+            });
+        };
+        //解决页面返回不刷新
+        window.onpageshow = function (event) {
+            //event.persisted 判断浏览器是否有缓存, 有为true, 没有为false
+            //if ($("#ctl00_ContentPlaceHolder1_hdfSpot").val()!="") {
+            //    $("#ctl00_ContentPlaceHolder1_PMyFun").css("display", "none");
+            //}
+            if (event.persisted) {
+                window.location.reload();
+                //$("#ctl00_ContentPlaceHolder1_PMyFun").css("display", "none");
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".m_nav>div").click(function () {
+                $(this).addClass("active_v").siblings().removeClass("active_v");
+            })
+        })
+
+
+        /*置顶*/
+        $(document).ready(function () {
+            $(".backtop ").hide();
+            $(function () {
+                //检测屏幕高度  
+                var height = $(window).height();
+                //scroll() 方法为滚动事件  
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > height) {
+                        $(".backtop ").fadeIn(500);
+                    } else {
+                        $(".backtop ").fadeOut(500);
+                    }
+                });
+                $(".backtop ").click(function () {
+                    $('body,html').animate({ scrollTop: 0 }, 1000);
+                    return false;
+                });
+            });
+        });
+
+        /*切换选中*/
+        //$(function () {
+        //    $(".cp_ul li").click(function () {
+        //        $(this).addClass("active").siblings().removeClass("active");
+        //    })
+        //})
+        /*点击显示*/
+
+        function Mydw() {
+            location.href = "#IWantAgent";
+        }
+        function tab(val) {
+            if (val == "1") {
+                $("#managersto").attr("class", "widget-tab-to");
+                $("#designersto").attr("class", "widget-tab");
+                $("#otherto").attr("class", "widget-tab");
+
+                $("#managers").css("display", "block");
+                $("#designers").css("display", "none");
+                $("#other").css("display", "none");
+
+                $("#cp_dy_mt15").css("display", "block");
+            }
+            else if (val == "2") {
+                $("#managersto").attr("class", "widget-tab");
+                $("#designersto").attr("class", "widget-tab-to");
+                $("#otherto").attr("class", "widget-tab");
+
+                $("#managers").css("display", "none");
+                $("#designers").css("display", "block");
+                $("#other").css("display", "none");
+
+                $("#cp_dy_mt15").css("display", "none");
+
+                $("#ctl00_ContentPlaceHolder1_imgUp").attr("src", "/AimagesSj/up.png");
+                $("#ctl00_ContentPlaceHolder1_imgDown").attr("src", "/AimagesSj/down.png");
+            }
+            else {
+                $("#managersto").attr("class", "widget-tab");
+                $("#designersto").attr("class", "widget-tab");
+                $("#otherto").attr("class", "widget-tab-to");
+
+                $("#managers").css("display", "none");
+                $("#designers").css("display", "none");
+                $("#other").css("display", "block");
+
+                $("#cp_dy_mt15").css("display", "none");
+
+                $("#ctl00_ContentPlaceHolder1_imgUp").attr("src", "/AimagesSj/up.png");
+                $("#ctl00_ContentPlaceHolder1_imgDown").attr("src", "/AimagesSj/down.png");
+            }
+        }
+
+        //function showHideCode() {
+        //    $(".showdiv").addClass("showH");
+        //    $(".pack").css("display", "block");
+        //    $(".unfold").css("display", "none");
+
+        //}
+        //function showHideopen() {
+        //    $(".showdiv").removeClass("showH");
+        //    $(".unfold").css("display", "block");
+        //    $(".pack").css("display", "none");
+        //}
+
+        function showShuoMingShu() {
+            var state = $("#shuomingshu").css("display");
+            if (state == "none") {
+                $("#shuomingshu").css("display", "block");
+            }
+            else if (state == "block") {
+                $("#shuomingshu").css("display", "none");
+            }
+        }
+        function Tis(secs, val) {
+            //$("#DTIs").css("display", "block");
+            //var jumpTo = document.getElementById('sum');
+            //jumpTo.innerHTML = secs;
+            //$("#ctl00_ContentPlaceHolder1_hdfSpot").val("999");
+            //$("#ctl00_ContentPlaceHolder1_PMyFun").css("display", "none");
+            if (--secs > 0) {
+                setTimeout("Tis(" + secs + ",'" + val + "')", 1000);
+            }
+            else {
+
+                //$("#DTIs").css("display", "none");
+                location.href = val;
+                //window.open(val, '_blank')
+            }
+        }
+
+        function ffx() {
+            $(".tan_fx").css("display", "block");
+        }
+        function ffz() {
+            $(".tan_fx").css("display", "none");
+        }
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() != 0) {
+                sessionStorage.setItem("offsetTop", $(window).scrollTop());
+            }
+        });
+
+    </script>
+   
+    <style>
+        .hui98 {
+            font-size: 15px;
+            color: #838792;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        /*ghd添加*/
+        .cp_r {
+            width: 100%;
+            margin: 10px 5px 15px;
+        }
+
+        .fy_scbtn {
+            position: absolute;
+            right: -5px;
+            top: 0px;
+            border: 1px solid #c21026;
+            bottom: 0px;
+            height: 41px;
+            color: #ffffff;
+            width: 25%;
+            padding-left: 5px;
+            padding-right: 10px;
+            background: #c21026;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            font-size: 14px;
+        }
+
+        /*ghd添加*/
+        .bigder {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            /*border: 3px solid #333;
+            overflow: hidden;*/
+        }
+
+        .imgbigder {
+            position: absolute;
+            /*z-index: 1;*/
+            width: 4200px;
+            height: 250px;
+        }
+
+            .imgbigder img {
+                float: left;
+                width: 250px;
+                height: 250px;
+            }
+
+        .arrow {
+            position: absolute;
+            top: 40%;
+            z-index: 9;
+            /* display: none; */
+            width: 30px;
+            height: 30px;
+            /* text-align: center; */
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 27px;
+            border-radius: 50px;
+            text-align: center;
+            color: #fff;
+            background-color: RGBA(0, 0, 0, .2);
+            cursor: pointer;
+        }
+
+            .arrow:hover {
+                background-color: RGBA(0, 0, 0, .7);
+            }
+
+        #imgbigdiv:hover .arrow {
+            display: block;
+        }
+
+        #prev {
+            left: 1px;
+        }
+
+        #next {
+            right: 1px;
+        }
+
+        .Myfun {
+            width: 80%;
+            /* height: 215px; */
+            border: 1px solid #cccccc;
+            filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=1);
+            -moz-box-shadow: 1px 1px 8px 0px #cccccc;
+            -webkit-box-shadow: 1px 1px 8px 0px #cccccc;
+            box-shadow: 1px 1px 8px 0px #cccccc;
+            position: absolute;
+            left: 8%;
+            top: 30%;
+            background: white;
+            z-index: 10000;
+            padding: 10px 10px 15px;
+        }
+
+            .Myfun .fundiv {
+                margin-top: 11%;
+                /*margin-left: 15px;*/
+                text-align: center;
+            }
+
+            .Myfun .funtxt {
+                width: 90%;
+                height: 40px;
+                line-height: 40px;
+                margin: auto;
+                border: 1px solid #d2d2d2;
+            }
+
+            .Myfun .funimg {
+                height: 40px;
+                width: 98px;
+                margin-left: -104px;
+                border-bottom: 1px solid #333;
+                display: inline-block;
+                position: relative;
+                top: -1px;
+            }
+
+            .Myfun .funbtn {
+                width: 120px;
+                height: 35px;
+                margin-top: 17px;
+                color: #fff;
+                font-size: 14px;
+                border: none;
+                background: #c21026;
+            }
+    </style>
+   
+<title>
+	健康119-找低价药-维吾尔(热感赛比斯坦颗粒)
+</title></head>
+<body id="ctl00_body" style="">
+    <form name="aspnetForm" method="post" action="./SJItem_p30BD3E84636EEC57_t1.html?id=_p30BD3E84636EEC57_t1" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgyNjQ3NjI0Ng9kFgJmD2QWAgIDD2QWAgIBD2QWAgIBD2QWIgIVDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWDGYPFQFfaHR0cDovLzEyMy41Ni4xNDQuMTIwOjgwODEvLy9ZYW9QaW4vUHJkdWN0SW1nLzIwMjAxMjIxL2ZiNTQzZGQxLTAyMmUtNDhjYy05YTEzLTUzZWVlZTUwOGZlZS5qcGdkAgEPFQEcaHR0cDovLzEyMy41Ni4xNDQuMTIwOjgwODEvL2QCAg8VARxodHRwOi8vMTIzLjU2LjE0NC4xMjA6ODA4MS8vZAIDDxUBHGh0dHA6Ly8xMjMuNTYuMTQ0LjEyMDo4MDgxLy9kAgQPFQFfaHR0cDovLzEyMy41Ni4xNDQuMTIwOjgwODEvLy9ZYW9QaW4vUHJkdWN0SW1nLzIwMjAxMjIxL2FkZGQwNzFlLWQ5MGMtNGMxMi1iODRiLTMzNDhlNGQ3YzAyOS5qcGdkAgUPFQFfaHR0cDovLzEyMy41Ni4xNDQuMTIwOjgwODEvLy9ZYW9QaW4vUHJkdWN0SW1nLzIwMjAxMjIxLzMyOWQyYjZlLWJhNTgtNDc5NS1iNWU4LWRmMDJhNTg3MzZjNS5qcGdkAhcPDxYEHgRUZXh0BSPnu7TlkL7lsJQo54Ot5oSf6LWb5q+U5pav5Z2m6aKX57KSKR4HVG9vbFRpcAUj57u05ZC+5bCUKOeDreaEn+i1m+avlOaWr+Wdpumil+eykilkZAIZDw8WAh8BBSflkoznlLDnu7TlkL7lsJToja/kuJrogqHku73mnInpmZDlhazlj7hkZAIbDw8WAh8BBRXlm73oja/lh4blrZdaNjUwMjAxNDNkZAIdDw8WBB8BBQUxMmcqNh8CBQUxMmcqNmRkAh8PDxYCHwEFCemil+eykuWJgmRkAiEPDxYCHwEFV+a4hemZpOW8guW4uOiDhua2sui0qO+8jOatouWSs++8jOWMlueXsOOAgueUqOS6jueDreaAp+aEn+WGkuWSs+WXve+8jOWRvOWQuOmBk+aEn+afk+OAgmRkAiMPDxYCHwEFATBkZAIlDw8WAh8BBRjng63mhJ/otZvmr5Tmlq/lnabpopfnspJkZAInDw8WAh8BBbMNPGJyIC8+DQrjgJDoja/lk4HlkI3np7DjgJE8YnIgLz4NCiZuYnNwO+mAmueUqOWQjeensO+8mueDreaEn+i1m+avlOaWr+Wdpumil+eykjxiciAvPg0KJm5ic3A75rGJ6K+t5ou86Z+z77yacmVnYW4gU2FpYmlzaXRhbiBLZWxpPGJyIC8+DQo8YnIgLz4NCuOAkOaIkOS7veOAkeegtOW4g+acqOaenOOAgeWkp+aeo+OAgee9giDnsp/lo7PjgIHnlJjojYnjgIHonIDokbXlrZDjgIHpu4Tnk5zlrZDjgIHmpoXmobLlrZDjgIHlt7Tml6bmnKjjgIHnvYIg57Kf5a2Q44CB6KW/6buE6JON6IO244CB55SY6I2J5rW46IaP44CB6Zi/5ouJ5Lyv6IO244CCPGJyIC8+DQo8YnIgLz4NCuOAkOaAp+eKtuOAkeacrOWTgeS4uua1hem7hOiJsueahOmil+eyku+8m+awlOmmmeOAgeWRs+eUnOOAgjxiciAvPg0KPGJyIC8+DQrjgJDlip/og73kuLvmsrvjgJHmuIXpmaTlvILluLjog4bmtrLotKjvvIzmraLlkrPvvIzljJbnl7DjgILnlKjkuo7ng63mgKfmhJ/lhpLlkrPll73vvIzlkbzlkLjpgZPmhJ/mn5PjgII8YnIgLz4NCjxiciAvPg0K44CQ6KeE5qC844CR5q+P6KKL6KOFMTJn44CCPGJyIC8+DQo8YnIgLz4NCuOAkOeUqOazleeUqOmHj+OAkeWPo+acjeOAguS4gOasoTHooovvvIzkuIDml6Uz5qyh44CCPGJyIC8+DQo8YnIgLz4NCuOAkOS4jeiJr+WPjeW6lOOAkeWwmuS4jeaYjuehruOAgjxiciAvPg0KPGJyIC8+DQrjgJDnpoHlv4zjgJHlsJrkuI3mmI7noa7jgII8YnIgLz4NCjxiciAvPg0K44CQ5rOo5oSP5LqL6aG544CRPGJyIC8+DQombmJzcDsxLuacrOWTgeS4jeWunOmVv+acn+acjeeUqO+8jOWmguacjeeUqDN+N+WkqeeXh+eKtuacque8k+ino++8jOivt+WPiuaXtuWSqOivouWMu+W4iOOAgjxiciAvPg0KJm5ic3A7Mi7lr7nmnKzlk4Hov4fmlY/ogIXnpoHnlKjvvIzov4fmlY/kvZPotKjogIXmhY7nlKjjgII8YnIgLz4NCiZuYnNwOzMu5ZO65Lmz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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="ACB6D3D4" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABGbAyj/1Fzqbfmzotk04dnLu+LBwioALsElx78UTsBF4XXjye6vvebdpLu6i+Sd1kFZnN5krWMKwwoCKtLUvz6Yw1R8FYcUSi6shpZ40QdSy/ldLYCq4vmqQGuQS5Or21gFSom2W2aMgp2lFPtJmht1JPgkmjiUiv7uUR4l/e+GX4+GUsSwEZwltJhy5xO9GUoQtcHjK2MqZ5GtPIArCw5jZAXp1vDBnwygqPGuq4zQrz80JjzKUN9w/oP12/LIwu1LER+hemCW/3tXMDrGK2VX4wwAkNpAf6ysKVC0hV1/mOoyReVnxrj904arlaVmtSEDQnIWcG8bZqh+V/GROxfMsoV0we+R+dELKlpdjs1cKZUKPG8bwvBc2y42DXEYpchsCi7+wFlvlRH6GBttLM2j" />
+
+        <a id="goTop"></a>
+        
+
+        
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfOrder" id="ctl00_ContentPlaceHolder1_hdfOrder" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfProductName" id="ctl00_ContentPlaceHolder1_hdfProductName" value="热感赛比斯坦颗粒" />
+    
+<header class="head">
+    <script type="text/javascript">
+        ////关键字回车搜索
+        //function onKeyPressSearchsd(e) {
+        //    var key = window.event ? e.keyCode : e.which;
+        //    if (key == 13) {
+        //        var val = $("#ctl00_ContentPlaceHolder1_MasterTop_txtName").val();
+        //        window.location.href = "/JkCommerce/Index_j" + val + ".html";
+        //    }
+        //};
+        $(function () {
+            $(document).keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var val = $("#ctl00_ContentPlaceHolder1_MasterTopNew_txtName").val();
+                    if (val == undefined) {
+                        val = $("#MasterTopNew_txtName").val();
+                    }
+                    window.location.href = "/JkCommerce/Index_u" + val + ".html";
+                    return false;
+                }
+            })
+        })
+
+        function GoEssUrl() {
+            var val = $("#ctl00_ContentPlaceHolder1_MasterTopNew_txtName").val();
+            if (val == undefined) {
+                val = $("#MasterTopNew_txtName").val();
+            }
+            window.location.href = "/JkCommerce/Index_u" + val + ".html";
+            return false;
+
+        }
+    </script>
+    <script>
+
+        function Dkquery() {
+            $(".conner").css("display", "none");
+            $("#divquery").css("display", "block");
+            $("#divtz").css("display", "block");
+            $("#divtz2").css("display", "none");
+            $(".foot").css("display", "none");
+            $(".mt15").css("display", "none");
+
+        }
+        function fhcx() {
+            $(".conner").css("display", "block");
+            $("#divquery").css("display", "none");
+            $("#divtz2").css("display", "block");
+            $("#divtz").css("display", "none");
+            $(".foot").css("display", "block");
+            $(".mt15").css("display", "block");
+        }
+
+
+        function setStyle(x) {
+            Dkquery();
+        }
+
+        //按键弹起时触发事件
+        $("#ctl00_ContentPlaceHolder1_MasterTopNew_txtName").keyup(function () {
+            Dkquery();
+        });
+
+        //按键按下时触发事件（先响应事件，再显示输入结果（获得的是上一次结果），可能被输入法拦截）
+        $("#ctl00_ContentPlaceHolder1_MasterTopNew_txtName").keypress(function () {
+            Dkquery();
+        });
+
+        //获得焦点时触发事件
+        $("#ctl00_ContentPlaceHolder1_MasterTopNew_txtName").focus(function () {
+            Dkquery();
+        });
+
+    </script>
+    <div class="index_top clearfix" style="background-color: #fff;">
+        
+        <div class="" style="width: 14px; position: absolute; top: 21px; left: 18px;" id="divtz2">
+            <a href="javascript:history.back(-1)">
+                <img style="width: 14px;" src="../AImagesSJ/back.png" /></a>
+        </div>
+        <div class="" style="width: 14px; position: absolute; top: 21px; left: 18px; display: none" id="divtz" onclick="fhcx();">
+            <img style="width: 14px;" src="../AImagesSJ/back.png" />
+        </div>
+        <div class="fy_top_sc">
+            <input name="ctl00$ContentPlaceHolder1$MasterTopNew$txtName" type="text" id="ctl00_ContentPlaceHolder1_MasterTopNew_txtName" class="fy_sc" onfocus="setStyle(this.id)" placeholder="产品名、商品名、疾病、症状、批准文号..." />
+            <input type="button" name="name" value="搜索" onclick="GoEssUrl();" class="fy_scbtn" />
+        </div>
+    </div>
+</header>
+<div id="divquery" style="display: none">
+    <div class="re_box ">
+        <p>热门</p>
+        <ul class="re_list clearfix">
+            <li><a href="/JkCommerce/Index_u感冒颗粒.html">感冒颗粒</a></li>
+            <li><a href="/JkCommerce/Index_u六味地黄丸.html">六味地黄丸</a></li>
+            <li><a href="/JkCommerce/Index_u归脾丸.html">归脾丸</a></li>
+            <li><a href="/JkCommerce/Index_u逍遥丸.html">逍遥丸</a></li>
+            <li><a href="/JkCommerce/Index_u滴眼液.html">滴眼液</a></li>
+            <li><a href="/JkCommerce/Index_u金嗓子喉片.html">金嗓子喉片</a></li>
+        </ul>
+    </div>
+    <div class="re_box">
+        <p>历史搜索</p>
+        <i>
+            <img src="../AImagesSJ/shanchu.png" alt="" /></i>
+        <ul class="re_list clearfix">
+            
+        </ul>
+    </div>
+</div>
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfItemUrlAdd" id="ctl00_ContentPlaceHolder1_hdfItemUrlAdd" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfYaoDianId" id="ctl00_ContentPlaceHolder1_hdfYaoDianId" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfPriceId" id="ctl00_ContentPlaceHolder1_hdfPriceId" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfrowId" id="ctl00_ContentPlaceHolder1_hdfrowId" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfSpot" id="ctl00_ContentPlaceHolder1_hdfSpot" />
+    <!--产品 -->
+    <div class="conner">
+        <!--去药店验证-->
+        
+            
+
+        <div class="cp_lr clearfix">
+            <div id="imgbigdiv" class="cp_l swiper-container" style="position: relative">
+                <div class="slider-container">
+	                <div class="slider-control left inactive"></div>
+	                <div class="slider-control right"></div>
+	                <ul class="slider-pagi"></ul>
+                    <div class="slider">
+                         
+                        
+                        <div class="slide active">
+                            
+                            <img src="http://123.56.144.120:8081///YaoPin/PrductImg/20201221/fb543dd1-022e-48cc-9a13-53eeee508fee.jpg" class="imgcount"/>
+                        </div>
+                        
+                        <div class="slide">
+                            
+                            <img src="http://123.56.144.120:8081///YaoPin/PrductImg/20201221/addd071e-d90c-4c12-b84b-3348e4d7c029.jpg" class="imgcount"/>
+                        </div>
+                        
+                        <div class="slide">
+                            
+                            <img src="http://123.56.144.120:8081///YaoPin/PrductImg/20201221/329d2b6e-ba58-4795-b5e8-df02a58736c5.jpg" class="imgcount"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        
+        <div class="cp_r">
+            <p class="tit">
+                <span id="ctl00_ContentPlaceHolder1_labName" title="维吾尔(热感赛比斯坦颗粒)">维吾尔(热感赛比斯坦颗粒)</span>
+            </p>
+            
+            <p>生产企业：<span id="ctl00_ContentPlaceHolder1_labManuName">和田维吾尔药业股份有限公司</span></p>
+            <p>批准文号：<a href="https://www.nmpa.gov.cn/yaopin/index.html"><span id="ctl00_ContentPlaceHolder1_labRegisterNO">国药准字Z65020143</span></a></p>
+            <p>规格剂型：<span id="ctl00_ContentPlaceHolder1_labSpec" title="12g*6">12g*6</span>&nbsp;&nbsp;<span id="ctl00_ContentPlaceHolder1_labJixing">颗粒剂</span></p>
+
+            <div class="cp_btn">
+                <p>
+                    功能主治：<span id="ctl00_ContentPlaceHolder1_labGongNengZhuZhi">清除异常胆液质，止咳，化痰。用于热性感冒咳嗽，呼吸道感染。</span>
+                    <a style="font-size: 15px; color: #838792; text-decoration: underline;" onclick="showShuoMingShu()">查看说明书</a>
+                </p>
+                
+
+                
+
+            </div>
+
+        </div>
+    </div>
+    <!--jiagou-->
+
+
+    <!--jiagou-->
+
+
+    <!--cp_jies-->
+    
+    <!--cp_jies-->
+    <div class="cp_js " id="shuomingshu" style="display: none; margin-top: 29px;">
+        <div class="btn_dw">
+            
+            <span onclick="showShuoMingShu()" class="pack">收起 </span>
+        </div>
+        <p class="t_hui16" style="font-size: 14px;"><b>产品说明书</b></p>
+        <div class="jies  showH">
+            <p>通用名称：<span id="ctl00_ContentPlaceHolder1_labCurrencyName">热感赛比斯坦颗粒</span></p>
+            <span id="ctl00_ContentPlaceHolder1_labProductRemark"><br />
+【药品名称】<br />
+&nbsp;通用名称：热感赛比斯坦颗粒<br />
+&nbsp;汉语拼音：regan Saibisitan Keli<br />
+<br />
+【成份】破布木果、大枣、罂 粟壳、甘草、蜀葵子、黄瓜子、榅桲子、巴旦木、罂 粟子、西黄蓍胶、甘草浸膏、阿拉伯胶。<br />
+<br />
+【性状】本品为浅黄色的颗粒；气香、味甜。<br />
+<br />
+【功能主治】清除异常胆液质，止咳，化痰。用于热性感冒咳嗽，呼吸道感染。<br />
+<br />
+【规格】每袋装12g。<br />
+<br />
+【用法用量】口服。一次1袋，一日3次。<br />
+<br />
+【不良反应】尚不明确。<br />
+<br />
+【禁忌】尚不明确。<br />
+<br />
+【注意事项】<br />
+&nbsp;1.本品不宜长期服用，如服用3~7天症状未缓解，请及时咨询医师。<br />
+&nbsp;2.对本品过敏者禁用，过敏体质者慎用。<br />
+&nbsp;3.哺乳期妇女慎用。<br />
+&nbsp;4.儿童用量请咨询医师或药师。<br />
+&nbsp;5.药品性状发生改变时禁止服用。<br />
+&nbsp;6.儿童必须在成人监护下使用。<br />
+&nbsp;7.请将此药品放在儿童不能接触的地方。<br />
+&nbsp;8.如正在服用其他药品，使用本品前咨询医师或药师。<br />
+&nbsp;9.运动员慎用。<br />
+<br />
+【贮藏】密封。<br />
+<br />
+【包装】铝/聚乙烯药品包装用复合膜（袋），12g*6袋/盒。<br />
+<br />
+【有效期】36个月<br />
+<br />
+【执行标准】中华人民共和国卫生部药品标准（维吾尔药分册）WS3-BW-0174-98<br />
+<br />
+【批准文号】国药准字Z65020143<br />
+<br />
+【生产企业】和田维吾尔药业有限责任公司</span>
+        </div>
+    </div>
+
+    <a href="javascript:void(0)" class="wxfx_box" onclick="ffx()" style="margin-bottom: 13px;">
+        <span>
+            <img src="../AimagesSj/fx.png" /></span><span>分享</span>
+    </a>
+    <p style="font-size: 15px; margin-bottom: 13px;">
+        <input type="submit" name="ctl00$ContentPlaceHolder1$btnCellection" value="加入收藏" id="ctl00_ContentPlaceHolder1_btnCellection" class="btn_1" />
+    </p>
+    <!--list begin-->
+    
+    <!--list end-->
+
+    
+    <!--产品列表-->
+
+    <div class="mt15">
+        
+        <!-- tab 标题 -->
+        <div class=" m_nav clearfix" id="divyaopin" style="margin-top: 5px;">
+            <div class="active_v" id="managersto" onclick="tab('1')" style="position: relative">
+                
+                <img src="../AimagesSj/t_bg.png" class="show_img" />
+                <img src="../AimagesSj/t_bgh.png" class="hide_img" />
+                <div class="text_style">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnDrug" value="全部零售报价" id="ctl00_ContentPlaceHolder1_btnDrug" class="widget-tab-link" style="background-color: transparent; border-style: none; padding-right: 2px; font-size: 16px; font-weight: bold; margin-left: -11px;" />
+                    <span class="sx">
+                        
+                        <input type="image" name="ctl00$ContentPlaceHolder1$imgUp" id="ctl00_ContentPlaceHolder1_imgUp" src="../AimagesSj/up.png" border="0" />
+                        <input type="image" name="ctl00$ContentPlaceHolder1$imgDown" id="ctl00_ContentPlaceHolder1_imgDown" src="../AimagesSj/down.png" border="0" />
+                        
+                    </span>
+                </div>
+
+            </div>
+            <div class="" id="designersto" onclick="tab('2')">
+                
+                <img src="../AimagesSj/t_bg.png" />
+                <img src="../AimagesSj/t_bgh.png" class="hide_img" />
+                <div class="text_style">
+                    <a id="ctl00_ContentPlaceHolder1_LbTongLei" class="widget-tab-link" href="#IWantAgent" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$LbTongLei&#39;,&#39;&#39;)">其它同类药品</a>
+                </div>
+            </div>
+            <div class="" id="otherto" onclick="tab('3')">
+                
+                <img src="../AimagesSj/t_bg.png" />
+                <img src="../AimagesSj/t_bgh.png" class="hide_img" />
+                <div class="text_style">
+                    <a id="ctl00_ContentPlaceHolder1_LbTongChang" class="widget-tab-link" href="#IWantAgent" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$LbTongChang&#39;,&#39;&#39;)">同厂其它药品</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="cp_dy " id="cp_dy_mt15" style="padding: 5px 0 0">
+            <div class="clearfix" style="">
+                <span>商家区域：</span>
+                <ul class="cp_ul clearfix">
+                    <li id="ctl00_ContentPlaceHolder1_AreaAll">
+                        <a id="ctl00_ContentPlaceHolder1_DrugAreaAll" href="SJItem_p30BD3E84636EEC57_t0.html" style="color: #333">全国</a></li>
+                    <li id="ctl00_ContentPlaceHolder1_AreaTwo">
+                        <a id="ctl00_ContentPlaceHolder1_DrugAreaTwo" href="SJItem_p30BD3E84636EEC57_t2.html" style="color: #333">同省</a></li>
+                    <li id="ctl00_ContentPlaceHolder1_AreaOne" Class="active">
+                        <a id="ctl00_ContentPlaceHolder1_DrugAreaOne" href="SJItem_p30BD3E84636EEC57.html" style="color:#db3b4e;">同城</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--全部零售报价-->
+
+        <ol class="cp_list widget-list" id="managers" style="display: block">
+            <div id="DTIs" style="display: none;">
+                <div style="background-color: #333333; opacity: 0.5; top: 0; left: 0; right: 0; bottom: 0; position: fixed; z-index: 9"></div>
+                <div class="wxts_box">
+                    <div style="margin-bottom: 13px; text-align: center; margin-top: 20px;">
+                        <img src="../AimagesSj/logo_1.png" style="width: 125px;" />
+                    </div>
+                    <span style="font-size: 18px; font-weight: 600; margin-bottom: 24px; color: #FB4261;">温馨提示</span>
+
+                    <span style="">该网站已在国家药监局备案！</span>
+
+                    <span>您即将前往，请稍等 【<span id="sum" style="color: #FB4261;">1</span>】 ....</span>
+                </div>
+            </div>
+
+            
+        </ol>
+        <!--全部零售报价 结束-->
+        <!--同厂家其他药品-->
+
+        <ol class="cp_list widget-list" id="other" style="display: none">
+            
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20201204/94761ce5-5f83-47ec-a2af-7308a641b943.png" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl00_labCommerceName">健心合米尔高滋斑安比热片</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.5g*12</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：片剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>368.00~368.00</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p50752E250149790B.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20201204/a97091e6-71aa-4c76-b540-72ef332fb14f.png" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl01_labCommerceName">健心合米尔高滋斑安比热片</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.5g*24</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：片剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>368.00~368.00</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p8DF6A2511B08A2BB.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20200910/9ce47319-8e7d-4327-938f-1e5e17f2b877.png" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl02_labCommerceName">罗补甫克比日丸</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.3g*80</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：丸剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>122.50~172.50</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_pB92811A0390CD9D4.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20200721/f739d24c-675f-456a-b3cc-04e20864a651.jpg" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl03_labCommerceName">罗补甫克比日丸</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.3g*80</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：丸剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>122.50~172.50</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p66F9A1ED620A1F55.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20201221/10be30d6-2a17-4ece-90c9-bbd3d338c91a.png" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl04_labCommerceName">和田维吾尔(热感赛比斯坦颗粒)</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：12g*9</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：颗粒剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>55.00~58.00</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p987B9FA96E8D7AA3.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20200724/b18f301a-94c2-494d-9f1d-fcd68bccd1e8.jpg" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl05_labCommerceName">伊木萨克片</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.5g*6片</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：片剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>23.00~193.80</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p3CC10EE42EACD7DD.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20200724/f6fc04d0-0ea7-487b-ad30-adad002c605b.jpg" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl06_labCommerceName">伊木萨克片</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.5g*6</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：片剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>23.00~193.80</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p4C72C0C787B981E9.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li style="/*padding: 10px 5px 10px 5px; */">
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20200724/8b8005f7-d2ba-49f6-9aea-e75bacd5ae41.jpg" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameManu_ctl07_labCommerceName">伊木萨克片</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：0.5g*8</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：片剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>138.00~208.00</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p6A78162EDBE371D4.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                
+        </ol>
+        <ol class="cp_list widget-list" id="designers" style="display: none">
+            
+                    <li>
+                        <ul class="de_lr clearfix">
+                            <li>
+                                <img style="width: 100px; height: 100px; margin-top: 11px;" src="http://123.56.144.120:8081///YaoPin/PrductImg/20201221/10be30d6-2a17-4ece-90c9-bbd3d338c91a.png" />
+                            </li>
+                            <li style="margin-top: 5px;">
+                                <p class="hui1633 tit_box" style="width: 100%;">
+                                    <span id="ctl00_ContentPlaceHolder1_rptSameClass_ctl00_labCommerceName">和田维吾尔(热感赛比斯坦颗粒)</span>
+                                </p>
+                                <p class="hui99" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">和田维吾尔药业股份有限公司</p>
+                                <p class="hui99">
+                                    <span>规格：12g*9</span>
+                                </p>
+                                <p class="hui99">
+                                    <span>剂型：颗粒剂</span>
+                                </p>
+                                <div>
+                                    <p style="float: left;" class="red16"><span style="font-size: 12px;">￥</span>55.00~58.00</p>
+                                    <p class="go-xq">
+                                        
+                                        <a href='Item_p987B9FA96E8D7AA3.html' style="color: #fff;">查看详情</a>
+                                    </p>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                
+
+        </ol>
+        <!--同厂家其他药品 结束-->
+        <!-- tab 标题 结束 -->
+    </div>
+
+    <!--产品列表-->
+    <!--加载更多-->
+    <div class="searc_jz">
+        <p>
+            &nbsp;
+<!-- class="pagination"-->
+<style>
+    #loadingBox {
+        margin-left: 50%;
+        margin-top: 30px;
+    }
+</style>
+<script src="../AJs/jquery-1.8.3.min.js"></script>
+<script src="../AJs/Spin.js"></script>
+<script>
+    /*第一种*/
+    $(function () {
+
+        $(window).scroll(function () {
+
+            var scrollH = document.documentElement.scrollHeight;
+
+            var clientH = document.documentElement.clientHeight;
+            //if (scrollH == (document.documentElement.scrollTop | document.body.scrollTop) + clientH - 10) {
+            //    //加载新数据
+            //    GoloadingBox();
+            //}
+            if (scrollH == (document.documentElement.scrollTop | document.body.scrollTop) + clientH) {
+                //加载新数据
+                //document.getElementById("load").style.display = "inline-block";
+                var url = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning_hlMore');
+                if (url == "undefined" || url == "" || url == null) {
+                    document.getElementById("spanNO").style.display = "inline-block";
+                    document.getElementById("xl").style.display = "none";
+                    //spinner.spin();
+                }
+                else {
+                    GoloadingBox();
+                    document.getElementById("xl").style.display = "none";
+                    setTimeout(function () {
+                        window.location = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning_hlMore').href;
+                        spinner.spin();
+                    }, 800)
+                }
+                ////================================
+                //var url = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning1_hlMore');
+                //if (url == "undefined" || url == "" || url == null) {
+                //    document.getElementById("spanNO").style.display = "inline-block";
+                //    document.getElementById("xl").style.display = "none";
+                //    //spinner.spin();
+                //}
+                //else {
+                //    GoloadingBox();
+                //    document.getElementById("xl").style.display = "none";
+                //    setTimeout(function () {
+                //        window.location = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning1_hlMore').href;
+                //        spinner.spin();
+                //    }, 800)
+                //}
+                //var url = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning2_hlMore');
+                //if (url == "undefined" || url == "" || url == null) {
+                //    document.getElementById("spanNO").style.display = "inline-block";
+                //    document.getElementById("xl").style.display = "none";
+                //    //spinner.spin();
+                //}
+                //else {
+                //    GoloadingBox();
+                //    document.getElementById("xl").style.display = "none";
+                //    setTimeout(function () {
+                //        window.location = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning2_hlMore').href;
+                //        spinner.spin();
+                //    }, 800)
+                //}
+                //var url = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning3_hlMore');
+                //if (url == "undefined" || url == "" || url == null) {
+                //    document.getElementById("spanNO").style.display = "inline-block";
+                //    document.getElementById("xl").style.display = "none";
+                //    //spinner.spin();
+                //}
+                //else {
+                //    GoloadingBox();
+                //    document.getElementById("xl").style.display = "none";
+                //    setTimeout(function () {
+                //        window.location = document.getElementById('ctl00_ContentPlaceHolder1_PageTurning3_hlMore').href;
+                //        spinner.spin();
+                //    }, 800)
+                //}
+
+            }
+
+        });
+    })
+</script>
+<script>
+    function GoloadingBox() {
+        var opts = {
+            lines: 14, // The number of lines to draw |小长条的数量
+            length: 0, // The length of each line |小长条的长度
+            width: 3, // The line thickness |小长条的宽度
+            radius: 12, // The radius of the inner circle |内环的半径长
+            corners: 1, // Corner roundness (0..1)
+            rotate: 0, // The rotation offset |旋转角度
+            direction: 1, // 1: clockwise, -1: counterclockwise |1：顺时针方向 -1：逆时针方向
+            color: '#666', // #rgb or #rrggbb or array of colors |颜色
+            speed: 1, // Rounds per second |每秒转多少圈
+            trail: 60, // Afterglow percentage |余晖效果百分比
+            shadow: false, // Whether to render a shadow |渲染阴影
+            hwaccel: false, // Whether to use hardware acceleration |加速
+            className: 'spinner', // The CSS class to assign to the spinner |类名spinner
+            animation: 'spinner-line-shrink',
+            zIndex: 2e9, // The z-index (defaults to 2000000000) |显示在最顶层
+            top: 'auto', // Top position relative to parent in px |相对父元素的top
+            left: 'auto' // Left position relative to parent in px |相对父元素的left ，默认情况spinner是显示于父元素居中位置
+        };
+
+
+        var target = document.getElementById('loadingBox');
+        var spinner = new Spinner(opts).spin(target);//给id为loadingBox的div 中绑上spinner
+        //或者使用spinner.el属性插入DOM /* 如下 */
+        /*var spinner = new Spinner().spin();
+        target.appendChild(spinner.el);*/
+    }
+</script>
+<div id="footer1" style="margin-bottom:40px;">
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$PageTurning$hid_fid" id="ctl00_ContentPlaceHolder1_PageTurning_hid_fid" value="10" />
+    <div id="loadingBox">
+        <img id="xl" src="../AImagesSJ/xl_01.png" style="width: 30px; height: 30px; margin-left: -15px; float: left; margin-top: -18px;" />
+        
+        <span id="spanNO" style="display: none; width: 120px; height: 30px; margin-left: -50px; float: left; font-size: 16px;">没有更多数据！</span>
+    </div>
+    <p>
+        
+    </p>
+</div>
+
+    </div>
+
+    <div class="tan_fx" id="on_up" onclick="ffz()">
+        <img src="../AimagesSj/fx_tu.png" alt="" />
+    </div>
+
+    
+
+        <a href="#goTop" id="top" style="position: fixed; bottom: 17%; right: 20px; z-index: 99999;">
+            <img src="../AImagesSJ/top.png" id="imgdb" style="width: 50px;" />
+        </a>
+        <div id="erweima" style="display:none">
+        <div id="ctl00_PQRCode">
+	
+            
+            <div id="divmineject" style="background: none repeat scroll 0 0 #000; left: 0;   opacity: 0.5;  filter: alpha(opacity=50);  position: fixed;  top: 0;  bottom: 0;  z-index: 999;  left: 0; right: 0;">
+            </div>
+            <div id="divmineject1" style="width: 230px; height: 230px; text-align: center; background-color: #fff; z-index: 1000; position: absolute; left: 20%; top: 30%;">
+                <div>
+                    <img id="ctl00_Image1" src="../AImages/new/fwh.png" border="0" style="border-width: 0px; width: 210px; height: 210px; z-index: 1000; text-align: center; margin-top: 5px; margin-bottom: -10px;" />
+                    <p style="text-align: center; font-size: 16px;padding:0px;color:black;">请您长按二维码关注公众号</p>
+                    
+                </div>
+                <input type="submit" name="ctl00$close" value="X" id="ctl00_close" style="width: 25px;height: 25px;font-size: 17px;position: absolute;top: 0px;right: 0px;border: 0px;background-color: rgba(255,255,255,0.6);" />
+            </div>
+        
+</div>
+            </div>
+       
+    </form>
+</body>
+</html>
