@@ -1,0 +1,516 @@
+<!-- 新增判断审批通过则显示，不通过则显示报错 -->
+
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="author" content="POWEREC" />
+<meta name="Description" content="中化商务电子招投标平台" />
+<meta name="Copyright" content="中化商务电子招投标平台 版权所有，请勿转载" />
+<meta name="KeyWords" content="中化商务电子招投标平台, 电子商务平台，招标采购，电子招标，电子采购" />
+<meta name="revisit-after" content="7 days" />
+<meta name="robots" content="all" />
+<title>中化商务电子招投标平台</title>
+<link rel="stylesheet" type="text/css" href="/staticRes/css/cms/default/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/staticRes/css/cms/default/fonts/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/staticRes/css/cms/default/css/base.css">
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/flexible.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/bootstrap.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/packed_jquery.min6301986802.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/index.js"></script>
+
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/jQuery.blockUI.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/tipswindown.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/page.js"></script>
+<script type="text/javascript" language="javascript" src="/staticRes/css/cms/default/js/search.js"></script>
+<!-- js文件放在jquery.SuperSlide中，包括搜索关键字，收藏 -->
+</head>
+<body>
+
+<!--  顶部版块，登录、链接  -->
+<script type="text/javascript">
+/*
+*弹出本页指定ID的内容于窗口
+*id 指定的元素的id
+*title:	window弹出窗的标题
+*width:	窗口的宽,height:窗口的高
+*/
+function showTipsWindown(title,id,width,height){
+	tipsWindown(title,"id:"+id,width,height,"true","","true",id);
+}
+
+function confirmTerm(s) {
+	parent.closeWindown();
+	if(s == 1) {
+		parent.document.getElementById("isread").checked = true;
+	}
+}
+
+//弹出层调用
+function popTips(){
+	showTipsWindown("联系方式", 'simTestContent', 800, 200);
+	$("#isread").attr("checked", false);
+}
+
+$(document).ready(function(){
+	
+	$("#isread").click(popTips);
+	$("#isread-text").click(popTips);
+	$("#isread22").click(popTips);
+	
+});
+   </script>
+
+
+<script>
+// 百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e855b24ba23d25c83043ec38f14a0fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script type="text/javascript">
+// 设置为主页
+function SetHome(obj,vrl){
+try{
+obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+}
+catch(e){
+if(window.netscape) {
+try {
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+}
+catch (e) {
+alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+}
+var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+prefs.setCharPref('browser.startup.homepage',vrl);
+}else{
+alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。");
+}
+}
+}
+// 加入收藏 兼容360和IE6
+function shoucang(sTitle,sURL)
+{
+try
+{
+window.external.addFavorite(sURL, sTitle);
+}
+catch (e)
+{
+try
+{
+window.sidebar.addPanel(sTitle, sURL, "");
+}
+catch (e)
+{
+alert("加入收藏失败，请使用Ctrl+D进行添加");
+}
+}
+}
+</script> 
+<div class="top-nav">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/cms/index.htm" title="中化商务电子招投标平台"><img src="/staticRes/css/cms/default/images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="iconfont icon-sanhengxian-copy"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<!--  导航菜单  -->
+				<ul class="navbar-nav m-auto">
+											<li	
+							class="nav-item 
+							"
+						>
+						<!--当id=292时候单独给个c.link链接,250是首页 -->
+							<a  class="nav-link" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+								href="/cms/index.htm"  ref="null1" >
+							<!--传送后台路径去判断 -->
+							<!-- <i class="iconfont">
+									
+																		</i> -->首页
+							</a>
+							
+								<!-- 二级菜单 -->
+									<!--  -->
+
+						</li>
+						<li	
+							class="nav-item 
+							"
+						>
+						<!--当id=292时候单独给个c.link链接,250是首页 -->
+							<a  class="nav-link" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+								href="/cms/channel/gywm1/index.htm"  ref="gywm" >
+							<!--传送后台路径去判断 -->
+							<!-- <i class="iconfont">
+									
+																		</i> -->企业概况
+							</a>
+							
+								<!-- 二级菜单 -->
+									<div class="nav-sub nav-business" id="bidMenu241" >
+										<i class="nav-sub-bg"></i>
+										<div class="nav-sub-bd">
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/gywm1/index.htm" ref="gywm1" >
+											
+											关于我们</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/gywm2/index.htm" ref="gywm2" >
+											
+											企业新闻</a>
+											</div>
+										</div>
+									</div>
+									<!--  -->
+
+						</li>
+						<li	
+							class="nav-item 
+							"
+						>
+						<!--当id=292时候单独给个c.link链接,250是首页 -->
+							<a  class="nav-link" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+								href="/cms/channel/ywgg1qb/index.htm"  ref="ywgg" >
+							<!--传送后台路径去判断 -->
+							<!-- <i class="iconfont">
+									
+																		</i> -->业务公告
+							</a>
+							
+								<!-- 二级菜单 -->
+									<div class="nav-sub nav-business" id="bidMenu242" >
+										<i class="nav-sub-bg"></i>
+										<div class="nav-sub-bd">
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/ywgg1qb/index.htm"    ref="ywgg1" >
+											
+											招标/预审/变更</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/ywgg2qb/index.htm"    ref="ywgg2" >
+											
+											评标结果/中标结果</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/ywgg3qb/index.htm"    ref="ywgg3" >
+											
+											非招标采购公告</a>
+											</div>
+										</div>
+									</div>
+									<!--  -->
+
+						</li>
+						<li	
+							class="nav-item 
+							"
+						>
+						<!--当id=292时候单独给个c.link链接,250是首页 -->
+							<a  class="nav-link" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+								href="/cms/channel/help1/index.htm"  ref="help" >
+							<!--传送后台路径去判断 -->
+							<!-- <i class="iconfont">
+									
+																		</i> -->帮助中心
+							</a>
+							
+								<!-- 二级菜单 -->
+									<div class="nav-sub nav-business" id="bidMenu243" >
+										<i class="nav-sub-bg"></i>
+										<div class="nav-sub-bd">
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/help1/index.htm" ref="help1" >
+											
+											招投标指南</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/help2/index.htm" ref="help2" >
+											
+											联系我们</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/help3/index.htm" ref="help3" >
+											
+											常见问题解答</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/help4/index.htm" ref="help4" >
+											
+											资料下载</a>
+											</div>
+										</div>
+									</div>
+									<!--  -->
+
+						</li>
+						<li	
+							class="nav-item 
+							"
+						>
+						<!--当id=292时候单独给个c.link链接,250是首页 -->
+							<a  class="nav-link" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+								href="#"  ref="ltfzb" >
+							<!--传送后台路径去判断 -->
+							<!-- <i class="iconfont">
+									
+										
+								</i> -->集团非招标采购
+							</a>
+							
+								<!-- 二级菜单 -->
+									<div class="nav-sub nav-business" id="bidMenu246" >
+										<i class="nav-sub-bg"></i>
+										<div class="nav-sub-bd">
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/nyywgg3qb/index.htm"    ref="nyywgg" >
+											
+											中化农业</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/nyuanywgg1qb/index.htm"    ref="nyuanywgg" >
+											
+											中化能源</a>
+											</div>
+											<div class="nav-sub-item">
+											<!--二级公告如果有外链接就用 -->
+												<a   href="/cms/channel/jrongywgg1qb/index.htm"    ref="jrongywgg" >
+											
+											中化金融</a>
+											</div>
+										</div>
+									</div>
+									<!-- 
+										<div class="nav-sub nav-business">
+											<i class="nav-sub-bg"></i>
+											<div class="nav-sub-bd">
+												<div class="nav-sub-item"><a href="#" style="cursor: default;color:#5b5b5b;">平台建设中</a></div>
+											</div>
+										</div>
+									 -->
+
+						</li>
+				</ul>
+				<!-- 搜索 -->
+                <form class="form-inline my-2 my-lg-0 mr-2">
+                    <input class="form-control" type="search" name="q"  maxlength="40" autocomplete="off" onfocus="if(this.value=='请输入关键字')this.value=''" 
+						onblur="if(this.value=='')this.value='请输入关键字'" placeholder="搜索" value="请输入关键字" aria-label="Search">
+					<button class="btn" type="submit" onClick="if(document.getElementById('txtKey').value=='') return false;" id="btnSearch"><i class="iconfont icon-chakan"></i></button>
+                </form>
+                <div class="links my-2 my-lg-0">
+	<!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1559863335&site=qq&menu=yes"><img border="0" src="/staticRes/css/cms/default/images/qq.jpg" alt="技术支持" title="技术支持"/></a> -->
+                    <a href="http://e.sinochemitc.com/ebidding/login" target="_blank">
+						<button class="btn btn-primary mr-1 btn-sweep-to-right">登录</button>
+					</a>
+                    <a href="http://e.sinochemitc.com/ebidding/taurus/SysReg/register.htm?no_sitemesh" target="_blank">
+						<button class="btn btn-default mr-1">注册</button>
+					</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<div style="
+    position: fixed;
+    margin-top: 300px;
+    z-index: 9999999999;
+">
+	<img src="/staticRes/css/cms/default/images/toupiao2.jpg" style="width: 50%;" alt="">
+	</div>
+
+
+<div 
+					class="inner-banner"
+>
+    <div class="container">
+        <div class="content">
+					<h2>业务公告</h2>
+					<p>Business bulletin</p>
+        </div>
+    </div>
+</div>
+
+<div class="mainPart">
+    <div class="container">
+		<!-- 所在位置 -->
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/cms/index.htm">首页</a></li>
+				<!-- 第三级所在位置关系 -->
+				<li class="breadcrumb-item active" aria-current="page">
+					<a href="/cms/channel//index.htm">
+					<!-- 内层逻辑：channel.id不等于当前父级栏目id，且当前父级栏目不为空才显示 -->
+											<!-- 外层逻辑：channelId等于这个栏目的当前id，才显示 -->
+								<a  href="/cms/channel/ywgg2hw/index.htm" ref="ywgg2hw" >
+							<!-- 内层逻辑：channel不为空且channel.id等于当前栏目id才显示 -->
+							货物</a><!-- <em>></em><em>正文</em> -->
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">正文</li>
+			</ol>
+		</nav>
+
+        <div class="articleMain">
+			<!-- 新闻标题 -->
+			<div class="ninfo-title">
+				<h1>中国人民人寿保险股份有限公司新疆维吾尔自治区分公司“牛行天下，牛转乾坤”奖品采购项目终止公告</h1>
+				<div class="a-time">
+					<i class="iconfont icon-time"></i><span>发布时间：2021-08-02 12:20:29</span>
+				</div>
+			</div>
+			
+			<!-- 新闻内容 -->
+			<div class="a-content">
+
+				<p style="text-indent:2.0em;"><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">一、项目基本情况</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">采购项目编号：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">0747-2160SCCXJ174</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">采购项目名称：中国人民人寿保险股份有限公司新疆维吾尔自治区分公司“牛行天下，牛转乾坤”奖品采购项目</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">采购人：中国人民人寿保险股份有限公司新疆维吾尔自治区分公司</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">首次公告日期：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">2021</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">年</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">7</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">月</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">16</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">日</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">响应文件递交截止时间：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">2021</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">年</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">7</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">月</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">30</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">日</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">11:00</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">（北京时间）</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">二、项目终止的原因</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">递交响应文件的供应商不足</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">3</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">家，磋商终止。</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">三、联系方式。</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">1.</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">采购人</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">名</span>&nbsp;<span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">称：中国人民人寿保险股份有限公司新疆维吾尔自治区分公司</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">地址：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">乌鲁木齐市天山区光明路</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: Arial, sans-serif;">276</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">号</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: Arial, sans-serif;">E</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">阳臻品</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: Arial, sans-serif;">9</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">楼</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">联系方式：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">杨康</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: Arial, sans-serif;">&nbsp;18609006468</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">2.</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">采购代理机构</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">名</span>&nbsp;<span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">称：中化商务有限公司</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 21px;"><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">地　址：北京复兴门外大街</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">A2</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">号中化大厦（邮编：</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px;">100045</span><span style="box-sizing: border-box; font-size: 16px; line-height: 24px; font-family: 宋体;">）</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(153, 153, 153); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, ?€?é???–?é’???????é???????¨, Arial, sans-serif; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-size: 16px; font-family: 宋体;">联系方式：</span><span style="box-sizing: border-box; font-size: 16px; font-family: 宋体;">赵启芳、赵清璐</span><span style="box-sizing: border-box; font-size: 16px; font-family: Arial, sans-serif;">&nbsp;0991-5271567</span><span style="box-sizing: border-box; font-size: 16px; font-family: 宋体;">、</span><span style="box-sizing: border-box; font-size: 16px; font-family: Arial, sans-serif;">18160620263</span></p><p><br/></p></p>
+				<!-- 附件调整样式后 -->
+						<!-- 2.招标系统推送附件 -->
+			</div>
+            
+			<!-- 上/下一条链接  如果上条、下条没有了，就删除span-->
+			<div class="paging-links">
+				<!--div class="article-bottom-left"></div-->
+						<a href="/cms/channel/ywgg2hw/100037.htm"  class="page-prev">
+							<i class="iconfont icon-arrowcircleleft"></i>
+								上一篇：国家石油天然气管网集团华北分公司视频会议系统改造项目【重新招标】中标公告
+							
+						</a>
+						<a href="/cms/channel/ywgg2hw/100029.htm"  class="page-next">
+							<i class="iconfont icon-arrowcircleleft"></i>
+								下一篇：数控车铣复合机床中标候选人公示
+							
+						</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+<!--  底部  -->
+<div class="footer">
+    <div class="container">
+        <div class="f-top">
+            <div class="row">
+                <div class="col-lg-5 my-4 my-lg-0">
+                    <p>快速通道</p>
+                    <div>
+                        <a href="/cms/channel/gywm1/index.htm">关于我们</a>
+                        <a href="/cms/channel/laws1/index.htm">政策法规</a>
+                        <a href="/cms/channel/help1/index.htm">帮助中心</a>
+                        <!-- <a href="/cms/channel/gywm4/index.htm">社会招聘</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-7 my-4 my-lg-0">
+                    <p>友情链接</p>
+                    <div>
+                        <a target="_blank" href="http://www.sinochem.com/">中化集团</a>
+                        <a target="_blank" href="http://www.sinochemitc.com/">中化商务有限公司</a>
+                        <a target="_blank" href="http://www.cebpubservice.com">中国招标投标公共服务平台</a>
+                    </div>
+                </div>
+                <!--<div class="col-lg-2 f-share">
+                    <a href="###">
+                        <i class="iconfont icon-weixin"></i>
+                    </a>
+                    <a href="###">
+                        <i class="iconfont icon-wang"></i>
+                    </a>
+                    <a href="###">
+                        <i class="iconfont icon-weixin"></i>
+                    </a>
+                </div>-->
+            </div>
+        </div>
+        <div class="f-bottom">
+            <div class="row">
+                <div class="col-lg-4 mb-sm-4">
+                    <img src="/staticRes/css/cms/default/images/f-logo1.png" alt="">
+                </div>
+                <div class="col-lg-8 text-right">
+                    <p>版权所有©  中化商务有限公司</p>
+                    <p>京公网安备11040130081号 <a target="_blank" href="http://www.beian.miit.gov.cn">京ICP备18039018号-1</a></p>
+                    <!-- <p>技术支持：<a href="http://www.ebidding.com.cn/###" target="_blank">上海汇招信息技术有限公司</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 返回顶部 -->
+<div class="page-component-up" title="返回顶部">
+    <i class="iconfont icon-arrowup"></i>
+</div>
+<!-- <div class="page-component-up">
+    <i class="iconfont icon-xiangshang2"></i>
+</div> -->
+<!-- 技术支持右侧栏 -->
+
+<script>
+        $(function () {
+            $(".tab li").click(function () {
+                $(this).addClass("active").siblings("li").removeClass("active");
+                var index = $(this).index();
+                $(".products>div").eq(index).addClass("selected").siblings().removeClass("selected");
+            });
+            $(".rem-pw").click(function () {
+                $(this).children('.checked').toggle();
+            });
+            $(".fa-eye").click(function(){
+                $(this).siblings(".fa-eye-slash").show();
+                $("input#password").attr('type','password');
+                $("input#caPwd").attr('type','password');
+                $(this).hide();
+            });
+            $(".fa-eye-slash").click(function(){
+                $(this).siblings(".fa-eye").show();
+                $("input#password").attr('type','text');
+                $("input#caPwd").attr('type','text');
+                $(this).hide();
+            });
+        });
+        
+        (function(ji, a, x, i, n, c) {
+    	    ji[n] = ji[n] || function() {
+    	      (ji[n].n = ji[n].n || []).push(arguments);
+    	    };
+    	    j = a.createElement(x), s = a.getElementsByTagName(x)[0];
+    	    j.async = true;
+    	    if(typeof c==="function"){if(typeof document.attachEvent!=="object"){j.onload=function(){c()}}else{j.onreadystatechange=function(){var r=j.readyState;if(r==="loaded"||r==="complete"){j.onreadystatechange=null;c()}}}};
+    	    j.charset = "UTF-8";
+    	    j.src = i + "?v=" + new Date().getUTCDate() + "&id=eg00atgzyxb3yw&appName=zgzbw882&appChannel=20003";
+    	    s.parentNode.insertBefore(j, s);
+    	})(window, document, "script", "https://web.jiaxincloud.com/mcs.js", "_JIAXIN");_JIAXIN();
+    	
+    	
+        
+    </script>
+
+</body>
+</html>
+

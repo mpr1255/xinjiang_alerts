@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国证券监督管理委员会</title>
+<link href="../../../images/zjh.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/function.js"></script>
+
+</head>
+
+<body>
+<div class="body_bk">
+<div class="body">
+<script>
+function simpsearch()
+{
+	var url_str=document.location.href;
+	var url_lst=url_str.split("/");
+	url_str="";
+
+	for(var i=3;i<url_lst.length;i++){
+		if(url_lst[i].indexOf(".html")==-1)
+		{
+			url_str+=url_lst[i]+"/";
+		}
+	}
+	url_str = url_str.substring(0,url_str.length -1);
+	//alert(url_str);
+	var searchword=document.simsearch.schword.value;
+	//alert(searchword);
+	var mess='<>/?{}=&*%^~`/~`()[]';
+	if(searchword==""||searchword==null||searchword=="本站点检索"){
+		alert('请检查输入条件，因为它不符合要求！');
+		return false;
+	}
+
+	if(searchword.length>50)
+	{
+		alert("字符超长、最多输入50个汉字！");
+		return false;
+	}
+	document.simsearch.searchword.value= url_str;
+	document.simsearch.schword.value= searchword;	
+	
+	document.simsearch.method='post';
+	//document.simsearch.action="http://180.9.1.54:9000/was40/search";
+	document.simsearch.action='/wcm/websearch/zjh_simp_list.jsp';
+}
+</script>
+
+
+<div class="topbar">
+  <div style="float:left; line-height:25px;">
+    <a href="http://www.csrc.gov.cn/SuniT/www.csrc.gov.cn/pub/newsite" onmousedown="a1.style.display='none';a2.style.display='block'">繁体版</a>|<a href="http://www.csrc.gov.cn/pub/csrc_en">English</a>
+  </div>
+
+   <div class="sobox">
+    	<table>
+          <tr>
+            <td>站内搜索：</td>
+<form method="post" action="" name="simsearch" id="simsearch" onsubmit="return simpsearch()" >
+
+            <td>
+                        <input name="schword" type="text" class="search_input" id="schword" onclick="javascript:if(this.value=='本站点检索') this.value=''" value="本站点检索">
+                        <input type="hidden" name="searchword" value=''>
+                        <input type="hidden" name="channelid" value='3858'>
+                        <input type="hidden" name="whereId" value=''>
+           </td>
+            <td><input class="so_btn" name="" type="submit" value=""></td>
+            <td><input class="so_btn_2" name="" type="button" value="高级" onclick="window.location.href='/wcm/websearch/advsearch.htm'"></td>
+</form>
+          </tr>
+        </table>
+        <div class="clear"></div>
+    </div>
+  <div class="clear"></div>
+</div>
+
+<div class="banner"><img src="../../../images\banner.gif" width="990"></div>
+
+
+       <div class="menu">
+    	<div class="f_left"><a href="http://www.csrc.gov.cn" target="_self"><img src="../../../images/menu_index.gif"></a></div>
+        <div class="f_left"><img src="../../../images/menu_1.gif"></div>
+        <div class="menu_li" style="z-index:9999">
+<!--隐藏部分  政务        	
+<div class="menu_jia" style="display:none" id="b11" >
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="b11.style.display='none';a11.style.display='block'" onmouseover="b11.style.display='block'">
+      <tr>
+    
+    <td><a href="/pub/zjhpublic/">信息公开</a></td>
+    <td><a href="http://neris.csrc.gov.cn/falvfagui/">政策法规</a></td>
+    <td><a href="../../../zjhxwfb/">新闻发布</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://eid.csrc.gov.cn">信息披露</a></td>
+    <td><a href="/pub/newsite/sjtj/">统计数据</a></td>
+    <td><a href="/pub/newsite/rjb/gwykl/">人事招聘</a></td>
+  </tr>
+
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+<tr>
+        <td><a href="#">机构设置</a></td>
+        <td><a href="#">信息公开</a></td>
+        <td><a href="#">新闻发布</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">信息披露</a></td>
+        <td><a href="#">统计数据</a></td>
+        <td><a href="#">人事信息</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+
+    </table>
+		</div>
+</div>
+<table width="100%" id="a11" onmouseover="a11.style.display='none';b11.style.display='block'">-->
+<table width="100%">
+  <tr>
+    <!--td><a href="/pub/newsite/zjhjs/">机构设置</a></td-->
+    <td><a href="/pub/zjhpublic/">信息公开</a></td>
+    <td><a href="http://neris.csrc.gov.cn/falvfagui/">政策法规</a></td>
+    <td><a href="../../../zjhxwfb/">新闻发布</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://eid.csrc.gov.cn">信息披露</a></td>
+    <td><a href="/pub/newsite/sjtj/">统计数据</a></td>
+    <td><a href="/pub/newsite/rjb/gwykl/">人事招聘</a></td>
+  </tr>
+
+</table>
+<!--div class="menu_btn_1"><a href="#"><img src="../../../images/menu_btn.gif" width="19" height="19"></a></div-->
+
+      </div>
+        <div class="f_left"><img src="../../../images/menu_2.gif"></div>
+        <div class="menu_li" style="z-index:9999">
+        	<table width="100%" id="c11" onmouseover="c11.style.display='none';d11.style.display='block'">
+  <tr>
+    <td><a href="http://neris.csrc.gov.cn/alappl/home/guideH">办事指南</a></td>
+    <td><a href="/pub/newsite/zxbs/">在线申报</a></td>
+       <td><a href="/pub/newsite/zjjg/hfjgml/">监管对象</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/zjjg/ywzg/">业务资格</a></td>
+    <td><a href="/pub/newsite/zjjg/ryzg/">人员资格</a></td>
+    <td><a href="/pub/newsite/tzzbh1/">投资者保护</a></td>
+  </tr>
+
+</table>
+<div class="menu_jia" style="display:none" id="d11" >
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="d11.style.display='none';c11.style.display='block'" onmouseover="d11.style.display='block'">
+        <tr>
+    <td><a href="http://neris.csrc.gov.cn/alappl/home/guideH">办事指南</a></td>
+    <td><a href="/pub/newsite/zxbs/">在线申报</a></td>
+     <td><a href="/pub/newsite/zjjg/hfjgml/">监管对象</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/zjjg/ywzg/">业务资格</a></td>
+    <td><a href="/pub/newsite/zjjg/ryzg/">人员资格</a></td>
+    <td><a href="/pub/newsite/tzzbh1/">投资者保护</a></td>
+  </tr>
+      <tr>
+        <td colspan="3"><a href="/pub/newsite/djffzqqhhdj/djffzqhd/ffzqqhjs/">非法证券期货风险警示</a></td>
+        
+
+      </tr>
+    </table>
+	<!--div class="menu_btn_2"><a href="#"><img src="../../../images/menu_btn2.gif" width="19" height="19"></a></div-->
+	</div>
+</div>
+
+        </div>
+        <div class="f_left"><img src="../../../images/menu_3.gif"></div>
+        <div class="menu_li">
+
+
+<!--隐藏部分 互动
+<div class="menu_jia" style="display:none" id="f11" >
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="f11.style.display='none';e11.style.display='block'" onmouseover="f11.style.display='block'">
+          <tr>
+    <td><a href="http://gzly.12386.gov.cn/csrc/sh.inb.publicmessage!messageList.sh">主席信箱</a></td>
+    <td><a href="/pub/newsite/hdjl/xfzl/">信访专栏</a></td>
+    <td><a href="http://jubao.csrc.gov.cn">举报专栏</a></td>
+    
+      </tr>
+  <tr>
+    <td><a href="/pub/newsite/hdjl/zxft/">在线访谈</a></td>
+    <td><a href="/pub/newsite/hdjl/yjzj/index.htm">征求意见</a></td>
+    <td><a href="#">网上调查</a></td>
+   </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+<tr>
+        <td><a href="#">机构设置</a></td>
+        <td><a href="#">信息公开</a></td>
+        <td><a href="#">新闻发布</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">信息披露</a></td>
+        <td><a href="#">统计数据</a></td>
+        <td><a href="#">人事信息</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+
+    </table>
+	
+	</div>
+</div>
+        	<table width="100%" id="e11" onmouseover="e11.style.display='none';f11.style.display='block'">-->
+<table width="100%">
+  <tr>
+    <td><a href="http://gzly.csrc12386.org.cn/csrc">公众留言</a></td>
+    <td><a href="/pub/newsite/hdjl/xfzl/">信访专栏</a></td>
+    <td><a href="http://neris.csrc.gov.cn/jubaozhongxin">举报专栏</a></td>
+      
+      </tr>
+  <tr>
+    <td><a href="/pub/newsite/hdjl/zxft/">在线访谈</a></td>
+    <td><a href="/pub/newsite/hdjl/yjzj/index.htm">征求意见</a></td>
+    <td><a href="http://neris.csrc.gov.cn/lianzhengpingyi">廉政评议</a></td>   
+   </tr>
+  
+
+</table>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+<div class="srcbox">
+    	<div class="f_left"><img src="../../../images/icon01.gif" width="38" height="32"></div>
+        <div class="weizhi">
+        	您的位置：<a href="./../../../" target="_self">首页</a>&nbsp;&gt;&nbsp;<a href="./../../" target="_self">上市公司监管部</a>&nbsp;&gt;&nbsp;<a href="./../" target="_self">行政监管措施</a>&nbsp;&gt;&nbsp;<a href="./" target="_self">新疆</a>
+        </div>
+        <div class="f_right"><img src="../../../images/srcbg_r.gif" width="1" height="32"></div>
+        <div class="clear"></div>
+    </div>
+  	
+    <!--概览分类-->
+    <div class="er_main">
+    	<div class="er_left">
+        	<div class="title">新疆</div>
+            <div class="left_nav" style="width:190px;height:650px;overflow:auto">
+            	<ul>
+			
+                        
+
+                	<li><a href='../bxzjgcs/'>北京</a></li>
+
+                
+                        
+
+                	<li><a href='../tjxzjgcs/'>天津</a></li>
+
+                
+                        
+
+                	<li><a href='../hbxzjgcs/'>河北</a></li>
+
+                
+                        
+
+                	<li><a href='../sxxzjgcs/'>山西</a></li>
+
+                
+                        
+
+                	<li><a href='../nmxzjgcs/'>内蒙古</a></li>
+
+                
+                        
+
+                	<li><a href='../lnxzjgcs/'>辽宁</a></li>
+
+                
+                        
+
+                	<li><a href='../jlxzjgcs/'>吉林</a></li>
+
+                
+                        
+
+                	<li><a href='../hljxzjgcs/'>黑龙江</a></li>
+
+                
+                        
+
+                	<li><a href='../shxzjgcs/'>上海</a></li>
+
+                
+                        
+
+                	<li><a href='../jsxzjgcs/'>江苏</a></li>
+
+                
+                        
+
+                	<li><a href='../zjxzjgcs/'>浙江</a></li>
+
+                
+                        
+
+                	<li><a href='../ahxzjgcs/'>安徽</a></li>
+
+                
+                        
+
+                	<li><a href='../fjxzjgcs/'>福建</a></li>
+
+                
+                        
+
+                	<li><a href='../jxxzjgcs/'>江西</a></li>
+
+                
+                        
+
+                	<li><a href='../sdxzjgcs/'>山东</a></li>
+
+                
+                        
+
+                	<li><a href='../hnxzjgcs/'>河南</a></li>
+
+                
+                        
+
+                	<li><a href='../hubxzjgcs/'>湖北</a></li>
+
+                
+                        
+
+                	<li><a href='../hunxzjgcs/'>湖南</a></li>
+
+                
+                        
+
+                	<li><a href='../gdxzjgcs/'>广东</a></li>
+
+                
+                        
+
+                	<li><a href='../gxxzjgcs/'>广西</a></li>
+
+                
+                        
+
+                	<li><a href='../hainxzjgcs/'>海南</a></li>
+
+                
+                        
+
+                	<li><a href='../cqxzjgcs/'>重庆</a></li>
+
+                
+                        
+
+                	<li><a href='../scxzjgcs/'>四川</a></li>
+
+                
+                        
+
+                	<li><a href='../gzhxzjgcs/'>贵州</a></li>
+
+                
+                        
+
+                	<li><a href='../ynxzjgcs/'>云南</a></li>
+
+                
+                        
+
+                	<li><a href='../xzxzjgcs/'>西藏</a></li>
+
+                
+                        
+
+                	<li><a href='../shxxzjgcs/'>陕西</a></li>
+
+                
+                        
+
+                	<li><a href='../gsxzjgcs/'>甘肃</a></li>
+
+                
+                        
+
+                	<li><a href='../qhxzjgcs/'>青海</a></li>
+
+                
+                        
+
+                	<li><a href='../nxxzjgcs/'>宁夏</a></li>
+
+                
+                        
+
+                	<li><a href='./'>新疆</a></li>
+
+                
+                        
+
+                	<li><a href='../szxzjgcs/'>深圳</a></li>
+
+                
+                        
+
+                	<li><a href='../dlxzjgcs/'>大连</a></li>
+
+                
+                        
+
+                	<li><a href='../nbxzjgcs/'>宁波</a></li>
+
+                
+                        
+
+                	<li><a href='../xmxzjgcs/'>厦门</a></li>
+
+                
+                        
+
+                	<li><a href='../qdxzjgcs/'>青岛</a></li>
+
+                
+
+			
+
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="er_right">
+<div>
+				<div class="title">
+                	<div class="bt">新疆</div>
+                                      <div class="clear"></div>
+                </div>
+
+                <div class="fl_list">
+                	<ul id="myul">
+					
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373922.htm" target="_blank" title="关于对韩小锋采取认定为不适当人选措施的决定">关于对韩小锋采取认定为不适当人选措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373921.htm" target="_blank" title="关于对吐尔洪·艾麦尔采取出具警示函措施的决定">关于对吐尔洪·艾麦尔采取出具警示函措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373920.htm" target="_blank" title="关于对冷新卫采取出具警示函措施的决定">关于对冷新卫采取出具警示函措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373918.htm" target="_blank" title="关于对胡中友采取出具警示函措施的决定">关于对胡中友采取出具警示函措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373917.htm" target="_blank" title="关于对张歌伟采取出具警示函措施的决定">关于对张歌伟采取出具警示函措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373916.htm" target="_blank" title="关于对新疆浩源天然气股份有限公司采取出具警示函措施的决定">关于对新疆浩源天然气股份有限公司采取出具警示函措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/202004/t20200416_373907.htm" target="_blank" title="关于对周举东采取认定为不适当人选措施的决定">关于对周举东采取认定为不适当人选措施的决定</a>
+                            <span> 2020-04-16</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201910/t20191024_364948.htm" target="_blank" title="关于对中国银河证券股份有限公司伊宁市山东路营业部采取责令改正措施的决定">关于对中国银河证券股份有限公司伊宁市山东路营业部采取责令改正措施的决定</a>
+                            <span> 2019-10-24</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201907/t20190726_359868.htm" target="_blank" title="关于对中国银河证券股份有限公司保荐代表人李雪斌、李宁采取出具警示函行政监管措施的决定">关于对中国银河证券股份有限公司保荐代表人李雪斌、李宁采取出具警示函行政监管措...</a>
+                            <span> 2019-07-26</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201907/t20190726_359862.htm" target="_blank" title="关于对新疆久印铭正律师事务所采取出具警示函措施的决定">关于对新疆久印铭正律师事务所采取出具警示函措施的决定</a>
+                            <span> 2019-07-26</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201904/t20190422_354684.htm" target="_blank" title="关于对新疆汇嘉时代百货股份有限公司及潘锦海、王立峰、董凤华、高玉杰采取行政监管措施的决定">关于对新疆汇嘉时代百货股份有限公司及潘锦海、王立峰、董凤华、高玉杰采取行政监...</a>
+                            <span> 2019-04-22</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201904/t20190415_354321.htm" target="_blank" title="关于对袁秀莉、曾国强采取监管谈话措施的决定 (〔2019〕1号)">关于对袁秀莉、曾国强采取监管谈话措施的决定 (〔2019〕1号)</a>
+                            <span> 2019-04-15</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201812/t20181227_348766.htm" target="_blank" title="关于对中审华会计师事务所（特殊普通合伙）采取出具警示函措施的决定">关于对中审华会计师事务所（特殊普通合伙）采取出具警示函措施的决定</a>
+                            <span> 2018-12-26</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201808/t20180807_342369.htm" target="_blank" title="关于对西部黄金股份有限公司采取出具警示函措施的决定">关于对西部黄金股份有限公司采取出具警示函措施的决定</a>
+                            <span> 2018-08-06</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201803/t20180328_335905.htm" target="_blank" title="关于对新疆浩源天然气股份有限公司采取责令改正措施的决定">关于对新疆浩源天然气股份有限公司采取责令改正措施的决定</a>
+                            <span> 2018-03-28</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201804/t20180403_336215.htm" target="_blank" title="关于对常州金坛昶昇投资有限公司采取出具警示函措施的决定">关于对常州金坛昶昇投资有限公司采取出具警示函措施的决定</a>
+                            <span> 2018-03-28</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201804/t20180403_336214.htm" target="_blank" title="关于对郭力群、赵新刚采取监管谈话措施的决定">关于对郭力群、赵新刚采取监管谈话措施的决定</a>
+                            <span> 2018-03-13</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201802/t20180209_334052.htm" target="_blank" title="关于对*ST新亿董事黄伟、刘鹏、臧忠华采取监管谈话措施的决定">关于对*ST新亿董事黄伟、刘鹏、臧忠华采取监管谈话措施的决定</a>
+                            <span> 2018-02-04</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201712/t20171228_329819.htm" target="_blank" title="关于对许峰、张玮采取监管谈话措施的决定">关于对许峰、张玮采取监管谈话措施的决定</a>
+                            <span> 2017-12-25</span>
+                            <div class="clear"></div>
+                        </li>
+
+
+
+	<li><a href="../../../../zjhpublicofxj/xzjgcs/201712/t20171228_329820.htm" target="_blank" title="关于对单大信、陈静采取监管谈话措施的决定">关于对单大信、陈静采取监管谈话措施的决定</a>
+                            <span> 2017-12-25</span>
+                            <div class="clear"></div>
+                        </li>
+
+</ul>
+</div>
+<link href="../../../css/page.css" rel="stylesheet" type="text/css">
+<link href="../../../css/outlinetable.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript" src="../../../js/page.js"></SCRIPT>
+
+<div class="page"> 
+<script language="javascript">
+temp1 = document.getElementById('myul');
+lis1 = temp1.getElementsByTagName('li');
+lishu1 = lis1.length; //li元素的个数
+
+
+if(lishu1>20){
+document.write("<div class='page' id='list_navigator'></div>");
+}
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+function getRecordNum(){
+    var count = 0;
+
+temp = document.getElementById('myul');
+lis = temp.getElementsByTagName('li');
+lishu = lis.length; //li元素的个数
+    if(lishu<0){
+    var tableObj = document.getElementById("documentContainer");
+	for(var i=0;i<tableObj.rows.length;i++)
+	{
+	   for(var j=0;j<tableObj.rows[i].cells.length;j++)
+	   {
+			if(tableObj.rows[i].cells[j].nodeType != 1){
+				continue;
+			}
+			if(tableObj.rows[i].cells[j].className=="news_txt_list"){
+				count++;
+			}
+	   }
+	}	
+    return count;}
+    else{count=lishu;
+    return count;
+
+
+}
+}
+//加载翻页信息
+
+		var m_nRecordCount =0;
+		m_nRecordCount="49";
+		if(m_nRecordCount.length == 0){
+			m_nRecordCount = getRecordNum();
+		}
+		//alert(m_nRecordCount); 
+		
+		
+		var currentPage = 1;//所在页从0开始
+var prevPage = currentPage-1//上一页
+var nextPage = currentPage+1//下一页
+var currentPage2 = currentPage + 1;//当前页 
+var countPage = 3//共多少页
+document.write("共"+"<span class='current'>"+countPage+"</span>"+"页"+"&nbsp;&nbsp;共<span class='current'>"+m_nRecordCount+"</span>条记录");
+document.write("&nbsp;&nbsp;共每页"+"<span class='current'>"+"20</span>"+"记录&nbsp;&nbsp;");
+			//设置上一页代码
+			if(countPage>1&&currentPage!=0&&currentPage!=1)
+				document.write("<span class='nav_go_pre disabled_go'><a href=\"index"+"_" + prevPage + "."+"html\" >上一页</a></span>");
+			else if(countPage>1&&currentPage!=0&&currentPage==1)
+				document.write("<span class='nav_go_pre disabled_go'><a href=\"index.html\">上一页</a></span>");
+			else
+				document.write("<span class='nav_go_pre disabled_go'>上一页</span>");
+			//循环
+			var num = 5;
+			for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+				if(currentPage==i)
+					document.write("<span class='nav_page nav_currpage'>"+(i+1)+"</span>");
+				else if(i==0)
+					document.write("<span class='nav_page'><a href=\"index.html\" >"+(i+1)+"</a></span>");
+				else
+					document.write("<span class='nav_page'><a href=\"index"+"_" + i + "."+"html\" >"+(i+1)+"</a></span>");
+			}
+
+			//设置下一页代码 
+			if(countPage>1&&currentPage!=(countPage-1))
+				document.write("<span class='nav_go_next'><a href=\"index"+"_" + nextPage + "."+"html\" >下一页</a><span>");
+			else
+				document.write("<span class='nav_go_next'>下一页</span>");
+			
+//跳转页面
+document.write("<font class='wcm_pointer'>跳转至第<input type='text' id='num' value="+(currentPage+1)+" style='width:30px;font-size:12px;'>"+
+             "&nbsp;<a><input style='font-size:12px;background:none;border:none;' type='submit' value='>>' onClick=javacript:toPage()></a></font>");
+             
+function toPage(){
+var _num = document.getElementById("num").value;
+if(isNaN(_num)){
+alert("请输入数字");
+return false;
+}
+var str = "index"+"_"+(_num-1)+"."+"html";
+var url = location.href.substring(0,location.href.lastIndexOf("/")+1);
+if(_num<=1||_num==null)
+location.href = url+"index"+"."+"html";
+else if(_num>countPage)
+alert("本频道最多"+countPage+"页");
+else
+location.href = url+str;
+}
+
+</SCRIPT>
+</div>
+
+
+
+
+
+<!--<div class="page"> 
+
+
+<script type="text/javascript">
+var currentPage = 1;//所在页从0开始
+
+var countPage = 3//共多少页
+document.write("共"+countPage+"页");
+
+</script>
+&nbsp;&nbsp;0条
+
+                         			 <script type="text/javascript">
+			var currentPage = 1;//所在页从0开始
+			var prevPage = currentPage-1//上一页
+			var nextPage = currentPage+1//下一页
+
+		         var currentPage2 = currentPage + 1;//当前页 
+                                          
+			                       
+                        document.write("当前第"+currentPage2+"页&nbsp;&nbsp;");
+			//设置上一页代码
+			if(countPage>1&&currentPage!=0&&currentPage!=1)
+				document.write("<a href=\"index.html\" >首页</a><a href=\"index"+"_" + prevPage + "."+"html\" >上一页</a>");
+			else if(countPage>1&&currentPage!=0&&currentPage==1)
+				document.write("<a href=\"index.html\" >首页</a><a href=\"index.html\">上一页</a>");
+			else
+				document.write("<span>首页</span><span>上一页</span>");
+			//循环
+			var num = 5;
+			for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+				if(currentPage==i)
+					document.write("<span class='current'>"+(i+1)+"</span>");
+				else if(i==0)
+					document.write("<a href=\"index.html\" >"+(i+1)+"</a>");
+				else
+					document.write("<a href=\"index"+"_" + i + "."+"html\" >"+(i+1)+"</a>");
+			}
+
+			//设置下一页代码 
+			if(countPage>1&&currentPage!=(countPage-1))
+				document.write("<a href=\"index"+"_" + nextPage + "."+"html\" >下一页</a><a href=\"index_" + (countPage-1) + ".html\" >尾页</a>");
+			else
+				document.write("<span>下一页</span><span>尾页</span>");
+				
+			</script>
+
+            </div>-->
+
+                </div>
+            </div>
+
+			            
+
+
+
+                <div class="clear"></div>
+    </div>
+
+<div class="foot"><!--img src="../../../2014/images/foot_link.gif"><br /-->
+    <img src="../../../images/foot_line.gif"><br />
+   	<a href="/pub/newsite/fzlm/gywm">关于我们</a> | <a href="/pub/newsite/fzlm/lxwm">联系我们</a> | <a href="/pub/newsite/fzlm/flsm">法律声明</a> <br />
+    版权所有：中国证券监督管理委员会  网站标识码 bm56000001 京ICP备 05035542号 　<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700080" style="text-decoration:none;" target="_blank"><img src="../../../images/gaba.png" style="vertical-align:middle;" border="0"><font color="#333333"> 京公网安备 11040102700080号</font></a >
+    </div>
+<table width="100%">
+  <tr>
+    
+   <td width="50%">
+        <div align="right">
+          <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='http://dcs.conac.cn/js/33/000/0000/60407915/CA330000000604079150001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+     </div>
+    </td>
+  
+     <td width="50%">
+  
+       <div align="left">
+
+<script id="_jiucuo_" sitecode='bm56000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+
+     </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+</div>
+</body>
+</html>

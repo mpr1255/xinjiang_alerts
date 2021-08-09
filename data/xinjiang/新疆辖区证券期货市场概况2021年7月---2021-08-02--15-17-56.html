@@ -1,0 +1,502 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>新疆辖区证券期货市场概况（2021年7月）</title>
+<style>
+.topLine{
+	height:6px;
+	overflow:hidden;
+	border-top:4px solid #F32F30;
+	border-bottom:1px solid #F32F30;
+}
+.docTitle{
+	font-weight:bold;
+	font-size:18px;
+	color:#F32F30;
+	white-space:nowrap;
+	text-align:center;
+	margin:20px 0px 30px;
+}
+</style>
+<style id="MyStyle">
+.content P,.content Table , .content TD,.content SPAN{
+	TEXT-DECORATION: none;
+	word-break:break-all !important;
+	word-wrap:break-word !important;
+}
+.content Table{
+	table-layout:fixed;
+}
+.separator{
+	color:#F32F30;
+	BORDER-BOTTOM-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-TOP-STYLE: dotted;
+	font-weight:none;
+}
+.content{
+	overflow-x:auto;width:920px;padding-bottom:30px
+}
+</style>
+<link href="../../css/detail.css" rel="stylesheet" media="screen" type="text/css">
+<link href="../../css/print.css" rel="stylesheet" media="print" type="text/css">
+<style media="print">
+.content{
+	overflow-x:auto;width:650px;padding-bottom:30px
+}
+</style>
+<script language="javascript">
+<!--
+    //设置页面可以编辑
+    document.onkeydown = function(event){
+        event = window.event || event;
+        if(event.keyCode == 69){//69->e
+            var sURL = '/wcm/WCMV6/metadata/application/39/govinfo_edit.jsp?ObjectId=402673&channelId=2697'
+            window.open(sURL);
+        }
+    };
+//-->
+</script>
+<SCRIPT language=JavaScript>
+	<!--
+
+		//运行高亮显示检索词的逻辑
+		function runDaubLogic() {
+
+			//以下一块为从refer中获取searchWord的逻辑
+			//***********************************************
+			//检索结果页面的url
+			//var refer = document.referrer.toLowerCase();
+	
+			//if (isNull(refer)) {
+			//	return;
+			//}
+			//var searchWord = getSearchWord(refer);
+			//***********************************************
+			var finalUrl=window.location.href;
+			var re=/keywords=/;
+				re.exec(finalUrl);
+			var sTitle=RegExp.rightContext;
+
+			var searchWord = sTitle;
+			if (isNull(searchWord)) {
+				return;
+			}
+			var array = transStr2Array(searchWord);
+			if (array.length == 0) {
+				return;
+			}
+			var element = getElementToDaub();
+			if (element == null || typeof (element) == "undefined") {
+				return;
+			}
+			daubElementAll(element, array);
+		}
+		
+		
+		//array为检索词的数组，ele为存储正文内容的元素
+		function daubElementAll(ele, array) {
+			if (array == null || array.length == 0) {
+				return;
+			}
+			var colors = getColorArray();
+			for (var i = 0; i < array.length; i++) {
+				daubElement(ele, array[i], colors[i % 5]);
+			}
+			ele.innerHTML = replaceAll(replaceAll(ele.innerHTML, "<tianjige>", ""), "</tianjige>", "");
+		}
+
+
+		//获取存放文章正文的元素
+		function getElementToDaub() {
+			var elements = document.getElementsByTagName("*");
+			if (elements == null || elements.length == 0) {
+				return null;
+			}
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i] == null || typeof (elements[i]) != "object") {
+					continue;
+				}
+				if (isNull(elements[i].className)) {
+					continue;
+				}
+				if (elements[i].className.indexOf("content") != -1) {
+					return elements[i];
+				}
+			}
+			return null;
+		}
+
+
+		//获取高亮显示的颜色数组。检索词可能有多个，用不同颜色进行高亮显示。如：第一个词语全部用red颜色，第二个词语显示为orange……
+		function getColorArray() {
+			return ["red", "orange", "pink", "grey", "blue"];
+		}
+
+
+		//将文章正文中包含的某词语进行高亮显示。ele为存储正文内容的元素，word为要高亮显示的词语，color为高亮显示的颜色
+		function daubElement(ele, word, color) {
+			if (word == null || word == "") {
+				return;
+			}
+			var colorWord = "<font color=\"" + color + "\">" + word + "</font>";
+			var eles = ele.childNodes;
+			for (var i = 0; i < eles.length; i++) {
+				e = eles[i];
+				if (e.nodeType == 3) {
+					if (e.data.indexOf(word) == -1) {
+						continue;
+					}
+					var reg = new RegExp("(" + word + ")", "gi");
+					var objResult = document.createElement("tianjige");
+					objResult.innerHTML = e.data.replace(reg, "<font color='" + color + "'>$1</font>");
+					if (e.data == objResult.childNodes[0].innerHTML) {
+						continue;
+					}
+					ele.replaceChild(objResult, e);
+				} else {
+					if (e.nodeType == 1) {
+						daubElement(e, word, color);
+					}
+				}
+			}
+		}
+
+
+		//获取检索词
+		function getSearchWord(refer) {
+			domain = getDomainName(refer);
+			var searchWord = "";
+			if (domain.indexOf("google") > 0) {
+				refer = decodeURI(refer);
+				return getParameter(refer, "g");
+			} else {
+				if (domain.indexOf("baidu") > 0) {
+					searchWord = getParameter(refer, "word");
+					if (isNull(searchWord)) {
+						searchWord = getParameter(refer, "wd");
+					}
+					if (isNull(searchWord)) {
+						searchWord = getParameter(refer, "kw");
+					}
+					return searchWord;
+				} else {
+					if (domain.indexOf("home.news.cn") > 0 || domain.indexOf("xinhuanet.com")) {
+						if (domain.indexOf("forum") != -1 || domain.indexOf("view") != -1) {
+						} else {
+							refer = decodeURI(refer);
+							searchWord = getParameter(refer, "sw");
+							select = getParameter(refer, "select");
+							if (select == null || (select != "2" && select != "1" && select != "3")) {
+								searchWord = "";
+							}
+							if (isNull(searchWord)) {
+								searchWord = getParameter(refer, "content");
+							}
+						}
+						return searchWord;
+					}
+				}
+			}
+		}
+
+		//判断字符串是否为空
+		function isNull(str) {
+			if (str == null) {
+				return true;
+			}
+			if (str == "") {
+				return true;
+			}
+			return false;
+		}		
+
+		//定义获取元素的简易方法
+		if(!$) {
+			function $(id){
+				return document.getElementById(id);
+			}
+		}
+
+		
+		//将字符串变为数组
+		function transStr2Array(str) {
+			if (str == null || str == "") {
+				return [];
+			}
+			str = replaceAll(str, "++", "+");
+			while (str.indexOf(0) == "+") {
+				str = str.substring(1);
+			}
+			while (str.indexOf(str.length) == "+") {
+				str = str.substr(0, str.length - 1);
+			}
+			return str.split("+");
+		}
+
+		//获取URL上的参数,get方法
+		function getParameter(requestURL, parameterName) {
+			var index = requestURL.indexOf(parameterName + "=");
+			if (index <= 0) {
+				return "";
+			}
+			var begin = index + parameterName.length + 1;
+			var end = requestURL.indexOf("&", begin);
+			if (end < begin) {
+				return requestURL.substring(begin);
+			}
+			return requestURL.substr(begin, end - begin);
+		}
+
+		//获取引用此js的域名
+		function getDomainName(requestURL) {
+			if (requestURL.indexOf("http://") == 0) {
+				var end = requestURL.indexOf("/", 7);
+				return requestURL.substr(7, end - 7);
+			}
+			return "";
+		}
+
+		//获取引用该js的页面名
+		function getUriName(requestURL) {
+			var index = requestURL.lastIndexOf("/");
+			if (index > 0) {
+				var end = requestURL.indexOf("?", index);
+				if (end > index) {
+					return requestURL.substr(index + 1, end - index - 1);
+				}
+				return requestURL.substring(index + 1);
+			}
+			return "";
+		}
+
+		//将字符串中的s1字串全部换成s2
+		function replaceAll(str, s1, s2) {
+			if (s1.length > 0 && str.indexOf(s1) != -1) {
+				if (s1.length == 1) {
+					return str.replace(new RegExp(s1, "g"), s2);
+				}
+				return str.replace(new RegExp(s1, "gm"), s2);
+			}
+			return str;
+		}
+
+		//去掉字符串量边的空格
+		function trim(str) {
+			while (str.charAt(0) == " ") {
+				str = str.substring(1);
+			}
+			while (str.charAt(str.length - 1) == " ") {
+				str = str.substring(0, str.length - 1);
+			}
+			return str;
+		}
+
+
+	//-->
+	</SCRIPT>
+    <SCRIPT language=JavaScript>
+	<!--
+		function chardouble(s) {
+
+			var searchWord = s;
+			if (isNull(searchWord)) {
+				return;
+			}
+			var array = transStr2Array(searchWord);
+			if (array.length == 0) {
+				return;
+			}
+			var element = getElementToDaub();
+			if (element == null || typeof (element) == "undefined") {
+				return;
+			}
+			daubElementAllstr(element, array);
+		}
+		
+		
+		//array为检索词的数组，ele为存储正文内容的元素
+		function daubElementAllstr(ele, array) {
+			if (array == null || array.length == 0) {
+				return;
+			}
+			var colors = getColorArray();
+			for (var i = 0; i < array.length; i++) {
+				daubElementstr(ele, array[i], colors[i % 5]);
+			}
+			ele.innerHTML = replaceAll(replaceAll(ele.innerHTML, "<tianjige>", ""), "</tianjige>", "");
+		}
+
+		//将文章正文中包含的某词语进行高亮显示。ele为存储正文内容的元素，word为要高亮显示的词语，color为高亮显示的颜色
+		function daubElementstr(ele, word, color) {
+			if (word == null || word == "") {
+				return;
+			}
+			var colorWord = "<font color=\"" + color + "\">" + word + "</font>";
+			var eles = ele.childNodes;
+			for (var i = 0; i < eles.length; i++) {
+				e = eles[i];
+				if (e.nodeType == 3) {
+					var reg = new RegExp("(" + word + ")", "gi");
+					var objResult = document.createElement("tianjige");
+					objResult.innerHTML = e.data.replace(reg, "<font style='display:none'>$1</font>");
+
+					ele.replaceChild(objResult, e);
+				} else {
+					if ((e.nodeType == 1)||(e.nodeType == 2)) {
+						daubElementstr(e, word, color);
+					}
+				}
+				
+			}
+		}
+	//-->
+	</SCRIPT>
+</head>
+
+<body>
+<div class="container" id="gkml">
+    <div class="header"><IMG SRC="../../images/logo.jpg" width="984"></div>
+    <div class="main">
+        <!--div class="rowOfCurrentPosition">
+            当前位置：文体综合类 &gt; 通知公告公示123
+        </div-->
+		<div class="headInfo" style="position:relative;">
+		<table border=0 cellspacing=0 cellpadding=0 style="width:90%;" id="headContainer">
+		<tbody>
+			<tr>
+				<td colspan="2">
+					<table border=0 cellspacing=0 cellpadding=0>
+						<tr>
+							<td width="50%"><B>索 引 号:</B>40000895X/</td>
+							<td>
+								<B>分类:</B>
+								<span id="lSubcat">综合政务&nbsp;;&nbsp;统计信息</span>
+							</td>
+						</tr>
+					</table>				
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table border=0 cellspacing=0 cellpadding=0>
+						<tr>
+							<td width="50%">
+								<B>发布机构:</B> 
+								<span>新疆局</span>							
+							</td>
+							<td>
+								<B>发文日期:</B>
+								<span>2021年08月02日</span>								
+							</td>
+						</tr>
+					</table>				
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<B>名　　称:</B> 
+					<span id="lTitle">新疆辖区证券期货市场概况（2021年7月）</span>
+		            
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table border=0 cellspacing=0 cellpadding=0>
+						<tr>
+							<td width="50%">
+								<B>文　　号:</B> 
+								<span>无</span>					           
+							</td>
+							<td>
+								<B>主 题 词:</B> 
+								<span></span>								
+							</td>
+						</tr>
+					</table>				
+				</td>
+			</tr>
+			<!--<tr>
+				<td colspan="2">
+				<b>内容提要:</b>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span></span>					
+				</td>
+			</tr>-->
+		</tbody>
+		</table>
+		</div>        
+	<OBJECT   id="WebBrowser"   classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"   height="0"   width="0"></OBJECT> 	
+        <div class="mainContainer" >
+			<div STYLE=" width:800px">
+				<p align="center"><br><font size="1" style="FONT-SIZE: 18pt; COLOR: red; FONT-FAMILY: 黑体"><strong>
+				<script>
+				var strssre="新疆辖区证券期货市场概况（2021年7月）";
+				if(strssre.length>32)
+				{
+					if(strssre.length<50)
+					{
+						document.writeln(strssre.substring(0,25)+"<br/>");
+						document.writeln(strssre.substring(25,strssre.length));
+					}
+					else if(strssre.length<67)
+					{
+						document.writeln(strssre.substring(0,25)+"<br/>");
+						document.writeln(strssre.substring(25,49)+"<br/>");
+						document.writeln(strssre.substring(49,strssre.length));
+					}
+					else
+					{
+						document.writeln(strssre.substring(0,25)+"<br/>");
+						document.writeln(strssre.substring(25,49)+"<br/>");
+						document.writeln(strssre.substring(49,70)+"<br/>");
+						document.writeln(strssre.substring(70,strssre.length));
+					}
+				}
+				else
+				{
+					document.writeln(strssre);
+				}
+				</script>
+				</strong></font><br/><br/><br/>
+				<!--
+				<font face="楷体_GB2312"></font><br>
+				--></p>
+			</div>
+			
+			<div class="content" id="ContentRegion">				
+				<A href="./W020210802437557967426.doc" OLDSRC=W020210802437557967426.doc>新疆辖区证券期货市场概况（2021年7月）.doc</A></br>
+			</div>
+
+			<div class="content">					
+						
+			</div>
+			
+			<div class="noprint" style="width:100%;overflow:hidden;border-bottom:1px solid gray;margin:8px 40px"></div>
+
+			<div class="noprint" style="text-align:center;margin:8px 0px">
+				<table style="font-size:12px">
+				 <!--<td>
+				  【字体：<a href="#" onclick="setSize('24px');" class="navy">大</a> <a href="#" onclick="setSize('16px');" class="navy">中</a> <a href="#" onclick="setSize('12px');" class="navy">小</a>】</td>
+				<td align="right" width="10"></td>-->
+				<td width="60">&nbsp;</td>
+				<td width="80"><a href="#" onclick="document.all.WebBrowser.ExecWB(4,1)"><img src="/pub/images/save.gif" border=0></a></td>
+				<td width="80"><a href="#" onclick="javascript:window.print()"><img src="/pub/images/openpage.gif" border=0></a></td>
+				<td width="80"><a href="#" onclick="window.close()"><img src="/pub/images/close.gif" border=0></a></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+        <div class="bottomLine"></div>
+    </div>
+    <div class="footer">
+        <div class="footerLine"></div>
+        <div><a href='../../../xinjiang/zjjjs/jgzn/200811/t20081115_88388.htm' target=_blank>关于我们</a>&nbsp;-&nbsp;<a href="/pub/newsite/fzlm/flsm/" target=_blank>法律声明</a>&nbsp;-&nbsp;<a href='../../../xinjiang/zjjjs/lxwm/200711/t20071101_88537.htm' target=_blank>联系我们</a></div>
+<div>版权所有：中国证券监督管理委员会     京ICP备 05035542号</div>
+             <div>建议使用IE5.5以上浏览器，分辨率1024*768</div>
+    </div>
+</div>
+</body>
+</html>
+<!--./t20210802_402673_ext.json-->

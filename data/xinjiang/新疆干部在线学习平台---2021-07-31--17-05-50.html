@@ -1,0 +1,827 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>新疆干部在线学习平台</title>
+		<link href="/css/students end.css" rel="stylesheet" type="text/css">
+		<link href="/css/index.css" rel="stylesheet" type="text/css">
+		<link href="/css/index_new.css" rel="stylesheet" type="text/css">
+	</link>
+	
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.raty.min.js"></script>
+<script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+<script>
+var xmlHttp;
+var couId;
+function selectCourse(id) {
+	couId = id;
+	$.post("/portal/user!checkIsLogin.action",function(data){
+		if(data=="1"){
+			$.post("/student/course!selectCourse.action?course.id=" + id,function(data2){
+				if(!isNaN(data2))
+				changeButton(data2);
+				else
+					alert(data2);
+			});
+		}
+		else{
+			$("#login_main").show();
+			$("#login_name").focus();
+			$.blockUI({ 
+				message: $('#login_main'),
+				css: {border:'#666666',width:'0px',height:'0px',top:'50%',left:'50%' } 
+				}); 
+		}
+	});
+}
+		function refreshImg()
+		{
+			document.getElementById("codeImg").src='/portal/index!imgcode.action?a='+new Date().getTime()
+		}
+		$(function (){
+			
+			$("#login_close").click(function(){
+			$.unblockUI({onUnblock: function(){ $("#login_main").hide();}});
+			});
+			$("#login_login").click(function(){
+				if($("#login_name").val()==""){
+					alert("请您输入用户名！");
+					$("#login_name").focus();
+				}else if($("#login_password").val()=="")
+					{
+						alert("请您输入密码！");
+						$("#login_password").focus();
+					}
+				else if($("#login_imgCode").val()=="")
+					{
+						alert("请输入验证码！");
+						$("#login_imgCode").focus();
+					}
+				else
+				$.post("j_security_check",{j_username:$("#login_name").val(),
+					j_password:$("#login_password").val(),
+					imgCode:$("#login_imgCode").val(),
+					j_uri:'/student/student.action'
+				},function(data1){
+					$.post("/portal/user!checkIsLogin.action",function(data2){
+					if(data2 == '1'){
+						alert("登录成功！");
+						
+						location.reload();
+					}else{
+						$("#codeImg").attr("src","/portal/index!imgcode.action?a="+new Date().getTime());
+						alert("登录失败，请验证您所输入的信息！");
+						}
+				})
+				});
+			});
+		})
+		function pressKey()
+				{
+					if(event.keyCode == 13&&$("#login_main").css("display")!='none')
+					$("#login_login").click();
+				}
+				document.onkeydown=pressKey;
+				
+				function filterUrl(url)
+				{
+					$("#urltemp").val( url);
+					var result = false;
+					$.post("/portal/user!checkIsLogin.action",function(data){
+						if(data=="1"){
+								location.href=url;
+						}else
+							{
+							$("#login_main").show();
+							$("#login_name").focus();
+							//refreshFloatImg();
+							$.blockUI({ 
+								message: $('#login_main'),
+								css: {border:'#666666',width:'0px',height:'0px',top:'50%',left:'50%' } 
+								}); 
+							}
+					});
+					return false;
+				}
+</script>
+<input type="hidden" id="urltemp"/>
+<div id="login_main" style="display:none;width:315px;height:200px;z-index: 99999;position:fixed;margin:-100px 0 0 -160px;top: 50%;left:50%;background-color: #fff;border:1px #c5e1f6 solid;">
+		<div style="background-color: #E4F3FA;width:313px;height:25px;border:1px #fff solid;">
+			<div style="float:left;width:260px;line-height:25px;background: url('/images/dl_icon.gif') no-repeat 2px 50%;padding-left:30px;"><p style="font-size:14px;font-weight:bold;color:#003366;text-align:left;">请您登录</p></div>
+			<div id="login_close" style="float:left;width:20px;height:20px;border:1px #C4C4C4 solid;line-height:19px;margin-top:1px;text-align:center;cursor:pointer;">×</div>
+		</div>
+		<div style="width:315px;">
+			<div style="margin-left:35px;margin-top:10px;font-size: 14px;">
+				用户名：	<input type="text" id="login_name" style="border:1px #c4c4c4 solid;height:22px;width:150px;"/>
+			</div>
+			<div style="margin-left:35px;margin-top:10px;font-size: 14px;">
+				密　码：	<input type="password" id="login_password" style="border:1px #c4c4c4 solid;height:22px;width:150px;"/>
+			</div>
+			<div style="margin-left:30px;margin-top:10px;font-size: 14px;">
+				验证码：	<input type="text" id="login_imgCode" style="border:1px #c4c4c4 solid;height:22px;width:80px;"/>
+				<img width="55px" height="22px" style="cursor: pointer; margin-left: 5px;padding-top:2px;height:22px;"
+						 id="codeImg" title="点击刷新" onclick="refreshImg();" /> <script>refreshImg();</script>
+			</div>
+			<div style="text-align:center;margin-top:20px;">
+				<img id="login_login" src="/images/dl_bottom.gif" style="cursor:pointer;"/>&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+		</div>
+	</div>
+
+		<script>var isclick = 0;
+		function changeButton(userCourseId){
+			var contentHtml="<p class='selectedCourse'>已选此课</p><p class='noSelectedCourse'><a href='javascript:;' onclick='videoList("+userCourseId+");'>我要学习</a></p><span class='jindu'>"+
+						"<span class='time' style='width:0px;' ></span></span>"+
+						"<span class='jindu_bfs'>0.0%</span>";
+					 	document.getElementById("course"+couId).innerHTML=contentHtml;
+		}
+		function subjectYear(obj){
+			if(obj!=""){
+				window.location.href="/portal/index!subjectList.action?year="+obj;
+			}
+		}
+		</script><style>
+		.star{font-family: Tahoma;}
+		.star img{display: inline;}
+	</style>
+	</head>
+	<body>
+	
+<script language="JavaScript"> 
+        var userCourseId;
+        function videoList(id,time){
+            if(time=="early"){
+                alert("学习班尚未开始,无法开始学习");
+                return false;
+            }
+            if(time=="late"){
+                alert("学习班已经结束,无法继续学习");
+                return false;
+            }
+            userCourseId = id;
+            
+            $.ajax(
+            {
+                url: "/portal/user!checkIsLogin.action",
+                success: function (data)
+                {
+                    if (data == "1")
+                    {
+                        $.ajax(
+                        {
+                            url: "/student/course!ajaxVideoList.action?userCourse.id=" + userCourseId,
+                            success: function(data){
+                            /*if (data == 1)
+                                open("/student/course!playNew.action?userCourse.id=" + userCourseId + "&index=0&random=" + Math.random(), "course_play");
+                            else if (data == -1){
+                                //SCORM
+                                open("/student/course!scormList.action?userCourse.id=" + userCourseId + "&random=" + Math.random(), "course_play");
+                            }
+                            else {
+                                showVideoList(data);
+                            }*/
+                            	open("/portal/study!play.action?id="+userCourseId,"course_play");
+                            
+                         },
+                            async: false,
+                            dataType: 'text'
+                        }
+                        );
+                    }
+                    else
+                    {
+                        alert("您与服务器的连接已过期，请重新登录！");
+                        window.location = "/login.jsp";
+                    }
+                },
+                async: false,
+                dataType: 'text'
+            }
+            );
+        }
+      /*  function showVideoList(count){
+            $("#videoList").show();
+            $("#videos").empty();
+            if (count == 2)
+            {
+                $("#videos").append("<a class='a_02' href='javascript:playVideo(0)'>上&nbsp;&nbsp;&nbsp;&nbsp;讲</a>");
+                $("#videos").append("<a class='a_02' href='javascript:playVideo(1)'>下&nbsp;&nbsp;&nbsp;&nbsp;讲</a>");
+            }
+            if (count == 3)
+            {
+                $("#videos").append("<a class='a_01' href='javascript:playVideo(0)'>上&nbsp;&nbsp;&nbsp;讲</a>");
+                $("#videos").append("<a class='a_01' href='javascript:playVideo(1)'>中&nbsp;&nbsp;&nbsp;讲</a>");
+                $("#videos").append("<a class='a_01' href='javascript:playVideo(2)'>下&nbsp;&nbsp;&nbsp;讲</a>");
+            }
+
+            
+            for(var i=1;i<=count;i++){
+                $("#videos").append("<a href=\"javascript:playVideo("+(i-1)+")\">第"+i+"讲</a>");
+                if(i!=1&&i%4==0)
+                    $("#videos").append("<br/>");
+                else if(i%4!=0)
+                    $("#videos").append("&nbsp;&nbsp;&nbsp;");
+            }
+            
+        }
+        function playVideo(index){
+            $("#videoList").hide();
+            open("/student/course!playNew.action?userCourse.id=" + userCourseId + "&index=" + index + "&random=" + Math.random(), "course_play");
+        }
+        function cancelPlay(){
+            $("#videoList").hide();
+        }*/
+</script>
+
+<style>
+    .main{ width:362px; position:fixed;_position:absolute; top: 50%;left:50%;margin-left:-125px; margin-top: -50px; display: none; text-align: center;}
+    .close{background-image:url('/images/admin/list_false_icon.gif');_background-repeat:no-repeat; float:right;width:17px;height:17px; text-align:center;cursor:pointer;}
+    .broadcast{width: 210px;background-color: white;text-align:left;vertical-align: text-bottom;line-height: 150%;margin-top: 10px;margin-bottom: 10px;}
+    .main_top{width:342px ;height:76px; background:url('/images/dlk_top.gif')  no-repeat;text-align: left;  padding:13px 20px 0px 0px;}
+    .main_mid{ background:url('/images/dlk_mid.gif') repeat-y; width:399px; height:34px; margin:0px; margin-top:-1px; padding:0px 8px; text-align:center;}
+    .main_mid_02{ background:url('/images/dlk_mid.gif') repeat-y; width:346px; height:34px; margin:0px; margin-top:-1px; padding:0px 8px; text-align:center;}
+    
+    .a_01{ background:url('/images/anliu_bg.gif')  no-repeat; display:block; width:115px; height:34px; line-height:34px; color:#fff; font-weight:bold; font-size:14px; float:left;}
+    .a_01:hover{ color:#fff; text-decoration:none; height:34px; background:url('/images/anliu_bg.gif')  no-repeat;}
+    .a_01:visited{ color:#fff; text-decoration:none; height:34px; background:url('/images/anliu_bg.gif')  no-repeat;}
+    
+    .a_02{ background:url('/images/anliu_bg_02.gif')  no-repeat; display:block; width:133px; height:34px; line-height:34px; color:#fff; font-weight:bold; font-size:14px; float:left; margin-left:29px;}
+    .a_02:hover{ color:#fff; text-decoration:none; height:34px; background:url('/images/anliu_bg_02.gif')  no-repeat;}
+    .a_02:visited{ color:#fff; text-decoration:none; height:34px; background:url('/images/anliu_bg_02.gif')  no-repeat;}
+    
+    .main_bottom{ background:url('/images/dlk_bottom.gif') no-repeat; width：362px; height:60px;}
+</style>
+
+    <div id="videoList" class="main" style="" >
+        <div class="main_top" style="">
+            <div onclick="cancelPlay();" title="关闭" class="close" style="">&nbsp;</div>
+            <h5 style=" text-indent:-99999px;">课程播放</h5>
+        </div>
+        <div id="videos" class="broadcast main_mid main_mid_02"></div>
+        <div class="main_bottom"></div>
+    </div>
+	 <div style="width:1000px; background: #FFF; margin:0 auto ; ">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--头部-->
+    <div id="header">
+        <!--头部信息-->
+        <div class="header_info auto">
+            <div class="header_time"> </div>
+            <ul class="header_tel">
+                <li>新疆干部网络学院电话: 0991-2658300</li>
+                <li>&nbsp; | &nbsp;</li>
+                <li>新疆干部网络学院邮箱: dxwljypxk@126.com</li>
+                <div style="clear: both;"></div>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
+        <!--banner-->
+        <div class="banner"></div>
+        <!--导航-->
+        <div class="nav">
+            <ul>
+                <li><a class="" href="/portal/index!index.action?menu=1" >网站首页</a><b></b></li>
+                <li><a class=""  href="/student/student!index.action?menu=2">学习中心</a><b></b></li>
+                <li><a class=""  href="/portal/index!recommendList.action?type=1&menu=3">课程中心</a><b></b></li>
+                <li><a class=""  href="/portal/index!subjectList.action?menu=4">最新专题</a><b></b></li>
+                <li><a class=""  href="/student/course!subjectList.action?category.id=121&sonId=121&menu=5">微课程</a><b></b></li>
+                <li><a class=""  href="/portal/info!aboutus.action?menu=6">关于我们</a></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+
+
+
+<div id="main">
+
+<div id="conterlist_right">
+   <div class="conterlist_bg">
+  	 <div class="fa_icon"><img src="/images/new_icon.gif" width="28" height="23" /></div>
+     <div class="fa_font">最新专题</div>
+   </div>
+   <div class="title_font"><span style="float: left;">您所在的位置：首页 &gt;&gt; 最新专题</span>
+  <div style="clear: both;"></div></div>
+   <div class="xian"></div>
+   <div class="content">
+<table cellpadding="0" cellspacing="0" class="centerTable" style="width: 983px;" >
+
+				<tr>
+					<th rowspan="2" style="width: 183px;border-bottom: 1px dashed #c6e1f4;"><div class="tupian">
+					<img style="margin-left: 20px;" title="坚持和完善中国特色社会主义行政体制" src="http://www.xjgbzx.cn:8080/subject_image/645.png" 
+						        		onerror="this.src='/images/subject_default.png'" />
+	      		 	</div>
+					</th>
+					<td style="width: 3000px;height: 37px;">
+					<br/>
+					<span style="font-size: 18px;color: #30658d;font-weight: bold;">专题名称：坚持和完善中国特色社会主义行政体制
+					<font style="font-weight: normal;">(2021)</font></span>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: left;height: 133px; padding-right: 10px; line-height: 200%;">
+						<div>中国特色社会主义行政体制是中国特色社会主义制度的重要组成部分，是党和国家决策部署贯彻落实的重要保障。各级党政领导干部必须要坚持以习近平新时代中国特色社会主义思想为指导，深刻认识和准确把握坚持和完善中国特色社会主义行政体制的重大意义，统一思想、统一行动、锐意改革，确保把十九届四中全会提出的“坚持和完善中国特色社会主义行政体制，构建职责明确、依法行政的政府治理体系”的各项目标任务落到实处，为决胜全面建成小康社会、加快推进国家治理体系和治理能力现代化而努力奋斗。</div>
+					</td>
+				</tr>
+				 <tr>
+					<td colspan="2" style="border-bottom: 1px solid;padding-right: 8px;">
+						<span class="rightSpan_09">
+						<a id="619"  href="/portal/index!subjectList.action?id=619&year=2021&show=1#619">课程列表（点击收起)）</a>
+						</span>
+						<div>
+						创建时间：2021-03-05 &nbsp;
+						课程数量：<span class="number">9 门</span> &nbsp;
+				    	 总课时数：<span class="number">8.5 课时</span>
+						</div>
+				    </td>
+				</tr>
+				
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3814">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066011logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3814"><b>正确处理中央与地方政府关系（上）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>井敏</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">1077</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3814">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3814);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3814" class="star" ></div>
+                	</div>
+                	<script>$('#3814').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：9','课程评分：5.0；参与评级人数：9','课程评分：5.0；参与评级人数：9','课程评分：5.0；参与评级人数：9','课程评分：5.0；参与评级人数：9']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3815">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066021logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3815"><b>正确处理中央与地方政府关系（下）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>井敏</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">755</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3815">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3815);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3815" class="star" ></div>
+                	</div>
+                	<script>$('#3815').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3816">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066041logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3816"><b>深化党和国家机构改革的成效与经验（上）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>张克</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">673</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3816">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3816);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3816" class="star" ></div>
+                	</div>
+                	<script>$('#3816').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4','课程评分：5.0；参与评级人数：4']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3817">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066051logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3817"><b>深化党和国家机构改革的成效与经验（中）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>张克</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">590</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3817">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3817);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3817" class="star" ></div>
+                	</div>
+                	<script>$('#3817').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：3','课程评分：5.0；参与评级人数：3','课程评分：5.0；参与评级人数：3','课程评分：5.0；参与评级人数：3','课程评分：5.0；参与评级人数：3']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3818">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066061logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3818"><b>深化党和国家机构改革的成效与经验（下）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>张克</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">0.5</span>
+								<span style="margin-left:28px;">学分：<span class="number">0.5</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">644</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3818">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3818);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3818" class="star" ></div>
+                	</div>
+                	<script>$('#3818').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：6','课程评分：5.0；参与评级人数：6','课程评分：5.0；参与评级人数：6','课程评分：5.0；参与评级人数：6','课程评分：5.0；参与评级人数：6']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3819">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066091logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3819"><b>深化行政体制改革  构建职责明确  依法行政的政府治理体系（上）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>宋世明</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">521</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副主任、教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3819">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3819);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3819" class="star" ></div>
+                	</div>
+                	<script>$('#3819').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：2','课程评分：5.0；参与评级人数：2','课程评分：5.0；参与评级人数：2','课程评分：5.0；参与评级人数：2','课程评分：5.0；参与评级人数：2']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=3820">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066111logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=3820"><b>深化行政体制改革  构建职责明确 依法行政的政府治理体系（下）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>宋世明</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">495</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部副主任、教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course3820">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(3820);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-03-05</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="3820" class="star" ></div>
+                	</div>
+                	<script>$('#3820').raty({start:5.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：5.0；参与评级人数：1','课程评分：5.0；参与评级人数：1','课程评分：5.0；参与评级人数：1','课程评分：5.0；参与评级人数：1','课程评分：5.0；参与评级人数：1']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=4427">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066071logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=4427"><b>深入推进“放管服”改革 持续改善营商环境（上）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>刘小康</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">343</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course4427">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(4427);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-07-01</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="4427" class="star" ></div>
+                	</div>
+                	<script>$('#4427').raty({start:4.3,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：4.3；参与评级人数：7','课程评分：4.3；参与评级人数：7','课程评分：4.3；参与评级人数：7','课程评分：4.3；参与评级人数：7','课程评分：4.3；参与评级人数：7']});</script>
+                            </td>
+		                </tr>  
+                
+						<tr>
+							<th width="129" rowspan="3"><div class="tupian">
+							<a href="/portal/index!courseDetail.action?course.id=4428">
+							<img src="http://www.xjgbzx.cn:8080/course_image/a42066081logo.png" 
+			      		 	onerror="this.src='/images/course_default.jpg'" width="224px"/>
+			      		 	</a>
+			      		 	</div>
+							</th>
+							<td>
+							<a href="/portal/index!courseDetail.action?course.id=4428"><b>深入推进“放管服”改革 持续改善营商环境（下）</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span style="float:left;">主<span style="margin-left:7px;">讲</span><span style="margin-left:7px;">人：</span>刘小康</span>
+						    <span class="rightSpan rightSpan_04">
+								学时：<span class="number">1.0</span>
+								<span style="margin-left:28px;">学分：<span class="number">1.0</span></span>
+								<span style="margin-left:28px;">选课人次：<span class="number">111</span></span>
+							</span>
+							</td>
+						</tr>
+		                <tr>
+							<td><span style="float:right;width: 710px;">中共中央党校（国家行政学院）公共管理教研部教授</span>职务职称：
+						    </td>
+						</tr>
+		                
+		                <tr>
+		                    <td colspan="2" style="background:#fff; border-bottom:1px solid #c4e0ec;">
+		                	<span id="course4428">
+		                	
+		                	
+		                		 <p class="noSelectedCourse">
+		                		 <a href="javascript:selectCourse(4428);">
+		                		 我要选课</a></p>
+		                	
+		                	</span>
+		                	<P class="time_01">上传时间：<span class="number" style="color:#555;">2021-07-01</span></P>
+                            <div class="time_01" style="width:200px;height:30px;float:right;">
+                		<div style="height:30px;width:70px;float:left;">课程评分：</div>
+	                	<div id="4428" class="star" ></div>
+                	</div>
+                	<script>$('#4428').raty({start:4.0,path:'/img/',readOnly:true,showHalf:true,hintList:['课程评分：4.0；参与评级人数：5','课程评分：4.0；参与评级人数：5','课程评分：4.0；参与评级人数：5','课程评分：4.0；参与评级人数：5','课程评分：4.0；参与评级人数：5']});</script>
+                            </td>
+		                </tr>  
+                  
+                
+                <td colspan="2">
+                	 <div><script>
+<!--
+  function _gotoPage(page, size)
+  {
+    document.pagerForm.action = window.location.pathname;
+    document.pagerForm.currentPage.value = page;
+    document.pagerForm.pageSize.value = size;
+    document.pagerForm.submit();
+    return false;
+  }
+  function _pagerFormSubmit(form)
+  {
+    form.action = window.location.pathname;
+    return true;
+  }
+  function _pageChange(form)
+  {
+    form.action = window.location.pathname;
+    form.submit();
+  }
+//-->
+</script>
+<div class='pager'><span>[当前页&nbsp;9&nbsp;行&nbsp;|&nbsp;共&nbsp;9&nbsp;行&nbsp;|&nbsp;第&nbsp;1&nbsp;页&nbsp;|&nbsp;共&nbsp;1&nbsp;页]</span><a href="#" onclick="return _gotoPage(1, 10)">首页</a><a href="#" onclick="return _gotoPage(1, 10)">上页</a><a href="#" onclick="return _gotoPage(1, 10)">下页</a><a href="#" onclick="return _gotoPage(1, 10)">尾页</a><span class="select"><form name="pagerForm" method="post" onsubmit="return _pagerFormSubmit(this)"><input type="hidden" name="id" value="619"/><input type="hidden" name="year" value="2021"/><input type="hidden" name="show" value="1"/><input type="hidden" name="rowCount" value="9"/>转到 <select name="currentPage" onchange="_pageChange(this.form)"><option value="1" selected>1</option></select> 页 | 每页 <input name="pageSize" value="10" style="width: 20px;"/> 行</form></span><div class="clear"></div></div></div>
+                </td> 
+                
+
+    </table>
+
+   </div>
+  </div>
+  </div>
+</div>
+	</body>
+</html>

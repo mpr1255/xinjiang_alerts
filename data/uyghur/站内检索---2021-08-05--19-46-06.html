@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	站内检索
+</title>
+    <style type="text/css">
+        DIV
+        {
+            color: #000;
+        }
+        TD
+        {
+            color: #000;
+        }
+        .f
+        {
+            color: #6f6f6f;
+        }
+        .flc
+        {
+            color: #77c;
+        }
+        .fl:link
+        {
+            color: #77c;
+        }
+        A:link
+        {
+            color: #00c;
+        }
+        .searchbox
+        {
+            border: 0px solid #FFFFFF;
+            height: 19px;
+        }
+        .w
+        {
+            color: #00c;
+        }
+        A.w:link
+        {
+            color: #00c;
+        }
+        .w A:link
+        {
+            color: #00c;
+        }
+        .q:visited
+        {
+            color: #00c;
+        }
+        .q:link
+        {
+            color: #00c;
+        }
+        .q:active
+        {
+            color: #00c;
+        }
+        .q
+        {
+            color: #00c;
+        }
+        A:visited
+        {
+            color: #551a8b;
+        }
+        .fl:visited
+        {
+            color: #551a8b;
+        }
+        A:active
+        {
+            color: red;
+        }
+        .fl:active
+        {
+            color: red;
+        }
+        .t
+        {
+            background: #e5ecf9;
+            color: #000;
+        }
+        .bb
+        {
+            border-bottom: #36c 1px solid;
+        }
+        .bt
+        {
+            border-top: #36c 1px solid;
+        }
+        .j
+        {
+            width: 60em;
+        }
+        .h
+        {
+            color: #36c;
+        }
+        .i
+        {
+            color: #a90a08;
+        }
+        .i:link
+        {
+            color: #a90a08;
+        }
+        .a
+        {
+            color: green;
+        }
+        .a:link
+        {
+            color: green;
+        }
+        .z
+        {
+            display: none;
+        }
+        DIV.n
+        {
+            margin-top: 1ex;
+        }
+        .n A
+        {
+            font-size: 10pt;
+            color: #000;
+        }
+        .n .i
+        {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .b A
+        {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #00c;
+        }
+        #np
+        {
+            cursor: hand;
+        }
+        #nn
+        {
+            cursor: hand;
+        }
+        .nr
+        {
+            cursor: hand;
+        }
+        .ch
+        {
+            cursor: hand;
+        }
+        .tas
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .taf
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        .tam
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        .tal
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 6px;
+        }
+        .sl
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .r
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .sl
+        {
+            font-size: 84%;
+        }
+        .r
+        {
+            font-size: 1em;
+        }
+        .e
+        {
+            margin: 0.75em 0px;
+        }
+        .sm
+        {
+            display: block;
+            margin: 0px 0px 0px 40px;
+        }
+        BODY
+        {
+            font-family: arial,Simsun;
+        }
+        TD
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            font-family: arial,Simsun;
+        }
+        .p
+        {
+            font-family: arial,Simsun;
+        }
+        A
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            line-height: 120%;
+        }
+        DIV .j
+        {
+            line-height: 120%;
+        }
+        .g
+        {
+            margin: 1em 0px 1.2em;
+        }
+        .hc
+        {
+            width: 31.5em;
+        }
+        .ch B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .ra B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .Mr
+        {
+            color: #FF0000;
+        }
+    </style>
+    <style type="text/css">
+        a
+        {
+            font-size: 12px;
+            color: #333333;
+        }
+        a:active
+        {
+            text-decoration: none;
+        }
+        .1
+        {
+            width: 160px;
+            height: 20px;
+        }
+        a.bottom:link
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FBF3DC;
+        }
+        a.bottom:hover
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FCC352;
+        }
+        a.bottom:visited
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FFFF99;
+        }
+        .g .r a{font-size:18px;}
+        .g .j{  font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+         #trCompute a{font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        function JumpAdvanceSearch() {
+            window.open("AdvanceSearch.aspx?" + document.getElementById("hidQuery").value, "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <form method="post" action="FullSearch.aspx?SiteId=27&amp;Keyword=%u65b0%u7586&amp;PageNo=1889&amp;QueryField=3&amp;SortField=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTM2NDk0NjEwD2QWAgIDD2QWIAILDw8WAh4EVGV4dAUFMTk2OTZkZAINDw8WAh8ABR4gPGZvbnQgY29sb3I9cmVkPuaWsOeWhjwvZm9udD5kZAIRDw8WBB4LTmF2aWdhdGVVcmwFeGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JWIwJWU3JTk2JTg2JlBhZ2VObz0xJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4HRW5hYmxlZGdkZAITDw8WBB8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiViMCVlNyU5NiU4NiZQYWdlTm89MTg4OCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfAmdkZAIVDw8WCh8ABQQxODg5HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JWIwJWU3JTk2JTg2JlBhZ2VObz0xODg5JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4JRm9yZUNvbG9yCo0BHgRfIVNCAgQeB1Zpc2libGVnZGQCFw8PFgYfAAUEMTg5MB8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiViMCVlNyU5NiU4NiZQYWdlTm89MTg5MCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIZDw8WBh8ABQQxODkxHwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JWIwJWU3JTk2JTg2JlBhZ2VObz0xODkxJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAhsPDxYGHwAFBDE4OTIfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlYjAlZTclOTYlODYmUGFnZU5vPTE4OTImUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCHQ8PFgYfAAUEMTg5Mx8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiViMCVlNyU5NiU4NiZQYWdlTm89MTg5MyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIfDw8WBh8ABQQxODk0HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JWIwJWU3JTk2JTg2JlBhZ2VObz0xODk0JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAiEPDxYGHwAFBDE4OTUfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlYjAlZTclOTYlODYmUGFnZU5vPTE4OTUmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCIw8PFgYfAAUEMTg5Nh8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiViMCVlNyU5NiU4NiZQYWdlTm89MTg5NiZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIlDw8WBh8ABQQxODk3HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JWIwJWU3JTk2JTg2JlBhZ2VObz0xODk3JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAicPDxYGHwAFBDE4OTgfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlYjAlZTclOTYlODYmUGFnZU5vPTE4OTgmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCKQ8PFgQfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlYjAlZTclOTYlODYmUGFnZU5vPTE4OTAmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGQCKw8PFgQfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlYjAlZTclOTYlODYmUGFnZU5vPTE5NzAmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGRkSJBNi/BmVnjnG53qrF0OAQism2dwDYr6NcTvgY9nLzc=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAx9WVXmWvo4aLNzaiQkYpqzBfapguS6OYFwN7hoQk5FPY7U3Vc0WZ+wxclqyPFfzmMCJZdlK8PLGDZvIjLJBLXGeSDZffPU0hFAKnEmzfh3x53FcYOclBw3UTwJVQax76MmtUJi3+MWfwaBAw7HqU2JwaUEp3InSK9AB278Tq9IDzepBcYhtRyFps3T+OZtnpKvezL7DuaO56QOfNpuhOs9VoKHcvorhwSiEzlw0J0QLmQGKK0Mq9iqzmrIy3kZFe+3xG4DZaB1lchqCKTxc/AbJItHQPi66Y5s6sOhrbD13w==" />
+    <table width="800" border="0" cellspacing="5" cellpadding="0" align="center">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="10" style="width: 100%">
+                    <tr>
+                        <td style="width:80%">
+                            <input name="txtKeyWord" type="text" value="新疆" id="txtKeyWord" />
+                        </td>
+                        <td>
+                            <input type="submit" name="btnSearch" value="开始搜索" id="btnSearch" />
+                            <input type="button" onclick="JumpAdvanceSearch();" value="高级检索" style="display: none" />
+                        </td>
+                    </tr>
+                </table>               
+                
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="10">
+                    <tr>
+                        <td style="width: 100px">
+                            检索字段：
+                        </td>
+                        <td>
+                            <select name="ddlField" id="ddlField">
+	<option value="1">仅检索标题</option>
+	<option value="2">仅检索正文</option>
+	<option selected="selected" value="3">标题和正文</option>
+
+</select>
+                        </td>
+                        <td>
+                            排序方法：
+                        </td>
+                        <td>
+                            <select name="ddlSort" id="ddlSort">
+	<option value="3">按照发布时间</option>
+	<option value="2">按照相关度</option>
+
+</select>
+                            <!--<asp:ListItem Value="1">按照创建时间</asp:ListItem>-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="t bt" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <font size="+1">&nbsp;<b><span id="lblType"></span></b></font>&nbsp;
+                            </td>
+                            <td nowrap="nowrap" align="right">
+                                <font size="-1">有&nbsp;<span id="lblRecord">19696</span>项&nbsp;符合&nbsp;<span id="lblKeyWord"> <font color=red>新疆</font></span>&nbsp;的查询结果</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/dfbd/dfbd/Document/379607/379607.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    <font color=red>新疆</font>新闻办公室：“7·5”事件确定156名无辜群众死亡
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+            8月5日下午，<font color=red>新疆</font>维吾尔自治区人民政府新闻办公室负责人就乌鲁木齐“7·5”事件相关问题接受新华社记者专访。
+               谈到乌鲁木齐“7·5”事件最新伤亡人数及民族构成，这位负责人说，到目前为止，乌鲁木齐“7·5”事件已经造成1700多人受伤、197人死亡。其中，无辜死亡的156人(汉族134人、回族11人、维吾尔族10人、满族1人)；在其他死亡人员中，...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/dfbd/dfbd/Document/379607/379607.htm
+                                                -
+                                                1.73K 
+                                                -
+                                                2009-08-06 08:19:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/hzjl/zxbd/wz/Document/377927/377927.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    松雁群参赞代表使馆向埃塞文化旅游部捐赠办公设备
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+            为感谢埃塞俄比亚文化旅游部对使馆文化工作的大力支持，配合文化旅游部能力建设工作，增进两国人民友谊，松雁群参赞于8月3日上午代表中国驻埃塞俄比亚使馆向埃塞文化旅游部、埃国家剧院、国家博物馆捐赠了电脑、电视机、打印机等办公设备，埃文化旅游部国务部长马哈姆德·加斯先生代表埃塞文化旅游部出席了捐赠仪式。 
+            
+            松参赞与马哈姆德国务部长...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/hzjl/zxbd/wz/Document/377927/377927.htm
+                                                -
+                                                1.92K 
+                                                -
+                                                2009-08-04 16:15:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/zggk/gqbg/2009/Document/377042/377042.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    中国少数民族地区经济增长率高于全国平均水平
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+            国家民委副主任吴仕民7月21日在国新办举行的发布会上说，改革开放30年来，中国少数民族地区经济增长率高于全国平均水平。民族地区社会固定资产投资从1978年的76亿元增加到2008年的1.8万亿元；经济总量由324亿元增加到30626亿元。
+            吴仕民表示，在当代中国，民族问题主要表现为民族地区和少数民族要求加快发展经济文化。改革开放以来，中国更加重视加...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/zggk/gqbg/2009/Document/377042/377042.htm
+                                                -
+                                                1.08K 
+                                                -
+                                                2009-08-04 08:42:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376604/376604.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开王晨强调坚持及时准确公开透明方针加强舆论引导 中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上讲话中央对外宣传办公室、国务院新闻办公室和<font color=red>新疆</font>维吾尔自治区党委宣传部、政府新闻办7月31日在乌鲁木齐联合举办“7·5”事件对外舆论工作座谈会。中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上指出，乌鲁木齐“7·5”事件发生后，在党中央、国务...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376604/376604.htm
+                                                -
+                                                2.93K 
+                                                -
+                                                2009-07-31 21:00:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376602/376602.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    王晨主任一行走访慰问新华社<font color=red>新疆</font>分社
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                               7月31日，中宣部副部长、国务院新闻办公室主任王晨（右一）在新华社<font color=red>新疆</font>分社社长、党组书记樊英利（右二）、<font color=red>新疆</font>分社总编辑徐军峰（左二）陪同下参观新华社<font color=red>新疆</font>分社电视采访室。
+          当日，中宣部副部长、国务院新闻办公室主任王晨在自治区党委有关领导的陪同下走访慰问新华社<font color=red>新疆</font>分社。王晨副部长一行参观了<font color=red>新疆</font>分社电视采访室、总编室等部门，并与记者们亲切交谈。
+             7月3...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376602/376602.htm
+                                                -
+                                                1.75K 
+                                                -
+                                                2009-07-31 21:37:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376601/376601.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    王晨主任一行走访慰问人民日报<font color=red>新疆</font>分社
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            王晨同志与本报前方报道组记者座谈7月31日上午，中宣部副部长、国务院新闻办主任王晨同志会同<font color=red>新疆</font>自治区党委常委、宣传部长李屹、自治区新闻办主任侯汉敏来到人民日报<font color=red>新疆</font>分社。王晨同志听取了前方报道组总指挥王慧敏、副总指挥戴岚及记者们的汇报，并仔细察看了前方报道组7月8日凌晨被暴徒砸坏的车辆和插进车辆的砍刀。王晨同志察看本报前方报道组被砸的车辆王晨同志仔细察看插入前方报道组车内的砍刀
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/wangchen/tpbd/Document/376601/376601.htm
+                                                -
+                                                1.97K 
+                                                -
+                                                2009-07-31 22:19:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/wgq/tpbd/Document/376600/376600.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    王国庆副主任会见土耳其新闻代表团一行
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            国新办副主任王国庆会见土耳其新闻代表团一行（国新办姜宝明摄影）
+            7月31日，国务院新闻办公室副主任王国庆在本办会见了土耳其新闻代表团一行。
+            王国庆副主任对土耳其新闻代表团的来访表示欢迎。他说，土耳其新闻代表团在短短几天里访问了<font color=red>新疆</font>、内蒙，这对了解中国是有帮助的，特别是在乌鲁木齐市发生“7·5”严重打砸抢烧暴力恐怖事件后，土耳其国内出现了一些不利于中土...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/wgq/tpbd/Document/376600/376600.htm
+                                                -
+                                                1.78K 
+                                                -
+                                                2009-07-31 17:37:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/wangchen/hd/Document/376511/376511.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开王晨强调坚持及时准确公开透明方针加强舆论引导 中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上讲话中央对外宣传办公室、国务院新闻办公室和<font color=red>新疆</font>维吾尔自治区党委宣传部、政府新闻办7月31日在乌鲁木齐联合举办“7·5”事件对外舆论工作座谈会。中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上指出，乌鲁木齐“7·5”事件发生后，在党中央、国务...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/wangchen/hd/Document/376511/376511.htm
+                                                -
+                                                2.93K 
+                                                -
+                                                2009-07-31 21:00:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/tp13511/xwfb/Document/376317/376317.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    国新办就中国民族和宗教政策举行集体采访
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新闻发布会现场（摄影　郭研）主持人 胡凯红: 
+            女士们、先生们，下午好！欢迎大家参加今天的集体采访活动，最近一段时期，一些记者朋友表示希望更多地了解中国的民族和宗教的政策。为此，今天我们请到了中国伊斯兰教协会副会长、中国伊斯兰教经学院常务副院长阿地里江·阿吉克力木先生，中央民族大学民族学与社会学学院院长杨圣敏先生，向大家介绍这方面情况。阿地里江先生和杨圣敏先生的简历大家都拿...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/tp13511/xwfb/Document/376317/376317.htm
+                                                -
+                                                11.54K 
+                                                -
+                                                2009-07-17 08:38:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/tp13511/ldhd/Document/376115/376115.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            乌鲁木齐“7·5”事件对外舆论工作座谈会在<font color=red>新疆</font>召开王晨强调坚持及时准确公开透明方针加强舆论引导 中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上讲话中央对外宣传办公室、国务院新闻办公室和<font color=red>新疆</font>维吾尔自治区党委宣传部、政府新闻办7月31日在乌鲁木齐联合举办“7·5”事件对外舆论工作座谈会。中宣部副部长、中央外宣办、国务院新闻办主任王晨在座谈会上指出，乌鲁木齐“7·5”事件发生后，在党中央、国务...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/tp13511/ldhd/Document/376115/376115.htm
+                                                -
+                                                2.71K 
+                                                -
+                                                2009-07-31 21:00:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr id="trCompute">
+                                    <td>
+                                        <a id="linkFirst" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1&amp;QueryField=3&amp;SortField=1">首页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkLast" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1888&amp;QueryField=3&amp;SortField=1">上一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="link1" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1889&amp;QueryField=3&amp;SortField=1"><font color="Red">1889</font></a>
+                                    </td>
+                                    <td>
+                                        <a id="link2" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1890&amp;QueryField=3&amp;SortField=1">1890</a>
+                                    </td>
+                                    <td>
+                                        <a id="link3" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1891&amp;QueryField=3&amp;SortField=1">1891</a>
+                                    </td>
+                                    <td>
+                                        <a id="link4" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1892&amp;QueryField=3&amp;SortField=1">1892</a>
+                                    </td>
+                                    <td style="width: 9px">
+                                        <a id="link5" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1893&amp;QueryField=3&amp;SortField=1">1893</a>
+                                    </td>
+                                    <td>
+                                        <a id="link6" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1894&amp;QueryField=3&amp;SortField=1">1894</a>
+                                    </td>
+                                    <td>
+                                        <a id="link7" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1895&amp;QueryField=3&amp;SortField=1">1895</a>
+                                    </td>
+                                    <td>
+                                        <a id="link8" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1896&amp;QueryField=3&amp;SortField=1">1896</a>
+                                    </td>
+                                    <td>
+                                        <a id="link9" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1897&amp;QueryField=3&amp;SortField=1">1897</a>
+                                    </td>
+                                    <td>
+                                        <a id="link10" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1898&amp;QueryField=3&amp;SortField=1">1898</a>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <a id="linkNext" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1890&amp;QueryField=3&amp;SortField=1">下一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkEnd" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%b0%e7%96%86&amp;PageNo=1970&amp;QueryField=3&amp;SortField=1">末页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input name="hidSiteId" type="hidden" id="hidSiteId" value="27" />
+    <input name="hidChannelId" type="hidden" id="hidChannelId" />
+    <input name="hidPageCount" type="hidden" id="hidPageCount" value="10" />
+    <input name="hidQuery" type="hidden" id="hidQuery" value="SiteId=27&amp;Keyword=%u65b0%u7586&amp;PageNo=1889&amp;QueryField=3&amp;SortField=1" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+        function ToggleTd()
+        {
+            var oTr=document.getElementById("trCompute");
+            if(!oTr) return ;
+            if(oTr.tagName!="TR") return ;
+            for(var i=0;i<oTr.cells.length;i++)
+            {
+                var strText=oTr.cells[i].innerText;
+                if(strText=="")
+                {
+                    oTr.cells[i].style.display="none";
+                }
+                
+            }
+        }
+        ToggleTd();
+//]]>
+</script>
+</form>
+</body>
+</html>

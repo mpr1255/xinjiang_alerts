@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>学史力行，送医下乡——九三学社新疆医科大学支社开展党史、社史学习教育活动_新疆_九三学社中央委员会</title>
+<meta name="keywords" content="新疆" />
+<meta name="description" content="新疆" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<link href="/template/1/default/_files/new/css/reset.css" rel="stylesheet"/>
+<link href="/template/1/default/_files/new/css/swiper.css" rel="stylesheet"/>
+<link href="/template/1/default/_files/new/fonts/iconfont.css" rel="stylesheet"/>
+<link href="/template/1/default/_files/new/css/video-js.min.css" rel="stylesheet"/>
+<link href="/template/1/default/_files/new/css/style.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="/template/1/default/_files/new/css/animate.css" />
+<link rel="stylesheet" href="/template/1/default/_files/new/css/plyr.css" /> 
+
+</head>
+<body style="background: #f5f5f5;">
+<!--顶部 start-->
+<div class="top">
+	<div class="topWrap wrap clearfix">
+		<form method="post" action="https://mail.93.gov.cn/cgi-bin/login" name="login" > 
+			<div class="email fl">
+				邮箱:&nbsp;
+				<input type="text" name="UserID" id="uid" value="" />
+				@
+				<input type="" name="Domain_Name" id="" value="93.gov.cn"  readonly="readonly"/>
+			</div>
+			<div class="password fl">
+				密码:
+				<input type="password" name="PassWord" id="" value="" />
+				<button class="login" type="submit">登录</button>
+			</div>
+		</form>
+		<div class="search fl">
+			<input type="text" name="" id="keyWord_" value="" />
+			<img src="/template/1/default/_files/new/img/icon_search.png" id="searchKeyWord" onclick="searchFun()"/>
+		</div>
+		<div class="iconItem fr">
+			<ul class="flex-item">
+				<li><a href="javascript:void(0);" id="setHomePage" onclick="SetHome(this)"><img src="/template/1/default/_files/new/img/icon_home.png" title="设为首页"/></a></li>
+				<li><a href="javascript:addToFavorite()"><img src="/template/1/default/_files/new/img/icon_fav.png" title="加入收藏"/></a></li>
+				<li><a class="topbar_website_weixin" href="javascript:void(0);"><img src="/template/1/default/_files/new/img/icon_weixin.png"/></a></li>
+				<li><a class="topbar_website_app" href="/93app/93app_pc.html"><img src="/template/1/default/_files/new/img/icon_computer.png"/></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--outlinks end-->
+  <div class="topbar_website_weixin_img"  style="position:absolute;width:120px; height:120px; z-index: 999;display:none;">
+	<img src="/themes/default/images/qrcodewx.jpg" width="120" height="120" border="0">
+  </div>
+  <div class="topbar_website_app_img" style="position:absolute;width:120px; height:120px; z-index: 999;display:none;">  
+	<img src="/themes/default/images/qrcode120.png" width="120" height="120" border="0">
+  </div>  
+  <script type="text/javascript" src="/template/1/default/_files/new/js/jquery-1.11.0.min.js"></script> 
+  <script type="text/javascript">
+	$(function(){
+		$(".topbar_website_weixin").hover(function(){
+			$(".topbar_website_weixin_img").css({
+				top: $(this).position().top + 23,
+				left: $(this).position().left-48 
+			}).show();
+		},function(){
+			$(".topbar_website_weixin_img").hide();
+		});
+		$(".topbar_website_app").hover(function(){
+			$(".topbar_website_app_img").css({
+				top: $(this).position().top + 23,
+				left: $(this).position().left-48 
+			}).show();
+		},function(){
+			$(".topbar_website_app_img").hide();
+		});
+	})
+ </script>
+<script type="text/javascript">
+	//收藏设置页面（首页）
+function addToFavorite(){
+	var d="http://www.93.gov.cn/";
+	var c="九三学社中央委员会";
+	if(document.all){
+		window.external.AddFavorite(d,c);
+	}else{
+		if(window.sidebar){
+			window.sidebar.addPanel(c,d,"");
+		}else{
+			alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。");
+		}
+	}
+}
+
+//设为首页
+function SetHome(obj){
+	try{
+		obj.style.behavior='url(#default#homepage)';
+		obj.setHomePage('http://www.93.gov.cn/');
+	}catch(e){
+		if(window.netscape){
+			try{
+				netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+			}catch(e){
+				alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入'about:config'并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+			};
+		}else{
+			alert("抱歉，您的浏览器不支持自动设置首页, 请使用浏览器菜单手动设置!");
+		};
+	};
+};
+ </script>
+<script type="text/javascript">
+	function searchFun(){
+		window.open("/cms/search?q=" + $("#keyWord_").val() );
+	};
+</script>
+<div class="banner">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="javascript:;" style="background:url(/template/1/default/_files/new/temp/banner.jpg) no-repeat center bottom;background-size: auto 100%;"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="nav">
+	<ul class="wrap flex-item navtitle">
+		<li class="">
+			<a href="/">首页<i></i></a>
+		</li>
+		<!-- 本社介绍 -->
+		<li class=""> 	
+			<a href="http://www.93.gov.cn:80/bsjs/" >本社介绍<i></i></a>
+			
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-jsjj/" target="_Blank">九三简介</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-jszc/" target="_Blank">九三章程</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-jsjs/" target="_Blank">九三简史</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-ldcy/" target="_Blank">领导成员</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-zzjg/" target="_Blank">组织结构</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/bsjs-ljzywyh/" target="_Blank">历届中央委员会</a></li>
+				</ul>
+			</div>				
+		</li>
+		<!-- 新闻集萃 -->
+		<li class=""> 			
+			<a href="http://www.93.gov.cn:80/xwjc/" >新闻集萃<i></i></a>
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-snyw/" target="_Blank">社内要闻</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-dfkd/" target="_Blank">地方快递</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-szyw/" target="_Blank">时政要闻</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-tztg/" target="_Blank">通知通告</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-spjj/" target="_Blank">视频集锦</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-ddhzdt/" target="_Blank">多党合作动态</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/xwjc-xgcl/" target="_Blank">星光灿烂</a></li>
+				</ul>
+			</div>				
+		</li>
+		<!-- 履行职能 -->
+		<li class=""> 			
+			<a href="http://www.93.gov.cn:80/lxzn/" >履行职能<i></i></a>
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/lxzn-czdt/" target="_Blank">参政动态</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lxzn-yzjy/" target="_Blank">议政建言</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lxzn-sqmy/" target="_Blank">社情民意</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lxzn-shfw/" target="_Blank">社会服务</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lxzn-tpgj/" target="_Blank">乡村振兴</a></li>
+				</ul>
+			</div>				
+		</li>
+		<!-- 自身建设 -->
+		<li class=""> 			
+			<a href="http://www.93.gov.cn:80/zsjs/" >自身建设<i></i></a>
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-sxjs/" target="_Blank">思想建设</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-zzjs/" target="_Blank">组织建设</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-jgjs/" target="_Blank">机关建设</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-snjd/" target="_Blank">社内监督</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-jczz/" target="_Blank">基层组织</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-llyj/" target="_Blank">理论研究</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/zsjs-zdwj/" target="_Blank">制度文件</a></li>
+				</ul>
+			</div>				
+		</li>
+		<!-- 社员风采 -->
+		<li class=""> 			
+			<a href="http://www.93.gov.cn:80/syfc/" >社员风采<i></i></a>
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-rddb/" target="_Blank">全国人大代表</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-zxwy/" target="_Blank">全国政协委员</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-zgkxyys/" target="_Blank">中国科学院院士</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-zggcyys/" target="_Blank">中国工程院院士</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-ysfc/" target="_Blank">院士风采</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-tyjdry/" target="_Blank">特约监督人员</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-xgcl/" target="_Blank">星光灿烂</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/syfc-gzry/" target="_Blank">公职人员</a></li>
+				</ul>
+			</div>				
+		</li>
+		<!-- 历史回眸 -->
+		<li class=""> 			
+			<a href="http://www.93.gov.cn:80/lshm/" >历史回眸<i></i></a>
+			<div class="newsTitle">
+				<ul class="wrap navdrop clearfix">
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-sszl/" target="_Blank">社史资料</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-dsj/" target="_Blank">大事记</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-tsls/" target="_Blank">图说历史</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-lsyx/" target="_Blank">历史影像</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-jyjj/" target="_Blank">教育基地</a></li>
+				<li class=""><a href="http://www.93.gov.cn:80/lshm-lssdjt/" target="_Blank">历史上的今天</a></li>
+				</ul>
+			</div>				
+		</li>
+	</ul>
+</div>
+<!--顶部 end-->
+	
+	<!-- 导航 -->
+	<div class="subNav wrap">
+		<p>
+			<a href="http://www.93.gov.cn:80/" class="a c-desc">首页</a>
+			/ <a href="http://www.93.gov.cn:80/xwjc/" class="a c-desc">新闻集萃</a>
+			/ <a href="http://www.93.gov.cn:80/xwjc-dfkd/" class="a c-desc">地方快递</a>
+			/ <a href="http://www.93.gov.cn:80/500/" class="a c-desc">新疆</a>
+			/ 学史力行，送医下乡——九三学社新疆医科大学支社开展党史、社史学习教育活动
+		</p>
+	</div>
+	<!--main start-->
+	<div class="newsPage wrap">
+		<div class="pageTitle text-center">
+			<h2>学史力行，送医下乡——九三学社新疆医科大学支社开展党史、社史学习教育活动</h2>
+			<ul>
+				<li>发布日期：2021-08-05</li>
+				<li>来源：九三学社新疆区委</li>
+				<li>浏览量: <span id="info_views"></span></li>
+			</ul>
+		</div>
+		</br>
+		<div class="pageContent">
+			<div class="text"><p style="overflow-wrap: break-word;font-family: &#39;sans serif&#39;, tahoma, verdana, helvetica;font-size: 12px;white-space: normal;text-indent: 43px"><span style="font-size: 16px">7月31日上午，九三学社新疆医科大学支社将党史、社史学习教育与为民办实事相结合，在社区委副主委刘涛的率领下冒雨赶赴乌鲁木齐县托里乡白建沟村，送医上门，为当地村民开展义诊和健康咨询活动。</span></p><p style="overflow-wrap: break-word; font-family: &quot;sans serif&quot;, tahoma, verdana, helvetica; font-size: 12px; white-space: normal; text-indent: 43px; text-align: center;"><img src="http://www.93.gov.cn/cmsfile/ueditor/202108/1628131018691.png" data-ke-src="/Uploads/Editor/2021-08-04/610a06dabf07e.png" alt="" style="border: 0px"/></p><p style="overflow-wrap: break-word;font-family: &#39;sans serif&#39;, tahoma, verdana, helvetica;font-size: 12px;white-space: normal;text-indent: 43px"><span style="font-size: 16px">这次活动以</span><span style="font-size: 16px">“服务健康中国，助力乡村振兴”为主题，与新疆医科大学公共卫生学院联合举办。新疆医科大学支社组织了来自新疆医科大学第一、二、六附属医院耳鼻喉科、呼吸科、心内科、内分泌科、眼科、针灸科的六位主任医师参与这次活动，其中既有社员，也有入社积极分子。活动受到当地群众的热烈欢迎，设在白建沟村委会小礼堂的义诊现场，前来就诊咨询的汉、回、维、哈等各族群众及基层工作人员络绎不绝。专家们自带简单的诊疗仪器和设备，从上午10点30分到下午14点，连续接诊近200人次。专家们耐心细致地为每一位村民进行检查和诊治，给予治疗建议。从谨慎用药、合理饮食、培养良好的生活习惯和查、治未病等方面普及医疗健康知识。</span></p><p style="overflow-wrap: break-word; font-family: &quot;sans serif&quot;, tahoma, verdana, helvetica; font-size: 12px; white-space: normal; text-indent: 43px; text-align: center;"><img src="http://www.93.gov.cn/cmsfile/ueditor/202108/1628131019347.jpg" data-ke-src="/Uploads/Editor/2021-08-04/610a07330c2e4.jpg" alt="" style="border: 0px"/><br/></p><p style="overflow-wrap: break-word;font-family: &#39;sans serif&#39;, tahoma, verdana, helvetica;font-size: 12px;white-space: normal;text-indent: 43px"><span style="font-size: 16px">针灸科主任医师吴继新医生更是临时设立治疗室，利用小针刀技术，根据病人的实际情况，结合患者的局部痛点，为</span><span style="font-size: 16px">10余位村民患者给予微创介入治疗，祛除病痛。为帮助病情较重患者进一步治疗，专家们还主动留下自己的联系方式，邀请患者到院进一步诊治或许诺给予免费治疗。</span></p><p style="overflow-wrap: break-word; font-family: &quot;sans serif&quot;, tahoma, verdana, helvetica; font-size: 12px; white-space: normal; text-indent: 43px; text-align: center;"><img src="http://www.93.gov.cn/cmsfile/ueditor/202108/1628131019597.png" data-ke-src="/Uploads/Editor/2021-08-04/610a0768a889d.png" alt="" style="border: 0px"/></p><p style="overflow-wrap: break-word;font-family: &#39;sans serif&#39;, tahoma, verdana, helvetica;font-size: 12px;white-space: normal;text-indent: 43px"><span style="font-size: 16px">此次活动为白建沟村村民和基层干部提供了面对面、零距离的医疗服务，帮助部分村民解除了病痛，提高了村民的健康意识、防病意识和治病意识，促进了各民族团结，赢得了村委和村民的肯定和赞誉。参与专家也深有感触，一直认为，学党史、社史贵在力行，要把坚守为人民服务的初心和弘扬民主科学精神的行动结合起来，用自己的所学帮助广大基层群众护佑健康，助力健康中国建设，为切实推动乡村振兴做出应有贡献。（史国强）</span></p><p><br/></p></div>
+		</div>
+	</div>
+	<!--main end-->
+<!--footer start-->
+<div class="footer ">
+			
+	<div class="wrap">
+		<div class="up">
+			<div class="line"></div>
+			<ul class="clearfix">
+				<!-- 本社介绍 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/bsjs/" target="_Blank">本社介绍</a></h3></div>
+					<a href="http://www.93.gov.cn:80/bsjs-jsjj/" target="_blank">九三简介</a>
+					<a href="http://www.93.gov.cn:80/bsjs-jszc/" target="_blank">九三章程</a>
+					<a href="http://www.93.gov.cn:80/bsjs-jsjs/" target="_blank">九三简史</a>
+					<a href="http://www.93.gov.cn:80/bsjs-ldcy/" target="_blank">领导成员</a>
+					<a href="http://www.93.gov.cn:80/bsjs-zzjg/" target="_blank">组织结构</a>
+					<a href="http://www.93.gov.cn:80/bsjs-ljzywyh/" target="_blank">历届中央委员会</a>
+				</li>
+				<!-- 新闻集萃 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/xwjc/" target="_Blank">新闻集萃</a></h3></div>
+					<a href="http://www.93.gov.cn:80/xwjc-snyw/" target="_blank">社内要闻</a>
+					<a href="http://www.93.gov.cn:80/xwjc-dfkd/" target="_blank">地方快递</a>
+					<a href="http://www.93.gov.cn:80/xwjc-szyw/" target="_blank">时政要闻</a>
+					<a href="http://www.93.gov.cn:80/xwjc-tztg/" target="_blank">通知通告</a>
+					<a href="http://www.93.gov.cn:80/xwjc-spjj/" target="_blank">视频集锦</a>
+					<a href="http://www.93.gov.cn:80/xwjc-ddhzdt/" target="_blank">多党合作动态</a>
+					<a href="http://www.93.gov.cn:80/xwjc-xgcl/" target="_blank">星光灿烂</a>
+				</li>
+				<!-- 履行职能 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/lxzn/" target="_Blank">履行职能</a></h3></div>
+					<a href="http://www.93.gov.cn:80/lxzn-czdt/" target="_blank">参政动态</a>
+					<a href="http://www.93.gov.cn:80/lxzn-yzjy/" target="_blank">议政建言</a>
+					<a href="http://www.93.gov.cn:80/lxzn-sqmy/" target="_blank">社情民意</a>
+					<a href="http://www.93.gov.cn:80/lxzn-shfw/" target="_blank">社会服务</a>
+					<a href="http://www.93.gov.cn:80/lxzn-tpgj/" target="_blank">乡村振兴</a>
+				</li>
+				<!-- 自身建设 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/zsjs/" target="_Blank">自身建设</a></h3></div>
+					<a href="http://www.93.gov.cn:80/zsjs-sxjs/" target="_blank">思想建设</a>
+					<a href="http://www.93.gov.cn:80/zsjs-zzjs/" target="_blank">组织建设</a>
+					<a href="http://www.93.gov.cn:80/zsjs-jgjs/" target="_blank">机关建设</a>
+					<a href="http://www.93.gov.cn:80/zsjs-snjd/" target="_blank">社内监督</a>
+					<a href="http://www.93.gov.cn:80/zsjs-jczz/" target="_blank">基层组织</a>
+					<a href="http://www.93.gov.cn:80/zsjs-llyj/" target="_blank">理论研究</a>
+					<a href="http://www.93.gov.cn:80/zsjs-zdwj/" target="_blank">制度文件</a>
+				</li>
+				<!-- 社员风采 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/syfc/" target="_Blank">社员风采</a></h3></div>
+					<a href="http://www.93.gov.cn:80/syfc-rddb/" target="_blank">全国人大代表</a>
+					<a href="http://www.93.gov.cn:80/syfc-zxwy/" target="_blank">全国政协委员</a>
+					<a href="http://www.93.gov.cn:80/syfc-zgkxyys/" target="_blank">中国科学院院士</a>
+					<a href="http://www.93.gov.cn:80/syfc-zggcyys/" target="_blank">中国工程院院士</a>
+					<a href="http://www.93.gov.cn:80/syfc-ysfc/" target="_blank">院士风采</a>
+					<a href="http://www.93.gov.cn:80/syfc-tyjdry/" target="_blank">特约监督人员</a>
+					<a href="http://www.93.gov.cn:80/syfc-xgcl/" target="_blank">星光灿烂</a>
+					<a href="http://www.93.gov.cn:80/syfc-gzry/" target="_blank">公职人员</a>
+				</li>
+				<!-- 历史回眸 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="http://www.93.gov.cn:80/lshm/" target="_Blank">历史回眸</a></h3></div>
+					<a href="http://www.93.gov.cn:80/lshm-sszl/" target="_blank">社史资料</a>
+					<a href="http://www.93.gov.cn:80/lshm-dsj/" target="_blank">大事记</a>
+					<a href="http://www.93.gov.cn:80/lshm-tsls/" target="_blank">图说历史</a>
+					<a href="http://www.93.gov.cn:80/lshm-lsyx/" target="_blank">历史影像</a>
+					<a href="http://www.93.gov.cn:80/lshm-jyjj/" target="_blank">教育基地</a>
+					<a href="http://www.93.gov.cn:80/lshm-lssdjt/" target="_blank">历史上的今天</a>
+				</li>
+				<!-- 其他 -->
+				<li class="fl"> 			
+					<div class="txt"><h3><a href="javascript:;">其它</a></h3></div>
+					<a href="http://www.93.gov.cn:80/dslt/" target="_blank">德赛论坛</a>
+					<a href="http://www.93.gov.cn:80/mjzp/" target="_blank">名家作品</a>
+					<a href="http://www.93.gov.cn:80/syzq/" target="_blank">社员专区</a>
+					<a href="http://www.93.gov.cn:80/zt/zyshy/" target="_blank">九三书画院</a>
+					<a href="http://www.93.gov.cn:80/snkw/" target="_blank">社内刊物</a>
+					<a href="http://93.gov.cn/html/93gov/syzj/202105/index.html" target="_blank">社员之家</a>
+					<a href="https://czyz.93.gov.cn/" target="_blank">国是诤言</a>
+					<a href="https://bbs.93.gov.cn/" target="_blank">互动空间</a>
+				</li>
+			</ul>				
+			<div class="erweima">
+				<div class="img">
+					<img src="/template/1/default/_files/new/img/erweima1.jpg"/>
+					<p>九三学社客户端</p>
+				</div>
+				<div class="img">
+					<img src="/template/1/default/_files/new/img/erweima2.jpg"/>
+					<p>国务院小程序</p>
+				</div>
+			</div>
+		</div>
+		<div class="under">
+			<ul class="clearfix">
+				<li class="fl">
+					<p>版权所有：九三学社中央委员会 </p>        
+					<p>法律顾问：北京市信利律师事务所阎建国律师</p>
+					<p class="security">京公网安备：11010802021324  
+                                                      <a href='https://beian.miit.gov.cn/'>京ICP备05040745号-1</a></p>
+				</li>
+				<li class="fr text-right">
+					<p>
+					<a href="http://www.93.gov.cn:80/mzsm/" target="_blank">免责声明<i>｜</i></a>
+					<a href="http://www.93.gov.cn:80/wzdt/" target="_blank">网站地图<i>｜</i></a>
+					<a href="http://www.93.gov.cn:80/lxwm/" target="_blank">联系我们</a>
+					</p>
+					<p class="copyright">copyright 2003 www.93.gov.cn All rights reserved.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--footer end-->
+</body>
+
+<script type="text/javascript" src="/template/1/default/_files/new/js/jquery-1.11.0.min.js"></script> 
+<script type="text/javascript" src="/template/1/default/_files/new/js/jquery.min.js"></script>
+<script type="text/javascript" src="/template/1/default/_files/new/js/swiper.js"></script> 
+<!-- <script type="text/javascript" src="/template/1/default/_files/new/js/video.min.js"></script> -->
+<script type="text/javascript" src="/template/1/default/_files/new/js/wow.min.js"></script>
+<script type="text/javascript" src="/template/1/default/_files/new/js/public.js"></script>
+<script type="text/javascript" src="/template/1/default/_files/new/js/jsMap-3.1.0.min.js"></script>
+<script type="text/javascript" src="/template/1/default/_files/new/js/wookmark.js"></script>
+<script type="text/javascript" src="/template/1/default/_files/new/js/plyr.js"></script> <script type="text/javascript">
+	$("#info_views").load("http://www.93.gov.cn:80/cms/info_views/760404?d="+new Date()*1);
+</script>
+</html>

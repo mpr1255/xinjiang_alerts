@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>马永华-新疆维吾尔自治区人民医院</title>
+    <link rel="stylesheet" href="https://files.sciconf.cn/asset/lib/default.css">
+    <link rel="stylesheet" href="https://files.sciconf.cn/asset/lib/share/share.min.css">
+    <link rel="stylesheet" href="https://files.sciconf.cn/asset/home_static/css/personal-detail.css?v=2021007291025">
+    <script src="https://files.sciconf.cn/asset/lib/jquery.min.js" type="text/javascript"></script>
+
+    <!-- 分享 -->
+    <script src="https://files.sciconf.cn/asset/lib/share/jquery.share.min.js"></script>
+</head>
+
+<body>
+
+<!-- 头部 -->
+<div class="header">
+    <div class="container clearfix">
+        <div class="left header-left">
+            <b>马永华</b><span>个人主页</span>
+        </div>
+        <a href="/cn/index/392" class="right">
+            返回首页
+        </a>
+    </div>
+</div>
+
+<!-- 讲者信息 -->
+<div class="session-header container">
+    <div class="left session-h-left">
+
+        <div class="session-avatar"
+             style="background-image:url(https://static.medcon.net.cn/asset/mobile/speaker/images/person-default.png)">
+        </div>
+        <h2 class="session-name">马永华</h2>
+        <p class="session-org">新疆维吾尔自治区人民医院</p>
+        <p class="session-subject"></p>
+    </div>
+    <div class="left session-h-right">
+        <div class="session-tab clearfix">
+            <div class="session-tab-item">
+                <div class="session-tab-circl">
+                    1                </div>
+                <p>参会记录</p>
+            </div>
+            <div class="session-tab-item">
+                <div class="session-tab-circl">
+                    1                </div>
+                <p>讲座视频</p>
+            </div>
+            <div class="session-tab-item">
+                <div class="session-tab-circl">
+                    1                </div>
+                <p>论文摘要</p>
+            </div>
+            <div class="session-tab-item">
+                <div class="session-tab-circl">
+                    31                </div>
+                <p>访问数量</p>
+            </div>
+            <div class="session-tab-item">
+                <div class="session-tab-circl">
+                    0                </div>
+                <p>点赞数量</p>
+            </div>
+        </div>
+        <div class="share-box">
+            分享到：<div class="share" id="share"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 讲者内容 -->
+<div class="session-content container">
+
+    <!-- tab切换 -->
+
+    <div id="session_nav" class="session-nav">
+        <a href="javascript:;" class="active">专家简介</a>
+        <a href="javascript:;" class="">参会记录</a>
+        <a href="javascript:;" class="">讲座视频</a>
+    </div>
+
+    <!-- tab切换内容 -->
+    <!-- 专家简介 -->
+
+    <div class="session-nav-item js_task_item">
+            </div>
+    <!-- 参会记录 -->
+    <div class="session-nav-item js_task_item none">
+        <div class="meeting-record">
+            <!-- 循环内层 -->
+                        <div class="meeting-record-item">
+                <div class="m-record-year">
+                    2020 <span class="jiao-xia"></span>
+                </div>
+                                <div class="m-record-item clearfix">
+                    <span class="m-r-circle left"></span>
+                    <!-- 日期两位数 01/01 -->
+                    <span class="m-r-date left">09/11</span>
+                    <div class="m-r-item left">
+                        <p> 2020中国老年医学和老年健康产业大会</p>
+<!--                        <p> --><!--</p>-->
+                        <p class="m-r-p address">
+                            <img src="https://files.sciconf.cn/asset/home_static/images/adress.png" alt="">
+                            线上会议                        </p>
+                        
+                        <p class="m-r-p renwu">
+                            <img src="https://files.sciconf.cn/asset/home_static/images/renwu.png" alt="">
+                                                            <span>专题发言<b>「1」</b></span>
+                                                    </p>
+                                            </div>
+                </div>
+                            </div>
+                    </div>
+    </div>
+    <!-- 讲座视频 -->
+    <div class="session-nav-item js_task_item none">
+        <ul class="session-video-list clearfix">
+                        <li>
+                <a href="/online/video/play/392?vid=144718">
+                    <div class="imgbox">
+                        <img src="https://files.sciconf.cn/meeting/2020/244/image/4392459050be9b017be22c1c56ce4e99_0.jpg"
+                             alt="">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="mess">
+                        <p class="ellipsis2">病例六</p>
+                    </div>
+                </a>
+            </li>
+
+                    </ul>
+    </div>
+</div>
+<script>
+    $('#share').share({ sites: ["weibo", "qq", "wechat", "qzone"] });
+    /* tab切换 */
+    $("#session_nav a").on('click', function () {
+        var keyIndex = $(this).index();
+        $("#session_nav a").removeClass('active');
+        $(this).addClass('active');
+        $('.js_task_item').hide().eq(keyIndex).show();
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <meta name="baidu-site-verification" content="code-lsJi0ewBwW" />
+    <link rel="shortcut icon" href="https://s.laoyaoba.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://s.laoyaoba.com/favicon.ico">
+    <title>携手英伟达：Mozilla发布新版Common Voice Dataset</title>
+    
+<link rel="stylesheet" href="/styles/media.26d0f.css">
+<meta name="keywords" content="mozilla,英伟达">
+<meta name="description" content="携手英伟达：Mozilla发布新版CommonVoiceDataset。">
+<link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.14.0/theme-chalk/index.min.css">
+
+</head>
+
+<body>
+    
+
+<header>
+    
+<link rel="stylesheet" href="/styles/header.8d2a2.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.14.0/theme-chalk/index.min.css">
+<style>
+    /* header */
+    .header {
+        min-width: 1220px;
+        max-width: 1220px;
+        height: 67px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .header-left {
+        height: 67px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header .header-left .header-left-logo {
+        width: 84.46px;
+        height: 30.86px;
+    }
+
+    .header .header-left img {
+        width: 84.46px;
+        height: 30.86px;
+        cursor: pointer;
+    }
+
+    .header .header-left ul {
+        height: 67px;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 21px;
+    }
+
+    .header .header-left ul li {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 19px;
+    }
+
+    .header .header-left ul li a {
+        font-size: 14px;
+        color: #222222;
+        line-height: 19px;
+        margin-right: 30px;
+        cursor: pointer;
+        transition: color .3s;
+        text-decoration: none;
+    }
+
+    .header .header-left ul li a:hover {
+        color: #0077FF;
+        transition: color .3s;
+    }
+
+    .header .header-left ul li .hot {
+        width: 27px;
+        height: 15px;
+        position: absolute;
+        top: -14px;
+        left: 126px;
+    }
+
+    .header .header-left ul li:first-of-type {
+        margin-right: 94px;
+    }
+
+    .header .header-right {
+        height: 67px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .header .header-right .header-right-search {
+        height: 67px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #222222;
+        line-height: 19px;
+        cursor: pointer;
+        transition: color .3s;
+    }
+
+    .header .header-right .header-right-search i {
+        margin-right: 5px;
+    }
+
+    .header .header-right .header-right-search:hover {
+        color: #0077FF;
+        transition: color .3s;
+    }
+
+    .header .header-right .header-right-user {
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .header-right .header-right-user p {
+        font-size: 14px;
+        color: #0077FF;
+        line-height: 19px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .header .header-right .header-right-user .nav {
+        list-style: none;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down {
+        height: 32px;
+        position: relative;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin-left: 16px;
+        border-radius: 50%;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content {
+        position: absolute;
+        top: 40px;
+        left: -50%;
+        padding: 0;
+        opacity: 0.3;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .header-right .header-right-user .nav .drop-down:hover .drop-down-content {
+        opacity: 1;
+        height: 228px;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content li {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        width: 110px;
+        height: 38px;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content li a {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        color: #222222;
+        line-height: 38px;
+        text-align: center;
+
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content li a:hover {
+        color: #0077FF;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content li:first-of-type {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .header .header-right .header-right-user .nav .drop-down .drop-down-content li:last-of-type {
+        border-radius: 0 0 5px 5px;
+    }
+</style>
+
+
+
+<div class="header">
+    <div class="header-left">
+        <a class="header-left-logo" href="/">
+            <img src="https://s.laoyaoba.com/node-header-logo1.png" alt="集微logo">
+        </a>
+        <ul id="toptab">
+            <li>
+                <a href="/static/jwconference/2021/jwconference.html" target="_blank">
+                    2021年集微半导体峰会
+                </a>
+                <img class="hot" src="https://s.laoyaoba.com/node-header-hot.png" alt="hot" />
+            </li>
+            <li>
+                <a href="/staticpages/#/workplaceservice" target="_blank">
+                    集微招聘
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/jiweibrand" target="_blank">
+                    集微品牌营销
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/advisoryservice" target="_blank">
+                    咨询服务
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/investmentservice" target="_blank">
+                    投融资服务
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/intellectualproperty" target="_blank">
+                    知识产权服务
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/mediaservice" target="_blank">
+                    媒体服务
+                </a>
+            </li>
+            <li>
+                <a href="/staticpages/#/technologydevelopment" target="_blank">
+                    技术开发
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="header-right">
+        <div class="header-right-search" id="isearch">
+            <i class="el-icon-search"></i>搜索
+        </div>
+        <div class="header-right-user">
+            <ul id="header-head" style="display: none;" class="nav">
+                <li class="drop-down">
+                    <img id="head" src="" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_head.png'" alt="" />
+                    <ul class="drop-down-content">
+                        <li><a href="/home/#/mine/collect">我的收藏</a></li>
+                        <li><a href="/home/#/mine/comment">我的评论</a></li>
+                        <li><a href="/home/#/mine/news">我的消息</a></li>
+                        <li><a href="/home/#/mine/set">个人设置</a></li>
+                        <li><a href="/home/#/mine/safety">安全设置</a></li>
+                        <li><a href="#" id="outlogin">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="header-login">登录</p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.staticfile.org/vue/2.6.9/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.21.0/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/element-ui/2.14.0/index.min.js"></script>
+<script src="/scripts/header.b6c99.bundule.js"></script>
+<script>
+    (function () {
+        let that = this;
+        let position_number = "";
+        let position_name = "";
+        let blong_path = "";
+        let aLi = document.getElementById("toptab").children;
+        for (let i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function () {
+                position_number = i;
+                position_name = aLi[i].innerText;
+                if (window.location.href.indexOf('workplaceservice') != -1) {
+                    blong_path = "集微招聘"
+                } else if (window.location.href.indexOf('jiweibrand') != -1) {
+                    blong_path = "品牌营销"
+                } else if (window.location.href.indexOf('advisoryservice') != -1) {
+                    blong_path = "咨询服务"
+                } else if (window.location.href.indexOf('investmentservice') != -1) {
+                    blong_path = "投融资"
+                } else if (window.location.href.indexOf('ntellectualproperty') != -1) {
+                    blong_path = "知识产权"
+                } else if (window.location.href.indexOf('mediaservice') != -1) {
+                    blong_path = "媒体服务"
+                } else if (window.location.href.indexOf('technologydevelopment') != -1) {
+                    blong_path = "技术服务"
+                } else if (window.location.href.indexOf('/n') != -1) {
+                    blong_path = "资讯详情"
+                } else if (window.location.href.indexOf('mine') != -1) {
+                    blong_path = "个人中心"
+                } else if (window.location.href.indexOf('author') != -1) {
+                    blong_path = "作者页"
+                } else {
+                    blong_path = "首页"
+                }
+                that.sensorsDataAnalytic201505.track("tabClick", {
+                    tab_id: "无",
+                    tab_name: position_name,
+                    belong_page: blong_path,
+                    position_number: position_number
+                }, function (res) {});
+            }
+        }
+    })();
+</script>
+
+</header>
+
+<main class="media" id="media">
+    
+    
+    
+<link rel="stylesheet" href="/styles/mediaarticle.3f5b2.css">
+
+
+
+<div class="container">
+    
+    <nav>
+        <a class="pointer" href="/" target="_blank">首页</a>
+        <p>></p>
+        <a class="pointer" href="/list/2" target="_blank">IC</a>
+        <p>></p>
+        <p>正文</p>
+    </nav>
+    <div class="content">
+        
+        <div class="content-left">
+            <ul class="content-left-toplist">
+                <li class="s" id="collect">
+                    <img id="collect-bg" onclick="handleGetcollect()" src="https://s.laoyaoba.com/node-media-article-s.png" alt />
+                    <p id="collect-text">收藏</p>
+                    <span id="collect-count"></span>
+                </li>
+                <li class="d" id="like">
+                    <img id="like-bg" onclick="handleGetlike()" src="https://s.laoyaoba.com/node-media-article-d.png" alt />
+                    <p id="like-text">点赞</p>
+                    <span id="like-count"></span>
+                </li>
+                
+                <li class="p" id="comment">
+                    <img id="comment-bg" onclick="handlegetcomment()" src="https://s.laoyaoba.com/node-media-article-p.png" alt />
+                    <p id="comment-text">评论</p>
+                    <span id="comment-count"></span>
+                </li>
+                
+            </ul>
+            <ul class="content-left-bottomlist">
+                <li id="wxshare">
+                    <img class="wx" onclick="handleclicksharewx()" src="https://s.laoyaoba.com/node-media-article-wx.png" alt />
+                </li>
+                <li id="wbshare">
+                    <img class="wb" onclick="handleclicksharewb()" src="https://s.laoyaoba.com/node-media-article-wb.png" alt />
+                </li>
+                <li id="qqshare">
+                    <img class="qq" onclick="handleclickshareqq()" src="https://s.laoyaoba.com/node-media-article-qq.png" alt />
+                </li>
+                <li id="inshare">
+                    <img class="in" onclick="handleclicksharein()" src="https://s.laoyaoba.com/node-media-article-in.png" alt />
+                </li>
+                <div class="wxshare" id="wxshareplane">
+                    <p>微信扫一扫分享</p>
+                    <div id="article-qrcode"></div>
+                </div>
+            </ul>
+        </div>
+        
+        <section class="content-center">
+            
+            <section class="article">
+                <h1>携手英伟达：Mozilla发布新版Common Voice Dataset</h1>
+                <div class="content-center-text-info">
+                    <div class="content-center-text-info-left">
+                        <a href="/home/#/author?id=1" target="_blank" title="爱集微">
+                            <p>作者：</p>
+                            <p class="content-center-text-info-left-a-p">爱集微</p>
+                        </a>
+                        
+                    </div>
+                    <div class="content-center-text-info-right" id="look"></div>
+                </div>
+                <div class="content-center-text-info">
+                    <div class="content-center-text-info-left">
+                        
+                        
+                        <p>来源：cnBeta.COM</p>
+                        
+
+
+                        
+                        <p>#Mozilla#</p>
+                        
+                        <p>#英伟达#</p>
+                        
+
+                        <img class="time" src="https://s.laoyaoba.com/node-media-time.png" alt />
+                        <p>8小时前</p>
+                    </div>
+                </div>
+                
+                
+                
+                <article>
+                    
+                    
+                    
+                    
+                    
+                    <p>Common Voice 是一项旨在通过众包的方式，来教授机器人如何像真人般讲话的项目。Mozilla 基金会在几年前发起的该项目，现已迎来与芯片巨头英伟达的最新合作。其旨在允许志愿者为世界上最大的开放式通用语音数据集贡献一份力，从而推动语音合成与识别技术的发展。</p><p style="text-align:center"><img src='http://s.laoyaoba.com/jwImg/third/2021/07/31/16277194069325.jpg'></p><p style="text-align: center;">（来自：Mozilla）</p><p>随着新版公共语音数据集的发布，可知 Common Voice 语料库已拥有超过 13000 小时的众包语音数据。</p><p>与上一版相比，其新增了 4622 小时的内容，并且迎来了对 16 种语言的支持，包括：巴萨语、斯洛伐克语、北库尔德语、保加利亚语、哈萨克语、巴什基尔语、加利西亚语、维吾尔语、亚美尼亚语、白俄罗斯语、乌尔都语、瓜拉尼语、塞尔维亚语、乌兹别克语、阿塞拜疆语、以及豪萨语。</p><p>目前 Common Voice 已经收集了 76 种语言的公共语音数据库，以及超过 18.2 万份独特的声音，贡献者社区在过去六个月内迎来了 25% 的增长。</p><p style="text-align:center"><img src='http://s.laoyaoba.com/jwImg/third/2021/07/31/16277194073077.jpg'></p><p style="text-align: center;">（传送门：NVIDIA）</p><p>语音时长 13905 小时，较上一版本增加了 4622 小时。排名前五的语言分别为英语（2630 小时）、基尼亚卢旺达语（2260 小时）、德语（1040 小时）、加泰罗尼亚语（920 小时）、以及世界语（840 小时）。</p><p>增长百分比最高的是泰语（从 12 小时到 250 小时、增长近 20 倍），卢干达语（从 8 小时到 80 小时、增长 9 倍），世界语（从 100 小时到 840 小时、增长超 7 倍），泰米尔语（从 24 小时到 220 小时、增长超 8 倍）。</p><p>感兴趣的朋友，可移步至 Common Voice 官网（传送门），为这个公共语音数据集贡献自己的一份力量。或者前往&nbsp;GitHub&nbsp;存储库，获取特定的元数据集和使用说明。</p><p>最后，作为 Mozilla 与 NVIDIA 的一个合作项目，相关训练模型也可通过&nbsp;Nvidia NeMo&nbsp;免费获得，后者是该公司打造的用于构建语音识别和对话模型的工具包。</p>
+                    
+                    
+                    
+                </article>
+                
+                <p class="article-au">责编： 爱集微</p>
+                
+                
+                
+            </section>
+            <style>
+                .container .content .content-center .article::after {
+                    content: "";
+                }
+            </style>
+            
+            
+            <section class="content-center-author">
+                <div class="content-center-author-left">
+                    <a class="content-center-author-left-img" href="/home/#/author?id=1" target="_blank">
+                        <img src="http://s.laoyaoba.com/jwImg/category/2019/07/23/15638590636274.jpg?imageView2/2/w/90/h/90" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_head.png'" alt />
+                    </a>
+                    <div class="content-center-author-left-info">
+                        <a class="content-center-author-left-info-name" href="/home/#/author?id=1" target="_blank">
+                            <h1>爱集微</h1>
+                            <p>作者</p>
+                        </a>
+                        <p>微信：</p>
+                        <p>邮箱：jiwei@lunion.com.cn</p>
+                    </div>
+                </div>
+                <div class="content-center-author-right">
+                    <h1>作者简介</h1>
+                    <p></p>
+                </div>
+            </section>
+            
+            
+            <section class="content-center-article">
+                <h1>读了这篇文章的人还读了...</h1>
+                <ul>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/788117" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/newsCover/2021/07/31/16277081601760.jpeg" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/788117" target="_blank">外媒：中国正在放缓英伟达收购Arm的步伐</a>
+                    </li>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/787761" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/28/16274431548091.png" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/787761" target="_blank">英伟达DLSS SDK现已向开发者开放，支持Linux</a>
+                    </li>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/787485" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/third/2021/07/26/16272515519162.jpg" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/787485" target="_blank">英伟达下一代GPU 回归台积电</a>
+                    </li>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/787043" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/20/16267879708794.png" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/787043" target="_blank">英伟达发布第八代AI软件，从云端到边缘实现更智能、更具互动性的对话式AI</a>
+                    </li>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/785845" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/newsCover/2021/07/07/16256678824468.jpeg" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/785845" target="_blank">传NVIDIA GeForce RTX 30笔记本GPU将于2022年初进行“SUPER”升级</a>
+                    </li>
+                    
+                    <li id="commentscroll">
+                        <a class="img-hover-scale content-center-article-img" href="/n/785441" target="_blank">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/03/16252849242082.png" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </a>
+                        <a class="content-center-article-text" href="/n/785441" target="_blank">Arm首席执行官：被英伟达收购，好于独立IPO</a>
+                    </li>
+                    
+                </ul>
+            </section>
+            
+            
+            <div class="content-center-comment">
+                <div id="mediacomment"></div>
+            </div>
+            
+        </section>
+        
+        <aside>
+            <h1 class="public-title">热门文章</h1>
+            <ul class="rightlist">
+                
+                <li>
+                    <a href="/n/786063" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/10/16258729023872.jpeg" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">华澜微在列！美国商务部“黑名单”新增34家企业与实体</h1>
+                            <p>07-10 07:27</p>
+                        </section>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/n/786640" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/16/1626391890506.png" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">WSJ：约300亿美元！传英特尔正在探索收购GlobalFoundries</h1>
+                            <p>07-16 07:31</p>
+                        </section>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/n/786506" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/news/2021/07/14/16262462443893.png?imageView2/1/w/270/h/180" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">美国欲以芯片制造技术牵制中国,比利时已“站在震中”;看燧原如何打造全新产品矩阵与智算集群？欲与CPU、GPU试比高 DPU开启新战事</h1>
+                            <p>07-15 07:38</p>
+                        </section>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/n/787253" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/newsCover/2021/07/22/16269519912273.jpeg?imageView2/1/w/270/h/180" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">全志科技荣登“2021福布斯中国 最具创新力企业榜”： 创新领航，推动科技进步</h1>
+                            <p>9天前</p>
+                        </section>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/n/786414" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/newsCover/2019/08/27/15668918738166.jpeg?imageView2/1/w/270/h/180" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">手机快充全链路方案简介及芯片公司浅析</h1>
+                            <p>07-14 13:01</p>
+                        </section>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/n/786020" target="_blank">
+                        <div class="rightlist-img img-hover-scale">
+                            <img src="http://s.laoyaoba.com/jwImg/newsCover/2019/08/27/15668916607986.jpeg?imageView2/1/w/270/h/180" onerror="onerror=null;src='https://s.laoyaoba.com/node-def_bg.png'" alt />
+                        </div>
+                        <section class="rightlist-info">
+                            <h1 onclick="handleremenwenzhang()">债权人申请破产重整！紫光集团：配合司法审查，推进债务风险化解工作</h1>
+                            <p>07-09 18:19</p>
+                        </section>
+                    </a>
+                </li>
+                
+            </ul>
+
+            
+        </aside>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.staticfile.org/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+    var news_id_swig = "788125";
+
+    var simpledata = {
+        is_comment: "0",
+        is_liked: "0",
+        is_follow: "2",
+        is_lock: "false",
+        news_id: "788125",
+        view_num: "1019",
+        like_num: "0",
+        collect_num: "0",
+        comment_num: "1"
+    }
+
+    function IEVersion() {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
+        var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+        if (isIE) {
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            if (fIEVersion == 7) {
+                return 7;
+            } else if (fIEVersion == 8) {
+                return 8;
+            } else if (fIEVersion == 9) {
+                return 9;
+            } else if (fIEVersion == 10) {
+                return 10;
+            } else {
+                return 6; //IE版本<=7
+            }
+        } else if (isIE11) {
+            return 11; //IE11  
+        } else {
+            return -1; //不是ie浏览器
+        }
+    }
+
+    if (IEVersion() != -1) {
+        var article = document.getElementsByTagName("article")[0];
+        var p = article.getElementsByTagName("p");
+        var img = article.getElementsByTagName("img");
+        for (var i = 0; i < img.length; i++) {
+            img[i].style.maxWidth = "750px";
+        }
+    }
+
+    function handleremenwenzhang() {
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        this.sensorsDataAnalytic201505.track(
+            "contentShow", {
+                content_id: String(window.location.href.split("/")[length - 1]),
+                content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+                content_type: "文章",
+                publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                        4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                    .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+                author_name: "爱集微",
+                is_original: is_original,
+                content_is_vip: content_is_vip,
+                responsible_editor: "爱集微",
+                belong_page: "资讯详情",
+                belong_module: "资讯详情",
+                belong_first_channel: "集微网",
+            },
+            function () {}
+        )
+    }
+
+    function handleGetcollect() {
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        let operation_type = "";
+        if (document.getElementById("collect-text").innerHTML == "已收藏") {
+            operation_type = "取消收藏"
+        } else {
+            operation_type = "收藏"
+        }
+        this.sensorsDataAnalytic201505.track("operateContentResult", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            belong_first_channel: "IC",
+            operation_type: operation_type
+        }, function (res) {});
+    }
+
+    function handleGetlike() {
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        let operation_type = "";
+        if (document.getElementById("like-text").innerHTML == "已点赞") {
+            operation_type = "取消点赞"
+        } else {
+            operation_type = "点赞"
+        }
+        this.sensorsDataAnalytic201505.track("operateContentResult", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            belong_first_channel: "IC",
+            operation_type: operation_type
+        }, function (res) {});
+    }
+
+    function handleclickauthor() {
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        this.sensorsDataAnalytic201505.track("operateContentResult", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            belong_first_channel: "IC",
+            operation_type: "点击作者"
+        }, function (res) {});
+    }
+
+    function handlegetcomment() {
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        this.sensorsDataAnalytic201505.track("operateContentResult", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            belong_first_channel: "IC",
+            operation_type: "点击评论"
+        }, function (res) {});
+    }
+
+    function postdatashence(share_methoddata) {
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        this.sensorsDataAnalytic201505.track("shareClick", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+        }, function (res) {});
+        this.sensorsDataAnalytic201505.track("shareMethod", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_tag: "IC",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(
+                    4, 6) + "-" + "20210731161854".substring(6, 8) + " " + "20210731161854"
+                .substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            share_method: share_methoddata
+        }, function (res) {});
+    }
+    // 微信分享埋点
+    function handleclicksharewx() {
+        postdatashence("微信")
+    }
+    // 微博分享点击埋点
+    function handleclicksharewb() {
+        postdatashence("微博")
+    }
+    // qq分享埋点
+    function handleclickshareqq() {
+        postdatashence("QQ")
+    }
+    // IN分享埋点
+    function handleclicksharein() {
+        postdatashence("领英")
+    }
+    (function () {
+        let that = this;
+        let length = window.location.href.split("/").length;
+        let is_original = false;
+        if ("2" == 1) {
+            is_original = true;
+        } else {
+            is_original = false;
+        }
+        let content_is_vip = false;
+        if ("0" == 1) {
+            content_is_vip = true;
+        } else {
+            content_is_vip = false;
+        }
+        that.sensorsDataAnalytic201505.track("contentDetailView", {
+            content_id: String(window.location.href.split("/")[length - 1]),
+            content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+            content_tag: "IC",
+            content_type: "文章",
+            publish_time: "20210731161854".substring(0, 4) + "-" + "20210731161854".substring(4, 6) + "-" + "".substring(6, 8) + " " + "20210731161854".substring(8, 10) + ":" + "20210731161854".substring(10, 12),
+            author_name: "爱集微",
+            is_original: is_original,
+            content_is_vip: content_is_vip,
+            responsible_editor: "爱集微",
+            belong_page: "资讯详情",
+            belong_first_channel: "IC",
+        }, function (res) {});
+        // 音频点击
+        if (document.getElementById("radioitem") != null) {
+            document.getElementById("radioitem").addEventListener('ended', function () {
+                that.sensorsDataAnalytic201505.track("audioPlay", {
+                    content_id: String(window.location.href.split("/")[length - 1]),
+                    content_name: "携手英伟达：Mozilla发布新版Common Voice Dataset",
+                    publish_time: "20210731161854".substring(0, 4) + "-" +
+                        "20210731161854".substring(4, 6) + "-" + "20210731161854"
+                        .substring(6, 8) + " " + "20210731161854".substring(8, 10) + ":" +
+                        "20210731161854".substring(10, 12),
+                    is_original: is_original,
+                    content_source: "",
+                    audio_time: String(""),
+
+                }, function (res) {});
+            }, false);
+        }
+
+    })()
+</script>
+<script src="/scripts/mediaarticle.f8932.bundule.js"></script>
+
+    
+</main>
+
+<footer>
+    
+<!--injectcss-->
+
+
+
+<div class="footer">
+    <section class="top">
+        <div class="top-left">
+            <a class="top-left-logo" href="/">
+                <img src="https://s.laoyaoba.com/node-header-logo1.png" alt="集微logo" />
+            </a>
+            <div>
+                <a href="/" target="_blank">网站首页</a>
+                <a href="/n/729927" target="_blank">版权声明</a>
+                <!-- <a href="https://www.laoyaoba.com/html/jiade/jiade" target="_blank">嘉勤官网</a> -->
+                <a href="/workplace/#/" target="_blank">集微招聘</a>
+                <a href="/n/683318" target="_blank">联系我们</a>
+                <a href="/map" target="_blank">网站地图</a>
+                <a href="/n/683317" target="_blank">关于我们</a>
+                <a href="https://www.laoyaoba.com/static/view/business.html" target="_blank">商务合作</a>
+                <a href="https://www.laoyaoba.com/api/rss/hbb" target="_blank">rss订阅</a>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="top-right-info">
+                <div>
+                    <p>联系电话：</p>
+                    <p>0592-6892326</p>
+                </div>
+                <div>
+                    <p>新闻投稿：</p>
+                    <p>laoyaoba@gmail.com</p>
+                </div>
+                <div>
+                    <p>商务合作：</p>
+                    <p>xulun@lunion.com.cn</p>
+                </div>
+                <div>
+                    <p>问题反馈：</p>
+                    <p>1574400753 (QQ)</p>
+                </div>
+            </div>
+            <div class="top-right-code">
+                <div>
+                    <img src="https://s.laoyaoba.com/node-code-wx.png" alt="集微官方微信" />
+                    <p>官方微信</p>
+                </div>
+                <div>
+                    <img src="https://s.laoyaoba.com/node-code-wb.png" alt="集微官方微博" />
+                    <p>官方微博</p>
+                </div>
+                <div>
+                    <img src="https://s.laoyaoba.com/node-code-app.png" alt="集微app" />
+                    <p>APP下载</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom">
+        <p>Copyright 2007-2021©<span id="tt"></span>.com™Inc.All rights reserved | <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">闽ICP备17032949号</a><span id="ts"></span></p>
+        <div>
+            <img src="https://s.laoyaoba.com/node-footer-security.png" alt />
+            <p>闽公网安备 35020502000344号</p>
+        </div>
+    </section>
+    <script>
+        if (RegExp(/jiweinet/).test(window.location.href)) {
+            document.getElementById("ts").innerHTML = "-1";
+            document.getElementById("tt").innerHTML = "JiWeiNet";
+        }else if(RegExp(/laoyaoba/).test(window.location.href)){
+            document.getElementById("ts").innerHTML = "-2";
+            document.getElementById("tt").innerHTML = "LaoYaoBa";
+        }else if(RegExp(/ijiwei/).test(window.location.href)){
+            document.getElementById("ts").innerHTML = "-3";
+            document.getElementById("tt").innerHTML = "IJiWei";
+        }else{
+            document.getElementById("ts").innerHTML = "";
+            document.getElementById("tt").innerHTML = "LaoYaoBa";
+        }
+    </script>
+</div>
+
+
+
+<!--injectjs-->
+ 
+</footer>
+
+    
+<script src="https://cdn.staticfile.org/vue/2.6.9/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.21.0/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/element-ui/2.14.0/index.min.js"></script>
+<script src="https://static.ijiwei.com/static/js/md5.js"></script>
+<script>
+    window.onload = function () {
+        if (/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+            window.location.href = "/html/share/news?source=h5&news_id=788125";
+        }
+    }
+    let cover_swig = "http://s.laoyaoba.com/jwImg/newsCover/2021/07/31/16277194926452.jpeg";
+    let news_title_swig = "携手英伟达：Mozilla发布新版Common Voice Dataset";
+    let intro_swig = "携手英伟达：Mozilla发布新版CommonVoiceDataset。";
+    let like_num_swig = "0";
+    let collect_num_swig = "0";
+    let allow_comment_swig = "1";
+
+</script>
+
+<script src="/scripts/media.0bb22.bundule.js"></script>
+
+<script id="laoyaoba">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?7a320689f49c65329a61fd46277563ee";
+        var s = document.getElementById("laoyaoba");
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script id="ijiwei">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e5f8162d3d8e9cb33d12d6b5d557fa3a";
+        var s = document.getElementById("ijiwei");
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=.3,minimum-scale=.3,maximum-scale=3.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务招标 - 中招联合招标采购平台【官网】</title>
+    <link href="/r/cms/www/news/css/global.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/r/cms/www/news/public/css/reset.css" />
+    <link rel="stylesheet" href="/r/cms/www/news/public/css/share.min.css">
+    <link rel="stylesheet" href="/r/cms/www/news/public/css/font/iconfont.css">
+    <link rel="stylesheet" href="/r/cms/www/news/public/notice/css/index.css">
+    <script src="/r/cms/www/news/public/js/plugins/jquery1.7.2.js"></script>
+    <script src="/r/cms/www/news/public/js/plugins/jquery.jqprint-0.3.js"></script>
+    <script src="/r/cms/www/news/public/js/plugins/jquery.qrcode.min.js"></script>
+    <script src="/r/cms/www/news/public/js/plugins/jquery.share.min.js"></script>
+    <script src="/r/cms/www/news/public/notice/js/index.js"></script>
+<style>
+.content span{    color: #727272 !important;}
+.FontStyle{height: 60px;margin: 0px;}
+.fo_rig{     width: 100%; float: left;}
+.submeau {    background: linear-gradient(to right, #ff9900, #ffb13d);color: #fff; line-height: 40px; font-size: 16px;margin-right: -30px;padding: 0px 40px;float: right;margin-bottom: 2px;}
+.submeau:hover{color: #fff;}
+.div_tk{  display:none ;float: right; width: 100%; position:relative;z-index: 9999 }
+.div_tk a{background: #ffbe5c;color: #fff; padding: 10px 21px; margin-right: -30px;float: right;margin-top: 1px;}
+.submeau:hover{background: #FF9800}
+.zc{background: #ffd492;}
+
+</style>
+</head>
+<body>
+<style>
+/* 红色导航样式 */
+/*  .MenuBg{background:#c91e00 !important;}
+.Menu>ul>li .Select, .Menu>ul>LI>A:hover { TEXT-DECORATION: none; BACKGROUND: #971700 !important;}
+.HeadOl{    background: #c91e00 !important;}
+.HeadOl li{border-bottom: 1px solid #971700 !important;}
+.SearchType .aonit {  background: #c91e00 !important;}
+.HeadOl li a:hover{BACKGROUND: #971700 !important;}
+
+.SearchWrap .TxtInput{    border: #c91e00 2px solid !important;}
+.SearchWrap .SeachBtn {background: #c91e00 !important;;  border: #c91e00 2px solid !important;}*/
+
+    .Header .Logo img{
+        margin-top:15px;
+    }
+    .HeaderOne{
+        background:#f0f0f0;
+        height:30px;
+    }
+    .HeaderOneContent{
+        width:1200px;
+        margin:0 auto;
+    }
+    .HeaderOneContent p{
+        color:#5e5e5e;
+        font-size: 13px;
+        line-height: 30px;
+    }
+    .Header_warp{
+        padding-top: 30px;
+        padding-bottom: 30px;
+       
+    }
+    .Header {HEIGHT:100px; WIDTH: 1200px; CLEAR: both; MARGIN: auto}
+    .Header .Logo {OVERFLOW: hidden;WIDTH: 594px; FLOAT: left; PADDING-BOTTOM:0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px;margin-top:13px;}
+    .Header .Search { margin-top:10px; WIDTH: 600px; FLOAT: right}
+    .MenuBg{background:#015293;}
+.Menu>ul>LI {FONT-SIZE: 14px; FLOAT: left; DISPLAY: inline-block; LINE-HEIGHT: 40px; height:40px; position: relative;}
+.Menu>ul>LI>A {float: left; COLOR: #fff;padding:0 22px; line-height:40px; font-size:16px;}
+.Menu>ul>li .Select,.Menu>ul>LI>A:hover {TEXT-DECORATION: none; BACKGROUND:#00447b;}
+.Menu>ul .abouts:hover .HeadOl{
+  display:block;
+}
+.HeadOl{
+  position: absolute;
+  width:110px;
+  left:0px;
+  top:40px;
+  background:#16629e;
+  z-index:9;
+  text-align: left;
+  text-align: center;
+  display:none;
+}
+.HeadOl li{
+  border-bottom:1px solid #0c6dbb;
+  width:100%;
+}
+.HeadOl li a{
+  display:block;
+  color:white;
+  height:40px;
+  line-height:40px;
+  font-size:14px;
+}
+.HeadOl li a:hover{
+  TEXT-DECORATION: none; 
+  BACKGROUND:#00447b;
+}
+    .Menu ul, ol{
+        margin: 0!important;
+    }
+    .SearchType{
+        width:462px;
+        text-align: left;
+    }
+    .SearchType a{
+        float:left;
+        width:50px;
+        height:25px;
+        line-height:25px;
+        text-align: center;
+        color:#015293;
+        font-size:14px;
+    }
+    .SearchType .aonit{
+        background:#015293;
+        color:white;
+    }
+    .SearchWrap{
+        position: relative;
+        width:462px;
+    }
+    .DayTime{
+        position: absolute;
+        right:0px;
+        top:45px;
+        width:210px;
+        font-size: 12px !important ;
+    }
+    .DayTime p{
+        float:left;
+        width:50%;
+        color:#a9a9a9;
+ font-size: 12px !important ;
+    }
+    .DayTime p span{
+        display:block;
+        color:#a9a9a9;
+        height:20px;
+    }
+    .SearchWrap .TxtInput{ border:#015293 2px solid;border-right:none; width:362px; height:42px; line-height:42px; overflow:hidden; text-indent:10px; font-size:14px;outline: none; box-sizing: border-box!important;}
+    .SearchWrap .SeachBtn{-webkit-appearance:none !important; border-radius: 0 !important;height:42px; width:100px;background:#015293;border:#015293 2px solid; color:#fff; font-size:16px; font-weight:bold; cursor:hand; outline: none; }
+</style>
+<!--headOne-->
+<div class="HeaderOne">
+    <div class="HeaderOneContent">
+        <p style="   padding-left: 25px;    float: left;">我们努力成为招标代理机构和投标人最想使用的平台！</p>
+        <a href="http://www.365trade.com.cn/jyyts/index.jhtml" style=" float: right; line-height: 30px; color: #5e5e5e;">　建议箱</a><a href="/bzzx/index.jhtml"  style=" float: right; line-height: 30px; color: #5e5e5e;">帮助中心　|</a>
+
+    </div>
+</div>
+<!--headOne-->
+<div class="Header_warp">
+    <div class="Header">
+        <!--Logo Beign-->
+        <div class="Logo"><a href="http://www.365trade.com.cn/"><img alt="中招联合招标采购平台" src="/r/cms/www/news/images/logo_zzlh.png"></a></div>
+        <div class="Search TxtRight">
+            <form action="/search.jspx" target="_blank">
+                <div class="Right SearchType">
+                    <a class="aonit" href="javascript:;">公告</a>
+                    <a href="javascript:;">通知</a>
+                    <a href="javascript:;">资讯</a>
+                    <img class="Right" src="/r/cms/www/news/images/TelImg.png"/>
+                </div>
+                <div class="Right SearchWrap">
+                    <input class="SeachBtn Right Hand" type="submit" id="btnSearch" value="搜 索">
+                     <input name="q" placeholder="请输入关键字，搜索相关公告、通知、资讯" value="" type="text" id="txtKey" onfocus="if(this.value==&#39;&#39;)this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;)this.value=&#39;&#39;" class="TxtInput Left Gray" maxlength="50" autocomplete="off">
+                     <div class="DayTime"> 
+                        <p>工作日：</p>
+                        <p>
+                            <span>上午09:00-12:00</span>
+                            <span>下午13:00-17:30</span>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="Clear"></div>
+        <!--Login-->
+    </div>
+</div>
+
+<div class="MenuBg clearfix">
+    <div class="Center" style="width:1200px;">
+        <!--menu Begin-->
+        <div class="Menu clearfix">
+            <ul id="nav">
+                <li><a href="http://www.365trade.com.cn/">首页</a></li>
+                <li>
+                   <a href="/zbgg/index.jhtml">招标投标</a>
+                   </li>
+                <li class="abouts">
+                    <a href="/ywlyzbcgpt.jhtml">业务领域</a> 
+                    <ol class="HeadOl">
+                        <li>
+                           <a href="/ywlyzbcgpt.jhtml">招标采购</a>
+                        </li>
+                        <li>
+                           <a href="/ywlyqyzzcgpt.jhtml">中招智采</a>
+                        </li>
+                        <li>
+                          <a href="/ywlyjrfw.jhtml">金融服务</a>
+                         </li>
+                         <li>
+                           <a href="/ywlyzzxy.jhtml">中招学院</a>
+                         </li>
+                         <li>
+                           <a href="/ywlyqjxxhfw.jhtml">中招数博</a>
+                         </li>
+                         <li>
+                           <a href="/ywlyzzdspt.jhtml">中招电商平台</a>
+                         </li>
+                        
+                        <li>
+                           <a href="/ywlydsjzx.jhtml">大数据中心</a>
+                        </li>
+                     
+
+                        
+                      </ol>
+               </li>
+         
+                <li><a href="http://www.cebpubservice.com/ctpsp_policylaw/jsp/365trade/policies_index.jsp">政策法规</a> </li>
+                <li><a href="/news.jhtml">动态资讯</a> </li>
+           <!-- <li><a href="/hyzc/industryInfo_1.html">行业资讯</a> </li>-->
+              
+                <li  class="abouts">
+                   <a href="/aboutcompanyprofile.jhtml">关于我们</a> 
+                    <ol class="HeadOl">
+                      <li>
+                           <a href="/aboutcompanyprofile.jhtml">企业简介</a>
+                      </li>
+                     <li>
+                        <a href="/aboutceospeech.jhtml">总裁致辞</a>
+                     </li>
+              <!--   <li>
+                        <a href="/abouteliteteam.jhtml">精英团队</a>
+                     </li>
+                 -->
+                     <li>
+                         <a href="/aboutqualificationhonor.jhtml">资质荣誉</a>
+                     </li>
+                     <li>
+                       <a href="/aboutdevelopmenthistory.jhtml">发展历程</a>
+                     </li>
+                     <li>
+                        <a href="/aboutserviceconcept.jhtml">服务理念</a>
+                     </li>
+                     <li>
+                          <a href="/aboutsocialresponsibility.jhtml">社会责任</a>
+                     </li>
+                     <li>
+                          <a href="/aboutteamactivity.jhtml">团建活动</a>
+                     </li>
+                     <li>
+                         <a href="/abouttalentedpeople.jhtml">诚聘英才</a>
+                     </li>
+                     <li>
+                          <a href="/aboutconnectus.jhtml">联系我们</a>
+                     </li>
+                   </ol>
+               </li>
+
+            </ul>
+        </div>
+        <!--menu End-->
+    </div>
+</div><!--Top End-->
+<script>
+$(".SearchType a").click(function(){
+    $(".SearchType a").removeClass("aonit");
+    $(this).addClass("aonit");
+});
+
+$("#btnSearch").click(function(){
+  if($.trim($("#txtKey").val())==""){
+     $("#txtKey").val('""');
+     console.log($("#txtKey").val())
+  }
+})
+setInterval(function(){
+  if($("#txtKey").val()=='""'){
+    $("#txtKey").val("");
+}},500)
+
+</script>
+
+    <div class="container">
+        <div class="app" style="position:relative;">
+            <div class="share-box ShareFixed" >
+                 <span class="shareTo">分享到</span>
+                 <span class="social-share" data-sites="weibo, qq, wechat"></span>
+            </div>
+            <h2>新疆维吾尔自治区人民医院物资服务商（二批）采购项目第一包：暖通材料类选取1家服务商招标公告</h2>
+            <div>
+                <span>发布时间：2021-07-30 22:05:05</span>&nbsp;
+                <!--<span>所属地区：宁夏回族自治区</span>&nbsp;-->
+                <span class="printCon">
+                    <i class="iconfont icon-dayinji"></i>打印
+                </span>
+            </div>
+            <div class="btnBox">
+                   <ul class="FontStyle">
+			<li class="fo_rig" id="FontStyle" > <a  href="https://jy.365trade.com.cn/cas/login?sourceId=2&service=https%3A%2F%2Fjy.365trade.com.cn%2Fzzlh%2F" class="submeau">已有账户，直接登录</a>
+                            <!--  <ul id="div_tk" class="div_tk">
+				     <li>
+					 <a href="https://jy.365trade.com.cn/cas/login?sourceId=2&service=https%3A%2F%2Fjy.365trade.com.cn%2Fzzlh%2F">已有账户，直接登录</a>
+					 <a class="zc" href="https://jy.365trade.com.cn/wb_ucenter/static/dist/register">没有账户，立即注册</a>
+				     </li>
+								
+			      </ul>-->
+			 </li>
+                         <li>
+				 <a class="submeau zc" href="https://jy.365trade.com.cn/wb_ucenter/static/dist/register">没有账户，立即注册</a>
+			  </li>
+		    </ul>
+             <!--   <button class="btn" url="https://jy.365trade.com.cn/zzlh/SystemMainHome">我要参与</button>-->
+            </div>
+            <div class="content" id="content">
+                <html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+  <meta name="Generator" content="Microsoft Word 14 (filtered)"> 
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:FangSong;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:inherit;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"标题 1 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:24.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+samp
+	{font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-link:"标题 1";
+	font-family:宋体;
+	font-weight:bold;}
+p.detail-info, li.detail-info, div.detail-info
+	{mso-style-name:detail-info;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+span.bookmark-item
+	{mso-style-name:bookmark-item;}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style> 
+ </head> 
+ <body lang="ZH-CN" style="text-justify-trim:punctuation" st="202107302139353064716914330"> 
+  <div class="WordSection1" style="layout-grid:15.6pt"> 
+   <p class="MsoNormal" align="center" style="text-align:center;line-height:22.5pt"><span style="font-size:18.0pt;font-family:宋体">新疆同孚招投标有限公司关于新疆维吾尔自治区人民医院物资服务商（二批）采购项目第一包：暖通材料类选取<span lang="EN-US">1</span>家服务商的竞争性谈判公告</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:7.5pt;margin-left:0cm;text-align:left"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">项目概况</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp;&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">新疆维吾尔自治区人民医院物资服务商（二批）采购项目第一包：暖通材料类选取</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">1</span><span style="font-size:13.5pt;font-family:宋体;color:black">家服务商</span><span style="font-size:13.5pt;font-family:宋体;color:black">采购项目的潜在供应商应在</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;www.365trade.com.cn&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">获取采购文件，并于</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2021</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">08</span><span style="font-size:13.5pt;font-family:宋体;color:black">月</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">06</span><span style="font-size:13.5pt;font-family:宋体;color:black">日</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> 11:00</span><span style="font-size:13.5pt;font-family:宋体;color:black">（北京时间）前提交响应文件。</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">一、项目基本情况</span></b></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">项目编号：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">XJTF(JZ)2021ZF20</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">项目名称：</span><span style="font-size:13.5pt;font-family:宋体;color:black">新疆维吾尔自治区人民医院物资服务商（二批）采购项目第一包：暖通材料类选取</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">1</span><span style="font-size:13.5pt;font-family:宋体;color:black">家服务商</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">采购方式：竞争性谈判</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">预算金额（元）：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">200000</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">/</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">最高限价（元）：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">200000/</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">采购需求：</span></p> 
+   <p class="MsoNormal" align="left" style="text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; &nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp;&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">标项名称：</span><span style="font-size:13.5pt;font-family:宋体;color:black">第一包：暖通材料类选取</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">1</span><span style="font-size:13.5pt;font-family:宋体;color:black">家服务商</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">数量：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">不限</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">预算金额（元）：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">200000/</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">单位：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">根、米等</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">简要规格描述：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">详见谈判文件</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;<br> &nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">备注：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">合同履约期限：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">本项目（</span><span style="font-size:13.5pt;font-family:宋体;color:black">否</span><span style="font-size:13.5pt;font-family:宋体;color:black">）接受联合体投标。</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">二、申请人的资格要求：</span></b></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; 1.</span><span style="font-size:13.5pt;font-family:宋体;color:black">满足《中华人民共和国政府采购法》第二十二条规定；</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; 2.</span><span style="font-size:13.5pt;font-family:宋体;color:black">落实政府采购政策需满足的资格要求：</span><span style="font-size:13.5pt;font-family:宋体;color:black">无</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; 3.</span><span style="font-size:13.5pt;font-family:宋体;color:black">本项目的特定资格要求：</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">1</span><span style="font-size:13.5pt;font-family:宋体;color:black">）符合《中华人民共和国政府采购法》第二十二条的相关规定；</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"><br> </span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;
+color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">2</span><span style="font-size:13.5pt;font-family:宋体;color:black">）有效的</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">“</span><span style="font-size:13.5pt;font-family:宋体;color:black">一证一码</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">”</span><span style="font-size:13.5pt;font-family:宋体;color:black">或</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">“</span><span style="font-size:13.5pt;font-family:宋体;color:black">三证合一</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">”</span><span style="font-size:13.5pt;font-family:宋体;color:black">的营业执照副本；</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"><br> </span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;
+color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">3</span><span style="font-size:13.5pt;font-family:宋体;color:black">）投标人须提供在</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">“</span><span style="font-size:13.5pt;font-family:宋体;color:black">信用中国</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">”</span><span style="font-size:13.5pt;font-family:宋体;color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">www.creditchina.gov.cn</span><span style="font-size:13.5pt;font-family:宋体;color:black">）未被列入重大税收违法案件当事人名单、</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">“</span><span style="font-size:13.5pt;font-family:宋体;color:black">中国执行信息公开网</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">”</span><span style="font-size:13.5pt;font-family:宋体;color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">zxgk.court.gov.cn/</span><span style="font-size:13.5pt;font-family:宋体;color:black">）未被列入失信被执行人、中国政府采购网（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">www.ccgp.gov.cn</span><span style="font-size:13.5pt;font-family:宋体;color:black">）网站上未被列入政府采购严重违法失信行为记录名单的网页打印件（网页打印件须自招标文件发布之日起至首次提交投标文件截止时间内从上述网站中打印）；</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"><br> </span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;
+color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">4</span><span style="font-size:13.5pt;font-family:宋体;color:black">）投标人近三年无因投标申请人违约或不恰当履约引起的合同终止、纠纷、争议、仲裁和公诉纪录；投标人必须提供无行贿犯罪记录证明（在中国裁判文书网（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">wenshu.court.gov.cn/</span><span style="font-size:13.5pt;font-family:宋体;color:black">）查询，查询时间必须在公告期内）；</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"><br> </span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;
+color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">5</span><span style="font-size:13.5pt;font-family:宋体;color:black">）法定代表人或其委托代理人应提供《法定代表人资格证明书》或《法定代表人授权委托书》；</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"><br> </span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">&nbsp; </span><span style="font-size:13.5pt;font-family:宋体;
+color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;
+color:black">6</span><span style="font-size:13.5pt;font-family:宋体;color:black">）本项目不接受联合体投标。</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">三、获取采购文件</span></b></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp;&nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">时间：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2021</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">08</span><span style="font-size:13.5pt;font-family:宋体;color:black">月</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">02</span><span style="font-size:13.5pt;font-family:宋体;color:black">日</span><span style="font-size:13.5pt;font-family:宋体;color:black">至</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2021</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">08</span><span style="font-size:13.5pt;font-family:宋体;color:black">月</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">06</span><span style="font-size:13.5pt;font-family:宋体;color:black">日</span><span style="font-size:13.5pt;font-family:宋体;color:black">，每天上午</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">10:30</span><span style="font-size:13.5pt;font-family:宋体;color:black">至</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">13:30</span><span style="font-size:13.5pt;font-family:宋体;color:black">，下午</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">15:30</span><span style="font-size:13.5pt;font-family:宋体;color:black">至</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">18:00</span><span style="font-size:13.5pt;font-family:宋体;color:black">（北京时间，法定节假日除外）</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">地点：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;www.365trade.com.cn&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">方式：</span><span style="font-size:13.5pt;font-family:宋体;color:black">线上获取</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">,</span><span style="font-size:13.5pt;font-family:宋体;color:black">前往</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">“</span><span style="font-size:13.5pt;font-family:宋体;color:black">中招联合招标采购平台</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">” </span><span style="font-size:13.5pt;font-family:宋体;color:black">进行投标人免费注册（网址：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">www.365trade.com.cn</span><span style="font-size:13.5pt;font-family:宋体;color:black">）、购买并下载电子版招标文件。</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">售价（元）：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">200</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">四、响应文件提交</span></b></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">截止时间：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2021</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">08</span><span style="font-size:13.5pt;font-family:宋体;color:black">月</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">06</span><span style="font-size:13.5pt;font-family:宋体;color:black">日</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> 11:00</span><span style="font-size:13.5pt;font-family:宋体;color:black">（北京时间）</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">地点：</span><span style="font-size:13.5pt;font-family:宋体;color:black">乌鲁木齐市人民路</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">38</span><span style="font-size:13.5pt;font-family:宋体;color:black">号新宏信大厦</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">7</span><span style="font-size:13.5pt;font-family:宋体;color:black">楼</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">705</span><span style="font-size:13.5pt;font-family:宋体;color:black">室</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">五、响应文件开启</span></b><span lang="EN-US" style="font-size:13.5pt;font-family:宋体;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">开启时间：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2021</span><span style="font-size:13.5pt;font-family:宋体;color:black">年</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">08</span><span style="font-size:13.5pt;font-family:宋体;color:black">月</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">06</span><span style="font-size:13.5pt;font-family:宋体;color:black">日</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> 11:00</span><span style="font-size:13.5pt;font-family:宋体;color:black">（北京时间）</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:15.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">地点：</span><span style="font-size:13.5pt;font-family:宋体;color:black">乌鲁木齐市人民路</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">38</span><span style="font-size:13.5pt;font-family:宋体;color:black">号新宏信大厦</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">7</span><span style="font-size:13.5pt;font-family:宋体;color:black">楼</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">705</span><span style="font-size:13.5pt;font-family:宋体;color:black">室</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">六、公告期限</span></b><span lang="EN-US" style="font-size:
+16.0pt;font-family:宋体;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp; </span><span style="font-size:13.5pt;font-family:宋体;color:black">自本公告发布之日起</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">3</span><span style="font-size:13.5pt;font-family:宋体;color:black">个工作日。</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:22.5pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">七、其他补充事宜</span></b><span lang="EN-US" style="font-size:13.5pt;font-family:宋体;color:black">&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;line-height:18.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp; &nbsp;</span><span style="font-size:13.5pt;font-family:宋体;color:black">凡有意参加投标者，请于发售时间登陆中招联合招标采购平台并上传投标供应商资格要求（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2</span><span style="font-size:13.5pt;font-family:宋体;color:black">）</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">-</span><span style="font-size:13.5pt;font-family:宋体;color:black">（</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">5</span><span style="font-size:13.5pt;font-family:宋体;color:black">）项扫描件加盖公章（制作在一个</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">PDF</span><span style="font-size:13.5pt;font-family:宋体;color:black">文件中）进行报名，通过上述报名者可登陆中招联合招标采购平台下载电子采购文件。</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">&nbsp;&nbsp;</span></p> 
+   <p class="MsoNormal" style="margin-top:12.75pt;margin-right:0cm;margin-bottom:
+12.75pt;margin-left:0cm;line-height:24.0pt"><b><span style="font-size:13.5pt;
+font-family:黑体;color:black">八、凡对本次招标提出询问，请按以下方式联系</span></b></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">1.</span><span style="font-size:13.5pt;font-family:宋体;color:black">采购人信息</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">名</span><span style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> </span><span style="font-size:13.5pt;font-family:宋体;color:black">称：</span><span style="font-size:13.5pt;font-family:宋体;color:black">新疆维吾尔自治区人民医院</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">地</span><span style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> </span><span style="font-size:13.5pt;font-family:宋体;color:black">址：</span><span style="font-size:13.5pt;font-family:宋体;color:black">新疆乌鲁木齐市天山区天池路</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">91</span><span style="font-size:13.5pt;font-family:宋体;color:black">号自治区人民医院</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">联系方式：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">(0991) 856-2590</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">2.</span><span style="font-size:13.5pt;font-family:宋体;color:black">采购代理机构信息</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">名</span><span style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> </span><span style="font-size:13.5pt;font-family:宋体;color:black">称：</span><span style="font-size:13.5pt;font-family:宋体;color:black">新疆同孚招投标有限公司</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">地</span><span style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> </span><span style="font-size:13.5pt;font-family:宋体;color:black">址：</span><span style="font-size:13.5pt;font-family:宋体;color:black">乌鲁木齐市友好北路宏运大厦</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">21</span><span style="font-size:13.5pt;font-family:宋体;color:black">楼</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">J</span><span style="font-size:13.5pt;font-family:宋体;color:black">座</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">联系方式：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">0991-4833033</span><span style="font-size:13.5pt;font-family:宋体;color:black">转</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">8003&nbsp;</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black">3.</span><span style="font-size:13.5pt;font-family:宋体;color:black">项目联系方式</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">项目联系人：</span><span style="font-size:13.5pt;font-family:宋体;color:black">谭婷</span></p> 
+   <p class="MsoNormal" align="left" style="margin-top:3.75pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:left;text-indent:24.0pt"><span style="font-size:13.5pt;font-family:宋体;color:black">电</span><span style="font-size:13.5pt;font-family:&quot;FangSong&quot;,&quot;serif&quot;;color:black"> </span><span style="font-size:13.5pt;font-family:宋体;color:black">话：</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;inherit&quot;,&quot;serif&quot;;color:black">0991-4833033</span><span style="font-size:13.5pt;font-family:宋体;color:black">转</span><span lang="EN-US" style="font-size:13.5pt;font-family:&quot;inherit&quot;,&quot;serif&quot;;color:black">8003&nbsp;</span></p> 
+   <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p> 
+  </div>  
+  <span style="display:none;" id="st">202107302139353064716914330</span>
+ </body>
+</html>
+            </div>
+            <div class="clear">
+                <div id="qrcode-box"></div>
+                <div class="share-box">
+                    <span>分享到：</span>
+                    <span class="social-share" data-sites="weibo, qq, wechat"></span>
+                </div>
+            </div>
+        </div>
+        <div class="aboutBe">
+            <p style="text-align:left;">如何投标：</p>
+            <div style="text-align:center;">
+                <img src="/r/cms/www/news/public/notice/image/wpscv.png" alt="如何投标">
+            </div>
+        </div>
+    </div>
+<style>
+/*尾部*/
+.m-t-20 {
+    margin-top: 20px;
+}
+.footer1 {
+    color: #ececec;
+    background: #2F3239;
+}
+.footer1 .footer1Content {
+    padding: 50px 0px;
+}
+.bgblack {
+    background: #2f3239;
+}
+.foot_bg {
+    margin-right: 120px;
+}
+.footer-list {
+    float: left;
+    margin-right: 40px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.no-padding-left {
+    padding-left: 0;
+}
+.footer-title {
+    margin-bottom: 20px;
+}
+.footer1 a {
+    color: #b2b2b2;
+    font-size: 12px;
+}
+.footer-list li a {
+    line-height: 34px;
+}
+.footer2 {
+    color: #91959b;
+    line-height: 50px;
+    background: #2A2D33;
+    margin:0px;
+}
+.text-center {
+    text-align: center;
+}
+.foot_ewm{
+    width:107px;
+    height:107px;
+}
+.rexianv2{
+    margin-right:50px;
+    margin-top:30px;
+}
+.containers_footer{
+    width:1200px;
+    margin:0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+.containers_footer a{    color: #91959b;font-size: 12px;}
+.containers_footer a:hover{color:#fff;}
+/*尾部*/
+</style>
+<div class="footer1 m-t-20">
+  <div class="containers_footer clearfix bgblack footer1Content">
+    <img class="foot_bg Left" src="/r/cms/www/news/images/footer_bg.png">        
+    <ul class="no-padding-left footer-list">
+      <li class="footer-title">关于我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+      </li>            
+      <li>
+        <a href="/aboutcompanyprofile.jhtml" target="_blank">公司简介</a>
+      </li>            
+      <li>
+        <a href="/aboutconnectus.jhtml" target="_blank">联系我们</a>
+      </li>            
+      <li>
+        <a href="/abouttalentedpeople.jhtml" target="_blank">诚聘英才</a>
+      </li>
+    </ul>        
+    <ul class="no-padding-left footer-list">
+      <li class="footer-title">业务领域
+      </li>            
+      <li>
+        <a href="/ywlyzbcgpt.jhtml" target="_blank">招标采购</a>
+      </li>            
+      <li>
+        <a href="http://www.365bidding.com/" target="_blank">中招智采</a>
+      </li> 
+      <li>
+      <a href="https://jy.365trade.com.cn/zljf/index.html" target="_blank">金融服务</a>
+      </li>  
+     <li>
+        <a href="http://train.cntcunion.com/" target="_blank">中招学院</a>
+      </li>
+       
+
+    </ul>        
+    <ul class="no-padding-left footer-list">
+      <li class="footer-title">　</li>            
+           <li>
+        <a href="https://shubo.365trade.com.cn/" target="_blank">中招数博</a>
+      </li>         
+      <li>
+        <a href="http://www.365trade.com.cn/mall/home/index.do" target="_blank">中招电商平台</a>
+      </li>
+      <li>
+        <a href="http://data.365trade.com.cn/#/home" target="_blank">大数据中心</a>
+      </li>     
+    </ul> 
+    <img class="Right foot_ewm" src="/r/cms/www/news/images/foot_ewm.png">
+    <img class="Right rexianv2" src="/r/cms/www/news/images/rexianv2.png"/>   
+  </div>
+</div>
+<h6 class="footer2">
+  <div class="containers_footer text-center" style="background:#2a2d33">中招联合信息股份有限公司 © 版权所有 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802024617"  target="_blank" >京公网安备 11010802024617号</a>　<a href="http://beian.miit.gov.cn/"  target="_blank">京ICP备 15051098</a> 　经营许可证编号：京B2-20192323　北京市海淀区复兴路65号 电信实业大厦5层<a href="http://www.365trade.com.cn/xyadmin/xycms/index.do?locale=zh_CN" target="_blank">.</a></div>
+</h6></body>
+<script type="text/javascript">
+var gc=$('h1').text();var st=$("#st").html();
+if(st!=null&&st!=undefined){gc="";}else{st="";}
+$.ajax({
+	url:"https://jy.365trade.com.cn/zzlh/ggCheck",
+	dataType:"json",
+	data:{"gg":gc,st:st},
+	type:"POST",
+	success:function(json){
+              if(json.success)
+		$('#qrcode-box').append('<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAD2CAYAAADLV1taAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAInRSURBVHhe7d0JvK5XVdh/ZHJotVbbKgiBEEKYgkrr7F9r1Vpp7VytU9sIahVUBESQSUTRAmodQBxwQHFCURkFBQRBDGGQWRCJqMxDAoSMN3n+7/e9+R1W3p5z7k04l3Mh7zqfdfbz7Gfvtddew56f573O+973vmWLW9zi4eH555+/bB1xi1s8ZNw64ha3eBLgno64hS1s4UMHW0fcwhZOAtg64ha2cBLA1hG3sIWTALaOuIUtnASwdcQtbOEkgK0jbmELJwFsHXELWzgJYOuIW9jCSQBbR9zCFk4C2DriFrZwEsDWEbewhZMAto64hS2cBLB1xC1s4SSArSNuYQsnAWwdcQtbOAlg64hb2MJJAFtH3MIWTgLYOuIWtnASwNYRt7CFkwC2jriFLZwEsHXELWzhJICtI25hCycBbB1xC1s4CeDQHPHyyy+/8mpZrrjiijV2PZ+dSLjsssuuvDpabnDkyJF12HP8zOfzei8oTbQuueSSdQiONz9MFtERlr/nk17pQGVWj55t5q+MGX8sKE3lK+N48gWVWQh2Kx/P8S/+6pTxwcDk69JLL73y6qrXBwmH6oiEXBhMAXwogJIrXziv4+WaKn/Smwq8OvTwkAFu5vNsymtez7THip+G3vWxYC9+5J/lHQ9s0gFTdgDNdHJ16V9T2CxnNz4PCg51aLqbQBnsh0rQgHBneV1PoXedkUqzn1J6Ng1pwvG0qjNNdJQfv5WxG+8ZLJBn8jEdpTJ2o3E8gAe0L7roovX91ckLpgw3ryF6k+ZM86GA9A3wkRyvbj2PBw7VEROsimVkxXV9opARws34BN59fMVTIN28D8TNZ2hdfPHF6/up2GNBdEBDTKH4+Qxs0lWveFA2mOnFA3HyVsfpsMeC6AnnNbjwwgt3+NwLwZRtsJlGXaq39HjcTW8HjckGuC8Uf3XkdLxwaI44DSBIqTCBnCgMpsALg8lPkGMVP2m5Lp6xFBcwqEnrWDCdaCq/cqOdo4JJf5YtfzTE14vNNJVzPDxOWiCeqrf7/bA0s3zX3V9wwQXrEGw6BCjtiUKQLDbjuj5IONQeERByygNTUScSCDMD1oIDcVPQhbXAINnEZ/HA9eRfmBFNw+/5fhDdDD6+3v/+96/vQbRLU9lQ2uLf+973rsOg8tVLGnSiezy8BfKWv7KUm7z2w3h3HaAx75MZeviaDc6JhhrB6jXrN3k8KDg0R0yBT3jCE5Z73/vey33uc581fu/3fu9OeKLxB3/wB9dCzfjw89jHPnZd/vd8z/cs97rXvdbX97jHPZb73e9+O/le9KIX7Rj7JkTvF3/xF69Sr//zf/7P+vnxGrp0+HnUox61zv993/d9y/3vf//lp37qp65MsXsPDv76r/96XTZe73vf+66vzz333PXz8DWvec36uXp5Dt/4xjeuaV5dQ8tIgesf//Ef36G5F7797W9fp1dW5VUf964f9KAHreutDulE3vRwIvEP//APd3gByRbM64OCQ+0RtXSM/LrXve5ynetcZ/moj/qoNbr+UOA/+Sf/ZEf5WlvX/+2//bf1s+td73pXCW94wxuuw3/4D//h2smmAU0o/su//MvX6avbrW51q51W9niAshn1F37hF67zX//611+Ht7vd7XYMYfIwjePpT3/6Om2yxPuzn/3s9TPp5Hna0552Fbo3uMENluc///nrNNHcDzadBuAX/U/5lE9Z09wPX/va167Ty58jR6ce8FM/9VN30pPjtJPiTxR+53d+544c4g8cj2yuCRz60PQ7vuM71saeQXzsx37sjjAI3jMh4buGOex+KP9Hf/RH79BhaJWRc9385je/imAJ/Bu/8RvX+StTHih/ZT/ucY9bp8/4GQ6Yjvbv//2/3ylH/jvc4Q7r+KnU/SDa/9//9//tGCA6n/3Zn72OR6c00Wzo9qxnPWun3kL453/+5+tnpeWsySN84QtfeNz8BeZy8pBj/Nz2trdd05t8T5mK00MDzrcpv3Ry2mmn7fCWXZR/1i05Q3qa17Psyu+6e2mzlVDPG5wo55twaI6Y0Rh6VHlCS6gElJC695zwijsWyjMVI/909FNOOWVtBBm18Bu+4RvWz2a+yQv+fuu3fmsnfcZXCBjXf/yP/3GHjnJvfetbX/n0A467H9Q7fPEXf/Gazj/4B/9gXfa/+Bf/4ipl5gTCIEf8mI/5mB3+ORlAV/pnPvOZO/wl83POOWedJpr74eZ8rTp5liMmMzqb5YjXI8qjDvIAjli9xWsoS1/e6jTjoetQeeJywtLPfMJoSjefG0FcaxwRELqhqcp/3Md93I7xU8A/+kf/aAc/8RM/cfmkT/qk5ZM/+ZPX4T/+x/94He6HhkecTn7pP+3TPm1H0ASvLC1uhhX8z//5P9dpUpa0sAZA+Bu/8RvrtPLlFK973evWCx4E+q53vWv5L//lv6x5UC9OZKiakR0PoG2x4uu+7uvWw2EyYIRf9VVftZ5fvfvd716X9fd///fr9C1scJA//dM/3akr/PiP//jl937v99Z58HbeeeetGxPxpcHjH/3RH60XdtCXZj9U17e97W3rtGi+5z3vWceZn37mZ37mjvxmw+lavN7nb/7mb9b8gs2GiUzJSkPJKbILyDbII1swvSAb9//sn/2ztb6LC6XznB1A1//0n/7T9TM2ksMrK36vNY5I0FpeiwUJOUFjKiMPpddi1oq63w+lm622vN/yLd9yFae66U1vuqalLCifoWm8TCOq1RXWIwJ5XvziF6+V2zxSmic96Uk7zgFajp9xxwPSz3oYUnJu5eCHUerdAukNQz2DHExaobqLU685bO9aqA5QHfZD+aLvXn7Y/LC4ynQtzKn0iGSX/EH3wU1ucpN1Wqicb/u2b1vbBpBOXeWh2/JlI+InfbaWTfQ80JiwhcrC+3TEydOJgkNzRMIhECtUKp8RM+ipGGkSZiEQ7odTeAn9rLPO2hE2o+D0k7Z0/+N//I8d45ktMSPNoPSIFFsZesPSQUaqBwIUX7o5fDwW4EndQQYEXvrSl67LYCzJLEesHAsz0zkg3vElXv3ENcybzjjT74eb9DeHjF3nsMVVzl/91V+teQX4DrtXf85ROfJrSGejlDyzk6l31xODeZ18xekpJ3/XGkcEKtgcMSMxjGhPi6AJeVOQCfBYIL8WMrjzne+80yNCw9X5HO3//t//+5ofmEPiK6eU7/GPf/w6fa3rK17xinUamCL1iIH6TGUer0NKN+tOFn/yJ3+y40jJzFBUuhocQ0zPZw8dupe/Z9NJPFfP4vZDaStfXtflLb5nkFzEe+5e4wXwrZ5TJjnizW52s538kCMCz3YbWUx5FYqbsk9Gnk87MqSNd2Vda4amhEMQ9uoSNMUZ33OOKWgGb2g3BSf/fjjrkDIsxEwjougMQGhj/+u//uvX84aMSfqQoXn2sz/7szv5gH3FhoCQoRu+1qDk7HiYLfp+QPnKUGdhtF7ykpeseWvR6RM+4RPWizOBOvzFX/zFVYyq3gr/4jihcNbN8/JsPtsNpSefGiv30Y1WZeaQOaPrd77znWt+qyfZgCkrIxZ0lAG/+Zu/+f+RoTntbLjBdBzpo82msqviQx3ArMu1ao4IcsQEYAJNoFXeAsMTn/jE5QEPeMByt7vdbb2/813f9V3Ld3/3d++LD33oQ3dOlKQ4cwxlhLe4xS3W8cpLQb/zO7+zPPzhD1/+7//9v8uP/diPLT/6oz+6Dm1S/8zP/Mzy/d///csb3vCGHQWqh8WLhz3sYevN9vLZMAc5UtfHC/LARz/60et6Mwz829RHH4+PfOQjlx/5kR9Z83TXu951ufvd777c8573XKf9iZ/4ieURj3jEmqcf/uEfXs4444y1jHOy29zmNutDBj/90z+9w7u6yof+sZA81FXersWjkRzQx6PGbfbADN7ohJ7SpYaLnpIr/Z966qnrPDUOphaeBW95y1vWZZIPOyKD9I8uWZCJe9e2ysjvV37lV3bKAUJ2lw3Ca40jqhwBqHCVJwhj9SkgwPkSUi3qsdCiQQ4QnW/6pm+6irD1iAlZWOOwmS8H6j7exbsu/QxLWwtfHlBY+kD58VPj8QVf8AVrXqv3Z3zGZ6zjQXQ+7/M+b+e5+n3O53zODu3q5GAAB5BGL/UVX/EV63jpKhPM6+OBKZvyxldlP/nJT17zhUe9Yz3kRKMVMMu3aupZOrvLXe6yfj6xTf9GLzP9xGk3HBZUFhnoEWf6rSN+iBwRHYsBGT+DyrGAvBlZcejkINEG4nuGXuXJ37No9Lz6z7ggnoT/6l/9q525F2P7/M///HXZ0sff537u567rk6N9yZd8yTpemuhyVs/RkgZd+auPdF0b3pZ3LwymvJLJlBH87d/+7XWZ+I/HTdzPEUOOqGxpwmviiHpGMHnfOuIhOSKDNAdJyIU5Y3ldw2mwk24LMTM9BwLF6RWjXwg2HV1YHmGOiN/mXzb0J8jDyaqTkLOiPedO//yf//P1s3ojdAHe4wNU/vFAstqsL5g0f/M3f3NdJjRPbJg68UPhiMUbtoLKwvfWEQ/JEaEeEUiX0VpEgOamb33rW9fzQTANK2OY8Jd/+ZfLO97xjnU++1IWl6SRr/nn3/3d363TmNvYiFeuNDk5EBe/4hmoLR1ow9rROYZf3aT56q/+6vUiF2NimP/hP/yH9bN4NId10udGN7rR+rm0X/M1X7O8+tWvXs+jPbfBLn1vohwLJs9/+7d/u6ah3mT2pje9aY3q6pmD61Ylp3428UPliNC8ESRnstw64iE5olbZhvE0KPW2iJDCoB6oFT4OUOsfuH/BC16wLq886P/+7//+VdLaYrCy6rk6WMm0DTLrWg8Dc3yOUhowdRPv+Kss+aIlrrzocLLSeeuFYyYvq7Ad+k5uxwI9vT3V6WQcIqN3rZ6t8LqH9dwTT7Qjigu3jjhA5QjisBxRaLEG9JyR/q//9b/WzyvHymqK8LzrDB7oWSqXg5sH/e7v/u76WYs1r3rVq3bShL1qs2n47nOYYKbJSaURP/nbBM5XehDPnUclh4aKZ5999vrZbnQ2oTQanOqTA7rmGMXnfHPTfxM/WEecZW+Gm9fboekAlSPUw3JESNFgGjmD8KyFjdNPP32dn+Gl/JxLPui4ljxoZ9R6HGk5ATR0FY9mPYJXkdDNUUoLUj76ej48wHrBeJFeiE71LE8QTWnES58jdgCBs7zyla/cGZpW3l4YWBGVn15yBrJzrZ7C7qWD1X/i1XVEINzPESfOuK0jDlA5Qj3MHrE54lTu137t1+6UIbzlLW+5jt/kqRCYBzGuhkdCp1vqNfDhMHQrhvHg3CiYToNutHfb+gDzehoTyOlA1zlrIK3eDx/xgjc9O5j0jwV69WQVrc2wa7ibE8KtIx6iI8LOmiaoNvRBBmpM79kc7hwLKQgog/Lgt37rt15FITliacA89A0piAPbNLb/9O3f/u3rjfX//b//9871v/23/3bt+OVhbN6SUJ488jIiy/g2zB0M+IVf+IV1fnQ8t6T+Az/wA2seOE51t3GPjjQ2ps8666x1wyQv2o59OS5WHaHDBJ7vh//m3/yb9VCRPBo6WghCW52gMp1mqb7uu04WX/mVX7kj0/RzvI3l1AW5g2n0HXErHRmC0ghvfOMbr5/NMqed1OOHGhxyBNmZBlMHUDnCrSNuOCLD4oiezx7lWGghAp0cTOgVJwpr+LifI0bHdenD4iFjnsrGY61+/CrT9oFVROVAK6n/9b/+16sYjZeHp+ytRHofsfKkjSasF57nWjlxZ033w+okjIfe6gjF471yip9GP/OIl27KZz+c6XLE9AD2c0S6FWpwp8zjc1MH1RctDQrYOuIKVA7u5YgJCeSIpTkenAsxDRGtiE4j2s8RS0eBlSvOyqdw0ukZpRc/r2Fv6IPK6qVfrzJx5s/6rM9ax09+bM4rP8PKKcTVADznOc9Zp60XdZ+89kL58JfhistoNS7T8aBn5fPMGdf5PL428+2H0YNX1xHTqS0dzytXOOsS5ojiWzXdOuIKVA7u5YjNbwjJMMgzyPj2W30LGUZzrJSmR1RODrKfI2Z48ZUiy0vh09EyamF50MCv+0//9E9f05/7dI6ZZcDSc9aUHj9f+qVfun7WFkB057VtB+mT2fOe97yd53thDUxl4xOtysnxc3bpxVU3qK5THkLPy9P9zDNxxl9dRwTshCN6psx42A+l62TN8Tri5OlEwUk9NAWGZ77m5VMThpsEL43r/fDLvuzL1ntn08n0iFNZxzNHzOjl69q80ZzQ/ERZrkNDJfuTGXSG6qNPQN2Ux2nMIz2DGhfnSi3q2Oyng5e97GVrftD0RrmTQBlnjmJo6Bs6NtDlsTH/1Kc+9f+Rx25IlmgLbdOgV4MTkjsjVTevjUH1hhZT4k2dPbO4NfPTa7qdcTOE18QRGe8XfdEX7dQBqhe+XOMxnsXFn3kw2MsR4dYRr3REwmmoxWj1JFdHIBwYyFs+Cw+zNznW0HQ6bfk4jDcFguoRoOPeAk6vRqHlOy4p3nPXFkc26at/cU7TeBskkM8qZU5enjlP40g+OHUsmDwDn7r4l//yX16lzuaw80O/8kx5GnFs6sQ82NnXaNDrNHDXNU4z/uo6YraRnic0AgLoQfLGu3oGx+uIm7I6EXBS94gU7TrBEqhr8eXfC4F0DU/l1SMqI0M4Vo+IJ4YJ5WH44qx+ghQsrMzi5gvGei9vTTCe6gasXJbGPLFrWM9krxFY3FGGdx9LEz9d50QcER/7IT4YZgYN8Ch/Q0uNiedkLi2QF+ClONfT+Ht9CW9h98mxeyG8Jj2itF0rf/KwWb/ouu86Xci3dcQ9HLHnIAEnuBSwH4K5OY2G1TJlZAjH44jChoE5sB5xlgPwFn/g3/27f7dOm1E3R5SndJb+4wVWTiHHsteYwcv3Z3/2Z2u+crrShuIN1+JvLwSF6Kq/jz5FTxn4A8kPCOc1mC/bAu86RiPsHn+zDCG8uo4IK3fKB1YvtLqeDU5lpAf1uNY6IiAcL2qqeAZprjIXND5YSNiGJDZylUPg0LyBEikGSmtjebPFZjg5Icfq+FpK78B4fFPsf/7P/3knDzzzzDPX8RmBa84aP6Wdjum6FdF6dqdfPJN+Gk49qDg9YsaTkWa0QXz03L0tlskL/jLg5DiHquJm/sBpJDTIKloMfZNPYbJ1kGLT4Dli+aXXkMbHQUANCSfoQ1U1cL4sjp/qNa8Pkofg0BxRpRhuPaJ5DqUQuLncB4s24YVWSm1624jue5uMQTmGUDlTPHFEys9gTPC9cW4D/td//dfXm/EWj6KvlX7gAx+4M4wG6N3pTndaOxJakCP2LNDjKAPiB38/+ZM/uf7s/8///M+vP8nhM/M+qWgTXT0Yo2ele8xjHrPc/va336FDhnpEoCxIn97kl9/wHM/yN8TPmXqvMVocMZCOUz7kIQ9Z1x0N9SePzYazHhGSo48i+9KA+vzyL//y+rqNeKjuzvgCzpGDS4Of7AJddUj2+6F67oV4P+uss3buHZhQRo0gZ/RG/25wIpwQHGqPSLmGACkkQWxuLF9TrHWDc/m/4aIWF8zWvLOmYR8GTgF6Fq8ZeUZ5Qp/Tr1dkQOrlu6az/BxxOr7tizlU8xZ9r08BZVn9zZmlmfuR0jFciywMFS0hR1SnHIw+vaMYL9JsvsWPFh49j+9//a//9U4ZgCOWBg3hf/pP/+kq7z0CMotftHwZrx4d4Ks0pdNggsoCDU1DaSv3ILDGNnvI/pRTj4hXvM+h7YlwxkNzREamor7iZiWSEBJIwvhgcNKYNGtdYXNEws5oGQ3jwYu0ekTAQErjXT70ciBD3CCDsyKqvGjZvlDfqVCGPulwDqCslM05qwM6ehdOhlZ6MhSNX+nqEafxe53LM6junBfgp2GrNBkjWn1OQ5ocRKOjTjnr7DWnI/Yc+mZNUP2NRvCRzusR4wctw0V1x9Mscx6q2AvT8V4Yb6H6Fi+/kRo5z0Y6uZ8IONQeEZi3JQyCIIRaqg8G0RFSYtfoZ2iQkyXYjGiudpZmtoCu/VANo0ALr4yzZ9GzRzgVPnsy6aBVU3RyIHM0+Sk8w69H1KNL2+mbaSBzu0Ca3r6vHCCNBg8taTQCE9C74x3vuKYR34bXQeWph+fqrf69hDz5aWiarDVcGjG81Hu2bxlqAINoaSh7rszkdBBIBsJoFsZz51Hpo8bD9eyxDxIOdY6oxfaFMZN7m9XQ5qwhyQeLaNnc1arqscRRLANwr0V2aiXDAIaFTl14BqVlaD4pPx3WG/EZq5Dhic+AXBtqKbPyDeEIe0Irq1DPwFm8t+gNfhv03oboZE2GI43Xrrztb/PeN1X1iIbzOZlPZ8SvED962xokyMEt/Dg8UFnNERkj5NAvf/nL18+lw1vOCqXV8yuj8oAe0fOMmrym/IAGhY787IH0pijkHFhc01CxDbpoMx66nro+XszGIJp0o3x2IXRfWb5ANx3wRMOhOWLDPEDoGbEW56AqjiZa0Z73ym8z2GJDwzPP4018G8D4ohjP9JoZGdz8qbSZH8i7m0z1OIyZM+fY8wxnwzbPXJdmjhjaf/SME6LXHHHWuyFujiZPK5nQ5zO69jzHn3PrfitDWehIo4GZ+uJoHEua+OWIOSDZZODi5CWnZAa69tsa0Z75Znl7QfXfRHnhvI637kOgzK6B68nrQcGhDk0VXqUT8kFVkqCDzeHEFCYjKG2OM/lxPZ0UNnzNoBneNLTClB99dHqOjlXTDN6wsWthzjYNOqctXgjxMYdtDU2rg/r3O4uVkZPLO2lNh3e9mV45nuPFvW/hbMrX6u+kadV31jsgs009dZ88QXmLm3muKcQHmq6jOWknP7Db84OEQ3VElSJ8gkjIKbVws+IpBXCcqbA5zASGvuVHr7Tiu67FK910QJCiQA7ZYg1kkL08HG9CefZD0MkaRpsjZeCFnnFS15xCfFjcZvoWYtQ5OdqsL20hZ+8azvkSOp4XNx1UWTVCTt8E1d/HjD2LtoYLkDt+1J+8k7n7TZmln+6lTRc92w/KU74Jx5Nfvk1HhADtg4ZDc8QMpEqp5FQGECa0lBDM6+mA0WnFULquN6EeMAED5VDAVNZ87iB52xf1EnP7onodC8xH0cmBMngojhFPJ+l6xsHycQxoKKn3AzUchuBWW3Oumb+4FnKKE1aWMnJO4Yy33ZMDArbTgg560liImUYdkCvd0JFr6HrqVtyUaboo3V5YnmyKoYNkQr/7YYBOZQbz+UHBofaIBKSSm0pSec9AoXQJxGf7tLKGPAzB8Sgvw07YFCawES69fGedddZ6s5xiKn9TwBmY/NOx/dqSzXSfbvfmg81xG814wouFGuF+6ICBTXZ0bHL/2q/92poWdO/nwT1ziEA5v/qrv7qOf/CDH3wVh8kpXOdAFhvUEx8daMDjL/3SL61pKguiKU5Z7h0O2Cyve+mghQ5l5NA23ZVhi4JMbZBv/qCLPJ5xSCvO0loAIsv0O2XvmszJfzrBM57xjPU2h/zqtx8qK77mIpDyvEiNzn5IHtlNPOBrNjoHCYfqiLOnUukUQFhTAUFpTOJroSka+q0FwKkSFidLwehRUOmhV2V6DlwrOwVkJMCzTZ7qUb26FC8N2TYxRwnF9RW3YCocVL5419Aq6aSZsW/2VOLrsaFXqiat2fglr8rdrP9M68xs5URfWdUJzuvZUMQrJ/YxLRAvs8z4wWsInOKJBnr7YeXTRz/mmr5+8Ad/cOf5XuhVqcqd9Z/2cpBwqI44jbsQdL3ZIgJ53vzmN6+FxRAYHWH7MZWeUybkiBQcDUejKFIeq5NeMwLKmY2C9OXJMBpCAfcpRxk+Qoyf+dpTCoV7GYrfNbQqm+GhqYzKVpdZruvevogGZOxkUNwso4bBt1erI5lEE1ReDZdnOcaUi2sLMTmX4WzOqLzpJGTsWhgv0hfPEZWrvGnoXVc+iK+f+7mfW5eBTnXcC6UTqv8b3/jGnamDOnBo8fuhgyZAufgkk2Q2eTsoONQ5YgYwKzYPFYuv8hkpsM9GmSGB+1WgIGWiXxnAsGnm80JrQOCgMgADAJt8ppziX//61+/QZACbjjgxQ3FtqBWgmUxSeryIr05+lk3eDK3r6E/Dn8boV4Rn3VyjWSPQs8oBOWFyAG3W54DKU44yhHq7WcecNh7dw36oVLnT2cHUmefpxllVeWd998KZZrMxMUyfaXdD0xZ8VDZI/1OOBwWH2iNWMaHKZRR6GMO9c889d73RHD8ZqjG/lTmbrzZqrQia+8zth4lAi+in3bToNm/NW6z4+UR+oHyCL0/8GNbZQMcTxF+8CZ/ylKesN9W9xW7hBm1lhG1ET5RufmA4hds0j75eg5P7SptyzavMXexbqjvaQpveDh+g6Vl7gvU+Nvt9VRwNm/hool994DnnnLMuH3A8cjYXV2/l+2SkzX37hspUB7LvhEwOF+Zwle/UkI1zKL9einyzAbpT98rDn4MLyZgs/PybRSeHPqZ8d8MObVg4MvIgU7SU69A+R90POSIghxPpgMGhOiLYbJGt8E2FammdvslQhVM4YPLb89K7rkV0DSsrx42HaArrGfzoZ0NOhlVL373Q2w/ziwDHozB8BJXro7+VBetlXBfaI8xRwGaori984Qt30s+tD1g8RL/6GKpbhArUwUvJnpVHfo6srMrzBYE2/XP8WYY4i1O76UgZ0bGQ1gKQ/Js9KrTA1QGL4wH0ycqCUr305G0/NDTNLsDktfAg4dAcMWMVVmHGbyHGsIfAUogfw9wEwpiITsKi6O73wsqcwgY9D7Si+GAQOUZGAsXZ0Ad70aohqHHYDOP5xS9+8VVou844hXjwFgXHhWhHw33XfmdDnowu/qOJZ9fR9Rz6fX51qP5+IHY2BtIaHfRcQ+b7OJ7VgKBf+obJVqnTUY0OEAeUabVYPrqf9YZ4h2edddY6PTrRmvUXlyyjbarjqGONBNrJAibX4pLNterFYApIYFWW0U6BEJBfoQUJfxq8uIlTEcdCIC2auz0XbziIj4wr3lKge0PDAD11wGN0A3HTcILSWIiJduXlCBlSb2gA+dDclMcf//Efr9PPhRS8ohXPu71qZh4ZDZCToRMtDRPeGzHYCig/2qVTVjzbsqje8et+zkdtl0SnHnaWC3PEqR8hWhBdcfh339xWI4EOOSZXvMYfdD2d/1rjiCmG4BIeoWJofkDJtRdzp9KA9JsC2i1uP2hoiraygfzxBsyfnMnMGaZhhIamPpoEZvkZCGjVznNlzXQMyL2haQ7CkGcZlatHNK9lZNF2yGDKUK8lLQeEm7/WlMHNYbAzq3pSEH9+YCbHhejoNSfYZ7QNVJqZnszUw0mk5uKz3smHHuxRWjwrb05SHcjFl8Vno9PCHv1tyhOQCdpWx6M1nS1e55lbqOxrlSMSoM1kn0mwx+fzEjZgCYMCCc61CboNWi/b+rKY0EFiCg61uhM93w+V6W13DpIRM24rasqyKIEnm+EWSBic4ZOfIfPNGh+QEnpmISRAgyF4k10ZeDM0o9jp8ELlCnMoxqoc9NAvrAzXFoYCedG0yU9uDhTEs7kbXtGzUW//j2Nk2N499Lx62LxvnosvYIGGMyobPRv75mnkRw/mfj7W20GAKRvokyJ473MfZIxf8vEWPT3hmby9iMsZZ50tBnGK7MDii3qSKR5s2BuxoAmEf/AHf7DekI+2a9sefiwVf3SoLlAcvvXGFriUVY85HTGdnUg41KEpA9z8XYs5hKj18qznGZNrmGHN62lwe6H05g4ZHSBwBhZtuNv7iEHXDYFyLODNiknHsv8sC0hbayuE0ayXBDNfPSvwXDq95CzL60ygnkGvML8YTj7eR+w5qAxxeEC7uOokrlecQo3ifO66Org3TJ+OUtr5riHkYKUDaFj59CyeZ+MM3WssJjziEY/YeR7WwIDm66Dy6I8tSKss4bXGESmZsK1OcTKrezlbuDmuh6XJOWGOV5rjQUpsH5FyUhCDoAwojW2SeAWUkmKm4UgzDZuBKqf5jm0TkIELQcYOuo6ucqSDMw7gt/Q+TKz+rZByOumqk+ve0FcnoQPnAA3ppIk2iDYjdd0z82E0ev2qN/SlKQ+ongH5dY9W2x41tnpFQIY1bLaDlEXH6hfv8jRUd7hDnoapej/pYPZj2jB14xoPxbluOpTTX2uGpoBy7nWve60FAAmAkAmR4HMu8fOZ603Hc186OJ/thtJrlRn4NEDDrZ4L50IMxeWQwLW4aXBAnM9MzPLs722mVW5Kdp2zoZvhVt40hvgVQnuY5FIj1aHvaChXL0l+DE3d/O6G8tDdpCd9cZVfvHokG6ERhDJKXx2khcGstzINOycdw3jpS4cO/Uxddp0NQD8VHsjjqCN6yUJae5Og+kE8VHdlmifORv1a44gqr4K+DcI4avUS+BSkYYPNar1Km+GeQXntgdnkNYfQg0lnCLUfSudNdosxNpJtHjvHqSfDB9SiMob4DWwKSzs3nDO6DNJcyoeWOLKy+qSEOkerjWp7c5DBMHw0pgNkNIDC/OyacvFt83u+fc/ZckQQX+pFbmTEmc4aWwE5AH5s2jv1ooxOvzDw6DgEoT5kaJHK/BcvUHpymaej8G/uS1bqimehl5fJhz7RYgdBzqyxSO/Smse1mJXTmH+iSY94MMc3DSB3/OHVT5tPubuechWvR5w2eK1xxITQ5xRriVzDeU24AQNt0z/j46w+0Qca1qCdUQeuUwBwVK5y0ELHNecODaGCFOl7NDUU0EkaoDy0GW1liMupihNCm/PKjJYFlYzQ8/iddWiPcPItxKsQzvcRAZqTh+j1PH770ndy8OJyvEJQ3uIsjlQuxA+H8Ky0FkTit5DTg5kORBe/OT8wfLaglKzUd+q/sn0aUX4gf7RdV99gymGurAq3jri6ngKBftyzPATqiBuFaP3L+8hHPnKdhlCnwAm7ldFAHMXq2eSfTqXc0L0eRLnyZ8y9xaF8c0CtLpjGU3nKEhcNoTholbhyzLn6eBQof2UCPDu8rdzyZYTNmdSlYacy0JMPPfc5OtBoVR7wPZrowuNxxPkb+vB4HVEPVprZSITdW2iKZ44ob/VvDpj+yIIjognTGZz1rrz4k27riPs4YvfG/dImUEMNz+QpfZv+gIDtrSXwnANULrDiVn5KRK/FlWjrEaXPMZTfR5820/Rcubu1wEFpv/zLv3ynbKEhGtBwZCScpf1OYB9P2mRTGC9oGXIH+IkWwNc0wJwRzxqC2bPu5ogzhNfUEZ139Rymp2jCZDef+8hzZajnbECj7UPMoLKBazSB+muYQGm2jrjC4+kRHfaVluAIzdDUc0ghxvccEd/RBc0NEvhUDtAq99vplVdIya5zsmg662hvKt6guYgD0iAeASN3H0YnR+3bpzkRB6IQIN3cqgCcygvQegT1xt/sDdDRSxjiKlsZEJANHjJqRwlBfIl3eB6NaOaIE7oXwk1HxNPxOmI0Std9MOea6vGoRz3qKocT0NJwNDJy3d7wbIDoI7qb81ewdcQVHo8j9tJvQNBzo5mi55wDmP9ZSLBI4gNHVvcYvkULc7ziN8uCGaJ4jkhhGTDgDMr/vd/7vTU6Cgako1ShE/7KdDAAKkvZsHhzX5veED3DazwaspbHj85UJ6GFj+oOn/CEJ6zRXA0dcRYwki8gL6vT0YUO0tdgBH0q8UPliMEmTWAU4CQNnumL3O573/uuN+XJ3NE69XWAgA08+clPXt87SCGtfMlcaINfHNn37urWEVeQ0PdyxImbjqi1AwmooQbomdde2leD9TpzflXcfENBqHfpuVdqAEesHNfTOSvT85Rr2DmHedETVn7vI0bXCujkGR+br0qhv5dhiM+5pO1aL+A7otGF5pENees1SxN/c2gadF38piOq4zV1xGTqHu9WwmceJ4aiWR6Q/IF3FhsdzLzplP7RAdHaOuIKj8cRDU0TGmA4FJYBZXBzOGKjFz105/BFHMzpUth8Nq/nqin6U+nKUoeMJ4WJN4+MtvLRiod40qoH6M7fPoR49C4detVxXivPvfKhaxgv8SrOFgceqnef5QfyAkPT6g9t+kcLghnCa+qItjo2ac16ABv6yUqes67ccqH36tl9wBErR95kXsgh+8Xgytk64gqPZ2jq7fupoAwsBUznAATrOyXyzl5OGdHsWc9bpIEznY3nqWi0pxEUxlv3hpjRqIwcstbZWxLSl9e7jz2LB7+PCEqX0ySPeKlc0PV85rwuetHmiOLnaMJikWcZ/mE5omtytmKdHMx959YEqEGaeWxjlUeYA1anrSNuQJUzd6nyfeWa0ZivGBYaLlm25mzl4RjeMGjz2Qutne7PaXp9iROkGIq1MmhD25vb+6EFGJvIejZbBjak9ViMzMolp7EJjw/XeIHihL6PUzlCiAe8xI85YZv58pjr2MvjEDaxyaA3Iqp7xgO6zjkzTAtKNta932jz3IvC5kYWcfAhtLqYMwPX5lHqDW2K+/kB5UpTGTbP8UsGwoc//OE7jRhjJ29pSi+/+ZuFKPUiU+XbOioNqH6geI0gWbEPoTqoUzLrqwINseXzpk7yrQEkU/XR4yvf2/c+OYKG6QD99uZHea41jpgBqPCcFzlpYU7T87l0T9AcMieDWjgrn4zalkVCm5v10Gqb1jJ60u2HysIDZfWaz3xtCO2cPMUXDw07OUbOwWHnK04Z18ynl5oHlON1zj1BNKchB5616V/valW5NyAAWtEAjShmHKhRq2y8MeZJux4nA4aMG0x6dBMkYyANdK+cWc8OhpNNtOfIxd6rE0ATGprWA9JZx+Dq/TsGl/zTi7oUd61xxKBfg0pwfl8BzOEmAcIMz4Z+6cM29AFlOi5G2AwmZ/HKFUjx+2Hp2mtkANHJkSo75VFkz6zgAcaMDocuTUbLSKZB6K0AB5QHqEsOEV81EhOSjXhDXvSmc+jNAbpz7xDM0UaNYOWzha6BnroGCN1CSEbqr64AnegWVpfdoHKrWz0i2m3eV1b6b9uoRosd1EgU9q5odP3ATM/RpYMaFGXAa40j1sp7D40AKJdwHb5tr4fBUMxs+RlNX3HL8AnOHhOBoQmlEU/IOY335sCktxcoFzbX7G2DaBYqvzIqBxpm4h8oz9BWfMYRLaGhmnfsfHB4Gqp805CnkboG4ktXWsM+y/iW+/00+kMf+tD1KnJ5pauhExetWbbrehD1gNLitXoayagP3aUL8YbZ8m/SjT/xk98a2cmfa6+gpV90k7H74uwVZ0uAHYif+Uxbqq/QtlHPQnVBuzpMR4z2iYRD7REphKFMAzZpTkltaFPSHKLKJ89s8TtrmpINX6Mr1FrrETOO4wU/fZYTaijQmnS7NjxOidC2wyxrDk2j4/6ud73rutGYUI8FGfF0kGh6BhgJ+QTdF5eRl2/SysDQmjRKI6/rypLGXK86Vt9kAPXyve0Q5NDsavK9qYsaYOXI4+jgLGvKW0insyz2okesl5OOjDu8AJRrH9Hz+G9qVK/Irq5VjkjJJs4qTyhQj5ghEoA0nMypfyuRXrj1vt1sgQnVV8BABsURtXqEWjoLP2jYHzsWWqQRej/RMNPqpX0/H1RyqBo9yKmc9LfRbFHCl8+gzWiHBuwnWn10b/PZG/YOAECLTLXUZG6YxRjNpxiPUGsOuzbMshhDcXoDobmb4Xroefm7L797z5TlXt5oSGfbB+DLQpgFEvUlDxvrDFudyZXcIcOnjwzabzqSs5eP1f2HfuiH1jQBnVZnuqJnTke+Dhokf9fKSb9dQ+V0b7OeTSgHfz/wAz+w3vCnJ/rypr+FMzTjyyjMc2XSg9HL/FzGpiPWeJxIODRHTBkNTUMLI5RVK6TVtNzsGeFPhUDORlFaOXlqZeeqKUeUbnM4sh+iKcRPwFAB46zVhVbiavWBxoNhyC+dsDc0AB5nb+BUEMfgWPJCRjqvIZklm+IYScY8n4vTQ4iH0tbAuRfiYcZxUosfLbZwXsf5khs5kn9OWJwQ1qOkk55bja0em04YmDZUjjLkd5/8otV19MPS3eUud9mpf9CIpsW2e9zjHut4dQbS0zOaLQZdqxZrVFCPSMAJ2TIypWVQFHbPe95zLaSp3JTGKISWrQN5csToZiTFRW8/lNb7cPECKM9LrJ5lcL08rNx41htWphbclgBQN6DunKAer3iAhueVmTyCygAzXyBuGk98gcJJfz7nnIbKHcpmIBqaZJe8q3/3NZA5abIR6t0C9CcvNQq+GxOt8lXOjI8+TL7ZgzhnTYMczapxDiatBUKQDKVjd9GX7iPeEVWqijHEekRCENpmAAlJWo6YEGcLOXtHy9aAcjMg8QQ7DQbmiD0XpvgZQsesMpz4dmZRmtCiQpDTML5oQYsc0VE3Bql3MMepd/S8Mo4cWTnYFepy2fL+5dJl3Y+ssl9+8Wo+t7q8ZLlsuXT1/MgKL11lsSzE7FBC4vIr5FjdXbFKjeQq75EjK+dflSHtqqTV/6NwxSoNDPDwyle/ai1DvJ111lnrOtzw+queahVC9+QorJ5kmlynURtBBNW1erYO4INR0sIcLBqTZmVJU/nSdK0HB5Uj7JeO44eTZV+ly65KM39Df5PnEwGH5oi15ISi4pBjaZkYqDQME/aBqZRAaOZ7bU57wdaS9HOf+9z1RrPNWic+agUpEG09l6Ne8pRf6Hsu4l3b/HUvjQ11PZvvfdpIfv7zn7/eRDbfk15aixe+FpZBBeYr+KVYZaMJUqp6NYdLJhPevnKr1UBzHX/xkaNOt/adI6s51qUrI7p8dRNe6UhXXL5yviMrN7vsorUjXrS658Tw4su5n7JXtKTZA5L7O971zuXt73zHurG0ae+Qhfr+88+84/L5n/t5a9mQkUMXZJys4aaDGppO2rC00IrxXIwD5KsM+5b0RH72mKXPMaGvEdCbXhuPVojn8Nec2xxSGoc52Ar9sZFsxSF+axDKqp7egZ1D13gXwoOGD7kjglkZwwQLALVIhhEBQaq84UbOJI0ziOIDcyurj+ikpIyh0PCwXhMofyosmHSBBYu5aoqeRRcNSb1fChNyNLRnjyi0/6Ychh209A5yUCA/t1753FHfWYVX6cH8W3WDl192VI6rq5UTrsq9dOW6R1b0rsDX0axquJLi6t/q7sglK5oXL+8/crTRWOdd4QT3a4NbXb/rvKOnlfCYrDy47JIPDK8tUNWLqOd0SPcwR1T/6E+Y3y0KlbmpF/NIOi4NW6GfSa8GXjnJtkMSGkuO2aZ/tuETHG36V2b6UO9N3ZwIODRHTGCbH48i3LUhrNJUacMEz3JWw0XCkS4lcETPOGKGQWny5Zy+mwkIu3zoJPyp0HjwzmK0hOgZRgVTYfEsr55UekjhzRFTrHQWaKrjVLb8l126MqLLDE9XESs0cjxy0ao3u/jogozh6PuvuGy5QA+3SrCmg4SqyEO8q+pcdsmR5cilqwerONVzua7tiqDh79o5rswCGqZecOH7173ipSsHrrdXRrJyTYfza+DVl4zoID14FQngG6LhuFvpoeFvkANVXvbIEaWdq6YW0NCcDZz78uJxLZsVRNcnF9lEiE51LK9wp/FZQXyD6B0kHIojBirW/I9wIYMXD6twq6aERsl+VARIo4UjJOcipckAMgKYE3nDW9oQTAWilZNUfp/TqFeElsRTTPkpeSrIcAsPKdpZRyBNxmGRBh3XM+/6+vILV85hSHnJivbKqy5Zxa3swEhUie9feZkh58pcVvErI3r7m5fzX/Li5fV/+IfLy373d5fXP+EPlr/7oz9e3v0XL1kuefubVj3mir9Var3oYhS46h0vv9IR9bzrUe4qxdG54mXLZZcfWd59/nnrOMPG6pvc8Ojadoz65Rgw+Vd3jlj9omOEUHrY3A7kMGveVlgjlSOizVZc285Be/aEM49rz2oogXcxK9dck02ho1zpg+oqrL7dHzR8yBwxIQTuKdjbFwSRYJwvbL6gwloqK6uWnvUsFG7Tf/YgQK+Z8qM3nYczUuQUYk5ESSnA85lGj5jSla8M+06zPhkBReJLfu/7ySM9ZZujmA9Kqyz5teal/3/giouWy1bIEa/0jeXCVb53XXHxspq5rRi9eLnwja9f3v60Jy+v/ZEfXp731V+zPOUzPmt52s1vszz35rdb/uy0f7E8+Sa3WZ78mZ+3PP/Od1le+4uPXt712pcs77/svNX8c6Xfy1aOuRrOKlvvesnKEy38WBwy11S7N7/1LeuQU+YcoJ5CXrIwiqmuySqkL41Svf+mHQDbCTMPnI4D2KQzov3kHKRfJ4bATJsuyXY6FtD4GZrSZQ0FnvEH1Akt+TZtbDr7QcOHxBExHgYp1lsC3i53UNlvP3jTwiatTXub4YZ49uASPifjVDZofc9Tui/7si9bbnKTm6yfMwahlczoQtfmmibu0tvcNRxKuMC1n3X2zGY02owIX85v2gB2eNrrOPYJORseffp9GiolOm/pdI1NZRv8f/Inf7J+RgY1NIwiZeeMyejySy5cNRTvXzuBRxeshqoX6f0surz9bcubf/FXlnPudvfliZ/zhcvvn3r68oxbnrY87zanLy+69RnLy08/Y3n1p91yee3Nb728+tTbLmff6JbL0250xvL0L7nT8tc/+3PL8pZzV8PcC1aMHi2bI168std1z7hyxCOXrRqA1XzzLW9769o5f/mxv7L+Tit5k406k41rUwK9Irmoq6GqxQ8y6wCEha6Ag2kA0yc0n57yA+SLvoPwyrP4pdF2mD76aMuX7Fw7fEHHFmXwyE6iBT0zHaJP+nne8563pqXBn8PTaAL85qDdHzQcmiMC97VYc9VsOlStlhYMprywFli6WjnYRrwyEjDHk7YeU5ocodDWRGVCn333LMXg11CrNMK5fSGtMjeVWT0ZS86vFS6+uO71Oe9dOQqVG6S+b9UTLiu8+NnPX87+H3dffu/Mz1r+6NQzl5fe+DbLuTe7w/L60263vOymt1r+4sa3Wl5709svLzvt9OVVt77t8rJTbrmce+PbLe+8yWcv53zymcsf3OFfLs+5672WSy44f724A9bbH6tihUcdcdUIXHLx8t4L3rcemt7jXvdcy5bcJqq/hjInmjqeYdfqmEwK07sFsGS+qedswe9lpKcJ9dDK6awpvcQjbEtEXK93AfRmI+Aen55vlkU35TtoOPQ5YpUVureknxAzdoqYiwHNR4pLUQkbGuJm1IAAOWI0YaddEq6WznEoz6RD1xsAoDQMyL5YZTKaPqeRQiu3uhVfiAZ6VvPWPd7K2NfDwlUI1yWt/l180eWrYejly/nLe1dd4puW8375ccsLPuNLlpfedOV8K+d62c1vtbz0tFOXN5x6xvKmm91+ecWNb7284rQ7LK9ZOeiLT7v9cs6tz1yefdotl+fe6ozlFad/+vLam9xxefnNP3959q2+YPnrhzxiNdE8b3nXqqgLV3a8mjKuPH/1b8Xy21e8GKq+ddXzrrhdHvTA71tucP2VTJLL9T+wh6fhApuyBtOQZ6MEelbv4ohg8kxHU+fijESUgz4kT/fTuZ2wYjvpB+aQhYbC0QDZe8Ph6MXjrBvYrMtBwKE5YpWZggUYSoh6uylQDpgBiN9UmDhpYL9rgW5OzsmiJ490AC8ZhN5ullmPCGt5e/u+pfqcFdT7AnQn4kUPYFHI9W6OKCSJSy67dLn0/UeObj+8/x3La37iJ5YnnvlFywtO+czlDbf89OXNN7n98uKb3nx50ZlnLOeccfpy9o1vtvzFzW+7/Pmpt16ec+pqmPpppywvO/305a/ucNvllWecurzkZjdeXrO6/8szzlxeeOqtlid+9pcsb37G01b0L1suuGTVIOqQL1r1BJdcvjh6fdFlq0ZRj7jqIe/3ffdZrnfdVUN3g+Ry1KA1fKYRyY6MNm1HPZMbGQA9TnGBt/inEwoh50nnd77zndf0pvOlGwjamoA5ZPnRc209YdoFaEQCihN2DfBcuQcNh+aIVdzbDcbpNs29KW0ux8BTCLQR7xePbLZCcxUbvjZo3ZtD2FssPXRv3mKT35fQ0HZ4IBo2bf3wibmCN9jNY1xrLT1H32axzfo5bMa3N0b88Is0NvT9RJi5kXf+0FIf6ACA+enZZ5+98yOgGeB+jii0V3eFidv5713+4qcftfzBP//i5QU3vsPyslPvsJxz6i1WTnfa8pe3vf1y9ukrp7r5qcvTPutzlr/4hv+5nP2t37I86zu/dXnRv/7y5Vm3OH152aeesvzNTW6+mi+esvzFrW+2vOT0U5aXn3bz5Tk3uu3yqvs9YNUdvHO98b+GFS8XXnzR8r5VeP4FqznTRReuDfHnf+7Ryxd8/ucuX/B5n7825Ovf4APvBtojZJzTYMmyepOBrxqAhnzQq1KeQ9/l8WNE5v7pXSPZdQ6qIZ3ODOjXIQv6heZ/c3FNKG+ro+4NTUHOCPBAf/ihuxaBprMGJ8IZD3VoysAZPqEnpL4zmhD1XM6RJgzCSxCuAYN2+sanNqYDzxU8ivAeWnmFGoEOAsunTHuEM01OyIFSfjyUzitOfWqhVth1PTXaTn6Qq7yGVML1GdPVPHDTEW0h6Iks2Pz9bzxh5YRfsjxz1QP+7ZlfuLx8NQx94a1PW/709JUznmaF9MzlRV/3Tcvbfu8Jy/Kmv10xetFy5PKLlotf8Nzlxff43uU5t/785bX/9Mzl72/2mcsrbnX75QWroeorz7jdapj6GctTvvBLl/e+7IXLxVes+kBlHrl01T+unOqKlfGt6uVkDdAoXL7qIYXr1eCP+oB+2iOsV1RHQ/6el6a6A2FvO5AXOU1dbcqvOI5IH9Ehv7mQR8czTzbVNT0IOWsOmB7SH5SOPRm5TJA2PGg49B6x16A4Y4KwLE1gKcdX3EDOKOQY9S4cog39TVqzZW1DP6Nps15ZFC30ziJBV4breAXN8wJpvK2AzjSCsLI7GM4AGBOeGYAhKOc76ohHHZAjWiF9z+teuTz5q756ed4/O3M595aftbzw026+vPLUWy6vv8VqzreaBz7jRrdeXvnN37lcsmrFr7jswmVFdTlv5URvufTi9R7jm190zvLcb7r78tSbfPbyZze+4/K8W33W8owzPn15xi3PXJ536h2Xn7vVpy9/80dPWS693ArqSp4XX7h2RKupF634OjpHXMnr/SvKK0d0mEA9rneDo07G8L0eNRtJ0EeocsZ56FtadfeuYbKB5G8kNPXlGo3u52cQ02HbGfJKC5UNxc8GQRlosRWQM4KmGemQswJlbTbAJwIOzRETQmdNCayN9+677s0KeaYgZqvWhj5By1urOhXiF28zFsJ1xKwySm/RIAcH0nUvL2RMGRQe9KzyMsyUXbkZUSdr6g3lvaojHnVAjrjunS585/JXD3zo8tRTzlxe+6lnLm855Q7LC25xyvKK256xnPspt1xe9s8+c3nmV/7X5T0veeGK6orHlRMtqx7rstVwkjNdcMXqfuWQ73z2c5fX/p+fXN70Q/93eduP/dTyxp/8seV1P/6w5c2PeNTy4h/+8eU9f/nK9Sop5zty6dGe8MiqoXDVEbfz3nX+itSKr5Xo9ew3+OgPOIc5IlCfRg+bb2vMI241ZJ1RTc/kNRvQ2aiRq9ArToBOsoN6skY2EM3kXzgdXOMP8EMX9FsPXbmGyukpmI570HCoQ1PlGJpWeUrbdCBvYziSVAtIeBRBSEL3BNTpm/JHA4oTzs9pAO8BzpP5FOXnnEHOh3YKKEQDlMZnMGpR4xvOBsF8U/7qAZxcMTTddEQb7e954WqOddsvWl5x09svr1sNP//qlNOXl3zGGctLVz3Sa29+h+UPz/js5dxffeyq33Soe8XTBas6rbzovZeu5ncrmVx44arRWMWvtyZWvdkaVvGGn5fYClnB5ReseFmVf+nKYXfOj64fXLFceNlF66Gpql64Snfk0suX957/vvW8fHNoyojoAdCpxavkAfWIm4tY/Row+aSfZJXj0U3OqTynb6yqB15wjg6UtvR0GY8w2mzNYs3UgwZ5DnGNxHQQ6RvQeXovPEg49B7Rp/e8qW5yb+Jt49sii8mzBQ4LKL69YhPego23xe1d1ZoB1zbrEzglGLKghw566D7gAQ9YL7LY7OUYtiFs5ipbKD06bVwrT7k2lcvnmXtzJaF7CzbKrEFhVLN1b+4iP/6d8AHnvef8KxdrjiJHXB/eXuGLf+GRy4tW87jX3OJ2yzmr4SgHfNFtbrG8/ma3Wl5wszssT/1P/2FZ3vy65a0rN3zrRVcsb1vZ5/PefN7ygvdesvzFWy5aXvrOI8uf/v37lue+57LlGRcdWf7wPRcvLzjvsuXst1+yPPdtFy9Pu+C85VWr+eR5K8d1vO3Sy3CwLO+3SLQKLzpy8Zq/o454yXLBe1eGu7pe6+r5z12HZOvtBUCf6dQCDb21UNZnDzVcpdEjTkeB3ZOfHs6RRAswaFlA6YttaORIDg0ohw6hYSc6m/IXZhucjh7o0MKc4XXp4sHhgRpsDX4we8iDhENzxFqYvXA6Wr0dJCi9ZAqVjqC82pIQCduPmwal7cdjKBo6KgfmvI+TUyIaldl1rXzl7IeVUUscTXtx3/s9915p9MjK0N+9XHgp4zyqXD2jHuqK8967/P5qjvLMW95qeeVpt1tefdPTlpff7vTlZav7vzx15Yg3WTnkwx6xsuz3LRe8/5Ll3ats/+Vnf3W5xd1+drnpN/38cqPv/tnl9t/22OUW//vnlxt/588tn3j3Ry03v+djltt+62OW29z5scsZd/2d5RPu9tDlEU95+vKulXetF2hWw9LLdPAr9IbGJSv+DE0Z3vrUyfs+8IlLvTjoPj01QgFTlz2fwBlquMglOXUvnL8GHHDm6SBody/sp7vJfi3vK2kJc8hZhnTCdFoaPWIw+d+tLgcBHzaOmOAYdI6YIoBf6PWcQgnVaZccMDDHmMq36Z8SASVbEIjOpjPJU7zr/VD66Agr9wbXu/7ywPs/YCUAh6rftZ4jYuGyI0ffO1xVarnwjW9envIFd1pedcppy6tPu83yqlvcannRGaevN+ltX/zxp912efVjVo54ZDV0XDnQa8+/eLntD/zc8jErB/vk73j+coO7PX25zt2ftFznu561fNQ9/mS5zr2fsnzU9zxx+djvevry8Xf/0+Wj7vaM5ZPu9mPLY5539nLeyhH1gVcc8cbHSggrPgyPOeI73330XUlyufjCi3Z6NBKfq5eFAZmK2w85Yg0bGdFrci300vR07ugCccUXgrmPGC3000NOutbFqkz30vW89NcaRzwWEHpOkiNCgrNNAVJAPSJBJlAHkRkOqBWtR6z1q9ck3JzW3qJnYS3kVFiK3A9LI318u/+YG370ct/vvc96KPr2896x5h040P2+K1bXKz7Of9Xrl6d99r9ZXnvKGctrVs736tNvtzzv9FssL7n1HZdXn3rH5SU3uePyxt/8lRXjFlmW5Vnnvnv5hPs9eu18H333c5brfOdzl+t8H0f8o+UG333Ocv17nL169sfL9b575Zh3++Plo+7+nHUP+Yy//rvlgpVbOUVjfHpUBkcXQjQKbV/g0aopIPNpijWGRhXTUYT7oX3eZEI+mzIV12f50195p3OCdCeNdQC06A0NiF73s8z5TDhHQns54omCk9YREzrgiIRLSAzb/MHcwLzPHMJhbMvNxv3mYeZu5n8UM8HrL80zpbHQYP7RPNG184xomCNKZy6ZslKYVUHP9kP5zCubUzqA7PrLv/TLlkf99CPXJ1recf47dxqLC1bD0vdyxJWBvf/Vb1ge/1n/dnnlp91mecVNb7u8/NTbLWff7tbLi299++WVp56xnH3zM5ZX//SjV2PqC5fz3ndkedxzX7nc4j4/tXzSPX99+eS7P3650X0fv5xyr59ZbnyvX18+7tuftlzv285ZPmrVU37svf9oueF3r3rH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">');
+        }
+});
+</script>
+<script>
+$(function(){
+    $('#nav>li>a').eq(0).addClass('Select');
+})
+</script>
+
+<!--我要参与按钮显示隐藏 -->
+ <script>
+
+    window.onload = function(){
+
+        var box1 = document.getElementById("FontStyle");
+
+        var box2 = document.getElementById("div_tk");
+
+        box1.onmouseover = function(){
+
+            box2.style.display = "block";
+
+        };
+
+       	box1.onmouseout = function(){
+
+            box2.style.display = "none";
+
+        };
+
+    };
+
+</script>
+</html>

@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	站内检索
+</title>
+    <style type="text/css">
+        DIV
+        {
+            color: #000;
+        }
+        TD
+        {
+            color: #000;
+        }
+        .f
+        {
+            color: #6f6f6f;
+        }
+        .flc
+        {
+            color: #77c;
+        }
+        .fl:link
+        {
+            color: #77c;
+        }
+        A:link
+        {
+            color: #00c;
+        }
+        .searchbox
+        {
+            border: 0px solid #FFFFFF;
+            height: 19px;
+        }
+        .w
+        {
+            color: #00c;
+        }
+        A.w:link
+        {
+            color: #00c;
+        }
+        .w A:link
+        {
+            color: #00c;
+        }
+        .q:visited
+        {
+            color: #00c;
+        }
+        .q:link
+        {
+            color: #00c;
+        }
+        .q:active
+        {
+            color: #00c;
+        }
+        .q
+        {
+            color: #00c;
+        }
+        A:visited
+        {
+            color: #551a8b;
+        }
+        .fl:visited
+        {
+            color: #551a8b;
+        }
+        A:active
+        {
+            color: red;
+        }
+        .fl:active
+        {
+            color: red;
+        }
+        .t
+        {
+            background: #e5ecf9;
+            color: #000;
+        }
+        .bb
+        {
+            border-bottom: #36c 1px solid;
+        }
+        .bt
+        {
+            border-top: #36c 1px solid;
+        }
+        .j
+        {
+            width: 60em;
+        }
+        .h
+        {
+            color: #36c;
+        }
+        .i
+        {
+            color: #a90a08;
+        }
+        .i:link
+        {
+            color: #a90a08;
+        }
+        .a
+        {
+            color: green;
+        }
+        .a:link
+        {
+            color: green;
+        }
+        .z
+        {
+            display: none;
+        }
+        DIV.n
+        {
+            margin-top: 1ex;
+        }
+        .n A
+        {
+            font-size: 10pt;
+            color: #000;
+        }
+        .n .i
+        {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .b A
+        {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #00c;
+        }
+        #np
+        {
+            cursor: hand;
+        }
+        #nn
+        {
+            cursor: hand;
+        }
+        .nr
+        {
+            cursor: hand;
+        }
+        .ch
+        {
+            cursor: hand;
+        }
+        .tas
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .taf
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        .tam
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        .tal
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 6px;
+        }
+        .sl
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .r
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .sl
+        {
+            font-size: 84%;
+        }
+        .r
+        {
+            font-size: 1em;
+        }
+        .e
+        {
+            margin: 0.75em 0px;
+        }
+        .sm
+        {
+            display: block;
+            margin: 0px 0px 0px 40px;
+        }
+        BODY
+        {
+            font-family: arial,Simsun;
+        }
+        TD
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            font-family: arial,Simsun;
+        }
+        .p
+        {
+            font-family: arial,Simsun;
+        }
+        A
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            line-height: 120%;
+        }
+        DIV .j
+        {
+            line-height: 120%;
+        }
+        .g
+        {
+            margin: 1em 0px 1.2em;
+        }
+        .hc
+        {
+            width: 31.5em;
+        }
+        .ch B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .ra B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .Mr
+        {
+            color: #FF0000;
+        }
+    </style>
+    <style type="text/css">
+        a
+        {
+            font-size: 12px;
+            color: #333333;
+        }
+        a:active
+        {
+            text-decoration: none;
+        }
+        .1
+        {
+            width: 160px;
+            height: 20px;
+        }
+        a.bottom:link
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FBF3DC;
+        }
+        a.bottom:hover
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FCC352;
+        }
+        a.bottom:visited
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FFFF99;
+        }
+        .g .r a{font-size:18px;}
+        .g .j{  font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+         #trCompute a{font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        function JumpAdvanceSearch() {
+            window.open("AdvanceSearch.aspx?" + document.getElementById("hidQuery").value, "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="FullSearch.aspx?SiteId=27&amp;Keyword=%u6587%u5316&amp;PageNo=776&amp;QueryField=3&amp;SortField=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTM2NDk0NjEwD2QWAgIDD2QWIAILDw8WAh4EVGV4dAUFOTc1NDVkZAINDw8WAh8ABR4gPGZvbnQgY29sb3I9cmVkPuaWh+WMljwvZm9udD5kZAIRDw8WBB4LTmF2aWdhdGVVcmwFeGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz0xJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4HRW5hYmxlZGdkZAITDw8WBB8BBXpodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89Nzc1JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8CZ2RkAhUPDxYKHwAFAzc3Nh8BBXpodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89Nzc2JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4JRm9yZUNvbG9yCo0BHgRfIVNCAgQeB1Zpc2libGVnZGQCFw8PFgYfAAUDNzc3HwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03NzcmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCGQ8PFgYfAAUDNzc4HwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03NzgmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCGw8PFgYfAAUDNzc5HwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03NzkmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCHQ8PFgYfAAUDNzgwHwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODAmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCHw8PFgYfAAUDNzgxHwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODEmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCIQ8PFgYfAAUDNzgyHwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODImUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCIw8PFgYfAAUDNzgzHwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODMmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCJQ8PFgYfAAUDNzg0HwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODQmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCJw8PFgYfAAUDNzg1HwEFemh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz03ODUmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCKQ8PFgQfAQV6aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTc3NyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfAmdkZAIrDw8WBB8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89OTc1NSZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfAmdkZGSa54YVzTN5Pk64J/PNiGKlk6VMXw==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDAKv97+QDwLeipm1AwKln/PuCgLeotLECgLfotLECgLcotLECgLy7PDJCALx7PDJCAKpqMmaAQL73sH8BwKyo6XSDQKHsrC1BKm4w3SZu5P5xnaSX6jfFgqnaX6X" />
+    <table width="800" border="0" cellspacing="5" cellpadding="0" align="center">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="10" style="width: 100%">
+                    <tr>
+                        <td style="width:80%">
+                            <input name="txtKeyWord" type="text" value="文化" id="txtKeyWord" />
+                        </td>
+                        <td>
+                            <input type="submit" name="btnSearch" value="开始搜索" id="btnSearch" />
+                            <input type="button" onclick="JumpAdvanceSearch();" value="高级检索" style="display: none" />
+                        </td>
+                    </tr>
+                </table>               
+                
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="10">
+                    <tr>
+                        <td style="width: 100px">
+                            检索字段：
+                        </td>
+                        <td>
+                            <select name="ddlField" id="ddlField">
+	<option value="1">仅检索标题</option>
+	<option value="2">仅检索正文</option>
+	<option selected="selected" value="3">标题和正文</option>
+
+</select>
+                        </td>
+                        <td>
+                            排序方法：
+                        </td>
+                        <td>
+                            <select name="ddlSort" id="ddlSort">
+	<option value="3">按照发布时间</option>
+	<option value="2">按照相关度</option>
+
+</select>
+                            <!--<asp:ListItem Value="1">按照创建时间</asp:ListItem>-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="t bt" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <font size="+1">&nbsp;<b><span id="lblType"></span></b></font>&nbsp;
+                            </td>
+                            <td nowrap="nowrap" align="right">
+                                <font size="-1">有&nbsp;<span id="lblRecord">97545</span>项&nbsp;符合&nbsp;<span id="lblKeyWord"> <font color=red>文化</font></span>&nbsp;的查询结果</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660189/1660189.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    巴基斯坦中国问题专家：“我亲眼见证了新疆的快速发展”
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：专访：“我亲眼见证了新疆的快速发展”——访巴基斯坦中国问题专家苏丹·哈利　　“我真正亲眼见证了新疆的快速发展，乌鲁木齐现在的繁华程度让人难以置信。” 巴基斯坦中国问题专家苏丹·哈利日前在接受新华社记者专访时这样评价中国新疆。　　哈利曾是一名巴基斯坦空军飞行员。退役后，哈利开始了记者生涯，撰写过多本著作，是巴基斯坦的中国问题专家。由于工作关系，哈利从上世纪70年代开始就经常到访新疆，并一...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660189/1660189.htm
+                                                -
+                                                1.10K 
+                                                -
+                                                2019-07-21 10:08:47
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/39912/41087/41093/Document/1660188/1660188.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新华社评论员：新疆的命运始终与伟大祖国紧密相连
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：新疆的命运始终与伟大祖国紧密相连　　国务院新闻办7月21日发表《新疆的若干历史问题》白皮书。白皮书运用翔实史料和历史唯物主义、辩证唯物主义的观点方法，正确认识国家、历史、民族、<font color=red>文化</font>、宗教等问题，科学回答新疆若干历史问题，有力驳斥了境内外敌对势力歪曲历史、混淆是非的错误论调，释放出正本清源、扶正祛邪的强大正能量。　　中国是统一的多民族国家。在漫长的历史发展进程中，新疆的命运始终与伟大祖国...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/39912/41087/41093/Document/1660188/1660188.htm
+                                                -
+                                                1.26K 
+                                                -
+                                                2019-07-21 11:47:16
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660186/1660186.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆是多民族共同生活的大家园
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　新疆自古就是一个多民族聚居的地区。多民族聚居是新疆历史上民族分布的显著特点。　　史前时期新疆就是一个多人种混居的地区。这一时期新疆境内的人类头骨鉴定资料证明，当地居民既有欧罗巴人种，也有蒙古人种，同时还存在着两类人种的混合型，这表明这一时期新疆已经不是单一人种的聚居地。　　至汉代，活动在新疆地区的民族则以塞人、月氏人、乌孙人、羌人、匈奴人和汉人为主。大约在公元2世纪中叶，鲜卑人进入了新疆地区。...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660186/1660186.htm
+                                                -
+                                                2.76K 
+                                                -
+                                                2019-07-22 11:43:01
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660184/1660184.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    各界人士热议《新疆的若干历史问题》白皮书
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：历史不容篡改 事实不容否定——各界人士热议《新疆的若干历史问题》白皮书　　国务院新闻办公室7月21日发表《新疆的若干历史问题》白皮书。白皮书发表后，引发各界积极反响。大家表示，新疆是中国领土不可分割的一部分，新疆各民族是中华民族血脉相连的家庭成员，新疆各民族<font color=red>文化</font>是中华<font color=red>文化</font>的组成部分，这是不容篡改的历史，是不容否定的事实。　　新疆克孜勒苏柯尔克孜自治州党委常委海布努尔·玉山认为，白皮书系...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/39912/41087/41094/Document/1660184/1660184.htm
+                                                -
+                                                1.19K 
+                                                -
+                                                2019-07-22 11:31:14
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/37259/Document/1660182/1660182.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    多国学者积极评价《新疆的若干历史问题》白皮书
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：让国际社会更好了解新疆——多国学者积极评价《新疆的若干历史问题》白皮书　　国务院新闻办7月21日发表《新疆的若干历史问题》白皮书。白皮书科学回答新疆若干历史问题，有力驳斥了境内外敌对势力歪曲历史、混淆是非的谬论。多国专家学者表示，白皮书起到了以正视听的积极作用。　　法国女作家、中国问题专家索尼娅·布雷斯莱曾游历新疆各地。她表示，白皮书向国际社会详细解释了新疆的历史和现状，有助于了解真实...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/37259/Document/1660182/1660182.htm
+                                                -
+                                                1.03K 
+                                                -
+                                                2019-07-22 10:51:38
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/31773/31774/31783/Document/1660176/1660176.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    习近平再次会见阿联酋阿布扎比王储穆罕默德
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　国家主席习近平7月22日晚在钓鱼台国宾馆再次会见来华进行国事访问的阿联酋阿布扎比王储穆罕默德。两国领导人在轻松友好的氛围中就中阿关系和共同关心的国际和地区问题继续深入交换意见。7月22日，国家主席习近平在北京钓鱼台国宾馆再次会见来华进行国事访问的阿联酋阿布扎比王储穆罕默德。（新华社记者 黄敬文 摄）　　习近平指出，今天上午我们进行了富有成果、非常成功的会谈，见证交换了多项合作协议，数量之多、内...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/31773/31774/31783/Document/1660176/1660176.htm
+                                                -
+                                                1.76K 
+                                                -
+                                                2019-07-23 07:03:41
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/31773/31774/31783/Document/1660175/1660175.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    习近平同阿联酋阿布扎比王储穆罕默德举行会谈
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　国家主席习近平7月22日在人民大会堂同阿联酋阿布扎比王储穆罕默德举行会谈。　　7月22日，国家主席习近平在北京人民大会堂同阿联酋阿布扎比王储穆罕默德举行会谈。这是会谈前，习近平在人民大会堂东门外广场为穆罕默德举行欢迎仪式。(新华社记者 庞兴雷 摄)　　习近平说，去年7月，我对阿联酋成功进行国事访问，我们共同宣布中阿建立全面战略伙伴关系，开启中阿携手共进的崭新篇章。一年来，双方积极落实访问成果，...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/31773/31774/31783/Document/1660175/1660175.htm
+                                                -
+                                                2.15K 
+                                                -
+                                                2019-07-22 16:44:43
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/31773/31774/31787/Document/1660174/1660174.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    《习近平谈治国理政》第二卷少数民族文字版出版座谈会举行
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　《习近平谈治国理政》第二卷蒙古、藏、维吾尔、哈萨克、朝鲜5种少数民族文字版已由民族出版社出版。中央宣传部、国家民族事务委员会22日在京联合举办第二卷民文版出版座谈会，总结交流翻译出版经验，研究部署学习宣传工作，进一步推动习近平新时代中国特色社会主义思想在民族地区落地生根。　　会议指出，《习近平谈治国理政》第二卷民文版的出版发行，有利于民族地区广大干部群众更直接、更广泛、更深入地学习贯彻习近平新...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/31773/31774/31787/Document/1660174/1660174.htm
+                                                -
+                                                0.92K 
+                                                -
+                                                2019-07-23 09:56:05
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/31773/31774/31777/Document/1660173/1660173.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    《习近平谈治国理政》第二卷少数民族文字版出版座谈会举行
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　《习近平谈治国理政》第二卷蒙古、藏、维吾尔、哈萨克、朝鲜5种少数民族文字版已由民族出版社出版。中央宣传部、国家民族事务委员会22日在京联合举办第二卷民文版出版座谈会，总结交流翻译出版经验，研究部署学习宣传工作，进一步推动习近平新时代中国特色社会主义思想在民族地区落地生根。　　会议指出，《习近平谈治国理政》第二卷民文版的出版发行，有利于民族地区广大干部群众更直接、更广泛、更深入地学习贯彻习近平新...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/31773/31774/31777/Document/1660173/1660173.htm
+                                                -
+                                                0.92K 
+                                                -
+                                                2019-07-23 09:56:05
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/guangxi/Document/1660171/1660171.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    广西举行庆祝新中国成立70周年玉林市经济社会发展情况新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：7月19日广西举行庆祝中华人民共和国成立70周年玉林市经济社会发展情况新闻发布会　　广西壮族自治区举行庆祝中华人民共和国成立70周年玉林市经济社会发展情况新闻发布会。玉林市委书记、市人大常委会主任黄海昆，玉林市委副书记、市长韦韬，玉林市委常委、常务副市长丘德奎出席发布会，介绍有关情况并回答记者提问。发布会由自治区政府新闻办副主任罗联生主持。　　广西壮族自治区政府新闻办副主任罗联生:　　...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/guangxi/Document/1660171/1660171.htm
+                                                -
+                                                20.56K 
+                                                -
+                                                2019-07-19 09:53:51
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr id="trCompute">
+                                    <td>
+                                        <a id="linkFirst" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=1&amp;QueryField=3&amp;SortField=1">首页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkLast" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=775&amp;QueryField=3&amp;SortField=1">上一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="link1" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=776&amp;QueryField=3&amp;SortField=1"><font color="Red">776</font></a>
+                                    </td>
+                                    <td>
+                                        <a id="link2" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=777&amp;QueryField=3&amp;SortField=1">777</a>
+                                    </td>
+                                    <td>
+                                        <a id="link3" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=778&amp;QueryField=3&amp;SortField=1">778</a>
+                                    </td>
+                                    <td>
+                                        <a id="link4" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=779&amp;QueryField=3&amp;SortField=1">779</a>
+                                    </td>
+                                    <td style="width: 9px">
+                                        <a id="link5" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=780&amp;QueryField=3&amp;SortField=1">780</a>
+                                    </td>
+                                    <td>
+                                        <a id="link6" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=781&amp;QueryField=3&amp;SortField=1">781</a>
+                                    </td>
+                                    <td>
+                                        <a id="link7" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=782&amp;QueryField=3&amp;SortField=1">782</a>
+                                    </td>
+                                    <td>
+                                        <a id="link8" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=783&amp;QueryField=3&amp;SortField=1">783</a>
+                                    </td>
+                                    <td>
+                                        <a id="link9" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=784&amp;QueryField=3&amp;SortField=1">784</a>
+                                    </td>
+                                    <td>
+                                        <a id="link10" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=785&amp;QueryField=3&amp;SortField=1">785</a>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <a id="linkNext" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=777&amp;QueryField=3&amp;SortField=1">下一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkEnd" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9755&amp;QueryField=3&amp;SortField=1">末页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input name="hidSiteId" type="hidden" id="hidSiteId" value="27" />
+    <input name="hidChannelId" type="hidden" id="hidChannelId" />
+    <input name="hidPageCount" type="hidden" id="hidPageCount" value="10" />
+    <input name="hidQuery" type="hidden" id="hidQuery" value="SiteId=27&amp;Keyword=%u6587%u5316&amp;PageNo=776&amp;QueryField=3&amp;SortField=1" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+        function ToggleTd()
+        {
+            var oTr=document.getElementById("trCompute");
+            if(!oTr) return ;
+            if(oTr.tagName!="TR") return ;
+            for(var i=0;i<oTr.cells.length;i++)
+            {
+                var strText=oTr.cells[i].innerText;
+                if(strText=="")
+                {
+                    oTr.cells[i].style.display="none";
+                }
+                
+            }
+        }
+        ToggleTd();
+//]]>
+</script>
+</form>
+</body>
+</html>

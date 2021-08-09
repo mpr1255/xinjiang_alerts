@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	站内检索
+</title>
+    <style type="text/css">
+        DIV
+        {
+            color: #000;
+        }
+        TD
+        {
+            color: #000;
+        }
+        .f
+        {
+            color: #6f6f6f;
+        }
+        .flc
+        {
+            color: #77c;
+        }
+        .fl:link
+        {
+            color: #77c;
+        }
+        A:link
+        {
+            color: #00c;
+        }
+        .searchbox
+        {
+            border: 0px solid #FFFFFF;
+            height: 19px;
+        }
+        .w
+        {
+            color: #00c;
+        }
+        A.w:link
+        {
+            color: #00c;
+        }
+        .w A:link
+        {
+            color: #00c;
+        }
+        .q:visited
+        {
+            color: #00c;
+        }
+        .q:link
+        {
+            color: #00c;
+        }
+        .q:active
+        {
+            color: #00c;
+        }
+        .q
+        {
+            color: #00c;
+        }
+        A:visited
+        {
+            color: #551a8b;
+        }
+        .fl:visited
+        {
+            color: #551a8b;
+        }
+        A:active
+        {
+            color: red;
+        }
+        .fl:active
+        {
+            color: red;
+        }
+        .t
+        {
+            background: #e5ecf9;
+            color: #000;
+        }
+        .bb
+        {
+            border-bottom: #36c 1px solid;
+        }
+        .bt
+        {
+            border-top: #36c 1px solid;
+        }
+        .j
+        {
+            width: 60em;
+        }
+        .h
+        {
+            color: #36c;
+        }
+        .i
+        {
+            color: #a90a08;
+        }
+        .i:link
+        {
+            color: #a90a08;
+        }
+        .a
+        {
+            color: green;
+        }
+        .a:link
+        {
+            color: green;
+        }
+        .z
+        {
+            display: none;
+        }
+        DIV.n
+        {
+            margin-top: 1ex;
+        }
+        .n A
+        {
+            font-size: 10pt;
+            color: #000;
+        }
+        .n .i
+        {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .b A
+        {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #00c;
+        }
+        #np
+        {
+            cursor: hand;
+        }
+        #nn
+        {
+            cursor: hand;
+        }
+        .nr
+        {
+            cursor: hand;
+        }
+        .ch
+        {
+            cursor: hand;
+        }
+        .tas
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .taf
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        .tam
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        .tal
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 6px;
+        }
+        .sl
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .r
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .sl
+        {
+            font-size: 84%;
+        }
+        .r
+        {
+            font-size: 1em;
+        }
+        .e
+        {
+            margin: 0.75em 0px;
+        }
+        .sm
+        {
+            display: block;
+            margin: 0px 0px 0px 40px;
+        }
+        BODY
+        {
+            font-family: arial,Simsun;
+        }
+        TD
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            font-family: arial,Simsun;
+        }
+        .p
+        {
+            font-family: arial,Simsun;
+        }
+        A
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            line-height: 120%;
+        }
+        DIV .j
+        {
+            line-height: 120%;
+        }
+        .g
+        {
+            margin: 1em 0px 1.2em;
+        }
+        .hc
+        {
+            width: 31.5em;
+        }
+        .ch B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .ra B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .Mr
+        {
+            color: #FF0000;
+        }
+    </style>
+    <style type="text/css">
+        a
+        {
+            font-size: 12px;
+            color: #333333;
+        }
+        a:active
+        {
+            text-decoration: none;
+        }
+        .1
+        {
+            width: 160px;
+            height: 20px;
+        }
+        a.bottom:link
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FBF3DC;
+        }
+        a.bottom:hover
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FCC352;
+        }
+        a.bottom:visited
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FFFF99;
+        }
+        .g .r a{font-size:18px;}
+        .g .j{  font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+         #trCompute a{font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        function JumpAdvanceSearch() {
+            window.open("AdvanceSearch.aspx?" + document.getElementById("hidQuery").value, "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <form method="post" action="FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2006&amp;QueryField=3&amp;SortField=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTM2NDk0NjEwD2QWAgIDD2QWIAILDw8WAh4EVGV4dAUFMjgxNDhkZAINDw8WAh8ABRsgPGZvbnQgY29sb3I9cmVkPjQwMDwvZm9udD5kZAIRDw8WBB4LTmF2aWdhdGVVcmwFaWh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9NDAwJlBhZ2VObz0xJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4HRW5hYmxlZGdkZAITDw8WBB8BBWxodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPTQwMCZQYWdlTm89MjAwNSZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfAmdkZAIVDw8WCh8ABQQyMDA2HwEFbGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9NDAwJlBhZ2VObz0yMDA2JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4JRm9yZUNvbG9yCo0BHgRfIVNCAgQeB1Zpc2libGVnZGQCFw8PFgYfAAUEMjAwNx8BBWxodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPTQwMCZQYWdlTm89MjAwNyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIZDw8WBh8ABQQyMDA4HwEFbGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9NDAwJlBhZ2VObz0yMDA4JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAhsPDxYGHwAFBDIwMDkfAQVsaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD00MDAmUGFnZU5vPTIwMDkmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCHQ8PFgYfAAUEMjAxMB8BBWxodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPTQwMCZQYWdlTm89MjAxMCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIfDw8WBh8ABQQyMDExHwEFbGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9NDAwJlBhZ2VObz0yMDExJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAiEPDxYGHwAFBDIwMTIfAQVsaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD00MDAmUGFnZU5vPTIwMTImUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCIw8PFgYfAAUEMjAxMx8BBWxodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPTQwMCZQYWdlTm89MjAxMyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIlDw8WBh8ABQQyMDE0HwEFbGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9NDAwJlBhZ2VObz0yMDE0JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAicPDxYGHwAFBDIwMTUfAQVsaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD00MDAmUGFnZU5vPTIwMTUmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCKQ8PFgQfAQVsaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD00MDAmUGFnZU5vPTIwMDcmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGQCKw8PFgQfAQVsaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD00MDAmUGFnZU5vPTI4MTUmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGRk/srq+yeDmE1OyVgJBNhlowaNcCgHJBRlUw2MZIPqgi8=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAy5NEiThiGRlZlHiyyu0zJZBfapguS6OYFwN7hoQk5FPY7U3Vc0WZ+wxclqyPFfzmMCJZdlK8PLGDZvIjLJBLXGeSDZffPU0hFAKnEmzfh3x53FcYOclBw3UTwJVQax76MmtUJi3+MWfwaBAw7HqU2JwaUEp3InSK9AB278Tq9IDzepBcYhtRyFps3T+OZtnpKvezL7DuaO56QOfNpuhOs9VoKHcvorhwSiEzlw0J0QLmQGKK0Mq9iqzmrIy3kZFe+3iXCECtgvH9imcg4nS3Of0tnNiSCOQ2Yl8Vay5HAbYQ==" />
+    <table width="800" border="0" cellspacing="5" cellpadding="0" align="center">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="10" style="width: 100%">
+                    <tr>
+                        <td style="width:80%">
+                            <input name="txtKeyWord" type="text" value="400" id="txtKeyWord" />
+                        </td>
+                        <td>
+                            <input type="submit" name="btnSearch" value="开始搜索" id="btnSearch" />
+                            <input type="button" onclick="JumpAdvanceSearch();" value="高级检索" style="display: none" />
+                        </td>
+                    </tr>
+                </table>               
+                
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="10">
+                    <tr>
+                        <td style="width: 100px">
+                            检索字段：
+                        </td>
+                        <td>
+                            <select name="ddlField" id="ddlField">
+	<option value="1">仅检索标题</option>
+	<option value="2">仅检索正文</option>
+	<option selected="selected" value="3">标题和正文</option>
+
+</select>
+                        </td>
+                        <td>
+                            排序方法：
+                        </td>
+                        <td>
+                            <select name="ddlSort" id="ddlSort">
+	<option value="3">按照发布时间</option>
+	<option value="2">按照相关度</option>
+
+</select>
+                            <!--<asp:ListItem Value="1">按照创建时间</asp:ListItem>-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="t bt" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <font size="+1">&nbsp;<b><span id="lblType"></span></b></font>&nbsp;
+                            </td>
+                            <td nowrap="nowrap" align="right">
+                                <font size="-1">有&nbsp;<span id="lblRecord">28148</span>项&nbsp;符合&nbsp;<span id="lblKeyWord"> <font color=red>400</font></span>&nbsp;的查询结果</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/32618/Document/1450096/1450096.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    Cui Yuying attended exhibition of celebrationing the 60th an...
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            On Sep 20, Deputy Director Cui Yuying attended the "In the Embrace of the Motherland", namely the exhibition of celebration of the 60th anniversary of Xinjiang Uygur Autonomous Region, in Beijing.
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/32618/Document/1450096/1450096.htm
+                                                -
+                                                0.42K 
+                                                -
+                                                2015-09-23 17:04:37
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/2015/33423/33430/Document/1450094/1450094.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    “2015·北京人权论坛”在京闭幕
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　由中国人权研究会和中国人权发展基金会联合举办的“2015·北京人权论坛”17日在北京闭幕。　　本届论坛的主题为“和平与发展：世界反法西斯战争的胜利与人权进步”，下设“世界反法西斯战争：人权和反人权的博弈和教训”“维护人权和维护世界和平：中国的卓越贡献”“和平权：人权的重要内涵”“二战胜利后发展权的实现与保障”四个分议题。　　两天时间里，来自世界30余个国家和地区的100多位人权高级官员、专家学...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/2015/33423/33430/Document/1450094/1450094.htm
+                                                -
+                                                0.87K 
+                                                -
+                                                2015-09-23 16:53:25
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwbjs/zygy/cyy/hd/Document/1450052/1450052.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    崔玉英出席新疆维吾尔自治区成立60周年成就展开幕式
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：“在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”在民族文化宫开幕   “在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”开幕式   “在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”开幕式　　2015年9月20日上午，中共新疆维吾尔自治区委员会、新疆维吾尔自治区人民政府主办的“在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”在民族文化宫开幕。　　全国政协副主席...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwbjs/zygy/cyy/hd/Document/1450052/1450052.htm
+                                                -
+                                                1.76K 
+                                                -
+                                                2015-09-23 15:54:50
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/wz/Document/1450041/1450041.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    崔玉英出席新疆维吾尔自治区成立60周年成就展开幕式
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　原标题：“在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”在民族文化宫开幕   “在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”开幕式   “在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”开幕式　　2015年9月20日上午，中共新疆维吾尔自治区委员会、新疆维吾尔自治区人民政府主办的“在祖国的怀抱中——新疆维吾尔自治区成立60周年成就展”在民族文化宫开幕。　　全国政协副主席...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/wz/Document/1450041/1450041.htm
+                                                -
+                                                1.70K 
+                                                -
+                                                2015-09-23 15:54:50
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/2015/33508/33524/Document/1450034/1450034.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    情系边疆 助力发展
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            情系边疆 助力发展——全国对口援疆工作综述　　2010年召开的第一次中央新疆工作座谈会拉开了新时期对口援疆工作的新篇章。5年多来，全国19个省市全方位对口支援新疆12个地州和新疆生产建设兵团12个师。截至2014年年底，援受双方共组织实施4906个援疆项目，投入资金536亿元。　　从帕米尔高原到准噶尔盆地，从塔里木河畔到阿尔泰山下，一项项民生工程、一批批产业项目、一处处工业园区或加速规划，或开工建...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/2015/33508/33524/Document/1450034/1450034.htm
+                                                -
+                                                3.76K 
+                                                -
+                                                2015-09-23 15:32:52
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/2015/33508/33524/Document/1450027/1450027.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆：克兰河畔盛开民族团结花
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            181团中学老师在阿克喀仁村学校授课181团与地区歌曲团进行慰问演出交流　　在祖国北疆的阿勒泰山南麓，额尔齐斯河的支流克兰河缓缓地流淌，养育着两岸的各族儿女。这里就是兵团十师181团所在地巴里巴盖。60年来，民族团结的种子在每一个人的心间生根、发芽，民族团结的鲜花在每一寸土地上绽放。　　兵地共建促发展　　十师181团成立于1953年，是阿勒泰山脚下第一支屯垦戍边部队，被誉为“阿山第一团”。全团总人...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/2015/33508/33524/Document/1450027/1450027.htm
+                                                -
+                                                2.52K 
+                                                -
+                                                2015-08-21 09:32:57
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/2015/33525/xgxwfbh33531/Document/1450020/1450020.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆：克兰河畔盛开民族团结花
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            181团中学老师在阿克喀仁村学校授课181团与地区歌曲团进行慰问演出交流　　在祖国北疆的阿勒泰山南麓，额尔齐斯河的支流克兰河缓缓地流淌，养育着两岸的各族儿女。这里就是兵团十师181团所在地巴里巴盖。60年来，民族团结的种子在每一个人的心间生根、发芽，民族团结的鲜花在每一寸土地上绽放。　　兵地共建促发展　　十师181团成立于1953年，是阿勒泰山脚下第一支屯垦戍边部队，被誉为“阿山第一团”。全团总人...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/2015/33525/xgxwfbh33531/Document/1450020/1450020.htm
+                                                -
+                                                2.53K 
+                                                -
+                                                2015-08-21 09:32:57
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/2015/33455/33475/33506/Document/1450016/1450016.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    《鸟瞰中国》纪录片讲述乐山大佛历史（图）
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　这就是有着1200年历史的乐山大佛。71米高的乐山大佛，其高度是拉什莫尔山雕像的4倍，它是世界上最大的佛像。　　在中国西南的四川省，这一地区浅红色的砂岩为一大古代奇迹构建了基础。这就是有着1200年历史的乐山大佛。71米高的乐山大佛，其高度是拉什莫尔山雕像的4倍，它是世界上最大的佛像。三代工匠经过长达90年的苦心雕琢，才完成了这尊巨像。仅佛像的中指就有三层楼高。　　那么人们为什么要在这里建造如...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/2015/33455/33475/33506/Document/1450016/1450016.htm
+                                                -
+                                                1.73K 
+                                                -
+                                                2015-09-24 10:53:41
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/ztk/dtzt/2015/33423/33430/Document/1450012/1450012.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    专访人权研究会李君如副会长
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　2015北京人权论坛以“和平与发展”为主题，聚焦世界反法西斯战争胜利与人权进步。习近平主席专门发来贺信。在某种意义上，中国人民反抗外来入侵、争取民族独立和民族自强的过程就是一部追求人权、拥抱人权的历史。今天，中国人权事业、人权理论、人权实践不断进步，中国的和平发展不仅为世界和平注入了新的动力，也为世界人权事业发展做出了重要贡献，为世界人权发展道路增添了多样性的选择。　　国新网：非常感谢李会长再...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/ztk/dtzt/2015/33423/33430/Document/1450012/1450012.htm
+                                                -
+                                                5.16K 
+                                                -
+                                                2015-09-23 15:14:46
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/yg/2/Document/1449992/1449992.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆：克兰河畔盛开民族团结花
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            181团中学老师在阿克喀仁村学校授课181团与地区歌曲团进行慰问演出交流　　在祖国北疆的阿勒泰山南麓，额尔齐斯河的支流克兰河缓缓地流淌，养育着两岸的各族儿女。这里就是兵团十师181团所在地巴里巴盖。60年来，民族团结的种子在每一个人的心间生根、发芽，民族团结的鲜花在每一寸土地上绽放。　　兵地共建促发展　　十师181团成立于1953年，是阿勒泰山脚下第一支屯垦戍边部队，被誉为“阿山第一团”。全团总人...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/yg/2/Document/1449992/1449992.htm
+                                                -
+                                                2.46K 
+                                                -
+                                                2015-08-21 09:32:57
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr id="trCompute">
+                                    <td>
+                                        <a id="linkFirst" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=1&amp;QueryField=3&amp;SortField=1">首页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkLast" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2005&amp;QueryField=3&amp;SortField=1">上一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="link1" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2006&amp;QueryField=3&amp;SortField=1"><font color="Red">2006</font></a>
+                                    </td>
+                                    <td>
+                                        <a id="link2" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2007&amp;QueryField=3&amp;SortField=1">2007</a>
+                                    </td>
+                                    <td>
+                                        <a id="link3" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2008&amp;QueryField=3&amp;SortField=1">2008</a>
+                                    </td>
+                                    <td>
+                                        <a id="link4" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2009&amp;QueryField=3&amp;SortField=1">2009</a>
+                                    </td>
+                                    <td style="width: 9px">
+                                        <a id="link5" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2010&amp;QueryField=3&amp;SortField=1">2010</a>
+                                    </td>
+                                    <td>
+                                        <a id="link6" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2011&amp;QueryField=3&amp;SortField=1">2011</a>
+                                    </td>
+                                    <td>
+                                        <a id="link7" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2012&amp;QueryField=3&amp;SortField=1">2012</a>
+                                    </td>
+                                    <td>
+                                        <a id="link8" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2013&amp;QueryField=3&amp;SortField=1">2013</a>
+                                    </td>
+                                    <td>
+                                        <a id="link9" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2014&amp;QueryField=3&amp;SortField=1">2014</a>
+                                    </td>
+                                    <td>
+                                        <a id="link10" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2015&amp;QueryField=3&amp;SortField=1">2015</a>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <a id="linkNext" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2007&amp;QueryField=3&amp;SortField=1">下一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkEnd" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=400&amp;PageNo=2815&amp;QueryField=3&amp;SortField=1">末页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input name="hidSiteId" type="hidden" id="hidSiteId" value="27" />
+    <input name="hidChannelId" type="hidden" id="hidChannelId" />
+    <input name="hidPageCount" type="hidden" id="hidPageCount" value="10" />
+    <input name="hidQuery" type="hidden" id="hidQuery" value="SiteId=27&amp;Keyword=400&amp;PageNo=2006&amp;QueryField=3&amp;SortField=1" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+        function ToggleTd()
+        {
+            var oTr=document.getElementById("trCompute");
+            if(!oTr) return ;
+            if(oTr.tagName!="TR") return ;
+            for(var i=0;i<oTr.cells.length;i++)
+            {
+                var strText=oTr.cells[i].innerText;
+                if(strText=="")
+                {
+                    oTr.cells[i].style.display="none";
+                }
+                
+            }
+        }
+        ToggleTd();
+//]]>
+</script>
+</form>
+</body>
+</html>

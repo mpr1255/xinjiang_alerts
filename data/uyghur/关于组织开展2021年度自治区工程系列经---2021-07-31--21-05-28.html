@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" content="text/html; charset=utf-8" />
+<title>新疆维吾尔自治区机械工程学会</title>
+<link href="/templates/main/css/style.css" rel="stylesheet" type="text/css" />
+<!--栏目滑动显示>-->
+<script type="text/javascript" src="/templates/main/js/jquery.SuperSlide1.js"></script>
+<script type="text/javascript" charset="utf-8" src="/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/templates/main/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/templates/main/js/common.js"></script>
+<!--<返回顶部>-->
+<script type="text/javascript" src="js/topscript.js"></script>
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<!--新闻图片切换>-->
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(function(){
+	        $("#KinSlideshow").KinSlideshow({
+			        moveStyle:"right",
+			        titleBar:{titleBar_height:30,titleBar_bgColor:"#000",titleBar_alpha:0.7},
+			        titleFont:{TitleFont_size:15,TitleFont_color:"#FFFFFF",TitleFont_weight:"normal"},
+			        btn:{btn_bgColor:"#FFFFFF",btn_bgHoverColor:"#1072aa",btn_fontColor:"#000000",btn_fontHoverColor:"#FFFFFF",btn_borderColor:"#cccccc",btn_borderHoverColor:"#1188c0",btn_borderWidth:1}
+	        });
+        })
+    </script>
+    <script type="text/javascript">
+    $(function(){
+	    $(".focusbox").flexslider({
+		    directionNav: false,
+		    pauseOnAction: false
+	    });
+    });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        function doZoom(size) {
+               document.getElementById('in_zw').style.fontSize = size;
+            }
+            function printMe() {
+                document.body.innerHTML = document.getElementById('Content_box').innerHTML;
+                window.print();
+            }
+    </script>
+</head>
+<body>
+<!--头部开始-->
+    
+<!--默哀代码开始-->
+    
+<!--默哀代码结束-->
+<!--头部开始-->
+<script type="text/javascript">
+    $(function () {
+        $(".exit").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/tools/submit_ajax.ashx?action=user_exit&site=main",
+                dataType: "json",
+                data: "",
+                timeout: 20000,
+                success: function (data, textStatus) {
+                    if (data.status == 1) {
+                        dialog({ title: '提示', width: 200, content: "状态：" + data.msg, okValue: '确定', ok: function () { } }).showModal();
+                        location.href = data.url;
+                    }
+                }
+            });
+        });
+    })
+
+</script>
+<div class="header-box-bg">
+  <div class="top-login">
+      
+          <div class="top-link-sgin pull-left"><a href="/register.html">会员注册</a>|</div>
+      
+      <div class="top-login-a pull-right">
+          
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td><a href='/login.html'>会员登录</a></td>
+                  </tr>
+                </tbody>
+              </table>
+         
+        </div>
+  </div>
+</div>
+
+<div class="header-box">
+  <div class="header">
+    <div class="logo-box ">
+      <div class="logo pull-left"></div>
+      <div class="dj pull-right">
+        <div class="star-box pull-left">
+          <div class="star-tit">中国社会组织评估等级</div>
+          <div class="star-ico-box">
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+          </div>
+        </div>
+        <div class="searchBox pull-left">
+          <input class="search-inp pull-left" name="keywords" type="text" id="keywords" value="全站搜索" dataIgnore="dataIgnore"  onclick="if (value == defaultValue) { value = ''; }" onkeydown="if(event.keyCode==13){SiteSearch('/search.html', '#keywords');return false};"
+                onblur="if(!value){value=defaultValue;}"/>
+          <a href="JavaScript:;" class="pull-right search-btu" onclick="SiteSearch('/search.html','#keywords');"></a>
+        </div>
+
+      </div>
+    </div>
+    <!--导航开始-->
+    <div class="clear"></div>
+    <div class="nav">
+      <div class="nav-font pull-left">
+        <ul class="navb navb-pills" role="tablist">
+          <li role="presentation" class="active"><a href="/index.html">网站首页</a></li>
+          <li role="presentation"><a href="/article/56.html">机构概况</a></li>
+          <!--<li role="presentation"><a href="/fwzy/106.html">供需服务</a></li>-->
+          <li role="presentation"><a href="/article/278.html">供需服务</a></li>
+          <li role="presentation"><a href="/article/70.html">职称评审</a></li>
+          <li role="presentation"><a href="/article/106.html">产品鉴定</a></li>
+          <li role="presentation"><a href="/article/230.html">技能鉴定</a></li>
+          <li role="presentation"><a href="/article/59.html">技术标准</a></li>
+          <li role="presentation"><a href="/article/57.html">教育培训</a></li>
+          <li role="presentation"><a href="/article/63.html">会员服务</a></li>
+          <li role="presentation"><a href="/article/62.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--导航结束--> 
+  </div>
+</div>
+<!--头部结束-->
+<!--头部结束--> 
+
+<!--mainbody开始-->
+<div class="wrap"> 
+  <!--当前位置开始-->
+  <div class="at-in"> <a href="/index.html"  class="at-in-f">首页</a>&nbsp;&gt;&nbsp;<a href="/article/53.html">通知通告</a>&nbsp;&gt;&nbsp;关于组织开展2021年度自治区工程系列、经济系列、工艺美术系列专业技术人员继续教育培训工作的通知</div>
+  <!--当前位置结束-->
+    <div id="Content_box" class="Content_box">
+    <div class="in_box">
+      <h1 class="in_tit">关于组织开展2021年度自治区工程系列、经济系列、工艺美术系列专业技术人员继续教育培训工作的通知</h1>
+      <div class="h10"></div>
+        <div class="time">
+            发布时间：2021-07-30 &nbsp;&nbsp;来源：自治区工信厅&nbsp;&nbsp;作者：  &nbsp;&nbsp;阅读次数：<script type="text/javascript" src="/tools/submit_ajax.ashx?action=view_article_click&id=694&click=1"></script>&nbsp;&nbsp;【字体 <a href="javascript:doZoom('22px')">大</a> <a href="javascript:doZoom('18px')">中</a> <a href="javascript:doZoom('14px')">小</a>】 &nbsp;&nbsp;<a href="javascript:void(0);" onclick="printMe()" class="printer" target="_blank">打印</a>
+        </div>
+      <hr class="hr_top" />
+      <div id="in_zw" class="in_zw"><p class="MsoNormal" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;line-height:200%;font-family:&quot;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;新工信职称〔<span>2021</span>〕<span>01</span>号<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">各有关单位：<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">为贯彻落实《专业技术人员继续教育规定》，做好自治区工程系列机械电子、纺织、化工（含制药）、建材、轻工、钢铁专业，经济系列工商管理专业，工艺美术系列专业技术人员继续教育工作，保证专业技术职务任职资格评审顺利进行，经研究，我厅决定组织开展<span>2021</span>年度自治区工程系列、经济系列、工艺美术系列专业技术人员继续教育。现将有关事宜通知如下：<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">一、培训对象<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">现从事工程系列机械电子、纺织、化工（含制药）、建材、轻工、钢铁专业，经济系列工商管理专业，工艺美术系列专业技术工作的人员。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">二、培训内容<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">工程系列机械电子、纺织、化工（含制药）、建材、轻工、钢铁专业，经济系列工商管理专业，工艺美术系列专业相关法律法规及政策解读，本系列（专业）新理论、新技术等。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">三、培训方式<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">通过新疆专业技术人员管理平台（网站：<span>www.xjzcsq.com</span>，以下简称“管理平台”）进行在线学习。步骤如下：<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、打开管理平台首页，登录申报人员账号，点击“继续教育报名”、“继续教育专业课”菜单。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、点击“我要报名”按钮，将弹出信息确认页面。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、进入到资格选择的页面，先进行系列选择，然后是专业的选择，最后是资格的选择。例如：选择相应资格 工程系列<span>-</span>机械电子专业<span>-</span>高级工程师。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、确认报名资格之后，选择继续教育基地点击对应的单位名称，进入到报名信息填写页面。按照提示填写个人信息，确认无误之后点击保存。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">5</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、确认信息无误后，报名信息提交，等待培训机构进行形式审核。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">6</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、通过形式审核之后，在“继续教育专业课”页面打印继续教育报名表，送至对应的培训机构进行现场校验。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">7</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、现场校验后，在规定时间内，完成规定学时的学习，并参加在线考试，成绩合格者视为完成培训。完成培训的专业技术人员，可自行在管理平台查询《继续教育合格培训证书》，作为晋升专业技术职务的依据。<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">四、报名及培训时间<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、报名时间：<span>8</span>月<span>1</span>日至<span>8</span>月<span>20</span>日<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、培训时间：<span>8</span>月<span>21</span>日至<span>9</span>月<span>20</span>日<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">五、培训机构及联系方式<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（一）自治区工程系列机电专业（副高级、中级、初级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：自治区机械工程学会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：李 军、李 健<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>0991-8809304</span>、<span>0991-8808699</span>、<span>13150332818</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：新疆维吾尔自治区机械工程学会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（二）自治区工程系列化工专业（副高级、中级、初级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：自治区节能协会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：宁立杰、靳雪杰<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>0991-4515805</span>、<span>0991-5851660</span> <span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：新疆维吾尔自治区节能协会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（三）自治区工程系列钢铁专业（副高级、中级、初级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：自治区节能协会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：王 超、马笃清<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>0991-5594316</span>、<span>0991-5860170</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：新疆维吾尔自治区节能协会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（四）自治区工程系列建材专业（副高级、中级、初级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：自治区建材协会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：饶乐珺、朱瑞霞<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>18699185869</span>、<span>13579806509</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：<span>xjjchyxh</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（五）自治区工程系列轻工专业（副高级、中级、初级）、纺织专业（副高级、中级、初级），自治区经济系列工商管理经济专业（副高级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：自治区中小企业服务中心<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：朱 斌、艾孜力提艾力·乌斯曼<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>0991-4583315</span>、<span>0991-4583327</span>（传真）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">18909924084</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、<span>15199087092</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：<span>xinjiangsme</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">（六）自治区工艺美术系列（正高级、副高级、中级、初级）<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">1</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、承办单位：新疆珠宝商会<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">2</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系人：洪 英<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">3</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、联系电话：<span>13999969218</span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;">4</span><span style="font-size:14.0pt;font-family:&quot;color:black;">、微信公众号：新疆和田玉文化创意产业园<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="left" style="text-align:left;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:14.0pt;font-family:&quot;color:black;">自治区工业和信息化厅<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2021</span><span style="font-size:14.0pt;font-family:&quot;color:black;">年<span>7</span>月<span>29</span>日<span></span></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><br />
+</span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24pt;background:white;">
+	<img src="data:image/png;base64,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" alt="" style="font-family:&quot;color:black;font-size:14pt;text-indent:24pt;" /><span style="font-family:&quot;color:black;font-size:14pt;text-indent:24pt;"></span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><br />
+</span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><br />
+</span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><br />
+</span> 
+</p>
+<p class="MsoNormalCxSpMiddle" align="center" style="text-align:center;text-indent:24.0pt;background:white;">
+	<span style="font-size:14.0pt;font-family:&quot;color:black;"><br />
+</span> 
+</p>
+<br /></div>
+      <div class="fenxiang ">  <!-- JiaThis Button BEGIN --> 
+  <div id="ckepop">
+      <span class="jiathis_txt">分享到：</span>
+      <a class="jiathis_button_tqq">腾讯</a>
+      <a class="jiathis_button_tsina">新浪</a>
+      <a class="jiathis_button_renren">人人网</a>
+      <a class="jiathis_button_email">邮件</a>
+      <a class="jiathis_button_fav">收藏夹</a>
+      <a class="jiathis_button_copy">复制网址</a> 
+      <a href="http://www.jiathis.com/share/?uid=90225" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a> 
+      <a class="jiathis_counter_style"></a> 
+  </div> 
+  <!-- JiaThis Button END -->
+  <script type="text/javascript">var jiathis_config={data_track_clickback:true};</script> 
+  <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js?uid=1336353133859589" charset="utf-8"></script></div>
+      <hr class="hr_bottom" />
+      <div class="bottom_tit">相关文件</div>
+        <div class="bottom_tit_text_box">
+            
+                <div class="nodata">暂无相关的文章...</div>
+                
+        </div>
+  </div>
+</div>
+  <div class="h10"></div>
+</div>
+<!--mainbody结束-->
+
+<!--footer开始-->
+    <div class="clear"></div>
+<!--footer开始-->
+<div class="wrap-1080">
+  <div class="h15"></div>
+  <div class="copyright">
+    <div class="cp-adress"> <a href='https://beian.miit.gov.cn/#/Integrated/index' style='color:black'> 新ICP备15003369号</a> | 新疆维吾尔自治区机械工程学会  |  版权所有 Copyright 2018-2021 <br>
+      地址：新疆乌鲁木齐市光明路140号  |  电话：0991-8809304,8893646  |  传真：0991-8809304  |  电子信箱：Xinjiang@cmes.org  |  邮编:830002<br>
+
+           您是本站第<span class="cp-fk">22589</span>位访客  | <a href="http://www.xjerp.com.cn/index/" target="_blank">技术支持：新疆电子研究所股份有限公司研发中心(0991-3137683)</a> </div>
+  </div>
+</div>
+<!--footer结束-->
+<div class="pull-left cp-ico-box"> <a href="#" class="pull-left cp-ico1"></a> <a href="#" class="pull-left cp-ico2"></a> <a href="#" class="pull-left cp-ico3"></a> <a href="#" class="pull-left cp-ico4"></a> </div>
+<div class="bottom_tools"> <a id="scrollUp" href="javascript:;" title="返回顶部"></a></div>
+<!--footer结束-->
+</body>
+</html>

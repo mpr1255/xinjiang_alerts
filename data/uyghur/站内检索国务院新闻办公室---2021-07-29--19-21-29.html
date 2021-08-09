@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	站内检索
+</title>
+    <style type="text/css">
+        DIV
+        {
+            color: #000;
+        }
+        TD
+        {
+            color: #000;
+        }
+        .f
+        {
+            color: #6f6f6f;
+        }
+        .flc
+        {
+            color: #77c;
+        }
+        .fl:link
+        {
+            color: #77c;
+        }
+        A:link
+        {
+            color: #00c;
+        }
+        .searchbox
+        {
+            border: 0px solid #FFFFFF;
+            height: 19px;
+        }
+        .w
+        {
+            color: #00c;
+        }
+        A.w:link
+        {
+            color: #00c;
+        }
+        .w A:link
+        {
+            color: #00c;
+        }
+        .q:visited
+        {
+            color: #00c;
+        }
+        .q:link
+        {
+            color: #00c;
+        }
+        .q:active
+        {
+            color: #00c;
+        }
+        .q
+        {
+            color: #00c;
+        }
+        A:visited
+        {
+            color: #551a8b;
+        }
+        .fl:visited
+        {
+            color: #551a8b;
+        }
+        A:active
+        {
+            color: red;
+        }
+        .fl:active
+        {
+            color: red;
+        }
+        .t
+        {
+            background: #e5ecf9;
+            color: #000;
+        }
+        .bb
+        {
+            border-bottom: #36c 1px solid;
+        }
+        .bt
+        {
+            border-top: #36c 1px solid;
+        }
+        .j
+        {
+            width: 60em;
+        }
+        .h
+        {
+            color: #36c;
+        }
+        .i
+        {
+            color: #a90a08;
+        }
+        .i:link
+        {
+            color: #a90a08;
+        }
+        .a
+        {
+            color: green;
+        }
+        .a:link
+        {
+            color: green;
+        }
+        .z
+        {
+            display: none;
+        }
+        DIV.n
+        {
+            margin-top: 1ex;
+        }
+        .n A
+        {
+            font-size: 10pt;
+            color: #000;
+        }
+        .n .i
+        {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .b A
+        {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #00c;
+        }
+        #np
+        {
+            cursor: hand;
+        }
+        #nn
+        {
+            cursor: hand;
+        }
+        .nr
+        {
+            cursor: hand;
+        }
+        .ch
+        {
+            cursor: hand;
+        }
+        .tas
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .taf
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        .tam
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        .tal
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 6px;
+        }
+        .sl
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .r
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .sl
+        {
+            font-size: 84%;
+        }
+        .r
+        {
+            font-size: 1em;
+        }
+        .e
+        {
+            margin: 0.75em 0px;
+        }
+        .sm
+        {
+            display: block;
+            margin: 0px 0px 0px 40px;
+        }
+        BODY
+        {
+            font-family: arial,Simsun;
+        }
+        TD
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            font-family: arial,Simsun;
+        }
+        .p
+        {
+            font-family: arial,Simsun;
+        }
+        A
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            line-height: 120%;
+        }
+        DIV .j
+        {
+            line-height: 120%;
+        }
+        .g
+        {
+            margin: 1em 0px 1.2em;
+        }
+        .hc
+        {
+            width: 31.5em;
+        }
+        .ch B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .ra B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .Mr
+        {
+            color: #FF0000;
+        }
+    </style>
+    <style type="text/css">
+        a
+        {
+            font-size: 12px;
+            color: #333333;
+        }
+        a:active
+        {
+            text-decoration: none;
+        }
+        .1
+        {
+            width: 160px;
+            height: 20px;
+        }
+        a.bottom:link
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FBF3DC;
+        }
+        a.bottom:hover
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FCC352;
+        }
+        a.bottom:visited
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FFFF99;
+        }
+        .g .r a{font-size:18px;}
+        .g .j{  font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+         #trCompute a{font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        function JumpAdvanceSearch() {
+            window.open("AdvanceSearch.aspx?" + document.getElementById("hidQuery").value, "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <form method="post" action="FullSearch.aspx?SiteId=27&amp;Keyword=%u6587%u5316&amp;PageNo=9489&amp;QueryField=3&amp;SortField=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTM2NDk0NjEwD2QWAgIDD2QWIAILDw8WAh4EVGV4dAUFOTc1MzZkZAINDw8WAh8ABR4gPGZvbnQgY29sb3I9cmVkPuaWh+WMljwvZm9udD5kZAIRDw8WBB4LTmF2aWdhdGVVcmwFeGh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz0xJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4HRW5hYmxlZGdkZAITDw8WBB8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89OTQ4OCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfAmdkZAIVDw8WCh8ABQQ5NDg5HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz05NDg5JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR4JRm9yZUNvbG9yCo0BHgRfIVNCAgQeB1Zpc2libGVnZGQCFw8PFgYfAAUEOTQ5MB8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89OTQ5MCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIZDw8WBh8ABQQ5NDkxHwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz05NDkxJlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAhsPDxYGHwAFBDk0OTIfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTk0OTImUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCHQ8PFgYfAAUEOTQ5Mx8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89OTQ5MyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIfDw8WBh8ABQQ5NDk0HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz05NDk0JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAiEPDxYGHwAFBDk0OTUfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTk0OTUmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCIw8PFgYfAAUEOTQ5Nh8BBXtodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlNiU5NiU4NyVlNSU4YyU5NiZQYWdlTm89OTQ5NiZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIlDw8WBh8ABQQ5NDk3HwEFe2h0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU2JTk2JTg3JWU1JThjJTk2JlBhZ2VObz05NDk3JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8FZ2RkAicPDxYGHwAFBDk0OTgfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTk0OTgmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwVnZGQCKQ8PFgQfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTk0OTAmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGQCKw8PFgQfAQV7aHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTYlOTYlODclZTUlOGMlOTYmUGFnZU5vPTk3NTQmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGRkFrMulyqCtJOZxrfggTQFVnzfC6MbkqEr5LAAjIa7vv8=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAz4sHbthv40td0MaKqFvBGZBfapguS6OYFwN7hoQk5FPY7U3Vc0WZ+wxclqyPFfzmMCJZdlK8PLGDZvIjLJBLXGeSDZffPU0hFAKnEmzfh3x53FcYOclBw3UTwJVQax76MmtUJi3+MWfwaBAw7HqU2JwaUEp3InSK9AB278Tq9IDzepBcYhtRyFps3T+OZtnpKvezL7DuaO56QOfNpuhOs9VoKHcvorhwSiEzlw0J0QLmQGKK0Mq9iqzmrIy3kZFe9STThUGx89jQRqWSi5CANOSH1gayRs9w4sjoSLdcOokg==" />
+    <table width="800" border="0" cellspacing="5" cellpadding="0" align="center">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="10" style="width: 100%">
+                    <tr>
+                        <td style="width:80%">
+                            <input name="txtKeyWord" type="text" value="文化" id="txtKeyWord" />
+                        </td>
+                        <td>
+                            <input type="submit" name="btnSearch" value="开始搜索" id="btnSearch" />
+                            <input type="button" onclick="JumpAdvanceSearch();" value="高级检索" style="display: none" />
+                        </td>
+                    </tr>
+                </table>               
+                
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="10">
+                    <tr>
+                        <td style="width: 100px">
+                            检索字段：
+                        </td>
+                        <td>
+                            <select name="ddlField" id="ddlField">
+	<option value="1">仅检索标题</option>
+	<option value="2">仅检索正文</option>
+	<option selected="selected" value="3">标题和正文</option>
+
+</select>
+                        </td>
+                        <td>
+                            排序方法：
+                        </td>
+                        <td>
+                            <select name="ddlSort" id="ddlSort">
+	<option value="3">按照发布时间</option>
+	<option value="2">按照相关度</option>
+
+</select>
+                            <!--<asp:ListItem Value="1">按照创建时间</asp:ListItem>-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="t bt" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <font size="+1">&nbsp;<b><span id="lblType"></span></b></font>&nbsp;
+                            </td>
+                            <td nowrap="nowrap" align="right">
+                                <font size="-1">有&nbsp;<span id="lblRecord">97536</span>项&nbsp;符合&nbsp;<span id="lblKeyWord"> <font color=red>文化</font></span>&nbsp;的查询结果</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317110/317110.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第四届喀交会新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+      
+第四届中国喀什中亚南亚商品交易会新闻发布会现场
+      
+第四届喀交会组委会秘书长、喀什地区外经（招商）局局长周宇晖
+   
+            周利：各位领导、各位来宾、女士们、先生们、新闻媒体的朋友们：大家上午好！
+            (10:38)周利：经过近一年的精心筹备，倍受关注的第四届中国新疆喀什·中亚南亚商品交易会，明天就要隆重开幕了。这将是继前三届“喀交...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317110/317110.htm
+                                                -
+                                                11.79K 
+                                                -
+                                                2008-07-03 14:38:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317109/317109.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    2008年乌鲁木齐对外经济贸易洽谈会北京新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                                           张野:               各位来宾，女士们、先生们，大家好。2008年中国乌鲁木齐对外经济贸易洽谈会北京新闻发布会现在开始。首先请允许我介绍一下今天到会并在主席台就坐的嘉宾。            2008-05-09 10:02:46            张野:            全国人大常委会副委员长司马义·铁力瓦尔地先生；            ...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317109/317109.htm
+                                                -
+                                                21.13K 
+                                                -
+                                                2008-05-09 14:14:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317108/317108.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    中国新疆吉木萨尔县旅游推介及新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+   
+            马旭冬：尊敬的各位领导，各位来宾，女士们、先生们：人间四月芳菲尽，山寺桃花始映红。在这春暖花开，生机盎然的季节里，中共吉木萨尔县委、县人民政府带着丰富的旅游产品，带着全县13．2万各族人民群众的深情厚意，在首府乌鲁木齐市隆重举办“梦回北庭－2008’中国新疆吉木萨尔县旅游推介及新闻发布会”，旨在通过宣传推介，展示吉木萨尔丰富的旅游资源，搭建吉木萨尔县对外交流的平台...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317108/317108.htm
+                                                -
+                                                14.40K 
+                                                -
+                                                2008-04-22 10:27:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317107/317107.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第四届中国新疆喀什中亚·南亚商品交易会新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            
+            
+            (17:55)天山网现场报道：喀什，是维吾尔语“喀什噶尔”的简称，意为“玉石集散之地”。它位于中国雄鸡状版图的鸡尾，新疆西南部，北连天山，南枕昆仑，西望帕米尔，东临塔克拉玛干，全区总面积16.2万平方公里，辖1市11县，167个乡镇，总人口369万，其中维吾尔族占90%，汉族占8%，其它少数民族占2%，是一个以维吾尔族为主体、最富民族特色的少数民...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317107/317107.htm
+                                                -
+                                                17.95K 
+                                                -
+                                                2008-04-21 11:02:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317104/317104.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第二届中国新疆喀什·中亚南亚商品交易会新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                               6月27日上午，“喀交会”组委会在新怡发展览中心二楼会议室举行新闻发布会。中共喀什地委副书记、行署常务副专员李柏林，地委委员赵新尉、王铁民，行署副专员陈季等地区领导出席了新闻发布会。陈季副专员主持发布会，近二百名中外媒体记者到会，地委副书记、行署常务副专员李柏林在发布会发表讲话。          李柏林副书记说，喀什是一个文明古老而又焕发着勃勃生机的地区。是一个多民族聚居区，历史上就是东西...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317104/317104.htm
+                                                -
+                                                10.78K 
+                                                -
+                                                2006-06-27 11:22:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317103/317103.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    “中国新疆<font color=red>文化</font>周”新闻发布会在伊斯兰堡举行
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            xjtvs.com.cn 消息( 新疆新闻联播 )：巴基斯坦“中国新疆<font color=red>文化</font>周”活动今天在伊斯兰堡启动，伊斯兰堡当地时间5月18号下午15点，“中国新疆<font color=red>文化</font>周”新闻发布会在伊斯兰堡举行。             新闻发布会上，中国新疆对外<font color=red>文化</font>交流代表团向当地媒体介绍了中国新疆<font color=red>文化</font>周活动的具体内容和日程安排。巴基斯坦<font color=red>文化</font>体育部部长贾马尔出席新闻发布会。代表团将以精彩的民族歌舞表演，书法、摄影及民族服饰...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317103/317103.htm
+                                                -
+                                                2.02K 
+                                                -
+                                                2006-05-18 09:06:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317102/317102.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    2006年乌洽会北京新闻发布会
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　2006年5月12日10时，新疆维吾尔自治区人民政府在北京新大都饭店召开2006年乌洽会北京新闻发布会，介绍第十五届中国乌鲁木齐对外经济贸易洽谈会情况。   　　 [中国网]:2006乌洽会北京新闻发布会开始。会议由新疆维吾尔族自治区外经贸厅党组书记张野主持。(2006-05-12 09:39:36)   [张野]:各位领导、各位来宾、女士们、先生们，大家好！2006年中国乌鲁木齐对外经济贸易...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317102/317102.htm
+                                                -
+                                                13.35K 
+                                                -
+                                                2006-05-12 09:22:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317100/317100.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    2006中国新疆汽车摩托车越野挑战赛新闻发布
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            2006年2月17日，由中国汽车运动联合会批准，由新疆维吾尔自治区体育局，新疆八一钢铁集团主办，新疆汽车运动协会，八钢国贸金属材料公司，新疆环塔汽摩运动俱乐部有限公司承办的2006全国汽车场地越野锦标赛——新疆分站赛新闻发布会及组长委会成立揭牌仪式；由国家体育总局汽摩运动管理中心批准，由新疆维吾尔自治区体育局，新疆八一钢铁集团主办，新疆汽车运动协会，新疆摩托车运动协会，新疆环塔汽摩运动俱乐部有限公...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317100/317100.htm
+                                                -
+                                                3.10K 
+                                                -
+                                                2006-02-17 09:10:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317098/317098.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆自治区成立50周年新闻发布会召开
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            天山网讯     2005年8月25日(星期四)下午3时，中共中央政治局委员、新疆维吾尔自治区党委书记王乐泉和自治区主席司马义·铁力瓦尔地介绍新疆维吾尔自治区50年社会发展、经济建设等有关情况并答记者问。         [王国庆]:         女士们、先生们，各位记者朋友下午好！今年是新疆维吾尔自治区成立50周年。今天我们非常高兴地请到了中共中央政治局委员、新疆维吾尔自治区党委书记王乐泉先...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xinjiang/Document/317098/317098.htm
+                                                -
+                                                13.50K 
+                                                -
+                                                2005-08-25 08:52:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xianggang/Document/317096/317096.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    2006年1月11日首届世界佛教论坛新闻发布会在香港召开
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            2006年1月11日，首届世界佛教论坛新闻发布会在香港召开。发布会由中国佛教协会副会长圣辉法师、中华宗教<font color=red>文化</font>交流协会副会长兼秘书长齐晓飞、中国佛协副会长兼浙江省佛教协会会长戒忍法师、浙江省首届世界佛教论坛组委会副主任钟小毛和香港佛教联合会会长觉光法师共同发布，介绍有关情况。香港媒体南华早报、香港商报、东方日报、明报、大公报、文汇报、凤凰卫视、香港佛教杂志，中央媒体新华社、人民日报、中新社及浙江杭州...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/gssxwfbh/xwfbh/xianggang/Document/317096/317096.htm
+                                                -
+                                                3.72K 
+                                                -
+                                                2006-01-11 16:55:00
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr id="trCompute">
+                                    <td>
+                                        <a id="linkFirst" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=1&amp;QueryField=3&amp;SortField=1">首页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkLast" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9488&amp;QueryField=3&amp;SortField=1">上一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="link1" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9489&amp;QueryField=3&amp;SortField=1"><font color="Red">9489</font></a>
+                                    </td>
+                                    <td>
+                                        <a id="link2" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9490&amp;QueryField=3&amp;SortField=1">9490</a>
+                                    </td>
+                                    <td>
+                                        <a id="link3" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9491&amp;QueryField=3&amp;SortField=1">9491</a>
+                                    </td>
+                                    <td>
+                                        <a id="link4" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9492&amp;QueryField=3&amp;SortField=1">9492</a>
+                                    </td>
+                                    <td style="width: 9px">
+                                        <a id="link5" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9493&amp;QueryField=3&amp;SortField=1">9493</a>
+                                    </td>
+                                    <td>
+                                        <a id="link6" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9494&amp;QueryField=3&amp;SortField=1">9494</a>
+                                    </td>
+                                    <td>
+                                        <a id="link7" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9495&amp;QueryField=3&amp;SortField=1">9495</a>
+                                    </td>
+                                    <td>
+                                        <a id="link8" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9496&amp;QueryField=3&amp;SortField=1">9496</a>
+                                    </td>
+                                    <td>
+                                        <a id="link9" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9497&amp;QueryField=3&amp;SortField=1">9497</a>
+                                    </td>
+                                    <td>
+                                        <a id="link10" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9498&amp;QueryField=3&amp;SortField=1">9498</a>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <a id="linkNext" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9490&amp;QueryField=3&amp;SortField=1">下一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkEnd" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e6%96%87%e5%8c%96&amp;PageNo=9754&amp;QueryField=3&amp;SortField=1">末页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input name="hidSiteId" type="hidden" id="hidSiteId" value="27" />
+    <input name="hidChannelId" type="hidden" id="hidChannelId" />
+    <input name="hidPageCount" type="hidden" id="hidPageCount" value="10" />
+    <input name="hidQuery" type="hidden" id="hidQuery" value="SiteId=27&amp;Keyword=%u6587%u5316&amp;PageNo=9489&amp;QueryField=3&amp;SortField=1" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+        function ToggleTd()
+        {
+            var oTr=document.getElementById("trCompute");
+            if(!oTr) return ;
+            if(oTr.tagName!="TR") return ;
+            for(var i=0;i<oTr.cells.length;i++)
+            {
+                var strText=oTr.cells[i].innerText;
+                if(strText=="")
+                {
+                    oTr.cells[i].style.display="none";
+                }
+                
+            }
+        }
+        ToggleTd();
+//]]>
+</script>
+</form>
+</body>
+</html>

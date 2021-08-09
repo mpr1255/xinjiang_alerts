@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	站内检索
+</title>
+    <style type="text/css">
+        DIV
+        {
+            color: #000;
+        }
+        TD
+        {
+            color: #000;
+        }
+        .f
+        {
+            color: #6f6f6f;
+        }
+        .flc
+        {
+            color: #77c;
+        }
+        .fl:link
+        {
+            color: #77c;
+        }
+        A:link
+        {
+            color: #00c;
+        }
+        .searchbox
+        {
+            border: 0px solid #FFFFFF;
+            height: 19px;
+        }
+        .w
+        {
+            color: #00c;
+        }
+        A.w:link
+        {
+            color: #00c;
+        }
+        .w A:link
+        {
+            color: #00c;
+        }
+        .q:visited
+        {
+            color: #00c;
+        }
+        .q:link
+        {
+            color: #00c;
+        }
+        .q:active
+        {
+            color: #00c;
+        }
+        .q
+        {
+            color: #00c;
+        }
+        A:visited
+        {
+            color: #551a8b;
+        }
+        .fl:visited
+        {
+            color: #551a8b;
+        }
+        A:active
+        {
+            color: red;
+        }
+        .fl:active
+        {
+            color: red;
+        }
+        .t
+        {
+            background: #e5ecf9;
+            color: #000;
+        }
+        .bb
+        {
+            border-bottom: #36c 1px solid;
+        }
+        .bt
+        {
+            border-top: #36c 1px solid;
+        }
+        .j
+        {
+            width: 60em;
+        }
+        .h
+        {
+            color: #36c;
+        }
+        .i
+        {
+            color: #a90a08;
+        }
+        .i:link
+        {
+            color: #a90a08;
+        }
+        .a
+        {
+            color: green;
+        }
+        .a:link
+        {
+            color: green;
+        }
+        .z
+        {
+            display: none;
+        }
+        DIV.n
+        {
+            margin-top: 1ex;
+        }
+        .n A
+        {
+            font-size: 10pt;
+            color: #000;
+        }
+        .n .i
+        {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .b A
+        {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #00c;
+        }
+        #np
+        {
+            cursor: hand;
+        }
+        #nn
+        {
+            cursor: hand;
+        }
+        .nr
+        {
+            cursor: hand;
+        }
+        .ch
+        {
+            cursor: hand;
+        }
+        .tas
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .taf
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        .tam
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        .tal
+        {
+            padding-right: 3px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 6px;
+        }
+        .sl
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .r
+        {
+            display: inline;
+            font-weight: normal;
+            margin: 0px;
+        }
+        .sl
+        {
+            font-size: 84%;
+        }
+        .r
+        {
+            font-size: 1em;
+        }
+        .e
+        {
+            margin: 0.75em 0px;
+        }
+        .sm
+        {
+            display: block;
+            margin: 0px 0px 0px 40px;
+        }
+        BODY
+        {
+            font-family: arial,Simsun;
+        }
+        TD
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            font-family: arial,Simsun;
+        }
+        .p
+        {
+            font-family: arial,Simsun;
+        }
+        A
+        {
+            font-family: arial,Simsun;
+        }
+        DIV
+        {
+            line-height: 120%;
+        }
+        DIV .j
+        {
+            line-height: 120%;
+        }
+        .g
+        {
+            margin: 1em 0px 1.2em;
+        }
+        .hc
+        {
+            width: 31.5em;
+        }
+        .ch B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .ra B
+        {
+            font-weight: normal;
+            color: #c03;
+        }
+        .Mr
+        {
+            color: #FF0000;
+        }
+    </style>
+    <style type="text/css">
+        a
+        {
+            font-size: 12px;
+            color: #333333;
+        }
+        a:active
+        {
+            text-decoration: none;
+        }
+        .1
+        {
+            width: 160px;
+            height: 20px;
+        }
+        a.bottom:link
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FBF3DC;
+        }
+        a.bottom:hover
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FCC352;
+        }
+        a.bottom:visited
+        {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #FFFF99;
+        }
+        .g .r a{font-size:18px;}
+        .g .j{  font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+         #trCompute a{font-family: 微软雅黑;  line-height: 2em !important;   font-size: 16px;   }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        function JumpAdvanceSearch() {
+            window.open("AdvanceSearch.aspx?" + document.getElementById("hidQuery").value, "_blank");
+        }
+    </script>
+
+</head>
+<body>
+    <form method="post" action="FullSearch.aspx?SiteId=27&amp;Keyword=%u96ea&amp;PageNo=398&amp;QueryField=3&amp;SortField=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTM2NDk0NjEwD2QWAgIDD2QWIAILDw8WAh4EVGV4dAUEODkwMmRkAg0PDxYCHwAFGyA8Zm9udCBjb2xvcj1yZWQ+6ZuqPC9mb250PmRkAhEPDxYEHgtOYXZpZ2F0ZVVybAVvaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTEmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHgdFbmFibGVkZ2RkAhMPDxYEHwEFcWh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU5JTliJWFhJlBhZ2VObz0zOTcmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGQCFQ8PFgofAAUDMzk4HwEFcWh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU5JTliJWFhJlBhZ2VObz0zOTgmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHglGb3JlQ29sb3IKjQEeBF8hU0ICBB4HVmlzaWJsZWdkZAIXDw8WBh8ABQMzOTkfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTM5OSZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIZDw8WBh8ABQM0MDAfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwMCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIbDw8WBh8ABQM0MDEfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwMSZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIdDw8WBh8ABQM0MDIfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwMiZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIfDw8WBh8ABQM0MDMfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwMyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIhDw8WBh8ABQM0MDQfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwNCZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIjDw8WBh8ABQM0MDUfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwNSZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIlDw8WBh8ABQM0MDYfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwNiZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAInDw8WBh8ABQM0MDcfAQVxaHR0cDovL3d3dy5zY2lvLmdvdi5jbi9GdWxsU2VhcmNoL0Z1bGxTZWFyY2guYXNweD9TaXRlSWQ9MjcmS2V5d29yZD0lZTklOWIlYWEmUGFnZU5vPTQwNyZRdWVyeUZpZWxkPTMmU29ydEZpZWxkPTEfBWdkZAIpDw8WBB8BBXFodHRwOi8vd3d3LnNjaW8uZ292LmNuL0Z1bGxTZWFyY2gvRnVsbFNlYXJjaC5hc3B4P1NpdGVJZD0yNyZLZXl3b3JkPSVlOSU5YiVhYSZQYWdlTm89Mzk5JlF1ZXJ5RmllbGQ9MyZTb3J0RmllbGQ9MR8CZ2RkAisPDxYEHwEFcWh0dHA6Ly93d3cuc2Npby5nb3YuY24vRnVsbFNlYXJjaC9GdWxsU2VhcmNoLmFzcHg/U2l0ZUlkPTI3JktleXdvcmQ9JWU5JTliJWFhJlBhZ2VObz04OTEmUXVlcnlGaWVsZD0zJlNvcnRGaWVsZD0xHwJnZGRkL7CC25Nv2l7v1HhQA7VSZ3Ur/qRPnr4kvIeBelieljk=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAzO1TuJOdlAn60gSfsgwlEpBfapguS6OYFwN7hoQk5FPY7U3Vc0WZ+wxclqyPFfzmMCJZdlK8PLGDZvIjLJBLXGeSDZffPU0hFAKnEmzfh3x53FcYOclBw3UTwJVQax76MmtUJi3+MWfwaBAw7HqU2JwaUEp3InSK9AB278Tq9IDzepBcYhtRyFps3T+OZtnpKvezL7DuaO56QOfNpuhOs9VoKHcvorhwSiEzlw0J0QLmQGKK0Mq9iqzmrIy3kZFe84UVc8caCzlSd/jLwegz0Na/leHg9wpDOK4k/R0rMMSQ==" />
+    <table width="800" border="0" cellspacing="5" cellpadding="0" align="center">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="10" style="width: 100%">
+                    <tr>
+                        <td style="width:80%">
+                            <input name="txtKeyWord" type="text" value="雪" id="txtKeyWord" />
+                        </td>
+                        <td>
+                            <input type="submit" name="btnSearch" value="开始搜索" id="btnSearch" />
+                            <input type="button" onclick="JumpAdvanceSearch();" value="高级检索" style="display: none" />
+                        </td>
+                    </tr>
+                </table>               
+                
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="10">
+                    <tr>
+                        <td style="width: 100px">
+                            检索字段：
+                        </td>
+                        <td>
+                            <select name="ddlField" id="ddlField">
+	<option value="1">仅检索标题</option>
+	<option value="2">仅检索正文</option>
+	<option selected="selected" value="3">标题和正文</option>
+
+</select>
+                        </td>
+                        <td>
+                            排序方法：
+                        </td>
+                        <td>
+                            <select name="ddlSort" id="ddlSort">
+	<option value="3">按照发布时间</option>
+	<option value="2">按照相关度</option>
+
+</select>
+                            <!--<asp:ListItem Value="1">按照创建时间</asp:ListItem>-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="t bt" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <font size="+1">&nbsp;<b><span id="lblType"></span></b></font>&nbsp;
+                            </td>
+                            <td nowrap="nowrap" align="right">
+                                <font size="-1">有&nbsp;<span id="lblRecord">8902</span>项&nbsp;符合&nbsp;<span id="lblKeyWord"> <font color=red>雪</font></span>&nbsp;的查询结果</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481397/1481397.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    “十二五”时期新疆发展最好最快得益于三个因素
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔在回答记者提问时表示，“十二五”是新疆发展速度最快，也是发展最好的一个时期，它得益于多方面的因素：　　一是在“十二五”期间，中央召开第一次中央新疆工作座谈会，赋...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481397/1481397.htm
+                                                -
+                                                0.79K 
+                                                -
+                                                2016-06-23 08:32:20
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/video/zxtj/Document/1481375/1481375.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第五届中国-亚欧博览会9月20日在乌鲁木齐市举办
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　国务院新闻办公室6月22日新闻发布会消息: 新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提•扎克尔表示，9月20日至25日在乌鲁木齐市举办的第五届中国-亚欧博览会，以“共商、共建、共享，丝路：机遇与未来”为主题，博览会邀请我国领导人、亚欧国家政要、国际组织负责人、国家有关部委和兄弟省区市的省部级嘉宾参加。并且将结合“核心区”建设，举办10个部长级高层论坛及4个专题活动；将设置14个展...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/video/zxtj/Document/1481375/1481375.htm
+                                                -
+                                                0.31K 
+                                                -
+                                                2016-06-22 16:43:59
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481374/1481374.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    解决南疆农民转移就业问题成效明显
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔在回答记者提问时表示，中央和国务院高度关心南疆农民的转移就业问题，全国有19个发达省区给予了大力支持。要解决上述问题，我们采取了两项措施：　　第一，我们制定了一...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481374/1481374.htm
+                                                -
+                                                0.94K 
+                                                -
+                                                2016-06-22 16:49:15
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/video/gxbb/34056/Document/1481372/1481372.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第五届中国-亚欧博览会9月20日在乌鲁木齐市举办
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            　　国务院新闻办公室6月22日新闻发布会消息: 新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提•扎克尔表示，9月20日至25日在乌鲁木齐市举办的第五届中国-亚欧博览会，以“共商、共建、共享，丝路：机遇与未来”为主题，博览会邀请我国领导人、亚欧国家政要、国际组织负责人、国家有关部委和兄弟省区市的省部级嘉宾参加。并且将结合“核心区”建设，举办10个部长级高层论坛及4个专题活动；将设置14个展...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/video/gxbb/34056/Document/1481372/1481372.htm
+                                                -
+                                                0.31K 
+                                                -
+                                                2016-06-22 16:43:59
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481371/1481371.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    亚欧博览会与丝路经济带核心区给新疆带来发展新机遇
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔在回答记者提问时表示，“一带一路”的宏伟构想和新疆作为丝绸之路经济带这个核心区的重大机遇，给新疆带来了很好、难得的发展机遇，也提供了诸多的有利条件。　　<font color=red>雪</font>克来提...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481371/1481371.htm
+                                                -
+                                                0.91K 
+                                                -
+                                                2016-06-22 16:43:32
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481364/1481364.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    第五届博览会主题为“共商、共建、共享，丝路：机遇与未来”
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔表示，今年我们确定9月20日至25日在乌鲁木齐市举办的第五届中国—亚欧博览会，以“共商、共建、共享，丝路：机遇与未来”为主题。　　博览会将邀请我国领导人、亚欧国...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481364/1481364.htm
+                                                -
+                                                0.73K 
+                                                -
+                                                2016-06-22 16:33:20
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481363/1481363.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    历届中国-亚欧博览会都取得丰硕成果
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔简要介绍了历届中国—亚欧博览会举办情况：　　中国—亚欧博览会已成功举办四届，有累计近130万人次进场参观展会；会展期间累计签订内联项目近9000亿元人民币，对外...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481363/1481363.htm
+                                                -
+                                                0.71K 
+                                                -
+                                                2016-06-22 16:31:20
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481361/1481361.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆丝绸之路经济带核心区建设正在扎实推进
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔也简要介绍了新疆丝绸之路经济带核心区建设的基本情况。　　<font color=red>雪</font>克来提·扎克尔表示，在国家“一带一路”规划布局和愿景行动中，已经明确把新疆建设成为丝绸之路经济带核心区...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481361/1481361.htm
+                                                -
+                                                0.93K 
+                                                -
+                                                2016-06-22 16:28:39
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481355/1481355.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆坚持五大发展理念和三大思路实现全面小康
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            laosh新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔在介绍新疆的相关情况时表示，今年是“十三五”开局之年，对新疆来说，“十三五”期间是一个非常关键、又充满希望的五年。　　<font color=red>雪</font>克来提·扎克尔表示，新疆将按照...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481355/1481355.htm
+                                                -
+                                                0.70K 
+                                                -
+                                                2016-06-22 16:18:09
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <div class="g">
+                            <h2 class="r">
+                                <a class="l" href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481352/1481352.htm'
+                                    target="_blank" style="font-size: 14pt">
+                                    新疆始终把民族团结作为各族人民的生命线
+                                </a>
+                            </h2>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="j">
+                                            新疆维吾尔自治区主席、中国-亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔（吴晓山 摄）　　2016年6月22日，国务院新闻办公室举行新疆经济社会发展及第五届中国—亚欧博览会情况发布会。新疆维吾尔自治区主席、中国—亚欧博览会组委会主任<font color=red>雪</font>克来提·扎克尔在介绍新疆的相关情况时表示，新疆始终把民族团结作为各族人民的生命线，并从1983年开始每年5月开展“民族团结教育月”活动。　　该项活动目前已开展了34年，并取得...
+                                            <br />
+                                            <span class="a">
+                                                http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/33978/34705/zy34709/Document/1481352/1481352.htm
+                                                -
+                                                0.74K 
+                                                -
+                                                2016-06-22 16:15:37
+                                                </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr id="trCompute">
+                                    <td>
+                                        <a id="linkFirst" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=1&amp;QueryField=3&amp;SortField=1">首页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkLast" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=397&amp;QueryField=3&amp;SortField=1">上一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="link1" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=398&amp;QueryField=3&amp;SortField=1"><font color="Red">398</font></a>
+                                    </td>
+                                    <td>
+                                        <a id="link2" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=399&amp;QueryField=3&amp;SortField=1">399</a>
+                                    </td>
+                                    <td>
+                                        <a id="link3" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=400&amp;QueryField=3&amp;SortField=1">400</a>
+                                    </td>
+                                    <td>
+                                        <a id="link4" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=401&amp;QueryField=3&amp;SortField=1">401</a>
+                                    </td>
+                                    <td style="width: 9px">
+                                        <a id="link5" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=402&amp;QueryField=3&amp;SortField=1">402</a>
+                                    </td>
+                                    <td>
+                                        <a id="link6" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=403&amp;QueryField=3&amp;SortField=1">403</a>
+                                    </td>
+                                    <td>
+                                        <a id="link7" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=404&amp;QueryField=3&amp;SortField=1">404</a>
+                                    </td>
+                                    <td>
+                                        <a id="link8" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=405&amp;QueryField=3&amp;SortField=1">405</a>
+                                    </td>
+                                    <td>
+                                        <a id="link9" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=406&amp;QueryField=3&amp;SortField=1">406</a>
+                                    </td>
+                                    <td>
+                                        <a id="link10" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=407&amp;QueryField=3&amp;SortField=1">407</a>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <a id="linkNext" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=399&amp;QueryField=3&amp;SortField=1">下一页</a>
+                                    </td>
+                                    <td>
+                                        <a id="linkEnd" href="http://www.scio.gov.cn/FullSearch/FullSearch.aspx?SiteId=27&amp;Keyword=%e9%9b%aa&amp;PageNo=891&amp;QueryField=3&amp;SortField=1">末页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input name="hidSiteId" type="hidden" id="hidSiteId" value="27" />
+    <input name="hidChannelId" type="hidden" id="hidChannelId" />
+    <input name="hidPageCount" type="hidden" id="hidPageCount" value="10" />
+    <input name="hidQuery" type="hidden" id="hidQuery" value="SiteId=27&amp;Keyword=%u96ea&amp;PageNo=398&amp;QueryField=3&amp;SortField=1" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+        function ToggleTd()
+        {
+            var oTr=document.getElementById("trCompute");
+            if(!oTr) return ;
+            if(oTr.tagName!="TR") return ;
+            for(var i=0;i<oTr.cells.length;i++)
+            {
+                var strText=oTr.cells[i].innerText;
+                if(strText=="")
+                {
+                    oTr.cells[i].style.display="none";
+                }
+                
+            }
+        }
+        ToggleTd();
+//]]>
+</script>
+</form>
+</body>
+</html>
