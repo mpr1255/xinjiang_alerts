@@ -1,0 +1,1317 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><link href="../../style/css.css" rel="stylesheet" type="text/css" /><link href="../../scripts/Validation/css/validationEngine.jquery.css" rel="stylesheet" type="text/css" /><link href="../../scripts/colorbox/colorbox.css" rel="stylesheet" type="text/css" /><link href="../../scripts/jquery-superbox-0.9.1/jquery.superbox.css" rel="stylesheet" type="text/css" /><link href="../../scripts/boxy/css/boxy.css" rel="stylesheet" type="text/css" /><link href="../../scripts/dhtmlxCalander/dhtmlxcalendar.css" rel="stylesheet" type="text/css" /><link href="../../scripts/Dialogs/Impropmtu.css" rel="stylesheet" type="text/css" />    
+    <script src="../../scripts/jQuery1.6.1/jquery-1.6.min.js" type="text/javascript"></script>    
+    <script src="../../scripts/Dialogs/Impromptu.js" type="text/javascript"></script>
+    
+	<title>信息公开</title>
+    <link href="../../style/css.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">        
+      .infodetails
+        {
+            width: 995px;
+            background-color: #fff;
+            font-family:微软雅黑 Arial;
+        }
+        .infodetails .mainTitle
+        {
+            font-family: 宋体;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            color: #003CC8;
+            padding: 15px;
+        }
+        .infodetails .infobar
+        {
+            width: 860px;
+            height: 20px;
+            line-height: 20px;
+            padding-left: 178px;
+            padding: 3px 10px;
+            border-top: solid 1px #999;
+            margin: 0 auto;
+            background-color: #EEE;
+        }
+        .infodetails .infobar span
+        {
+            width: 285px;
+            float: left;
+            display: inline;
+            text-align: center;
+        }
+        .infodetails .toolbar
+        {
+            width: 860px;
+            padding: 3px 10px;
+            border-bottom: solid 1px #999;
+            height: 20px;
+            margin: 0 auto;
+        }
+        .infodetails .toolbar div
+        {
+            margin-left: 220px;
+            padding-left: 50px;
+            position: relative;
+            height: 20px;
+            overflow: hidden;
+            line-height: 20px;
+            width: 180px;
+            float: left;
+            display: inline;
+            margin-right: 50px;
+            /*background: url(../resource/imgs/a.jpg) no-repeat left 4px;*/
+        }
+        .infodetails .toolbar div span
+        {
+            width: 30px;
+            position: absolute;
+            height: 20px;
+            overflow: hidden;
+            line-height: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .infodetails .toolbar div .small
+        {
+            font-size: 12px;
+            right: 10px;
+            top: 0px;
+        }
+        .infodetails .toolbar div .middle
+        {
+            font-size: 14px;
+            right: 40px;
+            top: 0px;
+        }
+        .infodetails .toolbar div .big
+        {
+            font-size: 16px;
+            right: 70px;
+            top: 0px;
+        }
+        .font_on
+        {
+            color: #FFF;
+            background-color: #003CC8;
+        }
+        .infodetails .toolbar .print
+        {
+            background: url(../../resource/imgs/dy.jpg) no-repeat left 4px;
+            padding-left: 20px;
+            line-height: 24px;
+            width: 40px;
+            display: block;
+            float: right;
+            margin-right: 70px;
+        }
+        .content
+        {
+            width: 860px;
+            margin: 25px auto;
+        }
+        .content .subtitle
+        {
+            font-family: 宋体;
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+            color: #003CC8;
+            line-height: 24px;
+        }
+        .content .docnum
+        {
+            font-family: 楷体_GB2312;
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+            color: #003CC8;
+            line-height: 24px;
+        }
+        .content .delTo
+        {
+            font-family: 宋体;
+            font-size: 16px;
+            text-align: left;
+            line-height: 32px;
+            color: #333;
+        }
+        .content .article
+        {
+            font-family: 宋体;
+            font-size: 16px;
+            text-align: left;
+            
+            line-height: 32px;
+            color: #333;
+        }
+	.content .article p{
+	    text-indent: 2em;	
+	}
+        .content .article table
+        {
+            width: 100%;
+            background-color: #FFF;
+            border-collapse:collapse;
+        }
+		.content .article table p{
+			text-indent: 0;	
+		}
+        .content .article table th
+        {
+            text-align: center;
+            border:solid 1px #999;
+			vertical-align: middle;
+        }
+        .content .article table td
+        {
+            background-color: #FFF;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 16px;
+            border:solid 1px #999;
+			vertical-align: middle;
+        }
+        .content .publishDate
+        {
+            margin-top: 16px;
+            font-family: 宋体;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 4em;
+            line-height: 32px;
+            color: #333;
+        }
+        .content .publishDept
+        {
+            margin-top: 16px;
+            font-family: 宋体;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 6em;
+            line-height: 32px;
+            color: #333;
+        }
+        .content .attachs ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 10px;
+            background-color: #EEE;
+        }
+        .content .attachs p
+        {
+            font-size: 16px;
+        }
+        .content .attachs ul li
+        {
+            height: 30px;
+            background-image: url(../../resource/imgs/Attachment%2016x16.png);
+            background-repeat: no-repeat;
+            background-position: left 5px;
+            padding-left: 30px;
+        }
+        .content .attachs ul li a
+        {
+            line-height: 30px;
+            display: block;
+            color: #333;
+            font-size: 16px;
+        }
+        .content .attachs ul li a:hover
+        {
+            color: #FF6600;
+        }
+        .photoZone
+        {
+            text-align: center;
+        }
+        .photoZone img
+        {
+            
+            cursor: pointer;
+            display: none;
+        }
+        .photoZone p
+        {
+            padding-top: 5px;
+        }
+        #contentChildPage_front
+        {
+            position: absolute;
+            left: 231px;
+            top: 419px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        #contentChildPage_front a
+        {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            display: block;
+            width: 400px;
+            height: 600px;
+            cursor: url("style/prev.cur"), auto;
+            background: url(blank.gif);
+        }
+        
+        #contentChildPage_next
+        {
+            position: absolute;
+            right: 231px;
+            top: 419px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        #contentChildPage_next a
+        {
+            display: block;
+            width: 400px;
+            height: 600px;
+            cursor: url("style/next.cur"), auto;
+            background: url(blank.gif);
+            top: 0;
+            left: 88px;
+        }
+        .content table td{
+            text-indent:0em;
+            padding-left:0;
+        }
+        .columnPage-common {
+            width: 994px;
+            height: auto;
+            border: 1px solid #d2d2d2;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .columnPage-common .columnPage-title {
+            width: 100%;
+            height: 55px;
+            border-bottom: 1px solid #D2D2D2;
+            background-color: #F5F5F5;
+        }
+        .columnPage-common .columnPage-title .icon-container {
+            width: 70px;
+            height: 55px;
+            background: url(../../resource/icon-dollar.png) 25px 10px no-repeat;
+            float: left;
+        }
+        .columnPage-common .columnPage-title .title-content {
+            line-height: 55px;
+            font-size: 22px;
+            color: #930101;
+            float: left;
+        }
+        .columnPage-common .columnPage-title .title-content span {
+            color: #f54046;
+        }
+        .columnPage-common .columnPage-container {
+            width: 100%;
+            height: auto;
+        }
+        .columnPage-common .columnPage-container ul {
+            margin: 30px 0 15px 40px;
+        }
+        .columnPage-common .columnPage-container ul li {
+            display: inline-block;
+            width: 470px;
+            height: 35px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+			overflow: hidden;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        .columnPage-common .columnPage-container ul li i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #E6E6E6;
+            background: url(../../resource/arrow.png) no-repeat;
+            position: relative;
+            top: 2px;
+        }
+        .columnPage-common .columnPage-container ul li a {
+          <!-- display: inline-block;-->
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        .columnPage-common .columnPage-container ul li a:hover {
+            color: #f54046;
+            text-decoration: underline;
+        }
+        #wrap-billboard {
+            width: 994px;            
+            margin: 0 auto;
+            display: block;
+            background-color: #ffffff;
+            padding: 8px 10px;
+            box-sizing: border-box;            
+            border: 1px solid #d2d2d2;
+            margin-top: 10px;
+        }
+        #wrap-billboard div p {
+            float: left;
+            white-space: nowrap;
+            padding-left:40px;
+        }
+
+        #wrap-billboard div .clearfix {
+            clear:both;
+        }
+        
+        #wrap-billboard div p a {
+            display:block;
+            float:left;
+            line-height:54px;
+            width:280px;
+            color:#930101;
+            font-size:22px;
+        }
+        .common-title {
+            color:#930101;
+            margin:15px auto;
+            display:block;
+            text-align:center;
+            font-size:32px;
+            font-weight:bolder;
+            font-family:微软雅黑 Arial;
+        }
+    </style>    
+
+    <style type="text/css">
+       .foot span img{
+ 	     position: absolute;
+	    top: 10px;
+	    right: 151px;
+       }
+	    #imgConac {
+            right: 60px;
+            top:5px;
+        }
+    </style>
+<title>
+
+</title></head>
+<body class="xinchun">
+	<div style="text-align: center;">
+			<a href="http://www.gov.cn/zhuanti/2021qglh/index.htm" target="_blank"><img src="../../resource/5555.png" alt=""></a>
+		</div>
+    <div id="pnlDom" class="tipContainer" style="display:none;">
+	
+
+    
+</div>
+    
+    <!--新春关闭按钮-->    
+    <!--<div class="xinchun_close" >
+	    <a href="javascript:void(0)" >
+            <img src="../../resource/imgs/guanbi.jpg"/>
+	    </a>
+    </div>-->
+    <!--新春关闭按钮-->
+    <div class="main" style="background:#FFF;">
+        
+        
+
+		
+        <div id="pnlHeader" style="">
+	
+			
+            <div class="peak">
+                <!--<iframe src="../../work_mail.html" scrolling="no" frameborder="0" width="400" height="30" style="float: left;"></iframe>-->                
+                                
+                <div id="today_weather" style="width:800px;float:left;margin-left:10px;" class="unify" onclick="location.href=&#39;../../pages/gzfw/Weather.aspx&#39;">
+                    
+                    <div id="warp">
+                    <div id="borad">
+                    2021年08月19日 星期四
+                                        
+                    晴间多云 &nbsp;最高气温：<span>28</span>℃&nbsp;最低气温：<span>14</span>℃&nbsp;风力：3级&nbsp;空气质量状况(2021年08月18日)：首要污染物 无，空气质量指数：42，&nbsp;空气质量级别：&nbsp;Ⅰ（优）&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div id="scroll">
+
+                    </div>
+
+                    </div>
+                </div>                
+                <div style="float:right;height: 27px;margin-top: 7px;">
+                    <a class="site-custom" href="javascript:void(0);" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.dsz.gov.cn');">设为首页</a>
+                     |   
+                    <a class="site-custom" title="加入收藏" onclick="window.external.AddFavorite(location.href, document.title);" href="javascript:void(0);">加为收藏</a>
+                     |                   
+                    <a class="site-custom" href="../../pages/index/Rss.aspx" target="_blank">RSS订阅</a>                     
+                </div>
+                <script type="text/javascript">
+                    <!--
+                    var speed = 30;
+                    var $tab = $(".unify");
+                    var $tab1 = $("#borad");
+                    var $tab2 = $("#scroll");
+                    $tab2.html($tab1.html());
+                    function Marquee() {
+                        if ($tab2[0]) {
+                            if ($tab2[0].offsetWidth - $tab[0].scrollLeft <= 0)
+                                $tab[0].scrollLeft -= $tab1[0].offsetWidth;
+                            else {
+                                $tab[0].scrollLeft++;
+                            }
+                        } else {
+                            clearInterval(MyMar);   
+                        }                        
+                    }
+                    var MyMar = setInterval(Marquee, speed);
+                    $tab.hover(function () {
+                        clearInterval(MyMar);
+                    }, function () {
+                        MyMar = setInterval(Marquee, speed);
+                    })
+                    //-->
+                </script>
+            </div>
+            <!--<div><img src="../../resource/guohui.png" style="position:absolute;width:73px;height:73px;top:85px;left:10px;"/></div>-->
+            <div class="header">
+                <!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+                    width="997" height="180" id="top-1" align="middle">
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="false" />
+                    <param name="movie" value="../../resource/flash/top.swf" />
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <embed src="../../resource/flash/top.swf" quality="high" bgcolor="#ffffff" width="997"
+                        height="180" name="top-1" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false"
+                        type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                </object>-->
+			<!--<img src="../../resource/5555.png" />-->
+			<img src="../../resource/top.png" />
+
+            </div>
+            <!--賦旰-->
+        
+</div>        
+        <div class="nav">
+            <div class="guide">
+                <ul>
+                    <li class="item" id="item_1"><a href="../../">首页</a></li>
+					<li class="divide"></li>
+                    <li class="item" id="item_2"><a href="../../pages/CuPlayer/Mldsz.aspx?id=100000000000022889" target="_blank">魅力独山子</a></li>
+                    <li class="divide"></li>
+                    
+                    <li class="item" id="item_3"><a id="xxgk" href="../../pages/publicinfo/publicInfo.aspx" target="_blank">政务公开</a></li>
+                    <li class="divide"></li>
+                    <li class="item" id="item_4"><a href="../../pages/hdjl/InteractiveNav.aspx" target="_blank">互动交流</a></li>
+                    <li class="divide"></li>
+                    <li class="item" id="item_5"><a href="../../pages/zxbs/GuideSearch.aspx" target="_blank">在线办事</a></li>
+					<!--<li class="item" id="item_5"><a href="http://zwfw.xinjiang.gov.cn/" target="_blank">在线办事</a></li>-->
+                    <li class="divide"></li>
+                    <li class="item" id="item_6"><a href="../../pages/gzfw/Weather.aspx" target="_blank">公众服务</a></li>
+                    <li class="divide"></li>
+                    <li class="item" id="item_7"><a href="../../pages/xxgk/ztwz.aspx?id=100000000000738677&columnName=反邪教专栏" target="_blank">专题网站</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input type="text" style="line-height: 25px;width: 160px;" name="hunt"
+                    class="hunt" tabindex="1" value="" />
+
+                <input id="search_btn" type="button" name="seek" class="seek" tabindex="2" value="" style="width:60px"/>
+				
+            </div>
+            
+        </div>
+        <!--賦旰-->
+        
+    <form method="post" action="./Czjs.aspx?year=2020" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2EF020C5" />
+    <!--信息公开正文详细-->
+    <div class="articles">
+        <div class="addresss">
+            <h1>
+                您的位置：<a href="../../Index.aspx">首页</a> > <a href="PublicInfoMenu.aspx">信息公开</a>
+                >
+                </h1>
+        </div>
+        <div class="infodetails">
+            <h2 id="contentChildPage_commonTitle" class="common-title">2020年政府及相关部门决算</h2>
+            
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">人大<span>（1）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%ba%e5%a4%a7_%e4%ba%ba%e6%b0%91%e4%bb%a3%e8%a1%a8%e5%a4%a7%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区人民代表大会常务委员会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区人民代表大会常务委员会</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">政协<span>（1）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%94%bf%e5%8d%8f_%e6%94%bf%e6%b2%bb%e5%8d%8f%e5%95%86%e4%bc%9a%e8%ae%ae&year=2021" title="中国人民政治协商会议新疆维吾尔自治区克拉玛依市独山子区委员会" target="_blank">中国人民政治协商会议新疆维吾尔自治区克拉玛依市独山子区委员会</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">区委<span>（16）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%ad%e5%9b%bd%e5%85%b1%e4%ba%a7%e5%85%9a%e6%96%b0%e7%96%86%e7%bb%b4%e5%90%be%e5%b0%94%e8%87%aa%e6%b2%bb%e5%8c%ba%e5%85%8b%e6%8b%89%e7%8e%9b%e4%be%9d%e5%b8%82%e7%8b%ac%e5%b1%b1%e5%ad%90%e5%8c%ba%e5%a7%94%e5%91%98%e4%bc%9a%e5%8a%9e%e5%85%ac%e5%ae%a4&year=2021" title="中国共产党新疆维吾尔自治区克拉玛依市独山子区委员会办公室" target="_blank">中国共产党新疆维吾尔自治区克拉玛依市独山子区委员会办公室</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%bb%84%e7%bb%87%e9%83%a8&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委组织部" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委组织部</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%ae%a3%e4%bc%a0%e9%83%a8&year=2021" title="中国共产党新疆维吾尔自治区克拉玛依市独山子区委员会宣传部" target="_blank">中国共产党新疆维吾尔自治区克拉玛依市独山子区委员会宣传部</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%bb%9f%e6%88%98%e9%83%a8&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委统战部" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委统战部</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8c%ba%e7%9b%b4%e5%b1%9e%e6%9c%ba%e5%85%b3&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区直机关工作委员会" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区直机关工作委员会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%94%bf%e6%b3%95%e5%a7%94&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委员会政法委员会" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委员会政法委员会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%b7%a5%e5%95%86%e4%b8%9a%e8%81%94%e5%90%88%e4%bc%9a&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区工商联" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区工商联</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%80%bb%e5%b7%a5%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区总工会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区总工会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%ad%e5%9b%bd%e5%85%b1%e4%ba%a7%e4%b8%bb%e4%b9%89%e9%9d%92%e5%b9%b4%e5%9b%a2&year=2021" title="中国共产主义青年团新疆维吾尔自治区克拉玛依市独山子区团区委" target="_blank">中国共产主义青年团新疆维吾尔自治区克拉玛依市独山子区团区委</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%ba%aa%e5%a7%94%e7%9b%91%e5%a7%94&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区纪委监委" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区纪委监委</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%bd%91%e7%bb%9c_%e7%bd%91%e4%bf%a1%e5%8a%9e&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区委网络安全和信息化领导小组办公室" target="_blank">新疆维吾尔自治区克拉玛依市独山子区委网络安全和信息化领导小组办公室</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e8%80%81%e5%b9%b2%e9%83%a8%e5%b1%80&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委老干部局" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委老干部局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%9c%ba%e6%9e%84%e7%bc%96%e5%88%b6%e5%a7%94%e5%91%98%e4%bc%9a%e5%8a%9e%e5%85%ac%e5%ae%a4&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委员会机构编制委员会办公室" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委员会机构编制委员会办公室</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8f%b2%e5%bf%97%e6%a1%a3%e6%a1%88%e5%b1%80&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委员会史志档案局" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委员会史志档案局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%a7%94%e5%91%98%e4%bc%9a%e5%85%9a%e6%a0%a1&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委员会党校" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委员会党校</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%be%a4%e4%bc%97%e5%b7%a5%e4%bd%9c%e6%9c%8d%e5%8a%a1%e4%b8%ad%e5%bf%83&year=2021" title="中共新疆维吾尔自治区克拉玛依市独山子区委员会群众工作服务中心" target="_blank">中共新疆维吾尔自治区克拉玛依市独山子区委员会群众工作服务中心</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">检法<span>（2）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%a3%80%e5%af%9f%e9%99%a2&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区人民检察院" target="_blank">新疆维吾尔自治区克拉玛依市独山子区人民检察院</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%b3%95%e9%99%a2&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区人民法院" target="_blank">新疆维吾尔自治区克拉玛依市独山子区人民法院</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">区政府<span>（36）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%94%bf%e5%ba%9c%e5%8a%9e&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区政府办公室" target="_blank">新疆维吾尔自治区克拉玛依市独山子区政府办公室</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8f%91%e5%b1%95%e5%92%8c%e6%94%b9%e9%9d%a9%e5%a7%94%e5%91%98%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区发展和改革委员会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区发展和改革委员会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%85%ac%e5%ae%89%e5%b1%80%e7%8b%ac%e5%b1%b1%e5%ad%90%e5%8c%ba%e5%88%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市公安局独山子区分局" target="_blank">新疆维吾尔自治区克拉玛依市公安局独山子区分局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%86%9b%e4%be%9b%e7%ab%99_%e5%86%9b%e7%b2%ae%e4%be%9b%e5%ba%94%e7%ab%99&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区军粮供应站" target="_blank">新疆维吾尔自治区克拉玛依市独山子区军粮供应站</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%b7%a5%e4%b8%9a%e5%92%8c%e4%bf%a1%e6%81%af%e5%8c%96%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区工业和信息化局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区工业和信息化局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%bd%8f%e6%88%bf%e5%92%8c%e8%a7%84%e5%88%92%e5%bb%ba%e8%ae%be%e5%b1%80_%e5%bb%ba%e8%ae%be%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区住房和规划建设局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区住房和规划建设局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e8%b4%a2%e6%94%bf%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区财政局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区财政局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8f%b8%e6%b3%95%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区司法局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区司法局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%9f%8e%e5%b8%82%e7%ae%a1%e7%90%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区城市管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区城市管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%ba%e5%8a%9b%e8%b5%84%e6%ba%90%e5%92%8c%e7%a4%be%e4%bc%9a%e4%bf%9d%e9%9a%9c%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区人力资源和社会保障局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区人力资源和社会保障局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%b0%b1%e4%b8%9a%e7%ae%a1%e7%90%86_%e4%ba%ba%e5%8a%9b%e8%b5%84%e6%ba%90%e6%9c%8d%e5%8a%a1%e4%b8%ad%e5%bf%83&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区公共就业管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区公共就业管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%ae%a1%e8%ae%a1%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区审计局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区审计局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%ba%94%e6%80%a5%e7%ae%a1%e7%90%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区应急管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区应急管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%94%9f%e6%80%81%e7%8e%af%e5%a2%83%e5%88%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区生态环境分局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区生态环境分局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%b0%91%e6%94%bf%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区民政局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区民政局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%b0%91%e6%97%8f%e5%ae%97%e6%95%99%e4%ba%8b%e5%8a%a1%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区民族宗教事务委员会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区民族宗教事务委员会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区科技局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区科技局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%94%b5%e8%a7%86%e5%8f%b0&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区有线电视台" target="_blank">新疆维吾尔自治区克拉玛依市独山子区有线电视台</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%96%87%e5%8c%96%e4%bd%93%e8%82%b2%e6%97%85%e6%b8%b8%e5%b1%80_%e6%96%87%e5%8c%96%e4%bd%93%e8%82%b2%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区文化体育旅游局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区文化体育旅游局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%b7%a5%e7%a8%8b%e5%bb%ba%e8%ae%be%e7%ae%a1%e7%90%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区工程建设管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区工程建设管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8d%ab%e7%94%9f%e5%81%a5%e5%ba%b7%e5%a7%94%e5%91%98%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区卫生健康委员会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区卫生健康委员会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%96%be%e7%97%85%e9%a2%84%e9%98%b2_%e5%8d%ab%e8%ae%a1%e5%a7%94&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区疾病预防控制中心" target="_blank">新疆维吾尔自治区克拉玛依市独山子区疾病预防控制中心</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%b8%82%e5%9c%ba%e7%9b%91%e7%9d%a3%e7%ae%a1%e7%90%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区市场监督管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区市场监督管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%86%9c%e4%b8%9a%e5%92%8c%e6%b0%b4%e5%8a%a1%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区农业和水务局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区农业和水务局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%9c%ba%e5%85%b3%e4%ba%8b%e5%8a%a1%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区机关事务局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区机关事务局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%bf%a1%e8%ae%bf%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区信访局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区信访局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%9b%ad%e6%9e%97%e7%bb%bf%e5%8c%96%e7%ae%a1%e7%90%86%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区园林绿化管理局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区园林绿化管理局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%a6%bb%e9%80%80%e4%bc%91%e7%ab%99_%e7%a6%bb%e9%80%80%e4%bc%91%e8%81%8c%e5%b7%a5%e7%ae%a1%e7%90%86%e7%ab%99&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区离退休站" target="_blank">新疆维吾尔自治区克拉玛依市独山子区离退休站</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%a4%be%e5%8c%ba%e5%8d%ab%e7%94%9f&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区社区卫生服务管理中心" target="_blank">新疆维吾尔自治区克拉玛依市独山子区社区卫生服务管理中心</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e9%87%91%e5%b1%b1%e8%b7%af%e8%a1%97%e9%81%93%e5%8a%9e%e4%ba%8b%e5%a4%84&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区金山路街道办事处" target="_blank">新疆维吾尔自治区克拉玛依市独山子区金山路街道办事处</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e8%a5%bf%e5%ae%81%e8%b7%af&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区西宁路街道办事处" target="_blank">新疆维吾尔自治区克拉玛依市独山子区西宁路街道办事处</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%96%b0%e5%8c%97%e5%8c%ba&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区新北区街道办事处" target="_blank">新疆维吾尔自治区克拉玛依市独山子区新北区街道办事处</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%b1%a1%e6%b0%b4%e5%a4%84%e7%90%86%e5%8e%82&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区污水处理厂" target="_blank">新疆维吾尔自治区克拉玛依市独山子区污水处理厂</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e7%8e%af%e5%a2%83%e7%a7%91%e7%a0%94%e7%9b%91%e6%b5%8b%e7%ab%99&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区环境科研监测站" target="_blank">新疆维吾尔自治区克拉玛依市独山子区环境科研监测站</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%8c%bb%e7%96%97%e4%bf%9d%e9%9a%9c%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区医疗保障局" target="_blank">新疆维吾尔自治区克拉玛依市独山子区医疗保障局</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%9b%bd%e6%9c%89%e8%b5%84%e4%ba%a7%e7%9b%91%e7%9d%a3%e7%ae%a1%e7%90%86%e5%a7%94%e5%91%98%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区国有资产监督管理委员会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区国有资产监督管理委员会</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">教育<span>（19）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%95%99%e8%82%b2%e5%b1%80%ef%bc%88%e6%b1%87%e6%80%bb%ef%bc%89&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区教育局（汇总）" target="_blank">新疆维吾尔自治区克拉玛依市独山子区教育局（汇总）</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%95%99%e8%82%b2%e5%b1%80&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区教育局（本级）" target="_blank">新疆维吾尔自治区克拉玛依市独山子区教育局（本级）</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%80%e4%b8%ad_%e7%ac%ac%e4%b8%80%e4%b8%ad%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第一中学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第一中学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%8c%e4%b8%ad_%e7%ac%ac%e4%ba%8c%e4%b8%ad%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第二中学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第二中学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%89%e4%b8%ad_%e7%ac%ac%e4%b8%89%e4%b8%ad%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第三中学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第三中学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%80%e5%b0%8f_%e7%ac%ac%e4%b8%80%e5%b0%8f%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第一小学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第一小学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%8c%e5%b0%8f_%e7%ac%ac%e4%ba%8c%e5%b0%8f%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第二小学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第二小学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%94%e5%b0%8f_%e7%ac%ac%e4%ba%94%e5%b0%8f%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第五小学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第五小学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%85%ad%e5%b0%8f_%e7%ac%ac%e5%85%ad%e5%b0%8f%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第六小学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第六小学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%83%e5%b0%8f_%e7%ac%ac%e4%b8%83%e5%b0%8f%e5%ad%a6&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第七小学" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第七小学</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%80%e5%b9%bc_%e7%ac%ac%e4%b8%80%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第一幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第一幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%8c%e5%b9%bc_%e7%ac%ac%e4%ba%8c%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第二幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第二幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%89%e5%b9%bc_%e7%ac%ac%e4%b8%89%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第三幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第三幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%9b%9b%e5%b9%bc_%e7%ac%ac%e5%9b%9b%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第四幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第四幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%ba%94%e5%b9%bc_%e7%ac%ac%e4%ba%94%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第五幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第五幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%85%ad%e5%b9%bc_%e7%ac%ac%e5%85%ad%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第六幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第六幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b8%83%e5%b9%bc_%e7%ac%ac%e4%b8%83%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第七幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第七幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%85%ab%e5%b9%bc_%e7%ac%ac%e5%85%ab%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第八幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第八幼儿园</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e4%b9%9d%e5%b9%bc_%e7%ac%ac%e4%b9%9d%e5%b9%bc%e5%84%bf%e5%9b%ad&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区第九幼儿园" target="_blank">新疆维吾尔自治区克拉玛依市独山子区第九幼儿园</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">社会团体<span>（3）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e5%a6%87%e8%81%94_%e5%a6%87%e5%a5%b3%e8%81%94%e5%90%88%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区妇女联合会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区妇女联合会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%85%88%e5%96%84%e5%8d%8f%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区慈善协会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区慈善协会</a>
+		    		                </li>
+                                
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000363310&title=%e6%ae%8b%e8%81%94_%e6%ae%8b%e7%96%be%e4%ba%ba%e8%81%94%e5%90%88%e4%bc%9a&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区残疾人联合会" target="_blank">新疆维吾尔自治区克拉玛依市独山子区残疾人联合会</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                    <div class="columnPage-common">
+		              <div class="columnPage-title">
+		                <div class="icon-container"></div>
+		                <div class="title-content">独山子区政府<span>（1）</span></div>
+		              </div>
+		              <div class="columnPage-container">
+		                <ul>
+                            
+                                    <li>
+                                    <i></i>
+                                    <a href="CzPublicDetail.aspx?columnId=100000000000397603&title=%e6%96%b0%e7%96%86%e7%bb%b4%e5%90%be%e5%b0%94%e8%87%aa%e6%b2%bb%e5%8c%ba%e5%85%8b%e6%8b%89%e7%8e%9b%e4%be%9d%e5%b8%82%e7%8b%ac%e5%b1%b1%e5%ad%90%e5%8c%ba%e6%94%bf%e5%ba%9c&year=2021" title="新疆维吾尔自治区克拉玛依市独山子区政府" target="_blank">新疆维吾尔自治区克拉玛依市独山子区政府</a>
+		    		                </li>
+                                
+		                </ul> 
+		              </div>
+		            </div>
+                
+                        
+
+
+            <div id="wrap-billboard">
+                <div>
+                    <p>	
+                        
+				<a href="Czjs.aspx?year=2020" target="_blank">2020年政府及部门决算</a>				
+                                
+				<a href="Czjs.aspx?year=2019" target="_blank">2019年政府及部门决算</a>				
+                                
+				<a href="Czjs.aspx?year=2018" target="_blank">2018年政府及部门决算</a>				
+                                
+				<a href="Czjs.aspx?year=2017" target="_blank">2017年政府及部门决算</a>				
+                                
+				<a href="Czjs.aspx?year=2016" target="_blank">2016年政府及部门决算</a>				
+                                
+				<a href="Czjs.aspx?year=2015" target="_blank">2015年政府及部门决算</a>				
+                                
+	            </p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--结束-->
+    </form>
+
+        <!--珜褐陓洘-->
+        <div id="pnlFooter">
+	
+            <div style="background:#FFF;width:998px;margin:0 auto;padding:3px 0;">
+            <hr style="margin:0 auto;width:998px; border-width: 2px;" />
+
+            </div>
+            <div class="foot" style="">
+			<script src='http://dcs.conac.cn/js/31/431/0000/40707996/CA314310000407079960001.js' type='text/javascript'></script>
+			
+                <p>
+                    <a href="../../pages/intro/SiteMap.aspx">网站地图</a> | <a href="../../pages/intro/AboutUs.aspx">关于我们</a> | <a href="../../pages/intro/ContactUs.aspx">联系我们</a>  | 总访问量是
+                    <a style="color: Black; font-weight: bold;">
+                        87447084</a>
+                    次
+                </p>
+                <p>开办单位：克拉玛依市独山子区人民政府</p>
+				<p>主办单位：独山子区政府办公室 承办单位：独山子区政府办公室  独山子区信息化办公室</p>
+				<p>建议使用IE6.0以上浏览器 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">新ICP备14001987号</a> 政府网站标识码：6502020001</p> 
+		 	<div style="width:190px;margin:0 auto;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=65020202000002" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../resource/gabalogo.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;width:170px;    text-align: left; color:#939393;">新公网安备 65020202000002号</p></a>
+		 	</div>				
+				<p>技术支持：克拉玛依市独山子红有智联信息技术有限责任公司 0992-3655199</p>
+				
+				
+		<script id="_jiucuo_" sitecode='6502020001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+		<script id="_jiucuo_" sitecode='6502020001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+		<script id="_jiucuo_" sitecode='6502020001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+		<script src='http://dcs.conac.cn/js/31/431/0000/40707996/CA314310000407079960001.js' type='text/javascript'></script>
+			
+		</div>
+		
+        
+</div>
+        <!---->
+    </div>
+    <div style="display: none">
+        <div id="opninion">
+            <h3></h3>
+            <h3 style="font-size: 15px;"></h3>
+            <h3 style="font-size: 15px;"></h3>
+            <p>
+                <textarea id="optText" style="height: 223px; width: 656px; resize: none;"></textarea>
+            </p>
+            <center>
+                <img id="sugge" src="../../resource/imgs/tj.jpg" style="text-align: center; cursor: pointer" />
+            </center>
+        </div>
+    </div>
+     
+     <!--[if lt IE 7]>
+        <script type="text/javascript" src="../../scripts/iepngfix/unitpngfix.js"></script>
+     <![endif]-->
+    <script src="../../scripts/dhtmlxCalander/dhtmlxcommon.js" type="text/javascript"
+        charset="gb2312"></script>
+    <script src="../../scripts/dhtmlxCalander/dhtmlxcalendar.js" type="text/javascript"
+        charset="gb2312"></script>
+    
+    <script src="../../scripts/Validation/js/jquery.validationEngine-zh_CN.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../scripts/boxy/js/jquery.boxy.js"></script>
+    <script src="../../scripts/jquery-superbox-0.9.1/jquery.superbox.js" type="text/javascript"></script>
+    <script src="../../scripts/Validation/js/jquery.validationEngine.js" type="text/javascript"></script>
+        
+    <script src="../../scripts/colorbox/jquery.colorbox.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+		<!--
+        $(function () {
+
+            $(".little_nav a").mouseover(function () {
+                $(this).css("color", "#FF6600")
+            }).mouseout(function () {
+                $(this).css("color", "#000");
+            })
+            var arrUrl = location.href.split('/');
+            var page = arrUrl[arrUrl.length - 1].split('?')[0];
+
+            switch (page) {
+                 case "Mldsz.aspx": jsCommon.setNav(1); break;
+                case "Index.aspx": jsCommon.setNav(0); break;
+                case "Weather.aspx": jsCommon.setNav(5); break;
+                case "Violation.aspx": jsCommon.setNav(4); break;
+                case "Product.aspx": jsCommon.setNav(5); break;
+                case "Interactive.aspx": jsCommon.setNav(2); break;
+                case "GuideNav.aspx": jsCommon.setNav(3); break;
+                case "PublicInfoNav.aspx": jsCommon.setNav(2); break;
+                case "PublicDetail.aspx": jsCommon.setNav(2); break;
+                case "Apply.aspx": jsCommon.setNav(2); break;
+                case "GuideNav.aspx": jsCommon.setNav(3); break;
+                case "GuideSearch.aspx": jsCommon.setNav(4); break;
+                case "GuideDetails.aspx": jsCommon.setNav(4); break;
+                case "InteractiveMessage.aspx": jsCommon.setNav(3); break;
+                case "PoliciesMessage.aspx": jsCommon.setNav(2); break;
+                case "HotSpotMessage.aspx": jsCommon.setNav(2); break;
+                case "InteractiveSearch.aspx": jsCommon.setNav(2); break;
+                case "ProposalMessage.aspx": jsCommon.setNav(2); break;
+                case "ProposalList.aspx": jsCommon.setNav(2); break;
+                case "Mail.aspx": jsCommon.setNav(2); break;
+                case "MailList.aspx": jsCommon.setNav(2); break;
+                case "PublicInfoMenu.aspx": jsCommon.setNav(2); break;
+                case "LeaderInfo.aspx": jsCommon.setNav(2); break;
+                case "PublicInfoList.aspx": jsCommon.setNav(2); break;
+                case "PublicMultyType.aspx": jsCommon.setNav(2); break;
+                case "PublicSingle.aspx": jsCommon.setNav(2); break;
+                case "SunshineIntro.aspx": jsCommon.setNav(2); break;
+                case "Movie.aspx": jsCommon.setNav(5); break;
+                case "Traffic.aspx": jsCommon.setNav(5); break;
+                case "Bank.aspx": jsCommon.setNav(4); break;
+                case "MovieMessage.aspx": jsCommon.setNav(4); break;
+                case "Questionnaire.aspx": jsCommon.setNav(2); break;
+                case "Annal.aspx": jsCommon.setNav(2); break;
+                case "QuestionnairesList.aspx": jsCommon.setNav(2); break;
+                case "InteractiveList.aspx": jsCommon.setNav(2); break;
+                case "ProposalsList.aspx": jsCommon.setNav(2); break;
+                case "Organization.aspx": jsCommon.setNav(2); break;
+                case "HotSpot.aspx": jsCommon.setNav(2); break;
+                case "Phone.aspx": jsCommon.setNav(2); break;
+                case "Policies.aspx": jsCommon.setNav(2); break;
+                case "SunshineIntroList.aspx": jsCommon.setNav(2); break;
+                case "ImpressionDushanzi.aspx": jsCommon.setNav(2); break;
+                case "Summary.aspx": jsCommon.setNav(2); break;
+                case "Apply.aspx": jsCommon.setNav(2); break;
+                case "Plany.aspx": jsCommon.setNav(2); break;
+                case "JourneyContent.aspx": jsCommon.setNav(2); break;
+                case "JourneyList.aspx": jsCommon.setNav(2); break;
+                case "InteractiveNav.aspx": jsCommon.setNav(3); break;
+                case "SubmitLetter.aspx": jsCommon.setNav(3); break;
+                case "ztwz.aspx": jsCommon.setNav(6); break;
+                default: break;
+            }
+
+            $(".guide li").click(function () {
+                $(".guide li").removeClass("select");
+                $(this).addClass("select");
+            })
+            $("#popupOpinion").colorbox({ inline: true, width: 705, height: 375, transition: "fade" });
+            $("#sugge").click(function () {
+                var opinion = $("#optText").val();
+                if (opinion == "")
+                    return false;
+
+                $.get("../../Opinion.aspx", { time: new Date().getTime(), opinion: $("#optText").val() }, function (response) {
+                    $("#optText").val("");
+                    if (response == "success")
+                        $("#sugge").after("<span><img src='../../scripts/Dialogs/success.png' />枑蝠傖髡,覜郅蠟腔砩獗!</span>");
+                    else
+                        $("#sugge").after("<span><img src='../../scripts/Dialogs/warning.png' />枑蝠囮啖,竭惕!</span>");
+                })
+            });
+            $("#optText").bind("focus", function () {
+                $("#sugge").parent().find("span").remove();
+            });
+            var left = (window.screen.width - 998) / 2;
+            /***************************/
+            $(".tips:eq(0)").css("left", (left + 380) + "px");
+            $(".tips:eq(1)").css("left", (left + 440) + "px");
+            $(".tips:eq(2)").css("left", (left + 500) + "px");
+            var cur = 0;
+            $(".tips").click(function () {
+                if ($(this).attr("rel") == "next") {
+
+                    if (cur < 2) {
+                        $("#tips_zone div").eq(cur).hide();
+                        $("#tips_zone div").eq(cur + 1).show();
+                        cur++;
+                    }
+                }
+                else if ($(this).attr("rel") == "prev") {
+                    if (cur >= 1) {
+                        $("#tips_zone div").eq(cur).hide();
+                        $("#tips_zone div").eq(cur - 1).show();
+                        cur--;
+                    }
+                }
+                else if ($(this).attr("rel") == "close") {
+                    $(".tipContainer").hide();
+                }
+                switch (cur) {
+                    case 0:
+                        $(".tips:eq(0)").css("left", (left + 380) + "px").css("top", "420px");
+                        $(".tips:eq(1)").css("left", (left + 440) + "px").css("top", "420px");
+                        $(".tips:eq(2)").css("left", (left + 500) + "px").css("top", "420px");
+                        window.scrollTo(0, 0); break;
+                    case 1:
+                        $(".tips:eq(0)").css("left", (left + 250) + "px").css("top", "1445px");
+                        $(".tips:eq(1)").css("left", (left + 310) + "px").css("top", "1445px");
+                        $(".tips:eq(2)").css("left", (left + 370) + "px").css("top", "1445px");
+                        window.scrollTo(0, 1200); break;
+                    case 2:
+                        $(".tips:eq(0)").css("left", (left + 240) + "px").css("top", "1685px");
+                        $(".tips:eq(1)").css("left", (left + 300) + "px").css("top", "1685px");
+                        $(".tips:eq(2)").css("left", (left + 360) + "px").css("top", "1685px");
+                        window.scrollTo(0, 1400);
+                        break;
+
+
+                }
+            })
+            $("#search_btn").click(function () {
+                var key = $(".search .hunt").val().replace(/(^\s*)|(\s*$)/g, "");
+                if (key == "")
+                    return false;
+                else
+                    location.href = "../../pages/qzss/GlobalSearch.aspx?key=" + key;
+            });
+
+            $("#advSearch_btn").click(function () {
+                location.href = "../../pages/qzss/AdvSearch.aspx";
+            });
+            
+        })
+
+        if (navigator.platform == "Win32" && navigator.appName == "Microsoft Internet Explorer" && window.attachEvent) {
+            window.attachEvent("onload", enableAlphaImages);
+        }
+
+        function enableAlphaImages() {
+            var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+            var itsAllGood = (rslt != null && Number(rslt[1]) >= 5.5);
+            if (itsAllGood) {
+                for (var i = 0; i < document.all.length; i++) {
+                    var obj = document.all[i];
+                    var bg = obj.currentStyle.backgroundImage;
+                    var img = document.images[i];
+                    if (bg && bg.match(/\.png/i) != null) {
+                        var img = bg.substring(5, bg.length - 2);
+                        var offset = obj.style["background-position"];
+                        obj.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + img + "', sizingMethod='crop')";
+                        obj.style.backgroundImage = "url('../../scripts/iepngfix/pixel.gif')";
+                        obj.style["background-position"] = offset; // reapply
+                    } else if (img && img.src.match(/\.png$/i) != null) {
+                        var src = img.src;
+                        img.style.width = img.width + "px";
+                        img.style.height = img.height + "px";
+                        img.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + src + "', sizingMethod='crop')"
+                        img.src = "../../scripts/iepngfix/pixel.gif";
+                    }
+                }
+            }
+        }
+
+        function setHome() {
+            
+        }
+        function addFav() { 
+        
+        }
+		//-->
+    </script>
+</body>
+</html>
