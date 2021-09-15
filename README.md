@@ -32,11 +32,10 @@ Several ways to use this:
 ## better error checking
 It could follow-up with missed articles better. The most extreme case would be searching their exact title through the google json custom search API or Baidu API and just archiving the top few results... 
 
-* Some issues re cost and hosting: 
-The code is not tight, it uses lots of dependencies, R is slow anyway, and it has to wait every time it curls the archive.org link. Why? Because trying to do it asychronously (with WAIT=FALSE in the curl call or suppressing stdout) was unreliable. It has automatic timeouts both for the local curl and the archiving, but it's still slow. It would chew up a lot of minutes if I ran it on github actions or google cloud platform or whatever. But yes, that would be better and feel free. 
-
 ## make it asynchronous
 Whether in R or if it's rewritten in python, there's no good reason we should have to wait around for either curling the htmls to disk or the archive.org check. It would ideally be asynchronous. 
 
 ## host it
 Really this should be running in a Rocker container on Github actions or as a cloud script in GCP. Just haven't been able to get to that. Plus, developing that and hosting it would cost.
+
+Also, the curl would probably have to be made asynchronous to really make sense as a hosted solution. Right now, it has to wait every time it curls the archive.org link, and that takes time. Trying to do it asychronously (with WAIT=FALSE in the curl call or suppressing stdout) was unreliable. It has automatic timeouts both for the local curl and the archiving, but it's still slow. It would chew up a lot of minutes if I ran it on github actions or google cloud platform at present, as it churns and waits for every link. curl_fetch_multi() would do probably solve it.
