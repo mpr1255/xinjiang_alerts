@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--  width - viewport的宽度 height - viewport的高度 initial-scale - 初始的缩放比例 minimum-scale - 允许用户缩放到的最小比例 maximum-scale - 允许用户缩放到的最大比例 user-scalable - 用户是否可以手动缩放  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- 禁用手机号码显示为拨号的超链接 -->
+        <meta name="format-detection" content="telephone=no">
+        <!-- 不识别邮箱 -->
+        <meta content="email=no" name="format-detection" />
+        <!-- 开启对web app程序的支持 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- 添加到主屏幕“后，全屏显示 -->
+        <meta name="apple-touch-fullscreen" content="yes">
+        <!-- larvael X-CSRF-Token -->
+        <meta name="csrf-token" content="H4mUJLyomfoulEQOapvcLSHkk0CVfII7Q9So7h69">
+        <title>维吾尔（罗补甫克比日丸）维吾尔 国药准字Z65020142[价格,多少钱,功效与作用,说明书]_八百方网上药店手机版
+</title>
+
+            <!-- 这是DK专用 -->
+    <meta name="keywords" content="维吾尔,罗补甫克比日丸,网上药店,八百方">
+    <meta name="description" content="维吾尔(罗补甫克比日丸)价格多少钱，维吾尔(罗补甫克比日丸)功效与作用、说明书等关于和田维吾尔药业有限责任公司  维吾尔(罗补甫克比日丸)就在八百方网上药店，是您网上购买维吾尔(罗补甫克比日丸)的网上药店平台。">
+            <meta name="location" content="province=山西省;city=长治市">
+    
+        <!-- 基础样式 -->
+        <link href="/build/css/wap/base-3f4893eb70.css" rel="stylesheet" type="text/css">
+        
+        <script src="/build/js/wap/base-dd3730acf7.js"></script>
+        <script src="https://m.800pharm.com/special/wap/layout/js/jweixin-1.2.0.js"></script>
+        <script src="https://m.800pharm.com/special/wap/layout/js/wxShare.js"></script>
+
+                    <!-- 这是head内部样式专用 -->
+    <link href="/build/css/wap/drug_head-6dbf497a08.css" rel="stylesheet">
+    <link href="/build/css/wap/navigation-02697a7b22.css" rel="stylesheet">
+        <!-- 百度统计js -->
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?860c0cb77d47a628758d69d895e37c19";
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <script>
+            // alert(window.location.href)
+            // confirm(window.location.href)
+            // 安卓原生登陆方法
+            function androidLogin() {//回调安卓原生登陆方法
+                    // console.log('跳转安卓');
+                    // alert('跳转安卓登陆');
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android.androidLogin(finalInfoStr);//finalInfo一定不可以为空，否则回调会失败      
+            }
+            // iOS原生登陆方法
+            function toIOS() {
+
+                // alert('跳转ios登陆');
+                try {
+                    window.webkit.messageHandlers.APP.postMessage({})
+                    
+                }
+                catch(err) {
+                    console.log(err.message)
+                }
+            }
+
+            // 去App个人中心
+            function toPersonal(){
+                // 去安卓个人中心
+                if(isWhat() == "android"){
+                    // alert('跳转安卓个人中心');
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android.toPersonal(finalInfoStr);
+                    // alert('跳转安卓个人中心');
+                    //finalInfo一定不可以为空，否则回调会失败
+                
+                // 去iOS个人中心
+                }else if(isWhat() == "ios"){
+                    try {
+                        alert('跳转ios个人中心');
+                        window.webkit.messageHandlers.toPersonal.postMessage({})
+                    }
+                    catch(err) {
+                        // alert(err.message)
+                    }
+                }
+            }
+            
+            // 去App首页
+            function toHome(){
+                // 去安卓首页
+                if(isWhat() == "android"){
+                    // alert('跳转安卓首页');
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android.toHome(finalInfoStr);
+                    // alert('跳转安卓个人中心');
+                    //finalInfo一定不可以为空，否则回调会失败
+                
+                // 去iOS首页
+                }else if(isWhat() == "ios"){
+                    try {
+                        // alert('跳转ios首页');
+                        window.webkit.messageHandlers.toHome.postMessage({})
+                    }
+                    catch(err) {
+                        // alert(err.message)
+                    }
+                }
+            }
+            
+            // 去App分类找药
+            function toCategory(){
+                // 去安卓分类找药
+                if(isWhat() == "android"){
+                    // alert('跳转安卓分类找药');
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android.toCategory(finalInfoStr);
+                    // alert('跳转安卓个人中心');
+                    //finalInfo一定不可以为空，否则回调会失败
+                    
+                // 去iOS分类找药
+                }else if(isWhat() == "ios"){
+                    try {
+                        // alert('跳转ios分类找药');
+                        window.webkit.messageHandlers.toCategory.postMessage({})
+                    }
+                    catch(err) {
+                        // alert(err.message)
+                    }
+                }
+            }
+            // 跳转App购物车
+            function toCart(){
+                // 去安卓购物车
+                if(isWhat() == "android"){
+                    // alert('跳转安卓购物车');
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android.toCart(finalInfoStr);
+                    // alert('跳转安卓个人中心');
+                    //finalInfo一定不可以为空，否则回调会失败
+                
+                // 去iOS购物车
+                }else if(isWhat() == "ios"){
+                    try {
+                        // alert('跳转ios购物车');
+                        window.webkit.messageHandlers.toCart.postMessage({})
+                    }
+                    catch(err) {
+                        // alert(err.message)
+                    }
+                }
+            }
+            /**
+             * [appPublic 处理传入不同的字符串跳转不同App原生方法]
+             * @param    {[type]} str [传入的原生字符串方法名字]
+             * @return  {[type]}     [description]
+             * toCart 跳转原生购物车
+             * toCategory 跳转原生分类找药
+             * toHome  跳转原生首页
+             * toPersonal 跳转原生个人中心
+             */
+            function appPublic(str){
+                // alert(`跳转${str}方法`)
+                // 去安卓原生
+                if(isWhat() == "android"){
+                    // alert('跳转安卓的'+str);
+                    var finalInfo = new Object();
+                    //为对象赋值
+                    finalInfo.token = 'test';//可以传参数回来，列如token、mid
+                    finalInfo.mid = 1111;
+                    //将对象转换为json格式
+                    var finalInfoStr = JSON.stringify(finalInfo);
+                    window.android[str](finalInfoStr);
+                    // alert('跳转安卓个人中心');
+                    //finalInfo一定不可以为空，否则回调会失败
+                
+                // 去iOS原生
+                }else if(isWhat() == "ios"){
+                    try {
+                        // alert('跳转ios的'+str);
+                        window.webkit.messageHandlers[str].postMessage({})
+                    }
+                    catch(err) {
+                        // alert(err.message)
+                    }
+                }
+            }
+
+            // 判断是否app 是就返回true
+            function isApp(){
+                if (isWhat() == 'android' || isWhat() == 'ios') {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            //判断是安卓还是iOS
+            function isWhat(){
+                
+                //document.write(666666666666666666666666666666666666+u);
+                
+                
+                if (window.android != null && typeof(window.android) != "undefined") {
+                    
+                    return 'android';
+                }else if(/(Safari)/i.test(navigator.userAgent)){
+                    return 'H5';
+                }else{
+                    var ua = window.navigator.userAgent.toLowerCase();
+                    // 识别微信客户端、QQ客户端、UC浏览器 今日头条(newsarticle) 阿里App(aliapp)
+                    if (ua.match(/MicroMessenger/i) == 'micromessenger' || ua.match(/QQ/i) == "qq" || ua.match(/UCBrowser/i) == 'ucbrowser' || ua.match(/QHBrowser/i) == 'qhbrowser' || ua.match(/quark/i) == 'quark' || ua.match(/newsarticle/i) == 'newsarticle' || ua.match(/aliapp/i) == 'aliapp') {
+                        return 'H5';
+                    } 
+                    else {
+                        return 'ios';
+                    }
+
+                }
+            }
+
+            
+            function test(){
+                var userAgent = navigator.userAgent.toLowerCase(), //获取userAgent
+                isInapp = userAgent.indexOf("bbf")>=0;//查询是否有相关app的相关字段
+
+                // alert(userAgent)
+                if(userAgent.indexOf("bbf")>=0){
+                    $('.nutritious_department p').text('八百方')
+                    alert('在iOS自己的App'+userAgent)
+                }else{
+                    $('.nutritious_department p').text('no八百方')
+                    alert('不在iOS自己的App' +userAgent)
+                }
+            }
+
+            function personal(){
+                if(!isApp()){
+                    console.log("web")
+                    // 个人中心地址
+                    $('#head_nav .hn_memb').attr('href', "https://m.800pharm.com/index.php/personal");
+                    // 购物车地址
+                    $('#head_nav .hn_cart').attr('href', "https://m.800pharm.com/index.php/cart");
+                    // 分类找药地址
+                    $('#head_nav .hn_sort').attr('href', "/category/allSorts.html");
+                    // 首页地址
+                    $('#head_nav .hn_index').attr('href', "/");
+
+                    // 首页的分类找药
+                    $('#ab_find_drug .drug_sort').attr('href', "/category/allSorts.html");
+                    // 首页的购物车
+                    $('#ab_find_drug .shop_cart').attr('href', "https://m.800pharm.com/index.php/cart");
+                    // 支付成功页跳回首页
+                    $('#public .btn_home').attr('href','/')
+                    // 支付成功页跳回个人中心
+                    $('#public .btn_personal').attr('href',"https://m.800pharm.com/index.php/personal")
+                }else{
+                    console.log(6666)
+                    
+                    $("#head_nav .hn_memb").attr('href', 'javascript:;');
+                    // 购物车地址
+                    $('#head_nav .hn_cart').attr('href', "javascript:;");
+                    // 分类找药地址
+                    $('#head_nav .hn_sort').attr('href', "javascript:;");
+                    // 首页地址
+                    $('#head_nav .hn_index').attr('href', "javascript:;");
+
+                    // 首页的分类找药
+                    $('#ab_find_drug .drug_sort').attr('href', "javascript:;");
+                    // 首页的购物车
+                    $('#ab_find_drug .shop_cart').attr('href', "javascript:;");
+                    // 支付成功页跳回首页
+                    $('#public .btn_home').attr('href','javascript:;')
+                    // 支付成功页跳回个人中心
+                    $('#public .btn_personal').attr('href',"javascript:;")
+                }
+            }
+            // 头部跳转App
+            $(function(){
+                personal()
+                
+                // 头部
+                $('#head_nav').on('click','a',function(){
+
+                    // 个人中心
+                    if($(this).hasClass('hn_memb')){
+                        // toPersonal();
+                        appPublic('toPersonal')
+                    // 购物车
+                    }else if($(this).hasClass('hn_cart')){
+                        toCart()
+                    // 分类找药
+                    }else if($(this).hasClass('hn_sort')){
+                        toCategory()
+                    // 首页
+                    }else{
+                        toHome()
+                    }
+                    // androidToAccount();
+                    // toAccount();
+                })
+
+                // 首页
+                $('#ab_find_drug').on('click','a',function(){
+                    
+                    // 分类找药
+                    if($(this).hasClass('drug_sort')){
+                       toCategory()
+                    // 购物车
+                    }else if($(this).hasClass('shop_cart')){
+                        toCart()
+                    }
+                })
+                // 支付成功页跳转App
+                $('#public').on('click','a',function(){
+                    if($(this).hasClass('btn_home')){
+                        toHome()
+                    }else if($(this).hasClass('btn_personal')){
+                        toPersonal()
+                    }
+                })
+            })
+
+            
+        </script>
+    </head>
+    <body>
+            
+        
+                    <header data-a="" data-b="" id="header" class="zo_header"  style="padding-right:70px; "  >
+    <a class="back" href="javascript:window.history.go(-1);" target="_top" rel="nofollow"></a>
+    <div class="hd_tit" style="padding-right:30px;">
+        <h1>维吾尔-罗补甫克比日丸
+</h1>
+
+        <a href="javascript:void(0);" class="hd_search" id="hd_search"></a>
+    </div>
+    <div class="hd_right">
+        <a rel="nofollow" class="kefu" href="javascript:void(0);" onclick="qiyu_kefu();"></a>
+        <a id="daohang" class="daohang" href="javascript:void(0);"></a>
+    </div>
+    <nav class="hd_nav" id="head_nav">
+        <a class="hn_index" href="/">首页</a>
+        <a class="hn_sort" href="/category/allSorts.html">分类找药</a>
+        <a rel="nofollow" class="hn_cart" href="https://m.800pharm.com/index.php/cart">购物车</a>
+        <a rel="nofollow" class="hn_memb" href="https://m.800pharm.com/index.php/personal">个人中心</a>
+    </nav>
+    <div id="searchMask" class="searchMask">
+        <div class="headerContainer">
+            <a rel="nofollow" href="javascript:void(0);" class="maskClose" id="maskClose"></a>
+            <form class="searchBox">
+                <input class="main_input" type="text" placeholder="搜索药品名/症状" autocomplete="off" id="searchHeadContent">
+                <input class="search_btn" type="button">
+                <input class="empty_input" type="reset" value="">
+            </form>
+            <div class="autocomplete">
+            </div>
+        </div>
+        <!-- 热门搜索 strat -->
+                <div class="hot-search-box">
+            <div class="title">大家都在搜</div>
+                <div class="key-word-box">
+                                            <a href="https://m.800pharm.com/product-101195-1999073.html">金戈10片装</a>
+                                            <a href="https://m.800pharm.com/search/%E6%B6%A6%E4%BC%97%E6%81%A9%E6%9B%BF%E5%8D%A1%E9%9F%A6%E5%88%86%E6%95%A3%E7%89%87.html?keyword_text=%E6%B6%A6%E4%BC%97%E6%81%A9%E6%9B%BF%E5%8D%A1%E9%9F%A6%E5%88%86%E6%95%A3%E7%89%87">润众</a>
+                                            <a href="https://m.800pharm.com/product-100910-1571281.html">安宫牛黄丸</a>
+                                            <a href="	http://m.800pharm.com/special/common/index.html?id=31">防疫常备</a>
+                                            <a href="https://m.800pharm.com/search_group_19378_254900.html?page=1&amp;sort_type=1&amp;sort_direction=1">理洫王</a>
+                                            <a href="https://m.800pharm.com/search/%E7%BB%9C%E6%B4%BB%E5%96%9C.html?keyword_text=%E7%BB%9C%E6%B4%BB%E5%96%9C">络活喜</a>
+                                            <a href="https://m.800pharm.com/product-100998-1655044.html">昆仙胶囊</a>
+                                            <a href="https://m.800pharm.com/search/%E6%84%9F%E5%86%92%E6%B8%85%E7%83%AD.html?keyword_text=%E6%84%9F%E5%86%92%E6%B8%85%E7%83%AD">感冒清热</a>
+                                    </div>
+        </div>
+        <div class="history">
+            <div class="history-title">
+                <span>最近搜索</span>
+                <a rel="nofollow" href="javascript:;" id="clearHistory">清除</a>
+            </div>
+            <div class="history-cont" id="history-cont">
+                <a href="/product-100516-1220396.html">金戈 伟哥</a>
+                <a href="/product-100115-965922.html">恩必普</a>
+                <a href="/product-100115-970566.html">开同</a>
+                <a href="/product-100115-1406996.html">维力青</a>
+                <a href="/product-100516-1100092.html">益安宁丸</a>
+                <a href="/product-100115-1406050.html">优思弗 </a>
+                <a href="/product-100516-1459157.html">希爱力</a>
+
+                <!-- <p>暂无历史搜索记录</p> -->
+            </div>
+        </div>
+        <!-- 热门搜索 end -->
+    </div>
+</header>
+<script>
+    $(function(){
+        $('#daohang').on('click',function(){
+            $('#head_nav').toggle();
+        });
+        $('#hd_search').on('click',function(){
+            $('#searchMask').show();
+            $('.main_input').val($(this).val()).focus();
+            
+            // let seaech_val = $(this).val();
+            // if (seaech_val) {
+            //     $('.main_input').attr('placeholder',seaech_val);
+            //     $('.main_input').attr('data-val',seaech_val);
+            // }else {
+            //     $('.main_input').attr('placeholder',"搜索药品名/症状/疾病");
+            // };
+        });
+        $('#maskClose').on('click',function(){
+            $('#searchMask').hide();
+            //清空搜索值
+            $('.empty_input').hide();
+            $('.main_input').val('');
+            $('.autocomplete').html('').hide();
+        });
+
+        //搜索结果
+        BBF.searchFn({
+            seachUrl : '/search/{keyword}.html',
+            pointUrl : '/shop/searchKWTip.html',
+            pointData: 'searchValue'
+        });
+    })
+</script>
+        
+            <script type="text/javascript">
+                if(isApp()){
+                    console.log("app");
+                    $(".top-ad-box").css("display","none");
+                    $(".top-ad-box").remove();
+                    $("#header").css("top","0");
+                // }else{
+                //     console.log("web");
+                }
+            </script>
+
+        <section class="drug_head_content">
+    <div class="dhc_goods">
+        <img src="https://m.800pharm.com/images/wap/LoadingImg.png" data-original="http://img.800pharm.com/images/100246/20141013/20141013145238_950.jpg">
+        <h1 class="g_infos" >
+                            <i class="rx_icon">RX</i>
+                        <span>维吾尔-罗补甫克比日丸</span>
+        </h1>
+        <p>生产厂商：和田维吾尔药业有限责任公司 </p>
+        <p>批准文号：国药准字Z65020142</p>
+        <!-- <span style="color: #EB448B;font-size: 1.6rem;margin-top: 12px;">¥最低价 ~ ¥最高价</span> -->
+    </div>
+            <div class="dhc_instructions">
+            <span>药品说明书</span>
+            <p>主治：温补脑肾，益心填精。用于<a href="/jbk/59.html" style="color: red">阳痿</a>，抑郁，滑精，早泄，体虚，消瘦，神经衰弱。</p>
+        </div>
+        <div class="dhc_line"></div>
+                    <div class="poster_box">
+            <a href="http://m.800pharm.com/special/common/index.html?id=89&amp;from_url=ydcpk&amp;gg_code=wap_product_library" class="poster_url"><img src="http://img.800pharm.com/images/20210924/20210924092353_796.jpg" class="poster_img" /></a>
+        </div>
+        <div class="dhc_line"></div>
+        <div class="dhc_boxs">
+        <!-- 三角形图标-变红类名只需加入：onbottom，ontop
+             -单个三角形方向有otop_i,obottom_i -->
+        <div class="dhc_boxs_nav cf">
+            <span class = 'order_by '><a href="https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1">综合</a></span>
+            
+            <span class = 'order_by ' data-nav="nav_xl">
+                <a href="https://m.800pharm.com/index.php/cpk/drug_group-101184.html?sort_type=3&amp;sort_direction=0&amp;page=1&amp;area_id=10341">
+                    价格
+                                            <i class="otop_i"></i>
+                                    </a>
+            </span>
+
+            <span class = 'order_by on' data-nav="nav_hpl">
+                <a href="https://m.800pharm.com/index.php/cpk/drug_group-101184.html?sort_type=2&amp;sort_direction=1&amp;page=1&amp;area_id=10341">
+                    好评率
+                                                                        <i class="ontop"></i>
+                                                            </a>
+            </span>
+            <span class="otop_i" data-nav="nav_area" id="nav_area">地区<i class="ontop"></i></span>
+            <div class="show_area_boxs">
+                <ul class="cf">
+                    <li class="" data-aid="allArea"><a href="https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0"><em>所有地区</em></a></li>
+                                            <li data-aid="10090"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10090"><em>广州市</em></a>
+                        </li>
+                                            <li data-aid="10353"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10353"><em>西安市</em></a>
+                        </li>
+                                            <li data-aid="10145"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10145"><em>石家庄市</em></a>
+                        </li>
+                                            <li data-aid="10266"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10266"><em>长春市</em></a>
+                        </li>
+                                            <li data-aid="10242"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10242"><em>泰州市</em></a>
+                        </li>
+                                            <li data-aid="10341"  class = "on" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10341"><em>长治市</em></a>
+                        </li>
+                                            <li data-aid="10156"  class = "" >
+                            <a href = "https://m.800pharm.com/index.php/cpk/drug_group-101184.html?page=1&amp;sort_type=2&amp;sort_direction=0&amp;area_id=10156"><em>唐山市</em></a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+
+        <!-- 地区透明度遮罩层 -->
+        <div class="show_area_boxs_bg"></div>
+
+        <div class="dhc_boxs_info" data-next-page="0" data-sort="2" data-direction="0">
+            <ul>
+                                                        <li>
+                        <a href="https://m.800pharm.com/index.php/product-102250-2102330.html">
+                            <div class="pImg">
+                                <img src="https://m.800pharm.com/images/wap/LoadingImg.png" data-original="http://img.800pharm.com/images/100246/20141013/20141013145238_950.jpg">
+                                                            </div>
+                            <div class="bi_main">
+                                <p>维吾尔 罗补甫克比日丸-百百惠药房</p>
+                                <span>规格：0.3g*40粒*2板/盒</span>
+                                <span>山西省-长治市</span>
+                                <span>好评率：<em>100%</em></span>
+                                                            </div>
+                        </a>
+                            <div class="bi_right">
+                                                                    <p>&yen;120</p>
+                                                                <!-- <span>0.3g*40粒*2板/盒</span>
+                                <span></span> -->
+                                <div class="zixun_kefu" onclick="qiyu_kefu();" rel="nofollow">咨询客服</div>
+                            </div>
+                    </li>
+                                                </ul>
+            <div class="page_box">
+                <a href=javascript:void(0); class=disabled>上一页</a>
+                <span><font>1</font>/1</span>
+                <a href=javascript:void(0); class=disabled>下一页</a>
+            </div>
+        </div>
+    </div>
+
+            <!-- 相关列表 -->
+        <div class="related_box">
+            <div class="related_tab" name="tab-btn">
+                                    <span class="on" data-id="related_answers">相关问答</span>
+                                                    <span data-id="related_information">相关资讯</span>
+                            </div>
+                            <!-- 相关问答 -->
+                <div class="related_content" id="related_answers" style="display: block;">
+                    <ul>
+                                                    <li>
+                                <a href="/ask/question-598018.html">维吾尔 罗补甫克比日丸在药店买是多少钱的？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-598016.html">请问维吾尔 罗补甫克比日丸的注意事项是什么？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-598014.html">我想知道，维吾尔 罗补甫克比日丸的不良反应有哪些?</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-598012.html">哪位亲可以告诉我，维吾尔 罗补甫克比日丸怎么用？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-598010.html">我想了解一下维吾尔 罗补甫克比日丸的具体作用。</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-597734.html">维吾尔罗补甫克比日丸的副作用大吗？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-597730.html">维吾尔罗补甫克比日丸的药理作用是什么呢？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-597726.html">维吾尔罗补甫克比日丸的成份有哪些？可以治疗哪些病？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-597724.html">维吾尔罗补甫克比日丸是治疗什么病的药物？该怎么吃呢？</a>
+                                                            </li>
+                                                    <li>
+                                <a href="/ask/question-597720.html">武汉汉阳区哪些药店有卖维吾尔罗补甫克比日丸的？</a>
+                                                            </li>
+                                            </ul>
+                </div>
+                                        <!-- 相关资讯 -->
+                <div class="related_content" id="related_information">
+                    <ul>
+                                                    <li>
+                                <a href="/news/103904.html">罗补甫克比日丸这种药物怎么样</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/103903.html">罗补甫克比日丸的用法用量是什么</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/103902.html">罗补甫克比日丸能够治疗什么疾病</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/103901.html">罗补甫克比日丸有什么注意事项</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/103900.html">罗补甫克比日丸的副作用大不大</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/45622.html">罗补甫克比日丸治疗阳痿、早泄真的有效吗?</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/45353.html">罗补甫克比日丸吃多久才有效果</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/35923.html">罗补甫克比日丸吃多久才有效</a>
+                            </li>
+                                                    <li>
+                                <a href="/news/35664.html">罗补甫克比日丸效果好吗？</a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+    
+        <div class="certifications_box">
+        <p>互联网交易服务资格证书：国A20140001</p>
+        <p class="wechat_number"><i></i>微信公众号：<span>babaifang800</span></p>
+    </div>
+</section>
+
+
+<!-- 说明书弹窗 -->
+<div class="dhc_fixed_div">
+    <div class="fd_qbbg" id="showFixedDiv"></div>
+    <div class="fd_mains">
+        <h3>药品说明书 <em id="fixed_hide">&times;</em></h3>
+        <i></i>
+        <div class="fd_mains_table">
+            <table>
+                                <tr>
+                    <td>药品名称: </td>
+                    <td><a href="https://m.800pharm.com/index.php/cpk/drug_group-101184.html">罗补甫克比日丸</a></td>
+                </tr>
+                                                <tr>
+                    <td>通用名称: </td>
+                    <td><a href="https://m.800pharm.com/index.php/tyk/90425.html">罗补甫克比日丸</a></td>
+                </tr>
+                                                                                <tr>
+                    <td>批准文号: </td>
+                    <td>国药准字Z65020142</td>
+                </tr>
+                                                <tr>
+                    <td>规格: </td>
+                    <td>0.3g*40粒*2板*8盒</td>
+                </tr>
+                                                <tr>
+                    <td>药品本位码: </td>
+                    <td>86906001000028</td>
+                </tr>
+                                                <tr>
+                    <td>生产厂商: </td>
+                    <td>和田维吾尔药业有限责任公司 </td>
+                </tr>
+                                                                <tr>
+                    <td>品牌: </td>
+                    <td><a href="https://m.800pharm.com/index.php/ppk/61393.html">维吾尔</a></td>
+                </tr>
+                                                <tr>
+                    <td>药品属性: </td>
+                    <td>处方药</td>
+                </tr>
+                                                <tr>
+                    <td>性状: </td>
+                    <td>本品为黑色的小蜜丸；气香，味微苦。</td>
+                </tr>
+                                                <tr>
+                    <td>剂型: </td>
+                    <td>丸剂</td>
+                </tr>
+                                                <tr>
+                    <td>储藏: </td>
+                    <td>密闭，防潮。</td>
+                </tr>
+                                                <tr>
+                    <td>主要成份: </td>
+                    <td>牛鞭、肉桂、苜蓿子、高良姜、洋葱子、丁香、芜菁子、花椒、胡萝卜子、芝麻、甜瓜子、巴旦仁、黄瓜子、欧细辛、韭菜子、大叶补血草、莳萝子、蒺藜、奶桃、紫茉莉根、棉子、木香、姜片、肉豆蔻衣、铁力木、筚拨、肉豆蔻、白皮松子、芝麻菜子、西红花。</td>
+                </tr>
+                                                    <tr>
+                        <td>功能主治：</td>
+                        <td>
+                            温补脑肾，益心填精。用于<a href="/jbk/59.html" style="color: red">阳痿</a>，抑郁，滑精，早泄，体虚，消瘦，神经衰弱。
+                        </td>
+                    </tr>
+                                                    <tr>
+                        <td>用法用量：</td>
+                        <td>口服，一次10～15丸，一日2次。</td>
+                    </tr>
+                                                                    <tr>
+                        <td>不良反应：</td>
+                        <td>尚不明确</td>
+                    </tr>
+                                                    <tr>
+                        <td>注意事项：</td>
+                        <td>1)忌辛辣、生冷、油腻食物； 　　2)本品宜饭前服用； 　　3)服药期间个别患者会出现小便发黄、大便黑褐色，停止用药时可自行缓解； 　　4)服药2周后症状未改善，应去医院就诊； 　　5)按照用法用量服用，孕妇、小儿应在医师指导下服用； 　　6)药品性状发生改变时禁止服用； 　　7)儿童必须在成人的监护下使用； 　　8)请将此药品放在儿童不能接触的地方； 　　9)如正在服用其他药品，使用本品前请咨询医师或药师。</td>
+                    </tr>
+                                                    <tr>
+                        <td>禁忌：</td>
+                        <td>尚不明确</td>
+                    </tr>
+                                                                                                                <tr>
+                    <td>商品单位: </td>
+                    <td>盒</td>
+                </tr>
+                                                <tr>
+                    <td>是否进口: </td>
+                    <td>否</td>
+                </tr>
+                                                <tr>
+                    <td>有效期: </td>
+                    <td>36</td>
+                </tr>
+                            </table>
+        </div>
+    </div>
+</div>
+<!-- 底部菜单 S -->
+<div style="height:56px;"></div>
+<div class="footer_consult">
+    <div class="list_button" id="consult_menu">
+        <i class="list_icon"></i>
+        <span>咨询药师</span>
+    </div>
+    <div class="list_button" id="pharmacistWechat">
+        <i class="list_icon"></i>
+        <span>药师微信</span>
+    </div>
+</div>
+<div class="consult_pop_up" id="consult_pop_up" style="display: none;"></div>
+    <div class="consult_center" id="consult_center">
+        <a rel="nofollow" href="javascript:void(0);" onclick="qiyu_kefu()" class="consult_but consult_kefu" id="consult_kefu">在线咨询</a>
+        <a rel="nofollow" href="tel:400-8183-666" class="consult_but consult_phone" id="">拨打药师电话</a>
+        <a rel="nofollow" href="javascript:void(0);" class="consult_but consult_yaoshi" id="consult_yaoshi">药师免费回拨</a>
+
+        <p class="button_margin"></p>
+        <div class="consult_cancel" id="consult_cancel">取消</div>
+    </div>
+
+    <div class="dial_phone" id="dial_phone">
+        <p class="text_tips">拨打药师电话</p>
+        <p class="phone_text">400-8183-666</p>
+        <a href="tel:400-8183-666" class="dial_but">呼叫</a>
+        <div class="cancel_dial" id="cancel_dial">取消</div>
+    </div>
+
+    <div class="call_back" id="call_back">
+        <label class="label_text">请输入手机号码</label>
+        <input type="text" maxlength="15" name="phone_input" class="phone_input" id="phone_input" placeholder="请输入您的电话号码" />
+        <p class="phone_input_tips" id="phone_input_tips">请输入正确的电话号码</p>
+        <div class="but_box">
+            <a href="javascript:void(0);" class="close_but" id="cancel_call_back">取消</a>
+            <a href="javascript:void(0);" class="confirm_but confirm_call_back" id="confirm_call_back">确定</a>
+        </div>
+    </div>
+    <div class="call_back_tips" id="call_back_tips">
+        <p class="tips_text">
+            您好，稍后药师将会拨打您的电话，请留意电话来电，电话完全免费，请您放心接听。
+        </p>
+        <div class="close_but" id="close_tips">确定</div>
+    </div>
+
+
+
+<div class="pop-up-wechat" style="display: none;">
+    <div class="wechat-cont">
+        <span id="pop-up-close"></span>
+        <p>添加药师\/信享受药师服务<br> \/信号：bbf8002</p>
+        <a data-clipboard-text="bbf8002" href="javascript:;" class="copyWechat" rel="nofollow">点击复制\/信号</a>
+    </div>
+</div>
+<!-- 底部菜单 End -->
+
+<!-- 导航 -->
+<!-- 导航 -->
+<!-- 引入的页面有
+搜索结果页：http://m.800pharm.com/search/恩替卡.html
+
+②商品详情页：http://m.800pharm.com/product-100913-1522661.html
+
+③药目页：http://m.800pharm.com/search_group_115093.html
+
+④资讯详情页：http://m.800pharm.com/news/5814.html
+
+⑤问答详情页：http://m.800pharm.com/ask/question-274561.html
+
+⑥产品库：http://m.800pharm.com/cpk/drug_group-343818.html
+
+⑦品牌库：http://m.800pharm.com/ppk/64846.html
+
+⑧通用名库：http://m.800pharm.com/tyk/98344.html
+
+⑨搜索词库：http://m.800pharm.com/ck/117468.html
+
+⑩症状库：http://m.800pharm.com/zzk/6.html
+
+⑪疾病库：http://m.800pharm.com/jbk/31.html -->
+
+<style>
+    .opened-nav{
+        transform: scale(1) !important;
+    }
+</style>
+<div class="navigation" id="navigation"> 
+    <p class="default">
+        <span class="nav_l nav_com">快速<br>导航</span>
+        <span class="nav_r nav_com" style="display: none;">收起</span>
+    </p>
+    <a href="https://m.800pharm.com/index.php/cart" class="requisition_form com">
+        <span></span>
+        需求单
+    </a>
+    <!-- <a style="display: none;" href="" class="shop purchase com">
+        <span></span>
+        进店购
+    </a>
+    <a style="display: none;" onclick="NTKF.im_openInPageChat('bf_1000_1500947546873')" href="javascript:;" class="purchase service com">
+        <span></span>
+        客服
+    </a> -->
+
+    <a href="/category/allSorts.html" class="discover com">
+        <span></span>
+        找药
+    </a>
+    <a href="/" class="store com">
+        <span></span>
+        商城
+    </a>
+    <a href="https://m.800pharm.com/index.php/personal" class="mine com">
+        <span></span>
+        我的
+    </a>
+</div>
+<div id="mask_layer" class="mask_layer" style="position: fixed;background: rgba(0, 0, 0, 0.5);top: 0;left: 0;width: 100%;height: 100%;display: none;"></div>
+
+
+<script>
+
+
+    var navigation_if = true; 
+    $('#navigation').on('click','p',function(){
+        if(!navigation_if){
+            return;
+        }
+        navigation_if = false;
+        if($(this).find('span').hasClass('nav_l')){
+            $(this).find('.nav_l').removeClass('nav_l').addClass('nav_r').html('收起');
+            
+        }else{
+            
+            $(this).find('.nav_r').removeClass('nav_r').addClass('nav_l').html('快速<br>导航');
+        }
+        
+        
+        if($(this).hasClass('default')){
+            // $('#navigation .cn-wrapper').addClass('opened-nav')
+            $(this).removeClass('default')
+
+            $('body').css('overflow','hidden')
+            $('#mask_layer').fadeIn(300);
+
+            
+            $('.requisition_form').animate({
+                top: '-90px',
+                left: 0,
+                opacity:1
+            },300,function(){
+                navigation_if = true;
+            });
+            
+            $('.purchase').animate({
+                top: '-60px',
+                left: '-50px',
+                opacity:1
+            },300,function(){
+                navigation_if = true;
+            });
+            
+            $('.discover').animate({
+                top: 0,
+                left: '-75px',
+                opacity:1
+            },300,function(){
+                navigation_if = true;
+            });
+            
+            $('.store').animate({
+                top: '60px',
+                left: '-50px',
+                opacity:1
+            },300,function(){
+                navigation_if = true;
+            });
+            
+            $('.mine').animate({
+                top: '90px',
+                left: 0,
+                opacity:1
+            },300,function(){
+                navigation_if = true;
+            });
+        }else{
+            // $('#navigation .cn-wrapper').removeClass('opened-nav')
+            $(this).addClass('default')
+
+            $('body').css('overflow','visible')
+            $('#mask_layer').fadeOut(300);
+
+            
+            $('.requisition_form,.purchase,.discover,.store,.mine').animate({
+                top: 0,
+                left: 0,
+                opacity:0
+            },300,function(){
+                navigation_if = true;
+            });
+            
+
+        }
+        
+    });
+
+    $('#mask_layer').on('click',function(){
+        $('#navigation p').find('.nav_r').removeClass('nav_r').addClass('nav_l').html('快速<br>导航');
+        $('#navigation p').addClass('default')
+
+        $('body').css('overflow','visible')
+        $('#mask_layer').fadeOut(300);
+
+        $('.requisition_form,.purchase,.discover,.store,.mine').animate({
+                top: 0,
+                left: 0,
+                opacity:0
+            },300,function(){
+                navigation_if = true;
+            });
+    })
+
+
+</script>
+
+<!-- 判断顶部是否有广告 有就判断，没有就直接固定 -->
+    <script>
+        $('#header').css({
+            'position':'fixed'
+        })
+
+        /*$(window).scroll(function(){
+            if ($(window).scrollTop()>=55){
+                // console.log(666)
+                $('#header').css({
+                    'position':'fixed',
+                    'top':0
+                })
+                $('#advertising').css({
+                    'position':'fixed',
+                    'top':'50px'
+                })
+            }else{
+                // console.log(888)
+                $('#header').css({
+                    'position':'absolute',
+                    'top':'55px'
+                })
+                $('#advertising').css({
+                    'position':'relative',
+                    'top':0
+                })
+            }
+        });*/
+    </script>
+
+<script>
+    $(function(){
+        navigation_or();
+
+    })
+
+    
+    
+    /**
+     * [navigation_or 判断导航放进店购还是客服]
+     * @return  {[type]} [description]
+     */
+    function navigation_or(){
+        var url = window.location.href,
+            service = `
+            <a style="opacity: 0;" onclick="qiyu_kefu()" href="javascript:;" class="purchase service com">
+                <span></span>
+                客服
+            </a>
+        `;
+            //NTKF.im_openInPageChat('bf_1000_1500947546873')
+
+
+
+        if(url.indexOf('product') == -1 && url.indexOf('search') == -1){
+            console.log(6699)
+            $('.zo_header').css('position','fixed')
+            $('#navigation').append(service)
+            
+        }else{
+            var sc_names =  $('.shop_company').find('.sc_names').attr('href')
+            var shop = `
+                <a style="opacity: 0;" href="${sc_names}" class="shop purchase com">
+                    <span></span>
+                    进店购
+                </a>
+            `;
+            if(url.indexOf('product') == -1){
+                $('#navigation').append(service)
+            }else{
+                $('#navigation').append(shop)
+            }
+            // $('#navigation').append(shop)
+            
+            //$('.zo_header').find('.shop').attr(sc_names)
+
+        }
+    }
+</script>
+
+        <!-- 这是底部js引入位置 -->
+<script src="/build/js/wap/drug_head-2edc11ee52.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script>
+    $(function(){
+        $('.personal_center a').attr('href', 'https://m.800pharm.com/index.php/personal?return=' + window.location.href);
+        BBF.lazyloadImgFn({
+            skip_invisible: true,
+            threshold: -30
+        });
+    });
+
+    /*百度自动推送*/
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+
+    /* 复制药师微信号 */
+    var clipboard = new ClipboardJS('.copyWechat');
+    clipboard.on('success', function(e) {
+        BBF.alert({
+            content: "复制成功，请打开\/信搜索添加",
+            singleBtn: true
+        });
+        e.clearSelection();
+    });
+    clipboard.on('error', function(e) {
+        BBF.alert({
+            content: "复制失败！",
+            singleBtn: true
+        });
+    });
+
+    /* 咨询弹窗 */
+    $('#consult_menu').on('click',function(){
+        $("#consult_pop_up").show();
+        $("#consult_center").show();
+        $("#dial_phone").hide();
+        $("#call_back").hide();
+        $("#call_back_tips").hide();
+    });
+    $("#consult_cancel,#cancel_dial,#cancel_call_back,#close_tips,#consult_pop_up").on('click',function(){
+        $("#consult_pop_up").hide();
+        $("#consult_center").hide();
+        $("#dial_phone").hide();
+        $("#call_back").hide();
+        $("#call_back_tips").hide();
+    });
+    // 拨打药师电话
+    $("#consult_phone").on('click',function(){
+        $("#consult_pop_up").show();
+        $("#dial_phone").show();
+
+        $("#consult_center").hide();
+        $("#call_back").hide();
+        $("#call_back_tips").hide();
+    });
+    //药师回拨
+    $("#consult_yaoshi").on('click',function(){
+        $("#consult_pop_up").show();
+        $("#call_back").show();
+
+        $("#consult_center").hide();
+        $("#dial_phone").hide();
+        $("#call_back_tips").hide();
+    });
+    //input 中只允许输入 11位数字 或者
+    $("#phone_input").on('blur keyup',function(){
+        var mobile_text = $(this).val();
+        var z_number = /^[01](([\d]{3})||([\d]{3}-))\d{7,11}$/;
+        if (mobile_text == ""||mobile_text == null) {
+            $("#phone_input").addClass("input_red");
+            $("#phone_input_tips").show().text("请输入正确的电话号码");
+        }else{
+            if(!z_number.test(mobile_text)){
+                //console.log('正确');
+                mobile_text = mobile_text.replace(/[^\d-]/g,'').substr(0,15);
+                $("#phone_input").val(mobile_text);
+            }else{ 
+                //console.log('错误');
+                $("#phone_input").removeClass("input_red");
+                $("#phone_input_tips").hide();
+            }
+        };
+    });
+    //药师回拨记录
+    $("#confirm_call_back").on('click',function(){
+        var phone_data = $("#phone_input").val();
+        var page_url = window.location.href;
+        if(phone_data == ""||phone_data == null) {
+            $("#phone_input").addClass("input_red");
+            $("#phone_input_tips").show().text("请输入正确的电话号码");
+
+            return false;
+        }else {
+            $.ajax({
+                url: "/callPhone",
+                type: "post",
+                data: {"phone":phone_data,"url":page_url},
+                success : function(obj) {
+                    if(obj){
+                        $("#phone_input").removeClass("input_red");
+                        $("#phone_input_tips").hide().text("");
+                        $("#phone_input").val("");
+
+                        $("#consult_pop_up").show();
+                        $("#call_back_tips").show();
+
+                        $("#consult_center").hide();
+                        $("#dial_phone").hide();
+                        $("#call_back").hide();
+                    }else {
+                        BBF.alert({
+                            content: "药师回拨记录失败，请稍后再试！",
+                            singleBtn: true
+                        });
+                    };
+                },
+                error: function (returndata) {
+                    BBF.alert({
+                        content: "药师回拨记录请求失败！",
+                        singleBtn: true
+                    });
+                }
+            });
+        };
+    });
+
+    /* 药师微信 弹窗 */
+    $('#pop-up-close').on('click',function(){
+        $('.pop-up-wechat').fadeOut('fast')
+    });
+    $('#pharmacistWechat').on('click',function(){
+        $('.pop-up-wechat').fadeIn('fast')
+    });
+</script>
+
+                    <!-- 返回顶部 -->
+            <div class="go_to_top" id="go_to_top">
+                顶部
+            </div>
+                        
+        <script>
+            // 返回顶部
+            BBF.goToTop();
+        </script>
+            
+        
+        <!--3851 移动端添加cnzz流量统计相关代码 -->
+        <script type="text/javascript">
+            // var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276898929'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1276898929%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+            // $('#cnzz_stat_icon_1276898929').hide();
+
+
+            //需求#4106 七鱼客服
+            (function (w, d, n, a, j) {
+                w[n] = w[n] || function () {
+                    (w[n].a = w[n].a || []).push(arguments);
+                };
+                j = d.createElement('script');
+                j.async = true;
+                j.src ='https://qiyukf.com/script/b42e07fc1351a9f1d667fcf8c0124f5d.js?hidden=1';
+                d.body.appendChild(j);
+            })(window, document, 'ysf');
+            ysf('onready', function() {
+                // 初始化SDK
+                //console.log('初始化SDK');
+            });
+
+            var uId = ""; //用户id
+            var u_name = "游客"; //用户昵称 级别,1为vip用户,0为普通用户
+                u_name = u_name+ ' (id:'+uId+')';
+            var u_mobile = "";  //用户[mobile]
+            var u_email = "";  //用户[email]
+            var u_labels = "";
+            //统一入口 多选择
+            function qiyu_kefu(){
+                ysf('config', {
+                    "uid": uId,
+                    "name": u_name,
+                    "email": u_email, 
+                    "mobile": u_mobile,
+                    'data':JSON.stringify([
+                        {"index": 1,"key":"labels", "label": "会员标签","value":u_labels},
+                    ])
+                });
+                ysf('open');
+            };
+
+            var current_url = window.location.href;   //页面 URL
+            var current_title = document.title;  //页面标题
+            //检测是否 是商品页
+            function product_page(pro_url) {
+                var regular = "/product-";
+                if (pro_url.search(regular) == -1) {
+                    return false;
+                }else{
+                    return true;
+                };
+            };
+
+            if(product_page(current_url)) {
+
+                var pro_title = jQuery(".goods_names .names").attr("title");
+                var pro_img = jQuery("#slide li:nth-child(2) img").attr("src");
+                var shop_name = "商家："+jQuery(".shop_company .shop_name").attr("title");
+
+                var guige = jQuery("#specification_num").attr("title");
+                    // guige = guige.replace("，请选择数量",'');
+                    // guige = guige.replace(/\s+/g, "");
+                var desc_text = "价格:"+ jQuery("#shop_price").text() +"；\r\n规格:"+ guige +"；\r\n商品编号:"+jQuery(".goods_names").attr("goods_in") +"；\r\n品牌名称:"+jQuery(".goods_names").attr("goods_brand") +"；\r\n批准文号:"+jQuery(".goods_names").attr("goods_pzwh");
+                    desc_text = desc_text.replace(/\s+/g, "");
+
+                // 发送商品
+                ysf('product', {
+                    sendByUser: 1, // 是否由访客手动发送，1为是，其他参数为否
+                    actionText: '发送链接', // 发送按钮文案
+                    actionTextColor: '#000000', // 发送按钮文案颜色（16进制格式）
+                    title : pro_title,
+                    desc : desc_text,
+                    picture : pro_img,
+                    note : shop_name,
+                    url : current_url,
+                    success: function(){     // 成功回调
+                        console.log("pro初始化成功");
+                    },
+                    error: function(){       // 错误回调
+                        // handle error
+                    }
+                });
+            };
+
+            // (function(){
+            //     /* 移动站360搜索自动收录JS代码 */
+            //     var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+            //     document.write('<script src="' + src + '" id="sozz"><\/script>');
+
+            //     /* 移动站头条搜索自动收录JS代码 */
+            //     var el = document.createElement("script");
+            //     el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?bfc5e70cfae8192cc7fb43ac19adc3ccad0734f78e20ba8015c86180f5f7e991db21bfddc38a41aa697704ed63ed7db3164c259c61d17aa336af42f2fd1d90d9";
+            //     el.id = "ttzz";
+            //     var s = document.getElementsByTagName("script")[0];
+            //     s.parentNode.insertBefore(el, s);
+            // })(window)
+        </script>
+
+    </body>
+</html>

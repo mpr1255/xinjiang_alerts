@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>温宿县金穗粮油购销有限责任公司诉阿克苏地区工商行政管理局不服工商行政处罚纠纷一案行政再审裁定书</title>
+		<link href="/model/style/3.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/model/jscript/jquery.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.form.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/model/jscript/function.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.zxxbox.3.0-min.js"></script>
+		<script type="text/javascript" src="/model/jscript/pop.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".ztfg_left2 a").click(function(){
+					var ids = $(this).attr("ids");
+					$("#linkids").val(ids) ;
+					$("#linkform").submit();
+					return ;
+				})
+			}) ;
+		</script>
+	</head>
+	<body onkeyup="javascript:enterfind();">
+		<div style="display: none" >
+			<form action="/linkserv" method="post" id="linkform" target="_blank">
+				<input name="rids" type="text"  id="linkids"/>
+			</form>
+		</div>
+		<div style="display: none" id="detail" rjs8="cas259s049.txt"></div>
+<div id="head"><img src="/model/images/head3.jpg"/></div>		<div id="bg">
+			<div id="xlpx2_left">
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_dysc.jpg" width="176" height="32"/>
+				</div>
+				<div class="xlpx2_left2">
+					<img src="/model/images/button1.jpg" width="115" height="27" onclick="javascript:PrintMe()" style="cursor: hand;"/>
+					<a href="/pao?fn=cas259s049.txt&action=typeset"><img src="/model/images/button2.jpg"/></a>
+					
+					<img src="/model/images/button4.jpg" width="115" height="27" onclick="javascript:zl()" style="cursor: hand;"/>
+					<!-- <div class="xlpx2_left1">
+						正文转入：
+						<br />
+						<label>
+							<select name="select" id="dic">
+          					 	<option value="psl">请选择</option>
+						    			<option value="2">常用法规</option>		
+							</select>
+						</label>
+					</div> -->
+				</div>
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_ftyy2.jpg" width="176" height="32" />
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						 
+						<li>
+							<a target="_blank" href="/law?fn=chl020s171.txt">行政诉讼法</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 
+				<div class="ztfg_left1">
+					<a href="#"><img src="/model/images/fgzw_xglw.jpg" width="176"
+							height="32" />
+					</a>
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+						<li>
+							<a href="#">国家税务总局关于下发20090601d版出口商品退税率文库的通知</a>
+						</li>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+					</ul>
+				</div>
+				 -->
+			</div>			<div id="fgzw_right" style="position: relative;">
+				<div class="xlpx2_right0">
+					<div class="xlpx2_right1" id="floattool">
+					<script type="text/javascript">
+				$("#dic").click(function(){
+					 	$.ajax({
+							type: "get",
+							url: "/userlogin",
+							data: "dbname=cook",
+							success: function(data, textStatus){
+						if(data==null||data==""){
+			  			$("#dic").find("option").remove();
+			  			var p = $(".fgzw_right2");
+						var position = p.position();
+						var left = position.left;
+						var top = position.top;
+			  		 $.ajax({
+						type: "get",
+						url: "/userdir",
+						data: "action=ishow&ts=switch&tab=detail",
+						success: function(data, textStatus){
+							$("#wjj5").html(data);
+							$("#wjj5").css({position: "absolute",top:top/2+3,left:-55});
+						},
+						complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+						},
+						error: function(){
+						//请求出错处理
+							}
+						});
+			  		  }}})
+				});
+				function zhuce(){
+					$.ajax({
+					type: "get",
+					url: "/userdir",
+					data: "action=ishow&ts=zhuce", 
+					success: function(data, textStatus){
+						//alert(data);
+						$("#wjj5").html(data);
+					},
+					complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+					},
+					error: function(){
+						//请求出错处理
+					}
+				  });
+				}
+  		function elect(uu){
+  			$("#wjj5").hide();
+  			 location.reload(); 
+  		}
+			</script>
+							<div id="wjj5" align="center"></div>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="22" height="24" valign="middle">
+									<span class="fdj">按</span>
+								</td>
+								<td width="120" valign="middle">
+									<select id="showinfo" name="select5" onchange="javascript:donchang();">
+										<option value="yes">
+											索引信息+正文
+										</option>
+										<option value="no">
+											正文
+										</option>
+									</select>
+								</td>
+								<td valign="middle">
+									<span class="fdj">显示</span>
+								</td>
+								<td width="130" align="right" valign="middle">
+									<span class="fdj">本篇关键字搜索：</span>
+								</td>
+								<td width="200" valign="middle">
+									 <input name="textfield" type="text" id="kw" size="40" />
+								</td>
+								<td valign="middle">
+									<img src="/model/images/chaxun2.jpg" width="53" height="21" onclick="javascript:FindItIE();" style="cursor:pointer;"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="fgzw_right2" id="fgzw_right2">
+					<ul>
+							<li id="tit">【标题】温宿县金穗粮油购销有限责任公司诉阿克苏地区工商行政管理局不服工商行政处罚纠纷一案行政再审裁定书</li>
+							<li>【案件字号】（2015）新行监字第60号</li>
+							<li id="tdpt">【审理法院】新疆维吾尔自治区高级人民法院</li>
+							<li id="tdat">【判决日期】20160222</li>
+							<li>【案由】</li>
+					</ul>
+				</div>
+				<div style="display: none">
+					<form action="/linkserv" method="post" id="links" target="_blank">
+						<input id="txr" name="rids"/>
+					</form>
+				</div>
+				<p>
+					<span class="fgzw_zw">【正文】</span>
+					<span class="fy">
+						
+						<!-- <img style="cursor:pointer;" src="/model/images/fy.gif" onclick="javascript:sub();" width="64" height="20" /> -->
+					</span>
+				</p>
+				<div class="zhengwen" id="maintext">
+					<br/><div align=center ><strong>温宿县金穗粮油购销有限责任公司诉阿克苏地区工商行政管理局不服工商行政处罚纠纷一案行政再审裁定书</strong></div>
+<br><br/><div align=center ><strong>新疆维吾尔自治区高级人民法院行政裁定书</strong></div>
+<br><div align=right>（2015）新行监字第60号</div>
+<br>　　再审申请人（一审原告、二审上诉人）温宿县金穗粮油购销有限责任公司。住所地：新疆维吾尔自治区温宿县。
+<br>　　法定代表人：罗鹏，该公司董事长。
+<br>　　委托代理人：何敏，女，汉族，1981年9月1日出生，住新疆维吾尔自治区温宿县。该公司员工。
+<br>　　委托代理人：北京乾坤（乌鲁木齐）律师事务所律师。
+<br>　　被申请人：（一审被告、二审被上诉人）阿克苏地区工商行政管理局。住所地：新疆维吾尔自治区阿克苏市。
+<br>　　法定代表人：卡尔曼·赛丁，该局局长。
+<br>　　委托代理人：蒋茂冬，男，汉族，1971年10月29日出生，住新疆维吾尔自治区阿克苏市。
+<br>　　委托代理人：崔伟，男，汉族，1970年3月5日出生，新疆维吾尔自治区拜城县。
+<br>　　再审申请人温宿县金穗粮油购销有限责任公司（下称金穗公司）与被申请人阿克苏地区工商行政管理局（下称地区工商局）工商行政处罚纠纷一案，不服阿克苏地区中级人民法院（2013）阿中行终字第10号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。
+<br>　　金穗公司申请再审称：（一）原审认定事实错误。原审认定，地区工商局认定金穗公司与新疆雪泉粮油有限公司（下称雪泉公司）履行委托收购2284.53吨1级341号稻谷合同行为违法，同时金穗公司存在违法所得472191.30元和“惨杂使假，以次充好”且证据确凿是错误的。申请人的行为不违反《粮食质量监管实施办法》第十二条第二款之规定，不存在“掺杂使假，以次充好”的问题。申请人收购农民的稻谷经过检验符合一级标淮，也是按照一级稻谷的价格向农民支付了稻谷款。申请人向雪泉公司交付的2284.53吨1级稻谷符合国家标准（质量标准和卫生标准）；（二）申请人不存在有违法所得472191.30元的事实。申请人在与雪泉公司产生纠纷前，存在收取了雪泉公司472191.30元收购费用的事实，但在双方产生纠纷后，在阿克苏地区粮食局的主持调解下达成和解协议，导致申请人亏损280余万元；（三）地区工商局认为申请人给雪泉公司提供的稻谷必须进行无害化处理是错误的。稻谷是否需要进行无害化处理不是工商局决定的，是要根据稻谷的粮食质量鉴定结论来决定；（四）地区工商局处罚申请人的法律依据错误，其无权依据《粮食质量监管实施办法》第二十五条之规定对申请人进行处罚，故地区工商局的处罚理由不能成立。地区工商局认定事实错误、处罚法律适用错误，作出的阿克苏工商检处（2011）13号行政处罚决定书是错误的。原审作出维持此行政处罚书的判决也是错误的。请求依法再审本案。
+<br>　　本院审查认为，地区工商局以金穗公司为履行与雪泉公司签订的委托收购合同交付的2284.53吨稻谷达不到合同约定等级而对金穗公司销售的稻谷予以查处，并以“当事人销售以次充好不合格农产品”为由，依照《粮食质量监管实施办法》第十二条第二款的规定，做出了行政处罚决定。该行政管理标的物是粮食还是农产品，因其性质不同，所适用的法律标准亦有所不同。对于上述问题原审未予查明，属于认定事实不清，证据不足。
+<br>　　综上，金穗公司的再审申请符合《中华人民共和国<a target='_blank' rid='chl020s171.txt' class='tips' href='/law?fn=chl020s171.txt&dbt=chl'>行政诉讼法</a>》<a target='_blank' href='/law?fn=chl020s171.txt&term=91#91'>第九十一条</a>第（四）项规定的情形。依据《中华人民共和国<a target='_blank' rid='chl020s171.txt' class='tips' href='/law?fn=chl020s171.txt&dbt=chl'>行政诉讼法</a>》<a target='_blank' href='/law?fn=chl020s171.txt&term=92#92'>第九十二条</a>第一款之规定，裁定如下：
+<br>　　一、本案由本院提审；
+<br>　　二、再审期间，中止原判决的执行。
+<br>
+<br><div align=right>审判长  路晓剑</div><div align=right>审判员  刘洁</div><div align=right>代理审判员  马荣</div><div align=right>二〇一六年二月二十二日</div><div align=right>书记员  高雅</div>
+<br>
+<br>
+				</div>
+				<!--/div 摘录条款-->
+				<form action="zl.htm" method="post" enctype="text/plain">
+					<input type="hidden" id=fn name="fn" />
+					<textarea id=slt name="slt" style="display: none"></textarea>
+				</form>
+				<div id=zlbt
+					style="display: none; width: 55; height: 60; top: 300; left: 270; position: absolute; background-color: #CCFFFF;
+					 border: #CCCCCC thin thin thin thin; font-size: 12px;"
+					onMouseMove="MoveIn(this)" onMouseOut="MoveOut(this)">
+					<table width="210" border="0" cellspacing="0" cellpadding="0">
+					  <tr>
+					    <td class="bg1"><table width="204" border="0" align="center" cellpadding="0" cellspacing="0">
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="摘录此条款" onClick="prezl()" /></td>
+					          </tr>
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="全库全文检索" onClick="search()"/></td>
+					          </tr>
+					           <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="复制" onClick="copy()"/></td>
+					          </tr>
+					        </table></td>
+					      </tr>
+					    </table></td>
+					  </tr>
+					</table>
+				</div>
+				<!--/div 摘录条款-->
+				<div id="biaozhu">
+					资料提供:法律之星 引用时请对照正式文本
+				</div>
+			</div>
+			<div id="copyright">
+				版权所有：1992-2013 北京中天诺士达科技有限责任公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服热线：010-65155090 800-810-5148
+			</div>
+		</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		</head><body>
+<div id="tip_float" style="position: absolute; display:none;font-size: 12px;"></div>
+		<div style="display: none;">
+			<form method="post" target="_blank" id="cf" name="cf" action="http://trans.law-star.com/jsp/order_1.jsp">
+				<input type="hidden" value="cas259s049.txt" name="id" id="idd">
+			    <input type="hidden" value="1" name="type" id="typee">
+			    <input type="hidden" value="sm6ixRD5y9OCDbaiTXV4tSsdye6w7Dwswg1vqcJimWOPxXtr3F/RpQ==" name="title" id="titlee">
+				<textarea id="contentd" name="content">4Ond9zqpaS+EzgKuiwFof3BP1TrUlSIIOm5phcVn0i2w8F8ntbMWvEy2tIzr/dUI7yMr8l//7m0Q
+cvtZk5j/ihFrHoFCJt8U3WCpELKw3cgod3xQNuu02y4ljb1wXKqmayMTD4aLUXtj52x2L6nfvhmm
+8K3UHGvHO1W4wwJqTtaNxxSRfFaku2InRwVEgIBzD6NQvFfAQTaYQ0FMHwPFbt0D8+eeTV2OC56p
+r+cpPB84Xgo+JgJjEKdcCtd7L21OKcCGBABcmAS4aPTlYqgZqwYdn9cSBwDfbgZYlOV/QwVWPHkE
+VWeIRWWzk1vebTx7gXY9IM+VbBXLhTQBsk5y0X7kQnIq3aYXeOtlgcSgogkx4K2TfACX6fZHkqQZ
+cALhYLf/Qt85yxTRDUNfmLyAwzhDfWAfhZUylM7Cz9zes7aL/ncG6UOK12NnLakKoFWSe+fwHq3C
+TkDW/zCxYDcaRFw+hlQPfn/kS4WcQEJUB3W4xem3g0BZQMOYmsDhwYSpcU8lTtrD60kbSOgg66OT
+QBMhPOTdI9u99IT+ElWweNfqmbzlb/8JdD80ieRGMfVH483vlFg3LzyRb1D+flnpSrQ4MKpNBJyg
+QN169urfbu/tUZn4C7mY2MFEWr/AiIlFRPZ0tp4Jxrr47Es/TlU7SWD0GCKeD3xfo4mn6LlFXwRz
+7M+H87UWTYAavLQCVfDRIBHzsYC7lLo9E/ADCvoF9xb0941lBduRiWztomwwDFY6pVeblRD40mmL
+Op3jcqS9pTY2xckkXhcGEqcn5t5ADVn6RDepMDXB8KVJ8BF/STMiUPByQdQrJTP7cv7+PAJbcwnM
+P1NjSRndPNwhnnLrCG5nk7PnlgcB7FJP9y7vvmjEadg4hsBUqzXrO4UMm6XlLVwZpjCYYQVdXucS
+U6JEs3P0ylvCx3Z4YMJkPXzk9YYRVrpgUAsWxbQrcs08p78Q7JnzCA3EQ54qU9Adysasg2h6IUwI
+slZOtEm8yn2Gfgtv1kI+mRcW4NF/ORJcaUJYeBevdLAW/DDm7E+tsYomGuQ1j4aF39VqwmmgyPdc
+D2YFeMN728/XW/0oZJ9w18PnuOPJDqgI3zW6QRSXqHr+K8YjxnYyqM4OMIup/H1IWwChrVH81Mag
+qIwbblOVNR8y74EgLnpzVESiQVnRFcao0qn+Bpa0iePBc656fBujpKQFR2hnMPOa+pcjG8gZEtFA
+AHPX97LftX3Fx/Bl9sVqA5lblg380cb7+sbCLI8/GGiPNCZh6BdGypWnXIjj4My0jCX87Ygwbx+y
+feOLuFbfvCRqBlcqmI4ZzHyqEsL8bsDgxdJ/qGBttQf9WFc3zO8rTPMb8lkm6S/y4pJYPzG7GQd6
+zCz/EicALgUq20EuuFpNsfvPDf9mF5sGJaXaHhyXE1pQNM6xjdwqREO5Bvb4DVXDsKPWR/W5dpLe
+U1oxn6+eeb4p3B5uHqExO+B0RI3qxGjq3Wk8KAvFQxpTzUKrZkoYzmq8YC99ly1EUZJg7RUC4TyP
+yKe7cliGaD/EgWgFUJ8WAaqg5WQIacCkVeiQN0tuUMSafTMd7LoX3/LxQnPAUsRjDer3jphl4udP
+FqRb9QEwCatCR2WOuhRiraf3L4HN5CVxgkwbilXY+N56PxUdQVZfAP1i7dlMmunuFXQKqUntw0TI
+THAB45G830zu7If4PefvQwzwglSlRz8hGN/B8oLofgfS+eNCZq33R/rX1TQLbUn0zU0RQFKwyvJY
+MSEBT2jBKCb2HTfTuJOaHCcMwmLmavMkI+7ordwERaEQKUdSvZbhLLl44fJ/3Ex0BC0giI+6b2M4
+6L/6u8BVCBWNfY/So3xZhFJVzPhzz09QlWaz7SOKJPbYmhyTqH0KY/lLLZP8SJoaaPJILwvf8TTY
+N1zFs8sQHg2YiuJW1VJuzoN4g8dMD3+HO/pDkabf7q5wx+Bzm7fuFMxEZMiZWgZ89U+rCPcjN2jI
+45sRWBwfPg4ofUPqMdkE8p0i7BPnBr+wPOfCejVptxnlemD3IPSdnefZMWuGGxl3vZgwxkabSVLr
+1pBdXoyDtpMnmffgc911D9h135WvSQO7xsdCHQNkusVqF5kmDdcrZFNN8nLkUB+J2tBmadflsk6W
+6yZxwR2IPj7vwe9nSuVArt197oEgBv+x9/0mNbSD/9xVu7PsYdeGJ8ylgoPA41RhTBdhL8tCFWT/
+M3hnFtvXK1kQN6hCpWUFrd1WhPU+cNOm9j1hd2OwXp/FeOPSKzVg/0EzO23JtpsqUM2Ip93WrPbu
+XF23iRTdwJeqzOG83lxXtTuY34yf0lkcqHUh8LU+l0xrWZ0VTdZz5oPD07US+9av9fpDGSDXXEoU
+akTcoPevxgjP8nIiWOXF36cQfGwgKBL5A4hPG01Z6qEBK1sOu16+Ui+6iYOvRUSwy/tSmM8k4zuJ
+t9jzELdNBlhRKFVN0MvNdvd8oUnVWrSpiUtGkXcAfjUXkfKEySX8qJNwyV1NVy9REhyHVyqw/pTz
+XavuXYQGub7IwBnaX2czESEfzaW7HCwZebdyXaCyE9RQngOSUBaOihwpC8xDefkIlzCQWUVPZ+V+
+bAaQEVUDA+kV4ZSyfW9AYP8aDHPCSVbjmofh2QkcPG9zwT86UilBRlVtXKqcg8XhGYvzrrxK8Vqv
+jZL2XYPhOLDonUCWl3uWy3a1M/teQbchifccIORIgeTBl08Tfk1SHaBNBsSX/2gcf3IDjooesPBu
+7jRqF6i2vEhFauH9j4rF93Yt49r9xR6OVaqlBzD1aag71JwsIbf0Nq+XEk743pvHa8v4LhPZedkc
+Z9XJFLNL1UPdBAcR4pnKyJxPLJmKlFvdQOdkB32RuxOjwn/OzjK6e3eddmaJYNbpAGOhEHoj3GF7
+A26Vo5vQDCTH18qy0/Oxk1ZEcjS6tvzm8Qr9UuenUfPSVoXOwcL+/aAqIzqfoBGPiMVJIovwgIBU
+L/B0ZYOLLztbV1Gt9MqU6xn1+Wh3GewbiLtqf0hSdtcQpfYEzqCuv57FISr5dtP28OwtNwWrwZK1
+9QwXPOp+bG2PH+6KF2lX9TmWPithTo3eZPrEg8oNMQv6mBdiN0Q+Uld8vVPqYIG9kxDetRAQjiOL
+haUcIWv24A2xfBgvSa913k1KBgO4h/bd/g2XPOrTml9Nnv9o8VXixtfCkE3Wh+seFMqM2pfYUgpp
+ISQTG2LpIPZhWFtYeALF73qKbs8t3Rl1aY8X1mMQj6eZ74T8L6UEfYbh8yaVgVfkysnKEivdXsGq
+d2uNLGQkUMgmi5rPwahZNLWsUeZOKEH3icRWFfiKdnnCy1RHQEDF5zxZS8fIalWF1j7m69wLFoMd
+OzxZImD/94pQvtPLRvnER+meurPaZnVHZzEL/T0pnpUHjBC0J9CY+7Ris6cKClgRVpX/e3YmLVE+
+zNzpJjPJSeHcRKfakTAPTTYmaw/uOQt7/2hiF469mwzbxIGr/Iqh4SX4DFSrImZVMvb9ZFGvofY4
+XzEvwt8IGEsw36EkrXwDscTMaNiTarbKAX7uR7hRZwU04+Dr01pPe/9/rieZBMkwZmlJ4XBqIAKc
+QxWw7VVD+ZTOlFzicMJ/uW7ZNiFgQ1fIJwEJ7mO+7Hmuvj6ANG8TwsOarCxgQCf/I70+aekk8lx2
+ezaCSjsOjfKGb8FSZlOh0pFfya1UNZv/woYukdBLa8j5JXwK5qn+kKCmC3YXUN8t1mqJzNwow09L
+c9QpxXPGrRg/+1trb4tCOZ1eFqBfvhrSkrdVnLgerArzXjpJcBhuEmufXa1o5cmO3ynjZX9PP4Jp
+pV+Zv3x5qzFyoGwZbaKweBtqbozXENNG/tedikKl1M0BGHk9/oYnkszN0Fvho129ruGgDhdAqzoV
+hys6eJ7POc0gTYS5kkpmVd/mzndpr/BP231/EVuOWK38N8cbGJxDB3t3qmPJYFPnOg54bOEIZ5/o
+IOLlhXEmXQBt1p9QpJZJmo9FNUp0Rw2oRXzwgkjcxq4Sjw8G3RMQJEQvtuYVnZ/zH9Igey6ESWmg
+VPJGZ7S5BJJKJPV7/u7sW6ErWGE2YKeuPeaktYP+LMAbmUw8LjMbccCxg7du14gV4ki4Q9qqbVaw
+p+X4LTgjRuuA27TelyCKWEUI2F7GxFbxPEnTOluC7LV/XThhZvFfqI4KCYDlzvJLIg64sgmFw34O
+nnOHaCtFpXOOw6os4G14qrNNzQwUdtEK4Dr/qLJOq3u8J0P+K6ewE/ibyy9ZXxrpqRNTaGl52yco
+4N2JWUxHl8r8tsigoZS9uwKzkTn68PqQeNqWR5uDPmpQYyBu5SW7hMYIMENwp7mbP0p47tpDENUE
+BlfHvjbP2Gs75ou8Yli+pB68LZDuNL1OjKEPUFIYF8rK+LjYT1q9ECkBlmAMO3aPn3W4A6Q7rU27
+9tWtJv9P6/NV0RPcsS3G3yV6Ze+rsmlOOrpD9bi8YsPbVfYkSZJYOAKCpNm5yt+Z+I/PWVVn5r+G
+NJwl6wNOgbqaXhEIN8NY5yYoceWTs3i58+b2qjAtqT+q9p0d+XUx6wFok+bAlIYMjCwYF9Hu6RQs
+QC9ElKPmjLQeHkg6tL+UoVxqYkIVVfdPctqXCa7XZc6KIU8ZnU39XwqQKhzeJK+xGoX05EFIK1Rl
+x8N+KtnB6Xg0Q2C6XXhguW1s9sQUncC7F94QexM9iJphUp8=</textarea>
+				<input type="hidden" value="509ade61f79e7cbe0fc92e7edef6b5f1" name="sign" id="sign">
+			</form>
+			<iframe id="downframe" style="display: none"></iframe>
+		</div>
+		
+		<div style="display: none">
+		<div id="fgzltip" style="height: 100px;width: 150px">
+			<span style="margin-left: 20px;">摘录成功!</span>
+		</div>
+		</div>
+		<div id="fgzxjc" style="font-size: 12px;height: 435px;display: none;">
+			<div id="fgzxjc_title">
+				<img src="/model/images/fgzxjc.gif" width="110" height="21" />
+			</div>
+			<form action="/online?action=correct" method="post" id="correctform">
+				<div id="fgzxjc_di">
+					<p>
+						提示：“法律之星”将为纠错最多的用户提供相关奖品，如有必要，请您填写联系人和联系方式。
+					</p>
+					<table width="96%" border="0" align="center" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td width="18%" height="50" align="center">
+								法规标题
+							</td>
+							<td height="20">
+								<input type="text" name="title" id="cor_title" size="87"/>
+							</td>
+						</tr>
+						<tr>
+							<td height="20" align="center" valign="top">
+								错误内容
+							</td>
+							<td>
+								<textarea name="content" cols="68" rows="5" id="cor_content"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联 系 人
+							</td>
+							<td>
+								<input name="username" type="text" id="textfield4" size="18" id="cor_username"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联系方式
+							</td>
+							<td>
+								<input name="phone" type="text" id="textfield3" size="18" id="cor_phone"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td width="18%" height="30" align="center" valign="top">
+								具体内容
+							</td>
+							<td>
+								<textarea name="detail" id="textarea3" cols="68" rows="5" id="cor_detail"></textarea>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="anniu2">
+					<input type="button" name="button3" id="sbtcor" value="我要纠错" class="butt" />
+					<input type="reset" name="button" id="button2" value="清空" class="butt" />
+				</div>
+			</form>
+		</div>
+		<script>	
+			function sub(){		
+				var obj = document.getElementById('cf') ;
+				obj.submit() ;
+			}
+		</script>
+		<style>
+			.xlpx2_right1 {
+				position: absolute;
+				top: 0;
+			}
+			
+			.shiyi, .sycontent{
+				text-indent: 28px;
+				background-color: #c7c7c7;
+			}
+			
+			.sycontent {
+				display: none;
+			}
+		</style>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				//$("#fy2 a").click(function(){
+				//	var txt = document.getElementById("txr");
+				//	txt.value = $(this).attr('ids') ;
+				//	document.getElementById("links").submit() ;
+				//}) ;
+				$(".menu").each(function(){
+					$(this).mouseover(function() {
+						$(this).addClass("bg3");
+					});
+					$(this).mouseout(function() {
+						$(this).removeClass();
+					});
+				});
+				
+				$(".shiyi").click(function() {
+					$(this).next().toggle();
+				});
+				$(".shiyi").mouseover(function() {
+					$(this).css("cursor","hand");
+				});
+
+				$(".tips").each(function(){
+					var t;
+					$(this).mouseover(function(){
+						var top = $(this).offset().top + 20;
+						var left = $(this).offset().left;
+						$(this).css("text-decoration", "underline");
+						var rid = $(this).attr("rid");
+						t = setTimeout(function(){
+							$.ajax({
+								type: "get",
+								url: "/dsc",
+								data: "action=showtip&rid="+rid,
+								success: function(data, textStatus){
+									$("#tip_float").html(data);
+									$("#tip_float").css("top", top).css("left", left).show();
+								}
+							});
+						}, 100);
+					});
+
+					$(this).mouseout(function(){
+						clearTimeout(t);
+						$(this).css("text-decoration", "");
+						$("#tip_float").hide();
+					});
+				});
+				
+				$("#dic").change(function(){
+					$("#dic option:selected").each(function () {
+		                str = $(this).val();
+						if(str=="psl"){
+							return false;
+						}
+						rjs8 = $("#detail").attr("rjs8");
+						$.ajax({
+							type: "get",
+							url: "/userdir",
+							data: "action=addbyrjs8&did="+str+"&rjs8="+rjs8,
+							success: function(data, textStatus){
+								if(data.indexOf('true')!=-1){
+									alert("\u6210\u529f\u6dfb\u52a0\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u5939");//添加到指定的文件夹
+								}
+								else if(data.indexOf('no')!=-1){
+									alert("\u672a\u6807\u8bb0\u4efb\u4f55\u6587\u4ef6") ;//未标记任何文件
+								}
+								else{
+									alert("\u6dfb\u52a0\u5931\u8d25\uff0c\u60a8\u53ef\u4ee5\u7ee7\u7eed\u67e5\u8be2\u6570\u636e\uff0c\u6216\u8005\u91cd\u65b0\u542f\u52a8\u6cd5\u5f8b\u4e4b\u661f\u7a0b\u5e8f\u540e\u518d\u64cd\u4f5c") ;//添加失败，您可以继续查询数据，或者重新启动法律之星程序后再操作
+								}
+							},
+							complete: function(XMLHttpRequest, textStatus){
+								//HideLoading();
+							},
+							error: function(){
+								//请求出错处理
+							}
+					    });
+		            });
+				});
+			});
+
+			function closeTip() {
+				$("#tip_float").hide();
+			}
+		
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function donchang(){
+				var dis = $("#showinfo").val();
+				if(dis == 'yes'){
+					$("#fgzw_right2").slideDown();
+				}else{
+					$("#fgzw_right2").slideUp();
+				}
+			}
+			
+			function ts(){
+				window.open("/pao?fn=cas259s049.txt&action=typeset") ;
+			}
+			function zl(){
+				//window.open("/pao?action=showzl") ;
+			
+				$.ajax({
+					type: "POST",
+					url: "/pao?action=showzl",
+					cache: false,
+					success: function(data){
+						if(data.indexOf("\u672a\u6458\u5f55")!= -1) {
+							//$("#zlinfo").html("无");
+							//setTimeout(function(){$("#zlinfo").html("");}, 2000);
+							$.zxxbox.remind("\u8fd8\u6ca1\u6709\u6458\u5f55\u5185\u5bb9\uff01");
+						} else {
+							$("#downframe").attr("src", "/pao?action=showzl");
+						}
+					}
+				});
+			}
+			
+				$("#showinfo").val("yes");
+			donchang();
+  		</script>
+		<script type="text/javascript">
+			var IO = document.getElementById('floattool'), Y = IO, H = 0, IE6;
+			IE6 = window.ActiveXObject && !window.XMLHttpRequest;
+			while (Y) {
+				H += Y.offsetTop;
+				Y = Y.offsetParent;
+			};
+		</script>
+		<script type="text/javascript">
+		$("#correct").click(function(){
+			$.zxxbox($("#fgzxjc"), {title: "在线法规纠错", width: 720,btnclose:true,bgclose:true});
+			var title = document.title;
+			var content = IsIE ? document.selection.createRange().text.toString().trim() : window.getSelection().toString().trim();
+
+			$("#cor_title").val(title);
+			$("#cor_content").val(content);
+
+			$("#sbtcor").click(function(){
+				$('#correctform').ajaxSubmit({
+					success: function (html, status) {
+						if(html == "ok") {
+							alert("提交成功，感谢您对我们法律之星的支持！");
+							$.zxxbox.hide();
+						} else if(html == "nonetwork") {
+							alert("网络故障，请检查您的网络连通情况！");
+						} else {
+							alert(html);
+						}
+					}
+				});
+			});
+		});
+		</script></body>
+		</html>
+	</body>
+</html>

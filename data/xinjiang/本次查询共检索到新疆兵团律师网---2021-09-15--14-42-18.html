@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>新疆兵团律师网</title>
+  <meta name="renderer" content="webkit">
+      <link rel="stylesheet" href="/prototype/xinjiang-lawyer-webapp/pkg/common.css" />
+    <link rel="stylesheet" href="/prototype/xinjiang-lawyer-webapp/pkg/components.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+<div class="header-wrapper">
+<script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=cde11800-8054-11e9-83ea-d95fd695954a&autoShow=false&language=ZHCN' async='async'></script>
+  <div class="header-title">
+    <div class="header-container" style="width:1050px;">
+      <a class="pull-left title-logo" href="/"></a>
+      <div class="pull-right title-search">
+        <div class="outer-search">
+          <form style="width:100%;height:100%" id="search-form" method="post" action="/search">
+			<input type="hidden" id="pageSize" name="pageSize" value="20">
+  		 	<input type="hidden" id="rootCatalogId" name="rootCatalogId" value="45f1c7c8ac9741d895e83e7d7cf08908">
+      	 	<input type="hidden" id="exceptCatalogIds" name="exceptCatalogIds" value="">
+      	 	<input type="hidden" id="view" name="view" value="/xjbt/template/cn/search.ftl">
+          	<input class="pull-left search-inner"  name="q" type="text" placeholder="请输入关键词">
+            <div class="pull-left search-btn iconfont iconsearch1"></div>
+          </form>
+          <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+          <script>
+          	$('.iconsearch1').click(function(){
+          		$('#search-form').submit();
+          	});
+          	
+          </script>
+        </div>
+      </div>
+      <div class="pull-right title-link">
+      </div>
+    </div>
+  </div>
+  <div class="modal fade ex_modal" id="myLoginModal">
+  <div class="modal-dialog my-login-dialog">
+    <div class="login-modal-content clearfix">
+      <div class="pull-left tub-img" style="background-image: url(/prototype/xinjiang-lawyer-webapp/static/assets/images/login_log.png);">
+      </div>
+      <div class="pull-right login-box">
+        <div class="login-tit">
+          <span class="tit-name">登录</span>
+        </div>
+        <form class="login-bd" action="http://passport.btlx.org.cn/openid/website-login.jsp" method="post">
+          <div class="login-item-form">
+            <div class="login-label">账号：</div>
+            <div class="login-input-inner">
+              <input name="j_username" id="login-id" class="input" type="text">new
+            </div>
+          </div>
+          <div class="login-item-form">
+            <div class="login-label">密码：</div>
+            <div class="login-input-inner">
+              <input name="j_password" id="login-pwd" class="input" type="password">
+            </div>
+          </div>
+          <div class="btn-submit-login" style="padding-top: 25px;">
+            <button class="btn-login" type="button">登 录</button>
+          </div>
+          <div class="forget-password-wrap">
+            <a class="forget-password" href="http://passport.btlx.org.cn/findpwd.jsp" target="_blank">忘记密码</a>
+          </div>
+          <a href="javascript:;" class="login-close" data-dismiss="modal">
+            <i class="iconfont iconcancel"></i>
+          </a>
+        </form>
+		<script type="text/javascript" src="/js/jsencrypt.min.js"></script>
+		<script type="text/javascript" src="/js/pbkdf2.js"></script>
+		<script type="text/javascript" src="/js/aes.js"></script>
+		<script type="text/javascript" src="/js/encrypt.js.jsp"></script>
+        <script type="text/javascript">
+        	$('.btn-submit-login').click(function(){
+				var username = $('#login-id').val();
+	        		$('.login-bd').submit();
+        	});
+				$(function(){
+					$('.login-bd').submit(function(){
+			        debugger;
+						var username = $('#login-id').val();
+						var pass = $('#login-pwd').val();
+						if (username == '' || pass == '') {
+							alert('请输入用户名,密码.');
+							return false;
+						}
+						var encryptedPass = keyEncrypt(pass);
+						$('#login-pwd').val(encryptedPass);
+						return true;
+					});
+				});
+				</script>		
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/static/css/index.css">
+<style>
+.active{background:#fff;}
+.nav-tab-title:focus,.nav-tab-title:hover{
+color:#fff;
+}
+</style>
+<div class="nav">
+      <ul class="wrapper navbar clearfix">
+        <li class="tab-item">
+          <a class="nav-tab-title" href="/">首页</a>
+        </li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/about">协会介绍</a>
+				          <div class="nav-list">
+				            	<a href="/cn/about/e375d62911114a6aaf55fa494a0f56a2">协会简介</a>
+				            	<a href="/cn/about/1e55143a5b0641d69a4111061b360748">协会章程</a>
+				            	<a href="/cn/about/d70ced9b9bbf4e5caf5ef39de2ba8dab">常务理事会</a>
+				            	<a href="/cn/about/c5e34ee6d6d44a05987a72427e6e5372">理事会</a>
+				            	<a href="/cn/about/5653141b1c024c508596f10b0f7f68be">监事会</a>
+				            	<a href="/cn/about/ca28b7ec29a24914ac4960ed2d16472e">专门委员会</a>
+				            	<a href="/cn/about/a94683e4173c44ff9ea783fded7a22ca">专业委员会</a>
+				            	<a href="/cn/about/5bb59291860e4b5987f3741daabebe42">协会秘书处</a>
+				            	<a href="/cn/about/dd789460b6b7413a8114f79557cbdf69">光荣榜</a>
+				            	<a href="/cn/about/b69f72f67b0448d2b7414668c4983647">历史回顾</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/news">要闻动态</a>
+				          <div class="nav-list">
+				            	<a href="/cn/news/c0d57fa1714747688f040e0156d2c76e">协会通知</a>
+				            	<a href="/cn/news/6655033e995c40cdb85fe1ea125e44e2">行业要闻</a>
+				            	<a href="/cn/news/f81dc0a3b58444ec8d7fc24e2e687f48">协会动态</a>
+				            	<a href="/cn/news/d4db26f8587243e6be245fdd6518445b">图片新闻</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/party">行业党建</a>
+				          <div class="nav-list">
+				            	<a href="/cn/party/8f661a54c0ad42209e2b4865568c9c5e">律师行业党委</a>
+				            	<a href="/cn/party/0c4b9ab53df14d6e9e2f2a3a770d1a0e">党建动态</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/aa00045c43c94c7fa057e26f3a729b0f">行业规范</a>
+				          <div class="nav-list">
+				            	<a href="/cn/aa00045c43c94c7fa057e26f3a729b0f/a9224b4d89d54e8db9fc18a9e806c6ee">全国律协</a>
+				            	<a href="/cn/aa00045c43c94c7fa057e26f3a729b0f/f9cbe188f0da423a9b9e1b9b0529481f">兵团律协</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/culture">律师文化</a>
+				          <div class="nav-list">
+				            	<a href="/cn/culture/5861dac3215b4209b2d6fcffd09e6e1f">人文荟萃</a>
+				            	<a href="/cn/culture/bcba1180a91646d2a8bc6b09a6d518ae">业务研讨</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/member">会员服务</a>
+				          <div class="nav-list">
+				            	<a href="/cn/member/71231d161d4346e6a8dee5c04c072624">下载中心</a>
+				            	<a href="/cn/member/d3f86030aceb449591f310e4c22b0473">办事指南</a>
+				            	<a href="/cn/member/7563dcea8fce45e2a24feb40e3781ce7">法规检索</a>
+				            	<a href="/cn/member/c141e2eb11a542a784db189e62f996ee">维权中心</a>
+				          </div>
+			        	</li>
+				        <li class="tab-item">
+				          <a class="nav-tab-title" href="/cn/364606f50e204c229f85aec654e9b798">互动交流</a>
+				          <div class="nav-list">
+				            	<a href="/cn/364606f50e204c229f85aec654e9b798/f8e9dfdaae664f6fadd659962f2da11c">在线留言</a>
+				            	<a href="/cn/364606f50e204c229f85aec654e9b798/8576943d332146e0b1de88c7e7d91f25">投诉举报</a>
+				            	<a href="/cn/364606f50e204c229f85aec654e9b798/e2d9470c8d3b41d3a55a977f442230ca">征集调查</a>
+				          </div>
+			        	</li>
+      
+      </ul>
+    </div>
+
+<div class="slide-menu-wrapper" style="left:55%">
+  <ul class="slide-menu">
+  </ul>
+  <div class="slide-menu erweima-outer">
+    <div class="slide-erweima" style="background-image:url('/prototype/xinjiang-lawyer-webapp/static/assets/images/code.png')"></div>
+  </div>
+</div>
+
+<div class="lawyer-list-content">
+<div class="crumbs-wrap"></div>
+  <div class="lawyer-wrapper clearfix">
+    <div class="lawyer-left pull-left">
+      <div class="info-detail-l">
+        <div class="integrity-info" style="margin-bottom: 24px;">
+          <div class="info-head">诚信信息</div>
+          <ul class="integrity-info-nav">
+            <li class="menu-item active">
+              <a class="menu-link change-one" href="/searchLawyer">律师信息<i class="iconfont iconarrow2"></i></a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link change-two" href="/searchLawfirm">律所信息<i class="iconfont iconarrow2"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="quick-index-wrap">
+          <div class="quick-index-title clearfix">
+            <div class="pull-left title-inner">快速检索</div>
+          </div>
+          <form action="/searchLawyer" method="get" id="catalog_search"> 
+            <div class="quick-index-input-item">
+              <div class="quick-index-input-box">
+                <input class="input quick-index-input" id="word" name="word" type="text" />
+              </div>
+            </div>
+            <button class="quick-index-btn" id="sub1" type="button">检&emsp;索</button>
+          </form>
+          <script>
+          	$("#sub1").click(function(){
+          		$("#catalog_search").submit();
+          	});
+          </script>
+        </div>
+      </div>
+
+      <div class="high-search">
+	
+
+
+
+
+
+
+
+
+
+
+	
+<div class="search-result-tab">
+       <div class="search-tab-title">高级检索</div>
+        </div>
+        <div class="search-type">
+          <div class="type-title">按地区检索：</div>
+          <div class="type-content">
+            <ul class="type-box clearfix">
+              <li class="type-list pull-left  active">
+                <a href="/searchLawyer?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f" >全部</a>
+              </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942aec944e73a10118f6d1abfcf9&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x516b;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942ad3354791b430ee7e8ffa5ab1&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e00;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a157b48d1b5ee8d8136864a78&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e09;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a8cd042a8ae7c450c281cb9b6&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x56db;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a70b64c938b74ebbc7c384e2a&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e94;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942ac39b4f288258ff639e0716df&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x516d;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942af1da4f8f80ff1bbdb22cf731&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e03;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a04164cd497bca61311355452&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e5d;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a75aa464a864b778e9314f402&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x4e8c;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942af613426393986cd238b886e5&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x5341;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a10c94ed9b3b581ae4edfa675&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x5341;&#x4e00;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942a3d5c45fa8ff746faa9127cef&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x5341;&#x4e8c;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942abbf948ee8fb99bbe2036fc59&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x5341;&#x4e09;&#x5e08;</a>
+            </li>
+            
+            <li class="type-list pull-left ">
+            	<a href="/searchLawyer?association=fe9e942aeb964fa89fdc1e38a282ad66&gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f">&#x7b2c;&#x5341;&#x56db;&#x5e08;</a>
+            </li>
+            
+            </ul>
+          </div>
+        </div>
+        <div class="search-type">
+          <div class="type-title">按专业检索：</div>
+
+          <div class="type-content">
+            <ul class="type-box clearfix">
+          	
+            
+	            <li class="type-list pull-left  active"><a href="/searchLawyer?association=&practiceScope=43ea076234e049579dd12b9715c6783f&gender=Male">
+	            		全　部
+	            </a></li>
+            
+            
+              <li class="type-list pull-left">
+                <a href="javascript:;">公司法相关 </a>
+              </li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=f032a782b15c493b85806ce5ce1e022c&gender=Male">公司法相关</a></li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=9bd80415980e4e2a89ee26ea7733d7a5&gender=Male">刑事行政</a></li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=3dc6f4bfc29046738d3d812d3b3c4673&gender=Male">民事相关</a></li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=15f8f5f38d524116b17cab04933d2888&gender=Male">涉外法律</a></li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=7087105e33d5403ba451dcb169018090&gender=Male">经济相关</a></li>
+           	
+           	<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=24d3d4d74ba14c5e8b1c1c1a14e25fec&gender=Male">其它</a></li>
+           	
+            </ul>
+          </div>
+        </div>
+        <div class="search-type">
+          <div class="type-title">按性别检索：</div>
+          <div class="type-content">
+            <ul class="type-box clearfix">
+			<li class="type-list pull-left "><a href="/searchLawyer?association=&practiceScope=43ea076234e049579dd12b9715c6783f" >全　部</a></li>
+            <li class="type-list pull-left active""><a href="/searchLawyer?gender=Male&association=&gender=male&practiceScope=43ea076234e049579dd12b9715c6783f" >男</a></li>
+            <li class="type-list pull-left "><a href="/searchLawyer?gender=FeMale&association=&gender=Female&practiceScope=43ea076234e049579dd12b9715c6783f" >女</a></li>
+            </ul>
+          </div>
+        </div>
+	
+
+            
+	
+      </div>
+    </div>
+    <div class="lawyer-right-one pull-left">
+	
+
+
+
+
+
+
+
+
+
+	
+<div class="lawyer-tab">本次查询，共检索到<span class="tab-color">353</span>名律师</div>
+<ul class="lawyer-box">
+
+        <li class="lawyer-list">
+          <a href="/lawyer/734bb09abc824f3abb270ae55af05e42" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/0a5c370d68a2424aae6ae339b1ffbce3?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">宋高波</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆尚铎律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16590201810046176 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/1182f9b314684427ba52b6e36cc38831" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/d62571e18be3437d8473925dea2187a1?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">孙国军</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆七合律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16590202110298014 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/f86be2d9aaa842cea08f4f54e0771e25" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/c325fdcd0bf245b5808169d66ccff287?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">苏会斌</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆芳洲律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16590199410247954 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/7c36c6933aa14407a04e43792dde9823" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/cab52189ec2e4dd480203e65458f9096?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">孙境延</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆翰兴（博乐）律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16527201710847609 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/91f09d14cf334561bf9eebd48f4efe64" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/9cea68d92ba448c7bbd8a97684019295?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">宋凯</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆鼎泽凯律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16501200010215466 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/64d5a876d0424a96a410d4c699b9a157" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/cdf2d5f10240403d8d0ffd558e75fbcd?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">宋明</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆四维律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16501198810558467 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/089b60dd7a4d48378191f039ceae3505" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/6bf3a45ca1bb435590c0942619811fd2?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">邵荣松</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆翰兴律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16540201510153429 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/d06b87c7b43c47cbb1f35e5b1814bc83" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/a275ff783cb242e7af001c9c48ea79a9?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">孙涛志</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆鼎驰律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16590201910079339 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/625e42f707064591b35ff95147f8e4e8" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/665439dab5c14a088fc16ca2a25d6504?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">孙文晨</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆亚桥律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16527202010204314 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="lawyer-list">
+          <a href="/lawyer/e0a7f891ba034222ade57a5b8da0041d" class="lawyer-link clearfix">
+            <div class="lawyer-image pull-left" style="background-image:url(http://49.119.98.43/lsgl/backend/portrait/0f5635053d244a44a4502e388bb7891d?thumb=80x115)"></div>
+            <div class="lawyer-detail pull-left">
+              <div class="detail-name">石新生</div>
+              <div class="detail-other clearfix">
+                <div class="detail-sex pull-left">性别：男 </div>
+                <div class="detail-number pull-left">执业机构：新疆初维律师事务所 </div>
+                <div class="detail-sex pull-left">执业类别：专职律师 </div>
+                <div class="detail-number pull-left">执业证号：16590201610882146 </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+</ul>
+<div class="paging-wrap">
+
+
+
+<a class="paging-item prev-page item-show" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=19">上一页</a>
+<a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=1">1</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=2">2</a><a class="paging-item" href="#">...</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=18">18</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=19">19</a><a class="paging-item active" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=20">20</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=21">21</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=22">22</a><a class="paging-item" href="#">...</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=35">35</a><a class="paging-item" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=36">36</a>
+<a class="paging-item next-page item-show" href="?gender=Male&practiceScope=43ea076234e049579dd12b9715c6783f&page=21">下一页</a>
+</div>
+</div>
+	
+    </div>
+  </div>
+</div>
+<div class="footer-wrap">
+  <div class="footer-content">
+    <div>
+      [版权声明]　 技术服务：上海同道信息技术有限公司
+    </div>
+    <div>新疆生产建设兵团律师协会版权所有　©20</div>
+  </div>
+  <div class="footer-line"></div>
+</div>
+
+  </div>
+
+ <script src="/prototype/xinjiang-lawyer-webapp/static/lib/mod.js"></script>
+<script type="text/javascript">/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "src/utils/jquery.SuperSlide.2.1.1": {
+      "url": "/prototype/xinjiang-lawyer-webapp/static/utils/jquery.SuperSlide.2.1.1.js",
+      "type": "js"
+    },
+    "src/utils/iscroll/iscroll": {
+      "url": "/prototype/xinjiang-lawyer-webapp/static/utils/iscroll/iscroll.js",
+      "type": "js"
+    }
+  },
+  "pkg": {}
+});</script>
+<script type="text/javascript" src="/prototype/xinjiang-lawyer-webapp/pkg/modules.js"></script>
+<script type="text/javascript" src="/prototype/xinjiang-lawyer-webapp/static/main.js"></script>
+<script type="text/javascript">
+  var $, jQuery
+  $ = jQuery = require('node_modules/jquery/dist/jquery');
+  require('node_modules/bootstrap/js/modal');
+  var main = require('src/main')
+  $(function () {
+    var myScrollfirst, myScrollsecond;
+    $('.nav-tab').on('mouseenter', function () {
+      $('.nav-tab').removeClass('active');
+      $(this).addClass('active');
+      let id = $(this).data('id');
+      $('.nav-content').hide();
+      $('#' + id).show();
+      switch (id) {
+        case 'header-nav-1':
+          myScrollfirst = '';
+          myScrollfirst = main.Iscroll.init("#scroll-list", {
+            scrollY: true,
+            scrollbars: 'custom',
+            mouseWheel: true
+          });
+          break;
+        case 'header-nav-2':
+          myScrollsecond = '';
+          myScrollsecond = main.Iscroll.init("#scroll-list-two", {
+            scrollY: true,
+            scrollbars: 'custom',
+            mouseWheel: true
+          });
+          break;
+      }
+    })
+    $('.header-container').on('mouseleave', function () {
+      $('.nav-tab').removeClass('active');
+      $('.nav-content').hide();
+    })
+  })
+
+
+
+  var $, jQuery
+  $ = jQuery = require('node_modules/jquery/dist/jquery');
+  var main = require('src/main')
+
+
+  var main = require('src/main')
+  var $ = require('node_modules/jquery/dist/jquery');
+
+  main.Slide.init('.banner-content', {
+    mainCell: '.banner-box',
+    titCell: '.lead-box',
+    effect: 'leftLoop',
+    autoPlay: true,
+    autoPage: true,
+    trigger: 'click',
+    titOnClassName: 'active',
+    autoPage: '<li><a></a></li>'
+  })
+
+  $(function () {
+    $('.tab-more-calendar').click(function () {
+      $('.train-scroll').addClass('train-scroll-none')
+      $('.calendar-content').addClass('calendar-content-block')
+    });
+    $('.tab-more-arrange').click(function () {
+      $('.train-scroll').removeClass('train-scroll-none')
+      $('.calendar-content').removeClass('calendar-content-block')
+    })
+
+    var dateMy = new Date();
+    //获取当前年
+    var yearMy = dateMy.getFullYear();
+    //获取当前月
+    var monthMy = dateMy.getMonth() + 1;
+    //获取当前日
+    var dateMy = dateMy.getDate();
+    setNowData(yearMy, monthMy);
+
+    // 设置年月
+    function setNowData(year, month) {
+      $('.now-content').text(year + '年' + month + '月')
+    }
+
+    // 获取月份一号是周几
+    function getWeek(year, month) {
+      //1.根据年度和月份，创建日期
+      //应该先对year,month进行整数及范围校验的。
+      var d = new Date();
+      d.setYear(year);
+      d.setMonth(month - 1);
+      d.setDate(1);
+      //获得周几
+      var weeks = ['0', '1', '2', '3', '4', '5', '6'];
+      var weekMy = weeks[d.getDay()];
+      return weekMy;
+    }
+
+    getWeek(2019, 6);
+
+    // 获取月份最后一天
+    // function getDataNumber(flag) {
+    //   if (flag === 0) {
+    //     var date = new Date();
+    //     console.log('new', date)
+    //   }
+    //   if (flag !== 0) {
+    //     var date = flag
+    //   }
+    //   date.setDate(1);
+    //   date.setMonth(date.getMonth() + 1);
+    //   var lastDate = new Date(date - 3600000 * 24);
+    //   var lastDataMy = lastDate.getDate()
+    //   console.log(date, "本月最后一天是 " + lastDataMy);
+    //   return lastDataMy
+    // }
+
+    function getMonthDays(nowyear, myMonth) {
+      var monthStartDate = new Date(nowyear, myMonth, 1);
+      var monthEndDate = new Date(nowyear, myMonth + 1, 1);
+      var days = (monthEndDate - monthStartDate) / (1000 * 60 * 60 * 24);
+      return days;
+    }
+
+    // 设置月份日期
+    function setCadenlar(yearMy, monthMy) {
+      console.log('那一年那个月', yearMy, monthMy)
+      var calendarWeek = getWeek(yearMy, monthMy);
+      var calendarAll = getMonthDays(yearMy, monthMy - 1);
+      console.log('星期几和多少号', calendarWeek, calendarAll)
+
+      var calendarList = $('.calendar-box').children().find('.list-data')
+      var number = 0
+      calendarList.map(index => {
+        $(calendarList[index]).text('');
+      })
+      for (var i = 0; i < calendarAll; i++) {
+        $(calendarList[calendarWeek]).text(number + 1);
+        number++;
+        calendarWeek++;
+      }
+    }
+    setCadenlar(yearMy, monthMy);
+    // 获取下个月一号
+    function getNextMonth() {
+      var date = new Date();
+      var nextMonthDay = new Date(date.getFullYear(), monthMy + 1, 1);
+      return nextMonthDay
+    }
+    getNextMonth();
+
+    // 获取上个月一号
+    function getPreMonth() {
+      var date = new Date();
+      var preMonthDay = new Date(date.getFullYear(), monthMy - 1, 1);
+      return preMonthDay
+    }
+    getPreMonth();
+    // 点击下个月事件
+    $('.now-next').click(function () {
+      if (monthMy === 12) {
+        monthMy = 1;
+        yearMy++;
+      } else {
+        monthMy++;
+      }
+      setNowData(yearMy, monthMy);
+      setCadenlar(yearMy, monthMy);
+
+    })
+    // 点击上个月事件
+    $('.now-pre').click(function () {
+      if (monthMy === 1) {
+        monthMy = 12;
+        yearMy--;
+      } else {
+        monthMy--;
+      }
+      setNowData(yearMy, monthMy);
+      setCadenlar(yearMy, monthMy);
+    })
+
+  })
+
+</script>
+</body>
+
+</html>

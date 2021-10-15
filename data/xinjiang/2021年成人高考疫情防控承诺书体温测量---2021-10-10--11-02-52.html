@@ -1,0 +1,966 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<HTML>
+
+<HEAD>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<TITLE>新疆招生网</TITLE>
+
+<link href="../css/css.css" type="text/css" rel="stylesheet"  />
+
+<link rel="Shortcut Icon"  href="../image/xjzs.ico" />
+
+<script src="../js/menu.js" type="text/javascript"></script>
+
+	 <script language="javascript">
+
+<!--
+
+function CalConv(){
+
+FIRSTYEAR = 1998;
+
+LASTYEAR = 2031;
+
+today = new Date();
+
+SolarYear = today.getFullYear();
+
+SolarMonth = today.getMonth() + 1;
+
+SolarDate = today.getDate();
+
+Weekday = today.getDay();
+
+LunarCal = [
+
+ new tagLunarCal( 27, 5, 3, 43, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1 ),
+
+ new tagLunarCal( 46, 0, 4, 48, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1 ), 
+
+ new tagLunarCal( 35, 0, 5, 53, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1 ),
+
+ new tagLunarCal( 23, 4, 0, 59, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 42, 0, 1, 4, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 31, 0, 2, 9, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0 ),
+
+ new tagLunarCal( 21, 2, 3, 14, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 39, 0, 5, 20, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 28, 7, 6, 25, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1 ),
+
+ new tagLunarCal( 48, 0, 0, 30, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1 ),
+
+ new tagLunarCal( 37, 0, 1, 35, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1 ),
+
+ new tagLunarCal( 25, 5, 3, 41, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+
+ new tagLunarCal( 44, 0, 4, 46, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+
+ new tagLunarCal( 33, 0, 5, 51, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 22, 4, 6, 56, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ),
+
+ new tagLunarCal( 40, 0, 1, 2, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ),
+
+ new tagLunarCal( 30, 9, 2, 7, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 49, 0, 3, 12, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 38, 0, 4, 17, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0 ),
+
+ new tagLunarCal( 27, 6, 6, 23, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1 ),
+
+ new tagLunarCal( 46, 0, 0, 28, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0 ),
+
+ new tagLunarCal( 35, 0, 1, 33, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ),
+
+ new tagLunarCal( 24, 4, 2, 38, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 42, 0, 4, 44, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 31, 0, 5, 49, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0 ),
+
+ new tagLunarCal( 21, 2, 6, 54, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 40, 0, 0, 59, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1 ),
+
+ new tagLunarCal( 28, 6, 2, 5, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0 ),
+
+ new tagLunarCal( 47, 0, 3, 10, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1 ),
+
+ new tagLunarCal( 36, 0, 4, 15, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1 ),
+
+ new tagLunarCal( 25, 5, 5, 20, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ),
+
+ new tagLunarCal( 43, 0, 0, 26, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 ),
+
+ new tagLunarCal( 32, 0, 1, 31, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0 ),
+
+ new tagLunarCal( 22, 3, 2, 36, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0 ) ];
+
+SolarCal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+SolarDays = [ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366, 397 ];
+
+if ( SolarYear <= FIRSTYEAR || SolarYear > LASTYEAR ) return 1;
+
+sm = SolarMonth - 1;
+
+if ( sm < 0 || sm > 11 ) return 2;
+
+leap = GetLeap( SolarYear );
+
+if ( sm == 1 )
+
+d = leap + 28;
+
+else
+
+d = SolarCal[sm];
+
+if ( SolarDate < 1 || SolarDate > d ) return 3;
+
+y = SolarYear - FIRSTYEAR;
+
+acc = SolarDays[ leap*14 + sm ] + SolarDate;
+
+kc = acc + LunarCal[y].BaseKanChih;
+
+Kan = kc % 10;
+
+Chih = kc % 12;
+
+Age = kc % 60;
+
+if ( Age < 22 )
+
+Age = 22 - Age;
+
+else
+
+Age = 82 - Age;
+
+if ( acc <= LunarCal[y].BaseDays ){
+
+y--;
+
+LunarYear = SolarYear - 1;
+
+leap = GetLeap( LunarYear );
+
+sm += 12;
+
+acc = SolarDays[leap*14 + sm] + SolarDate;
+
+}
+
+else
+
+LunarYear = SolarYear;
+
+l1 = LunarCal[y].BaseDays;
+
+for ( i=0; i<13; i++ ){
+
+l2 = l1 + LunarCal[y].MonthDays[i] + 29;
+
+if ( acc <= l2 ) break;
+
+l1 = l2;
+
+}
+
+LunarMonth = i + 1;
+
+LunarDate = acc - l1;
+
+im = LunarCal[y].Intercalation;
+
+if ( im != 0 && LunarMonth > im ) {
+
+LunarMonth--;
+
+if ( LunarMonth == im ) LunarMonth = -im;
+
+}
+
+if ( LunarMonth > 12 ) LunarMonth -= 12;
+
+ today=new Date();
+
+ function initArray(){
+
+ this.length=initArray.arguments.length
+
+ for(var i=0;i<this.length;i++)
+
+ this[i+1]=initArray.arguments[i] }
+
+ var d=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+
+ document.write("", today.getYear(),"年",today.getMonth()+1,"月",today.getDate(),"日<br>",d[today.getDay()+1],"");
+
+months = ["一","二","三","四","五","六","七","八","九","十","十一","十二"];
+
+days = ["初一","初二","初三","初四","初五","初六","初七","初八","初九","初十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","廿一","廿二","廿三","廿四","廿五","廿六","廿七","廿八","廿九","三十"];
+
+document.write( "&nbsp;&nbsp;农历"+months[LunarMonth-1]+"月" + days[LunarDate-1] + "");
+
+return 0; 
+
+}
+
+function GetLeap( year ){
+
+ if ( year % 400 == 0 )
+
+ return 1;
+
+ else if ( year % 100 == 0 )
+
+ return 0;
+
+ else if ( year % 4 == 0 )
+
+ return 1;
+
+ else
+
+ return 0;
+
+}
+
+function tagLunarCal( d, i, w, k, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13) {
+
+ this.BaseDays = d;
+
+ this.Intercalation = i;
+
+ this.BaseWeekday = w;
+
+ this.BaseKanChih = k;
+
+ this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ];
+
+}
+
+//-->
+
+</script>
+
+<script language=javascript> 
+
+
+
+function Print() { 
+
+bdhtml=window.document.body.innerHTML; 
+
+sprnstr= "<!--startprint-->"; 
+
+eprnstr= "<!--endprint-->"; 
+
+prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)); 
+
+prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); 
+
+window.document.body.innerHTML=prnhtml; 
+
+window.print(); 
+
+} 
+
+</script>
+
+
+
+<style type="text/css">
+
+<!--
+
+.style2 {font-size: 16px}
+
+-->
+
+ </style>
+
+ <style type="text/css">
+
+.ft{ height:auto;margin-bottom:5px; display:table;}
+
+table{margin:0 auto 0 auto}
+
+#menunavgg{ height:auto;}
+
+#therecom1{ height:auto;}
+
+.copyright{ height:auto;}
+
+.maplink1 A {
+
+	TEXT-ALIGN: center; 
+
+	MARGIN-TOP: 8px; 
+
+	WIDTH: auto; DISPLAY: block; FONT: 12px/26px; 
+
+	BACKGROUND: url(/image/gb0_04_2019.gif); FLOAT: left; 
+
+	border-radius: 3px;
+
+	HEIGHT: 26px; MARGIN-LEFT: 15px; 
+
+	line-height: 26px;
+
+	OVERFLOW: hidden; MARGIN-RIGHT: 15px; TEXT-DECORATION: none;
+
+	padding: 0px 3px;
+
+}
+
+.xt tr td{
+
+	width: 225px;
+
+	display: block;}
+
+</style>
+
+
+
+</HEAD>
+
+<BODY >
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=778 bgColor=#ffffff 
+
+align=center>
+
+  <TBODY>
+
+  <TR>
+
+    <TD width=286><IMG src="../image/td1.jpg" width=286 height=77></TD>
+
+    <TD width=105>&nbsp;</TD>
+
+    <TD width=387><IMG src="../image/index1227_r1_c4.jpg"  width=387 height=77></TD></TR></TBODY></TABLE>
+
+	  <TABLE border=0 cellSpacing=0 cellPadding=0 width=778 bgColor=#ffffff align=center>
+
+<TBODY>
+
+  <TR>
+
+    <TD>
+
+	     <div class="red">
+
+	<div id="slatenav">
+
+	<ul>
+
+	<li><a href="http://www.xjzk.gov.cn" title="网站首页"  class="current" >网站首页</a></li>
+
+	<li><a href="../bmjj.html" title="部门简介">部门简介</a></li>
+
+	<li><a href="../1001/0105_1.html" title="招生新闻">招生新闻</a></li>
+
+	<li><a href="../1001/0107_1.html" title="招考政策">招考政策</a></li>
+
+	<li><a href="../1001/0104_1.html" title="教育法规">教育法规</a></li>
+
+	<li><a href="../wfzx.html" title="服务中心">服务中心</a></li>
+
+   </ul><font  color="#ffffff">
+
+   <div  align="center" > <script language="javascript">CalConv();</script></div>
+
+ </font></div>
+
+	</div> </TD></TR></TBODY></TABLE>
+
+<div id="indexsec"> </div>
+
+
+
+
+
+	
+
+	<TABLE border=0 cellSpacing=0 cellPadding=0 width=770 align=center >
+
+  <TBODY>
+
+  <TR>
+
+    <TD >
+
+<div id="bookmunu">
+
+<div class="jsmenu" id="jsmenu">
+
+<ul>
+
+ <li class="normal"><a urn="jsmenu1" rel="conmenu" href="../ptgk.html">普通高考</a></li>
+
+  <li class="normal"><a urn="jsmenu2" rel="conmenu" href="../crgk.html">成人高考</a></li>
+
+  <li class="normal"><a urn="jsmenu4" rel="conmenu" href="../yjsks.html">研究生考试</a></li>
+
+  <li class="normal"><a urn="jsmenu3" rel="conmenu" href="../zzzk.html">中职招生</a></li>
+
+ </ul>
+
+</div>
+
+<script type=text/javascript>
+
+startajaxtabs("jsmenu");
+
+var iTab=GetCookie("nets_jsmenu");
+
+	iTab = iTab ? parseInt(iTab):parseInt(Math.random()*5);
+
+	if(iTab!=0) getElement("jsmenu").getElementsByTagName("h1")[iTab].LoadTab();
+
+	iTab++;
+
+	if(iTab>4) iTab=0;
+
+	SetCookie("nets_jsmenu",iTab,365);
+
+function getElement(aID)
+
+{
+
+  return (document.getElementById) ? document.getElementById(aID)
+
+                                   : document.all[aID];
+
+}
+
+</script>
+
+	</div>
+
+
+
+</TD></TR></TBODY></TABLE>
+
+
+
+	
+
+	<TABLE cellSpacing=0 cellPadding=0 width=778 border=0 align="center">
+
+        <TBODY>
+
+        <TR>
+
+          <TD bgColor=#f1f1f1 height=25><IMG height=6 hspace=10  src="../image/arrow_black.gif" width=5>&nbsp;&nbsp;您的位置：<a href=../index.html>[网站首页]<a>-<a href=../crgk.html>[成人高考]<a>-[成人高考招生新闻]</TD>
+
+        </TR></TBODY></TABLE>
+
+	
+
+   
+
+
+
+
+
+<TABLE  width=778 align=center  border=0>
+
+        <TBODY>
+
+            <TR>
+
+                <TD vAlign=top align=left width=553>
+
+				
+
+                 <TABLE cellSpacing=0 cellPadding=0 width=553 align=center  border=0>
+
+                     <TBODY>
+
+                       <!--startprint--> 
+
+        <tr><td height="60"  align="center"    width=553><strong><font color=#000000 > <span class="style2">2021年成人高考疫情防控承诺书、体温测量登记表下载</span></FONT></strong></td></tr>
+
+         <tr><TD align="right"   ><strong><font color=#000000>发布时间：2021-10-09</FONT></strong> </TD></tr>
+
+		  <tr><TD> <hr></TD> </tr>
+
+          <TR ><TD width="100%"><font color=#000000> <p><a href="/WebRoot/userfiles/file/20211009crgk_fj1.zip">&nbsp;2021年成人高考疫情防控承诺书、体温测量登记表下载</a></p></font></TD></TR>
+
+			 <TR><TD class=dotLine colSpan=2></TD></TR><!--endprint-->
+
+
+
+
+
+ <TR><TD align="right"><A href="javascript:addBookmark(document.title,location.href)">收藏此页</A>|<A href="javascript:Print();">打印此页</A></TD></TR>
+
+		 <TBODY>
+
+		  </TABLE>
+
+  </td> 
+
+				
+
+		<TD vAlign=top width=225 >  
+
+		<TABLE    class="xt" width=225  >
+
+       <TBODY>
+
+      <TR>
+
+    <TD  background=../image/s2.jpg   height=26 width=100% >&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="../image/arrow.gif" />&nbsp;&nbsp;&nbsp;&nbsp;<strong>公告栏</strong>
+
+    </TD> 	
+
+   </TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25366.html" title="新疆2021年成人高考准考证10月11日起打印"><font color="#000000">新疆2021年成人高考准考证10月11日起打印</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25347.html" title="【自学考试及教育学心理学考试】温馨提示"><font color="#000000">【自学考试及教育学心理学考试】温馨提示</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25346.html" title="【自学考试及教育学心理学考试】健康应试承诺书下载"><font color="#000000">【自学考试及教育学心理学考试】健康应试承诺书下载</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25345.html" title="【自学考试及教育学心理学考试】考生体温测量登记表下载"><font color="#000000">【自学考试及教育学心理学考试】考生体温测量登记表下载</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25344.html" title="关于暂停办理自考考籍相关业务的公告"><font color="#000000">关于暂停办理自考考籍相关业务的公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25311.html" title="新疆维吾尔自治区2021年下半年中小学教师资格考试（笔试）报名公告"><font color="#000000">新疆维吾尔自治区2021年下半年中小学教师资格考试（笔试）报名公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25310.html" title="新疆2021年下半年高等教育自学考试考籍省际转考业务办理公告"><font color="#000000">新疆2021年下半年高等教育自学考试考籍省际转考业务办理公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25307.html" title="新疆2021年成人高考网上报名9月1日至8日进行 "><font color="#000000">新疆2021年成人高考网上报名9月1日至8日进行 </font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25305.html" title="新疆2021年9月全国计算机等级考试报名公告"><font color="#000000">新疆2021年9月全国计算机等级考试报名公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25284.html" title="自治区教师资格认定“教育学、心理学”课程考试补考报考公告"><font color="#000000">自治区教师资格认定“教育学、心理学”课程考试补考报考公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+ 
+
+	</TBODY></TABLE>
+
+	
+
+	
+
+	<TABLE  class="xt" width=225 >
+
+       <TBODY>
+
+      <TR>
+
+    <TD  background=../image/s2.jpg   height=26 width=100% >&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="../image/arrow.gif" >&nbsp;&nbsp;&nbsp;&nbsp;<strong>招生新闻</strong>
+
+    </TD> 	
+
+   </TR>
+
+   
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25365.html" title="2021年成人高考疫情防控承诺书、体温测量登记表下载"><font color="#000000">2021年成人高考疫情防控承诺书、体温测量登记表下载</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25364.html" title="新疆2021年成人高考准考证10月11日起打印"><font color="#000000">新疆2021年成人高考准考证10月11日起打印</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25324.html" title="新疆2021年成人高考网上报名将于9月8日24时结束"><font color="#000000">新疆2021年成人高考网上报名将于9月8日24时结束</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25306.html" title="新疆2021年成人高考网上报名9月1日至8日进行"><font color="#000000">新疆2021年成人高考网上报名9月1日至8日进行</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25267.html" title="8月22日：2021年普通高等学校招收各省市新疆高中班毕业生录取工作第六次征集志愿"><font color="#000000">8月22日：2021年普通高等学校招收各省市新疆高中班毕业生录取工作第六次征集志愿</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25265.html" title="8月21日：新疆2021年普通高校招生 网上录取第四次征集志愿"><font color="#000000">8月21日：新疆2021年普通高校招生 网上录取第四次征集志愿</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25164.html" title="7月30日：2021年普通高等学校招收各省市新疆高中班毕业生录取工作第二次征集志愿"><font color="#000000">7月30日：2021年普通高等学校招收各省市新疆高中班毕业生录取工作第二次征集志愿</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25148.html" title="7月28日：新疆2021年普通高校招生网上录取第二次征集志愿"><font color="#000000">7月28日：新疆2021年普通高校招生网上录取第二次征集志愿</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25146.html" title="关于公布2021年有关省市新疆中职班录取结果及第一次征集志愿的公告"><font color="#000000">关于公布2021年有关省市新疆中职班录取结果及第一次征集志愿的公告</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	<TR>
+
+	<TD > <IMG src=../image/jt.gif />
+
+	<a  href="25128.html" title="7月18日：新疆2021年普通高校招生网上录取第一次征集志愿"><font color="#000000">7月18日：新疆2021年普通高校招生网上录取第一次征集志愿</font></a>
+
+	</TD>
+
+	</tr>
+
+	<TR> 
+
+	  <TD class=dotLine colSpan=2></TD>
+
+	</TR>
+
+	
+
+	</TBODY></TABLE>
+
+	
+
+	 </td></TR></TBODY></TABLE>
+
+
+
+	
+
+	
+
+	
+
+
+
+	
+
+
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=778 align=center>
+
+  <TBODY>
+
+  <TR>
+
+    <TD> 
+
+<div class="copyright" style="border:0px;margin-top:5px;"><div class="foot">
+
+    	<div class="sydwimg">
+
+        <span id="_ideConac"><a href="http://bszs.conac.cn/sitename?method=show&id=526190BA875B55F0E053012819AC78DA" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="http://dcs.conac.cn/image/blue_error.png" data-bd-imgshare-binded="1"></a></span>
+
+        </div>
+
+        <div class="webinfo">
+
+        <p>
+
+            新ICP备<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">14003112号</a>    
+
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=65010302000976"><img src="/image/icon_wangan.png" style="width:20px;heiht:20px;margin-bottom:-3px;margin-left:20px;"/><span style="color:#fff;">新公网安备 65010302000976号</span></a>
+
+        </p>
+
+        <p>新疆维吾尔自治区教育考试院主办&nbsp;&nbsp;&nbsp;&nbsp;地址：新疆乌鲁木齐市南昌路456号（邮编：830091）</p>
+
+        </div>
+
+        <div class="ewm">
+
+        <img src="http://www.xjzk.gov.cn/image/xjzbweixin.jpg" width="90" height="90">
+
+        </div>
+
+        <div class="clearfloat"></div>
+
+        <style>
+
+        .foot{ width:760px; height:auto; background:url(http://www.xjzk.gov.cn/image/bt_bg.gif); font-family:"微软雅黑", "宋体", Arial; font-size:12px; padding:10px;}
+
+		.sydwimg{ float:left; width:80px; height:80px;}
+
+        .webinfo{ float:left;width:500px; border-left:2px solid #fff; color:#fff; line-height:40px;}
+
+		.webinfo p{padding:0px;margin:0px; padding-left:10px;}
+
+		.ewm{ float:right;}
+
+		.clearfloat{ clear:both;}
+
+		#ddys{color:#ff0000; font-size:15px;}
+
+        </style>
+
+    </div>
+
+</div>
+
+<div class="end"></div></TD></TR></TBODY></TABLE>
+
+</BODY>
+
+</HTML>
+

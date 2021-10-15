@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<title>新疆维吾尔自治区农村信用社联合社</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北京科技大学学生就业指导中心</title>
+
+<link rel="stylesheet" href="/assets/global/plugins/bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/template/ustb/css/clndr.css" media="all">
+<link rel="stylesheet" href="/template/ustb/css/jquery.webui-popover.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/idangerous.swiper.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/edua-icons.css" media="all" />
+<link rel="stylesheet" href="/njs/font-awesome-4.7.0/css/font-awesome.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/edu/core.css">
+    <link rel="stylesheet" href="/template/ustb/css/edu/shortcode/header.css">
+<link rel="stylesheet" href="/template/ustb/css/customStyle.css">
+<link href="/template/ustb/css/common.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/template/ustb/css/show.css" media="all">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="/njs/ueditor/ueditor.parse.min.js"></script>
+
+<link rel="shortcut icon" href="/template/ustb/favicon.ico">
+
+<script type="text/javascript" src="/template/ustb/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/njs/ueditor/ueditor.parse.min.js"></script>
+	<script type="text/javascript" src="/njs/jquery.PrintArea.js"></script>
+	<style>
+		.corp-detail-text ul li a {
+			color: #337ab7;
+			border-bottom: 1px dashed;
+		}
+	</style>
+</head>
+<body>
+<!-- Start of header area -->
+<div class="searchwraper" style="display: none;">
+	<div class="search clearfix">
+		<form id="searchForm" name="input" action="/front/search.jspa" method="get" class="">
+			<input type="text" class="keywords" name="keywords" id="keywords" onblur="if (this.value == '') {this.value = '请输入查找关键字';}" onfocus="if (this.value == '请输入查找关键字') {this.value = '';}" value="请输入查找关键字" >
+			<button type="submit" class="button"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+	<div class="hotList">
+		热门关键字：
+			<a href="javascript:void(0)" onclick="searchhot('双选会');">双选会</a><a href="javascript:void(0)" onclick="searchhot('新能源');">新能源</a><a href="javascript:void(0)" onclick="searchhot('京东方');">京东方</a><a href="javascript:void(0)" onclick="searchhot('首钢');">首钢</a><a href="javascript:void(0)" onclick="searchhot('宝钢');">宝钢</a><a href="javascript:void(0)" onclick="searchhot('微软');">微软</a><a href="javascript:void(0)" onclick="searchhot('马钢');">马钢</a>
+	</div>
+</div>
+<header class="header-area">
+	<div id="mobile-search" style="display: none">
+		<div class="searchbox">
+			<!--<form name="input" action="/front/search.jspa" method="get" class="">
+				<input type="text" class="keywords" name="keywords"  onblur="if (this.value == '') {this.value = '请输入搜索关键字...';}" onfocus="if (this.value == '请输入搜索关键字...') {this.value = '';}" value="请输入搜索关键字..." >
+				<button type="submit" class="button"><i class="fa fa-search"></i></button>
+			</form>-->
+			<a href="javascript:;" class="fa fa-search" id="searchicon"></a>
+		</div>
+		<div class="btn-login">
+			<button class="s2 v_login submit" id="login">登录</button>
+			<div class="btn-group" id="logout" style="display:none">
+				<button type="button" id="logou_btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					退出<i class="fa fa-angle-down"></i>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="/membercenter/toIndex.do">进入功能区</a></li>
+					<li><a href="/membermanage/loginout.jspa">安全退出</a></li>
+				</ul>
+				<script type="text/javascript">
+					$(function(){
+						$(".btn-group").hover(function(){
+							$(this).toggleClass("open");
+							$(".btn-group>.btn span").toggleClass("loginlogo");
+							$(".btn-group>.btn span").toggleClass("caret");
+						});
+						$("#logou_btn").click(function(){
+							//window.location.href = "/membermanage/loginout.jspa";
+						});
+
+
+						$("#searchicon,#searchicon2").click(function(){
+							$(".searchwraper").slideToggle('fast');
+						});
+						/*
+                        $("#keywords").focus(function(){
+                            $(this).css({"width":"180px","background":"#fff"});
+                            $(".searchBut").css({"color":"#004a99","background":"#fff"});
+                        });
+                        $("#searchForm").hover(function(){
+                            $(this).children("input").css({"width":"180px","background":"#fff"});
+                            $(".searchBut").css({"color":"#004a99","background":"#fff"});
+                        });
+                        $("#keywords").blur(function(){
+                            $(this).css({"width":"25px","background":"#004a99"});
+                            $(".searchBut").css({"color":"#fff","background":"#004a99"});
+                        });
+*/
+
+					});
+                    // 热门搜索
+                    function searchhot(keyword) {
+                        $('#keywords').val(keyword);
+                        $('#searchForm').submit();
+                    }
+				</script>
+	</div>
+		</div>
+	</div>
+	<div class="header-top">
+		<div class="container">
+			<div class="col-xs-6">
+				<div class="logo">
+					<a href="/"><img src="/template/ustb/img/logocc.png"></a>
+				</div>
+			</div>
+			<div class="col-xs-6 hidden-sm hidden-xs">
+			<div class="topbar2">
+				<ul class="topnav">
+					<li>
+						<a href="javascript:;" class="fa fa-search" id="searchicon2"></a>
+						<!--<form name="searchForm" id="searchForm" method="post" action="/front/search.jspa">
+							<input type="text" name="keywords" id="keywords" placeholder="搜索关键字..." />
+							<input type="hidden" name="siteId" value="202" />
+							<button type="submit"  class="searchBut"><i class="fa fa-search"></i></button>
+						</form>-->
+					</li>
+					<li>
+						<a href="http://www.ustb.edu.cn/" target="_blank" >学校首页</a>
+					</li>
+					<li>
+						<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)"class="a-2">加入收藏</a>
+					</li>
+					<li>
+						<a href="/front/advisory.jspa" target="_blank">在线咨询</a>
+					</li>
+					<li>
+						<div class="btn-login">
+							<button class="s2 v_login submit" id="login2"> 登录</button>
+							<div class="btn-group" id="logout2" style="display:none">
+								<button type="button" id="logou_btn2" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									退出 <i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li style="border-bottom: 1px solid #ddd;">
+										<a href="/membercenter/toIndex.do">
+											进入功能区
+										</a>
+									</li>
+									<li>
+										<a href="/membermanage/loginout.jspa">
+											安全退出
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom stick-h2">
+		<!--NAV START-->
+		<div class="container">
+<div class="nav menu-area">
+    <nav id="dropdown">
+        <ul id="mainNav" class="navigation clearfix">
+            <li class="first">
+                <a class="big" href="/">首页</a>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=694&parentId=694" id="big_694">企业服务
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=812&parentId=694">生源信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=815&parentId=694">招聘指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=841&parentId=694">联系我们</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=763&parentId=763" id="big_763">招聘信息
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=764&parentId=763">单位需求信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=765&parentId=763">实习信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=766&parentId=763">招聘会信息</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=710&parentId=710" id="big_710">新闻公告
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=712&parentId=710">通知公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=729&parentId=710">就业新闻</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=839&parentId=710">项目公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=846&parentId=710">每日发布</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=699&parentId=699" id="big_699">就业政策
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=704&parentId=699">学校文件</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=705&parentId=699">中央部委</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=731&parentId=699">地方政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=745&parentId=699">创业相关</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=701&parentId=701" id="big_701">基层就业
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=732&parentId=701">国家政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=733&parentId=701">学校政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=734&parentId=701">奖金申请</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=735&parentId=701">榜样力量</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=695&parentId=695" id="big_695">求职指导
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=746&parentId=695">生涯规划</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=843&parentId=695">职业测评</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=747&parentId=695">笔试面试</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=751&parentId=695">职业决策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=752&parentId=695">经典案例</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=703&parentId=703" id="big_703">手续办理
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=753&parentId=703">就业手续办理指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=814&parentId=703">常用表格下载</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=844&parentId=703">网签入口</a>
+                                </li>
+                                <li>
+                                    <a class="v_login" memberTypeId="86" returnUrl="/front/channel.jspa?channelId=845&parentId=703" href="/front/channel.jspa?channelId=845&parentId=703">户档迁移登记</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=700&parentId=700" id="big_700">职场生涯
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=759&parentId=700">法律维权</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=760&parentId=700">职场新人</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=761&parentId=700">同事相处</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=762&parentId=700">人事制度</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=816&parentId=816" id="big_816">下属社团
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=817&parentId=816">职业发展协会</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=818&parentId=816">BOE俱乐部</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=842&parentId=842" id="big_842">一帮一专区
+                </a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
+	
+	   
+    
+    
+
+
+
+		</div>
+		<!--NAV END-->
+	</div>
+</header>
+<!-- mobile-menu-area start -->
+<div class="mobile-menu-area">
+	<div class="container">
+		<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+<div class="nav menu-area">
+    <nav id="dropdown">
+        <ul id="mainNav" class="navigation clearfix">
+            <li class="first">
+                <a class="big" href="/">首页</a>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=694&parentId=694" id="big_694">企业服务
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=812&parentId=694">生源信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=815&parentId=694">招聘指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=841&parentId=694">联系我们</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=763&parentId=763" id="big_763">招聘信息
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=764&parentId=763">单位需求信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=765&parentId=763">实习信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=766&parentId=763">招聘会信息</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=710&parentId=710" id="big_710">新闻公告
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=712&parentId=710">通知公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=729&parentId=710">就业新闻</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=839&parentId=710">项目公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=846&parentId=710">每日发布</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=699&parentId=699" id="big_699">就业政策
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=704&parentId=699">学校文件</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=705&parentId=699">中央部委</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=731&parentId=699">地方政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=745&parentId=699">创业相关</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=701&parentId=701" id="big_701">基层就业
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=732&parentId=701">国家政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=733&parentId=701">学校政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=734&parentId=701">奖金申请</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=735&parentId=701">榜样力量</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=695&parentId=695" id="big_695">求职指导
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=746&parentId=695">生涯规划</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=843&parentId=695">职业测评</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=747&parentId=695">笔试面试</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=751&parentId=695">职业决策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=752&parentId=695">经典案例</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=703&parentId=703" id="big_703">手续办理
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=753&parentId=703">就业手续办理指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=814&parentId=703">常用表格下载</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=844&parentId=703">网签入口</a>
+                                </li>
+                                <li>
+                                    <a class="v_login" memberTypeId="86" returnUrl="/front/channel.jspa?channelId=845&parentId=703" href="/front/channel.jspa?channelId=845&parentId=703">户档迁移登记</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=700&parentId=700" id="big_700">职场生涯
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=759&parentId=700">法律维权</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=760&parentId=700">职场新人</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=761&parentId=700">同事相处</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=762&parentId=700">人事制度</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=816&parentId=816" id="big_816">下属社团
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=817&parentId=816">职业发展协会</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=818&parentId=816">BOE俱乐部</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=842&parentId=842" id="big_842">一帮一专区
+                </a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
+	
+	   
+    
+    
+
+
+
+		</div>
+	</div>
+</div>
+<script type="text/javascript" language="javascript">
+    // 热门搜索
+    function searchhot(keyword) {
+        $('#keywords').val(keyword);
+        $('#searchForm').submit();
+    }
+
+    //加入收藏
+    function AddFavorite(sURL, sTitle) {
+        sURL = encodeURI(sURL);
+        try{
+            window.external.addFavorite(sURL, sTitle);
+        }catch(e) {
+            try{
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+            }
+        }
+    }
+</script>	<div class="main">
+		<div class="container">
+			<div class="row content-page">
+				<div class="col-xs-12">
+					<div class=" page-bar">
+						<div class="pull-left clearfix">
+							<h5 class="page-detail">
+								当前位置：
+								<a href="">首页</a>
+								>
+							<a href="/front/channel.jspa?channelId=763&parentId=764">招聘信息</a>
+								>
+							<a href="/front/channel.jspa?channelId=764&parentId=764">单位需求信息<!--&gt;--></a>
+							</h5>
+						</div>
+					</div>
+					<div class="content_title_box">
+						<h3 class="content_title common-head">新疆维吾尔自治区农村信用社联合社</h3>
+						<div class="content_time">
+							有效期：<span>2021-10-12</span>
+						发布日期：<span>2021-09-20</span>
+						浏览次数：<span id="clickCount">10</span>
+						<span class="qrcode">
+							<span class="">
+								二维码
+								<i class="fa fa-qrcode"></i>
+								<i class="fa fa-caret-down"></i>
+							</span>
+							<div id="qrCode" style="display: none">
+								<img alt="扫描分享" src="https://job.ustb.edu.cn/front/qrCode.jspa?method=zpxx&param1=764&param2=113491"/>
+								<p style="margin-top:-25px;">扫一扫分享本页</p>
+							</div>
+						</span>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 maintext">
+					<div class="common-box">
+
+						<div class="corp-detail-box">
+							<div class="job_c q">
+								<p class="b_bottom">
+									<b>单位所在地：</b>
+新疆维吾尔自治区								</p>
+								<p class="b_bottom">
+									<b>招聘说明：</b>
+特别提示：同学们在应聘时，如遇到用人单位&ldquo;收取押金/扣押证件/收取任何费用&rdquo;以及提出不正当面试要求等不规范招聘的情况，请立刻中止应聘，并将该情况告知就业指导中心（62332010）或学院就业专任教师。
+第三方机构未经我校允许擅自转载或变更信息未能及时更新及提醒毕业生，导致相关后果的，学校不承担相关责任。								</p>
+								<!-- <a class="v_login" href="/front/zpxx.jspa?channelId=764&tid=113491" returnUrl="/front/zpxx.jspa?channelId=764&tid=113491" memberTypeId="86">登录</a>后查看单位详细信息 -->
+								<p class="b_bottom">
+									<b style="float: left;">学校推荐意见：</b>
+										<a class="v_login" href="/front/zpxx.jspa?&tid=113491" returnUrl="/front/zpxx.jspa?tid=113491" memberTypeId="86">登录</a>后可见
+								</p>
+							</div>
+
+								<p><b>单位简介</b></p>
+								<div class="content">
+					            		<p style="margin: 0 0 0;text-align: center;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><span style="font-family: 方正小标宋简体;font-size: 24px">新疆农村信用社（农商银行）</span></p><p style="margin: 0 0 0;text-align: center;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><span style="font-family: 方正小标宋简体;font-size: 24px">202</span><span style="font-family: 方正小标宋简体;font-size: 24px">1</span><span style="font-family: 方正小标宋简体;font-size: 24px">年</span><span style="font-family: 方正小标宋简体;font-size: 24px">秋</span><span style="font-family: 方正小标宋简体;font-size: 24px">季</span><span style="font-family: 方正小标宋简体;font-size: 24px">招录公告</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">有着</span>60多年的发展历程，作为地方金融主力军深深地扎根在新疆希望的田野上，带着浓浓的地方金融气息从零到整、从小到大，从弱到强孜孜不倦地支持地方金融发展</span><span style="font-family: 仿宋_GB2312;font-size: 21px">。</span><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">面对新经济、新金融、新风险、新科技、新挑战，新疆农村信用社（农商银行）按照党中央、国务院深化农村信用社改革发展的决策部署和新疆自治区党委、人民政府的有关要求，坚持</span>“以客户为中心、以深耕本地为基础、以高质量发展为目标”的经营理念，围绕服务三农、小微的“普惠银行”，形成系统合力的“星火银行”，业内领先的“标杆银行”，老百姓身边的“零售银行，方便快捷的“指尖银行”五个银行新战略，全面推进新疆农村信用社（农商银行）高质量发展，全力支持自治区经济社会发展。</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">通过近几年的发展，新疆农村信用社（农商银行）已发展成为自治区服务</span>“三农”、服务中小微、服务县域经济的主力军，金融精准扶贫的主办行，贯彻落实乡村振兴战略的排头兵，县域经济金融稳定的压舱石。</span><span style="font-family: 仿宋_GB2312;font-size: 21px">&nbsp;</span><span style="font-family: 仿宋_GB2312;font-size: 21px">&nbsp;&nbsp;</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">秉承</span>“文化育人、事业留人、制度选人”的理念，新疆农村信用社（农商银行）一直为青年学生的发展成长创造良好环境，为新疆农信系统培养了一大批的管理骨干和业务骨干。为</span><span style="font-family: 仿宋_GB2312;font-size: 21px">持续推动新疆农村信用社（农商银行）高质量发展</span><span style="font-family: 仿宋_GB2312;font-size: 21px">，加强员工队伍建设，现面向全国招聘应、历届普通高等院校毕业生具体如下：</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><strong><span style="font-family: 黑体;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family: 黑体;font-size: 21px">一、</span></strong><strong><span style="font-family: 黑体;font-size: 21px">招录岗位</span></strong></p><table cellspacing="0" width="618"><tbody><tr style="height: 32px" class="firstRow"><td width="81" valign="center" style="padding: 1px; border-width: 2px 1px 1px 2px; border-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">岗位类别</span></strong></p></td><td width="154" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 2px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">工作职责</span></strong></p></td><td width="69" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 2px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">名额</span></strong></p></td><td width="110" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 2px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">学历要求</span></strong></p></td><td width="113" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 2px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">专业要求</span></strong></p></td><td width="91" valign="center" style="padding: 1px; border-left: none; border-right-width: 2px; border-right-color: rgb(0, 0, 0); border-top-width: 2px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><strong><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 13px">工作地点</span></strong></p></td></tr><tr style="height: 117px"><td width="81" valign="center" style="padding: 1px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">综合柜员岗</span></p></td><td width="154" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">从事银行柜台结算操作，为客户提供柜面服务，开展相关营销转介。</span></p></td><td width="69" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">405</span></p></td><td width="110" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">具体见附件</span></p></td><td width="113" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">专业不限</span></p></td><td width="91" valign="center" style="padding: 1px; border-left: none; border-right-width: 2px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">定向</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">新疆各县市</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">行社，详见附表</span></p></td></tr><tr style="height: 167px"><td width="81" valign="center" style="padding: 1px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">管理</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">培训</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">生</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">岗</span></p></td><td width="154" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">业务管理、团队管理或从事银行产品营销、市场拓展，为客户提供综合金融服务。</span></p></td><td width="69" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">71</span></p></td><td width="110" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">2022年应届</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">本科(一本）及以上</span></p></td><td width="113" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">经济学类、金融学类、法学类、计算机类、工商管理类、新闻传播学类、理学类、工学类</span></p></td><td width="91" valign="center" style="padding: 1px; border-left: none; border-right-width: 2px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">定向</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">新疆各县市</span><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">行社，详见附表</span></p></td></tr><tr style="height: 57px"><td width="81" valign="center" style="padding: 1px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">信息技术岗</span></p></td><td width="154" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">从事软件开发、数据分析、网络及科技信息专业系统运行维护等。</span></p></td><td width="69" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">35</span></p></td><td width="110" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">本科及以上</span></p></td><td width="113" valign="center" style="padding: 1px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">计算机相关专业</span></p></td><td width="91" valign="center" style="padding: 1px; border-left: none; border-right-width: 2px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="margin: 0 0 0;text-align: center;font-size: 14px;vertical-align: middle;line-height: 37px"><span style="font-family: 微软雅黑;color: rgb(51, 51, 51);font-size: 12px">乌鲁木齐</span></p></td></tr></tbody></table><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><strong><span style="font-family: 黑体;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family: 黑体;font-size: 21px">二、招录条件</span></strong></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">（一）要求普通高等院校</span>20</span><span style="font-family: 仿宋_GB2312;font-size: 21px">2</span><span style="font-family: 仿宋_GB2312;font-size: 21px">2</span><span style="font-family: 仿宋_GB2312;font-size: 21px">年应届本科及以上毕业生，</span><span style="font-family: 仿宋_GB2312;font-size: 21px">202</span><span style="font-family: 仿宋_GB2312;font-size: 21px">2</span><span style="font-family: 仿宋_GB2312;font-size: 21px">年</span><span style="font-family: 仿宋_GB2312;font-size: 21px">7</span><span style="font-family: 仿宋_GB2312;font-size: 21px">月</span><span style="font-family: 仿宋_GB2312;font-size: 21px">3</span><span style="font-family: 仿宋_GB2312;font-size: 21px">1日前毕业并获得国家认可的就业报到证、毕业证和学位证；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（二）部分行社综合柜员按照岗位适岗条件，可招录大学专科及以上毕业生；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">（三）民考民学生需取得</span>MHK四级乙等以上；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">（四）诚实守信，相貌端正，无不良历史记录</span>;</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（五）有较强的责任心、学习能力和良好的团队协作精神，有面对挑战，承担工作压力的能力；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（六）报考综合柜员岗和管理培训生岗的硕士研究生及以上学历毕业生免笔试直接面试；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（七）符合报考行社履职回避要求。</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 42px;line-height: 37px"><strong><span style="font-family: 黑体;font-size: 21px">三、招聘流程及用工方式</span></strong></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（一）经报名、资格审查、缴费、线上笔试、面试、体检等环节，择优录用；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（二）资格审核工作贯穿招聘的全过程，报考人员应对本人所填写报名信息及所提供报名材料的完整性、真实性和准确性负责；凡发现报考人员与拟招聘岗位所要求的资格条件不符、提供虚假不实报名信息材料或伪造、变造有关证件、信息、材料的，一经发现，取消报考资格，已经录用的取消录用资格，已经签订就业协议、劳动合同的解除就业协议、劳动合同并由个人承担一切后果；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（三）拟招录人员，持毕业证书后与应聘行社签订正式劳动合同。</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 42px;line-height: 37px"><span style="font-family: 黑体;font-size: 21px">四、报名方式</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">新疆农村信用社（</span><span style="font-family: 仿宋_GB2312;font-size: 21px">农商银行）本次招聘全权委托</span><span style="font-family: 仿宋_GB2312;font-size: 21px">智联招聘公司进行</span><span style="font-family: 仿宋_GB2312;font-size: 21px">，唯一报名端口为：</span><a href="http://xjncxys.zsjcyxm.com/"><span style="text-decoration:underline;"><span style="font-family: 仿宋_GB2312;color: rgb(0, 0, 255);font-size: 21px">http://xjncxys.zsjcyxm.com/</span></span></a><span style="font-family: 仿宋_GB2312;font-size: 21px">。不接收邮箱投递及纸质简历。</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 42px;line-height: 37px"><span style="font-family: 黑体;font-size: 21px">五、报名期限</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">自即日起至</span>202</span><span style="font-family: 仿宋_GB2312;font-size: 21px">1</span><span style="font-family: 仿宋_GB2312;font-size: 21px">年</span><span style="font-family: 仿宋_GB2312;font-size: 21px">10</span><span style="font-family: 仿宋_GB2312;font-size: 21px">月</span><span style="font-family: 仿宋_GB2312;font-size: 21px">12</span><span style="font-family: 仿宋_GB2312;font-size: 21px"><span style="font-family:仿宋_GB2312">日</span>24时。</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 42px;line-height: 37px"><span style="font-family: 黑体;font-size: 21px">六、其他事项</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（一）本次招聘公告在</span><span style="font-family: 仿宋_GB2312;font-size: 21px">新疆农信</span><span style="font-family: 仿宋_GB2312;font-size: 21px">微信公众号、</span><span style="font-family: 仿宋_GB2312;font-size: 21px">智联招聘</span><span style="font-family: 仿宋_GB2312;font-size: 21px">网站</span><span style="font-family: 仿宋_GB2312;font-size: 21px">、高校就业网</span><span style="font-family: 仿宋_GB2312;font-size: 21px">发布，无指定考试辅导用书，未委托任何机构举办考试辅导培训班，请广大应聘者提高警惕，谨防受骗；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（二）应聘者务必保持手机及电子邮箱等联系方式畅通并随时关注；</span></p><p style="margin: 0 0 0;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;text-indent: 36px;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">（三）新疆农村信用社（农商银行）对本次招</span><span style="font-family: 仿宋_GB2312;font-size: 21px">录</span><span style="font-family: 仿宋_GB2312;font-size: 21px">享有最终解释权。</span></p><p style="margin: 0 0 0 106px;text-align: justify;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><span style="font-family: 仿宋_GB2312;font-size: 21px">&nbsp;</span></p><p style="margin: 0 0 0;text-align: center;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><strong><span style="font-family: 仿宋_GB2312;letter-spacing: -1px;font-size: 21px">&nbsp;</span></strong></p><p style="margin: 0 0 0;text-align: center;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><strong><span style="font-family: 仿宋_GB2312;letter-spacing: -1px;font-size: 21px">&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family: 仿宋_GB2312;letter-spacing: -1px;font-size: 21px">网申二维码</span></strong></p><p style="margin: 0 0 0;text-align: center;font-family: &#39;Times New Roman&#39;;font-size: 14px;white-space: normal;line-height: 37px"><img src="/ueditor/jsp/upload1/20210919/48651631985765405.png" style="width: 236px; height: 228px;"/><strong><span style="font-family: 仿宋_GB2312;letter-spacing: -1px;font-size: 21px">&nbsp;</span></strong></p><p><br/></p>
+					            </div>
+
+								<div class="corp-detail-text clearfix">
+									<!---->
+									<ul id="">
+									</ul>
+								</div>
+							</div>
+					</div><br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="nav-quick">
+	<div class="container">
+		<div class=" main-nav">
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/channel.jspa?channelId=769&parentId=772" target="_blank">
+					<img src="/template/ustb/img/link/shouxu-blank.png">
+					<h4>就业手续</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/advisory.jspa" target="_blank">
+					<img src="/template/ustb/img/link/zixun-blank.png">
+					<h4>在线咨询</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/submitform/submitform.jspa?keyCode=5adcd41368006032f0f8dfe55a628b6f" target="_blank">
+					<img src="/template/ustb/img/link/wenjuan-blank.png">
+					<h4>调查问卷</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/channel.jspa?channelId=841&parentId=694" target="_blank">
+					<img src="/template/ustb/img/link/lianxi-blank.png"/>
+					<h4>联系方式</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Footer-->
+<footer class="footer-bg padding-top pb-20">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">校内链接</h4>
+					<li>
+						<a href="http://cy.ustb.edu.cn/" target="_blank">北京科技大学创新创业中心 </a>
+					</li>
+					<li>
+						<a href="http://www.ustb.edu.cn" target="_blank">学校首页 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">相关政府部门</h4>
+					<li>
+						<a href="http://www.mohrss.gov.cn/" target="_blank">国家人力资源与社会保障部 </a>
+					</li>
+					<li>
+						<a href="http://www.ncss.org.cn/" target="_blank">全国大学生就业公共服务立体化平台 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">高校就业信息网</h4>
+					<li>
+						<a href="http://career.buaa.edu.cn/" target="_blank">北航就业信息网 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">各类人才招聘网站</h4>
+					<li>
+						<a href="http://www.newjobs.com.cn/" target="_blank">中国国家人才网 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4 footer_panel" style="text-align: right !important;display: flex;justify-content: flex-end;margin-top: 10px">
+				<!--<img src="/template/ustb/img/logod.png" style="margin-bottom:20px;" />
+				<div>
+					<a href="https://weibo.com/ustbjiuye?is_all=1" target="_blank">
+						<i class="fa fa-weibo"></i>
+					</a>
+					<a href="http://page.renren.com/601799408/channel-251527" target="_blank">
+						<i class="fa fa-renren"></i>
+					</a>
+					<i class="wechat fa fa-wechat"></i>
+					<div id="wechats" style="display: none">
+						<h4 class="heading">微信公众号</h4>
+						<div class="hover-right"></div>
+						<img src="/template/ustb/img/jobcenter.png" />
+					</div>
+				</div>-->
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/sy.png" />
+					<span>北科生涯</span>
+				</div>
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/fwh.png" />
+					<span>北科服务号</span>
+				</div>
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/dyh.png" />
+					<span>北科订阅号</span>
+				</div>
+			</div>
+			<style>
+				.wx-box {margin-left: 10px;}
+				.wx-box img {width: 80px}
+				.wx-box span {display: block; text-align: center;font-size: 12px;margin-top: 5px;}
+			</style>
+		</div>
+	</div>
+	<br><br>
+	<div class="copyright">
+		<div class="container">
+			<div class="text-center">
+				<p class="visible-xs">版权所有 © 2014-2018<br> 北京科技大学学生就业指导中心，并保留所有权利</p>
+				<p class="hidden-xs">版权所有 © 2014-2018 北京科技大学学生就业指导中心，并保留所有权利</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--FOOTER ends-->
+
+<!--[if lt IE 9]>
+<!--<script src="/assets/global/plugins/respond.min.js"></script>-->
+<!--[endif]-->
+<script src="/template/ustb/js/edu/plugins.js"></script>
+<script src="/template/ustb/js/edu/main.js"></script>
+<script src="/assets/global/plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/assets/frontend/layout/scripts/back-to-top.js" type="text/javascript"></script>
+
+<script src="/template/ustb/js/show.js"></script>
+<!--artDialog6提示框  -->
+<link href="/njs/artDialog6/css/ui-dialog.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/njs/artDialog6/dist/dialog-min.js"></script>
+<script type="text/javascript" src="/njs/artDialog6/dist/dialog-plus-min.js"></script>
+<script>
+    var session_memberTypeId = '';
+    $(function(){
+        //验证是否已经登录，未登录弹出登录窗口
+        $('.v_login').click(function() {
+            var returnUrl = $(this).attr('returnUrl');
+            var memberTypeId = $(this).attr('memberTypeId');
+            if(session_memberTypeId == ''){
+                if(typeof(returnUrl) != 'undefined'){
+                    returnUrl = returnUrl.replace("" , "");
+                    var target = "/membermanage/toPopLogin.do?memberTypeId="+memberTypeId+"&returnUrl="+encodeURIComponent(returnUrl);
+                }else{
+                    var target = "/membermanage/toPopLogin.do?callback=changeButton";
+                }
+				var d = dialog({
+					title: ' 用户登录',
+					width:300,
+					height:350,
+					padding:5,
+					url: target,
+					fixed: true,
+					//quickClose: true,
+					onclose: function () {
+						if (this.returnValue) {
+							//改变按钮状态
+							//changeButton();
+							window.location.href = "/membercenter/toIndex.do";
+						}
+					}
+				});
+				d.showModal();
+				return false;
+            }else{
+                if(typeof(memberTypeId) != 'undefined' && memberTypeId != session_memberTypeId){
+                    if(memberTypeId == '86'){
+                        alert('此功能需要学生账号登录');
+                    }
+                    if(memberTypeId == '87'){
+                        alert('此功能需要用人单位账号登录');
+                    }
+                    if(memberTypeId == '88'){
+                        alert('此功能需要院系账号登录');
+                    }
+                    return false;
+                }else{
+                    //alert('您已登录');
+                }
+                return true;
+            }
+        });
+    });
+
+    function changeButton(){
+        //	var list = art.dialog.list; for (var i in list) { list[i].close(); };
+        $('#login,#login2').hide();
+        $('#logout,#logout2').show();
+        //alert(111)
+        parent.window.location.href = '/membercenter/toIndex.do';
+    }
+
+    //检测登录
+    $.getJSON('/membermanage/checkSession.jspa', {}, function(data) {
+        if(data.msg == 'Y'){
+            var vo = jQuery.parseJSON(data.vo);
+            //alert(vo.memberTypeId);
+            if(vo.memberTypeId == 86){
+            }
+			/*if(vo.memberTypeId == 87){
+				 //alert(vo.name);
+				 $(".name").text(vo.name);
+				 $('#empForm').hide().siblings().show();
+			 }
+			 if(vo.memberTypeId == 88){
+				 //alert(vo.name);
+				 $(".name").text(vo.vo);
+				 $('#collegeForm').hide().siblings().show();
+			 } */
+            $('#login,#login2').hide();
+            $('#logout,#logout2').show();
+        }
+    });
+
+    //收藏操作
+    function studentFavourAdd (url, name, type, contentId) {
+
+        $.post('/front/addFavour.jspa',
+            {url:url, name:name, type:type, contentId:contentId},
+            function(data) {
+                if (data.msg == 'N') {
+                    alert('未登录');
+                } else if (data.msg == 'E') {//系统异常
+                    alert('未登录或不是学生用户登录');
+                } else if (data.msg == 'Y') {
+                    alert('收藏成功!');
+                } else if (data.msg == 'C') {
+                    alert('您已收藏过了！');
+                }
+                else {
+                    alert('未知错误');
+                }
+            },'json');
+    }
+
+
+    $(".wechat").hover(function(){
+        $("#wechats").css("display","block");
+    },function(){
+        $("#wechats").css("display","none");
+    });
+
+    $(".qrcode").hover(function(){
+        $("#qrCode").css("display","block");
+    },function(){
+        $("#qrCode").css("display","none");
+    });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?07164994ec702ed090faab5d501c2a78";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+	<script type="text/javascript">
+	        ///计数操作.
+	        $(function(){
+	            $.post('/front/clickCount.jspa',{
+	            	contentId:113491,
+	            	key: 'tid',
+	            	clickColumn: 'click',
+	            	tableName: 'career_zpxx'
+	            },
+	            function(data){
+	                eval(data);
+	            });
+	        });
+
+	        function studentFavour() {
+	        	studentFavourAdd ("/front/zpxx.jspa?tid=113491", "新疆维吾尔自治区农村信用社联合社", "2", "113491");
+	        }
+	</script>
+
+
+</body>
+</html>

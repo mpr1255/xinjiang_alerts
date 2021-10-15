@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>全球法规网-中国商务法规</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="全球法规,法律法规,中国商务法规,中国法规">
+    <meta name="description" content="《全球法规网》是商务部公共商务信息服务项下的重要组成部分之一。法规网建立以来，一直秉承以公众服务为导向，服务中小企业的原则，为广大企业和个人用户在不断变化和发展的外部经贸环境下，提供持续的，中立的，可靠的法律、法规、中外条约、国际条约和国际贸易规则信息参考。经过多年建设和积累，《全球法规网》已收录全球一百多个国家/ 地区的法律法规及案例等相关法律信息，范围覆盖上至宪法，下至个案判例的层次分明，多种标准分类的综合性法律信息参考信息平台。">
+    <meta name="author" content="hl,haolei@ec.com.cn">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+    <!--[if IE]>
+    	<script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="laws">
+	<header class="header">
+		<nav class="nav blank clearfix">
+	<!--div class="u-logo1"><img src="img/logo1.png" alt=""></div-->
+	
+	<ul class="nav01_ul">
+		<li>
+			<a href="/claw/index.shtml">中国法规</a>|
+			<ul class="nav02_ul">
+				<li><a href="/claw/index.shtml">商务法规</a></li>
+				<li><a href="/pact/index.shtml">中外条约</a></li>
+			</ul>
+		</li>
+		<li><a href="/page/list/nations.html">各国法规</a>|
+			<ul class="nav02_ul">
+				<li><a href="/page/list/nations.html">境外法规</a></li>
+				<li><a href="/page/list/organizations.html">国际条约</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.mofcom.gov.cn/article/ckzn/index.shtml">出口指南</a>|
+		</li>
+		<li><a href="/tsfy/index.shtml">图说方圆</a></li>
+		<li class="last"><a href="/">首页</a></li>
+	</ul>
+</nav>
+
+<!-- Matomo -->
+<script type="text/javascript">
+//If used is logged-in then call 'setUserId'
+//$userId variable must be set by the server when the user has successfully authenticated to your app.
+var _paq = window._paq || [];
+	
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  _paq.push(['enableHeartBeatTimer']);
+  (function() { 
+    var u="https://analysis.mofcom.gov.cn/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '137']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+	</header>
+	
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	setReviseToolBar();
+	setAssociateToolbar();
+});
+function setReviseToolBar(){
+	$.ajax({
+		url:"/nflaw/front/www/claw/reviseCount?id=17481",
+		type:"get",
+		success:function(result){
+			if(!!result&&result>0){
+				$("#reviseToolbar").show();
+			}
+		}
+	});
+}
+
+function setAssociateToolbar(){
+	$.ajax({
+		url:"/nflaw/front/www/claw/associateCount?id=17481",
+		type:"get",
+		success:function(result){
+			if(!!result&&result>0){
+				$("#associateToolbar").show();
+			}
+		}
+	});
+}
+function doSubmitReviseForm(){
+	$("#clawForm").attr("action","/claw/clawRevise.shtml");
+	$("#clawForm").submit();
+}
+function doSubmitAssociateForm(){
+	$("#clawForm").attr("action","/claw/clawAssociate.shtml");
+	$("#clawForm").submit();
+}
+function doSubmitKeySearch(){
+	if($("#keyword").val()==''){
+		alert("请输入关键字！");
+		$("#keyword").focus();
+		return false;
+	}else if($("#keyword").val().length>100){
+		alert("关键字 不能超过100位字符！");
+		$("#keyword").focus();
+		return false;
+	}else{
+		$("#keySearchForm").submit();
+	}
+}
+</script>
+<section class="search blank">
+	<div class="mt20 mb30 clearfix">
+		<div class="logo fl">
+			<img src="img/logo.png" alt="" />
+		</div>
+		<div class="search_box fr">
+			<div class="clearfix">
+				<form id="keySearchForm" name="keySearchForm" method="get" action="/claw/keySearchList.shtml">
+					<span class="btn_search_show fl">中国商务法规</span>
+					<input class="txt_search fl" type="text" name="keyword" id="keyword">
+					<input class="btn_search fl" type="button" value="搜索" onclick="doSubmitKeySearch()">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<nav class="navMain blank">
+	<a class="a1" href="http://policy.mofcom.gov.cn/">首页</a>&gt;<a href="/claw/index.shtml"><i>中国商务法规</i></a>&gt;<span class="s1">法规详情</span>
+</nav>
+<section class="main blank">
+	<div class="content mt18 posr">
+		<div class="conBox_01">
+			<h2 class="tit_08">新疆维吾尔自治区人大常委会关于修改《新疆维吾尔自治区地下水资源管理条例》的决定（2004）</h2>
+			<section class="con">
+				<h3 class="tit_09">
+					【信息来源：<em>
+					
+					   
+					   
+					   	北大法宝
+					   
+					
+					</em>】
+				</h3>
+				<div class="article">
+					<div class="law_bt0" style="text-align:justify;"><p style="text-align:center;">新疆维吾尔自治区人大常委会关于修改《新疆维吾尔自治区地下水资源管理条例》的决定</p><p><br /></p><p style="text-align:center;">（2004年11月26日新疆维吾尔自治区第十届人民代表大会常务委员会第十三次会议通过）</p><p><br /></p><p>　　新疆维吾尔自治区第十届人民代表大会常务委员会第十三次会议经过审议，决定对《新疆维吾尔自治区地下水资源管理条例》作如下修改：</p><p><br /></p><p>　　（一）删除第十二条第三款，即：“利用截潜流等方式取用地下水的，须经当地人民政府水行政主管部门审查批准。”</p><p><br /></p><p>　　（二）删除第十二条第四款，即：“当地人民政府水行政主管部门应当在15日内做出是否核准或批准的决定。”</p><p><br /></p><p>　　（三）将第二十二条第一款修改为：“违反本条例规定，擅自凿井、修建地下水取水工程的，由县级以上人民政府水行政主管部门责令取水单位停止违法行为，处1000元以上1万元以下罚款，造成他人损失的，应当承担赔偿责任。”</p><p><br /></p><p>　　原条例根据本决定作相应修改，重新公布。</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><br /></div>
+				</div>
+			</section>
+			<div id="toolbar_box" class="posa layer">
+				<ul class="toolbarList">
+					<li class="cur"><a>法<br />规<br />正<br />文</a></li>
+					<li><a href="/claw/clawInfo.shtml?id=17481">基<br />本<br />信<br />息</a></li>
+					<li id="reviseToolbar" style="display:none;"><a href="javascript:doSubmitReviseForm();">修<br />订<br />对<br />照</a></li>
+					<li id="associateToolbar" style="display:none;"><a href="javascript:doSubmitAssociateForm();">相<br />关<br />法<br />规</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<form action="" method="get" id="clawForm">
+	<input type="hidden" name="id" value="17481"/>
+	<input type="hidden" name="title" value="新疆维吾尔自治区人大常委会关于修改《新疆维吾尔自治区地下水资源管理条例》的决定（2004）"/>
+	<input type="hidden" name="clawUrl" value="http://images.policy.mofcom.gov.cn/claw/201610/lar_60066.doc"/>
+</form>
+<div id="global-toolbar">
+  <div class="toolbar-wrap wrap">
+	<div class="toolbar">
+	  <div class="toolbar-tabs tab">
+		<!-- div class="toolbar-tab tbar-tab-word" onclick=""><i class="tab-ico"></i><em class="tab-text">修订对照<br />下载</em></div -->
+		
+			<div class="toolbar-tab tbar-tab-word" onclick="window.open('http://images.policy.mofcom.gov.cn/claw/201610/lar_60066.doc')"><i class="tab-ico"></i><em class="tab-text">WORD<br />版本下载</em></div>
+	 	
+	  </div>
+	  <div class="toolbar-footer">
+		<div class="toolbar-tab tbar-tab-top">
+			<a href="#"><i class="tab-ico"></i><em class="footer-tab-text">顶部</em></a>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+	<footer class="footer mt30">
+				<section class="blank clearfix">
+			<dl class="nav_03 clearfix">
+				<dt>法规导览:</dt>
+				<dd><a href="/claw/index.shtml" target="_blank">中国法规</a></dd>
+				<dd><a href="/page/list/nations.html" target="_blank">境外法规</a></dd>
+				<dd><a href="/pact/index.shtml" target="_blank">中外条约</a></dd>
+				<dd><a href="/page/list/organizations.html" target="_blank">国际条约</a></dd>
+				<dd><a href="/tsfy/index.htm" target="_blank">图说方圆</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/index.shtml" target="_blank">出口指南</a></dd>
+				<dd><a href="/claw/policyList.shtml" target="_blank">政策解读</a></dd>
+				<dd><a href="/claw/opinionList.shtml" target="_blank">征求意见</a></dd>
+			</dl>
+			<dl class="nav_03 clearfix">
+				<dt>出口商品技术指南:</dt>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/sptx.shtml" target="_blank">食品土畜</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/fzfz.shtml" target="_blank">纺织服装</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/qggy.shtml" target="_blank">轻工工艺</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/wkhg.shtml" target="_blank">五矿化工</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/jxdz.shtml" target="_blank">机械电子</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/ylbjp.shtml" target="_blank">医疗保健</a></dd>
+				<dd><a href="http://www.mofcom.gov.cn/article/ckzn/zh.shtml" target="_blank">综合</a></dd>
+			</dl>
+			<dl class="nav_03 cur clearfix">
+				<dt>联系我们:</dt>
+				<dd>客户服务：86-10-67801039</dd>
+				<dd>邮箱：global-law@ec.com.cn</dd>
+				<dd>网站标识码bm22000001</dd>
+				<dd><script id="_jiucuo_" sitecode='bm22000001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script></a>
+                <a href="//bszs.conac.cn/sitename?method=show&id=0726B28348831856E053012819AC9312" target="_blank" onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;"><img src="http://dcs.conac.cn/image/red.png"></a></dd>
+			</dl>
+			<dl class="nav_03 cur clearfix">
+				<dt>关于我们:</dt>
+				<dd>主办单位：中华人民共和国商务部</dd>
+				<dd>网站管理：商务部电子商务和信息化司</dd>
+				<dd>技术支持：中国国际电子商务中心</dd>
+				<dd><a href="https://beian.miit.gov.cn/" target="_blank"  onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;">京ICP备05004093号-1</a><br><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700091" target="_blank"  onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;"><img src="/law/img/footer-img03.png">京公网安备11040102700091号</a></dd>
+			</dl>
+		</section>
+	</footer>
+	<script type="text/javascript">
+		/** scroll 浮层
+		$(window).scroll(function(){
+			var ht = $(this).scrollTop();
+			if(ht>210){
+				boxLeft();
+				$(".conBox_01,#toolbar_box").addClass("cur");
+			}else{
+				$(".conBox_01,#toolbar_box").removeClass("cur").removeAttr("style");
+			}
+		});***/
+	</script>
+</body>
+</html>

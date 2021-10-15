@@ -1,0 +1,783 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>天涯共此时&mdash;&mdash;新疆是个好地方</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta HTTP-EQUIV="expires" CONTENT="0"> 
+<meta name="keywords" content="中国文化网">
+<meta name="description" content="中国文化网">
+<link href="/portal/site/wenhua/css/common.css" rel="stylesheet" rev="stylesheet" />
+<link href="/portal/site/wenhua/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" rev="stylesheet"/>
+<link href="/portal/site/wenhua/css/index.css" rel="stylesheet" rev="stylesheet" />
+<link href="/portal/site/wenhua/css/focus1.css" rel="stylesheet" rev="stylesheet" />
+<script type="text/javascript" src="/portal/site/wenhua/js/jquery.1.7.2.min.js"></script>
+<script type="text/javascript" src="/portal/site/wenhua/js/koala.min.1.5.js"></script>
+<script type='text/javascript' src='/portal/dwr/util.js'></script>
+<script type='text/javascript' src='/portal/dwr/engine.js'></script>
+<script type='text/javascript' src='/portal/dwr/interface/StringUtil.js'></script> 
+<script type='text/javascript' src='/portal/dwr/interface/SessionUtil.js'></script> 
+<script type='text/javascript' src='/portal/dwr/interface/CMSUtil.js'></script>
+
+
+<link href="/site/wenhua/js/videojsplayer/videojs/video-js.css" rel="stylesheet">
+<script src='/site/wenhua/js/videojsplayer/videojs/video.js'></script>
+<script src="/site/wenhua/js/videojsplayer/videojs/videojs-contrib-hls.min.js"></script>
+
+<script language="javascript">
+
+   var infoRowId = "559ac6a246b8443886ffca82629a0115";//信息页ID
+   var ua = window.navigator.userAgent.toLowerCase();
+   //alert(ua);
+   if(ua.match(/MicroMessenger/i) == 'micromessenger')
+   {
+	  // alert('微信');
+	   //跳转到微信链接
+	   window.location.href="http://cn.chinaculture.org/portal/site/wenhua/mobile2/mobileInformation_share.jsp?rowId="+infoRowId+"&isFromSY=N";//跳转
+	   //return;
+   }
+   
+
+
+    var curPage ="1";//当前分页
+		function showPage(pageId)
+		{
+			for(i=0;i<1;i++)
+			{
+				var tmp = i+1;
+		    	var elementName = "infContent"+tmp;
+			//alert(elementName);
+			//alert( document.getElementById(elementName).style.display);
+				document.getElementById(elementName).style.display="none";
+				document.getElementById("page"+tmp).innerHTML = "<a     href=\"#\" onclick=\"showPage("+tmp+")\">"+tmp+"</a>";
+				//alert(document.getElementById("page"+tmp).innerHTML);
+				
+			 
+			}
+			// alert('here');
+			curPage= pageId;//当前页
+			//alert(document.getElementById("page"+pageId).innerHTML );
+			var elementName1 = "infContent"+pageId;
+			document.getElementById("page"+pageId).innerHTML = "<span>"+pageId+"</span>";
+			
+			//alert(elementName1);
+			document.getElementById(elementName1).style.display="";
+		}
+		function initFeedbackList()
+		{
+			//信息访问量统计
+			//CMSUtil.incVisitCount("559ac6a246b8443886ffca82629a0115","IDBSupportService3",{callback:function(data){document.getElementById("visitCount").innerHTML=" "+data+"次 "}});
+			//alert(559ac6a246b8443886ffca82629a0115);
+		}
+	</script>
+
+	 
+
+</head>
+<body   onLoad="initFeedbackList()">
+ <style type="text/css">
+	.detail,.infos{
+		font-size:16px;
+	}
+ </style>
+
+
+
+ 
+<script language="javascript">
+    function searchcheck()
+    {
+		var value = document.getElementById("searchContents").value ;
+		if(value.indexOf("/")>-1||value.indexOf("\\")>-1||value.indexOf(";")>-1||value.indexOf("..")>-1)
+		{
+			return false;
+		}
+		
+		if(document.getElementById("searchContents").value=="")
+		{
+			alert('请填写关键字');
+			document.getElementById('searchContents').focus();
+			return false;
+		}
+		//document.getElementById("searchContents").value =document.getElementById("keyword").value;
+		document.getElementById("formsearchindex").submit();
+	}
+	function fn_keydown(evt,fun_tmp)
+	    {
+			evt = (evt) ? evt : ((window.event) ? window.event : "")  
+    		var key = evt.keyCode?evt.keyCode:evt.which;  
+    		if(key == 13){  
+				var fun = fun_tmp;
+				fun();
+        		return false;  
+    		}  
+		} 
+ 
+
+</script>
+<div class="top">
+    <div class="layout">
+        <div class="fl logo"> <a   href="/"><img src="/portal/site/wenhua/images/logo.jpg" width="257" height="70" border="0" /></a> </div>
+        <div class="fr top-nav">
+            <div class="fr search">
+			<form action="/portal/cms/listCmsInfo!luceneSearchResult.action?pageCommand=firstPage" method="post" name="formsearchindex" id="formsearchindex"   target='_blank' >
+		<!--<input type="text" name="keyword" id ="keyword" class="fr" value="" onkeydown="return fn_keydown(event,searchcheck)"/><span>高级搜索&nbsp;&nbsp;<a href="#"><i class="fa fa-search fa-lg"></i></a></span>-->
+			<input type="text" name="searchContents" id ="searchContents"   value=""  class="fr" /><span><a href="/portal/site/wenhua/fenleiSearch.jsp">高级搜索</a>&nbsp;&nbsp;<a   href="#" onclick="searchcheck()" style="cursor:hand" ><i class="fa fa-search fa-lg"></i></a></span>
+			<!--<input type="hidden" name="searchContents" id="searchContents" value=""/>-->
+			<input type="hidden" name="rootTreeCode" id="rootTreeCode" value="200"/>
+			<input type="hidden" name="siteCode" value="openjweb19"/>
+			<input type="hidden" name="searchType" value="titleOrContents" />
+			<!--<input type="hidden" name="luceneSearchResultPage" value="../WEB-INF/web.xml" />-->
+		</form>		
+
+                
+            </div>
+            <a   target='_blank' href="http://mail.chinaculture.org/">邮箱登陆</a><span>&emsp;|&emsp;</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="nav-bg">
+    <div class="layout">
+        <ul class="fl nav">
+			<li><a    href="/"  >首页</a></li>
+
+			<!--<li><a    href="/portal/site/wenhua/list.jsp?treeCode=toutiao" >头条</a></li>-->
+			<!--<li><a  target='_blank' href="/portal/site/wenhua/list.jsp?treeCode=toutiao" >头条</a></li>-->
+			<li><a  target='_blank' href="/site/wenhua/toutiao.html" >头条</a></li>
+            <li>
+			
+                <!--<a    target='_blank'   href="/portal/site/wenhua/list.jsp?treeCode=200001003" >动态</a> -->
+				<a    target='_blank'   href="/site/wenhua/dongtai.html" >动态</a>
+			
+
+			 <ul class="subnav" style="display:none">
+				
+                    <li><a   target='_blank'  href="/site/wenhua/guonei.html">国内动态</a></li>
+                    <li><a    target='_blank'   href="/site/wenhua/guoji.html">国际动态</a></li>
+                 
+                </ul>
+            </li>
+			
+			<li>
+				<!--<a    target='_blank'  href="/portal/site/wenhua/broadcast.jsp" >播报</a>  --> <!--list.jsp?treeCode=200001005-->
+               
+            <a    target='_blank'  href="/site/wenhua/broadcast.html" >播报</a>   
+            </li>
+            <li>
+			
+                <a    target='_blank'   href="/site/wenhua/shendu.html" >观察</a><!--list.jsp?treeCode=200001004-->
+			
+			<!--
+				<ul class="subnav" style="display:none">
+                    <li><a   target='_blank'    href="/portal/site/wenhua/list.jsp?treeCode=sdgc">观察</a></li>
+                    <li><a    target='_blank'   href="/portal/site/wenhua/list.jsp?treeCode=sdrw">人物</a></li>
+                </ul>
+			-->
+            </li>
+
+            
+            <li>
+			<!--<a  target='_blank'  href="/portal/site/wenhua/list_pic.jsp?treeCode=200001009" >图志</a>-->
+			 <a  target='_blank'  href="/site/wenhua/shidian.html" >图志</a>
+			</li><!--list_pic.jsp?treeCode=200001009-->
+          <li>
+				<!--<a  target='_blank'  href="/portal/site/wenhua/newzhuanti.jsp?treeCode=200001005" >专题</a>-->
+				<a  target='_blank'  href="/site/wenhua/newzhuanti.html" >专题</a>
+				<!--list.jsp?treeCode=200001005-->
+            </li>
+            <li>
+			<!--<a  target='_blank'  href="/portal/site/wenhua/list.jsp?treeCode=200001016" >文贸</a>-->
+			<a  target='_blank'  href="/site/wenhua/wenmao.html" >文贸</a>
+			</li><!--list_pic.jsp?treeCode=200001009-->
+             
+			<!--<li><a   target='_blank'    href="/portal/site/wenhua/resource.jsp" >资源</a></li>-->
+			<li><a   target='_blank'    href="/site/wenhua/resource.html" >资源</a></li>
+            <li>
+			<!--<a    target='_blank'   href="/portal/site/wenhua/list.jsp?treeCode=200001008" >公告</a>-->
+			<a    target='_blank'   href="/site/wenhua/gonggao.html" >公告</a>
+			<img src="/site/wenhua/images/new.png" alt="" style="width: 31px;height: 13px;"/>
+			</li><!--list.jsp?treeCode=200001008-->
+            <span class="fr"><a   target='_blank' href="http://en.chinaculture.org/" target='_blank'>EN</a></span>
+            <div class="clear"></div>
+        </ul>
+        
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div id="container">
+    <div class="main brt">
+        <div class="fl main-l mt10">
+            <div class="position"><h2 style="width: 732px;">您的位置：<a  target='_blank'    href="/">中国文化网</a>&nbsp;>&nbsp;<a    target='_blank'  href="/portal/site/wenhua/list.jsp?treeCode=001002003003">文化活动</a></h2></div>
+            <div class="content">
+                <h1 style="font-size:30px;">天涯共此时&mdash;&mdash;新疆是个好地方</h1>
+				<h3 class="subtitle" style="font-size:20px;"></h3>
+                <div class="infos" style="font-size: 14px;">
+                	<span class="fr">
+						<!--分享插件-->
+                		<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="bds_weixin" data-cmd="weixin"></a>
+							<a class="bds_tsina" data-cmd="tsina"></a>
+							<a class="bds_copy" data-cmd="copy"></a>
+							<a class="bds_more" data-cmd="more">更多</a>
+						</div>
+						<script type="text/javascript" charset="utf-8">
+							window._bd_share_config = {
+								common : {
+									bdText : '天涯共此时&mdash;&mdash;新疆是个好地方',	 //自定义分享内容
+									bdDesc : '新疆有大美，自然景观雄奇，山河壮丽、气象万千。',	//自定义分享摘要
+									bdUrl : 'http://cn.chinaculture.org/portal/site/wenhua/mobile2/mobileInformation_share.jsp?rowId=559ac6a246b8443886ffca82629a0115', //自定义分享url地址
+									bdPic : 'http://cn.chinaculture.org/site/wenhua/images/weixinico.png'  //自定义分享图片
+								},
+								share : [{
+									"tag" : "share_1",
+									"bdSize" : 16
+								}],
+								selectShare : [{
+									"bdselectMiniList" : ['weixin','tsina','copy']
+								}]
+							}
+							with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+						</script>
+							
+					</span>
+					
+					时间：2021-09-22&emsp;&emsp;&emsp;来源：<a href="https://mp.weixin.qq.com/s/NzywGiFnoyERvlR_3w-08A"  target="_blank">特拉维夫中国文化中心</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<!--内容字号：<a href="javascript:changeFont(12);">小</a>&nbsp;|&nbsp;<a href="javascript:changeFont(16);">大</a>-->
+				</div>
+                <div class="detail">
+				
+					<label id="infContent1" ><p style="text-align:center"><img alt="" src="/upload/cms_info/2021/09/21/1632222202160154852__65296d8c9a2f49ff91f5c10f78cd0a9d_1.jpg" /></p>
+
+<p>　　新疆有大美，自然景观雄奇，山河壮丽、气象万千。冰峰与火洲共存，瀚海与绿洲相邻，曼舞轻歌回旋古乐，清甜瓜果美食佳肴。新疆是一个文物古迹众多的地区，举世闻名的&ldquo;丝绸之路&rdquo;上，遗留下数以百计的古城池、千佛洞、古屯田遗址等人文景观；新疆同时又是多民族聚居区，各民族的文化艺术、风情习俗构成了具有浓郁民族特色的旅游人文景观。浓郁的民族风情，厚重的历史文化，在这里并存。</p>
+
+<p style="text-align:center"><img alt="videobox" src="/upload/cms_info/2021/09/21/1632222202160154852__0600caff9ca04f409ac0c3d80e7aa432_1.png" /></p>
+
+<p>　　中秋时节，特拉维夫中国文化中心上线&ldquo;天涯共此时&mdash;&mdash;新疆是个好地方&rdquo;虚拟体验馆，邀请以色列网友，来到有着神秘历史和旖旎风光的大美新疆，全景化游览自然景观，感受新疆各族人民中秋节庆期间的生活状态和一体多元文化，体验当地中秋美食、共享和谐友好的团聚氛围。</p>
+
+<p style="text-align:center"><strong>复制以下网站至浏览器，进入虚拟体验馆：</strong></p>
+
+<p style="text-align:center"><strong>https://show.chinaculture.org/ZMXJ/</strong></p></label>
+
+					
+					<script type="text/javascript">
+						var vsrc = "http://live.zzyicheng.cn/b320ba60839342719a26a623b441b763/1f487e8b107f42f78fddab972b503bfe-5dd9e161ab5854d4f445adfb5e6987c6-sd.m3u8";
+						var ary_vsrc = vsrc.split(",");
+						var vbox = $("img[alt='videobox']");
+
+						
+						if(vsrc!=""&&ary_vsrc.length==vbox.length)
+						{
+							$.each(vbox,function(index,box){
+								
+								//var parent = $(box).parent();
+								//parent.html('');
+
+								var boxid = "playercontainer"+index;
+								$(box).after('<div id="'+boxid+'"></div>');
+								$(box).remove();
+								var path = ary_vsrc[index].split('|');
+								var playbox = $("#"+boxid);
+								var video = $("<video id='video_"+index+"' class='video-js vjs-default-skin vjs-big-play-centered vjs-4-3'><source id='souce'"+index+" src='"+path[0]+"' type='application/x-mpegURL' /></video>");
+								var w = $("#playbox").width();
+								var h = Math.ceil(w *(9/16));
+								playbox.append(video);
+
+								videojs('video_'+index, 
+								{
+									loop: false,
+									controls: true,
+									preload: 'auto',
+									autoplay: false,
+									width:w,
+									height:h
+								});
+
+
+								//$("#"+boxid).parent().width(w1).css({'margin-left':Math.ceil((w-w1)/2)});
+								
+							});
+
+						}
+					</script>
+				</div>
+				<div style="width:100%;font:normal normal normal 14px/24px 宋体;text-align:right">责任编辑：胡梦音</div>
+            </div>
+
+			<!-- 相关新闻 16条-->
+            <div class="relation">
+                <h2><i class="fa fa-chevron-down"></i>相关新闻</h2>
+                <ul id="relateNews">
+                    
+                </ul>
+            </div>
+            <!-- 相关新闻 -->
+
+            <div class="pages">
+
+			
+             </div>
+        </div>
+ 
+
+
+
+
+
+
+
+
+
+
+<div class="fr main-r mt10">
+            <div class="gonggao">
+                <div class="new-tit1"><i class="fr fa fa-plus white"></i>本网推荐</div>
+                <ul class="gg-con" style="background-color: #fff" id="recommend">
+                    
+                </ul>
+                <div class="new-tit1"><i class="fr fa fa-plus white"></i>热点关注</div>
+                <ul class="gg-con" style="background-color: #fff" id="hot">
+                    
+                </ul>
+                <div class="new-tit1"><a href="/portal/site/wenhua/shidian.html" target='_blank'><i class="fr fa fa-plus white"></i></a>图志</div>
+                <ul class="sd-list" id="viewpoint">
+                     
+                    <script language="javascript">
+					  
+					 $(document).ready(function(){
+				     
+					  //本网推荐
+					 $.get("/portal/api/cms/wtcms.jsp?act=getContent&type=recommend&pageNo=1&rowPerPage=10",function(data,status){
+                      // alert("数据：" + data + "\n状态：" + status);
+					  var jsonData = eval ("(" + data + ")");
+					  for(i=0;i<jsonData.data.length;i++)
+					  {
+						  var rowId = jsonData.data[i].rowId;
+						  var title = jsonData.data[i].infTitle;
+						  var smallImagePath = jsonData.data[i].smallImagePath;
+						  var cateTreeCode = jsonData.data[i].cateTreeCode;
+						  var url = jsonData.data[i].infUrl;//
+						  
+						  $('#recommend').append("  <li><a    href=\""+url+"\">"+title+"</a></li>");
+					      
+					  }
+                      });
+
+					 //热点关注
+					 $.get("/portal/api/cms/wtcms.jsp?act=getContent&type=hot&pageNo=1&rowPerPage=10",function(data,status){
+                      // alert("数据：" + data + "\n状态：" + status);
+					  var jsonData = eval ("(" + data + ")");
+					  for(i=0;i<jsonData.data.length;i++)
+					  {
+						  var rowId = jsonData.data[i].rowId;
+						  var title = jsonData.data[i].infTitle;
+						  var smallImagePath = jsonData.data[i].smallImagePath;
+						  var cateTreeCode = jsonData.data[i].cateTreeCode;
+						  var url = jsonData.data[i].infUrl;//
+						  
+						  
+						  $('#hot').append("  <li><a   href=\""+url+"\">"+title+"</a></li>");
+					      
+					  }
+                      });
+
+                        
+                     //取视点
+					 $.get("/portal/api/cms/wtcms.jsp?act=getContent&type=viewpoint&pageNo=1&rowPerPage=4",function(data,status){
+                      // alert("数据：" + data + "\n状态：" + status);
+					  var jsonData = eval ("(" + data + ")");
+					  for(i=0;i<jsonData.data.length;i++)
+					  {
+						  var rowId = jsonData.data[i].rowId;
+						  //var title = jsonData.data[i].parentCateName;
+						  var title = jsonData.data[i].infTitle;
+						  var smallImagePath = jsonData.data[i].smallImagePath;
+						  var cateTreeCode = jsonData.data[i].cateTreeCode;
+						   var url = jsonData.data[i].infUrl;//
+						  //alert(cateTreeCode);
+						  //alert(title);
+						  var css = "";
+						  if(i==1||i==3)
+						  {
+							  css=" style=\"padding-right:0\"";
+						  }
+						  //$('#viewpoint').append(" <li"+css+"> <a href=\"/portal/site/wenhua/show_pic.jsp?rowId="+rowId+"&treeCode="+cateTreeCode+"\"><img src=\""+"/portal"+smallImagePath+"\" height=\"160\" width=\"175\"></a> <a href=\"/portal/site/wenhua/show_pic.jsp?rowId="+rowId+"&treeCode="+cateTreeCode+"\"><p>"+title+"</p></a></li>");
+					     // $('#viewpoint').append(" <li"+css+"> <a  href=\"/portal/site/wenhua/show_pic.jsp?rowId="+rowId+"&treeCode="+cateTreeCode+"\"><img src=\""+"/portal"+smallImagePath+"\" height=\"160\" width=\"175\"></a> <a    href=\""+url+"\"><p>"+title+"</p></a></li>");
+						  $('#viewpoint').append(" <li"+css+"> <a    target='_blank'   href=\""+url+"\"><img src=\""+"/portal"+smallImagePath+"\" height=\"160\" width=\"175\"></a> <a target='_blank'    href=\""+url+"\"><p>"+title+"</p></a></li>");
+					      
+					      
+					  }
+                      });
+ 
+                    });
+
+
+					 </script>
+                    
+                    <div class="clear"></div>
+                </ul>
+				
+				<!--分享插件-->
+                <div class="bdsharebuttonbox" data-tag="share_1">
+					<a class="bds_weixin" data-cmd="weixin"></a>
+					<a class="bds_tsina" data-cmd="tsina"></a>
+					<a class="bds_copy" data-cmd="copy"></a>
+					<a class="bds_more" data-cmd="more">更多</a>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+				
+					window._bd_share_config = {
+						common : {
+							bdText : '天涯共此时——新疆是个好地方',	 //自定义分享内容
+							bdDesc : '新疆有大美，自然景观雄奇，山河壮丽、气象万千。',	//自定义分享摘要
+							bdUrl : 'http://cn.chinaculture.org/portal/site/wenhua/mobile2/mobileInformation_share.jsp?rowId=559ac6a246b8443886ffca82629a0115', //自定义分享url地址
+							bdPic : 'http://cn.chinaculture.org/site/wenhua/images/weixinico.png'  //自定义分享图片
+						},
+						share : [{
+							"tag" : "share_1",
+							"bdSize" : 16
+						}],
+						selectShare : [{
+							"bdselectMiniList" : ['weixin','tsina','copy']
+						}]
+					}
+					//with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+				
+				</script>
+                
+                <!-- 后期加分享 开始 -->
+				
+				
+				
+				<!--
+                <div class="bshare-custom icon-medium-plus">
+					<a title="分享到微信" class="bshare-weixin"></a>
+					<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+					<a title="分享到复制网址" class="bshare-clipboard"></a>
+					<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+				</div>
+				<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=885424fa-dde3-468f-adbd-bc2c0c5dd067&amp;pophcol=1&amp;lang=zh"></script>
+				<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+				<script type="text/javascript" charset="utf-8">
+					bShare.addEntry({
+						title: 天涯共此时——新疆是个好地方,//分享的标题，默认为当前页面标题
+						url: /portal/pubinfo/2021/09/22/001002003003/559ac6a246b8443886ffca82629a0115.html,//分享的链接，默认为当前页面URL
+						summary: 新疆有大美，自然景观雄奇，山河壮丽、气象万千。,//分享的文本摘要，默认为页面Meta标签中description的内容或者用户高亮的内容
+						pic: "http://cn.chinaculture.org/site/wenhua/images/weixinico.png"//指定分享的图片的链接，目前支持新浪微博，QQ空间，搜狐微博，网易微博，人人网， 嘀咕，腾讯微博和做啥。
+					});
+				</script>
+				 -->
+				 
+               
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+</div>
+   
+
+
+<div class="footer">
+    <div class="layout">
+        <ul class="fl f-list mb20">
+            <li>
+                <h2><i></i><a   target='_blank' href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003">动态</a></h2>
+                <ul>
+                    <!--<li><a     target='_blank' href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003001">请进来</a></li>
+                    <li><a     target='_blank' href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003002">走出去</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003003">港澳台交流</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003004">高层动态</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001003005">国际新闻</a></li>-->
+                    <li><a     target='_blank' href="/site/wenhua/guonei.html">国内动态</a></li>
+                    <li><a    target='_blank'  href="/site/wenhua/guoji.html">国际动态</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2><i></i><a    target='_blank'  href="/site/wenhua/newzhuanti.html">专题</a></h2>
+                <ul>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/special_report/springfestival/2017/index.jsp">欢乐春节</a></li>
+                    <li><a   target='_blank'   href="http://cn.chinaculture.org/portal/site/wenhua/special_report/culforum/index.jsp">中华文化讲堂</a></li>
+					<li><a    target='_blank'  href="/site/wenhua/shidian.html">图志</a></li>
+                    <li><a    target='_blank'  href="/site/wenhua/zhuantiqia.html">其他</a></li>
+                  
+                </ul>
+            </li>
+            <li>
+                <h2><i></i><a   target='_blank' href="/site/wenhua/shendu.html">观察</a></h2>
+                <ul>
+                    <!--<li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001004001">论衡</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001004002">采风</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001004003">名家</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/list.jsp?treeCode=200001004004">钩沉</a></li>-->
+                    
+                    <!--<li><a    target='_blank'  href="/site/wenhua/sdgc.html">观察</a></li>
+                    <li><a    target='_blank'  href="/site/wenhua/sdrw.html">人物</a></li>-->
+                    
+                </ul>
+            </li>
+            <li> 
+                <h2><i></i><a    target='_blank'  href="/site/wenhua/resource.html">资源在线</a></h2>
+                <ul>
+				
+                    <li><a     target='_blank' href="http://cn.chinaculture.org/portal/site/wenhua/world.jsp?country=%E7%BE%8E%E5%9B%BD">世界各地</a></li>
+                    <li><a     target='_blank' href="http://cn.chinaculture.org/portal/site/wenhua/china.jsp?area=11">中国各地</a></li>
+                    <li><a    target='_blank'  href="/site/wenhua/zhengcewenxian.html">政策·文献</a></li>
+                     
+                </ul>
+            </li>
+            <li>
+                <h2><i></i><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/fenleiSearch.jsp">分类搜索</a></h2>
+                <ul>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/fenleiSearch.jsp?type=area">按地区</a></li>
+                    <li><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/fenleiSearch.jsp?type=time">按时间</a></li>
+                    
+                </ul>
+            </li>
+
+			<li>
+                <h2><i></i><a    target='_blank'  href="/site/wenhua/gonggao.html">信息公告</a></h2>
+            </li>
+
+            <li class="wd2">
+                <h2><i></i><a   target='_blank'   href="http://cn.chinaculture.org/portal/site/wenhua/about.jsp">关于我们</a></h2>
+                <ul>
+                    <li>主办：中华人民共和国文化和旅游部国际交流与合作局（港澳台办公室）</li>
+                    <li>地址：北京市朝阳门北大街10号 100020</li>
+                    <li>承办：中外文化交流中心</li>
+                </ul>
+            </li>
+            
+            <li>
+                <h2><i></i><a    target='_blank'  href="http://cn.chinaculture.org/portal/site/wenhua/contact.jsp">联系我们</a></h2>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        <ul class="fr wx">
+            <li><img src="http://cn.chinaculture.org/portal/site/wenhua/images/wx.jpg" height="180" width="160"></li>
+            <li><img src="http://cn.chinaculture.org/portal/site/wenhua/images/cc.jpg" height="180" width="160"></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+	 <div class="layout">
+        <a href="https://www.mct.gov.cn/" target='_blank' ><img src="http://cn.chinaculture.org/portal/site/wenhua/images/fl1.jpg" height="36"></a>
+    </div>
+    <div class="copy">
+        <div class="fl f-img"><a    target='_blank'  href="/"><img src="http://cn.chinaculture.org/portal/site/wenhua/images/m-logo.jpg" height="53" width="46"></a></div>
+        <!--<div class="fl f-copy">版权所有：中华人民共和国文化部对外文化联络局（港澳台办公室）&emsp;&emsp;京ICP备13028878号-4</div>-->
+        <div class="fl f-copy">版权所有：中华人民共和国文化和旅游部国际交流与合作局（港澳台办公室）&emsp;&emsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502035176"><img src="http://cn.chinaculture.org/portal/site/wenhua/images/beian.png" height="20" width="20">京公网安备 11010502035176号</a> &nbsp;&nbsp;<a href="http://beian.miit.gov.cn" target="_blank">京ICP备 13028878号-4</a></div>
+        
+<script id="_jiucuo_" sitecode='bm23000004' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+   <script language="javascript">
+
+
+
+   function EncodeUtf8(s1) 
+  { 
+      var s = escape(s1); 
+      var sa = s.split("%"); 
+      var retV =""; 
+      if(sa[0] != "") 
+      { 
+         retV = sa[0]; 
+      } 
+      for(var i = 1; i < sa.length; i ++) 
+      { 
+           if(sa[i].substring(0,1) == "u") 
+           { 
+               retV += Hex2Utf8(Str2Hex(sa[i].substring(1,5))); 
+               
+           } 
+           else retV += "%" + sa[i]; 
+      } 
+      
+      return retV; 
+  } 
+  function Str2Hex(s) 
+  { 
+      var c = ""; 
+      var n; 
+      var ss = "0123456789ABCDEF"; 
+      var digS = ""; 
+      for(var i = 0; i < s.length; i ++) 
+      { 
+         c = s.charAt(i); 
+         n = ss.indexOf(c); 
+         digS += Dec2Dig(eval(n)); 
+           
+      } 
+      //return value; 
+      return digS; 
+  } 
+  function Dec2Dig(n1) 
+  { 
+      var s = ""; 
+      var n2 = 0; 
+      for(var i = 0; i < 4; i++) 
+      { 
+         n2 = Math.pow(2,3 - i); 
+         if(n1 >= n2) 
+         { 
+            s += '1'; 
+            n1 = n1 - n2; 
+          } 
+         else 
+          s += '0'; 
+          
+      } 
+      return s; 
+      
+  } 
+  function Dig2Dec(s) 
+  { 
+      var retV = 0; 
+      if(s.length == 4) 
+      { 
+          for(var i = 0; i < 4; i ++) 
+          { 
+              retV += eval(s.charAt(i)) * Math.pow(2, 3 - i); 
+          } 
+          return retV; 
+      } 
+      return -1; 
+  } 
+  function Hex2Utf8(s) 
+  { 
+     var retS = ""; 
+     var tempS = ""; 
+     var ss = ""; 
+     if(s.length == 16) 
+     { 
+         tempS = "1110" + s.substring(0, 4); 
+         tempS += "10" +  s.substring(4, 10); 
+         tempS += "10" + s.substring(10,16); 
+         var sss = "0123456789ABCDEF"; 
+         for(var i = 0; i < 3; i ++) 
+         { 
+            retS += "%"; 
+            ss = tempS.substring(i * 8, (eval(i)+1)*8); 
+            
+            
+            
+            retS += sss.charAt(Dig2Dec(ss.substring(0,4))); 
+            retS += sss.charAt(Dig2Dec(ss.substring(4,8))); 
+         } 
+         return retS; 
+     } 
+     return ""; 
+  }
+
+
+
+					  
+ $(document).ready(function(){
+//统计访问计数
+ var loc = window.location.href;
+ var encodeLoc = EncodeUtf8(loc);
+ //alert(encodeLoc);
+ //alert(loc);
+ $.get("/portal/api/cms/wtcms.jsp?act=calc&url="+encodeLoc,function(data,status){ })});
+ //alert('hi2');
+
+
+//baidu tuiguang
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
+ 
+</script>
+ 
+
+</body>
+<script type="text/javascript"> 
+   
+
+
+    
+    $('.nav li').hover(function(){
+        $(this).find('.subnav').attr('style','display:block');
+    },function(){
+        $(this).find('.subnav').attr('style','display:none');
+    })
+
+    $('.pd-title').click(function(){
+        var c = $(this).attr('class');
+        if(c == "pd-title"){
+            $('.pd-con').each(function(){
+                $(this).attr('style','display:none');
+            })
+            $(this).next().attr('style','display:block');
+        }
+    })
+
+    $('.pd-list li').click(function(){
+        $(this).parent().find('li').each(function() {
+            $(this).removeClass('cur');
+        });
+        $(this).addClass('cur');
+        var id = $(this).attr('name');
+        $(this).parent().parent().find('.pd-list-con').each(function() {
+            $(this).attr('style','display:none');
+        });
+        $('#'+id+'').attr('style','display:block');
+    })
+/**
+    function changeFont(fs){
+        $('.detail').attr('style','font-size:'+fs+'px;')
+    }
+	changeFont(16);
+**/
+     $(document).ready(function()
+    {
+	    //相关新闻
+		
+		$.get("/portal/api/cms/wtcms.jsp?act=getRelateNews&rowId=559ac6a246b8443886ffca82629a0115",function(data,status)
+		{
+ 	        var jsonData = eval ("(" + data + ")");
+		   
+		    for(i=0;i<jsonData.data.length;i++)
+		    {
+				
+		       // var rowId = jsonData.data[i].row_id;
+				 
+			    var title = jsonData.data[i].inf_title;
+		        var url = jsonData.data[i].inf_url;//
+			    $('#relateNews').append("  <li><a    href=\""+url+"\">"+title+"</a></li>");
+		    }
+		})  //get
+    });
+
+</script>
+</html>

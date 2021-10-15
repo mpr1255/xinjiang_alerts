@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新疆维吾尔自治区关工委召开专家委主任（扩大）会议</title>
+<meta name="keywords" content="" />
+<meta name="description" content="新疆维吾尔自治区关工委召开专家委主任（扩大）会议" />
+<link href="/skin/default/css/tech_list.css" rel="stylesheet" type="text/css" />
+<link href="/skin/default/css/share.css" rel="stylesheet" type="text/css" />
+<link href="/skin/default/css/common.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet"  href="/skin/default/css/baseneirong.css" />
+<link type="text/css" rel="stylesheet"  href="/skin/default/indexneirong.css" />
+<link href="/skin/default/css/news_index.css" rel="stylesheet" type="text/css" />
+<link href="/skin/default/css/common.css" rel="stylesheet" type="text/css">
+<!--菜单特效-->
+<link rel="stylesheet" type="text/css" href="/skin/menu/css/style.css">
+	<script type="text/javascript" src="/skin/menu/js/jquery.min.js"></script>
+<script language="javascript">
+// doZoom
+function doZoom(size)
+{
+	var f18 =document.getElementById('font18');
+	var f20 =document.getElementById('font20');
+	var f16 =document.getElementById('font16');
+	document.getElementById('text').style.fontSize=size+'px';
+	var op=document.getElementById('text').getElementsByTagName("p");
+	if(size==14){
+		f16.className="cur";
+		f18.className="";
+	}else if(size==18){
+		f16.className="";
+		f18.className="cur";
+	}
+	for(var i=0;i<op.length;i++){
+		op[i].style.fontSize=size+'px';
+	}
+}
+
+//回到顶部
+$(function() {
+    var $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body")).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();    
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);    
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
+})();
+</script>
+<script type="text/javascript">
+	$(function(){
+		var _this1=null;
+		$('.nav>li').hover(function(){
+			_this1=$(this);
+			_this1.find('.second-nav').show();
+			var _this2=null;
+			_this1.find('.second-nav').find('li').hover(function(){
+				_this2=$(this);
+				_this2.find('.third-nav').show();
+				_this2.find('.third-nav').hover(function(){
+					$(this).show();
+				},function(){
+					$(this).hide();
+				});
+			},function(){
+				_this2.find('.third-nav').hide();
+			});
+		},function(){
+			_this1.find('.second-nav').hide();
+		});
+	});
+</script>
+<!--菜单特效完毕-->
+<script src="/skin/default/js/tab.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/jscript" src="/skin/default/js/jquery-1.7.2.min.js"></script>
+<script language="javascript" type="text/jscript" src="/skin/default/js/communal.js"></script>
+<script language="javascript">
+var intervalId = null;
+function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){
+  this.stayTime=nStayTime*1000 || 3000;
+  this.maxHeigth=nMaxHth || 200;
+  this.minHeigth=nMinHth || 1;
+  this.state=sState || "down" ;
+  var obj = document.getElementById(id);
+  if(intervalId != null)window.clearInterval(intervalId);
+  function openBox(){
+   var h = obj.offsetHeight;
+   obj.style.height = ((this.state == "down") ? (h + 2) : (h - 2))+"px";
+    if(obj.offsetHeight>this.maxHeigth){
+    window.clearInterval(intervalId);
+    intervalId=window.setInterval(closeBox,this.stayTime);
+    }
+    if (obj.offsetHeight<this.minHeigth){
+    window.clearInterval(intervalId);
+    obj.style.display="none";
+    }
+  }
+  function closeBox(){
+   slideAd(id,this.stayTime,"up",nMaxHth,nMinHth);
+  }
+  intervalId = window.setInterval(openBox,10);
+}
+</script>
+<!--菜单特效完毕
+<script type="text/javascript">
+try {
+var urlhash = window.location.hash;
+if (!urlhash.match("fromapp"))
+{
+if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)))
+{
+window.location="/e/wap";
+}
+}
+}
+catch(err)
+{
+}</script> -->
+<script  type="text/javascript">
+//设为首页
+function SetHome(obj,url){
+    try{
+        obj.style.behavior='url(#default#homepage)';
+        obj.setHomePage(url);
+    }catch(e){
+        if(window.netscape){
+            try{
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            }catch(e){
+                alert("抱歉，此操作被浏览器拒绝！nn请在浏览器地址栏输入about:config并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+            }
+        }else{
+            alert("抱歉，您所使用的浏览器无法完成此操作。nn您需要手动将【"+url+"】设置为首页。");
+        }
+    }
+}
+
+//收藏本站
+function AddFavorite(title, url) {
+    try {
+        window.external.addFavorite(url, title);
+    }
+    catch (e) {
+        try {
+            window.sidebar.addPanel(title, url, "");
+        }
+        catch (e) {
+            alert("抱歉，您所使用的浏览器无法完成此操作。nn加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+
+</script>
+
+<link rel="shortcut icon" href="/faviconggw.ico" />
+</head>
+
+
+<!--menu begin-->
+ 
+  <div id="header">
+
+  <div class="headerlogo">
+    <div class="logo"><a href="/"><img src="/images/logo.png" /></a></div>
+    <div class="tq">
+    </div>
+    <div class="right">
+
+
+
+
+	  
+	  
+	  </div>
+    <div class="clear"></div>
+  </div>
+
+<div class="header1">
+	<ul class="nav">
+		<li><a href="/">首页</a></li>
+		<li><a href="#">组织机构</a>
+			<ul class="second-nav">
+				<li><a href="/zuzhijiegou/1914.html">中国关工委简介</a></li>
+				<li><a href="/zuzhijiegou/1917.html">主&nbsp;&nbsp;&nbsp;任</a></li>
+				<li><a href="/zuzhijiegou/3420.html">领导名单</a></li>
+				<li><a href="/zuzhijiegou/1921.html">办公室</a></li>
+				<li><a href="/zuzhijiegou/1922.html">事业单位</a></li>
+
+			</ul>
+		</li>
+		<li><a href="/shishixinwen/">时事新闻</a></li>
+		<li><a href="/gongzuodongtai/">工作动态</a></li>
+		<li><a href="/zhengcefagui/">政策法规</a>
+			<ul class="second-nav">
+				<li><a href="/zhengcefagui/flfg/">法律法规</a></li>
+				<li><a href="/zhengcefagui/gzzd/zgggw/">工作制度</a></li>
+			</ul>
+		</li>
+
+		<li><a href="/gedixinxi/">基层视窗</a>
+			<ul class="second-nav">
+				<li><a href="/gedixinxi/jicengshichuang/">基层信息</a></li>
+				<li><a href="/gedixinxi/wulaofengcai/">五老风采</a></li>
+				<li><a href="/gedixinxi/diaoyanbaogao/">调研报告</a></li>
+			</ul>
+		</li>
+		<li><a href="/pp/">品牌建设</a>
+					<ul class="second-nav">
+				<li><a href="/pp/hsjy/">传承红色基因</a></li>
+				<li><a href="/pp/wlga/">五老关爱工程</a></li>
+				<li><a href="/pp/gamt/">关爱明天普法先行</a></li>		
+				<li><a href="/pp/jfjj/">弘扬好家教好家风</a></li>
+				<li><a href="/pp/zhh/">中华魂读书</a></li>
+				<li><a href="/pp/hx/">海峡两岸交流</a></li>
+				<li><a href="#">中日韩儿童童话交流</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/jyjd/">教育基地</a>
+			<ul class="second-nav">
+				<li><a href="/gedixinxi/dangshiguoshijiaoyu/">党史国史教育基地</a></li>
+				<li><a href="/gedixinxi/zhongguoguanxinxiayidaijiaoyushifanjidi/">关心下一代教育基地</a></li>
+				<li><a href="#">科技示范基地</a></li>
+				<li><a href="#">劳动实践基地</a></li>
+				<li><a href="#">法制教育基地</a></li>
+				<li><a href="#">国防教育基地</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+	  
+</div>
+    <div class="clear"></div>
+ 
+
+<body>
+
+<!--top end-->
+<div class="content_ny">
+  <div class="left_list fl">
+    <div class="artical">
+      <div class="ep-content" id="js-epContent" style="position: relative;">
+       <div class="connav fl">您当前的位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/gedixinxi/">各地信息</a>&nbsp;>&nbsp;<a href="/gedixinxi/jicengshichuang/">基层视窗</a></div>
+        <div class="ep-content-bg clearfix">
+          <div class="ep-content-main">
+            <h1 id="h1title" class="ep-h1">新疆维吾尔自治区关工委召开专家委主任（扩大）会议</h1>
+            <div class="line"></div>
+            <div class="clearfix">
+              <div class="ep-info cDGray">
+                <div class="left fl">
+                  <div  class="fl col6">中国关心下一代工作委员会　<a href="http://www.zgggw.gov.cn/">http://www.zgggw.gov.cn/</a>　2021年09月08日　来源: 新疆维吾尔自治区关工委办公室　作者: 网站编辑</div>
+                </div>
+                <div class="fr" style=" margin-left:15px;">
+                  <div class="fr"  style="padding-left:15px;"><a id="font20" class="cur" onclick="javascript:doZoom(20)">[大]</a> <a id="font18" onclick="javascript:doZoom(18)">[中]</a> <a id="font16" onclick="javascript:doZoom(16)">[小]</a></div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="bd">
+      <div class="summary">摘要：9月3日，新疆维吾尔自治区关工委召开专家委主任（扩大）会议，传达学习“纪念自治区关工委成立30周年暨全区关心下一代工作表彰大会”精神，研究和部署近期工作。自治区关工委专家委主</div>
+      <div id="text" class="text"> <p style="text-indent: 2em; text-align: left; font-family: 宋体, SimSun; font-size: 18px;">9月3日，新疆维吾尔自治区关工委召开专家委主任（扩大）会议，传达学习“纪念自治区关工委成立30周年暨全区关心下一代工作表彰大会”精神，研究和部署近期工作。</p><p style="text-align:center"><img src="/d/file/upload/image/20210908/1631082573925957.jpg" title="1631082573925957.jpg" alt="微信图片_20210908142926.jpg" width="800"/></p><p style="text-indent: 2em; text-align: left; font-family: 宋体, SimSun; font-size: 18px;">自治区关工委专家委主任李中耀、常务副主任王爱国分别传达中国关工委主任顾秀莲、自治区关工委主任白志杰在自治区关工委成立30周年暨全区关心下一代工作表彰大会上的讲话精神，对“双减”调研工作进行安排部署。会议由专家委常务副主任李春阳主持，专家委名誉主任张曰知，领导班子成员，联络策划部，各组组长、副组长等32人参加会议。</p><p style="text-indent: 2em; text-align: left; font-family: 宋体, SimSun; font-size: 18px;">会议指出，顾秀莲同志的大会讲话，充分肯定了自治区关工委成立30年来取得的前所未有的成就，对做好新时代全区关心下一代工作提出了“要深刻学习领会习近平总书记在庆祝建党100周年大会上的重要讲话精神，深刻领会和贯彻落实习近平总书记对关心下一代工作的系列重要论述精神，突出青少年重点，担负起立德树人光荣使命，支持和帮助青少年成长成才，着力加强自身建设，不断提升关工委工作能力和服务水平”的5点意见。白志杰同志的报告全面总结了自治区关工委30年来的工作，提出了“要深入学习宣传贯彻习近平总书记‘七一’重要讲话精神，深化传承红色基因工程和五老关爱工程；坚持立德树人，切实加强青少年思想道德建设；大力推进文化润疆工程，以铸牢中华民族共同体意识为主线、重点加强青少年民族团结进步教育；着力加强新时代五老队伍建设，充分发挥老同志的优势作用；以党的建设为统领，推进关爱服务体系和能力建设”5点要求。</p><p style="text-indent: 2em; text-align: left; font-family: 宋体, SimSun; font-size: 18px;">会议要求，专家委全体同志要深入贯彻落实党中央治疆方略，牢牢把握新疆工作总目标，充分发挥自身优势作用，不折不扣把中国关工委安排部署和顾秀莲主任的指示精神，自治区党委、政府工作部署和自治区关工委的要求落到实处。</p><p style="text-indent: 2em; text-align: left; font-family: 宋体, SimSun; font-size: 18px;">会议提出，“双减”工作是党中央关心、群众关切、社会关注的重大民生问题，是落实立德树人根本任务，扭转解决学生校内校外负担较重，是进一步深化教育改革的重大举措，事关青少年健康成长,事关群众切身利益。要联合教育部门将调研工作落到实处、取得实效。要进一步抓好未成年人思想道德建设，不断丰富活动内容，继续探索新时代青少年教育的新形式、新方法，把关心下一代工作做细做实，为促进自治区义务教育均衡发展，青少年全面发展和健康成长构建良好教育生态，有效缓解家长焦虑，为自治区党委、政府决策提供有力意见支撑。</p> 
+        <!-- publish_helper_end -->
+        <p align="center" class="page"></p>
+        <p class="editorSign"></p>
+        <!-- Baidu Button BEGIN --> 
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!-- Baidu Button END --> 
+      </div>
+    </div>
+    <!--div class="reTopics">相关阅读<span></span></div>
+    <div>
+      <div class="blueline fl"></div>
+      <div class="btmline fl"></div>
+    </div>
+    <div class="clear"></div>
+    <div>
+      <div class="listText fl">
+        <ul>
+                  </ul>
+      </div>
+      <div class="listSearch fr">
+        <div class="stitle">资讯热搜</div>
+        <a href='/e/search/result/?searchid=112' target=_blank>读懂中国</a>&nbsp;<a href='/e/search/result/?searchid=115' target=_blank>五老</a>&nbsp;<a href='/e/search/result/?searchid=89' target=_blank>中华魂</a>&nbsp;<a href='/e/search/result/?searchid=88' target=_blank>家庭教育</a><br><a href='/e/search/result/?searchid=15' target=_blank>顾秀莲</a>&nbsp;<a href='/e/search/result/?searchid=185' target=_blank>总结</a>&nbsp;<a href='/e/search/result/?searchid=127' target=_blank>新时代好少年</a>&nbsp;<a href='/e/search/result/?searchid=279' target=_blank>表彰</a><br><a href='/e/search/result/?searchid=240' target=_blank>工作总结</a>&nbsp;<a href='/e/search/result/?searchid=68' target=_blank>党建带关建</a>&nbsp;<a href='/e/search/result/?searchid=52' target=_blank>征文</a>&nbsp;<a href='/e/search/result/?searchid=308' target=_blank>工作要点</a><br><a href='/e/search/result/?searchid=60' target=_blank>习近平</a>&nbsp;<a href='/e/search/result/?searchid=249' target=_blank>30周年</a>&nbsp;<a href='/e/search/result/?searchid=107' target=_blank>讲话</a>&nbsp;<br>
+      </div>
+    </div-->
+    <div class="clear"></div>
+    	<div class="ds-thread" data-category="395" data-thread-key="14783" data-title="新疆维吾尔自治区关工委召开专家委主任（扩大）会议"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vli"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+    <div class="clear"></div>
+    <!--评论 end -->
+  </div>
+</div>
+<!--main end-->
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="common-footera">
+  <div class="common-bottom">Copyright 1990 - 2021 中国关心下一代工作委员会. <a target="_blank" title="" href="http://beian.miit.gov.cn/" rel="nofollow">京ICP备13016694号</a> | <a target="_blank" title="" href="/" rel="nofollow">京公网安备11040102700075号</a> | <a target="_blank" title="" href="/zuzhijiegou/1914.html" rel="nofollow">关于我们</a></div>
+</div>
+<div class="returnTop" title="返回顶部"> 返回顶部 </div>
+
+</body>
+</html>
+<script src="/e/public/onclick/?enews=donews&classid=395&id=14783"></script>

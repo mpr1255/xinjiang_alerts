@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>新疆维吾尔自治区人民政府办公厅关于调整自治区人工影响天气工作领导小组组成人员的通知</title>
+		<link href="/model/style/3.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/model/jscript/jquery.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.form.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/model/jscript/function.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.zxxbox.3.0-min.js"></script>
+		<script type="text/javascript" src="/model/jscript/pop.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".ztfg_left2 a").click(function(){
+					var ids = $(this).attr("ids");
+					$("#linkids").val(ids) ;
+					$("#linkform").submit();
+					return ;
+				})
+			}) ;
+		</script>
+	</head>
+	<body onkeyup="javascript:enterfind();">
+		<div style="display: none" >
+			<form action="/linkserv" method="post" id="linkform" target="_blank">
+				<input name="rids" type="text"  id="linkids"/>
+			</form>
+		</div>
+		<div style="display: none" id="detail" rjs8="lar509s292.txt"></div>
+<div id="head"><img src="/model/images/head3.jpg"/></div>		<div id="bg">
+			<div id="xlpx2_left">
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_dysc.jpg" width="176" height="32"/>
+				</div>
+				<div class="xlpx2_left2">
+					<img src="/model/images/button1.jpg" width="115" height="27" onclick="javascript:PrintMe()" style="cursor: hand;"/>
+					<a href="/pao?fn=lar509s292.txt&action=typeset"><img src="/model/images/button2.jpg"/></a>
+					
+					<img src="/model/images/button4.jpg" width="115" height="27" onclick="javascript:zl()" style="cursor: hand;"/>
+					<!-- <div class="xlpx2_left1">
+						正文转入：
+						<br />
+						<label>
+							<select name="select" id="dic">
+          					 	<option value="psl">请选择</option>
+						    			<option value="2">常用法规</option>		
+							</select>
+						</label>
+					</div> -->
+				</div>
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_ftyy2.jpg" width="176" height="32" />
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+											</ul>
+				</div>
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_xgfg.jpg" width="176" height="32" />
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						<li>
+							<a target="_blank" href="/law?fn=chl322s814.txt">国务院办公厅关于加强人工影响天气工作的通知</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar509s560.txt">河南省人民政府办公厅关于进一步加强人工影响天气工作的通知</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar541s481.txt">山西省人工影响天气管理办法</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar572s388.txt">辽宁省人工影响天气管理办法</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar585s805.txt">宁夏回族自治区人工影响天气管理办法</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar587s663.txt">西藏自治区人工影响天气管理办法</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar593s631.txt">青海省人民政府办公厅关于加强人工影响天气管理工作的通知</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 
+				<div class="ztfg_left1">
+					<a href="#"><img src="/model/images/fgzw_xglw.jpg" width="176"
+							height="32" />
+					</a>
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+						<li>
+							<a href="#">国家税务总局关于下发20090601d版出口商品退税率文库的通知</a>
+						</li>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+					</ul>
+				</div>
+				 -->
+			</div>			<div id="fgzw_right" style="position: relative;">
+				<div class="xlpx2_right0">
+					<div class="xlpx2_right1" id="floattool">
+					<script type="text/javascript">
+				$("#dic").click(function(){
+					 	$.ajax({
+							type: "get",
+							url: "/userlogin",
+							data: "dbname=cook",
+							success: function(data, textStatus){
+						if(data==null||data==""){
+			  			$("#dic").find("option").remove();
+			  			var p = $(".fgzw_right2");
+						var position = p.position();
+						var left = position.left;
+						var top = position.top;
+			  		 $.ajax({
+						type: "get",
+						url: "/userdir",
+						data: "action=ishow&ts=switch&tab=detail",
+						success: function(data, textStatus){
+							$("#wjj5").html(data);
+							$("#wjj5").css({position: "absolute",top:top/2+3,left:-55});
+						},
+						complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+						},
+						error: function(){
+						//请求出错处理
+							}
+						});
+			  		  }}})
+				});
+				function zhuce(){
+					$.ajax({
+					type: "get",
+					url: "/userdir",
+					data: "action=ishow&ts=zhuce", 
+					success: function(data, textStatus){
+						//alert(data);
+						$("#wjj5").html(data);
+					},
+					complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+					},
+					error: function(){
+						//请求出错处理
+					}
+				  });
+				}
+  		function elect(uu){
+  			$("#wjj5").hide();
+  			 location.reload(); 
+  		}
+			</script>
+							<div id="wjj5" align="center"></div>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="22" height="24" valign="middle">
+									<span class="fdj">按</span>
+								</td>
+								<td width="120" valign="middle">
+									<select id="showinfo" name="select5" onchange="javascript:donchang();">
+										<option value="yes">
+											索引信息+正文
+										</option>
+										<option value="no">
+											正文
+										</option>
+									</select>
+								</td>
+								<td valign="middle">
+									<span class="fdj">显示</span>
+								</td>
+								<td width="130" align="right" valign="middle">
+									<span class="fdj">本篇关键字搜索：</span>
+								</td>
+								<td width="200" valign="middle">
+									 <input name="textfield" type="text" id="kw" size="40" />
+								</td>
+								<td valign="middle">
+									<img src="/model/images/chaxun2.jpg" width="53" height="21" onclick="javascript:FindItIE();" style="cursor:pointer;"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="fgzw_right2" id="fgzw_right2">
+					<ul>
+							<li id="tit">【法规标题】新疆维吾尔自治区人民政府办公厅关于调整自治区人工影响天气工作领导小组组成人员的通知</li>
+							<li>【法规文号】新政办发〔2005〕143号</li>
+							<li id="tdat">【发布日期】20050810</li>
+							<li>【实施日期】20050810</li>
+							<li id="tdpt">【发布部门】新疆自治区</li>
+							<li>【效力等级】</li>
+					</ul>
+				</div>
+				<div style="display: none">
+					<form action="/linkserv" method="post" id="links" target="_blank">
+						<input id="txr" name="rids"/>
+					</form>
+				</div>
+				<p>
+					<span class="fgzw_zw">【正文】</span>
+					<span class="fy">
+						
+						<!-- <img style="cursor:pointer;" src="/model/images/fy.gif" onclick="javascript:sub();" width="64" height="20" /> -->
+					</span>
+				</p>
+				<div class="zhengwen" id="maintext">
+					<br/><div align=center ><strong>新疆维吾尔自治区人民政府办公厅关于调整自治区人工影响天气工作领导小组组成人员的通知</strong></div>
+<br><br/><div align=center ><strong>新政办发〔2005〕143号</strong></div>
+<br>伊犁哈萨克自治州，各州、市、县（市）人民政府，各行政公署，各成员单位：
+<br>　　因人事变动和工作需要，自治区人民政府决定对自治区人工影响天气工作领导小组组成人员进行调整，调整后的领导小组组成人员名单如下：
+<br>　　组长：钱智自治区副主席
+<br>　　副组长：
+<br>　　王绍宁自治区人民政府副秘书长
+<br>　　史玉光自治区气象局党组书记、局长
+<br>　　成员：
+<br>　　卡米力·阿不都拉自治区财政厅党组书记
+<br>　　李成自治区发改委副主任
+<br>　　高峰自治区科技厅副厅长
+<br>　　李洪运自治区农业厅副厅长
+<br>　　托乎提·艾合买提自治区水利厅副厅长
+<br>　　热依木江·赛力木自治区畜牧厅助理巡视员
+<br>　　任宜勇自治区气象局副局长
+<br>　　穆汉自治区林业局副局长
+<br>　　王联社自治区环保局副局长
+<br>　　刘吉文民航新疆管理局副局长
+<br>　　李水金自治区无线电管理办公室副主任
+<br>　　姚忠贤自治区公安厅治安管理处副处长
+<br>　　谢兴松新疆军区司令部作战处处长
+<br>　　高尚空军乌鲁木齐指挥所副司令员
+<br>　　田笑明新疆生产建设兵团农业局副局长
+<br>　　艾合买提·吐尔逊中国人民财产保险公司新疆分公司副总经理
+<br>　　领导小组下设办公室，办公室设在自治区气象局。
+<br>　　办公室主任：任宜勇(兼)
+<br>　　常务副主任：王金民
+<br>　　副主任：刘国进、瓦黑提·阿扎买提
+<br>
+<br><div align=right>二○○五年八月十日</div>
+<br>
+<br>
+<br>
+<br>
+				</div>
+				<!--/div 摘录条款-->
+				<form action="zl.htm" method="post" enctype="text/plain">
+					<input type="hidden" id=fn name="fn" />
+					<textarea id=slt name="slt" style="display: none"></textarea>
+				</form>
+				<div id=zlbt
+					style="display: none; width: 55; height: 60; top: 300; left: 270; position: absolute; background-color: #CCFFFF;
+					 border: #CCCCCC thin thin thin thin; font-size: 12px;"
+					onMouseMove="MoveIn(this)" onMouseOut="MoveOut(this)">
+					<table width="210" border="0" cellspacing="0" cellpadding="0">
+					  <tr>
+					    <td class="bg1"><table width="204" border="0" align="center" cellpadding="0" cellspacing="0">
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="摘录此条款" onClick="prezl()" /></td>
+					          </tr>
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="全库全文检索" onClick="search()"/></td>
+					          </tr>
+					           <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="复制" onClick="copy()"/></td>
+					          </tr>
+					        </table></td>
+					      </tr>
+					    </table></td>
+					  </tr>
+					</table>
+				</div>
+				<!--/div 摘录条款-->
+				<div id="biaozhu">
+					资料提供:法律之星 引用时请对照正式文本
+				</div>
+			</div>
+			<div id="copyright">
+				版权所有：1992-2013 北京中天诺士达科技有限责任公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服热线：010-65155090 800-810-5148
+			</div>
+		</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		</head><body>
+<div id="tip_float" style="position: absolute; display:none;font-size: 12px;"></div>
+		<div style="display: none;">
+			<form method="post" target="_blank" id="cf" name="cf" action="http://trans.law-star.com/jsp/order_1.jsp">
+				<input type="hidden" value="lar509s292.txt" name="id" id="idd">
+			    <input type="hidden" value="1" name="type" id="typee">
+			    <input type="hidden" value="kMhQU5sros2Ojz1WG9yN9VVgocJbD2u+bURaoJq8fb/kVAE1MbYlHw==" name="title" id="titlee">
+				<textarea id="contentd" name="content">4Ond9zqpaS+EzgKuiwFof3BP1TrUlSIIOm5phcVn0i3cw/mU2Lfu/jRA6uZ/Qi7RYq624NXUf/oS
+mXXR511YTUQ2ZZS/8XWFyug8APPSouoIxHfBc6SX6YYxKC8szkQPGwuGaNGUIQ+G9zNexSEyRgDI
+LTCj6Uf6iySSZuAZy2+TuWNl17PVtzdsPtye1e9ifdODLls75zKqUMyig5rr4aX3DFXiLUn/SunB
+QpsJxDH7cCHp1iFsbrpmRDufPUbUhd8FnKamrzGLtCxLlsK9MWkR3Rx6hROl1jCyCbMpSKdsIdUY
+PlcUQ8WV8fVC3WM5zS5JPkYKKVOxQLbBboD+w6IKbD0xQNGGSUWtdTtZkMFRCK9ZxPumhYlye90e
+ZPWfXB6+MNFjxA1bGD0l3eVcXvOcB7CKPtTNu/0N07Xq06MMuMEWbr8eKnAXkXURNWs5OWGydIU4
++nGh4AOPnV2dn+Ik/7DBKOazoglh+oOiMNNA3lV9hpvoKzOH3/3dEJzQZmuZtPp0iZmhHj4P3k4j
+1YGhlRm7Jw4g7YKwRAoNO884geSIODgmIaDJA3HyPF45PEJCXZr/1ji63k4E/VTrFPH2W/7j3tJD
+wQ9RnDtI2F4NaFN024ofU4I5snyXoVFMZnJlUoxrmfbI2ncaEaQC/o8qjw+Lamet2HQDFpF9w9AB
+tUAH9+t55MZGMNz8Qm8fvX+I7AQqRDkZYyEBLkfNFk4aZRrSY/KOj/3901YzrHXJHYSiqtSQmwPX
+ZqOFdsNUVxfGvmo0SNtdTZSn+WEnFuHnfY2wvyaRBUXk+YehR4cdgkhimRMIs3WFH5efHpdGpNWa
+T+C5NK2DYFbl6ki1tJx5lbPHegQlhuokF3WQEm1loOvqQm0Js7wfyxP7EVmd2IPaLUNFvYk/oZ6d
+umZ+HcrWl9SJH2L/dNggkEpTZjijkp5XL/phnYczw2fOFjYIXfRrjEuZ3rOFp63001saQDKpMnbY
+oNXFhiAp2CwhnrZHQWfSmrW69zpJVTSDVNPKATZEGzPn8L7tLsrh/LkAprDRX+JyhUtySZ8Rx3tp
+pHeLPmt6prPwB1Jwg2XJooTE9gc/G4mSKx8hGUP7dzHbvzJQvExlZICq5vKk3UmpLVQV/UebFSno
+AOT1O0qh2MmYt5kXfn8xr+IQAFcPa6vd/hAUbP06jDs4LSwYHkFGdgvCgaSax8VQo8JA1y4CSyuy
+l5DcCQeO9bZDAAKBHA8P8xMvVvVu2CnpgEORojaFSDEwZ1uxOuAWOKb69ILMmNw75HOOsLoKzS0W
+VeRYQvjEKvaX6fBIglnTtNNuWhf6Y1mXjk22z8HuuF6WQcX4HaZYQXBrPmy1TcNvPNUKgHuyzUGl
+SJEed1WfLYjbMKXH2wLEr3Ypl4WOquLuHC0AtXa1K2O5BoTbxeqn77irTzF9JatX/0yRTAIfgt97
+MXPlp3SmG3LHI2UwiNgbYy1qyVbNg2U6oS91+C3n0kJgPA+6cfe2CGCfUlSaYjScEpS60F4Yl2Ad
+smB7M+vLahZOVWL7jFcWDYzvaLFSxt3TldkAMErUqA7VV0A9wqTfX9Q7xNVtOADwVcsqzEcweD8m
+PmGS18XziFD7YrGFwRyWejDAYJfM4RSH8IncF6rfBDg+uGCnBQ6bHwR4daxi4wTPe9qREXXd6vzI
+OjJ5cDEvI5CB9FJPwzBY3NnThoB0aJcGwnTQoiFef7CAR8EgOXcm9N85mD+jQvTWSh112ywqETsO
+0UYyR/q1nQaZHASjonvi8Zi/rmSjBYV0MtQ1xzRauy+YHtw3IDwLWR0SLyrMNoKVu413xSXYAitY
+OK6idtj0ypn9NwmzNawTAgVWgHQJYkMEL0KZ66LUOnVkYDJvinp9oy3k8gqmzC+/SDqnHdKyIZPo
+V0nJ+13KCnsTlEEdO0if2CoOSJZCc9I=</textarea>
+				<input type="hidden" value="bb435aea3aa096a4015ddd148b344598" name="sign" id="sign">
+			</form>
+			<iframe id="downframe" style="display: none"></iframe>
+		</div>
+		
+		<div style="display: none">
+		<div id="fgzltip" style="height: 100px;width: 150px">
+			<span style="margin-left: 20px;">摘录成功!</span>
+		</div>
+		</div>
+		<div id="fgzxjc" style="font-size: 12px;height: 435px;display: none;">
+			<div id="fgzxjc_title">
+				<img src="/model/images/fgzxjc.gif" width="110" height="21" />
+			</div>
+			<form action="/online?action=correct" method="post" id="correctform">
+				<div id="fgzxjc_di">
+					<p>
+						提示：“法律之星”将为纠错最多的用户提供相关奖品，如有必要，请您填写联系人和联系方式。
+					</p>
+					<table width="96%" border="0" align="center" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td width="18%" height="50" align="center">
+								法规标题
+							</td>
+							<td height="20">
+								<input type="text" name="title" id="cor_title" size="87"/>
+							</td>
+						</tr>
+						<tr>
+							<td height="20" align="center" valign="top">
+								错误内容
+							</td>
+							<td>
+								<textarea name="content" cols="68" rows="5" id="cor_content"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联 系 人
+							</td>
+							<td>
+								<input name="username" type="text" id="textfield4" size="18" id="cor_username"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联系方式
+							</td>
+							<td>
+								<input name="phone" type="text" id="textfield3" size="18" id="cor_phone"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td width="18%" height="30" align="center" valign="top">
+								具体内容
+							</td>
+							<td>
+								<textarea name="detail" id="textarea3" cols="68" rows="5" id="cor_detail"></textarea>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="anniu2">
+					<input type="button" name="button3" id="sbtcor" value="我要纠错" class="butt" />
+					<input type="reset" name="button" id="button2" value="清空" class="butt" />
+				</div>
+			</form>
+		</div>
+		<script>	
+			function sub(){		
+				var obj = document.getElementById('cf') ;
+				obj.submit() ;
+			}
+		</script>
+		<style>
+			.xlpx2_right1 {
+				position: absolute;
+				top: 0;
+			}
+			
+			.shiyi, .sycontent{
+				text-indent: 28px;
+				background-color: #c7c7c7;
+			}
+			
+			.sycontent {
+				display: none;
+			}
+		</style>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				//$("#fy2 a").click(function(){
+				//	var txt = document.getElementById("txr");
+				//	txt.value = $(this).attr('ids') ;
+				//	document.getElementById("links").submit() ;
+				//}) ;
+				$(".menu").each(function(){
+					$(this).mouseover(function() {
+						$(this).addClass("bg3");
+					});
+					$(this).mouseout(function() {
+						$(this).removeClass();
+					});
+				});
+				
+				$(".shiyi").click(function() {
+					$(this).next().toggle();
+				});
+				$(".shiyi").mouseover(function() {
+					$(this).css("cursor","hand");
+				});
+
+				$(".tips").each(function(){
+					var t;
+					$(this).mouseover(function(){
+						var top = $(this).offset().top + 20;
+						var left = $(this).offset().left;
+						$(this).css("text-decoration", "underline");
+						var rid = $(this).attr("rid");
+						t = setTimeout(function(){
+							$.ajax({
+								type: "get",
+								url: "/dsc",
+								data: "action=showtip&rid="+rid,
+								success: function(data, textStatus){
+									$("#tip_float").html(data);
+									$("#tip_float").css("top", top).css("left", left).show();
+								}
+							});
+						}, 100);
+					});
+
+					$(this).mouseout(function(){
+						clearTimeout(t);
+						$(this).css("text-decoration", "");
+						$("#tip_float").hide();
+					});
+				});
+				
+				$("#dic").change(function(){
+					$("#dic option:selected").each(function () {
+		                str = $(this).val();
+						if(str=="psl"){
+							return false;
+						}
+						rjs8 = $("#detail").attr("rjs8");
+						$.ajax({
+							type: "get",
+							url: "/userdir",
+							data: "action=addbyrjs8&did="+str+"&rjs8="+rjs8,
+							success: function(data, textStatus){
+								if(data.indexOf('true')!=-1){
+									alert("\u6210\u529f\u6dfb\u52a0\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u5939");//添加到指定的文件夹
+								}
+								else if(data.indexOf('no')!=-1){
+									alert("\u672a\u6807\u8bb0\u4efb\u4f55\u6587\u4ef6") ;//未标记任何文件
+								}
+								else{
+									alert("\u6dfb\u52a0\u5931\u8d25\uff0c\u60a8\u53ef\u4ee5\u7ee7\u7eed\u67e5\u8be2\u6570\u636e\uff0c\u6216\u8005\u91cd\u65b0\u542f\u52a8\u6cd5\u5f8b\u4e4b\u661f\u7a0b\u5e8f\u540e\u518d\u64cd\u4f5c") ;//添加失败，您可以继续查询数据，或者重新启动法律之星程序后再操作
+								}
+							},
+							complete: function(XMLHttpRequest, textStatus){
+								//HideLoading();
+							},
+							error: function(){
+								//请求出错处理
+							}
+					    });
+		            });
+				});
+			});
+
+			function closeTip() {
+				$("#tip_float").hide();
+			}
+		
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function donchang(){
+				var dis = $("#showinfo").val();
+				if(dis == 'yes'){
+					$("#fgzw_right2").slideDown();
+				}else{
+					$("#fgzw_right2").slideUp();
+				}
+			}
+			
+			function ts(){
+				window.open("/pao?fn=lar509s292.txt&action=typeset") ;
+			}
+			function zl(){
+				//window.open("/pao?action=showzl") ;
+			
+				$.ajax({
+					type: "POST",
+					url: "/pao?action=showzl",
+					cache: false,
+					success: function(data){
+						if(data.indexOf("\u672a\u6458\u5f55")!= -1) {
+							//$("#zlinfo").html("无");
+							//setTimeout(function(){$("#zlinfo").html("");}, 2000);
+							$.zxxbox.remind("\u8fd8\u6ca1\u6709\u6458\u5f55\u5185\u5bb9\uff01");
+						} else {
+							$("#downframe").attr("src", "/pao?action=showzl");
+						}
+					}
+				});
+			}
+			
+				$("#showinfo").val("yes");
+			donchang();
+  		</script>
+		<script type="text/javascript">
+			var IO = document.getElementById('floattool'), Y = IO, H = 0, IE6;
+			IE6 = window.ActiveXObject && !window.XMLHttpRequest;
+			while (Y) {
+				H += Y.offsetTop;
+				Y = Y.offsetParent;
+			};
+		</script>
+		<script type="text/javascript">
+		$("#correct").click(function(){
+			$.zxxbox($("#fgzxjc"), {title: "在线法规纠错", width: 720,btnclose:true,bgclose:true});
+			var title = document.title;
+			var content = IsIE ? document.selection.createRange().text.toString().trim() : window.getSelection().toString().trim();
+
+			$("#cor_title").val(title);
+			$("#cor_content").val(content);
+
+			$("#sbtcor").click(function(){
+				$('#correctform').ajaxSubmit({
+					success: function (html, status) {
+						if(html == "ok") {
+							alert("提交成功，感谢您对我们法律之星的支持！");
+							$.zxxbox.hide();
+						} else if(html == "nonetwork") {
+							alert("网络故障，请检查您的网络连通情况！");
+						} else {
+							alert(html);
+						}
+					}
+				});
+			});
+		});
+		</script></body>
+		</html>
+	</body>
+</html>

@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=9" /><title>
+	
+    和鑫矿业跑出高质量发展“加速度”稀土-有色金属新闻-中色报网-中国有色金属报主办
+
+</title><link href="/Content/external/cnmn/css/cnmn.css" rel="stylesheet" /><link href="/Content/external/cnmn/css/cnmn-responsive.css" rel="stylesheet" /><link href="/Content/css/font-awesome.min.css" rel="stylesheet" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Content/images/ico/apple-touch-icon-144-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Content/images/ico/apple-touch-icon-114-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Content/images/ico/apple-touch-icon-72-precomposed.png" /><link rel="apple-touch-icon-precomposed" href="/Content/images/ico/apple-touch-icon-57-precomposed.png" /><link rel="shortcut icon" href="/Content/images/ico/favicon.png" />
+    <script src="/Content/js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="/Content/css/share.min.css" />
+
+    <meta name="filetype" content="0" />
+    <meta name="publishedtype" content="1" />
+    <meta name="pagetype" content="1" />
+    <meta name="catalogs" content="n_30" />
+    <meta name="contentid" content="430268" />
+    <meta name="publishdate" content="2021/09/07" />
+    <meta name="author" content="周大伟" />
+    <meta name="source" content="中国有色网" />
+
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <link href="/Content/css/two-index.css" rel="stylesheet" />
+    <script src="/Content/js/function.js"></script>
+
+    <script src="/Content/external/cnmn/js/cnmn-validation.js"></script>
+    <script src="/Content/js/jquery.pagination.js"></script>
+
+    <script type="text/javascript">
+		
+        $(function () {
+         
+            var classid='30';
+            var id = getUrlParam(window.location,"id");
+         
+               
+            // GetTopRel("listrel", null, 5, id);
+            loadLiList("getguess", id, "/GuessYouLike.aspx", 4);
+            loadLiList("guessname", id, "/GuessYouLikeByName.aspx", 4);
+            GetList("guessclass",0,classid ,4,24);
+            //  loadTopPic("topnews", "43,28,293,294,297,299,300,302,324",3,null,20,0, null, 1);
+            AjaxInitForm("btnSubmit",1,"/SubmitReComment.aspx");
+            AjaxPageList('#comment_list', '#pagination',5,0,'/ShowCommnet.aspx','/Content/images/user_avatar.png',id);
+            //读取浏览记录
+            //if ($.cookie("cnmnHistory")) {
+            //    var json = eval("(" + $.cookie("cnmnHistory") + ")");
+            //    var list = "";
+            //    $(json).each(function () {
+            //        list = list + "<li><a href='" + this.url + "' target='_blank'>" + this.title + "</a></li>";
+            //        // alert(this.url);
+            //    })
+            //    $("#like").html(list);
+            //}
+           
+            loadFrom("shangjian", classid, 4, 0, 0, null, 1, PicLi, 0, null);//赏鉴图片
+            GetTopDay("monthtop", 30, classid, 10);//排行
+            GetTopDay("weektop", 7, classid, 10);//排行
+
+
+
+          
+        });
+     
+    </script>
+    <script>        //控制内容文章的字体大小
+        
+        $(document).ready(function() { 
+            $("#large").click(function() {
+                $("#txtcont p").css({"font-size":"26px","line-height":"2em"})
+            })
+            $("#middle").click(function() {
+                $("#txtcont p").css({"font-size":"24px","line-height":"2em"})
+            })
+            $("#common").click(function() {
+                $("#txtcont p").css({"font-size":"18px","line-height":"2em"})
+            })
+            //$("#txtcont p img").wrap("<a href='/PicShow.aspx?id=430268' title='点击查看大图'></a>"); 
+        })
+    </script>
+
+        <style type="text/css">
+        .navbar .nav > li .dropdown-menu {
+            margin: 0;
+        }
+        .navbar .nav > li:hover .dropdown-menu {
+            display: block;
+        }
+		#txtcont p{
+		text-indent:0px;
+		text-indent:2em;
+		}
+		#txtcont p img{margin-left:-2em;}
+		#share-3 a{
+			background-image:none;
+		}
+		#share-3 p{
+			font-size:12px;
+			line-height:26px;
+		}
+    </style>
+	<base target="_blank"/>
+</head>
+<body>
+	<div id="GoToTop"></div>
+    <!--页头固定菜单开始-->
+    <div class="navbar navbar-static-top fixtop-menu nav-collapse collapse">
+        <div class="container " style="*+padding-bottom: 5px;">
+            <a href="/" class="font-logo">
+                <img src="/Content/images/logo-2.jpg" alt="中色报网" title="中色报网"></a>
+            <ul class="breadcrumb nav-collapse collapse nav-collapse2" style="padding: 0 15px 12px;*+padding: 0 15px 0;margin: 23px 0px;background: none;">
+                <li class="pull-left"><a href="/About/intro.html" title="中国有色金属报社" target="_blank">中国有色金属报社主办</a></li>
+                <li class="pull-left"><a href="/metal.aspx?id=1" title="有色金属新闻" target="_blank">有色金属新闻</a></li>
+                
+                <!--<li class="pull-left"><a href="/wap.html" title="无线终端" target="_blank">无线终端</a></li>-->
+                <li class="pull-left"><a href="http://ct.cnmn.com.cn/" title="有色报投稿系统" target="_blank">有色报投稿系统</a></li>
+                <li class="pull-left"><a href="/About/contact.html" title="在线投稿" target="_blank">在线投稿</a></li>
+                <li class="pull-left"><a href="http://tv.cnmn.com.cn/#" title="网络视频" target="_blank">网络视频</a></li>
+                <li class="pull-left"><a href="/About/ad.html" title="广告服务" target="_blank">广告服务</a></li>
+                
+                <li class="pull-left"><a  href="#"    onclick="AddFavorite(window.location,document.title)" target="_self">收藏本站</a></li>
+                <li class="pull-left"><a  href="#" onclick="SetHome(this,window.location)" target="_self">设为首页</a></li>
+
+                
+            </ul>
+        </div>
+    </div>
+    <!--页头固定菜单结束-->
+    <!--网页头部开始-->
+    <div id="navbar" class="navbar  navbar-inverse navbar-static-top" style="margin-top: 0px; *+margin-top: 2px;">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse nav-collapse1">
+                    <ul class="nav" id="nav">
+                        <li><a href="/">首页</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" target="_blank" title="要闻" data-toggle="dropdown" href="metal.aspx?id=1">要闻<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank" title="重点新闻" href="ShowNewsList.aspx?id=43">重点新闻</a></li>
+                                 <li><a target="_blank" title="政策法规" href="/ShowNewsList.aspx?id=13">政策法规</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="metal.aspx?id=16" target="_blank"  class="dropdown-toggle" title="铜镍铅锌" data-toggle="dropdown">铜镍铅锌 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                        <li><a target="_blank" title="铜资讯" href="/ShowNewsList.aspx?id=271">铜资讯</a></li>
+                        <li><a target="_blank" title="镍资讯" href="/ShowNewsList.aspx?id=272">镍资讯</a></li>
+                        <li><a target="_blank" title="铅锌资讯" href="/ShowNewsList.aspx?id=276">铅锌资讯</a></li>
+                        <li><a target="_blank" title="相关资讯" href="/ShowNewsList.aspx?id=865">相关资讯</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a href="metal.aspx?id=17" target="_blank" class="dropdown-toggle" title="铝" data-toggle="dropdown">铝<b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank" title="铝土矿" href="/ShowNewsList.aspx?id=19">铝土矿</a></li>
+                                <li><a href="ShowNewsList.aspx?id=273" title="铝资讯" target="_blank">铝资讯</a></li>
+                                <li><a href="ShowNewsList.aspx?id=876" title="氧化铝" target="_blank">氧化铝</a></li>
+                                <li><a href="ShowNewsList.aspx?id=877" title="电解铝" target="_blank">电解铝</a></li>
+                                <li><a href="ShowNewsList.aspx?id=878" title="铝加工" target="_blank">铝加工</a></li>
+                                <li><a href="ShowNewsList.aspx?id=879" title="铝应用" target="_blank">铝应用</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" target="_blank" data-toggle="dropdown" title="稀有稀土" href="/metal.aspx?id=23">稀有稀土<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                        <li><a target="_blank" title="稀土" href="/ShowNewsList.aspx?id=30">稀土</a></li>
+                        <li><a target="_blank" title="钨" href="/ShowNewsList.aspx?id=279">钨</a></li>
+                        <li><a target="_blank" title="钼" href="/ShowNewsList.aspx?id=280">钼</a></li>
+                        <li><a target="_blank" title="贵金属" href="/ShowNewsList.aspx?id=283">贵金属</a></li>
+                        <li><a target="_blank" title="锑" href="/ShowNewsList.aspx?id=853">锑</a></li>
+                        <li><a target="_blank" title="硅" href="/ShowNewsList.aspx?id=854">硅</a></li>
+                        <li><a target="_blank" title="锂" href="/ShowNewsList.aspx?id=855">锂</a></li>
+                        <li><a target="_blank" title="钴" href="/ShowNewsList.aspx?id=860">钴</a></li>
+                        <li><a target="_blank" title="铟铋锗" href="/ShowNewsList.aspx?id=861">铟铋锗</a></li>
+                        <li><a target="_blank" title="硬质合金" href="/ShowNewsList.aspx?id=862">硬质合金</a></li>
+                        <li><a target="_blank" title="光伏" href="/ShowNewsList.aspx?id=864">光伏</a></li>
+                             <li class="divider"></li>
+                                <li><a target="_blank" href="/ShowNewsList.aspx?pid=23&t=7">一体化产业链</a></li>
+                    </ul>
+                    </li>
+                        <li class="dropdown"><a href="/metal.aspx?id=35" target="_blank" title="有色市场" class="dropdown-toggle" data-toggle="dropdown">有色市场<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank" title="期货" href="/ShowNewsList.aspx?id=848">期货</a></li>
+                                <li><a target="_blank" title="现货" href="/ShowNewsList.aspx?id=849">现货</a></li>
+                                <li><a target="_blank" title="上市公司" href="/ShowNewsList.aspx?id=850">上市公司</a></li>
+                                <li><a target="_blank" title="交易所" href="/ShowNewsList.aspx?id=859">交易所</a></li>
+                            </ul>
+                        </li>
+                    <li class="dropdown"><a href="/metal.aspx?id=14" class="dropdown-toggle" data-toggle="dropdown">科技<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="/ShowNewsList.aspx?id=293">新技术</a></li>
+                            <li><a target="_blank" href="/ShowNewsList.aspx?id=294">装备</a></li>
+                             <li><a target="_blank" href="/ShowNewsList.aspx?id=31">再生金属资讯</a></li>
+                            <li><a target="_blank" href="/ShowNewsList.aspx?id=24">循环经济</a></li>
+                        </ul>
+
+
+                    </li>
+                    <li class="dropdown"><a href="/metal.aspx?id=22" target="_blank" class="dropdown-toggle" title="镁钛" data-toggle="dropdown">镁钛<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" title="镁资讯" href="ShowNewsList.aspx?id=274">镁资讯</a></li>
+                            <li><a target="_blank" title="钛资讯" href="/ShowNewsList.aspx?id=281">钛资讯</a></li>
+                            <li><a target="_blank" title="镁应用" href="/ShowNewsList.aspx?id=866">镁应用</a></li>
+                            <li><a target="_blank" title="钛应用" href="/ShowNewsList.aspx?id=872">钛应用</a></li>
+                            <li><a target="_blank" title="镁市场评论" href="/ShowNewsList.aspx?id=873">镁市场评论</a></li>
+                            <li><a target="_blank" title="钛市场评论" href="/ShowNewsList.aspx?id=874">钛市场评论</a></li>
+                            <li><a target="_blank" title="新材料前沿" href="/ShowNewsList.aspx?id=29">新材料前沿</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="/metal.aspx?id=87" target="_blank" class="dropdown-toggle" data-toggle="dropdown" title="地矿建设">地矿&nbsp;建设<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/ShowNewsList.aspx?id=851" target="_blank" title="地矿">地质矿业</a></li>
+                            <li><a href="/ShowNewsList.aspx?id=852" target="_blank" title="建设">建设工程</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/art" title="企业文化" target="_blank">企业文化</a></li>
+					<!--<li><a href="/fav/html/special/" title="专题" target="_blank">专题</a></li>-->
+                    <li class="dropdown"><a href="/NewsMarket.aspx" class="dropdown-toggle" title="行情报价" data-toggle="dropdown">行情报价<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+
+                                <li class="active">
+                                <li><a target="_blank" title="欧洲战略小金属" href="/ShowNewsList.aspx?id=50">欧洲战略小金属</a></li>
+
+                                <li><a target="_blank" title="广东南储现货" href="/ShowNewsList.aspx?id=60">广东南储现货</a></li>
+
+                                <li><a target="_blank" title="上海期货交易所" href="/ShowNewsList.aspx?id=61">上海期货交易所</a></li>
+
+                                <li><a target="_blank" title="上海黄金交易所" href="/ShowNewsList.aspx?id=62">上海黄金交易所</a></li>
+
+                                <li><a target="_blank" title="马来西亚现货锡" href="/ShowNewsList.aspx?id=65">马来西亚现货锡</a></li>
+
+                                <li><a target="_blank" title="上海现货" href="/ShowNewsList.aspx?id=67">上海现货</a></li>
+
+                                <li><a target="_blank" title="COMEX每日收盘" href="/ShowNewsList.aspx?id=69">COMEX每日收盘</a></li>
+
+                                <li><a target="_blank" title="废旧行情" href="/ShowNewsList.aspx?id=77">废旧行情</a></li>
+
+                                <li><a target="_blank" title="上海物贸有色市场" href="/ShowNewsList.aspx?id=98">上海物贸有色市场</a></li>
+
+                            </ul>
+                        </li>
+						<li><a href="http://paper.cnmn.com.cn/" title="数字报" target="_blank">数字报</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <!--网页头部结束-->
+    
+
+
+    <!-- #Menu -->
+
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+
+                <ul class="breadcrumb nav-pills">
+                    <li><a href="/"><strong>首页</strong></a> <span class="divider">/</span></li>
+                    
+                    <li><a href="/metal.aspx?id=23"><strong>稀有稀土</strong></a> <span class="divider">/</span></li>
+                    
+                    
+                    <li><a class="active" target="_blank" title="稀土" href="/ShowNewsList.aspx?id=30"><strong>稀土</strong></a> <i class="icon-ok icon-white"></i></li>
+                    
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- /#Menu -->
+    <div class="container">
+        <div class="row">
+
+            <!-- #content -->
+            <div id="content" class="span8">
+                <!-- 固定广告位>
+                <div class="row">
+				    <a class="span8" title="关于举办“金属材料与新材料高级人才洽谈会”的通知" href="/ShowNews1.aspx?id=356462" style="padding-top:18px; margin-bottom:15px;"><img src="/uploadfiles/ad/20160907big.gif" title="关于举办“金属材料与新材料高级人才洽谈会”的通知" alt="关于举办“金属材料与新材料高级人才洽谈会”的通知" style="width:100%;"></a>
+                </div>
+                < 固定广告位 -->
+
+                <div class="container-p">
+                    <h4 class="h4title">和鑫矿业跑出高质量发展“加速度”</h4>
+                    
+                    <p class="info clearfix text-center" style="font-size: 13px;">
+                        <span>
+                            <span class="time">2021年09月07日 8:35 </span>
+                            
+                            <span class="view">365次浏览</span>
+                            来源：
+                                    <a href="http://www.cnmn.com.cn" rel="tag">中国有色网</a>
+                            &nbsp;&nbsp;分类： <a href="/ShowNewsList.aspx?id=30" title="稀土" target="_blank">稀土</a>
+                             &nbsp;&nbsp;作者： <a rel="tag">王宁</a>
+                            </span>
+                        <span class="btn-group ml">
+                            <button class="btn btn-mini btn-text" id="large">大字号</button>
+                            <button class="btn btn-mini btn-text" id="middle">中字号</button>
+                            <button class="btn btn-mini btn-text" id="common">常规</button>
+                        </span>
+                    </p>
+                    
+                    <p class="p1 daodu">
+                        <i class="fa fa-leanpub fa-daodu"></i><strong class="fa-daodutxt">导读：</strong> 　　今年以来，铜镍市场价格持续向好，新疆维吾尔自治区哈密和鑫矿业有限公司（以下简称“和鑫矿业”）党委抢抓机遇、乘势而为，抓班子带队伍，发挥“头雁效应”，实现党建工作与中心工作深度融合，生产经营实现持续盈利，跑出高质量发展“加速度”。
+                    </p>
+                    
+
+                    <div id="txtcont"><p>今年以来，铜镍市场价格持续向好，新疆维吾尔自治区哈密和鑫矿业有限公司（以下简称&ldquo;和鑫矿业&rdquo;）党委抢抓机遇、乘势而为，抓班子带队伍，发挥&ldquo;头雁效应&rdquo;，实现党建工作与中心工作深度融合，生产经营实现持续盈利，跑出高质量发展&ldquo;加速度&rdquo;。</p>
+<p>把握新机遇</p>
+<p>筑牢融合发展&ldquo;新高地&rdquo;</p>
+<p>和鑫矿业着力解决党建工作与生产经营结合不够紧密、融合不够顺畅的难题，不断提升经营质量效益，筑牢融合发展新高地。</p>
+<p>公司党委班子成员靠前调研，带着问题参加支部组织生活会，对支部党建工作、重点工作进行针对性点评；与一线党员开展谈心谈话，听取不同岗位员工想法、建议，通过充分研究、讨论，明确了产品提质增效、降低采购成本、技改创新等5大类14个&ldquo;攻坚摘牌&rdquo;项目。</p>
+<p>结合生产经营工作中的重点和难点，精准立项、科学选题，投入定向激励资金，保障&ldquo;攻坚摘牌&rdquo;项目取得实效，参与者得到肯定。各车间、部门组织专业人员主动申报、立项，支部全体党员自觉亮身份，坚持一名党员就是一面旗帜，通过项目带动、有效定位、扬长避短、精准发力、强化考核，推动技术人员发挥创新能力，形成把业务骨干培养成党员，把党员骨干培养成技术骨干的&ldquo;双培养&rdquo;机制，逐步形成&ldquo;赶超比拼&rdquo;的工作氛围。</p>
+<p>今年以来，采矿车间党支部建立&ldquo;精细化设计、精细化指导、精细化施工、精细化作业、精细化管理&rdquo;体系，中深孔施工效率提升了5%，充填能力提高了50%，选矿尾砂外排量逐步减少；选矿车间党支部精选立项课题、严格过程管控，通过现状分析、细化管理、优化控制、流程改造、新设备应用5个步骤，销售镍精矿品位较&ldquo;攻坚摘牌&rdquo;目标提高了5.5%，镍精矿含铜品位较&ldquo;攻坚摘牌&rdquo;目标下降了2%，实现了产品提质增效，降低了下游企业成本。</p>
+<p>&ldquo;线上 智慧党建&rdquo;</p>
+<p>用好评价考核&ldquo;指挥棒&rdquo;</p>
+<p>和鑫矿业党委立足探索&ldquo;线上+智慧党建&rdquo;新路径的同时，用好评价考核&ldquo;指挥棒&rdquo;，促进党员、干部、技术人员补齐短板、提升素质。按照&ldquo;消除无党员班组&rdquo;总体目标，将党员发展重点放到生产一线、重点岗位中。2021年，新吸收入党积极分子7名、确定发展对象7名，党员人数占员工总数的18%，始终永葆党员队伍的生机与活力。</p>
+<p>运用互联网、大数据等，通过&ldquo;现场管理3.0&rdquo;系统，探索&ldquo;线上+智慧党建&rdquo;路径，实现党建信息资源融合共享。打破党建工作时空限制，设立党史学习教育、党史知识测试、音视频学习、党史学习笔记、抄录学习、党内法规条例和上级党委文件学习等内容，与&ldquo;学习强国&rdquo;形成互补，进一步量化、细化学习内容，确保党员随时随地进行学习。</p>
+<p>坚持党建工作与中心工作同部署、同落实、同检查、同考核，制定和鑫矿业党委《党建工作责任清单》《党建工作任务清单》《党建工作问题清单》，将党建工作考核比例调整至绩效考核的30%，建立考核台账，加强跟踪指导，通过数据分析，对基层党组织的党建工作情况做到心中有数。以目标责任书形式与基层党支部签订党建责任书，层层细化，分解党建重点工作目标，精准落实责任，使每个党支部的党建工作任务得到进一步细化、量化。</p>
+<p>建立完善正向激励保障机制和负向惩戒约束机制，修订完善《干部/党员效能考核方案》，推进干部党员效能考核，力求考核更精准、更管用，让干部有奔头、有干劲；以客观、公平、公正的考核结果，执行带薪考核、末位淘汰机制。落实中层干部&ldquo;管理岗位与职级相分离&rdquo;和技术人员&ldquo;评聘分离&rdquo;制度，明确退出机制，对23名中层干部进行全部解聘，重新聘任上岗，构建&ldquo;能者上、庸者下、劣者汰&rdquo;的选人用人机制。</p>
+<p>选树新典型</p>
+<p>当好解决问题&ldquo;主攻手&rdquo;</p>
+<p>和鑫矿业以典型引领强化队伍管理，通过中心工作促进党员发挥先锋模范作用，推动各项工作再上新台阶。</p>
+<p>每季度大力宣扬表彰党员先进典型，不断提高党员上进心。打造黄世建（党员）创新工作室，从一线操作人员中挖掘爱学习、对专业技术感兴趣的员工进行培养，让员工在工作成就、技术成就中感受创新成果带来的经济效益、管理效益、技术效益、人才培养效益。成立了初、中、高级工教学实训室，同时精准设立创新课题，开展&ldquo;理论+实操&rdquo;的授课方式，采取&ldquo;教学考用&rdquo;一体化模式，打造&ldquo;一岗多能&rdquo;员工队伍。黄世建（党员）创新工作室精选课题立项，和身边员工一起研究的《矿区后门远程控制系统》课题，解决了保安员开锁不便和耗时问题，研发的井底泵房远程在线监控系统，避免了干抽和烧坏水泵现象，解决了人工启停水泵机组的问题。</p>
+<p>开展&ldquo;党员身边&lsquo;三无&rsquo;活动&rdquo;，推进党员干部承包班组、参加班前会、讲安全课，查找各类隐患169条、&ldquo;三违&rdquo;查纠39人次。各党支部根据工作实际，打造&ldquo;品牌党支部&rdquo;，开展&ldquo;线上+党建+安全+生产经营&rdquo;，采矿车间党支部试行党员包班组、党员包中段，推进党员身边无事故；选矿车间党支部实行党员承包项目，在工艺优化、提精降镁、保证回收率和运转率、节能降耗方面开展创新技改；机关党支部开展了党员下班组调研、现场解决问题活动。</p>
+<p>聚焦履职尽责</p>
+<p>筑牢廉洁&ldquo;防控线&rdquo;</p>
+<p>和鑫矿业充分发挥纪检监察专项监督职责，督促各党支部领导班子落实&ldquo;一岗双责&rdquo;，不断加强党风廉政建设。常态化对各单位日常工作情况、监督对象履责及廉洁自律情况开展日常监督。组织开展党风廉政建设责任制检查考核，确保压力传导到位、责任落实到位，今年以来共开展廉政谈话11人次。</p>
+<p>紧盯&ldquo;四风&rdquo;问题顽疾，加强安排部署、开展廉政提醒，以信息形式向干部员工发送廉政提醒，要求节日期间严格践行廉洁自律各项规定。开展专项检查，对节假日期间公务车封存、应急值班、领导带班、是否有违规违纪等情况开展明察暗访10余次，结合安全生产、疫情防控等工作，切实监督工作落实情况。以风险点排查为切入点，将监督延伸至事前酝酿、事中讨论和事后执行全过程，对执行不力的中层干部开展约谈提醒，推动各部门健全内控制度机制10多项，用制度激发廉洁办公的最大效能。</p>
+<p>精准运用&ldquo;四种形态&rdquo;的&ldquo;第一种形态&rdquo;，对不守规矩、不作为、慢作为的干部进行提醒谈话。对&ldquo;一岗双责&rdquo;履职不力的干部给予处置，处置结果与班子考核评价、评先评优、晋升职级挂钩，把严管干部和关心干部结合起来，让敢为、快为、善为的干部得到关心、受到重用。目前，公司共有63名中层干部和关键岗位员工签订《廉洁从业承诺书》并建立廉政档案。</p> </div>
+                    <p class="actor">
+                        责任编辑：周大伟
+                        <div id="share-3" data-sites="weibo,qq,qzone,wechat"></div>
+                        <script src="/Content/js/jquery.share.min.js"></script>
+                        <script>
+                            $('#share-3').share();
+                        </script>
+                    </p>
+                    <div class="clearfix"></div>
+                    <p class="jianjie">如需了解更多信息，请登录中国有色网：<a target="_blank" href="http://www.cnmn.com.cn/"><em>www.cnmn.com.cn</em></a>了解更多信息。</p>
+                    <p class="sm"><strong>中国有色网声明：本网所有内容的版权均属于作者或页面内声明的版权人。<br />
+                        凡注明文章来源为“中国有色金属报”或 “中国有色网”的文章，均为中国有色网原创或者是合作机构授权同意发布的文章。<br />
+                        如需转载，转载方必须与中国有色网（ 邮件：mqk@cnmn.com.cn 或 电话：010-63971479）联系，签署授权协议，取得转载授权；<br />
+                        凡本网注明“来源：“XXX（非中国有色网或非中国有色金属报）”的文章，均转载自其它媒体，转载目的在于传递更多信息，并不构成投资建议，仅供读者参考。<br />
+                        若据本文章操作，所有后果读者自负，中国有色网概不负任何责任。</strong></p>
+                    <div class="container-dl">
+                        <dl class="span4 text-ellipsis1 likeGuess" id="getguess">
+                            <dt style="line-height: 25px;"><a><strong><i class="icon-forward"></i>您可能对以下相关新闻同样感兴趣</strong></a> </dt>
+                        </dl>
+                        <dl class="span4 text-ellipsis1" id="guessname">
+                            <dt style="line-height: 25px;"><a><strong><i class=" icon-hand-right"></i>更多相关新闻</strong></a></dt>
+                        </dl>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    
+                    <div class="clearfix"></div>
+                    <!--form class="form-horizontal" id="form1" action="#" role="form" style="margin-top: 30px; *+margin-top: 90px; border: 1px solid #e2e2e2;">
+                        <div class="contact-message clearfix">
+                            <div class="comment_box">
+                                <h4><a style="text-decoration: underline" href="/NewsComment.aspx?id=430268" target="_blank">发表评论 共有0访客发表了评论</a>
+                                </h4>
+
+                                <div id="comment_list" class="con-middle">
+                                </div>
+                                <div id="pagination" class="flickr"></div>
+                                <!--放置页码>
+                            </div>
+                            
+
+
+<h4>我来说几句吧<a name="Add"></a>
+</h4>
+<h6 class="pull-right">您还没有登录! 请<a class="dologin" href="javascript:viod(0);"> 登录 </a>或<a href="#">  注册 </a></h6>
+<div class="control-group">
+    <textarea class="input-large required" style="width:80%" id="TxtContent" placeholder="请输入留言内容" rows="3" check-type="required"></textarea>
+</div>
+<div class="alert" style="display: none;"></div>
+<div class="control-group">
+    验证码：
+                                     <input type="text" class="form-control login_input required" maxlength="6" style="width: 55px;" name="vercode" id="vercode" check-type="required" />
+    <img src="/Login/CheckCode?ID=1" width="70" height="26" id="imgCode" alt="单击可刷新" style="margin-top: 2px; vertical-align: top; cursor: pointer;" onclick="ClickRemoveChangeCode()" /><span class="help-inline" style="color: #ff0000">区分大小写</span>
+
+    <input id="btnSubmit" name="submit" class="btnzi right" data-loading-text="提交..." type="button" value="提交评论（Ctrl+Enter）" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('btnSubmit').click();return false};" />
+
+</div>
+
+
+
+                        </div>
+                    </form>
+
+                    <div-- class="clearfix"></div-->
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="span4" style="padding-top: 18px;">
+                <div class="row" style="margin-bottom: 20px;">
+                    <a class="span4" title="2017年中国国际铝工业展览会" href="/adsstat.aspx?id=63" style="border: 1px solid #ccc;">
+                        <img title="2017年中国国际铝工业展览会" alt="2017年中国国际铝工业展览会" src="/uploadfiles/20181204.jpg" style="width: 100%;">
+                    </a>
+                </div>
+                <!--
+				<div class="row" style="margin-bottom:20px;">
+				    <a class="span4" title="河南神火煤电股份有限公司 设备拆除 资产处置 提示性公告" href="/subject2020/20200716/henanshihuo" style="border: 1px solid #ccc;">
+                        <img title="河南神火煤电股份有限公司 设备拆除 资产处置 提示性公告" alt="河南神火煤电股份有限公司 设备拆除 资产处置 提示性公告" src="/uploadfiles/2020071612365.jpg" style="width:100%;">
+				    </a>
+				</div>
+				-->
+                <!--div class="row" style="margin-bottom:20px;">
+				    <a class="span4" title="上海天重重型机器有限公司" href="http://www.shtzco.com/" style="border: 1px solid #ccc;">
+                        <img title="上海天重重型机器有限公司" alt="上海天重重型机器有限公司" src="/uploadfiles/20180315.jpg" style="width:100%;">
+				    </a>
+				</div-->
+                <!--div class="row" style="margin-bottom:20px;">
+				    <a class="span4" title="长沙华时捷环保科技发展股份有限公司" href="/adsstat.aspx?id=216" style="border: 1px solid #ccc;">
+                        <img title="长沙华时捷环保科技发展股份有限公司" alt="长沙华时捷环保科技发展股份有限公司" src="/fav/images/20180717.gif" style="width:100%;">
+				    </a>
+				</div-->
+                
+<div class="input-append">
+    <input class="span3" id="searchtxt" type="text" placeholder="输入你想查询的内容" />
+    <button class="btn" id="searchbtn" onclick="search();" type="button"><i class="icon-search"></i></button>
+</div>
+<div class="tabbable" style="margin-top: 20px">
+    <!-- 标签页式导航开始 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" class="btn topbtn active" >新闻排行榜</a></li>
+        
+        <li class="nav-collapse collapse"><a data-target="#weektop" data-toggle="tab" class="btn"><strong>一周</strong></a></li>
+        <li class="nav-collapse collapse"><a data-target="#monthtop" data-toggle="tab" class="btn"><strong>每月</strong></a></li>
+    </ul>
+    <div class="tab-content">
+        
+        <ul class="tab-pane active unstyled conright-list" id="weektop">
+        </ul>
+        <ul class="tab-pane unstyled conright-list" id="monthtop">
+        </ul>
+    </div>
+</div>
+
+<!-- 标签页式导航结束 -->
+
+<div class="tabbable">
+    <!-- 标签页式导航开始 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="/ShowNewsList.aspx?id=28" target="_blank" title="中国有色网专题" class="btn topbtn active">专题</a></li>
+        <li class="pull-right"><a href="/ShowNewsList.aspx?id=28" target="_blank"  title="中国有色网专题" style="padding: 10px; line-height: 20px; font-size: 12px; font-weight: bold;" class="btn active">更多</a></li>
+    </ul>
+    <div class="tab-content">
+        <ul class="tab-pane active unstyled  conright-list" id="subject">
+        </ul>
+    </div>
+</div>
+
+
+<div class="tabbable">
+    <!-- 标签页式导航 -->
+    <ul class="nav nav-tabs text-ellipsistt">
+        <li class="active"><a data-target="#tab01" style="" data-toggle="tab" class="btn topbtn active" href="http://tv.cnmn.com.cn/"><i class=" icon-eye-open"></i>视频</a></li>
+        <li><a data-target="#tab02" data-toggle="tab" class="btn" href="http://tv.cnmn.com.cn/List.aspx?sid=1">企业新闻</a></li>
+        <li class="nav-collapse "><a data-target="#tab03 " data-toggle="tab" class="btn" href="http://tv.cnmn.com.cn/List.aspx?sid=2">专题新闻</a></li>
+         <li class="nav-collapse "><a data-target="#tab04" data-toggle="tab" class="btn" href="http://tv.cnmn.com.cn/List.aspx?sid=3">人物专访</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab01">
+              <ul class="thumbnails ul-style">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=4&amp;si=1&amp;c=2&amp;len=30&amp;re=2&amp;tid=6"></script>
+
+
+            </ul>
+            <div style="clear: both;"></div>
+            <div style="background-color: #dcdbdb; height: 3px; margin: 0 10px 10px;"></div>
+            <div class="con-side1-list text-ellipsis" style="margin-top: 10px;">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=4&amp;si=1&amp;c=3&amp;len=36&amp;re=2&amp;tid=5"></script>
+
+            </div>
+        </div>
+        <div class="tab-pane" id="tab02">
+             <ul class="thumbnails ul-style">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=1&amp;si=1&amp;c=2&amp;len=30&amp;re=2&amp;tid=6"></script>
+            </ul>
+            <div style="clear: both;"></div>
+            <div style="background-color: #dcdbdb; height: 3px; margin: 0 10px 10px;"></div>
+            <div class="con-side1-list text-ellipsis" style="margin-top: 10px;">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=1&amp;si=1&amp;c=3&amp;len=36&amp;re=2&amp;tid=5"></script>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab03">
+          <ul class="thumbnails ul-style">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=2&amp;si=1&amp;c=2&amp;len=30&amp;re=2&amp;tid=6"></script>
+
+            </ul>
+            <div style="clear: both;"></div>
+            <div style="background-color: #dcdbdb; height: 3px; margin: 0 10px 10px;"></div>
+            <div class="con-side1-list text-ellipsis" style="margin-top: 10px;">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=2&amp;si=1&amp;c=3&amp;len=36&amp;re=2&amp;tid=5"></script>
+            </div>
+        </div>
+               <div class="tab-pane" id="tab04">
+          <ul class="thumbnails ul-style">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=3&amp;si=1&amp;c=2&amp;len=30&amp;re=2&amp;tid=6"></script>
+
+            </ul>
+            <div style="clear: both;"></div>
+            <div style="background-color: #dcdbdb; height: 3px; margin: 0 10px 10px;"></div>
+            <div class="con-side1-list text-ellipsis" style="margin-top: 10px;">
+                <script type="text/javascript" src="https://tv.cnmn.com.cn/Transfer.aspx?t=&amp;uid=0&amp;sid=3&amp;si=1&amp;c=3&amp;len=36&amp;re=2&amp;tid=5"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="tabbable">
+    <!-- 标签页式导航开始 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a  class="btn topbtn active">图片</a></li>
+        <li class="pull-right"><a  target="_blank"  style="padding: 10px; line-height: 20px; font-size: 12px; font-weight: bold;" class="btn active">更多</a></li>
+    </ul>
+    <ul class="thumbnails" id="shangjian">
+    </ul>
+</div>
+<div class="tabbable">
+    <!-- 标签页式导航开始 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="http://www.cnmn.com.cn/wap.html"  class="btn topbtn active">扫描二维码关注</a></li>
+
+    </ul>
+
+
+
+    <ul class="thumbnails">
+        <li class="span2">
+
+            <a href="http://weibo.com/cnmn/" class="thumbnail" title="中国有色网微博">
+                <img src="/Content/images/weibo.jpg" alt="中国有色网微博" title="中国有色网微博" style="margin-top: 5px; width: 130px; height: 130px;" />中国有色网微博</a>
+
+
+        </li>
+        <li class="span2"><a href="/wap.html" target="_blank" class="thumbnail"  title="中国有色网微信">
+            <img src="/Content/images/weixin.jpg" alt="中国有色网微信" title="中国有色网微信" style="margin-top: 5px; width: 130px; height: 130px;" />中国有色网微信</a>
+     
+        </li>
+		<li class="span2">
+
+                                <a target="_blank" class="thumbnail" title="钛微媒">
+                                    <img src="/Content/images/7-en.png" alt="钛微媒" title="钛微媒" style="margin-top: 5px; width: 130px; height: 130px;" />以钛为媒结缘天下钛客</a>
+
+
+                            </li>
+                            <li class="span2"><a target="_blank" class="thumbnail" title="锂事汇，汇集天下锂事">
+                                <img src="/Content/images/4-en.png" alt="锂事汇，汇集天下锂事" title="锂事汇，汇集天下锂事" style="margin-top: 5px; width: 130px; height: 130px;" />锂事汇，汇集天下锂事</a>
+
+                            </li>
+							<li class="span2"><a target="_blank" class="thumbnail" title="铜微媒：“铜”道中人必看">
+                                <img src="/Content/images/铜微媒：“铜”道中人必看.jpg" alt="铜微媒：“铜”道中人必看" title="铜微媒：“铜”道中人必看" style="margin-top: 5px; width: 130px; height: 130px;" />铜微媒：“铜”道中人必看</a>
+
+                            </li>
+    </ul>
+</div>
+<div style="clear: both;"></div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <ul class="nav nav-list bs-docs-sidenav affix nav-collapse collapse " style="margin-top: 150px; right: 0;">
+        <li style="text-align: center"><i class=" icon-chevron-up"></i></li>
+        <li style="text-align: center"><a href="#GoToTop" target="_self">返回顶部</a></li>
+        <li class="" style="text-align: center"><a href="/">返回首页</a></li>
+        <li style="text-align: center"><i class="  icon-chevron-down"></i></li>
+    </ul>
+
+    <script language="javascript">
+        //第一部分：插码设置
+        var _paq = _paq || []; window['_paq'] = _paq;
+
+        _paq.push(['appkey', 'UAR-000194_718']);
+        _paq.push(['cata', 'cata_log']);
+        _paq.push(['attr', 'itemid=430268');
+    _paq.push(['trackPV');
+    //第二部分：引入基本插码
+    (function () {
+        var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+        pa.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'rev.uar.hubpd.com/agent/pa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+    })();
+    </script>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row" style="text-align: center; line-height: 24px">
+                <div class="span12 ml0"><span><a href="/About/intro.html" target="_blank" title="中国有色金属报社">[中国有色金属报社]</a></span>- <span><a href="/help/" title="网站导航" target="_blank">[网站导航]</a></span>- <span><a href="/About/contact.html" title="联系我们" target="_blank">[联系我们]</a></span>- <span><a href="/About/ad.html" title="广告服务" target="_blank">[广告服务]</a></span>- <span><a href="http://market.cnmn.com.cn/" target="_blank" title="有色金属商务平台">[有色金属商务平台]</a></span>- <span><a href="/ShowNews1.aspx?id=287498" title="人才招聘">[人才招聘]</a></span>-- <span><a href="http://www.cnmn.com.cn/">[<script src="http://s19.cnzz.com/stat.php?id=3198428&web_id=3198428" language="JavaScript"></script>] </span></div>
+                <div class="span12 ml0">
+                    <p><a title="信息网络传播视听节目许可证" href="http://www.cnmn.com.cn/uploadfiles/images/shiting.jpg" target="_blank">信息网络传播视听节目许可证0108313</a>&nbsp;
+<a title="互联网新闻信息服务许可证" href="http://www.cnmn.com.cn/uploadfiles/images/xinwen.jpg" target="_blank">互联网新闻信息服务许可证10120170077</a>&nbsp;
+<a href="http://www.cnmn.com.cn/uploadfiles/images/jyxkz.gif" target="_blank">中华人民共和国电信与信息服务业务经营许可证</a>&nbsp; <!--a href="http://www.cnmn.com.cn/uploadfiles/images/Xukezheng.jpg" title="互联网新闻信息服务许可证" target="_blank">互联网新闻信息服务许可证</a> <a href="http://www.cnmn.com.cn/uploadfiles/images/VideoZ.jpg" title="信息网络传播视听节目许可证" target="_blank">信息网络传播视听节目许可证</a--> <a title="京公网安备" href="http://www.beian.gov.cn/portal/index" target="_blank">京公网安备11010802026470</a>&nbsp; <a title="工信部备案查询" href="https://beian.miit.gov.cn">京ICP备12016172号</a></p>
+                    <p>
+                        <span><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700547" title="标识" target="_blank">
+                            <img alt="标识" src="http://www.cnmn.com.cn/uploadfiles/images/00_wscfy.gif" width="118" height="48"></a> <a href="http://net.china.cn/" title="举报" target="_blank">
+                                <img src="http://www.cnmn.com.cn/uploadfiles/images/00_ws01.gif" alt="举报" width="118" height="48"></a> <a href="http://www.bj.cyberpolice.cn/index.htm" title="网络110" target="_blank">
+                                    <img src="http://www.cnmn.com.cn/uploadfiles/images/00_ws.gif" title="网络110" alt="网络110" width="118" height="48"></a></span>
+                    </p>
+                    <p>技术支持热线(7X24小时)：18600642261  内容支持：010-63941034 <!--(手机)13810164406-->；运维支持：010-63971479 (手机)13520882137</p>
+                    <p>客户服务：010-63941034 (手机)13811333438；E-mail： <a href="mailto:cnmn@cnmn.com.cn">cnmn@cnmn.com.cn </a>地址：北京市复兴路乙十二号有色办公大楼613室</p>
+                    <p>本网常年法律顾问——北京市大成律师事务所杨贵生律师&nbsp;&nbsp;虚假失实报道举报电话：010-63941034</p>
+                    <p style="color: red; letter-spacing: 0.5em;"><a href="/About/copyright.html" title="版权声明" target="_blank" style="color: red;">版权所有:北京中色报网络信息科技有限公司</a> 未经书面授权禁止使用 <a href="/About/copyright.html" style="color: #FF0000;">本站版权声明</a></p>
+                </div>
+                <div class="span6"><span class="footer-company">技术支持：北京中色报网络信息科技有限公司</span> +86-010-63941034</div>
+
+            </div>
+        </div>
+    </div>
+     <div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://cl3.webterren.com/webdig.js?z=31' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+</div>
+         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/Content/external/cnmn/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="/Content/js/news.js"></script>
+
+    <script src="/Content/js/jquery.cookie.js"></script>
+
+    <script src="/Content/js/history.js"></script>
+
+	<script src="/Content/js/setof.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-transition.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-alert.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-modal.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-dropdown.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-scrollspy.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-tab.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-tooltip.js"></script>
+    
+    <script src="/Content/external/cnmn/js/cnmn-button.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-collapse.js"></script>
+    <script src="/Content/external/cnmn/js/cnmn-carousel.js"></script>
+	<script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Content/external/mvcpager/jquery.unobtrusive-ajax.min.js"></script>
+
+	
+	<!--百度统计 start-->                
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?8b2515b39346c94734f715bd75a69273";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<!--百度统计 end--> 
+    
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html framework='common:static/js/mod.js'>
+    <head>
+        <script>
+            var Timer = window.Timer = {
+                _s: new Date().getTime(),
+                data: {},
+                stub: function(name) {
+                    this['data'][name] = (new Date().getTime() - this._s) / 1000;
+                }
+            };
+        </script>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="//3gimg.qq.com/lightmap/mobilemap/common/images/qqmap_1ce4474.png">
+        <link rel="touch-icon" href="//3gimg.qq.com/lightmap/mobilemap/common/images/qqmap_1ce4474.png">
+        <meta content="腾讯地图触屏版,地图,触屏版,触屏版地图,腾讯地图,WAP地图,wap地图,腾讯地图wap版,定位,HTML5,手机浏览器地图,手机网页地图,移动网页地图,地点查询,周边查询,公交查询,中国地图,驾车导航,map.wap.qq.com,map.qq.com,maps.qq.com,ditu.qq.com" name="keywords">
+        <meta content="提供全国400多个城市的地图浏览、地址查询、兴趣点搜索、公交换乘、驾车导航等多项服务" name="description">
+        
+        <title>腾讯地图</title>
+        <script src="https://ssl.captcha.qq.com/tencent-kepler.js?appId=9719391"></script>
+        
+        <script type="text/javascript">
+            window._LANDING_URL = location.href;
+            window._DEFAULT_CITY = {"module":"geolocation","type":"default","nation":"中国","province":"广东省","city":"深圳市","adcode":"440300","district":"","addr":"","lat":22.547,"lng":114.085947,"accuracy":10010,"ip":"159.196.171.94"};
+            window._ROOT_PATH = '/m';
+            window._PUSHSTATE = false;
+        </script>
+
+        <!--用于URL fix,处理基于Hash的URL-->
+        <script>!function(e,t){function r(e){return""===e?"":e.replace(n,"$1")+"/"}var i=t.hash.replace(/^#/,""),n=/^\/?(.*?)\/?$/gi,o=/^[#\/]?(.+)\/(.+)/i,a="https://"+r(t.host)+r(window._ROOT_PATH),c=r(a)+r(i)+"?"+location.search.replace(/^\?/,""),l="from=urlfix";return-1===c.indexOf(l)&&(c=c+(/(\?|&)$/.test(c)?"":"&")+l),o.test(i)?t.replace(c):void 0}(this,location);</script>
+
+        <!-- inline 通用样式 -->
+        <style>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}*{-webkit-user-select:none;-webkit-tap-highlight-color:rgba(255,0,0,0)}html,body,h1,h2,h3,h4,p,dl,dt,dd,ul,ol,li,form,input,textarea,select,label,table,td,div,span,a{margin:0;padding:0;outline:0;font-size:100%;background:transparent}html,body{-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;font-family:Helvetica,Tahoma,Verdana,"Microsoft Yahei",simsun,SimHei,Arial,sans-serif;position:relative}table{border-collapse:collapse;border-spacing:0}ul,ol,li{list-style:none}template{display:none}input,button,textarea{font-family:inherit}input,select{}select{-webkit-appearance:none}textarea{resize:none}img,a img{border:0}a,a:hover{text-decoration:none}i,em,b{font-style:normal;font-weight:400}input,textarea{-webkit-user-select:auto}.show{display:block!important}.hide{display:none!important}.hidden{visibility:hidden!important}.visible{visibility:visible!important}button,input[type=button],input[type=reset],input[type=submit],input[type=search]{-webkit-appearance:none}input[type=search]{-webkit-box-sizing:content-box;font-size:100%}input::-webkit-search-decoration,input::-webkit-search-cancel-button{display:none}*{outline:0 none!important;-webkit-tap-highlight-color:transparent}@font-face{font-family:icon;src:url(//3gimg.qq.com/lightmap/mobilemap/common/fonts/icon_f8c63a1.woff) format('woff'),url(//3gimg.qq.com/lightmap/mobilemap/common/fonts/icon_27c582a.ttf) format('truetype');font-weight:400;font-style:normal}[class^=icon-],[class*=" icon-"]{font-family:icon;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-addition:before{content:"\e604"}.icon-fold:before{content:"\e605"}.icon-arrowhead-go-left:before{content:"\e606"}.icon-arrowhead-go-right:before{content:"\e607"}.icon-arrowhead-go-straight:before{content:"\e608"}.icon-arrowhead-turn-around:before{content:"\e609"}.icon-arrowhead-turn-left:before{content:"\e60a"}.icon-arrowhead-turn-right:before{content:"\e60b"}.icon-arrowhead-turn-right-around:before{content:"\e60c"}.icon-expand:before{content:"\e60d"}.icon-bus-transfer:before{content:"\e60e"}.icon-clear-input:before{content:"\e60f"}.icon-e-station:before{content:"\e610"}.icon-history:before{content:"\e611"}.icon-jiejing:before{content:"\e600"}.icon-line-bus:before{content:"\e612"}.icon-line-subway:before{content:"\e613"}.icon-location:before{content:"\e614"}.icon-map:before{content:"\e601"}.icon-more-s:before{content:"\e615"}.icon-nav:before{content:"\e616"}.icon-nav-list:before{content:""}.icon-nav-list{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/ic_navi_bbc66c8.png) no-repeat center center;display:inline-block;background-size:14px 14px;width:14px;height:14px}.icon-nearby:before{content:"\e617"}.icon-screening:before{content:"\e619"}.icon-search:before{content:"\e61a"}.icon-s-station:before{content:"\e61b"}.icon-star:before{content:"\e61c"}.icon-about:before{content:"\e61d"}.icon-amusement:before{content:"\e61e"}.icon-right:before{content:"\e618"}.icon-arrow-left:before{content:"\e603"}.icon-arrow-up2:before{content:"\e620"}.icon-bank:before{content:"\e621"}.icon-bus:before{content:"\e622"}.icon-change-city:before{content:"\e623"}.icon-close:before{content:"\e624"}.icon-download-app:before{content:"\e625"}.icon-exchange:before{content:"\e626"}.icon-feedback:before{content:"\e627"}.icon-food:before{content:"\e628"}.icon-gas-station:before{content:"\e629"}.icon-go2top:before{content:"\e62a"}.icon-hotel:before{content:"\e62b"}.icon-jiejing2:before{content:"\e602"}.icon-life:before{content:"\e62f"}.icon-list:before{content:"\e630"}.icon-teng:before{content:"\817e"}.icon-xun:before{content:"\8baf"}.icon-di:before{content:"\5730"}.icon-tu:before{content:"\56fe"}.icon-more:before{content:"\e635"}.icon-nav2:before{content:"\e636"}.icon-nearby2:before{content:"\e637"}.icon-parking-lot:before{content:"\e638"}.icon-positioning:before{content:"\e63a"}.icon-positioning-3{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/map_position_small_normal_948d1bc.png) no-repeat center center;display:block;background-size:52px 52px;width:52px;height:52px}.icon-positioning-3-cover{display:inline-block;width:42px;height:42px;margin:5px;border-radius:21px;-webkit-border-radius:21px}.icon-positioning-3-cover:active{background:rgba(0,0,0,.1)}.icon-download-cover{display:inline-block;width:42px;height:42px;margin:5px;border-radius:21px;-webkit-border-radius:21px}.icon-download-cover:active{background:rgba(0,0,0,.1)}.icon-positioning-2:before{content:"\e63b"}.icon-scenic-spot:before{content:"\e63c"}.icon-subway:before{content:"\e63d"}.icon-traffic-light:before{content:"\e63e"}.icon-voice:before{content:"\e63f"}.icon-wawa:before{content:"\e640"}.icon-zoom-in{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/map_zoom_top_44a1989.png) no-repeat center center;display:inline-block;background-size:50px 55px;width:50px;height:55px}.icon-zoom-in-cover{display:inline-block;width:42px;height:50px;margin:4px 4px 0;border-top-left-radius:22px;border-top-right-radius:22px;-webkit-border-top-left-radius:22px;-webkit-border-top-right-radius:22px}.icon-zoom-in-cover:active{background:rgba(0,0,0,.1)}.icon-zoom-out{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/map_zoom_bottom_6654df7.png) no-repeat center center;display:inline-block;background-size:50px 55px;width:50px;height:55px}.icon-zoom-out-cover{display:inline-block;width:42px;height:50px;margin:0 4px 4px;border-bottom-left-radius:22px;border-bottom-right-radius:22px;-webkit-border-bottom-left-radius:22px;-webkit-border-bottom-right-radius:22px}.icon-zoom-out-cover:active{background:rgba(0,0,0,.1)}.icon-star-list:before{content:"\e61c\e61c\e61c\e61c\e61c";letter-spacing:2px}.icon-arrow:before{content:"\e603"}.icon-arrow.up{-webkit-transform:rotateZ(-90deg)}.icon-arrow.down{-webkit-transform:rotateZ(90deg)}.icon-arrow.right{-webkit-transform:rotateZ(180deg)}.icon-my-pos-dir{display:block;background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/location_baf6791.png) no-repeat center center;background-size:20px 25px;width:20px;height:25px}.icon-my-pos{display:block;background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/location_2_e7ba794.png) no-repeat center center;background-size:16px 16px;width:27px;height:27px}.icon-download-mapapp{display:block;background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/map_download_normal_7fba4d3.png) no-repeat center center;background-size:52px 52px;width:52px;height:52px}.icon-maker{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/marker_66e71af.png) no-repeat center center;background-size:31px 37px}.defaultRating{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/star_gray_ced82b9.png) no-repeat top left}.avgRating{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/star_red_1547b57.png) no-repeat top left}.toHere{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/route_860ccd5.png) no-repeat center center}.nearbyIcon{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/ic_around_affd31d.png) no-repeat center center}.scapeIcon{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/ic_street_aed6f11.png) no-repeat center center}.nearbyAllFood{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/food_f22722c.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllHotel{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/hotel_8094044.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllView{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/view_0565044.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllGas{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/gas_464479c.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllBar{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/bar_e1b14da.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllBus{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/bus_4cf5a53.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllSubway{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/subway_ecdb86d.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllMarket{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/market_0b12b2d.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllBank{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/bank_0bd7aca.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}.nearbyAllDrugstore{background:url(//3gimg.qq.com/lightmap/mobilemap/common/images/drugstore_c741831.png) no-repeat center center;display:inline-block;background-size:35px 35px;width:35px;height:35px}@font-face{font-family:icon;src:url(//3gimg.qq.com/lightmap/mobilemap/common/fonts/mcicon_2b496ec.woff) format('woff'),url(//3gimg.qq.com/lightmap/mobilemap/common/fonts/mcicon_4b6cd06.ttf) format('truetype');font-weight:400;font-style:normal}.icon-i-bus:before{content:"\e900"}.icon-i-drive:before{content:"\e901"}.icon-i-walk:before{content:"\e902"}html,body,#wrapper,#pager,#pages-container{height:100%}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}.fl,.l,.left{float:left!important}.fr,.r,.right{float:right!important}.masking{z-index:100000;position:absolute;width:100%;height:100%;background:rgba(64,64,64,.8);left:0;top:0}#pages-container .header{background:#fff;color:#333;font-size:18px;font-weight:700;line-height:46px;text-align:center;border-bottom:1px #b4b4b4 solid;position:relative}#pages-container .header .sub{font-size:12px}#pages-container .header .icon-arrow,#pages-container .header .action{color:#0079ff;position:absolute;line-height:inherit}#pages-container .header .icon-arrow:active,#pages-container .header .action:active{color:rgba(0,121,255,.65)}#pages-container .header .icon-arrow{left:10px;font-size:30px}#pages-container .header .icon-arrow-left{position:absolute;left:10px;top:50%;margin-top:-15px;width:30px;height:30px;line-height:30px;font-size:30px;color:#0079ff;overflow:hidden}#pages-container .header .action{right:18px;font-size:16px;font-weight:400}.active-darker:active{background-color:rgba(0,0,0,.05)}.active-text-lighter:active{color:rgba(0,121,255,.65)!important}</style>
+
+        <!-- qq浏览器垂直进入的使用浏览器内部定位api   cycasli 2018-1221 -->
+        
+            <script type="text/javascript" src="//3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+            <script type="text/javascript" src="//jsapi.qq.com/get?api=app.getGeoLocation,app.isInstallApk"></script>
+        
+        <script>Timer && Timer.stub('page_start')</script>
+    <link rel="stylesheet" href="//3gimg.qq.com/lightmap/mobilemap/place/widget/commonDrawPoint/drawPoint_040caf8.css" /><link rel="stylesheet" href="//3gimg.qq.com/lightmap/mobilemap/place/widget/commonDrawLine/drawLine_fcaedc3.css" /><style type="text/css">.public-widget-loading{z-index:10099;display:none;width:40px;height:40px;position:fixed;left:50%;margin-left:-20px;top:50%;margin-top:-20px;-webkit-border-radius:4px;border-radius:4px;background-color:rgba(255,255,255,.9)}@-webkit-keyframes loading-anim{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}.public-widget-loading .loading{-webkit-animation:loading-anim 1000ms linear infinite;width:40px;height:40px;background:rgba(0,0,0,0) url(//3gimg.qq.com/lightmap/mobilemap/common/widget/public_loading/loading_4a14ef6.png) no-repeat center center;background-size:24px 24px;-webkit-border-radius:30px;border-radius:30px}
+#common-widget-map{background:#f6f6f6;position:absolute;width:100%;top:0;bottom:0}#common-widget-map .css-icon-traffic-light{width:84px;height:84px;box-sizing:border-box;padding-top:20px;border:2px solid rgba(0,0,0,.1);box-shadow:0 2px 4px 0 rgba(0,0,0,.15);-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.15);background-color:#fff;display:block;border-radius:46px}#common-widget-map .css-icon-traffic-light>div{width:48px;height:20px;margin:0 auto;border:2px #111 solid;box-shadow:0 0 1px,inset 0 0 1px;-webkit-box-shadow:0 0 1px,inset 0 0 1px;border-radius:14px;margin-top:9px}#common-widget-map .css-icon-traffic-light>div>div{width:1px;height:1px;border:3px #4D4D4D solid;border-radius:4px;display:inline-block;margin-left:2px;background-color:#4D4D4D;vertical-align:middle;margin-top:-2px}#common-widget-map .css-icon-traffic-light>div>div:first-child{margin-left:7px}#common-widget-map .css-icon-traffic-light.highlight>div>div:first-child{border-color:#ED4E1F;background-color:#ED4E1F}#common-widget-map .css-icon-traffic-light.highlight>div>div:last-child{border-color:#28C900;background-color:#28C900}#common-widget-map .css-icon-traffic-light.highlight>div>div:nth-child(2){border-color:#F2C824;background-color:#F2C824}#common-widget-map #map-container{position:absolute;width:100%;height:100%}#common-widget-map #map-my-position-marker{position:absolute}#common-widget-map #map-my-position-marker .round-mask{position:absolute;left:-15px;top:-15px;width:30px;height:30px;-webkit-border-radius:50%;border-radius:50%;background-color:rgba(102,158,255,.12)}#common-widget-map #map-my-position-marker .icon-my-pos-dir,#common-widget-map #map-my-position-marker .icon-my-pos{position:absolute;left:-12.5px;top:-13.5px}#common-widget-map .ctrl-layer{}#common-widget-map .ctrl-layer .to-bottom{position:fixed;bottom:0;width:100%}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl{position:relative;height:0;font-size:0}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #btn-positioning,#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #map-info{display:inline-block}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #btn-positioning{vertical-align:bottom;position:fixed;bottom:148px;right:10px;border:0;box-shadow:0 0 0;-webkit-box-shadow:0 0 0;background-color:transparent;z-index:3}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #map-info{vertical-align:2px;margin-left:0;visibility:hidden}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl .to-right{position:fixed;bottom:185px;right:0}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl .to-right>a{display:block}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl .to-left{position:fixed;bottom:129px;left:-10px}#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl>.cbutton,#common-widget-map .ctrl-layer .to-bottom .bottom-ctrl #map-info{position:relative;top:-90px}#common-widget-map .ctrl-layer a.cbutton,#common-widget-map .ctrl-layer #map-info{margin:10px}#common-widget-map .ctrl-layer #foot-external-content{position:relative}#common-widget-map .ctrl-layer .to-top{position:fixed;top:45px;width:100%}#common-widget-map .ctrl-layer a.cbutton{border-radius:72px;background-color:rgba(255,255,255,.95);-webkit-box-shadow:0 0 6px rgba(0,0,0,.1);box-shadow:0 0 6px rgba(0,0,0,.1);border:1px #bababa solid;overflow:hidden}#common-widget-map .ctrl-layer a.cbutton i{display:block}#common-widget-map .ctrl-layer a.cbutton i:before{display:block;font-size:48px;width:48px;line-height:48px;text-align:center;color:#5e5e5e;padding:10px}#common-widget-map .ctrl-layer a.cbutton i.highlight:before{color:#0079ff}#common-widget-map .ctrl-layer a.cbutton i:active{background:rgba(0,0,0,.1)}#common-widget-map .ctrl-layer #btn-traffic{position:fixed;right:5px;top:90px;border:0}#common-widget-map .ctrl-layer #btn-traffic i:active{background:rgba(0,0,0,.1)}#common-widget-map #nav-foot-detail{border:0}#common-widget-map #btn-zoom{border:0;box-shadow:0 0 0;-webkit-box-shadow:0 0 0;background-color:transparent}#common-widget-map #btn-zoom i:before{padding:20px 10px}#common-widget-map #btn-zoom i#btn-zoom-in:before{padding-bottom:41px}#common-widget-map #btn-zoom i#btn-zoom-out:before{padding-top:41px}#common-widget-map #btn-traffic{-webkit-transform:scale(0.5);transform:scale(0.5)}#common-widget-map #btn-positioning{-webkit-transform-origin:left bottom}#common-widget-map .to-right{-webkit-transform-origin:right bottom;padding:10px}#common-widget-map #btn-zoom{margin-bottom:0;diaplay:inline-block;width:52px}#common-widget-map #btn-traffic{-webkit-transform-origin:right top}#common-widget-map #btn-index-menu{display:none;transform:scale(0.6);-webkit-transform:scale(0.6)}#common-widget-map #map-info .scale,#common-widget-map #map-info .qqmap-text-logo{text-shadow:#fff 0 -1px,#fff 1px 0,#fff 0 1px,#fff -1px 0}#common-widget-map #map-info .scale{font-size:10px;text-align:center;position:relative;line-height:1;white-space:nowrap;padding-bottom:3px;margin-bottom:7px}#common-widget-map #map-info .scale:before,#common-widget-map #map-info .scale:after{content:'';display:block;position:absolute;height:3px;border-top:0}#common-widget-map #map-info .scale:before{left:-1px;right:-1px;bottom:-3px;border:3px #fff solid;border-top:0}#common-widget-map #map-info .scale:after{left:0;right:0;bottom:-2px;border:1px #000 solid;border-top:0}#common-widget-map #map-info .qqmap-text-logo{font-family:icon;font-size:12px;letter-spacing:-2px;color:rgba(0,0,0,.6)}#common-widget-map.active{bottom:152px}
+.common-widget-searchbar{display:none;z-index:10}.common-widget-searchbar .tonav{display:none}
+.place-widget-resultheader{position:relative;background-color:#fff;height:100%}.place-widget-resultheader .topbar{position:fixed;left:0;right:0;top:0;padding:8px 60px;background-color:#fff;border-bottom:1px solid #d3d3d3;z-index:1000}.place-widget-resultheader .topbar .tosearch{display:block;height:30px;background-color:#ebebeb;color:#333;padding:0 8px;font-size:15px;line-height:30px;border-radius:5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.place-widget-resultheader .topbar .tosearch:active{background-color:rgba(0,0,0,.05)}.place-widget-resultheader .topbar .change-model,.place-widget-resultheader .topbar .cancle-search{position:absolute;top:0;width:60px;height:46px;background-color:#fff;color:#0079ff;font-size:16px;line-height:46px;text-align:center}.place-widget-resultheader .topbar .change-model:active,.place-widget-resultheader .topbar .cancle-search:active{color:rgba(0,121,255,.65)}.place-widget-resultheader .topbar .change-model .icon-map,.place-widget-resultheader .topbar .cancle-search .icon-map,.place-widget-resultheader .topbar .change-model .icon-list,.place-widget-resultheader .topbar .cancle-search .icon-list{padding-left:10px;display:block;font-size:24px}.place-widget-resultheader .topbar .change-model .text-list,.place-widget-resultheader .topbar .cancle-search .text-list,.place-widget-resultheader .topbar .change-model .text-map,.place-widget-resultheader .topbar .cancle-search .text-map{color:#0079ff;font-size:16px;line-height:46px;vertical-align:middle}.place-widget-resultheader .topbar .change-model .icon-list,.place-widget-resultheader .topbar .cancle-search .icon-list,.place-widget-resultheader .topbar .change-model .text-list,.place-widget-resultheader .topbar .cancle-search .text-list{display:none}.place-widget-resultheader .topbar .hide-list .icon-list,.place-widget-resultheader .topbar .hide-list .text-list{display:block}.place-widget-resultheader .topbar .hide-list .icon-map,.place-widget-resultheader .topbar .hide-list .text-map{display:none}.place-widget-resultheader .topbar .change-model{left:0}.place-widget-resultheader .topbar .cancle-search{display:block;right:0;text-align:center}.place-widget-resultheader .poiresultlist{padding-top:47px;background-color:#fff}.place-widget-resultheader .initClose{display:none}.place-widget-resultheader .poiresultlist_top{padding-top:0}.close-widget{background-color:transparent;height:auto}
+.place-widget-resultlist .poiresultitem{position:relative;padding-left:46px;display:block;z-index:300}.place-widget-resultlist .poiresultitem:last-child{border-bottom:1px solid #d3d3d3}.place-widget-resultlist .poiresultitem:last-child .poidet{border-bottom:0}.place-widget-resultlist .poiresultitem:active{background-color:rgba(0,0,0,.05)}.place-widget-resultlist .poiresultitem .poidet{display:block;padding:7px 60px 8px 0;border-bottom:1px solid #d3d3d3}.place-widget-resultlist .poiresultitem .poidet .poi-title{display:block;font-size:15px;line-height:31px;color:#54585e;height:31px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.place-widget-resultlist .poiresultitem .poidet .rich-info{font-size:0;color:gray;padding-top:2px}.place-widget-resultlist .poiresultitem .poidet .rich-info span{padding:0 6px;font-size:11px;border-left:1px solid #b4b4b4}.place-widget-resultlist .poiresultitem .poidet .rich-info span:first-child{padding-left:0;border-left:0}.place-widget-resultlist .poiresultitem .poidet .rich-info span:last-child{padding-right:0}.place-widget-resultlist .poiresultitem .poidet .rich-info .start-level{display:inline-block;position:relative;padding-right:0;margin-right:6px}.place-widget-resultlist .poiresultitem .poidet .rich-info .start-level .icon-star-list{display:inline-block}.place-widget-resultlist .poiresultitem .poidet .rich-info .start-level .dark-list{color:#cccbcb;font-size:11px;line-height:15px}.place-widget-resultlist .poiresultitem .poidet .rich-info .start-level .light-list{position:absolute;left:0;font-size:11px;line-height:15px;overflow:hidden;color:#ff3f3f}.place-widget-resultlist .poiresultitem .poidet .rich-info .prince{color:#ff3f3f}.place-widget-resultlist .poiresultitem .poidet .poi-addr{display:block;font-size:11px;color:#999;line-height:19px;height:19px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.place-widget-resultlist .poiresultitem .tonav{display:block;position:absolute;right:0;top:0;width:18%;height:100%;text-align:center}.place-widget-resultlist .poiresultitem .tonav i{display:block;position:absolute;bottom:28px;right:0;width:100%;font-size:19px;line-height:25px;color:#0079ff}.place-widget-resultlist .poiresultitem .tonav:active{background-color:rgba(0,0,0,.05)}.place-widget-resultlist .poiresultitem .tonav .distance{position:absolute;display:block;bottom:9px;right:0;width:100%;height:19px;overflow:hidden;font-size:11px;color:gray;line-height:19px;text-align:center}.place-widget-resultlist .poiresultitem .item-index{display:block;position:absolute;top:15px;left:15px;background-color:#ff3f3f;width:16px;height:16px;border-radius:16px;text-align:center;font-size:12px;color:#fff;line-height:16px}
+.backToListContainer{position:fixed;top:53px;right:15px;z-index:3;height:42px;width:42px}.backToListContainer .place-change-model.backToList{width:40px;height:40px;border:1px solid rgba(0,0,0,.1);box-shadow:0 1px 2px 0 rgba(0,0,0,.15);-webkit-border-radius:22px;border-radius:22px;background-color:#fff}.backToListContainer .place-change-model.backToList .backToListButton{color:#3c69ef;font-size:14px;display:inline-block;padding-left:6px;line-height:42px;vertical-align:middle}.backToListContainer .place-change-model.backToList:active{background:rgba(0,0,0,.1)}.banner-hide{display:none}.banner-show{display:-webkit-box}
+.pageCardContainer{position:fixed;z-index:200;bottom:0;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:100%;height:147px;background-color:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,.15);border:1px solid rgba(0,0,0,.1)}.pageCardContainer .commonText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pageCardContainer .pageCardContent{height:89px;width:100%;margin-top:14px;border-bottom:1px solid rgba(0,0,0,.1)}.pageCardContainer .pageCardContent .pageCardClick{position:absolute;width:300px;height:89px;z-index:1000}.pageCardContainer .pageCardContent .pageCardTitle{font-size:16px;color:#111;margin-left:18px;margin-bottom:5px;width:70%;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pageCardContainer .pageCardContent .pageCardRating{width:60px;height:12px;display:inline-block;position:relative;margin-left:18px}.pageCardContainer .pageCardContent .pageCardRating .defaultRating,.pageCardContainer .pageCardContent .pageCardRating .avgRating{display:inline-block;background-size:60px 12px;width:60px;height:12px;position:absolute}.pageCardContainer .pageCardContent .pageCardPrice{display:inline-block;font-size:13px;height:18px;position:relative;color:#666;margin-left:5px;vertical-align:bottom;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pageCardContainer .pageCardContent .pageCardDis,.pageCardContainer .pageCardContent .pageCardAddr,.pageCardContainer .pageCardContent .pageCardDisCommon{display:inline-block;font-size:13px;height:18px;position:relative;margin-left:0;vertical-align:bottom;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pageCardContainer .pageCardContent .pageCardAddr,.pageCardContainer .pageCardContent .pageCardDisCommon{display:block;left:18px;margin-top:0}.pageCardContainer .pageCardContent .pageCardAddr{margin-top:5px;width:75%}.pageCardContainer .pageCardContent .pageCardTag{margin-left:8px;margin-top:5px;width:270px;overflow:hidden;height:25px}.pageCardContainer .pageCardContent .pageCardTag .pageCardCategoryHide,.pageCardContainer .pageCardContent .pageCardTag .pageCardHotReviewHide{display:none}.pageCardContainer .pageCardContent .pageCardTag span{display:inline-block;border:1px solid #999;border-radius:100px;-webkit-border-radius:30px;font-size:13px;color:#666;padding:1px 5px;margin-left:6px;margin-bottom:5px}.pageCardContainer .pageCardContent .pageCardTag span:first-child{margin-left:10px}.pageCardContainer .pageCardContent .pageCardToHere{position:absolute;width:25%;height:38%;margin-left:76%;margin-top:-65px}.pageCardContainer .pageCardContent .pageCardToHere .toHere{display:inline-block;background-size:contain;width:100%;height:100%}.pageCardContainer .pagecardBtn{width:340px;height:44px}.pageCardContainer .pagecardBtn .toCenter{display:inline-block;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.pageCardContainer .pagecardBtn .searchNearby,.pageCardContainer .pagecardBtn .streetScape{width:50%;height:43px;position:absolute}.pageCardContainer .pagecardBtn .searchNearby span,.pageCardContainer .pagecardBtn .streetScape span{font-size:14px;color:#111;margin-left:2px}.pageCardContainer .pagecardBtn .searchNearby .nearbyIcon{display:inline-block;background-size:18px 18px;width:18px;height:18px;vertical-align:middle}.pageCardContainer .pagecardBtn .streetScape{left:50%}.pageCardContainer .pagecardBtn .streetScape .scapeIcon{display:inline-block;background-size:18px 18px;width:18px;height:18px;vertical-align:bottom}.pageCardHide{display:none}.firstPageCard{transform:translateX(-50%);-webkit-transform:translateX(-50%)}.secondPageCard{transform:translateX(50%);-webkit-transform:translateX(50%)}.thirdPageCard{transform:translateX(150%);-webkit-transform:translateX(150%)}
+.to-map-app{position:fixed;z-index:3;bottom:148px;left:10px}.downloadBtn-show{display:block}.downloadBtn-hide{display:none}</style></head>
+
+    <body>
+    <div id="replaceBodyAsContainer" style="width:100%; height:100%;">
+        <div id="public-loading">
+        <div class="public-widget-loading">
+    <div class="loading"></div>
+</div>
+        </div>
+        <div id="wrapper">
+         
+         <div id="common-widget-map" class="hidden">
+    <div id="map-container"></div>
+
+    <div id="map-my-position-marker">
+        <div class="round-mask"></div>
+        <i class="icon-my-pos-dir"></i>
+
+        <div class="poiresultinfowindow" style="display:none">
+            <a class="tonear"><i class="icon-nearby"></i><span>附近</span></a>
+            <a class="topoidet" href="/m/detail/bubble/">
+                <span class="det-title">我的位置</span>
+                <span class="det-addr"></span>
+            </a>
+            <a class="tonav" href="/m/index/nav"><i class="icon-nav"></i><span>路线</span></a>
+            <div class="icon-maker"></div>
+        </div>
+    </div>
+
+    <div class="ctrl-layer">
+        <div class="to-bottom">
+            <div class="bottom-ctrl" id="bottom-ctrl">
+                
+                <!-- 1 定位按钮：左下角 -->
+                <a id="btn-positioning" data-adtag="positioning"><i class="icon-positioning icon-positioning-3 highlight"><i class="icon-positioning-3-cover"></i></i></a>
+                
+                <!-- 2 比例尺+logo -->
+                <div id="map-info">
+                    <!-- 比例尺 -->
+                    <div class="scale"></div>
+                    <div class="qqmap-text-logo">腾&nbsp;讯&nbsp;地&nbsp;图</div>
+                </div>
+                <!-- 3 右侧 -->
+                <div class="to-right">
+                    <!-- 缩放按钮 -->
+                    <a  id="btn-zoom">
+                        <i id="btn-zoom-in" class="icon-zoom-in" data-adtag="zoomin"><i class="icon-zoom-in-cover"></i></i>
+                        <i id="btn-zoom-out" class="icon-zoom-out" data-adtag="zoomout"><i class="icon-zoom-out-cover"></i></i>
+                    </a>
+                </div>
+                <div class="to-left">
+                     <!-- 弹出菜单-->
+                    <a class="cbutton" id="btn-index-menu" data-adtag="more"><i class="icon-more"></i></a>
+                    <!-- 点评下的详情按钮-->
+                    <a class="cbutton" id="nav-foot-detail"></a>
+                </div>
+            </div>
+            <div id="mqq-drive-filter-set"></div>
+            <div id="map-widget-foot-external-content"></div>
+        </div>
+
+        <a class="cbutton" id="btn-traffic" data-adtag="traffic"><i class="css-icon-traffic-light">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </i></a>
+
+        <div class="to-top">
+            <div id="map-widget-top-external-content"></div>
+        </div>
+
+    </div>
+
+
+</div>
+    
+
+
+
+
+
+
+         <div class="common-widget-searchbar">
+    <div class="search-bar">
+        <div class="container">
+            <form name="poi-search" id="poisearch">
+                <input class="keyword" id="searchword" placeholder="搜索地点、公交、城市" data-adtag="tosearch">
+                <button type="reset" class="clear-input" data-adtag="clear-input"><i class="icon-clear-input"></i></button>
+                <button type="submit" class="submit" data-adtag="submit">搜索</button>
+            </form>
+            <div class="voice" data-adtag="voice"><i class="icon-voice"></i></div>
+            <div class="tonav"><a href="/m/index/nav"><i class="icon-nav"></i></a></div>
+        </div>
+        <a class="cancle" href="/m/index/index/">取消</a>
+    </div>
+</div>
+         <script>Timer && Timer.stub('module_start')</script>
+            <div  id="pager">
+                <!--todos pager 留给iscroll pages-container为整站单页容器，请勿修改！by zhijia-->
+                <div id="pages-container">
+                    
+    
+        
+            <div class="place-widget-resultheader ">
+    <div class="topbar animation" data-animation="alpha" >
+        <a  href="/m/place/search/word=省体育场"  class="tosearch"  data-adtag="tosearch">省体育场</a>
+        <div class="change-model " data-adtag="changemodel">
+            <span class="text-list">列表</span>
+            <span class="text-map">地图</span>
+        </div>
+        <a class="cancle-search" onclick="history.back()" data-adtag="cancle">取消</a>
+    </div>
+    <div class="poiresultlist animation  " id="poiresultlist" data-animation="trUp">
+        
+    <div class="place-widget-resultlist">
+    
+    <div class="poiresultitem">
+        <a class="poidet" data-adtag="listtodetail" href="/m/detail/poi/poid=1769829133781759120">
+            <span class="poi-title">团结体育场</span>
+            
+            <span class="poi-addr">库尔勒8路,库尔勒102路,库尔勒101路(夜间),库尔勒4路</span>
+        </a>
+        <a data-adtag="listtonav" href="javascript:void(0);" class="tonav" data-poiname=团结体育场 data-epointx=86.14734501198765 data-epointy=41.74235500477957 data-addr=库尔勒8路,库尔勒102路,库尔勒101路(夜间),库尔勒4路>
+            <i class="icon-nav2"></i>
+            <span class="distance"></span>
+        </a>
+        <span class="item-index">1</span>
+    </div>
+    
+</div>
+
+
+
+
+
+
+    </div>
+    <div id="poiresultmap">
+        
+
+    
+
+<div class="backToListContainer banner-hide">
+	<div data-adtag="changemodel" class="place-change-model backToList" id="place-change-model">
+		<span class="text-list backToListButton" id="backToListButton">列表</span>
+	</div>
+</div>
+
+
+<div class="slideContainer">
+	
+	<div class="pageCardContainer  pageCardHide  firstPageCard currentPageCard" id="bottomPageCard">
+		
+		<div class="pageCardContent">
+			<div class="pageCardClick"></div>
+			<div class="pageCardTitle">1.团结体育场</div>
+			<div class="pageCardDis pageCardDisCommon"></div>
+			<div class="pageCardAddr">库尔勒8路,库尔勒102路,库尔勒101路(夜间),库尔勒4路</div>
+			<div class="pageCardToHere"><i class="toHere"></i></div>
+		</div>
+		
+		<div class="pagecardBtn">
+			<div class="searchNearby"><div class="toCenter"><i class="nearbyIcon"></i><span>周边</span></div></div>
+			<div class="streetScape"><div class="toCenter"><i class="scapeIcon"></i><span>街景</span></div></div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+
+
+
+<div class="to-map-app downloadBtn-hide" id="to-map-app"><i class="icon-download-mapapp"><i class="icon-download-cover"></i></i></div>
+
+
+
+
+
+
+    </div>
+</div>
+
+        
+    
+    
+    
+
+                </div>
+            </div>
+            <div id="pageToken" style="display:none">964166bb9b4f658713c6f23e0f30abdb540fa30a33c06f50e9854c85</div>
+        </div>
+            <script type="text/javascript">LazyLoad=function(e){function t(t,n){var s,r=e.createElement(t);for(s in n)n.hasOwnProperty(s)&&r.setAttribute(s,n[s]);return r}function n(e){var t,n,s=l[e];if(s&&(t=s.callback,n=s.urls,n.shift(),u=0,!n.length)){l[e]=null;try{t&&t.call(s.context,s.obj)}catch(c){}f[e].length&&r(e)}}function s(){var t=navigator.userAgent;o={async:e.createElement("script").async===!0},(o.webkit=/AppleWebKit\//.test(t))||(o.ie=/MSIE|Trident/.test(t))||(o.opera=/Opera/.test(t))||(o.gecko=/Gecko\//.test(t))||(o.unknown=!0)}function r(r,u,h,g,d){var p,y,m,b,k,v,j=function(){n(r)},w="css"===r,E=[];if(o||s(),u)if(u="string"==typeof u?[u]:u.concat(),w||o.async||o.gecko||o.opera)f[r].push({urls:u,callback:h,obj:g,context:d});else for(p=0,y=u.length;y>p;++p)f[r].push({urls:[u[p]],callback:p===y-1?h:null,obj:g,context:d});if(!l[r]&&(b=l[r]=f[r].shift())){for(i||(i=e.head||e.getElementsByTagName("head")[0]),k=b.urls,p=0,y=k.length;y>p;++p){if(v=k[p],w?m=o.gecko?t("style"):t("link",{href:v,rel:"stylesheet"}):(m=t("script",{src:v}),m.async=!1),m.className="lazyload",m.setAttribute("charset","utf-8"),o.ie&&!w&&"onreadystatechange"in m&&!("draggable"in m))m.onreadystatechange=function(){/loaded|complete/.test(m.readyState)&&(m.onreadystatechange=null,j())};else if(w&&(o.gecko||o.webkit))if(o.webkit){var T;if(b.urls[p]=m.href,T=a()){p--,y=k.length;continue}}else m.innerHTML='@import "'+v+'";',c(m);else m.onload=m.onerror=j;E.push(m)}var A=document.createDocumentFragment();for(p=0,y=E.length;y>p;++p)A.appendChild(E[p]);var x;return"css"===r?x=i:"js"===r&&(x=document.getElementById("pages-container")||i),x.appendChild(A),E}}function c(e){var t;try{t=!!e.sheet.cssRules}catch(s){return u+=1,void(200>u?setTimeout(function(){c(e)},50):t&&n("css"))}n("css")}function a(){var e,t=l.css,s=!1;if(t){for(e=h.length;--e>=0;)if(h[e].href===t.urls[0]){s=!0,n("css");break}u+=1,t&&(200>u?setTimeout(a,50):n("css"))}return s}var o,i,l={},u=0,f={css:[],js:[]},h=e.styleSheets;return{css:function(e,t,n,s){r("css",e,t,n,s)},js:function(e,t,n,s){r("js",e,t,n,s)}}}(this.document);</script>
+            <script type="text/javascript">!function(){var t=t||{},e="",a="",o="",n="",c=[];t={init:function(){},ajaxGet:function(t,e){var a=new XMLHttpRequest;a&&(a.open("GET",t,!0),a.onreadystatechange=function(){4==a.readyState&&e(a.responseText)},a.send(null))},getScript:function(){for(var t=this,o=0;o<c.length;o++)t.ajaxGet(c[o],function(t){n+=t,o===c.length&&(localStorage.setItem(e,n),localStorage.setItem(a,e))})},loadjs:function(t){var e=document.getElementsByTagName("head")[0],a=document.createElement("script");a.type="text/javascript",a.text=t,e.appendChild(a)},storagedata:function(t,n,r){var l=this;e=n,c=r,a=t;try{if("localStorage"in window){o=localStorage[a];var i=e!==o;!localStorage[e]||i?LazyLoad.js(c,function(){l.getScript(),i&&localStorage.removeItem(o)}):l.loadjs(localStorage[e])}else LazyLoad.js(c)}catch(s){LazyLoad.js(c)}}},window.webStorage=t}();</script>
+
+            
+            
+            <script type="text/javascript">
+                (function() {
+                     var relist = [],
+                          version = '//3gimg.qq.com/lightmap/mobilemap/common/js/common_libs_e670e90.js',
+                          //respath = '/webapp'+version;
+                          respath = version;
+                          relist.push(respath);
+                         webStorage.storagedata('static:js/common_libs.js',respath,relist);
+                })();
+            </script>
+        
+    </div>
+     <script type="text/javascript">var _ready = false;_list = [];_when = function(cb) {_ready?cb():_list.push(cb);};LazyLoad.js(['//3gimg.qq.com/lightmap/mobilemap/common/js/util_0874a7c.js', '//3gimg.qq.com/lightmap/mobilemap/common/pkg/common_sync0_libs_f4266a5.js', '//3gimg.qq.com/lightmap/mobilemap/place/pkg/result_libs_72f0494.js', '//3gimg.qq.com/lightmap/mobilemap/place/pkg/info_libs_f5e2820.js', '//3gimg.qq.com/lightmap/mobilemap/common/widget/bottomPageCard/bottomPageCard_4c9111e.js', '//3gimg.qq.com/lightmap/mobilemap/common/widget/downloadMapAppBtn/downloadMapAppBtn_16600b4.js'], function () {!function() {
+    (require('common:widget/animation/animation.js')).init();
+}();
+!function() {
+    var ua = navigator.userAgent;
+    if (/MI[\s]*[\d]/i.test(ua) && /MQQBrowser/i.test(ua)) {
+        $('.qqmap-text-logo').css('letter-spacing','3px');
+    }
+}();
+!function() {
+    Timer && Timer.stub('place_12');
+}();
+!function() {
+    require('place:widget/resultList/resultList.js').init({
+       'city':'巴音郭楞蒙古自治州','word':'省体育场','bound':'','cpos':'','searchBar':'','mode':'list',
+    });
+}();
+!function() {
+    require('common:widget/bottomPageCard/bottomPageCard.js').init([{uid: '1769829133781759120',name: '团结体育场',addr: '库尔勒8路,库尔勒102路,库尔勒101路(夜间),库尔勒4路',pointx: 86.14734501198765,pointy: 41.74235500477957,searchBar: '',mapButton: '',refer: '',backToList:'',foodClassFlag:0,avgRating:'0',hotReviewTag1:'',hotReviewTag2:'',hotReviewTagNum1:'',hotReviewTagNum2:'',price:'',category:'',dis:'' }]);
+    Timer && Timer.stub('place_12');
+}();
+!function() {
+    require('common:widget/downloadMapAppBtn/downloadMapAppBtn.js').init({
+        'city':'巴音郭楞蒙古自治州','word':'省体育场','bound':'','cpos':'','searchBar':'','mode':'list',
+    });
+}();
+!function() {
+    require('place:widget/commonDrawPoint/drawPoint.js').init([{uid: '1769829133781759120',name: '团结体育场',addr: '库尔勒8路,库尔勒102路,库尔勒101路(夜间),库尔勒4路',pointx: 86.14734501198765,pointy: 41.74235500477957,searchBar: '',mapButton: '',refer: '',backToList:'',foodClassFlag:0,avgRating:'0',hotReviewTag1:'',hotReviewTag2:'',hotReviewTagNum1:'',hotReviewTagNum2:'',price:'',category:'',dis:'' }]);
+    Timer && Timer.stub('place_12');
+    require('place:widget/resultMap/resultMap.js').init({
+        'city':'巴音郭楞蒙古自治州','word':'省体育场','bound':'','cpos':'','searchBar':'','mode':'list',
+    });
+}();
+!function() {
+    require('place:widget/commonSearchHeader/commonSearchHeader.js').init({
+        'city':'巴音郭楞蒙古自治州','word':'省体育场','bound':'','cpos':'','searchBar':'','mode':'list',
+    });
+}();
+!function() {
+            var paramsR = {
+             'city':'巴音郭楞蒙古自治州','word':'省体育场','bound':'','cpos':'','searchBar':'','mode':'list',
+            }
+         
+            console.log(paramsR.referer);
+            window._prStat = require('common:widget/util/stat.js');
+            window._prStat.init({appId: 'mobilemap', statService: '//pr.map.qq.com/pingd'});
+
+            Page.start({
+                layer : document.getElementById('replaceBodyAsContainer'),
+                validate: null,
+                pushState : window._PUSHSTATE,
+                root : window._ROOT_PATH
+            });
+
+            listener.on('common.webspeed', 'success', function(evt,nettype){
+                /*0 未知 1g=>wifi 2=>2 3=>3g*/
+                console.log('当前网络类型:',nettype);
+            });
+
+            // app启动初始化
+            require('common:widget/boot/boot.js').init(paramsR);
+
+            window.addEventListener('load', function() {
+                // 监听 orientation changes
+                window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+                    try{
+                        if ( window.orientation === 180 || window.orientation === 0 ){
+                            $ && $('.to-right').show();
+                            $ && $('#btn-traffic').show();
+                        }
+                        if ( window.orientation === 90 || window.orientation === -90 ){
+                            $ && $('.to-right').hide();
+                            $ && $('#btn-traffic').hide();
+                            alert('建议竖屏使用，体验更佳！');
+                        }
+                    }catch(e){
+                        console.log(e);
+                    }
+                }, false);
+
+                Timer && Timer.stub('page_load');
+                _prStat.reportPv();
+                _prStat.reportAllError();
+
+                _prStat.report('customtiming', Timer.data);
+
+                var detect = require('common:static/js/detect.js');
+                var client = {
+                    android:!!detect.os.android,
+                    ios:!!detect.os.ios,
+                    browser:!!detect.browser.qqbrowser
+                }
+                window._prStat.report('runtime', client);
+                if (window.location.href.indexOf('/mqq/')> 0 || window.location.href.indexOf('components/routeplan/')> 0) {
+                    var isLocation = '';
+                    if (!isLocation) {
+                        window._prStat.report('pv','','mc_routeplan'); //路线规划组件的上报
+                    }
+                }
+            })
+        }();;_ready=true;var _item; while((_item=_list.shift())){_item();}});</script></body>
+
+    <script>Timer && Timer.stub('page_end')</script>
+    <script src="//jsapi.qq.com/get?api=app.setShareInfo" type="text/javascript"></script>
+    
+</html>

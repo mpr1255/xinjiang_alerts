@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+<!--包含通用样式-->
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/bh_libs/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/bh_libs/css/content.css" />
+<script src="http://www.tjbh.com/zcms//framework/components/qrcode.js"></script>
+<title>新疆重点发展“十大产业”&#32;特色优势产业&#32;带动增收致富</title>
+<meta name="description" content="" />
+  <style type="text/css">
+	table,tr,td{
+		border: 1px solid #ddd;
+      text-align: center;
+	}
+</style>
+</head>
+<body class="bg-white">
+ <!-- 包含页头 -->
+ 
+<!-- 最顶部 -->
+<nav class="navbar navbar-default" role="navigation">
+			<a class="fhsy" href="http://www.tjbh.com"></a>
+			<div class="container">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul id="nav-l-ul" class="nav navbar-nav ydh">
+						<li>
+							<a href="#" id="localtime"></a>
+							<script type="text/javascript">
+								function showLocale(objD) {
+									var str, colorhead, colorfoot;
+									var yy = objD.getYear();
+									if (yy < 1900) yy = yy + 1900;
+									var MM = objD.getMonth() + 1;
+									if (MM < 10) MM = '0' + MM;
+									var dd = objD.getDate();
+									if (dd < 10) dd = '0' + dd;
+									var hh = objD.getHours();
+									if (hh < 10) hh = '0' + hh;
+									var mm = objD.getMinutes();
+									if (mm < 10) mm = '0' + mm;
+									var ss = objD.getSeconds();
+									if (ss < 10) ss = '0' + ss;
+									var ww = objD.getDay();
+									if (ww == 0) colorhead = "<font color=\"#FF0000\">";
+									if (ww > 0 && ww < 6) colorhead = "<font color=\"#373737\">";
+									if (ww == 6) colorhead = "<font color=\"#008000\">";
+									if (ww == 0) ww = "星期日";
+									if (ww == 1) ww = "星期一";
+									if (ww == 2) ww = "星期二";
+									if (ww == 3) ww = "星期三";
+									if (ww == 4) ww = "星期四";
+									if (ww == 5) ww = "星期五";
+									if (ww == 6) ww = "星期六";
+									colorfoot = "</font>"
+									str = colorhead + yy + "-" + MM + "-" + dd + " " + ww + colorfoot;
+									return (str);
+								}
+
+								function tick() {
+									var today;
+									today = new Date();
+									document.getElementById("localtime").innerHTML = showLocale(today);
+									window.setTimeout("tick()", 1000);
+								}
+								tick();
+							</script>
+						</li>
+						<li class="fh"><a href="http://www.tjbh.com"></a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="http://weibo.com/bhfbt"><img src="/bh_libs/img/i01.png" alt=""> 新浪微博</a></li>
+						<li><a href="http://e.t.qq.com/tjsbhxq"><img src="/bh_libs/img/i02.png" alt=""> 腾讯微博</a></li>
+						<li><a href="http://bhsb.tjbh.com/html/2016-12/06/node_1.htm" style="color:#C00">滨城时报</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+<!-- 主区块 -->
+<div class="container" style="background: #fff">
+<!-- 标识及搜索 -->
+  <div class="row ydh">
+				<div class="col-lg-6">
+					<a href="/">
+						<h1 class="logo"> <img alt="津滨网" title="津滨网" src="/bh_libs/img/jbw201605sy_05.jpg"></h1>
+					</a>
+				</div>
+				<div class="col-lg-6">
+					<div id="search">
+	<form method="get" action="http://www.tjbh.com//zcms/search/result" class="navbar-form navbar-right">
+		<div class="form-group">
+			<input type="text" name="Query"  class="form-control" value="" suggest="true" suggestsource="Search.suggest" size="20"
+			 placeholder="请输入关键词" />
+			<input name="SiteID" type="hidden" value="127" />
+			<input name="AllSite" type="hidden" value="" />
+		</div>
+		<input type="submit" value="搜索" class="btn btn-default" />
+	</form>
+</div>
+				</div>
+			</div>
+<!-- 栏目导航 -->
+<div class="navbar navbar-default ydh" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"> <a class="navbar-brand" href="http://news.tjbh.com/bhnews/index.shtml">
+						<h1><span class="glyphicon glyphicon-home"></span></h1>
+					</a> </div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="bs-example bs-example-tabs">
+					
+                      
+     
+      <ul class="nav navbar-nav">
+       
+        <li role="presentation" class="active">
+         <a href="/bh/">滨城</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/tj/">天津</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/gn/">国内</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/gj/">国际</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/ty/">体育</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/yl/">娱乐</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/llxx/">理论学习</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/xjjwz/">新经济文学</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/bhzx/">滨海政协</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/cycxyj/">产业创新研究</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/yy/">英语</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/ry/">日语</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/hy/">韩语</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/zt/ffjz/">非法集资</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/fddrm-fjdzg/">奋斗的人民&#32;奋进的中国</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/xxgcxjpzsjzqzzggcdcl100zndhsdzyjhjs/">学习贯彻习近平总书记在庆祝中国共产党成立100周年大会上的重要讲话精神</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/cjbg-wsgr/">参军报国&#32;无上光荣</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/dyzh/">德耀中华</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/zmxsdgmjr/">最美新时代革命军人</a>
+        </li>
+        <li role="presentation" class="active">
+         <a href="/dbjmljcmlbcwlwxs/">第八届“美丽津城•魅力滨城”网络微小说</a>
+        </li>
+      </ul>
+     
+    
+                      
+</div>					
+				
+
+
+    
+    </div>
+  <div class="row">
+   <!-- 导航及标题 -->
+   <div class="col-md-8 col-xs-12">
+	<div class="panel panel-default">
+		<div class="panel-heading ydh">
+			<h5>
+				<a href='/'>首页</a><span style='color:#ccc;padding:0 5px;'>/</span><a href='/gn/'>国内</a><span style='color:#ccc;padding:0 5px;'>/</span><a href='/gn/yw/'>要闻</a>
+			</h5>
+		</div>
+		<div class="panel-body">
+          <h1 class="text-center" id="title-h1">新疆重点发展“十大产业” 特色优势产业 带动增收致富</h1>
+			<p class="text-center">稿源：人民日报&#32; &nbsp;&nbsp;编辑：刘阳
+				&nbsp;&nbsp;2021-10-08&#32;10:57</p>
+			<div id="cons"> <div class="header" style="padding-bottom: 0px;"><div class="info"><div data-v-41d071ef="" class="head-info normal-info"><span data-v-41d071ef="" class="pr10"><span data-v-41d071ef="" class="pr10 head-info-copyfrom">人民日报</span> <span data-v-41d071ef="" class="pr10"></span>记者  卫  庶  姜  洁  环球时报记者  张继丹</span>&nbsp;<span data-v-41d071ef="" class="pr10"></span> </div></div></div><div class="article article-detail" style="padding-top: 0px;"><p>　　“风吹石头跑，遍地不长草。”这是人们对戈壁滩的普遍印象。然而，9月28日下午，当记者来到位于新疆维吾尔自治区喀什地区莎车县城南部的戈壁滩时，却见到了一片生机盎然的景象：千余座温室大棚里辣椒、西红柿等优质高效蔬菜长势喜人，不远处的羊良繁中心里上万头绵羊即将出栏，林果区上千亩的核桃等果树丰收在望……这里是今年1月开始规划建设的莎车戈壁产业园，规划总面积达2万亩，当年建设、当年使用、当年见效，惠及3000余名在家门口就业的群众，实现了“向戈壁要产业”。</p><p>　　这是第三次中央新疆工作座谈会召开一年来，新疆各地深入学习贯彻第三次中央新疆工作座谈会精神、贯彻落实新时代党的治疆方略，通过培育壮大特色优势产业，带动当地群众增收致富的一个典型案例。新疆“十四五”期间重点发展石油石化、煤炭煤化工、电力、纺织服装、电子产品、林果、农副产品加工、馕、葡萄酒、旅游等“十大产业”，推动一二三产业融合发展，加快构建现代产业体系，取得显著成效。</p><p>　　馕产业助力脱贫致富</p><p>　　揉面、打馕、烤制……一张张喷香扑鼻的馕饼在打馕师傅的手里做成。作为新疆的特色美食，馕有着悠久的发展历史。如今，色泽金黄的馕，还成了助力当地各族群众脱贫致富的“小金饼”。</p><p>　　9月26日下午，第一次来新疆的青海游客桑女士搭乘旅游专列来到位于喀什市的喀什味道馕产业园，现场观摩制作馕的全过程，和同伴们品尝各种不同口味的馕，并购买了一大包馕准备带回去送给家人朋友。“我已经在这里逛了一个多小时，这种体验式的旅游非常有意思。”桑女士笑着说。</p><p>　　喀什市喀什味道馕产业园建于2020年5月，分为文化展示区、产品加工区、美食品鉴区、歌舞区、电商销售区、民族特色体验区等6个区域，吸引了大批外来游客参观。喀什地区馕产业办公室主任阿布都艾尼·斯地克告诉记者，从去年初起，喀什地区开始布局发展馕产业，已建成馕产业园14个、馕产业合作社201个、馕小屋2300个、馕食品企业54家，解决就业3.7万人，日产馕达654万个。</p><p>　　截至目前，新疆全区日产馕约2325万个，吸纳就业人员11.3万人，日销售额约5752万元，产业带动就业、脱贫致富效果不断凸显。</p><p>　　林果产业铺就致富路</p><p>　　金秋时节，新疆的大街小巷摆满了各种各样的新鲜水果，其中色泽金黄、呈扁圆形的“金皇后”无花果是当地特有的一道风景。然而，由于无花果为鲜食果，保鲜期很短，一度只能销售到附近地区，无法走出新疆，产值很低。</p><p>　　9月25日，记者来到克孜勒苏柯尔克孜自治州阿图什市松他克乡阿孜汗村，当地的果农告诉记者，如今通过采用先进的“气调保鲜技术”，抑制了无花果的呼吸作用，达到健康锁鲜，无花果保鲜期延长至20天以上，可以飞出新疆。据介绍，去年该市电商公共服务中心用2个月时间，销售新鲜无花果货值58.1万元。此外，通过制作无花果酱、无花果脯、无花果罐头等多种耐保存的食品，拓宽销售渠道，无花果成了当地农民的“摇钱树”。</p><p>　　巴音郭楞蒙古自治州焉耆回族自治县，处于葡萄种植的“黄金地带”，是世界上较早种植葡萄和用葡萄酿酒的地区之一，也是新疆四大葡萄酒主产区之一。近年来，该县大力发展酿酒葡萄产业，规划酿酒葡萄种植面积10万亩，目前实际种植面积达4.8万亩，先后引进种植企业（户）28家，建成各类酒庄酒堡15家，葡萄籽皮下游精深加工企业1家，葡萄酒加工能力达到3.5万千升，并形成了集葡萄种植、苗木繁育、技术研发、加工贸易、葡萄酒文化展示、餐饮住宿、旅游度假为一体的一二三产业共同发展的新格局，年综合产值突破2.5亿元。“得知自治区党委将葡萄酒产业列为重点发展的十大产业之一后，我今年计划追加投资，新建酒庄二期和游客接待中心，发展特色农产品、旅游住宿、户外餐饮等项目建设。”位于焉耆县七个星镇的新疆天塞酒庄负责人陈立忠表示。</p><p>　　旅游业增强群众获得感</p><p>　　9月23日上午，走进位于巴音郭楞蒙古自治州博湖县的国家5A级景区博斯腾湖景区大河口景点，一个锅底直径4米、高0.856米、锅体净重3吨、容积10立方米的大锅格外引人注目。景区讲解员萨日古丽·达吾提介绍，每逢开湖节、冰雪节等重大节庆活动，4吨的新鲜野生有机鱼再配上5吨优质的博斯腾湖水，一锅鲜香美味的鱼可供1万人同时享用，场面非常壮观。</p><p>　　近年来，博湖县积极推动“非遗进景区”，使更多人了解并走近了非遗，也让全域旅游有了更丰富内涵。记者走进毗邻大河口景区的东归西海部落民宿体验区，感受原汁原味的东归民俗文化生活。“这里的民宿很有特色，能欣赏到独具特色的民族演出、民俗音乐，品尝到特色美食，感受到非遗文化，住在这里肯定别有一番乐趣。”来自乌鲁木齐的游客刘小杰说。</p><p>　　位于喀什市西北侧的北湖和盘陀湿地公园花草繁茂、景色怡人，不少新人专程来此拍摄婚纱照、举办婚礼庆典。然而，就在几年前，这里却是废弃砖厂、杂乱鱼塘、家庭养殖场、仓储库房、加工厂和私搭乱建的棚户区，环境脏乱差。喀什市近年来对此区域进行大规模改造，建设了19公里绿道、木栈道12671平方米、游步道11.1公里，增加城市绿地面积158.27万平方米，解决了当地约500人就业问题，游客纷至沓来，大家都称赞这里的景色“亚克西”（维吾尔语，意为“好”）！</p></div><p><br/></p> </div>
+			
+		</div>
+		
+<!-- 分享按钮 -->
+<div class="m-md m-t-lg">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- 只要一个div的class是social-share即可，内容会自动初始化 -->
+  <div class="share-component" data-sites="weibo,qzone,qq,wechat"></div>
+</div>
+<!-- 上一篇下一篇 -->
+<div class="m-md b-t b-light text-left">
+ <ul class="list-unstyled m-sm lh20 font14">
+  <li><strong>上一篇</strong>：
+    <a href="/c/2021-10-08/946413.shtml">天山脚下，触摸丝路发展新脉动</a>
+    </li>
+  <li><strong>下一篇</strong>：
+    <a href="/c/2021-10-08/946411.shtml">评论：施政报告着力谋划未来&#32;港深双城效应前景可期</a>
+    </li>
+ </ul>
+</div>
+<!-- 相关内容 -->
+
+	
+
+
+	</div>
+</div>
+   <!-- 右侧 -->
+   <div class="col-md-4 col-xs-12">
+    
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2>新闻排行榜</h2>
+		</div>
+		<div class="panel-body">
+			<div class="list-group ph">
+				
+					
+						<a href="/c/2020-11-23/801066.shtml" title="【新闻深一度】什么是IgM阳性？是否具有传染性？市疾控专家的权威解答来了……" class="list-group-item">【新闻深一度】什么是IgM阳性？是否具有传..</a>
+						<a href="/c/2020-05-11/674348.shtml" title="新冠病毒检测：核酸检测和抗体检测有什么区别？" class="list-group-item">新冠病毒检测：核酸检测和抗体检测有什么区..</a>
+						<a href="/c/2020-04-28/666408.shtml" title="定时开闭园&#32;限流入园&#32;您看好了，五一期间滨海新区11座城市公园及广场这么开放" class="list-group-item">定时开闭园&#32;限流入园&#32;您看好了，五一期间滨..</a>
+						<a href="/c/2020-04-29/667254.shtml" title="连茂君主持召开区委常委会（扩大）会议" class="list-group-item">连茂君主持召开区委常委会（扩大）会议</a>
+						<a href="/c/2020-04-28/666092.shtml" title="【雷霆四号】这类微信“好友”，“杀猪盘”可能已经盯上你了！" class="list-group-item">【雷霆四号】这类微信“好友”，“杀猪盘”..</a>
+						<a href="/c/2019-12-04/542562.shtml" title="第六集&#32;张朝燮的“两地书”" class="list-group-item">第六集&#32;张朝燮的“两地书”</a>
+						<a href="/c/2019-12-29/558548.shtml" title="天津医科大学总医院滨海医院新址投用&#32;将分步实施搬迁&#32;预计明年上半年完成整体搬迁" class="list-group-item">天津医科大学总医院滨海医院新址投用&#32;将分..</a>
+						<a href="/c/2020-11-10/793820.shtml" title="让群众“人暖心更暖”（今日谈）" class="list-group-item">让群众“人暖心更暖”（今日谈）</a>
+						<a href="/c/2020-04-08/651068.shtml" title="服务提醒：驾驶员到港口医院查体，需提前预约！" class="list-group-item">服务提醒：驾驶员到港口医院查体，需提前预..</a>
+						<a href="/c/2020-02-02/581507.shtml" title="疫情防控“三字经”" class="list-group-item">疫情防控“三字经”</a>
+				
+			</div>
+		</div>
+		<div class="panel-heading">
+			<h2>最新新闻</h2>
+		</div>
+		<div class="panel-body">
+			<div class="list-group">
+				
+					
+						<a href="/c/2021-10-08/946427.shtml" title="警惕！在线升级电子社保卡诈骗" class="list-group-item">警惕！在线升级电子社保卡诈骗</a>
+						<a href="/c/2021-10-08/946425.shtml" title="中国男足赢球了！3:2绝杀越南取12强赛首胜" class="list-group-item">中国男足赢球了！3:2绝杀越南取12强赛首胜</a>
+						<a href="/c/2021-10-08/946422.shtml" title="《天津日报》报道丨中石化天津LNG接收站二期码头11月投运" class="list-group-item">《天津日报》报道丨中石化天津LNG接收站二..</a>
+						<a href="/c/2021-10-08/946420.shtml" title="天津市第七届滨海少儿评剧节在新区闭幕" class="list-group-item">天津市第七届滨海少儿评剧节在新区闭幕</a>
+						<a href="/c/2021-10-08/946414.shtml" title="且看新疆展新颜" class="list-group-item">且看新疆展新颜</a>
+						<a href="/c/2021-10-08/946413.shtml" title="天山脚下，触摸丝路发展新脉动" class="list-group-item">天山脚下，触摸丝路发展新脉动</a>
+						<a href="/c/2021-10-08/946412.shtml" title="新疆重点发展“十大产业”&#32;特色优势产业&#32;带动增收致富" class="list-group-item">新疆重点发展“十大产业”&#32;特色优势产业&#32;带..</a>
+						<a href="/c/2021-10-08/946411.shtml" title="评论：施政报告着力谋划未来&#32;港深双城效应前景可期" class="list-group-item">评论：施政报告着力谋划未来&#32;港深双城效应..</a>
+						<a href="/c/2021-10-08/946410.shtml" title="港澳青年，背靠祖国天地宽" class="list-group-item">港澳青年，背靠祖国天地宽</a>
+						<a href="/c/2021-10-08/946171.shtml" title="いつまでも変わらぬ美しさ！「77歳の漢服マダム」がネットで人気" class="list-group-item">いつまでも変わらぬ美しさ！「77歳の漢服マ..</a>
+				
+			</div>
+		</div>
+		<div class="panel-heading">
+			<h2><a href="#home">滨海视频</a></h2>
+		</div>
+		<div class="panel-body">
+			<div class="list-group row">
+				
+					
+						<div class="col-xs-6  text-right">
+							<a href="/c/2021-02-22/845374.shtml" title="春节假期滨城电影市场真“牛”"><img src="/upload/resources/video/2021/02/22/281855_115x76c.jpg" alt="" />
+								<div class="recotitle">春节假期滨城电影市</div>
+							</a>
+						</div>
+						<div class="col-xs-6  text-left">
+							<a href="/c/2021-02-22/845372.shtml" title="筑牢“第一道防线”&#32;捍卫新区人民健康安全&#32;新区卫健委开启新年新征程"><img src="/upload/resources/video/2021/02/22/281853_115x76c.jpg" alt="" />
+								<div class="recotitle">筑牢“第一道防线”</div>
+							</a>
+						</div>
+						<div class="col-xs-6  text-right">
+							<a href="/c/2021-02-22/845370.shtml" title="节日不打年盹&#32;开年广招英才"><img src="/upload/resources/video/2021/02/22/281852_115x76c.jpg" alt="" />
+								<div class="recotitle">节日不打年盹&#32;开年</div>
+							</a>
+						</div>
+						<div class="col-xs-6  text-left">
+							<a href="/c/2021-02-22/845368.shtml" title="新春走基层｜90后新区石油工人刘晓传：用冬日坚守换得生产提速"><img src="/upload/resources/video/2021/02/22/281850_115x76c.jpg" alt="" />
+								<div class="recotitle">新春走基层｜90后新</div>
+							</a>
+						</div>
+				
+			</div>
+		</div>
+	</div>
+
+   </div>
+  </div>
+ <!-- 包含页尾 -->
+ 
+<div class="row">
+<div class="col-lg12 col-lg-12">
+					<div class="panel panel-default">
+						<ul id="myTab" class="panel-heading nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<h2><a href="#yq" role="tab" data-toggle="tab">友情链接</a></h2>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="yq">
+								<ul class="list-inline">
+									<li style="padding-left: 5px;"><a class="btn btn-link" href="http://www.xinhua.org/" target="_blank">新华网</a></li>
+									<li><a class="btn btn-link" href="http://www.people.com.cn/" target="_blank">人民网</a></li>
+									<li><a class="btn btn-link" href="http://www.cctv.com/" target="_blank">央视网</a></li>
+									<li><a class="btn btn-link" href="http://www.cnr.cn/" target="_blank">中广网</a></li>
+									<li><a class="btn btn-link" href="http://www.chinanews.com/" target="_blank">中国新闻网</a></li>
+									<li><a class="btn btn-link" href="http://www.gmw.cn/" target="_blank">光明网</a></li>
+									<li><a class="btn btn-link" href="http://www.ce.cn/" target="_blank">中国经济网</a></li>
+									<li><a class="btn btn-link" href="http://www.cri.com.cn/" target="_blank">国际在线</a></li>
+									<li><a class="btn btn-link" href="http://www.china.com.cn/" target="_blank">中国网</a></li>
+									<li><a class="btn btn-link" href="http://cn.chinadaily.com.cn/" target="_blank">中国日报网</a></li>
+									<li><a class="btn btn-link" href="http://www.tjbh.gov.cn/.html" target="_blank">滨海新区政务网</a></li>
+									<li><a class="btn btn-link" href="http://www.tj.gov.cn/" target="_blank">天津政务网</a></li>
+									<li><a class="btn btn-link" href="http://www.enorth.com.cn/" target="_blank">北方网</a></li>
+									<li><a class="btn btn-link" href="http://www.qianlong.com/" target="_blank">千龙网</a></li>
+									<li><a class="btn btn-link" href="http://www.eastday.com/" target="_blank">东方网</a></li>
+									<li><a class="btn btn-link" href="http://www.cqnews.net/" target="_blank">华龙网</a></li>
+									<li><a class="btn btn-link" href="http://www.hebei.com.cn/" target="_blank">长城网</a></li>
+									<li><a class="btn btn-link" href="http://www.southcn.com/" target="_blank">南方网</a></li>
+									<li><a class="btn btn-link" href="http://www.rednet.cn/" target="_blank">红网</a></li>
+									<li><a class="btn btn-link" href="https://www.dzwww.com/" target="_blank">大众网</a></li>
+									<li><a class="btn btn-link" href="http://www.china-tjftz.gov.cn" target="_blank">中国(天津)自由贸易试验区</a></li>
+									<li><a class="btn btn-link" href="https://www.teda.gov.cn/" target="_blank">天津经济技术开发区</a></li>
+									<li><a class="btn btn-link" href="https://www.tjftz.gov.cn/" target="_blank">天津港保税区</a></li>
+									<li><a class="btn btn-link" href="http://www.tht.gov.cn/" target="_blank">天津滨海高新区</a></li>
+									<li><a class="btn btn-link" href="https://www.dongjiang.gov.cn/" target="_blank">天津东疆保税港区</a></li>
+									<li><a class="btn btn-link" href="https://www.eco-city.gov.cn/" target="_blank">中新天津生态城</a></li>
+									<style>
+										.list-inline li{ width:auto;}
+									</style>
+								</ul>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="hb">
+								
+							</div>
+							<div role="tabpanel" class="tab-pane" id="wzdh">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+</div>
+
+</div>
+
+</div>
+<div class="f_info">
+			<div class="container">
+				<div class="row">
+                  
+					<div class="col-md-12 ydh">
+						<h4 id="f-nav" class="text-center"><a href="http://www.tjbh.com/c/2021-06-08/894796.shtml" target="_blank">关于我们</a> | <a href="#" target="_blank">广告服务</a> | <a href="http://www.tjbh.com/c/2021-06-08/894795.shtml" target="_blank">联系方式</a> | <a href="http://www.tjbh.com/c/2021-06-07/893998.shtml" target="_blank">版权说明</a> </h4>
+					</div>
+					<div class="col-mg-12 text-center">
+						<h5>津滨网版权所有，未经书面授权禁止使用 服务邮箱：jinbinwang2015@163.com  举报电话：25204288</h5>
+                        
+						<h5>互联网新闻信息服务许可证：12120170004 <a href="http://beian.miit.gov.cn" target="_blank">备案序号：津ICP备2021001896号-1</a><a href="#" target="_blank" \><img src="http://www.tjbh.com/bh_libs/img/beian.jpg"
+								 width="26" height="26" alt=""></a>津公网安备 12010702000020号</h5>
+						<p id="f-img" class="ydh">
+							         <a href="http://www.12377.cn/" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/jbw201605sy1_02.jpg"
+									 alt=""></a> <a href="http://www.12377.cn/node_548446.htm" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/jbw201605sy1_04.jpg"
+									 alt=""></a> <a href="https://www.12377.cn/jbxzxq/bkljbxzxq.html" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/bkehxx.jpg"
+									 alt="暴恐有害信息举报"></a> <a href="https://www.12377.cn/jbxzxq/sqljbxzxq.html" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/etsqxx.jpg"
+									 alt="儿童色情信息举报专区"></a> <a href="https://www.12377.cn/jbxzxq/jbxx/qt.html" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/wlsyeths.jpg"
+									 alt="网络送养儿童黑色产业链举报专区"></a><a href="https://www.12377.cn/jbxzxq/yyljbxzxq.html" target="_blank"><img src="http://www.tjbh.com/bh_libs/img/yyxx.jpg"
+									 alt="谣言信息举报专区"></a>
+</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="/bh_libs/js/bootstrap.min.js"></script>
+<script src="/bh_libs/js/bootstrap-lightbox.min.js"></script>
+<script src="/bh_libs/js/index.js"></script>
+<script src="/bh_libs/js/jquery.liMarquee.js"></script>
+<script>
+		$(function() {
+			$('#myLightbox').lightbox();
+			$('.bhsd-list').liMarquee();
+          //$('#myTab a:last').tab('show')
+		});
+		</script>
+
+<script src="http://www.tjbh.com/zcms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=127&CatalogInnerCode=001359000002&Type=Article&LeafID=946412&Dest=http://www.tjbh.com/zcms/stat/dealer");
+</script>
+
+<!-- App=ZCMS(新媒体内容发布系统) 2.4.0,CostTime=7,PublishDate=2021-10-08 10:57:35 -->
+</body>
+</html>

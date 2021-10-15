@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=10"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/customize/style.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.yinhai.com:443/freemarker/resources/pc/icon/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<!--<link rel="stylesheet" type="text/css" href="https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/2015csi/ta-theme-base.css"/>-->
+<!--<link rel="stylesheet" type="text/css" id="linkSkin" href="https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/2015csi/blue/ta-theme.css"/>-->
+<!--<link rel="stylesheet" type="text/css" href="https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/csi/css/csi_selectDulTree.css"/>-->
+<script type="text/javascript">
+    var datePickerPath = "default";
+    function setCookie(name, value) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 365 * 30 * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+    function getCookie(cookieName) {
+        var strCookie = document.cookie;
+        var arrCookie = strCookie.split("; ");
+        for (var i = 0; i < arrCookie.length; i++) {
+            var arr = arrCookie[i].split("=");
+            if (cookieName == arr[0]) {
+                return arr[1];
+            }
+        }
+        return null;
+    }
+    function fnChangeSkin(obj) {
+        if (obj) {
+            linkSkin.href = "https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/2015csi/" + obj.id + "/ta-theme.css";
+            setCookie("nowSkin", obj.id);
+        } else {
+            var thisSkin = getCookie("nowSkin");
+            thisSkin = (thisSkin == undefined || thisSkin == "") ? "blue" : thisSkin;
+            linkSkin.href = "https://www.yinhai.com:443/freemarker/resources/pc/tag/themes/2015csi/" + thisSkin + "/ta-theme.css";
+        }
+    }
+</script>
+<link rel="stylesheet" href="https://www.yinhai.com:443/freemarker/resources/pc/css/editormd.preview.css"/>
+<link rel="stylesheet" href="https://www.yinhai.com:443/freemarker/resources/pc/css/markdown-preview.css"/>
+<script>
+    var Base = {globvar: {}};
+    Base.globvar.contextPath = "https://www.yinhai.com:443/pc";
+    Base.globvar.basePath = "https://www.yinhai.com:443/pc";
+    Base.globvar.sysPath = "https://www.yinhai.com:443/freemarker/resources/pc";
+    Base.globvar.resPath = "https://www.yinhai.com/psp/resource/yhsite/YHSITE";
+    Base.globvar.siteId = "393207077964779520";
+    Base.globvar.suffix = ".html";
+    Base.globvar.nowDate = "2021-09-02";
+    Base.globvar.nowTime = "22:02:02";
+    Base.globvar.pageSize = 10;
+    Base.globvar.developMode = true;
+    Base.globvar.cols_360 = "cols_360";
+    Base.globvar.indexStyle = "default";
+    Base.globvar.columnsWidthsOverView = "columnsWidthsOverView";
+    Base.globvar.pluginPath = Base.globvar.developMode === true ? "plugin" : "plugin-min";
+</script>
+<script type="text/javascript" src="https://www.yinhai.com:443/freemarker/resources/pc/tag/external/plugin/ta-core-all/require.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com:443/freemarker/resources/pc/tag/external/plugin/ta-core-all/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com:443/freemarker/resources/pc/tag/external/plugin/main.js"></script>
+
+<script type="text/javascript" src="https://www.yinhai.com:443/freemarker/resources/pc/js/rsa/RSAUtil.js"></script>
+<script type="text/javascript">
+    // 针对现有body.ready改造为requirejs所能使用的
+    $.fn.ready_t = $.fn.ready;
+    $.fn.ready = function (fn) {
+        $.fn.ready_t(
+            function () {
+                require(['domReady'], function (domReady) {
+                    domReady(function () {
+                        require(["taLayout", "helptip"], function () {
+                            fn();
+                        });
+                    });
+                });
+            }
+        );
+    }
+</script>
+    <title>久远银海-新闻中心</title>
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/css/common/common2.css" />
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/js/common.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/js/common/sitecommon.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/js/jquery/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/jslib/totop/totop.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/js/layer/layer.js"></script> 
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/js/screen.adapter.js"></script>
+<script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/common/js/server.js"></script>
+<!--首页--header-->
+<div class="head-index-public">
+    <!--时间栏、联系我们和设为主页-->
+    <!--logo及首页导航-->
+    <div class="head-nav-1" id="public_head_nav">
+        <div class="content-box-new div-after">
+                <div class="head-logo-1 float-l" onclick='window.open(" https://www.yinhai.com:443/pc/index.html")'></div>
+            <div class="float-r nav-links">
+                <div class="nav-box-1 div-after">
+                                        <a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html" target="_blank" navtag="0">
+                                            <span class="nav-box-1-words"> 关于我们</span>
+                                        </a>
+                                            <a navtag="1" href="#" id="head_business">
+                                                <span class="nav-box-1-words"> 业务板块</span>
+                                            </a>
+                                        <a href="https://www.yinhai.com:443/pc/jspt_1583289789000/index.html" target="_blank" navtag="2">
+                                            <span class="nav-box-1-words"> 技术平台</span>
+                                        </a>
+                                        <a href="https://www.yinhai.com:443/pc/qydj_1625206116000/index.html" target="_blank" navtag="3">
+                                            <span class="nav-box-1-words"> 企业党建</span>
+                                        </a>
+                                        <a href="https://www.yinhai.com:443/pc/qywh_1583289806000/index.html" target="_blank" navtag="4">
+                                            <span class="nav-box-1-words"> 企业文化</span>
+                                        </a>
+                                        <a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html" target="_blank" navtag="5">
+                                            <span class="nav-box-1-words"> 新闻中心</span>
+                                        </a>
+                                        <a href="https://www.yinhai.com:443/pc/lxwm_1583289838000/index.html" target="_blank" navtag="6">
+                                            <span class="nav-box-1-words"> 联系我们</span>
+                                        </a>
+                                        <a href="https://ir.p5w.net/c/002777.shtml" target="_blank" navtag="7">
+                                            <span class="nav-box-1-words"> 投资者</span>
+                                        </a>
+                </div>
+                <div class="b-border"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="head-select-container" id="head_select">
+
+    <!--<div class="head-logo-1 float-l" id="head_select_logo" onclick='window.location.href = "<%=ctxPath%>/newindex.html"'>
+        &lt;%&ndash;<div class="head-logo-1-words">以科技创新  服务民生国防</div>&ndash;%&gt;
+    </div>-->
+    <div class="head-select-context">
+        <!--title的整行-->
+        <div class="head-select-context-title">
+            <!--包裹title细节-->
+            <div class="head-select-context-title-all">
+                                            <!--单个title模块-->
+                            <div class="head-select-context-title-single">
+                                <!--单个模块细节，包括图标和文字-->
+                                <div id="head-select-context-title-single-detail1"
+                                    class="head-select-context-title-single-detail">
+                                    <!--图标-->
+                                    <div id="head-select-context-title-single-detail-ylybIcon" class="">
+                                    </div>
+                                    <!--文字-->
+                                    <div class="head-select-context-title-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/ylyb_1584497663000/index.html" target="_blank">
+                                            <b style="display: block">医疗医保</b>
+                                            <span>Healthcare and Healthcare Security</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="head-select-context-title-single-soild"></div>
+                            </div>
+                            <!--单个title模块-->
+                            <div class="head-select-context-title-single">
+                                <!--单个模块细节，包括图标和文字-->
+                                <div id="head-select-context-title-single-detail2"
+                                    class="head-select-context-title-single-detail">
+                                    <!--图标-->
+                                    <div id="head-select-context-title-single-detail-ylybIcon" class="">
+                                    </div>
+                                    <!--文字-->
+                                    <div class="head-select-context-title-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/szzw_1584512753000/index.html" target="_blank">
+                                            <b style="display: block">数字政务</b>
+                                            <span>Digital Government Affairs</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="head-select-context-title-single-soild"></div>
+                            </div>
+                            <!--单个title模块-->
+                            <div class="head-select-context-title-single">
+                                <!--单个模块细节，包括图标和文字-->
+                                <div id="head-select-context-title-single-detail3"
+                                    class="head-select-context-title-single-detail">
+                                    <!--图标-->
+                                    <div id="head-select-context-title-single-detail-ylybIcon" class="">
+                                    </div>
+                                    <!--文字-->
+                                    <div class="head-select-context-title-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/zhcs_1584513192000/index.html" target="_blank">
+                                            <b style="display: block">智慧城市</b>
+                                            <span>Smart City</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="head-select-context-title-single-soild"></div>
+                            </div>
+            </div>
+        </div>
+        <!--detail的整行-->
+        <div class="head-select-context-detail">
+            <!--包裹所有医保医疗detail的外层-->
+            <div class="head-select-context-detail-all-ybyl head-select-context-detail-all">
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-ybyl-detail1"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/yb_1584524707000/index.html" target="_blank">
+                                            <b style="display: block">医保</b>
+                                            <span>Healthcare Security</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-ybyl-detail2"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/yl_1584581059000/index.html" target="_blank">
+                                            <b style="display: block">医疗</b>
+                                            <span>Healthcare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-ybyl-detail3"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/yy_1584581125000/index.html" target="_blank">
+                                            <b style="display: block">医药</b>
+                                            <span>Medicine</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+            <!--包裹所有数字政务detail的外层-->
+            <div class="head-select-context-detail-all-szzw head-select-context-detail-all">
+
+                            <!--单独一个detail-->
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-szzw-detail1"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/pthrs_1584583680000/index.html" target="_blank">
+                                            <b style="display: block">人力资源和社会保障</b>
+                                            <span>Human Resources and Social Security</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--单独一个detail-->
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-szzw-detail2"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/mz_1584583775000/index.html" target="_blank">
+                                            <b style="display: block">民政</b>
+                                            <span>Civil Affairs</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--单独一个detail-->
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-szzw-detail3"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/zfjr_1584583790000/index.html" target="_blank">
+                                            <b style="display: block">住房金融</b>
+                                            <span>Housing Finance</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--单独一个detail-->
+                            <div class="head-select-context-detail-single">
+                                <!--一个detail的细节，包括图标和文字-->
+                                <div id="head-select-context-detail-single-szzw-detail4"
+                                    class="head-select-context-detail-single-detail">
+                                    <!--图标-->
+                                    <div class="head-select-context-detail-single-detail-icon"></div>
+                                    <!--文字-->
+                                    <div class="head-select-context-detail-single-detail-text">
+                                        <a href="https://www.yinhai.com:443/pc/gh_1584583807000/index.html" target="_blank">
+                                            <b style="display: block">工会</b>
+                                            <span>Trade Unions</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+            <!--包裹所有智慧城市detail的外层-->
+            <div class="head-select-context-detail-all-zhcs head-select-context-detail-all"></div>
+            <!--包裹所有军民融合detail的外层-->
+            <div class="head-select-context-detail-all-jmrh head-select-context-detail-all"></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script>
+    $(".head-select-context-title-single").hover(function () {
+        $(this).css("background", "url('https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/image/index/2_xz_03.png') no-repeat");
+        var index = $(this).index();
+        $(".head-select-context-detail > div").hide();
+        $(".head-select-context-detail > div").eq(index).show();
+    }, function () {
+        $(this).css("background", "")
+    })
+
+    $(".head-select-context-detail-single").hover(function () {
+        $(this).find(".head-select-context-detail-single-detail-icon").css("background",
+            "url('https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/image/index/3_xz_03.png') no-repeat");
+        $(this).find("a").css("color", "#0045c9");
+    }, function () {
+        $(this).find(".head-select-context-detail-single-detail-icon").css("background", "")
+        $(this).find("a").css("color", "");
+    });
+</script><script type="text/javascript" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/js/header/publicHeader.js"></script>    <link rel="stylesheet" type="text/css" href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/css/newscenter/newscenter.css" />
+    <!--文章部分-->
+    <div class="news-article-content div-after">
+                <div class="news-history">当前位置：<a href="https://www.yinhai.com:443/pc/index.html">首页</a>&gt;<a
+                        href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html#3">新闻中心</a>&gt;<span
+                        class="history-title">新疆第三代社保卡正式发行！</span></div>
+                
+
+        <div class="news-left new-detail-content">
+            <p class="news-title">新疆第三代社保卡正式发行！</p>
+            <div class="news-time">时间：<span id="publish_time">2021-09-02 09:13:13</span><span>|</span>来源：<span
+                    id="add_username">久远银海</span>
+            </div>
+            <div class="news-article">
+                <div class="news-pshow"><p style="text-indent: 2em; line-height: 1.5em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: 宋体, SimSun;">2021年8月31日，新疆维吾尔自治区举行第三代社会保障卡首发仪式，仪式采用“现场+云视讯”视频方式举行，主会场设在昌吉州昌吉市，新疆维吾尔自治区人力资源和社会保障厅，人民银行乌鲁木齐中心支行、参与自治区社会保障卡建设工作的11家合作银行分别在各自的分会场参会。</span></p><p style="text-align: center; line-height: 1.5em;"><img src="https://www.yinhai.com/psp/adminfile/yhsite/20210902/1630587844417.jpg" title="1630587844417.jpg" alt="1630587844417.jpg" width="700" height="500" border="0" vspace="0" style="width: 700px; height: 500px;"/></p><p style="text-align: center; line-height: 1.5em;"><span style="color: rgb(51, 51, 51); font-size: 14px; letter-spacing: 0.5px; text-align: center; background-color: rgb(255, 255, 255); font-family: 宋体, SimSun;">新疆维吾尔自治区第三代社会保障卡首发仪式现场</span></p><p style="line-height: 1.5em;"><span style="color: rgb(51, 51, 51); font-size: 14px; letter-spacing: 0.5px; text-align: center; background-color: rgb(255, 255, 255); font-family: 宋体, SimSun;"><br/></span></p><p style="text-indent: 2em; line-height: 1.5em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: 宋体, SimSun;">新疆维吾尔自治区第三代社会保障卡卡面增加了“博格达峰”和“天山雪莲”水印，同时新增网纹和闪付标识。功能方面，第三代社会保障卡由第二代社会保障卡的单一插卡读卡方式升级为同时支持插卡和“一晃而过”的非接触读卡方式，实现了快速读写卡和支付功能，拓展了应用场景，为交通出行、旅游观光、文化体验等方面实现同城待遇提供了有效支撑。新疆维吾尔自治区在发行第三代社会保障卡时，同步实现电子社会保障卡签发，提升社会保障卡数字化服务能力。安全性能方面，第三代社会保障卡采用了国产密码算法，进一步提升了社会保障卡的安全等级，同时还加载了个人CA证书，可提供线上线下用卡时的身份证认证服务。</span></p><p style="text-align: center; line-height: 1.5em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: 宋体, SimSun;"><img src="https://www.yinhai.com/psp/adminfile/yhsite/20210902/1630587927825.jpg" title="1630587927825.jpg" alt="1630587927825.jpg" width="700" height="500" border="0" vspace="0" style="width: 700px; height: 500px;"/></span></p><p style="line-height: 1.5em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: 宋体, SimSun;"></span></p><p style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-indent: 0em; white-space: normal; text-align: center; line-height: 1.5em; overflow-wrap: break-word !important; box-sizing: border-box !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; letter-spacing: 0.5px; background: white; font-size: 14px; font-family: 宋体, SimSun; overflow-wrap: break-word !important; box-sizing: border-box !important;">在首发仪式现场，</span></p><p></p><p style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-indent: 0em; white-space: normal; text-align: center; line-height: 1.5em; overflow-wrap: break-word !important; box-sizing: border-box !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; letter-spacing: 0.5px; background: white; font-size: 14px; font-family: 宋体, SimSun; overflow-wrap: break-word !important; box-sizing: border-box !important;">向11名居民代表发放第三代社会保障卡样卡</span></p><p style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-indent: 0em; white-space: normal; line-height: 1.5em; overflow-wrap: break-word !important; box-sizing: border-box !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; letter-spacing: 0.5px; background: white; font-size: 14px; font-family: 宋体, SimSun; overflow-wrap: break-word !important; box-sizing: border-box !important;"><br/></span></p><p></p><p style="line-height: 1.5em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: 宋体, SimSun;"></span></p><p style="margin: -0.5em 0px 0px; padding: 0px; max-width: 100%; color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; clear: both; min-height: 1em; text-indent: 2em; line-height: 1.5em; overflow-wrap: break-word !important; box-sizing: border-box !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; font-size: 16px; letter-spacing: 0.5px; background: white; font-family: 宋体, SimSun; overflow-wrap: break-word !important; box-sizing: border-box !important;">久远银海子公司新疆银海鼎峰软件有限公司（以下简称银海鼎峰）的员工们从2021年2月投入新疆维吾尔自治区三代社会保障卡建设工作中，历经6个月，在新疆维吾尔自治区人力资源和社会保障厅、新疆11家合作银行的指导和支持下，银海鼎峰员工夜以继日，不断试错的努力下，改造并优化了新疆维吾尔自治区社会保障卡卡务管理系统，社会保障卡生产系统、社会保障卡生产设备，即时制卡设备，保障了自治区三代社会保障卡的顺利发行。项目建设过程中，银海鼎峰多方统筹，吸取全国经验，克服疫情困难和技术难关，锻造了一支能打硬仗，勇于创新的技术团队，得到了用户的认可和肯定。<br style="margin: 0px; padding: 0px; max-width: 100%; overflow-wrap: break-word !important; box-sizing: border-box !important;"/></span></p><p></p><p style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; white-space: normal; text-indent: 2em; line-height: 1.5em; overflow-wrap: break-word !important; box-sizing: border-box !important;"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; margin: 0px; padding: 0px; max-width: 100%; font-size: 16px; letter-spacing: 0.5px; background: white; overflow-wrap: break-word !important; box-sizing: border-box !important;">未来，久远银海将根据十四五发展的战略部署，持续支撑新疆维吾尔自治区社会保障卡卡务管理运行的标准化、规范化、便利化，助力人力资源和社会保障信息化建设，助推社会保障卡便捷办、快速办，高效落实</span><span style="font-family: 宋体, SimSun; margin: 0px; padding: 0px; max-width: 100%; font-size: 16px; letter-spacing: 0.5px; background: white; color: rgb(0, 128, 255); overflow-wrap: break-word !important; box-sizing: border-box !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; overflow-wrap: break-word !important; box-sizing: border-box !important;">“全数据共享、全服务上网、全业务用卡”三项重点工作任务</strong></span><span style="font-family: 宋体, SimSun; margin: 0px; padding: 0px; max-width: 100%; font-size: 16px; letter-spacing: 0.5px; background: white; overflow-wrap: break-word !important; box-sizing: border-box !important;">，提升群众满意度，践行“科技服务民生”的使命，用专业和敬业诠释银海人的责任与担当。</span></span></p><p></p><p style="line-height: 1.5em;"><span style="color: rgb(51, 51, 51); font-family: mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; letter-spacing: 0.5px; text-align: justify; text-indent: 34px; background-color: rgb(255, 255, 255); font-size: 16px;"><br/><br/></span></p></div>
+            </div>
+        </div>
+
+    </div>
+<!--首页--new-footer-->
+<div class="new-footer-index ">
+    <div class="new-footer-content">
+        <div class="content-box-new  div-auto div-after">
+            <div class="float-l item" id="item1">
+                <div class="new-footers-index div-after">
+                                                <div class="new-footers-index-title"><a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html"
+                                    target="_blank">关于我们</a>
+                                <br /><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html#0" target=" _blank">
+                                                    公司简介</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html#1" target=" _blank">
+                                                    核心能力</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html#2" target=" _blank">
+                                                    发展历程</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/gywm_1583289699000/index.html#3" target=" _blank">
+                                                    资质荣誉</a>
+                                            </span><br />
+                            </div>
+                    <div class="new-footers-index-title">业务板块
+                                        <br /><br />
+                                        <span class="new-footers-index-context">
+                                            <a href="https://www.yinhai.com:443/pc/ylyb_1584497663000/index.html" target=" _blank">
+                                                医疗医保</a>
+                                        </span>
+                                        <br />
+                                        <span class="new-footers-index-context">
+                                            <a href="https://www.yinhai.com:443/pc/szzw_1584512753000/index.html" target=" _blank">
+                                                数字政务</a>
+                                        </span>
+                                        <br />
+                                        <span class="new-footers-index-context">
+                                            <a href="https://www.yinhai.com:443/pc/zhcs_1584513192000/index.html" target=" _blank">
+                                                智慧城市</a>
+                                        </span>
+                    </div>
+                            <div class="new-footers-index-title"><a href="https://www.yinhai.com:443/pc/jspt_1583289789000/index.html"
+                                    target="_blank">技术平台</a>
+                                <br /><br />
+                                                <span class="new-footers-index-context">
+                                                    <a href="https://www.yinhai.com:443/pc/jspt_1583289789000/index.html#1" target=" _blank">
+                                                        银海技术产品</a>
+                                                </span><br />
+                                                    <span class="new-footers-index-context">
+                                                        <a href="https://www.yinhai.com:443/pc/jspt_1583289789000/index.html#2" target=" _blank">
+                                                            银海大数据</a>
+                                                    </span><br />
+                                                        <span class="new-footers-index-context">
+                                                            <a href="https://www.yinhai.com:443/pc/jspt_1583289789000/index.html#3" target=" _blank">
+                                                                自主可控</a>
+                                                        </span><br />
+                            </div>
+                    <!-- <div class="new-footers-index-title"><a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/technology.html"
+                            target="_blank">技术平台</a>
+                        <br /><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/technology.html#1" target="_blank">银海技术产品</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/technology.html#2" target="_blank">银海大数据</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/technology.html#3" target="_blank">自主可控</a>
+                        </span><br />
+                    </div> -->
+                            <div class="new-footers-index-title"><a href="https://www.yinhai.com:443/pc/qywh_1583289806000/index.html"
+                                    target="_blank">企业文化</a>
+                                <br /><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/qywh_1583289806000/index.html#1"
+                                                    target=" _blank">
+                                                    核心理念</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/qywh_1583289806000/index.html#2"
+                                                    target=" _blank">
+                                                    人才发展</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/qywh_1583289806000/index.html#3"
+                                                    target=" _blank">
+                                                    员工关怀</a>
+                                            </span><br />
+                            </div>
+                    <!-- <div class="new-footers-index-title"><a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/businessculture.html"
+                            target="_blank">企业文化</a>
+                        <br /><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/businessculture.html#1" target="_blank">核心理念</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/businessculture.html#2" target="_blank">人才发展</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/businessculture.html#3" target="_blank">员工关怀</a>
+                        </span><br />
+                    </div> -->
+                            <div class="new-footers-index-title"><a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html"
+                                    target="_blank">新闻中心</a>
+                                <br /><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html#0" target=" _blank">
+                                                    公司动态</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html#1" target=" _blank">
+                                                    媒体报道</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html#2" target=" _blank">
+                                                    社会责任</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/xwzx_1583289822000/index.html#3" target=" _blank">
+                                                    文化建设</a>
+                                            </span><br />
+                            </div>
+                            <div class="new-footers-index-title"><a href="https://www.yinhai.com:443/pc/jrwm_1584348285000/index.html"
+                                    target="_blank">加入我们</a>
+                                <br /><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/jrwm_1584348285000/index.html#0" target=" _blank">
+                                                    校园招聘</a>
+                                            </span><br />
+                                            <span class="new-footers-index-context">
+                                                <a href="https://www.yinhai.com:443/pc/jrwm_1584348285000/index.html#1" target=" _blank">
+                                                    社会招聘</a>
+                                            </span><br />
+                            </div>
+                    <!-- <div class="new-footers-index-title"><a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/joinus.html" target="_blank">加入我们</a>
+                        <br /><br />
+
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/joinus.html?cate_id=76#shzp" target="_blank">社会招聘</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/joinus.html?cate_id=77#xyzp" target="_blank">校园招聘</a>
+                        </span><br />
+                    </div> -->
+                            <div class="new-footers-index-title"><a href="https://ir.p5w.net/c/002777.shtml"
+                                    target="_blank">投资者</a>
+                                <br /><br />
+                                          
+                            </div>
+                    <!-- <div class="new-footers-index-title"><a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html"
+                            target="_blank">投资者</a>
+                        <br /><br /> -->
+                    <!-- <span class="new-footers-index-context">
+                        <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html#1" target="_blank">公司公告</a>
+                        </span><br/>
+                        <span class="new-footers-index-context">
+                        <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html#2" target="_blank">财务报告</a>
+                        </span><br/> -->
+                    <!-- <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html#1" target="_blank">定期报告</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html#2" target="_blank">临时报告</a>
+                        </span><br />
+                        <span class="new-footers-index-context">
+                            <a href="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/site/irannouncement.html#3" target="_blank">投行研报</a>
+                        </span><br />
+                    </div> -->
+                </div>
+
+                <div class="new-footers-copyRight">
+                  <span class="copyright-icp-05001851-1">Copyright 四川久远银海软件股份有限公司 版权所有 <a href="http://beian.miit.gov.cn" target="_blank" style="text-decoration:underline;">蜀ICP备05001851号-1</a></span>
+                </div>
+
+
+            </div>
+
+            <div class="float-l item" id="item2">
+                <div id="item2_logo">
+                    <img class="item-2-logo" src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/image/home/yhLogo.png" />
+                </div>
+                <!--<div id="item2_tel">
+                    <span class="item2-tel-number">028-65516146</span>
+                </div>-->
+                <div id="item2_arcode">
+                    <img src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site-v2/image/home/QRCodeNew.jpg" width="96"/>
+                    <!-- <div id="weixin_detail"><span class="item2-arcode-words">久远银海微信公众号</span></div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div></body>
+<script src="https://www.yinhai.com/psp/resource/yhsite/YHSITE/site/js/newscenter/newscenter_article.js"></script>
+
+</html><script type="text/javascript">
+    $(function () {
+        $(document).keydown(function (e) {
+            // 屏蔽回退键盘
+            var target = e.srcElement || e.target;
+            if ((e.keyCode == 8) && target && ((target.type != "text"
+                && target.type != "textarea" && !$(target).attr("contenteditable")
+                && target.type != "password") || target.readOnly || target.disabled)) {
+                e.keyCode = 0;
+                e.cancelBubble = true;
+                e.returnValue = false;
+                // e.stopPropagation works in Firefox.
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+            var isIE = !!(document.all);
+            var key;
+            var srcObj;
+            if (isIE) {
+                key = e.keyCode;
+                srcObj = e.srcElement;
+            } else {
+                key = e.which;
+                srcObj = e.target;
+            }
+            if (srcObj == null) srcObj = e.target;
+            if (key == null) key = e.which;
+            if (key == 13 && srcObj.type != 'button' && srcObj.type != 'submit'
+                && srcObj.type != 'reset' && srcObj.type != 'textarea'
+                && srcObj.type != '') {
+                var el = Base._getNextFormField(srcObj.id);
+                if (el) {
+                    Base.focus(el.id);
+                    // 时间组件已默认选中,如果再在这里选中,会出现闪动问题,20130628,liys修改
+                    if ($(el).hasClass("Wdate")) {
+                    } else if (el.type == "text")
+                        el.select();
+                }
+                return false;
+            }
+        });
+        setTimeout(function () {
+            $("#pageloading").remove();
+        }, 1);
+    });
+
+    // 通用切换分页方法
+    function fnSwitchPage(curPageNo, pageIndex) {
+        var href = "/pc/gsdt_1583388405000/593396637800091648.html";
+        var query = "";
+        var pageNo = "0";
+        if (query === "") {
+            query += "?pageNo=";
+        } else {
+            query += "&pageNo=";
+        }
+        if (curPageNo < 1) {
+            curPageNo = "0";
+        }
+        var pageNos = pageNo.split(",");
+        pageNos[pageIndex - 1] = curPageNo;
+        href = href + query + pageNos.join(",");
+        window.location.href = href;
+    }
+</script>

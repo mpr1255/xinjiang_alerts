@@ -1,0 +1,740 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>这里是新疆 | 阿不都拉升职记 - 新闻资讯门户 - 中国衡阳新闻网站</title>
+    <meta name="keywords" content="衡阳,新闻,房产,资讯,教育,民意直通车">
+    <meta name="description" content="西装革履，精神抖擞的阿不都拉，来自和田于田县。他现在是酒店西餐厅经理。一大早他就开始了一天的备餐工作，检查出餐情况。旅游旺季，酒店...">
+
+    <link rel="shortcut icon" href=""/>
+
+    <!--[if lt IE 9]>
+    <script language="javascript" type="text/javascript" src="http://www.e0734.com/statics/web/lib/jquery/html5.js"></script>
+    <script language="javascript" type="text/javascript" src="http://www.e0734.com/statics/web/lib/jquery/selectivizr-min.js"></script>
+    <![endif]-->
+
+    <!--jquery插件-->
+    <script type="text/javascript" src="http://www.e0734.com/statics/web/lib/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://www.e0734.com/statics/web/lib/jquery/common.js"></script>
+</head>
+<body>
+
+<a name="top_anchor"></a>
+
+<div id="top">
+    <div class="center">
+        <strong class="website_name"><a href="/">衡阳新闻网</a></strong>
+        <!--TODO 机构号的登录以及个人中心-->
+        <div class="toplink">
+            <a href="" id="history_index" class="btn_rrs sprite"></a>
+
+            <span class="member_box"></span>
+            <script type="text/javascript">
+                $(function () {
+                    $.ajax({
+                        url: "http://www.e0734.com/index.php?m=member&c=index&a=mini&forward=" + encodeURIComponent(location.href) + '&siteid=1',
+                        type: "GET",
+                        datatype: "json",
+                        success: function (res) {
+                            $(".member_box").append(res);
+                        },
+                        error: function (err) {
+                        }
+                    });
+                });
+            </script>
+
+            <!--<a href=""  target="_blank">登陆</a> |-->
+            <!--<a href=""  target="_blank">注册</a>-->
+            <a href="/index.php?m=member"  target="_blank">投稿</a>
+            <a href="">网站地图</a>
+        </div>
+    </div>
+</div>
+
+<header id="header">
+
+    <div id="logo">
+        <a href="/">
+            <!--TODO logo的更换-->
+          <div style="height:55px;width:256px;overflow:hidden;text-align:center;"><img src="http://www.e0734.com/statics/old/images2020/hy_logo3.jpg" alt="中国衡阳新闻网"></div>
+      互联网新闻信息服务一类资质网站 </a>
+    </div>
+
+    <div id="search">
+        <time><script language="javascript">CAL_2()</script></time>
+        <div class="Searchform ">
+            <!--TODO 搜索-->
+            <div id="bdcs">
+                <div class="bdcs-container">
+                    <div class="bdcs-main bdcs-clearfix" id="default-searchbox">
+                        <div class="bdcs-search bdcs-clearfix" id="bdcs-search-inline">
+                            <form action="/index.php" method="get" target="_blank"
+                                  class="bdcs-search-form" autocomplete="off" id="bdcs-search-form">
+                               <input type="hidden" name="s" value="10337829258303913755">
+                                <input type="hidden" name="entry" value="1">
+                                <input type="hidden" name="m" value="search">
+                                <div class="default-channel-meun" id="default-channel-meun">
+                                    <div class="default-channel-current">
+                                         <select name="typeid">
+                                <option value="62">新闻</option>
+                                <option value="64">视频</option>
+                                <option value="75">民意</option>
+                                </select>
+                                       <!-- <span id="default-channel-curr">综合</span><i></i>
+                                        <div class="cse-default-channel-container"
+                                             style="width: 60px; left: -1px; top: 34px;">
+                                            <ul class="default-channel-list" id="default-channel-list"
+                                                style="display: none;">
+                                                <li data-id="1">综合</li>
+                                                <li data-id="2">论坛</li>
+                                                <li data-id="3">视频</li>
+                                            </ul>
+                                        </div>-->
+                                    </div>
+                                    <input type="hidden" name="nsid" value="1" id="default-channel-nsid">
+
+                                    <script>
+                                        //处理选择搜索范围
+                                        $("#default-channel-curr").click(function () {
+                                            $("#default-channel-list").toggle()
+                                        })
+                                    </script>
+                                </div>
+                                <input type="text" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input"
+                                       placeholder="请输入关键词" autocomplete="off" style="height: 33px; line-height: 33px;">
+                                <input type="submit" class="bdcs-search-form-submit " id="bdcs-search-form-submit"
+                                       value="搜索">
+                            </form>
+                        </div>
+                        <div class="bdcs-search-sug" id="bdcs-search-sug"
+                             style="top: 176px; margin-left: 60px; width: 279px; display: none;">
+                            <ul class="bdcs-search-sug-list" id="bdcs-search-sug-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--TODO 几个二维码链接-->
+    <div id="other" class="orcode">
+        <a href="/index.php?m=content&c=wap" class="btn_2" target="_blank" ><i class="icon_phone sprite"></i>衡阳<em>新闻</em>网</a>
+        <a href="" target="_blank" class="btn_">手机APP<img style="width: 150px" src="http://www.e0734.com/statics/web/image/app_link.png"/></a>
+        <a href=""  class="btn_" target="_blank">微信公众号 <img style="width: 150px" src="http://www.e0734.com/statics/web/image/qrcode.bmp"/></a>
+        <a href="http://hnhy.wenming.cn/"  class="btn_" target="_blank">衡阳文明网 </a>
+        <a href=""  class="btn_" target="_blank">衡阳论坛 <img style="width: 150px" src="http://bbs.e0734.com/static/image/1499993314.jpg"/></a>
+    </div>
+
+    <span class="clear"></span>
+</header>
+
+<nav id="menu">
+    <ul style="text-align: center">
+        <li><a href="http://www.e0734.com/category/news/" target="_blank">新闻</a></li>
+        <li><a href="http://www.e0734.com/category/llpd/" target="_blank">理论</a></li>
+        <li><a href="http://www.e0734.com/category/people/" target="_blank">民意</a></li>
+        <li><a href="http://www.e0734.com/category/health/" target="_blank">健康</a></li>
+        <li><a href="http://www.e0734.com/category/jrpd/" target="_blank">金融</a></li>
+        <li><a href="http://www.fc0734.com/" target="_blank">房产</a></li>
+        <li><a href="http://www.e0734.com/category/edu/" target="_blank">教育</a></li>
+        <li><a href="http://www.e0734.com/index.php?m=special&c=index&a=special" target="_blank">专题</a></li>
+        <li><a href="http://auto.e0734.com/" target="_blank">汽车</a></li>
+        <li><a href="/index.php?entry=1&m=search&nsid=1" target="_blank">搜索</a></li>
+        <li><a href="http://bbs.e0734.com/static/juxiuwenhua/" target="_blank">军休文化</a></li>
+        <li><a href="http://bbs.e0734.com/" target="_blank">论坛</a></li>
+        <li><a href="http://www.e0734.com/index.php?m=content&c=index&a=lists&catid=614" target="_blank">视听</a></li>
+        <li><a href="http://www.e0734.com/category/xfpd/" target="_blank">消防</a></li>
+        <li><a href="http://www.e0734.com/category/hysc/" target="_blank">视窗</a></li>
+        <li><a href="http://hnhy.wenming.cn/" target="_blank">文明</a></li>
+        <li><a href="http://www.e0734.com/category/whpd/" target="_blank">文化</a></li>
+        <li><a href="http://www.e0734.com/category/pl/" target="_blank">评论</a></li>
+        <li><a href="http://www.e0734.com/category/tour/" target="_blank">旅游</a></li>
+        <li><a href="http://www.e0734.com/index.php?m=content&c=index&a=lists&catid=20" target="_blank">信息</a></li>
+        <li><a href="http://www.e0734.com/category/gfjy/" target="_blank">国防</a></li>
+        <li><a href="http://www.e0734.com/index.php?m=content&c=index&a=lists&catid=2270" target="_blank">新衡阳号</a></li>
+    </ul>
+    <span class="clear"></span>
+</nav>
+
+<script type="text/javascript">
+    var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire","aphone");
+    var browser = navigator.userAgent.toLowerCase();
+    var isMobile = false;
+    if (browser.indexOf("hynews")!=-1) window.location="http://www.e0734.com/index.php?m=content&c=app&a=show&catid=12&id=444011";
+    for (var i=0; i<mobileAgent.length; i++){
+        if (browser.indexOf(mobileAgent[i])!=-1){
+            isMobile = true;
+            window.location="http://www.e0734.com/index.php?m=content&c=app&a=show&catid=12&id=444011";
+            break;
+        }
+    }
+</script>
+
+<link href="http://www.e0734.com/statics/web/css/reset_css.css" rel="stylesheet"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.common.css"/>
+<link href="http://www.e0734.com/statics/web/css/tw_common.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.basecolor.css"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.article.css"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.gallery.css"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.singup.css"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.dialog.css"/>
+<link rel="stylesheet" href="http://www.e0734.com/statics/web/css/cmstop.datepicker.css"/>
+
+<script type="text/javascript" src="http://www.e0734.com/statics/web/lib/jquery/sidebar_follow.js"></script>
+
+<!--滚动新闻-->
+<section id="HotNews">
+    <h5><a href="" target="_blank">滚动新闻</a>：</h5>
+    <div id="HotNewsGundong">
+        <div style="width:1100px;white-space: nowrap;overflow:hidden;" id="scroll_div" class="scroll_div">
+            <div id="scroll_begin">
+                                                · <a href="http://www.e0734.com/c/2021/08/28/116-443922.html" title="全面小康，一个民族也不能少" target="_blank">全面小康，一个民族也不能少</a>
+                                · <a href="http://www.e0734.com/c/2021/08/28/116-443885.html" title="跨越万水千山的深情" target="_blank">跨越万水千山的深情</a>
+                                · <a href="http://www.e0734.com/c/2021/08/28/116-443833.html" title="转扩！帮烈士寻亲，送英雄回家" target="_blank">转扩！帮烈士寻亲，送英雄回家</a>
+                                · <a href="http://www.e0734.com/c/2021/08/29/116-443979.html" title="特稿：美国情报界：无能、无信、无底线" target="_blank">特稿：美国情报界：无能、无信、无底线</a>
+                                · <a href="http://www.e0734.com/c/2021/08/29/116-443978.html" title="国际锐评丨美方所谓溯源报告又是闹剧一场" target="_blank">国际锐评丨美方所谓溯源报告又是闹剧一场</a>
+                                · <a href="http://www.e0734.com/c/2021/08/29/116-443977.html" title="【央视快评】铸牢中华民族共同体意识" target="_blank">【央视快评】铸牢中华民族共同体意识</a>
+                                · <a href="http://www.e0734.com/c/2021/08/29/116-443976.html" title="金句来了！习近平：推动新时代党的民族工作高质量发展" target="_blank">金句来了！习近平：推动新时代党的民族工作高质量发展</a>
+                                · <a href="http://www.e0734.com/c/2021/08/29/116-443975.html" title="一见·总书记妙喻“石榴籽”，深意何在？" target="_blank">一见·总书记妙喻“石榴籽”，深意何在？</a>
+                                · <a href="http://www.e0734.com/c/2021/08/28/116-443955.html" title="和人民在一起丨繁华的城市 繁荣的农村" target="_blank">和人民在一起丨繁华的城市 繁荣的农村</a>
+                                · <a href="http://www.e0734.com/c/2021/08/28/116-443954.html" title="联播+｜促进民族团结进步 习近平考察细节蕴含深情" target="_blank">联播+｜促进民族团结进步 习近平考察细节蕴含深情</a>
+                                            </div>
+            <div id="scroll_end"></div>
+        </div>
+    </div>
+</section>
+<script>
+    // 新闻滚动
+    function ScrollImgLeft() {
+        var speed = 25;
+        var scroll_begin = document.getElementById("scroll_begin");
+        var scroll_end = document.getElementById("scroll_end");
+        var scroll_div = document.getElementById("scroll_div");
+        scroll_end.innerHTML = scroll_begin.innerHTML;
+
+        function Marquee() {
+            if (scroll_end.offsetWidth - scroll_div.scrollLeft <= 0)
+                scroll_div.scrollLeft -= scroll_begin.offsetWidth;
+            else
+                scroll_div.scrollLeft++;
+        }
+
+        var MyMar = setInterval(Marquee, speed);
+        scroll_div.onmouseover = function () {
+            clearInterval(MyMar);
+        }
+        scroll_div.onmouseout = function () {
+            MyMar = setInterval(Marquee, speed);
+        }
+    }
+
+    $(function () {
+        ScrollImgLeft()
+    })
+</script>
+
+<style>
+    .column .box01 {
+        height: 36px;
+        padding: 20px 0;
+        border-bottom: #d3d3d3 1px solid;
+        font-size: 14px;
+    }
+
+    .column .box01 .fl {
+        font-size: 16px;
+        line-height: 36px;
+        float: left;
+    }
+
+    .column .box01 .fr {
+        float: right;
+    }
+
+    .column .box01 .fr .fx {
+        font-size: 14px;
+        float: left;
+    }
+
+    .column .box01 .fr .tw_common {
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+
+    .column .box01 .fr img {
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+
+    #tw_content_aside.article-aside{
+        padding-top:30px;
+    }
+    #top1{
+        width: 1180px;
+        margin: 0 auto;
+    }
+	.box ul li{font-size:14px; width:50%;float:left;}
+    .box h5{font-size:16px;font-weight:bolder;border-bottom:1px solid #ddd;}
+    .box{width:760px;margin:0}
+</style>
+
+<style type="text/css">
+    .ops_shareLayer ul, .ops_shareLayer li, .ops_shareLayer a, .ops_shareLayer i {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .ops_shareLayer {
+        line-height: 44px;
+    }
+
+    .ops_shareLayer .ops_tit {
+        color: #666;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .ops_shareLayer .ops_icons {
+        float: left;
+    }
+
+    .ops_shareLayer .ops_icons li {
+        float: left;
+        height: 44px;
+        width: 44px;
+        list-style: outside none none;
+        margin-right: 10px;
+    }
+
+    .ops_shareLayer .ops_icons a {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .ops_shareLayer .ops_icons a i {
+        background-image: url(http://www.people.com.cn/img/2012wbn/images/ops_icons_02.png);
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_rmwb {
+        background-color: #ebccd1;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_rmwb:hover, .ops_shareLayer .ops_icons a.icon_rmwb:focus {
+        background-color: #cb0000;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_sina {
+        background-color: #fccfcf;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_sina:hover, .ops_shareLayer .ops_icons a.icon_sina:focus {
+        background-color: #d9534f;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_sina i {
+        background-position: 0 -50px;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_weixin {
+        background-color: #d6e9c6;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_weixin:hover, .ops_shareLayer .ops_icons a.icon_weixin:focus {
+        background-color: #5cb85c;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_weixin i {
+        background-position: 0 -100px;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_qzone {
+        background-color: #faebcc;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_qzone:hover, .ops_shareLayer .ops_icons a.icon_qzone:focus {
+        background-color: #f0ad4e;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_qzone i {
+        background-position: 0 -150px;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_copy {
+        background-color: #bce8f1;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_copy:hover, .ops_shareLayer .ops_icons a.icon_copy:focus {
+        background-color: #428bca;
+    }
+
+    .ops_shareLayer .ops_icons a.icon_copy i {
+        background-position: 0 -200px;
+    }
+
+    .weixin_popup {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #d8d8d8;
+        padding: 10px;
+        position: fixed;
+        z-index: 11001;
+        text-align: left;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .weixin_popup .weixin_popup_head {
+        color: #000;
+        font-weight: bold;
+        height: 16px;
+        line-height: 16px;
+        position: relative;
+        text-align: left;
+    }
+
+    .weixin_popup .weixin_popup_head .weixin_popup_close {
+        color: #999;
+        font-size: 16px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+        top: 0;
+        width: 16px;
+    }
+
+    .weixin_popup .weixin_popup_main {
+        TEXT-ALIGN: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .weixin_popup .weixin_popup_foot {
+        color: #666;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    #weixin_qrcode {
+        height: 295px;
+        left: 333.5px;
+        bottom: 150px;
+        width: 240px;
+    }
+</style>
+
+<div id="top1">
+    <div class="top_cont">
+        <table height="51" border="0" cellspacing="0" cellpadding="0" class="path" width="100%">
+            <tbody>
+            <tr>
+                <td  class="path_tx">您所在的位置<a href="http://www.e0734.com">首页</a><span> &gt; </span><a href="http://www.e0734.com/category/news/">新闻中心</a> > <a href="http://www.e0734.com/category/news/domestic/">国内国际</a> >  正文：</td><!--<a href="/" target="_blank">首页</a> > 正文-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="column article-content js-returntop pos-r">
+    <h1 class="article-content-title">这里是新疆 | 阿不都拉升职记</h1>
+
+    <div class="box01">
+        <div class="fl">2021-08-29 12:35:29&nbsp;&nbsp;来源：<a href="" target="_blank">新华网客户端</a>&nbsp;&nbsp;</div>
+        <div class="fr">
+            <div class="fx">
+
+                <div id="ops_share">
+                    <div class="ops_shareLayer"><span class="ops_tit">分享到：</span>
+                        <ul class="ops_icons">
+                              <div class="bdsharebuttonbox" data-tag="share_1">
+
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_weixin" data-cmd="weixin"></a>
+	<a class="bds_tqq" data-cmd="tqq"></a>
+	<a class="bds_more" data-cmd="more">更多</a>
+
+</div>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : '这里是新疆 | 阿不都拉升职记',
+			bdDesc : '这里是新疆 | 阿不都拉升职记',
+			bdUrl : window.location.href,
+			bdPic : $('#content img').first().attr('src')
+		},
+		share : [{
+			"bdSize" : 32
+		}],
+
+		image : [{
+			viewType : 'list',
+			viewPos : 'top',
+			viewColor : 'black',
+			viewSize : '16',
+			viewList : ['tsina','tqq','weixin']
+		}],
+		selectShare : [{
+			"bdselectMiniList" : ['tsina','tqq','weixin']
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+          <!--分享-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tw_common" id="rwb_bbstop">
+                <a href="" target="_blank"><img src="http://www.e0734.com/statics/web/image/icon04.jpg" width="29" height="23"></a>&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="hr30 clear"></div>
+
+    <div class="">
+        <div class="fl">
+            <article class="article-detail  w760" style="font-size:18px;line-height:35px">
+                <p style="text-indent:2em;text-align: justify;">
+<video controls="" height="auto" src="https://vodpub1.v.news.cn/original/20210828/0c354d50ee71404ba9467de89fb36634.mp4" type="video/mp4" width="80%">&nbsp;</video>
+</p>
+
+<p style="text-indent:2em;text-align: justify;">西装革履，精神抖擞的阿不都拉，来自和田于田县。他现在是酒店西餐厅经理。一大早他就开始了一天的备餐工作，检查出餐情况。旅游旺季，酒店每天接待顾客有400多人，客人用餐结束，他会跟他们沟通，询问菜品情况，确保每一位顾客吃得开心。跟他一起来的还有很多家乡的兄弟姐妹，平日里大家互相帮助，一起进步。勤奋努力的阿不都拉在乌鲁木齐成家了，有两个可爱的儿子，每天妻子送孩子上学，他接孩子放学，一家人其乐融融，小日子过得幸福美好。</p>
+            </article>
+
+            <!--评论模块-->
+                    </div>
+
+        <aside id="tw_content_aside" class="article-aside fl-r">
+    <div class="commend-article">
+        <div class="m-title-a">
+            <h2 class="m-title-h2"><a href="http://www.e0734.com/category/news/toutiao/">今日推荐</a></h2>
+        </div>
+        <div class="commend-inner">
+            <div class="m-accordion js-accordion">
+                <ul>
+                                                            <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/28/116-443885.html" target="_blank" title="跨越万水千山的深情" class="title">跨越万水千山的深情</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/28/116-443885.html" target="_blank" title="跨越万水千山的深情"><img class="thumb fl-l" src="https://img-xhpfm.zhongguowangshi.com/News/202108/b938621493b544bb982e3d062523de78.png?x-oss-process=image/resize,w_1000/auto-orient,1/quality,Q_80" width="120" height="90" alt="跨越万水千山的深情"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/28/116-443885.html" target="_blank" title="跨越万水千山的深情">跨越万水千山的深情</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/28/116-443833.html" target="_blank" title="转扩！帮烈士寻亲，送英雄回家" class="title">转扩！帮烈士寻亲，送英雄回家</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/28/116-443833.html" target="_blank" title="转扩！帮烈士寻亲，送英雄回家"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0828/u/20210828081110807.png?x-oss-process=style/copyleft" width="120" height="90" alt="转扩！帮烈士寻亲，送英雄回家"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/28/116-443833.html" target="_blank" title="转扩！帮烈士寻亲，送英雄回家">转扩！帮烈士寻亲，送英雄回家</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/29/116-443978.html" target="_blank" title="国际锐评丨美方所谓溯源报告又是闹剧一场" class="title">国际锐评丨美方所谓溯源报告又是闹剧一场</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/29/116-443978.html" target="_blank" title="国际锐评丨美方所谓溯源报告又是闹剧一场"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0829/u/20210829093414372.jpg?x-oss-process=style/copyleft" width="120" height="90" alt="国际锐评丨美方所谓溯源报告又是闹剧一场"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/29/116-443978.html" target="_blank" title="国际锐评丨美方所谓溯源报告又是闹剧一场">国际锐评丨美方所谓溯源报告又是闹剧一场</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/29/116-443977.html" target="_blank" title="【央视快评】铸牢中华民族共同体意识" class="title">【央视快评】铸牢中华民族共同体意识</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/29/116-443977.html" target="_blank" title="【央视快评】铸牢中华民族共同体意识"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0829/u/20210829093331375.jpg?x-oss-process=style/copyleft" width="120" height="90" alt="【央视快评】铸牢中华民族共同体意识"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/29/116-443977.html" target="_blank" title="【央视快评】铸牢中华民族共同体意识">【央视快评】铸牢中华民族共同体意识</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/29/116-443976.html" target="_blank" title="金句来了！习近平：推动新时代党的民族工作高质量发展" class="title">金句来了！习近平：推动新时代党的民族工作高质量发展</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/29/116-443976.html" target="_blank" title="金句来了！习近平：推动新时代党的民族工作高质量发展"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0829/u/20210829093106964.jpg?x-oss-process=style/copyleft" width="120" height="90" alt="金句来了！习近平：推动新时代党的民族工作高质量发展"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/29/116-443976.html" target="_blank" title="金句来了！习近平：推动新时代党的民族工作高质量发展">金句来了！习近平：推动新时代党的民族工作高质量发展</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/28/116-443955.html" target="_blank" title="和人民在一起丨繁华的城市 繁荣的农村" class="title">和人民在一起丨繁华的城市 繁荣的农村</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/28/116-443955.html" target="_blank" title="和人民在一起丨繁华的城市 繁荣的农村"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0828/u/20210828090155839.gif?x-oss-process=style/copyleft" width="120" height="90" alt="和人民在一起丨繁华的城市 繁荣的农村"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/28/116-443955.html" target="_blank" title="和人民在一起丨繁华的城市 繁荣的农村">和人民在一起丨繁华的城市 繁荣的农村</a></p>
+                        </div>
+                    </li>
+                                        <li class="m-accordion-item">
+                        <a href="http://www.e0734.com/c/2021/08/28/116-443954.html" target="_blank" title="联播+｜促进民族团结进步 习近平考察细节蕴含深情" class="title">联播+｜促进民族团结进步 习近平考察细节蕴含深情</a>
+                        <div class="m-accordion-thumb ov" >
+                            <a href="http://www.e0734.com/c/2021/08/28/116-443954.html" target="_blank" title="联播+｜促进民族团结进步 习近平考察细节蕴含深情"><img class="thumb fl-l" src="https://oss1.e0734.com/2021/0828/u/20210828090104410.jpg?x-oss-process=style/copyleft" width="120" height="90" alt="联播+｜促进民族团结进步 习近平考察细节蕴含深情"/></a>
+                            <p><a href="http://www.e0734.com/c/2021/08/28/116-443954.html" target="_blank" title="联播+｜促进民族团结进步 习近平考察细节蕴含深情">联播+｜促进民族团结进步 习近平考察细节蕴含深情</a></p>
+                        </div>
+                    </li>
+                                                        </ul>
+            </div>
+        </div>
+        <!--切换显示图片-->
+        <script>
+            $("#tw_content_aside .m-accordion .m-accordion-item").hover(function(e){
+                $(e.currentTarget).parent().children(".m-accordion-item").children(".m-accordion-thumb").css("display","none")
+                $(e.currentTarget).parent().children(".m-accordion-item").children(".title").css("display","block")
+                $(e.currentTarget).children(".m-accordion-thumb").css("display","block")
+                $(e.currentTarget).children(".title").css("display","none")
+            })
+        </script>
+    </div>
+
+    <div class="hr20"></div>
+
+    <!--<div class="bor mb10">
+        <div class="m-title-a">
+            <h2 class="m-title-h2"><a href="">最新专题</a></h2>
+        </div>
+        <div class="tw_aside_special">
+                                                                        <p>
+                <a href="http://www.e0734.com/index.php?m=special&c=index&id=374" target="_blank">
+                    <img src="https://oss1.e0734.com/2021/0729/a11/20210729102626649.jpg?x-oss-process=style/copyleft" width="185" height="110" border="0"/>
+                </a>
+                <a href="" class="tw_des" target="_blank"><b>最美新时代革命军人</b><br></i></a>
+            </p>
+                                                                        <ul class="list_14">
+                                                <li><a href='http://www.e0734.com/index.php?m=special&c=index&specialid=359' target="_blank">奋斗百年路 启航新征程</a></li>
+                                                                                                                            <li><a href='http://www.e0734.com/index.php?m=special&c=index&id=373' target="_blank">打赢防溺水人民战争</a></li>
+                                                                                                                            <li><a href='http://www.e0734.com/index.php?m=special&c=index&specialid=315' target="_blank">抗击新型冠状病毒肺炎</a></li>
+                                                                                                                            <li><a href='http://www.e0734.com/index.php?m=special&c=index&id=372' target="_blank">在这里读懂湖南人</a></li>
+                                            </ul>
+                                                                                                                                                                                                                                                                        </div>
+    </div>-->
+
+    <div class="hr20"></div>
+
+    <div class="commend-picture">
+        <div class="m-title-a">
+            <h2 class="m-title-h2"><a href="http://www.e0734.com/category/photo/" target="_blank">推荐图片</a></h2>
+        </div>
+        <div class="hr20"></div>
+        <div class="commend-picture-inner">
+            <ul class="m-imagetitle">
+                                                                <li class="item odd">
+                    <a href="http://www.e0734.com/c/2021/08/27/31-443790.html" target="_blank" title="市运会进行时丨跳水青少年组开赛 7支县市区代表队参与竞逐" class="thumbbox"><img src="https://oss1.e0734.com/2021/0827/u27451/20210827200231541.jpg?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/27/31-443790.html" target="_blank" title="市运会进行时丨跳水青少年组开赛 7支县市区代表队参与竞逐">市运会进行时丨跳水青少年组开赛 7支县市区</a>
+                </li>
+                                                <li class="item ">
+                    <a href="http://www.e0734.com/c/2021/08/27/31-443811.html" target="_blank" title="衡阳市第二届刑事技术职业技能竞赛收官 衡阳县公安局获一等奖" class="thumbbox"><img src="https://oss1.e0734.com/2021/0827/u21364/20210827211621225.JPG?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/27/31-443811.html" target="_blank" title="衡阳市第二届刑事技术职业技能竞赛收官 衡阳县公安局获一等奖">衡阳市第二届刑事技术职业技能竞赛收官 衡阳</a>
+                </li>
+                                                <li class="item odd">
+                    <a href="http://www.e0734.com/c/2021/08/27/31-443731.html" target="_blank" title="优化营商环境：衡阳市首个政府采购全流程电子标上线交易" class="thumbbox"><img src="https://oss1.e0734.com/2021/0827/u27451/20210827124740709.jpeg?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/27/31-443731.html" target="_blank" title="优化营商环境：衡阳市首个政府采购全流程电子标上线交易">优化营商环境：衡阳市首个政府采购全流程电子</a>
+                </li>
+                                                <li class="item ">
+                    <a href="http://www.e0734.com/c/2021/08/25/31-443486.html" target="_blank" title="走好新的赶考之路丨刘浪：奋力把南岳打造成世界级文化旅游目的地" class="thumbbox"><img src="https://oss1.e0734.com/2021/0825/u20893/20210825160021273.jpg?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/25/31-443486.html" target="_blank" title="走好新的赶考之路丨刘浪：奋力把南岳打造成世界级文化旅游目的地">走好新的赶考之路丨刘浪：奋力把南岳打造成世</a>
+                </li>
+                                                <li class="item odd">
+                    <a href="http://www.e0734.com/c/2021/08/25/31-443544.html" target="_blank" title="市运会进行时丨皮划艇、赛艇开赛 90余名运动员参与竞逐" class="thumbbox"><img src="https://oss1.e0734.com/2021/0825/u20306/20210825223424322.jpg?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/25/31-443544.html" target="_blank" title="市运会进行时丨皮划艇、赛艇开赛 90余名运动员参与竞逐">市运会进行时丨皮划艇、赛艇开赛 90余名运动</a>
+                </li>
+                                                <li class="item ">
+                    <a href="http://www.e0734.com/c/2021/08/25/31-443527.html" target="_blank" title="衡阳天燃气“家门口”缴费  60处服务点24小时自助购气" class="thumbbox"><img src="https://oss1.e0734.com/2021/0825/u21364/20210825195527889.JPG?x-oss-process=style/default" alt="" width="140" height="105"></a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/25/31-443527.html" target="_blank" title="衡阳天燃气“家门口”缴费  60处服务点24小时自助购气">衡阳天燃气&ldquo;家门口&rdquo;缴费  60处服务点24小</a>
+                </li>
+                                                            </ul>
+        </div>
+    </div>
+
+    <div class="hr20"></div>
+
+    <div class="commend-video">
+        <div class="m-title-a">
+            <h2 class="m-title-h2"><a href="http://www.e0734.com/category/jiuke/av/">推荐视频</a></h2>
+        </div>
+        <div class="hr20"></div>
+        <div class="commend-picture-inner">
+            <ul class="m-imagetitle">
+                                                                <li class="item odd js-overlay">
+                    <a href="http://www.e0734.com/c/2021/08/23/615-443319.html" target="_blank" title="衡阳红色军休故事百人讲(9)|刘福元：与死神争夺战友" class="thumb-link"><img src="https://oss1.e0734.com/2021/0823/a22/20210823222156975.jpg?x-oss-process=style/copyleft" alt="" width="140" height="105">
+                        <span class="time"></span>
+                    </a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/23/615-443319.html" target="_blank" title="衡阳红色军休故事百人讲(9)|刘福元：与死神争夺战友">衡阳红色军休故事百人讲(9)|刘福元：与死神</a>
+                    <a href="http://www.e0734.com/c/2021/08/23/615-443319.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+                </li>
+                                                <li class="item  js-overlay">
+                    <a href="http://www.e0734.com/c/2021/08/19/615-442871.html" target="_blank" title="天青色等烟雨，而我在雨母山等你！" class="thumb-link"><img src="https://oss1.e0734.com/2021/0819/a22/20210819210542543.png?x-oss-process=style/copyleft" alt="" width="140" height="105">
+                        <span class="time"></span>
+                    </a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/19/615-442871.html" target="_blank" title="天青色等烟雨，而我在雨母山等你！">天青色等烟雨，而我在雨母山等你！</a>
+                    <a href="http://www.e0734.com/c/2021/08/19/615-442871.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+                </li>
+                                                <li class="item odd js-overlay">
+                    <a href="http://www.e0734.com/c/2021/08/19/615-442870.html" target="_blank" title="衡阳红色军休故事百人讲(8)|黎世纯：救治钢铁战士" class="thumb-link"><img src="https://oss1.e0734.com/2021/0819/a22/20210819204830994.png?x-oss-process=style/copyleft" alt="" width="140" height="105">
+                        <span class="time"></span>
+                    </a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/19/615-442870.html" target="_blank" title="衡阳红色军休故事百人讲(8)|黎世纯：救治钢铁战士">衡阳红色军休故事百人讲(8)|黎世纯：救治钢</a>
+                    <a href="http://www.e0734.com/c/2021/08/19/615-442870.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+                </li>
+                                                <li class="item  js-overlay">
+                    <a href="http://www.e0734.com/c/2021/08/16/615-442485.html" target="_blank" title="衡阳红色军休故事百人讲（7）|邓太荣：在葛振林身边的日子" class="thumb-link"><img src="https://oss1.e0734.com/2021/0816/a22/20210816162735130.jpg?x-oss-process=style/copyleft" alt="" width="140" height="105">
+                        <span class="time"></span>
+                    </a>
+                    <a class="title" href="http://www.e0734.com/c/2021/08/16/615-442485.html" target="_blank" title="衡阳红色军休故事百人讲（7）|邓太荣：在葛振林身边的日子">衡阳红色军休故事百人讲（7）|邓太荣：在葛</a>
+                    <a href="http://www.e0734.com/c/2021/08/16/615-442485.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+                </li>
+                                                            </ul>
+        </div>
+    </div>
+
+</aside>
+    </div>
+    <div class="hr40 clear"></div>
+
+</div>
+<script language="JavaScript" src="http://www.e0734.com/api.php?op=count&id=444011&modelid=25"></script>
+<footer id="footer">
+    <ul class="bomlink">
+        <li><a href="" target="_blank">衡阳新闻网</a> |</li>
+        <li><a href="/index.php?m=content&c=index&a=lists&catid=2" target="_blank" >关于我们</a> |</li>
+        <li><a href="/index.php?m=content&c=index&a=lists&catid=3" target="_blank" >联系我们</a> |</li>
+
+        <li><a href="" target="_blank">手机访问</a> |</li>
+        <li><a href="" target="_blank">网站地图</a> |</li>
+        <li><a href="" target="_blank" >投稿指南</a> |</li>
+        <li><a href="" target="_blank">我要爆料</a></li>
+    </ul>
+    <p>www.e0734.com&nbsp;&nbsp;&nbsp;互联网新闻信息服务许可证&nbsp;&nbsp;&nbsp;国新网编号：4312010001&nbsp;&nbsp;&nbsp;ICP网站备案号:<a href="https://beian.miit.gov.cn/" target="_blank">湘ICP备12011513号-1</a></p>
+    <p><!--新闻热线：0734-8888055&nbsp;&nbsp;&nbsp;-->投诉报料：0734-8888043&nbsp;&nbsp;&nbsp;杜绝虚假新闻举报电话:0734-8888055&nbsp;&nbsp;&nbsp;不良信息举报邮箱：hyxinwen@163.com</p>
+    <p>主管主办：中共衡阳市委宣传部&nbsp;&nbsp;&nbsp;版权所有：中国衡阳新闻网站&nbsp;&nbsp;&nbsp;法律支持：湖南业达律师事务所&nbsp;&nbsp;&nbsp;<i class="icon_police"></i><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43040702000152">公安机关备案号：43040702000152</a></p>
+
+    <div class="footer_link">
+        <span id='_ideConac'></span>
+        <img src="http://www.e0734.com/statics/web/image/footer_1.gif">
+        <a href="#"  target="_blank"> <img src="http://www.e0734.com/statics/web/image/footer_2.gif"> </a>
+        <a href="http://pypt.rednet.cn/"  target="_blank"> <img src="http://www.e0734.com/statics/web/image/footer_3.jpg"> </a>
+        <a href="http://www.12377.cn/"  target="_blank"> <img src="http://www.e0734.com/statics/web/image/footer_4.jpg"> </a>
+        <a href="http://www0.e0734.com/jubao/" target="_blank"> <img src="http://www.e0734.com/statics/web/image/footer_5.jpg"/> </a>
+    </div>
+</footer>
+
+<div class="div_right" id="tw_back_top" style="left:auto;right:0;margin:auto">
+    <div class="right_nav">
+        <div id="download-container"><a id="download-close" href="javascript:void(0)" style="float: left;  margin-right: 10px;" onclick="document.getElementById('download-container').style.display='none';"><img src="http://www.e0734.com/images/close.gif" style="width: 10px; height: 10px;"></a>
+        <a href="/index.php?m=member&c=people&a=post" target="_blank"><img src="/uploadfile/statics_img/people_ly.gif" width="100" alt="" style="margin-bottom:10px;"></a><br  />
+         <img src="http://www.e0734.com/statics/web/image/app_link.png" width="100" height="100" alt=""/><br />
+         <img src="http://www.e0734.com/statics/old/images2020/wb_erweima.jpg" width="100"  alt=""/><br />
+            <img src="http://www.e0734.com/statics/old/images2020/wx_erweima.jpg" width="100" alt=""/>
+            <p><a href="#top_anchor">返回顶部</a></p>
+        </div>
+    </div>
+</div>
+<div style="display:none;"><script language="javascript" src="http://s4.cnzz.com/z_stat.php?id=1261229325&web_id=1261229325"></script></div>
+</body>
+<script>
+    function go_login(){
+        window.location.href = "http://www.e0734.com/index.php?m=member&c=index&a=login&siteid=1&forward="+encodeURI(window.location.href);
+    }
+    function do_logout(){
+
+    }
+</script>
+</html>

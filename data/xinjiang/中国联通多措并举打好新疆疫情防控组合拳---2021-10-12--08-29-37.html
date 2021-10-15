@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes” />
+	<link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+	<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="stylesheet" href="/css/header.css?version=20181128">
+	<link rel="stylesheet" href="/css/base.css?version=20181128">
+	<link rel="stylesheet" href="/css/layout.css?version=20181128">
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/btn.js?version=20181128"></script>
+	<script src="/js/count.js"></script>	
+</head>
+<body>
+<!--[if lt IE 10]> 
+	<style type="text/css"> 
+	#ie6-warning{ 
+		position: relative;
+		z-index: 999;
+		background:rgb(255,255,225); 
+		font-size:12px; 
+		color:#000; 
+		width:100%; 
+		height:30px;
+		padding-top:6px;
+		text-align:center; 
+	} 
+	#ie6-warning a { 
+		text-decoration:none; 
+	} 
+	#ie6-warning p { 
+		text-align: center;
+	} 
+	</style> 	
+	<div id="ie6-warning"><p>您正在使用低版本 IE10 以下内核浏览器，本站使用HTML5及相关技术搭建，且对IE9以下浏览器不做兼容设置。为获得更好的浏览体验，建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">IE10</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="https://www.google.cn/intl/zh-CN/chrome/</a> / <a href="http://www.oupeng.com/">Opear</a></p></div> 
+	<script type="text/javascript"> 
+	function position_fixed(el, eltop, elleft){ 
+	// check if this is IE6 
+	if(!window.XMLHttpRequest) 
+	window.onscroll = function(){ 
+	el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+	el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+	} 
+	else el.style.position = "fixed"; 
+	} 
+	position_fixed(document.getElementById("ie6-warning"),0, 0); 
+	</script>
+<![endif]-->
+<!-- 微信弹窗 -->
+<div class="Window-layer WeChat">
+	<div class="layer-box">
+		<div class="bt">
+			<span>中国联通官方微信</span>
+			<div class="layer-box-close" ><img src="/img/close@2x.png"></div>
+		</div>
+		<div class="text"><img src="/img/weixinerweim.jpg"></div>
+	</div>
+	<span class="bg"></span>
+</div>
+<div style="width: 1050px;
+   /* text-align: center;*/ 
+     align-items: center; 
+     margin: 0 auto;
+     min-height: 1500px;
+   /* margin-top: 200px;*/
+    background: #FFF;" >
+<!-- 头部 -->
+<div class="header">
+	<div class="welcome">
+		<p>欢迎来到中国联通官方网站</p>
+	</div>
+	<div class="link">
+		<div class="link-box">
+			<div class="logo"> <a href="/index.html"><img src="/img/logo.png"></a></div>
+	    	<ul>
+	    		<li> <a href="https://epay.10010.com" target="_blank">沃支付</a></li>
+	    		<li> <a href="http://iservice.10010.com/e4/PublicitychannelView/phone_new.html" target="_blank">手机营业厅</a></li>
+	    		<li> <a href="http://mall.10010.com" target="_blank">网上商城</a></li>
+	    		<li> <a href="http://www.10010.com" target="_blank">网上营业厅</a></li>
+	    		<li> <a class="WeChat-btn">官方微信</a></li>
+	    		<li> <a class="left-line" href="http://weibo.com/chinaunicom" target="_blank">官方微博</a></li>
+	    	</ul>
+    	</div>
+    </div>
+
+    <!-- 一级栏目 -->
+	<ul class="menu">
+		<li><a href="/index.html">首页</a></li>
+					<li>
+				<a  href="/ddjs/list01.html" >党的建设</a>
+			</li>
+			<li>
+				<a  href="/news/list202110.html">新闻中心</a>
+			</li>
+			<li>
+				<a  href="/brand/brand.html" >品牌专区</a>
+			</li>
+			<li>
+				<a  href="/introduction/public.html" >业务介绍</a>
+			</li>
+			<li>
+				<a  href="/hr/campusrecruit.html" >人力资源</a>
+			</li>
+			<li>
+				<a  href="/sdgjz/list01.html" >社会责任</a>
+			</li>
+			<li>
+				<a  href="/culture/vision.html" >企业文化</a>
+			</li>
+			<li>
+				<a  href="/serve/serve.html" >客户服务</a>
+			</li>
+			<li>
+				<a  href="/about/about.html" >信息公开</a>
+			</li>
+	</ul>
+
+</div>
+
+       
+        <script type="text/javascript">    
+    
+    var headUrl = window.location.href;
+    var headUrlInfo = headUrl.split("/");
+    if(headUrlInfo[3] == 'gz' || headUrlInfo[3] == 'notice' || headUrlInfo[3] == 'issue' || headUrlInfo[3] == 'gcdt' || headUrlInfo[3] == 'dfdt' || headUrlInfo[3] == 'hydt')
+        headUrlInfo[3] = 'news'
+    else if(headUrlInfo[3] == '')
+    	headUrlInfo[3] = 'index'
+    else if(headUrlInfo[3] == 'duty' || headUrlInfo[3] == 'ydyl'|| headUrlInfo[3] == 'daxw')
+        headUrlInfo[3] = 'sdgjz'
+    $(".header ul li a[href*='" + headUrlInfo[3] + "']").addClass('active-header').siblings().removeClass('active-header');
+    
+    updatePv();
+        </script>
+
+<div class="banner">
+    <img src="/images/banner/1news.png" alt="">
+</div>
+
+
+<link rel="stylesheet" href="/css/newDetail.css">
+
+<div class="content">
+    <div class="main">
+				<div class="left_nav">
+			<div class="title">
+                <h1>新闻中心<i class="after"></i></h1>
+         	</div>
+            <ul>
+            	                <li onclick="window.location='/news/list202110.html'">公司要闻</li>
+               
+                <li onclick="window.location='/dfdt/list202109.html'">一线新闻</li>
+                <li onclick="window.location='/hydt/list202109.html'">行业动态</li>
+                <li onclick="window.location='/notice/list202100.html'">通知公告</li>
+                <li onclick="window.location='/gz/list202110.html'">国资动态</li>
+                <li onclick="window.location='/issue/index_zt_2021031616988368240065881.html'">专题专栏</li>
+
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var url = window.location.href;
+            var urlInfo = url.split("/");
+            $(".left_nav li[onclick*='" + urlInfo[3] + "']").addClass('active').siblings().removeClass('active');
+        </script>
+
+        <div class="right_text">
+            <h2>中国联通多措并举打好新疆疫情防控组合拳</h2>
+            <ul class="sub_title">
+                <li style="width:50%;margin:0">发布时间：2021-10-12  </li>
+                <li style="width:50%;margin:0">发布人：新闻宣传中心 </li>
+            </ul>
+            <div class="article"> 
+                <p style="text-indent: 2em; text-align: left;">近日，面对新疆伊犁出现的新一轮新冠肺炎疫情，中国联通第一时间按照当地政府管控要求，启动应急预案，主动担当、积极作为，多措并举打好新疆疫情防控组合拳。</p><p style="text-indent: 2em; text-align: left;">紧密部署，保障重点区域网络畅通</p><p style="text-indent: 2em; text-align: left;">中国联通新疆分公司积极与地方政府、防疫指挥部、重点客户单位、医院、核算检测点等紧要场所对接，及时响应通信需求，24小时在岗值守，并对重要区域的基站网络情况、性能指标、流量波动等进行实时监控分析,全力筑牢疫情防控网络“生命线”。全州110名抢修装维人员顶风雨、冒严寒，坚守装维服务一线。截至目前，已对高负荷、高业务量区域紧急扩容410处、负荷均衡参数调整76处，参数优化调整处理突发状况导致拥塞小区9处，全力以赴满足居家用户的通信需求。</p><p style="text-indent: 2em; text-align: left;">在保障网络畅通的工作过程中，新疆联通涌现了众多一线模范。伊宁市区营销中心CEO帕茹克得知粮食局家属院因老旧小区改造导致联通用户无法上网的情况后，立即带领三组智家工程师连夜处理故障；10月9日下午，察布查尔县CEO盛娟接到县委电话，得知县园区集中隔离点急需对讲机业务，挂断电话后她迅速备齐设备前往园区，应急小分队连夜调测开通51部对讲机业务，满足隔离点通信需求；喀拉苏乡集中隔离点没有宽带网络，尼勒克县分公司抢修人员火速勘察并设计线路，连夜作战完成26户设备的安装调试，终于在10日凌晨为隔离点开通宽带。</p><p>&nbsp;<img src="/resource/group1/M01/00/2C/wKjcA2FlrAqAObiqABFRGeWgN9Y829.png" title="图片1.png" alt="图片1.png"/></p><p><img src="/resource/group1/M00/00/2C/wKjcAmFlvKyAS5BxABZHBFOi63Q962.png" title="图片2.png" alt="图片2.png"/></p><p style="text-indent: 2em; text-align: left;">数据赋能，助力政府精准防控</p><p style="text-indent: 2em; text-align: left;">面对疫情，新疆联通第一时间组建疫情防控数据应急小组，为疫情防控提供大数据支撑。应急小组自10月3日起便放弃节假日休息，驻守岗位，24小时响应疫情数据需求，畅通信息对接通道，专岗专人负责数据传输及信息共享，半月以来提供各类疫情数据报表8份，各类数据20余万条，有力配合相关部门精准开展疫情防控。</p><p style="text-indent: 2em; text-align: left;">快速响应，满足用户通信需求</p><p style="text-indent: 2em; text-align: left;">新疆联通一手抓防疫，一手抓服务。为能够及时解决用户反映的问题，做好客户服务工作，伊犁分公司客户服务中心转变工作模式，通过远程处理工单、关注本地投诉重点案件及重保用户投诉问题等，做到客服工作不间断。</p><p>&nbsp;<img src="/resource/group1/M00/00/2C/wKjcA2FlrBSADGH7ABlKTsB2Vrw330.png" title="图片3.png" alt="图片3.png"/></p><p style="text-indent: 2em; text-align: left;">同时，针对用户居家办公、线上教学等需求，新疆联通加强线上业务宣传，强化微信营业厅、手机营业厅业务办理指引；组建专班开展全量客户运营，监督重点环节与脚本规范，避免用户被重复回访或出现无效回访，降低用户感知；关注大客户业务需求，做到全面回访慰问，确保及时支撑网络需求。</p><p style="text-indent: 2em; text-align: left;">冲锋在前，联通志愿服务在“疫”线</p><p style="text-indent: 2em; text-align: left;">新疆联通伊犁分公司的青年志愿者们奔走在社区、街头与各个核酸检测点，筑起一道道抗疫红色防线。伊犁分公司员工麦尔丹在得知社区工作人员力量不足，当即报名加入志愿者队伍，并自发和其他志愿者一起走访，挨家挨户了解居民需求。有着智家工程师和网格经理双岗位工作经验的他，每家每户详细询问网络使用情况，了解到部分居民有网络需求或者故障时，他及时处理故障、完成装机，获得附近居民的高度赞扬。</p><p style="text-indent: 2em; text-align: left;">中国联通将持续秉承“人民邮电为人民”的初心，继续发挥通信网络与大数据资源优势，持续为疫情防控工作保驾护航。</p><p>&nbsp;<img src="/resource/group1/M01/00/2C/wKjcAmFlvLeAWU7nABJ3-iMtBug074.png" title="图片4.png" alt="图片4.png"/></p><p style="text-indent: 2em; text-align: left;">供稿：新疆联通办公室 王丽姗、新闻宣传中心 王欢</p><p><br/></p>
+                <style>
+.share_list{
+  clear: both;
+  overflow: hidden;
+}
+    .share_list::after{
+        content:"";
+        visibility:hidden;
+        display:block;
+        clear:both;
+        height: 0;
+    }
+    .share_list li img{
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+    .share_list li{
+        float: left;
+        font-size: 14px;
+        color: #999999;
+        height: 32px;
+        line-height: 32px;
+    }
+    .share_li{
+        width: 80px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+</style> 
+<script src="/js/jquery.qrcode.min.js" charset="utf-8"></script> 
+<ul class="share_list">
+    <li>分享到：</li>
+    <li class="share_li" onclick="init()"><img src="/images/weixin_icon.png"/>微信好友</li>
+    <li class="share_li" onclick="init()"><img src="/images/weixin_penyou_icon.png"/>朋友圈</li>
+    <li class="share_li" onclick="goQQ()"><img src="/images/qq_icon.png"/>QQ好友</li>
+    <li class="share_li" onclick="goQQZone()"><img style="margin-bottom: 2px" src="/images/qq_kongjian_icon.png"/>QQ空间</li>
+    <li class="share_li" onclick="goSina()"><img style="margin-bottom: 3px" src="/images/weibo_icon.png"/>新浪微博</li>
+</ul>
+<div id="tong" class="hide" style="display:none;" ><div id="qrcode" style="color:white;text-align:center;margin-left:60px;margin-top:20px;"></div></div>
+<script type="text/javascript"> 
+    function generateQRCode(rendermethod, picwidth, picheight, url) {
+
+        $("#qrcode").qrcode({ 
+            render: rendermethod, // 渲染方式有table方式（IE兼容）和canvas方式
+            width: picwidth, //宽度 
+            height:picheight, //高度 
+            text: utf16to8(url), //内容 
+            typeNumber:-1,//计算模式
+            correctLevel:2,//二维码纠错级别
+            background:"#ffffff",//背景颜色
+            foreground:"#000000"  //二维码颜色
+
+        });
+    }
+    function init() { 
+		$('#qrcode').html("");
+		var url = window.location.href; //获取当前url
+        generateQRCode("table",200, 200, url);
+        var margin = ($("#qrcode").height()-$("#codeico").height())/2;
+        $("#codeico").css("margin",margin);
+		//二维码弹出
+		layer.open({
+            type: 1,
+            title: '分享二维码',
+            closeBtn: 0,
+            area: ['330px', '300px'],
+            skin: 'layui-layer-rim', //加上边框
+            shadeClose: true,
+            content: $('#tong')
+        });
+    }
+    //中文编码格式转换
+    function utf16to8(str) {
+        var out, i, len, c;
+        out = "";
+        len = str.length;
+        for (i = 0; i < len; i++) {
+            c = str.charCodeAt(i);
+            if ((c >= 0x0001) && (c <= 0x007F)) {
+                out += str.charAt(i);
+            } else if (c > 0x07FF) {
+                out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+            } else {
+                out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+            }
+        }
+        return out;
+    } 
+	function goSina(){
+		var _t = encodeURI(document.title); 
+		var _url = encodeURI(document.location); 
+		window.open('http://v.t.sina.com.cn/share/share.php?title=分享自中国联通&url='
+		+_url+'&source=bookmark','_blank','width=450,height=400');
+	}
+	function goQQZone(){
+		var _t = encodeURI(document.title);
+		var _url = encodeURI(document.location); 
+		var _totalUrl = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+_url+'&title=分享自中国联通&pics=&summary=分享自中国联通&desc=分享自中国联通';
+		window.open(_totalUrl,'_blank','width=450,height=400');
+		return false;
+	}
+	function goQQ(){
+		var _url = encodeURI(document.location); 
+		var _totalUrl = 'http://connect.qq.com/widget/shareqq/index.html?title=分享自中国联通&url='+_url+'&desc=分享自中国联通&pics=&site=中国联通';
+		window.open(_totalUrl,'_blank','width=450,height=400');
+	}
+    </script> 
+				
+            </div>
+            <ul class="page_jumping"> 
+                
+            </ul>
+        </div>
+    </div>
+</div> 
+<script src="/js/base.js" charset="utf-8"></script>
+<script src="/js/newsdetail.js" charset="utf-8"></script>
+
+
+<!-- footer -->
+<link rel="stylesheet" href="/css/footer.css">
+<div class="footer">
+	<div class="f-box">
+				<div class="f-list">
+			<span>党的建设</span>
+			<ul>
+				<li>
+				<a href="/ddjs/list01.html">中央精神</a>
+				</li>
+				<li>
+				<a href="/ddjs/dsjy.html">党史教育</a>
+				</li>
+				<li>
+				<a href="/ddjs/list02.html">党组动态</a>
+				</li>
+				<li>
+				<a href="/ddjs/list03.html">党建要闻</a>
+				</li>
+				<li>
+				<a href="/ddjs/list05.html">党风廉政建设</a>
+				</li>
+				<li>
+				<a href="/ddjs/list04.html">基层风采</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>新闻中心</span>
+			<ul>
+				<li>
+				<a href="/news/list202110.html">公司要闻</a>
+				</li>
+				<li>
+				<a href="/dfdt/list202109.html">一线新闻</a>
+				</li>
+				<li>
+				<a href="/notice/list202100.html">通知公告</a>
+				</li>
+				<li>
+				<a href="/gz/list202110.html">国资动态</a>
+				</li>
+				<li>
+				<a href="/hydt">行业动态</a>
+				</li>
+				<li>
+				<a href="/issue/index_zt_2021031616988368240065881.html">专题专栏</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>品牌专区</span>
+			<ul>
+				<li>
+				<a href="/brand/brand.html">企业品牌</a>
+				</li>
+				<li>
+				<a href="/brand/wo.html">沃品牌</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>业务介绍</span>
+			<ul>
+				<li>
+				<a href="/introduction/public.html">公众业务</a>
+				</li>
+				<li>
+				<a href="/introduction/group.html">政企客户业务</a>
+				</li>
+				<li>
+				<a href="/introduction/inter-list.html">国际业务</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>人力资源</span>
+			<ul>
+				<li>
+				<a href="/hr/campusrecruit.html">校园招聘</a>
+				</li>
+				<li>
+				<a href="/hr/socialrecruit.html">社会招聘</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>社会责任</span>
+			<ul>
+				<li>
+				<a href="/sdgjz/list01.html">打好三大攻坚战</a>
+				</li>
+				<li>
+				<a href="/ydyl/list01.html">一带一路建设</a>
+				</li>
+				<li>
+				<a href="/daxw/list01.html">智慧冬奥</a>
+				</li>
+				<li>
+				<a href="/duty/duty.html">社会责任报告</a>
+				</li>
+				<li>
+				<a href="/duty/practice2016.html">社会责任实践</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>企业文化</span>
+			<ul>
+				<li>
+				<a href="/culture/vision.html">企业愿景</a>
+				</li>
+				<li>
+				<a href="/culture/mission.html">企业使命</a>
+				</li>
+				<li>
+				<a href="/culture/worth.html">企业价值观</a>
+				</li>
+				<li>
+				<a href="/culture/song.html">联通司歌</a>
+				</li>
+				<li>
+				<a href="/culture/cul_staff.html">联通好员工2017</a>
+				</li>
+				<li>
+				<a href="/culture/handbook.html">企业文化手册</a>
+				</li>
+				<li>
+				<a href="/culture/cul_lm.html">联通劳模2018</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>客户服务</span>
+			<ul>
+				<li>
+				<a href="/serve/serve.html">客户服务</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f-list">
+			<span>信息公开</span>
+			<ul>
+				<li>
+				<a href="/about/about.html">集团介绍</a>
+				</li>
+				<li>
+				<a href="/about/leaders.html">领导成员</a>
+				</li>
+				<li>
+				<a href="/about/structure.html">股权架构</a>
+				</li>
+				<li>
+				<a href="/about/prize.html">企业荣誉</a>
+				</li>
+				<li>
+				<a href="/about/evens.html">大事记</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="f-list f-last">
+			<span>期刊杂志</span>
+			<ul>
+				<li><a href="https://mp.weixin.qq.com/s/APosO3Jl6X9432lWLPl-PA" target="_blank"><img src="/img/xxtxjs.png"></a></li>
+				<li style="margin-top:10px;"><a href="http://ydsjjs.paperopen.com/" target="_blank"><img src="/img/ydsjjs.png"></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 商城、微信、微博 -->
+	<div class="footer-meiti">
+		<a href="http://mall.10010.com" target="_blank">
+			<img src="/img/unicom.png">
+			<p>中国联通网上商城</p>
+		</a>
+		<a class="WeChat-btn">
+			<img src="/img/weixin.png">
+			<p>中国联通微信公众号</p>
+		</a>
+		<a href="http://weibo.com/chinaunicom" target="_blank">
+			<img src="/img/weibo.png">
+			<p>中国联通官方微博</p>
+		</a>
+	</div>
+	
+	<div class="copy">
+		<span>
+		Copyright ©1999-2021 ChinaUnicom All Rights Reserved.中国联合网络通信集团有限公司&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">京ICP备11000964号-3</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact/index.html">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/law/index.html">法律声明</a>
+		</span>
+		<a class="ico chengxin" href="https://credit.cecdc.com/CX20111216001076001118.html" target="_blank"> <img src="/img/chengxin@2x.png"></a>
+		<a class="ico kexin" href="https://ss.knet.cn/verifyseal.dll?sn=e13013011010039034ki4j000000&comefrom=trust&trustKey=dn&trustValue=www.chinaunicom.com" target="_blank"> <img src="/img/kexin@2x.png"></a>
+	</div>
+</div>
+</div>
+<script type="text/javascript">  
+//右侧导航固定
+ window.addEventListener('scroll', function(){
+ 	let t = $('body, html').scrollTop();
+ 	if(t>396){
+		$('.left_nav').addClass('nav-fixed')
+	}else{
+		$('.left_nav').removeClass('nav-fixed')
+	}
+ })
+</script>
+</body>
+</html>
+
+
+<script type="text/javascript">
+  document.title = '中国联通多措并举打好新疆疫情防控组合拳';
+  updateHits('1,822','1');
+  getPreNextNews('1,822');
+ 
+</script>

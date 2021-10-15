@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>新疆维吾尔自治区教育厅关于进一步做好普通高中学生学籍网络管理有关工作的通知</title>
+		<link href="/model/style/3.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/model/jscript/jquery.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.form.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/model/jscript/function.js"></script>
+		<script type="text/javascript" src="/model/jscript/jquery.zxxbox.3.0-min.js"></script>
+		<script type="text/javascript" src="/model/jscript/pop.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".ztfg_left2 a").click(function(){
+					var ids = $(this).attr("ids");
+					$("#linkids").val(ids) ;
+					$("#linkform").submit();
+					return ;
+				})
+			}) ;
+		</script>
+	</head>
+	<body onkeyup="javascript:enterfind();">
+		<div style="display: none" >
+			<form action="/linkserv" method="post" id="linkform" target="_blank">
+				<input name="rids" type="text"  id="linkids"/>
+			</form>
+		</div>
+		<div style="display: none" id="detail" rjs8="lar763s490.txt"></div>
+<div id="head"><img src="/model/images/head3.jpg"/></div>		<div id="bg">
+			<div id="xlpx2_left">
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_dysc.jpg" width="176" height="32"/>
+				</div>
+				<div class="xlpx2_left2">
+					<img src="/model/images/button1.jpg" width="115" height="27" onclick="javascript:PrintMe()" style="cursor: hand;"/>
+					<a href="/pao?fn=lar763s490.txt&action=typeset"><img src="/model/images/button2.jpg"/></a>
+					
+					<img src="/model/images/button4.jpg" width="115" height="27" onclick="javascript:zl()" style="cursor: hand;"/>
+					<!-- <div class="xlpx2_left1">
+						正文转入：
+						<br />
+						<label>
+							<select name="select" id="dic">
+          					 	<option value="psl">请选择</option>
+						    			<option value="2">常用法规</option>		
+							</select>
+						</label>
+					</div> -->
+				</div>
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_ftyy2.jpg" width="176" height="32" />
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+											</ul>
+				</div>
+				<div class="ztfg_left1">
+					<img src="/model/images/fgzw_xgfg.jpg" width="176" height="32" />
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						<li>
+							<a target="_blank" href="/law?fn=lar638s186.txt">江西省普通高中学生学籍管理办法（试行）</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar647s858.txt">黑龙江省教育厅关于进一步加强普通高中学生学籍管理坚决治理违规招生行为的通知</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar671s070.txt">四川省普通高中学生学籍管理办法（试行）</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar675s988.txt">合肥市教育局关于2010级普通高中高一学生建学籍的通知</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar677s465.txt">四川省教育厅关于认真做好四川省普通高中学生学籍信息管理系统运行管理工作的通知</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar693s597.txt">陕西省普通高中学生学籍管理办法（试行）</a>
+						</li>
+						<li>
+							<a target="_blank" href="/law?fn=lar699s673.txt">江西省教育厅关于进一步推进普通高中学生学籍信息化管理工作的通知</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 
+				<div class="ztfg_left1">
+					<a href="#"><img src="/model/images/fgzw_xglw.jpg" width="176"
+							height="32" />
+					</a>
+				</div>
+				<div class="fgzw_ftyy2">
+					<ul>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+						<li>
+							<a href="#">国家税务总局关于下发20090601d版出口商品退税率文库的通知</a>
+						</li>
+						<li>
+							<a href="#">中央补助地方公共卫生专项资金农村卫生人员培训项目管理办法</a>
+						</li>
+					</ul>
+				</div>
+				 -->
+			</div>			<div id="fgzw_right" style="position: relative;">
+				<div class="xlpx2_right0">
+					<div class="xlpx2_right1" id="floattool">
+					<script type="text/javascript">
+				$("#dic").click(function(){
+					 	$.ajax({
+							type: "get",
+							url: "/userlogin",
+							data: "dbname=cook",
+							success: function(data, textStatus){
+						if(data==null||data==""){
+			  			$("#dic").find("option").remove();
+			  			var p = $(".fgzw_right2");
+						var position = p.position();
+						var left = position.left;
+						var top = position.top;
+			  		 $.ajax({
+						type: "get",
+						url: "/userdir",
+						data: "action=ishow&ts=switch&tab=detail",
+						success: function(data, textStatus){
+							$("#wjj5").html(data);
+							$("#wjj5").css({position: "absolute",top:top/2+3,left:-55});
+						},
+						complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+						},
+						error: function(){
+						//请求出错处理
+							}
+						});
+			  		  }}})
+				});
+				function zhuce(){
+					$.ajax({
+					type: "get",
+					url: "/userdir",
+					data: "action=ishow&ts=zhuce", 
+					success: function(data, textStatus){
+						//alert(data);
+						$("#wjj5").html(data);
+					},
+					complete: function(XMLHttpRequest, textStatus){
+						//HideLoading();
+					},
+					error: function(){
+						//请求出错处理
+					}
+				  });
+				}
+  		function elect(uu){
+  			$("#wjj5").hide();
+  			 location.reload(); 
+  		}
+			</script>
+							<div id="wjj5" align="center"></div>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="22" height="24" valign="middle">
+									<span class="fdj">按</span>
+								</td>
+								<td width="120" valign="middle">
+									<select id="showinfo" name="select5" onchange="javascript:donchang();">
+										<option value="yes">
+											索引信息+正文
+										</option>
+										<option value="no">
+											正文
+										</option>
+									</select>
+								</td>
+								<td valign="middle">
+									<span class="fdj">显示</span>
+								</td>
+								<td width="130" align="right" valign="middle">
+									<span class="fdj">本篇关键字搜索：</span>
+								</td>
+								<td width="200" valign="middle">
+									 <input name="textfield" type="text" id="kw" size="40" />
+								</td>
+								<td valign="middle">
+									<img src="/model/images/chaxun2.jpg" width="53" height="21" onclick="javascript:FindItIE();" style="cursor:pointer;"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="fgzw_right2" id="fgzw_right2">
+					<ul>
+							<li id="tit">【法规标题】新疆维吾尔自治区教育厅关于进一步做好普通高中学生学籍网络管理有关工作的通知</li>
+							<li>【法规文号】新教基办 2013 8号</li>
+							<li id="tdat">【发布日期】20130204</li>
+							<li>【实施日期】20130204</li>
+							<li id="tdpt">【发布部门】新疆自治区</li>
+							<li>【效力等级】</li>
+					</ul>
+				</div>
+				<div style="display: none">
+					<form action="/linkserv" method="post" id="links" target="_blank">
+						<input id="txr" name="rids"/>
+					</form>
+				</div>
+				<p>
+					<span class="fgzw_zw">【正文】</span>
+					<span class="fy">
+						
+						<!-- <img style="cursor:pointer;" src="/model/images/fy.gif" onclick="javascript:sub();" width="64" height="20" /> -->
+					</span>
+				</p>
+				<div class="zhengwen" id="maintext">
+					<br/><div align=center ><strong>新疆维吾尔自治区教育厅关于进一步做好普通高中学生学籍网络管理有关工作的通知</strong></div>
+<br><br/><div align=center ><strong>新教基办[2013]8号</strong></div>
+<br>伊犁哈萨克自治州教育局，各地、州、市教育局，自治区直属中学：
+<br>　　根据《关于做好进城务工人员随迁子女接受义务教育后在当地参加升学考试工作的意见》（国办[2012]46号）和《新疆维吾尔自治区普通高中学籍管理规定（试行）》（新教基[2011]35号）精神，为进一步规范我区普通高中学生学籍管理工作，现就学籍网络管理有关工作事项通知如下：
+<br>　　一、加强系统一体化管理，进一步完善学籍信息
+<br>　　（一）建立普通高中学籍电子管理系统与普通高中学业水平测试报名信息系统一体化管理制度。从2012级普通高中学生开始，普通高中学籍电子管理系统与普通高中学业水平考试报名信息系统实现对接，凡未取得自治区普通高中学籍号的2012级学生，将不得作为在籍学生参加2013年自治区普通高中学业水平考试。各地教育行政部门要督促所属普通高中学校及时提交并完善新生学籍信息,确保在册学生“一人一号”。因学校拖延导致学生不能按时报名参加自治区普通高中学业水平考试的，将全区通报相关领导及直接责任人。
+<br>　　（二）完善学生学籍信息。学生学籍注册工作完成后，学校要组织学生登录“新疆维吾尔自治区普通高中学生学籍管理系统”，通过“学生登录”界面进入系统完善个人学籍信息，使学生各项信息数据完整、准确。如学生姓名、语种、身份证等关键信息有误，学生需向所在学校申请，由学校修改提交地（州、市）教育行政部门批准。教师应指导学生认真细致填写每一项学籍信息，提醒学生切莫因粗心导致学籍信息出现遗漏、错误等问题，而影响高中学业水平考试和今后毕业证的发放。
+<br>　　二、进一步规范学籍异动管理
+<br>　　（一）全区各普通高中学校对2011级及以后学生的学籍异动管理，统一采用“新疆维吾尔自治区普通高中学生学籍管理系统”，登录网址：http：//jjc.xjedu.gov.cn,并使用统一制式的转学联系表（见附件）。
+<br>　　（二）加强跨省借读管理。出生在新疆、户籍在新疆的学生，符合相关规定要到外省学校借读的，必须先由地（州、市）教育行政部门批准，并统一报自治区教育厅进行确认备案方可跨省借读。户籍有跨省迁移记录的学生，必须在疆有高中三年完整学籍，不允许其跨省借读。内地对口援疆班的学生由生源地学校进行学籍注册，由各地报教育厅基础教育处备案。
+<br>　　（三）内地高中班的学生回到生源地学校就读，需提供自治区内地新疆学生工作办公室的证明，由各地州市教育局上报教育厅基础教育处，统一注册学籍号。
+<br>　　三、其他注意事项
+<br>　　（一）建立学籍管理责任追究制度。严禁区内普通高中为不在校学生（办理借读手续除外）空挂学籍。校长是学校学籍管理工作第一责任人，高中学籍管理实行“谁主管、谁审查、谁确认、谁负责”。各地教育行政部门要认真开展学籍清理工作，严肃查处假学籍、空挂学籍等问题。要加强对学校在校生进行随机抽查，连续两次发现不在校的，如无正当理由，教育行政部门应取消该生的学籍。凡弄虚作假、随意出具休学、转学证明、变更学籍档案信息、为学生建立双重学籍及空挂学籍的，教育行政部门应对其责任人给予通报或行政处分。
+<br>　　（二）实行普通高中学籍管理人员责任制、备案制。学校要明确一名学籍分管领导和一名学籍管理员，各地州市教育局、各学校要选派事业心强、工作认真负责、熟悉计算机的同志担任学籍管理员，并保持学籍管理人员的相对稳定。“系统”密码要由专人负责，学籍管理人员要加强保密、安全意识，确保学生、家长信息安全。要为学籍管理工作配备专用的计算机、打印机等办公设备。分管领导、学籍管理员若需变更的，要及时到各地州市教育局办理备案手续。
+<br>　　（三）“新疆维吾尔自治区普通高中学生学籍管理系统”学生基本信息将增加“是否为外省籍进城务工人员随迁子女”字段，为必填项，各学校要认真审查界定填报，相关信息将作为非疆户口异地高考资格审核的重要依据。
+<br>　　各地要按照通知的要求立即安排普通高中学籍专项督查，摸清学籍管理的基本情况，对突出问题要提出整改方案，并于2月28日前将本地普通高中学籍管理专项督查报告（2000字左右）报送至教育厅基础教育处。2013年春季开学后，自治区教育厅将联合纠风办等部门赴有关地区和学校进行专项督查。
+<br>　　联系人：基础教育处 王缨
+<br>　　邮箱：xjjytjjc@sina.com
+<br>　　附件：新疆维吾尔自治区普通高中转学联系表
+<br>
+<br><div align=right>二○一三年二月四日</div>
+<br>　　附件：
+<br>
+<br><br/><div align=center ><strong>新疆维吾尔自治区普通高中转学联系表</strong></div>
+<br>　　姓名		性别		出生年月		入学时间
+<br>　　原所在学校		原所在年级
+<br>　　现转入学校		现转入年级
+<br>　　现居住地址		户口所在地
+<br>　　原学籍号		身份证号
+<br>　　转学理由		家长（监护人）签名：年月日
+<br>　　A转出学校意见	（签章）年月日
+<br>　　①转入学校意见	（签章）年月日
+<br>　　B转出学校教育行政主管部门意见（地州市）	（签章）年月日
+<br>　　②转入学校教育行政主管部门意见（地州市）	（签章）年月日
+<br>　　C转出学校教育行政主管部门意见（省级）	（签章）年月日
+<br>　　③转入学校教育行政主管部门意见（省级）	（签章）年月日
+<br>　　说明：
+<br>　　1.转学联系表由转出学校提供；各学校、教育局在审核转学材料时，必须同时完成网上流程；各级教育局不能受理没有网上转学流程的转学申请。
+<br>　　2.同一地（州、市）各学校之间转学者，填一式三份，转出转入学校和地（州、市）教育局各一份。
+<br>　　3.区内各地（州、市）之间转学者，填写一式四份，转出转入学校和双方地（州、市）教育局各存放一份。
+<br>　　4.跨省转出由各地（州、市）代自治区教育厅受理；跨省转入的学生统一由自治区教育厅分配学籍号。
+<br>　　5.地州市内转学流程：A—①—②—B；跨地州市转学流程：A—①—②—B；跨省转学流程：A—B—C—①—②—③
+<br>
+<br>
+				</div>
+				<!--/div 摘录条款-->
+				<form action="zl.htm" method="post" enctype="text/plain">
+					<input type="hidden" id=fn name="fn" />
+					<textarea id=slt name="slt" style="display: none"></textarea>
+				</form>
+				<div id=zlbt
+					style="display: none; width: 55; height: 60; top: 300; left: 270; position: absolute; background-color: #CCFFFF;
+					 border: #CCCCCC thin thin thin thin; font-size: 12px;"
+					onMouseMove="MoveIn(this)" onMouseOut="MoveOut(this)">
+					<table width="210" border="0" cellspacing="0" cellpadding="0">
+					  <tr>
+					    <td class="bg1"><table width="204" border="0" align="center" cellpadding="0" cellspacing="0">
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="摘录此条款" onClick="prezl()" /></td>
+					          </tr>
+					          <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="全库全文检索" onClick="search()"/></td>
+					          </tr>
+					           <tr>
+					            <td height="25" class="menu"><input name="button" type="button" class="menubtn" value="复制" onClick="copy()"/></td>
+					          </tr>
+					        </table></td>
+					      </tr>
+					    </table></td>
+					  </tr>
+					</table>
+				</div>
+				<!--/div 摘录条款-->
+				<div id="biaozhu">
+					资料提供:法律之星 引用时请对照正式文本
+				</div>
+			</div>
+			<div id="copyright">
+				版权所有：1992-2013 北京中天诺士达科技有限责任公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服热线：010-65155090 800-810-5148
+			</div>
+		</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		</head><body>
+<div id="tip_float" style="position: absolute; display:none;font-size: 12px;"></div>
+		<div style="display: none;">
+			<form method="post" target="_blank" id="cf" name="cf" action="http://trans.law-star.com/jsp/order_1.jsp">
+				<input type="hidden" value="lar763s490.txt" name="id" id="idd">
+			    <input type="hidden" value="1" name="type" id="typee">
+			    <input type="hidden" value="kMhQU5sros2Ojz1WG9yN9bZI0DkTAioROJ00IDeMpzWEyPntJv0B0A==" name="title" id="titlee">
+				<textarea id="contentd" name="content">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</textarea>
+				<input type="hidden" value="80a3c0660a566486f77cdcb81c551736" name="sign" id="sign">
+			</form>
+			<iframe id="downframe" style="display: none"></iframe>
+		</div>
+		
+		<div style="display: none">
+		<div id="fgzltip" style="height: 100px;width: 150px">
+			<span style="margin-left: 20px;">摘录成功!</span>
+		</div>
+		</div>
+		<div id="fgzxjc" style="font-size: 12px;height: 435px;display: none;">
+			<div id="fgzxjc_title">
+				<img src="/model/images/fgzxjc.gif" width="110" height="21" />
+			</div>
+			<form action="/online?action=correct" method="post" id="correctform">
+				<div id="fgzxjc_di">
+					<p>
+						提示：“法律之星”将为纠错最多的用户提供相关奖品，如有必要，请您填写联系人和联系方式。
+					</p>
+					<table width="96%" border="0" align="center" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td width="18%" height="50" align="center">
+								法规标题
+							</td>
+							<td height="20">
+								<input type="text" name="title" id="cor_title" size="87"/>
+							</td>
+						</tr>
+						<tr>
+							<td height="20" align="center" valign="top">
+								错误内容
+							</td>
+							<td>
+								<textarea name="content" cols="68" rows="5" id="cor_content"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联 系 人
+							</td>
+							<td>
+								<input name="username" type="text" id="textfield4" size="18" id="cor_username"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" align="center">
+								联系方式
+							</td>
+							<td>
+								<input name="phone" type="text" id="textfield3" size="18" id="cor_phone"/>
+								<span class="zise_huise">（非必填）</span>
+							</td>
+						</tr>
+						<tr>
+							<td width="18%" height="30" align="center" valign="top">
+								具体内容
+							</td>
+							<td>
+								<textarea name="detail" id="textarea3" cols="68" rows="5" id="cor_detail"></textarea>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="anniu2">
+					<input type="button" name="button3" id="sbtcor" value="我要纠错" class="butt" />
+					<input type="reset" name="button" id="button2" value="清空" class="butt" />
+				</div>
+			</form>
+		</div>
+		<script>	
+			function sub(){		
+				var obj = document.getElementById('cf') ;
+				obj.submit() ;
+			}
+		</script>
+		<style>
+			.xlpx2_right1 {
+				position: absolute;
+				top: 0;
+			}
+			
+			.shiyi, .sycontent{
+				text-indent: 28px;
+				background-color: #c7c7c7;
+			}
+			
+			.sycontent {
+				display: none;
+			}
+		</style>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				//$("#fy2 a").click(function(){
+				//	var txt = document.getElementById("txr");
+				//	txt.value = $(this).attr('ids') ;
+				//	document.getElementById("links").submit() ;
+				//}) ;
+				$(".menu").each(function(){
+					$(this).mouseover(function() {
+						$(this).addClass("bg3");
+					});
+					$(this).mouseout(function() {
+						$(this).removeClass();
+					});
+				});
+				
+				$(".shiyi").click(function() {
+					$(this).next().toggle();
+				});
+				$(".shiyi").mouseover(function() {
+					$(this).css("cursor","hand");
+				});
+
+				$(".tips").each(function(){
+					var t;
+					$(this).mouseover(function(){
+						var top = $(this).offset().top + 20;
+						var left = $(this).offset().left;
+						$(this).css("text-decoration", "underline");
+						var rid = $(this).attr("rid");
+						t = setTimeout(function(){
+							$.ajax({
+								type: "get",
+								url: "/dsc",
+								data: "action=showtip&rid="+rid,
+								success: function(data, textStatus){
+									$("#tip_float").html(data);
+									$("#tip_float").css("top", top).css("left", left).show();
+								}
+							});
+						}, 100);
+					});
+
+					$(this).mouseout(function(){
+						clearTimeout(t);
+						$(this).css("text-decoration", "");
+						$("#tip_float").hide();
+					});
+				});
+				
+				$("#dic").change(function(){
+					$("#dic option:selected").each(function () {
+		                str = $(this).val();
+						if(str=="psl"){
+							return false;
+						}
+						rjs8 = $("#detail").attr("rjs8");
+						$.ajax({
+							type: "get",
+							url: "/userdir",
+							data: "action=addbyrjs8&did="+str+"&rjs8="+rjs8,
+							success: function(data, textStatus){
+								if(data.indexOf('true')!=-1){
+									alert("\u6210\u529f\u6dfb\u52a0\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u5939");//添加到指定的文件夹
+								}
+								else if(data.indexOf('no')!=-1){
+									alert("\u672a\u6807\u8bb0\u4efb\u4f55\u6587\u4ef6") ;//未标记任何文件
+								}
+								else{
+									alert("\u6dfb\u52a0\u5931\u8d25\uff0c\u60a8\u53ef\u4ee5\u7ee7\u7eed\u67e5\u8be2\u6570\u636e\uff0c\u6216\u8005\u91cd\u65b0\u542f\u52a8\u6cd5\u5f8b\u4e4b\u661f\u7a0b\u5e8f\u540e\u518d\u64cd\u4f5c") ;//添加失败，您可以继续查询数据，或者重新启动法律之星程序后再操作
+								}
+							},
+							complete: function(XMLHttpRequest, textStatus){
+								//HideLoading();
+							},
+							error: function(){
+								//请求出错处理
+							}
+					    });
+		            });
+				});
+			});
+
+			function closeTip() {
+				$("#tip_float").hide();
+			}
+		
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function pssub(ids){
+				var txt = document.getElementById("txr");
+				txt.value = ids ;
+				document.getElementById("links").submit() ;
+			}
+			
+			function donchang(){
+				var dis = $("#showinfo").val();
+				if(dis == 'yes'){
+					$("#fgzw_right2").slideDown();
+				}else{
+					$("#fgzw_right2").slideUp();
+				}
+			}
+			
+			function ts(){
+				window.open("/pao?fn=lar763s490.txt&action=typeset") ;
+			}
+			function zl(){
+				//window.open("/pao?action=showzl") ;
+			
+				$.ajax({
+					type: "POST",
+					url: "/pao?action=showzl",
+					cache: false,
+					success: function(data){
+						if(data.indexOf("\u672a\u6458\u5f55")!= -1) {
+							//$("#zlinfo").html("无");
+							//setTimeout(function(){$("#zlinfo").html("");}, 2000);
+							$.zxxbox.remind("\u8fd8\u6ca1\u6709\u6458\u5f55\u5185\u5bb9\uff01");
+						} else {
+							$("#downframe").attr("src", "/pao?action=showzl");
+						}
+					}
+				});
+			}
+			
+				$("#showinfo").val("yes");
+			donchang();
+  		</script>
+		<script type="text/javascript">
+			var IO = document.getElementById('floattool'), Y = IO, H = 0, IE6;
+			IE6 = window.ActiveXObject && !window.XMLHttpRequest;
+			while (Y) {
+				H += Y.offsetTop;
+				Y = Y.offsetParent;
+			};
+		</script>
+		<script type="text/javascript">
+		$("#correct").click(function(){
+			$.zxxbox($("#fgzxjc"), {title: "在线法规纠错", width: 720,btnclose:true,bgclose:true});
+			var title = document.title;
+			var content = IsIE ? document.selection.createRange().text.toString().trim() : window.getSelection().toString().trim();
+
+			$("#cor_title").val(title);
+			$("#cor_content").val(content);
+
+			$("#sbtcor").click(function(){
+				$('#correctform').ajaxSubmit({
+					success: function (html, status) {
+						if(html == "ok") {
+							alert("提交成功，感谢您对我们法律之星的支持！");
+							$.zxxbox.hide();
+						} else if(html == "nonetwork") {
+							alert("网络故障，请检查您的网络连通情况！");
+						} else {
+							alert(html);
+						}
+					}
+				});
+			});
+		});
+		</script></body>
+		</html>
+	</body>
+</html>

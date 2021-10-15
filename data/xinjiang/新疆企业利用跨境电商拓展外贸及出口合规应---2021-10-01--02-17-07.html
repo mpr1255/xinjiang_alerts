@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  
+  <meta name="keywords" content="经贸活动云, 贸促会, 会议, 高峰会, 展览, 团组, 办活动">
+  <meta name="description" content="经贸活动云是中国贸促会信息中心自主研发的一站式、全流程经贸活动及企业管理云平台， 可提供基于云端的活动策划、微网站创建、发布推广、在线报名、批量/单个审核、短信/邮件通知、现场电子签到、企业数据管理等全面而强大的功能。">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/index.css"/>
+  <link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome-all.min.css"/>
+  <link rel="bookmark" type="image/x-icon" href="/images/favicon.png"/>
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+  <title>新疆企业利用跨境电商拓展外贸及出口合规应对专题培训 - 经贸活动云</title>
+  <!--<meta name="description" th:content="${#dates.format(meeting.startDate, 'M月d日') + ', ' +  meeting.addressDetail + ', ' + meeting.title}"  />-->
+  <link rel="stylesheet" href="/css/index.css"/>
+  <link rel="stylesheet" href="/vendor/sharejs/css/share.min.css"/>
+  <link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome-all.min.css"/>
+  <link rel="stylesheet" href="/vendor/swiper-4.3.3/swiper.min.css"/>
+
+  <script src="/vendor/sharejs/js/social-share.min.js"></script>
+  <meta name="share-desc" content="待定"/>
+
+  <style>
+    body main {
+      overflow-x: hidden;
+    }
+
+    .featurette-divider {
+      margin: 2rem 0;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+    .blog-post {
+      margin-bottom: 4rem;
+      padding-left: 1rem;
+    }
+
+    .media {
+      /*position: relative;*/
+    }
+
+    .social-share {
+      text-align: right;
+      /*position: absolute;*/
+      /*bottom: 0;*/
+      /*right: 0;*/
+    }
+
+    @media (min-width: 40em) {
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 3rem;
+      }
+    }
+
+    .meeting-info i {
+      padding-right: .5rem;
+    }
+
+    .card {
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 !important;
+      }
+
+      .card {
+        border: 1px solid #f0f0f0;
+        margin-bottom: .5rem;
+        border-radius: 0;
+      }
+
+      .blog-sidebar .card-title {
+        font-style: normal !important;
+      }
+
+      .badge {
+        font-size: 14px !important;
+        line-height: 16px !important;
+      }
+
+      body main {
+        margin-bottom: 70px;
+      }
+    }
+
+    .btn-group-fixed {
+      width: 100%;
+      height: 4rem;
+      background: #fff;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      z-index: 98;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px 1px #ccc;
+    }
+
+    .btn-group-fixed .btn-visit {
+      line-height: 4rem;
+      height: 4rem;
+      width: 50%;
+      float: left;
+      text-align: center;
+      color: #444;
+    }
+
+    .btn-group-fixed .btn-sign {
+      line-height: 4rem;
+      height: 4rem;
+      float: right;
+      width: 50%;
+      text-align: center;
+      color: #fff;
+      background-color: #28a745 !important;
+      border-color: #28a745 !important;
+    }
+
+    .swiper-container .card {
+      height: 240px;
+    }
+
+    .swiper-container .card .card-body {
+      line-height: 1.2em;
+      padding: .5rem;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .card {
+      /*border: 1px solid #ccc;*/
+      border: 0;
+      transition: all 0.3s ease-in-out;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-meeting-title {
+      height: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .news-img {
+      min-height: 130px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+    .swiper-button-prev {
+      left: 10px;
+      width: 45px;
+      height: 45px;
+      background: url(../images/wm_button_icon.png) no-repeat;
+      background-position: 0 -46px;
+      background-size: 100%;
+    }
+
+    .swiper-button-prev.swiper-button-disabled {
+      background-position: 0 0;
+      opacity: 1;
+
+    }
+
+    .swiper-button-next {
+      right: 10px;
+      width: 45px;
+      height: 45px;
+      background: url(../images/wm_button_icon.png) no-repeat;
+      background-position: 0 -139px;
+      background-size: 100%;
+    }
+
+    .swiper-button-next.swiper-button-disabled {
+      background-position: 0 -93px;
+      opacity: 1;
+    }
+
+    .swiper-button-lock {
+      display: none !important;
+    }
+
+    .sigma-middle-line:before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #ddd;
+      position: relative;
+      top: 14px;
+      left: 0;
+    }
+
+    .sigma-line-text {
+      display: inline-block;
+      background: #f7f7f7;
+      padding: 0 18px 0 18px;
+      position: relative;
+      font-size: 18px;
+      font-weight: 500;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <style>
+    .img-logo {
+      margin: .75rem 0;
+      height: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .img-logo {
+        margin: .5rem 0;
+        height: 30px;
+      }
+    }
+  </style>
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom px-3 py-0">
+    <div class="container">
+      <a class="navbar-brand " href="/">
+        <img src="/images/dolphin_logo.png" class="img-logo"/>
+      </a>
+      <div>
+        <ul class="navbar-nav ml-auto" style="font-size: 1.1rem">
+          <li class="nav-item  px-2 self">
+            <span class="nav-link">
+              <a href="/account/login">
+              登录
+                <!--<i class="fas fa-user-circle text-muted" style="font-size: 24px" data-toggle="tooltip" data-placement="right" title="我的报名"></i>-->
+            </a>
+            /
+            <a href="/account/reg">注册</a>
+            </span>
+
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<side-bar>
+  <style>
+
+    side-bar *, side-bar *:after, side-bar *:before {
+      box-sizing: content-box;
+    }
+
+    .page-os-side-bar {
+      position: fixed;
+      bottom: 150px;
+      right: 8px;
+      z-index: 9999;
+    }
+
+    .page-os-side-bar .go-section {
+      background: #717bcd;
+      border-radius: 5px;
+      width: 45px;
+      margin: 0 auto;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    }
+
+    .page-os-side-bar .go-section .share {
+      margin: 0 0 20px;
+      border-top: 1px solid transparent
+    }
+
+    .page-os-side-bar .go-section .share a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .ie8 .page-os-side-bar .go-section .share {
+      border-top: none
+    }
+
+  </style>
+    <div class="page-os-side-bar">
+      <div class="go-section">
+        <div class="share">
+          <div style="width: 1rem; margin: .5rem auto; font-size: 16px; line-height: 18px">
+            <a href="/applyRequest/form" target="_blank">
+              <img src="/images/apply.svg" width="16"/>
+              <span style="display: inline-block; margin-top: 5px">我要发活动</span>
+            </a>
+          </div>
+        </div>
+        <div class="text-center bg-light"><button type="button" id="closeSide" class="btn btn-link btn-sm">关闭</button></div>
+      </div>
+    </div>
+</side-bar>
+<main role="main" id="app">
+  <div class="container pt-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="/meetings/1646/cover" class="mb-4 img-fluid"
+                 width="445" height="278" style="max-height: 278px">
+          </div>
+          <div class="col-md-7">
+            <h4>
+              <img src="/images/recommend.svg" width="30" style="vertical-align: bottom"/>
+              <span>新疆企业利用跨境电商拓展外贸及出口合规应对专题培训</span></h4>
+            <p class="lead">
+              <span class="badge badge-pill badge-warning mr-3">免费</span>
+              <small class="text-muted">浏览数 <span>66</span></small>
+            </p>
+            <hr>
+            <p class="meeting-info">
+              <i class="far fa-clock" title="活动时间"></i>
+              <span class="meeting-time"></span>
+            </p>
+            <p  class="meeting-info">
+              <i class="fa fa-map-marker-alt text-muted" aria-hidden="true" title="活动地点"></i>
+              <span>线上活动</span>
+              
+            </p>
+            <p v-if="meeting.signSetting" class="meeting-info" v-cloak="">
+              <i class="far fa-calendar-times"></i>
+              报名截止：
+              <span v-if="meeting.signSetting.signEndDate">{{ formatDateWithPattern(meeting.signSetting.signEndDate, 'YYYY年M月D日 H:mm') }}</span>
+              <span v-else>待定</span>
+              <!--<span th:if="${meeting.signSetting.signEndDate}"-->
+                    <!--th:text="${#dates.format(meeting.signSetting.signEndDate, 'YYYY年M月d日 H:mm')}"></span>-->
+              <!--<span th:unless="${meeting.signSetting.signEndDate}">待定</span>-->
+            </p>
+            
+            <p class="d-none d-md-block">
+              <a href="/meetings/1646/sign" class="btn btn-success btn-lg">我要报名</a>
+              
+            </p>
+            <div class="social-share" data-sites="wechat, weibo" data-mobile-sites="wechat, weibo">
+              <small class="text-muted">分享</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<hr class="featurette-divider"/>-->
+    <div class="row">
+      <div class="col-md-9 blog-main">
+        
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">活动简介</h5>
+            <p><p>新疆跨境电商虽较内地起步较晚，但凭借丝绸之路经济带核心区的有利条件，跨境电商发展潜力巨大。为支持新疆企业利用跨境电商平台开拓国际市场，中国贸促会将于10月21日举办&ldquo;新疆企业利用跨境电商拓展外贸及出口合规应对&rdquo;专题培训。</p>
+<p>本次培训<span style="color: #3366ff;"><strong>免费</strong></span>，将采取<span style="color: #3366ff;"><strong>线上线下结合</strong></span>形式举办，线下举办地点为新疆乌鲁木齐，线上将使用&ldquo;腾讯会议&rdquo;软件直播。</p>
+<p>现诚邀<strong>全国各地</strong>感兴趣的企业报名参加。</p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">活动日程</h5>
+            <p><p>10:30-10:45&nbsp; 领导致辞</p>
+<p>&middot; 中国贸促会贸易投资促进部领导</p>
+<p>&middot; 新疆维吾尔自治区贸促会领导</p>
+<p>&middot; 新疆生产建设兵团贸促会领导</p>
+<p>10:45-10:50&nbsp; 中国贸促会跨境电商推广计划介绍</p>
+<p>&middot; 阮海斌，中国贸促会信息中心处长</p>
+<p>10:50-11:20&nbsp; <span style="color: #3366ff;"><strong>中亚国家市场分析及机遇和挑战</strong></span></p>
+<p>讲师：华和国际商务咨询机构</p>
+<p>11:20-11:50&nbsp; <span style="color: #3366ff;"><strong>利用跨境电商平台，促进</strong><strong>新疆外贸发展</strong></span></p>
+<p>讲师：李勇，阿里巴巴国际站新疆区域总经理</p>
+<p>11:50-12:10&nbsp; <span style="color: #3366ff;"><strong>新疆企业转型跨境电商的经验分享（邀请中）</strong></span></p>
+<p>讲师：新疆中泰化学股份有限公司</p>
+<p>12:10-12:40 &nbsp;<span style="color: #3366ff;"><strong>新疆企业出口制裁及合规应对（线下非直播）</strong></span></p>
+<p>讲师：牛玥，大成律师事务所北京合伙人，中国及美国纽约州、新泽西州及美国联邦最高法院出庭律师</p></p>
+          </div>
+        </div>
+      </div>
+      <aside class="col-md-3 blog-sidebar">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title font-italic">主办方</h5>
+            <p><p>中国贸促会贸易投资促进部</p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title font-italic">承办方</h5>
+            <p><p>中国贸促会信息中心</p>
+<p>新疆维吾尔自治区贸促会</p>
+<p>新疆生产建设兵团贸促会</p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title font-italic">联系方式</h5>
+            <p><p>联系人：赵经理</p>
+<p>电话：010-82217959</p>
+<p>邮箱：zhaotian@ccpit.org</p></p>
+          </div>
+        </div>
+        
+      </aside>
+    </div>
+    <div class="swiper-container" style="padding-left: 10px;padding-right: 10px">
+      <div class="sigma-middle-line text-center mb-2">
+        <span class="sigma-line-text">更多精彩活动</span>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item in recommendMeetings">
+          <div class="card mb-4 box-shadow">
+            <a :href="'/meetings/' + item.id" target="_blank">
+              <div class="border-bottom news-img" style="position: relative"
+                   v-bind:style="{ backgroundImage: 'url(/meetings/' + item.id +  '/cover)' }">
+              </div>
+            </a>
+            <div class="card-body">
+              <div class="card-text">
+                <div class="card-meeting-title">
+                  <a :href="'/meetings/' + item.id" target="_blank" class="text-dark">
+                  <small><strong>{{ item.title }}</strong></small>
+                  </a>
+                </div>
+                <div>
+                  <small class="text-muted"><i aria-hidden="true" class="fa fa-calendar-alt text-muted"></i>
+                    {{ formatDate(item.startDate) }}
+                  </small>
+                </div>
+                <div>
+                  <small class="text-muted"><i aria-hidden="true" class="fa fa-map-marker-alt text-muted"></i>
+                    {{ getCityName(item.addressCountry, item.addressProvince, item.addressCity) }}
+                  </small>
+                </div>
+                <div>
+                  <a :href="'/meetings/' + item.id" target="_blank" class="badge badge-pill badge-primary float-right"
+                     style="padding: 0.375rem 0.75rem;">查看详情</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+     <!-- <div class="swiper-button-prev d-none d-sm-block"></div>
+      <div class="swiper-button-next d-none d-sm-block"></div>-->
+
+    </div>
+
+    <div class="btn-group-fixed d-md-none">
+      <a class="btn-visit"><i class="fas fa-eye"></i> 66人浏览</a>
+      <a href="/meetings/1646/sign" class="btn-sign"><i class="fas fa-pencil-alt"></i> 我要报名</a>
+      
+    </div>
+  </div>
+</main>
+<!-- FOOTER -->
+<footer>
+  <style>
+    footer {
+      background-color: #414141;
+    }
+
+    .row-link {
+      text-align: left;
+      padding: 50px 50px 16px 50px;
+      color: #f8f9fa;
+      font-size: 12px;
+    }
+
+    .row-link h3, .row-link h4 {
+      color: #f8f9fa;
+    }
+
+    .row-link h3 {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .row-link h4 {
+      font-size: 13px;
+    }
+  </style>
+  <div class="container row-link">
+    <div class="row">
+      <!--<div class="col-lg-4 col-md-12 col-sm-12 pb-4">-->
+        <!--<img src="/images/dolphin_logo.png" height="40px"/>-->
+      <!--</div>-->
+      <div class="col-md-5 offset-md-1 col-sm-5 col-xs-12 pb-3">
+        <h3>联系我们</h3>
+        <h4>电话：010-82217959 &nbsp;&nbsp; 010-82215954 </h4>
+        <h4>邮箱：zhaotian@ccpit.org &nbsp;&nbsp; wangxicui@ccpit.org</h4>
+        <h4>地址：北京市西城区桦皮厂胡同2号国际商会大厦15层</h4>
+      </div>
+      <div class="col-md-6 col-sm-7 col-xs-12 text-center">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12 mb-2">
+            <img title="法律咨询" alt="" width="100" height="100"  src="/images/ctilscode.png"/>
+          </div>
+          <div class="col-sm-4 col-xs-12 mb-2">
+            <img title="《中国贸易投资网》订阅号" alt="" width="100" height="100"  src="/images/maoyitouziwang.png"/>
+          </div>
+          <div class="col-sm-4 col-xs-12 mb-2">
+            <img title="经贸活动云小程序" alt="" width="auto" height="100" src="/images/bizevent_mp.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-sm-12 text-center" style="margin-top: 16px"> Copyright © 2019 中国贸促会信息中心
+      </div>
+    </div>
+  </div>
+</footer>
+<section>
+  <script src="/vendor/bootstrap/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/popper.min.js"></script>
+  <script src="/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="/vendor/sweet-alert/sweetalert.min.js"></script>
+  <script src="/vendor/vue.js"></script>
+  <script src="/vendor/underscore-min.js"></script>
+  <script src="/vendor/jweixin-1.2.0.js"></script>
+  <script src="/js/baidu.js"></script>
+
+  <script>
+    $('#closeSide').click(function () {
+      $('.page-os-side-bar').hide()
+    })
+  </script>
+
+  <script>
+    var url = encodeURIComponent(location.href.split('#')[0]);
+    $.get('/wechat/sign?url=' + url)
+        .done(function (data) {
+          wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: data.appId, // 必填，公众号的唯一标识
+            timestamp: data.timestamp, // 必填，生成签名的时间戳
+            nonceStr: data.nonceStr, // 必填，生成签名的随机串
+            signature: data.signature,// 必填，签名
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 必填，需要使用的JS接口列表
+          });
+
+          var domain = 'https://bizevent.ccpit.org';
+          var imgUrl = domain + '/images/small_logo.png?r='+ Math.random();
+          var imgUrlOfWhite = domain + '/images/small_logo_white.png?r='+ Math.random();
+          var desc  = $('meta[name="share-desc"]').attr('content') || '我正在看【' + document.title + '】，分享给你，一起来看吧';
+          var options = {
+            title: document.title, // 分享标题
+            desc: desc, // 分享描述
+            link: data.url, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+              // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+              // 用户取消分享后执行的回调函数
+            }
+          };
+          wx.ready(function () {
+            console.log('weixin 验证成功');
+            wx.onMenuShareTimeline(_.defaults({imgUrl: imgUrlOfWhite}, options));
+            wx.onMenuShareAppMessage(options);
+            wx.onMenuShareQQ(options);
+            wx.onMenuShareWeibo(options);
+            wx.onMenuShareQZone(options);
+          });
+
+          wx.error(function (res) {
+            console.log('weixin 验证失败');
+            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+          });
+        });
+
+  </script>
+</section>
+<script src="/vendor/moment-2.19.2/moment.min.js"></script>
+<script src="/vendor/moment-2.19.2/zh-cn.js"></script>
+<script src="/vendor/swiper-4.3.3/swiper.min.js"></script>
+<script src="/js/TcPlayer-2.3.2.js" charset="utf-8"></script>
+<script>
+  function getMeetingTime() {
+    if (!meeting.startDate || !meeting.endDate) {
+      return '待定'
+    }
+
+    var startTime = moment(meeting.startDate).utc().zone(-8)
+    var endTime = moment(meeting.endDate).utc().zone(-8)
+
+    var startTimeStrPattern = 'YYYY.M.D（ddd） H:mm ~ '
+    var endTimeStrPattern = 'YYYY.M.D （ddd） H:mm'
+
+    if (endTime.year() === startTime.year() && endTime.dayOfYear() === startTime.dayOfYear()) {
+      startTimeStrPattern = 'YYYY年M月D日（ddd） H:mm ~ '
+      endTimeStrPattern = 'H:mm'
+    } else if (endTime.year() === startTime.year() && endTime.dayOfYear() !== startTime.dayOfYear()) {
+      startTimeStrPattern = 'YYYY年M月D日（ddd） ~ '
+      endTimeStrPattern = 'M月D日（ddd）'
+    } else if (endTime.year() !== startTime.year()) {
+      startTimeStrPattern = 'YYYY年M月D日 ~ '
+      endTimeStrPattern = 'YYYY年M月D日'
+    }
+
+    return startTime.format(startTimeStrPattern) + endTime.format(endTimeStrPattern)
+  }
+</script>
+<script>
+  var meeting = {"id":1646,"createDate":"2021-09-29T15:58:31.000+08:00","updateDate":"2021-10-01T12:01:19.000+08:00","isDelete":null,"title":"\u65B0\u7586\u4F01\u4E1A\u5229\u7528\u8DE8\u5883\u7535\u5546\u62D3\u5C55\u5916\u8D38\u53CA\u51FA\u53E3\u5408\u89C4\u5E94\u5BF9\u4E13\u9898\u57F9\u8BAD","startDate":"2021-10-21T10:30:00.000+08:00","endDate":"2021-10-21T12:40:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":"\u65B0\u7586\u7EF4\u543E\u5C14\u81EA\u6CBB\u533A","addressCity":"\u4E4C\u9C81\u6728\u9F50\u5E02","addressDetail":null,"onLineMeeting":true,"kind":"training","host":"<p>\u4E2D\u56FD\u8D38\u4FC3\u4F1A\u8D38\u6613\u6295\u8D44\u4FC3\u8FDB\u90E8<\/p>","organizer":"<p>\u4E2D\u56FD\u8D38\u4FC3\u4F1A\u4FE1\u606F\u4E2D\u5FC3<\/p>\n<p>\u65B0\u7586\u7EF4\u543E\u5C14\u81EA\u6CBB\u533A\u8D38\u4FC3\u4F1A<\/p>\n<p>\u65B0\u7586\u751F\u4EA7\u5EFA\u8BBE\u5175\u56E2\u8D38\u4FC3\u4F1A<\/p>","hideHost":false,"coverImgPath":"meeting\/files\/e8ea0a069e28333b5719b46436dbe9bb.png","privacyKind":null,"creatorAdminUserId":35,"publishAdminUserId":35,"publishDate":"2021-09-29T16:24:34.000+08:00","needRegistration":null,"status":2,"briefIntroduction":"<p>\u65B0\u7586\u8DE8\u5883\u7535\u5546\u867D\u8F83\u5185\u5730\u8D77\u6B65\u8F83\u665A\uFF0C\u4F46\u51ED\u501F\u4E1D\u7EF8\u4E4B\u8DEF\u7ECF\u6D4E\u5E26\u6838\u5FC3\u533A\u7684\u6709\u5229\u6761\u4EF6\uFF0C\u8DE8\u5883\u7535\u5546\u53D1\u5C55\u6F5C\u529B\u5DE8\u5927\u3002\u4E3A\u652F\u6301\u65B0\u7586\u4F01\u4E1A\u5229\u7528\u8DE8\u5883\u7535\u5546\u5E73\u53F0\u5F00\u62D3\u56FD\u9645\u5E02\u573A\uFF0C\u4E2D\u56FD\u8D38\u4FC3\u4F1A\u5C06\u4E8E10\u670821\u65E5\u4E3E\u529E\u0026ldquo;\u65B0\u7586\u4F01\u4E1A\u5229\u7528\u8DE8\u5883\u7535\u5546\u62D3\u5C55\u5916\u8D38\u53CA\u51FA\u53E3\u5408\u89C4\u5E94\u5BF9\u0026rdquo;\u4E13\u9898\u57F9\u8BAD\u3002<\/p>\n<p>\u672C\u6B21\u57F9\u8BAD<span style=\"color: #3366ff;\"><strong>\u514D\u8D39<\/strong><\/span>\uFF0C\u5C06\u91C7\u53D6<span style=\"color: #3366ff;\"><strong>\u7EBF\u4E0A\u7EBF\u4E0B\u7ED3\u5408<\/strong><\/span>\u5F62\u5F0F\u4E3E\u529E\uFF0C\u7EBF\u4E0B\u4E3E\u529E\u5730\u70B9\u4E3A\u65B0\u7586\u4E4C\u9C81\u6728\u9F50\uFF0C\u7EBF\u4E0A\u5C06\u4F7F\u7528\u0026ldquo;\u817E\u8BAF\u4F1A\u8BAE\u0026rdquo;\u8F6F\u4EF6\u76F4\u64AD\u3002<\/p>\n<p>\u73B0\u8BDA\u9080<strong>\u5168\u56FD\u5404\u5730<\/strong>\u611F\u5174\u8DA3\u7684\u4F01\u4E1A\u62A5\u540D\u53C2\u52A0\u3002<\/p>","agenda":"<p>10:30-10:45\u0026nbsp; \u9886\u5BFC\u81F4\u8F9E<\/p>\n<p>\u0026middot; \u4E2D\u56FD\u8D38\u4FC3\u4F1A\u8D38\u6613\u6295\u8D44\u4FC3\u8FDB\u90E8\u9886\u5BFC<\/p>\n<p>\u0026middot; \u65B0\u7586\u7EF4\u543E\u5C14\u81EA\u6CBB\u533A\u8D38\u4FC3\u4F1A\u9886\u5BFC<\/p>\n<p>\u0026middot; \u65B0\u7586\u751F\u4EA7\u5EFA\u8BBE\u5175\u56E2\u8D38\u4FC3\u4F1A\u9886\u5BFC<\/p>\n<p>10:45-10:50\u0026nbsp; \u4E2D\u56FD\u8D38\u4FC3\u4F1A\u8DE8\u5883\u7535\u5546\u63A8\u5E7F\u8BA1\u5212\u4ECB\u7ECD<\/p>\n<p>\u0026middot; \u962E\u6D77\u658C\uFF0C\u4E2D\u56FD\u8D38\u4FC3\u4F1A\u4FE1\u606F\u4E2D\u5FC3\u5904\u957F<\/p>\n<p>10:50-11:20\u0026nbsp; <span style=\"color: #3366ff;\"><strong>\u4E2D\u4E9A\u56FD\u5BB6\u5E02\u573A\u5206\u6790\u53CA\u673A\u9047\u548C\u6311\u6218<\/strong><\/span><\/p>\n<p>\u8BB2\u5E08\uFF1A\u534E\u548C\u56FD\u9645\u5546\u52A1\u54A8\u8BE2\u673A\u6784<\/p>\n<p>11:20-11:50\u0026nbsp; <span style=\"color: #3366ff;\"><strong>\u5229\u7528\u8DE8\u5883\u7535\u5546\u5E73\u53F0\uFF0C\u4FC3\u8FDB<\/strong><strong>\u65B0\u7586\u5916\u8D38\u53D1\u5C55<\/strong><\/span><\/p>\n<p>\u8BB2\u5E08\uFF1A\u674E\u52C7\uFF0C\u963F\u91CC\u5DF4\u5DF4\u56FD\u9645\u7AD9\u65B0\u7586\u533A\u57DF\u603B\u7ECF\u7406<\/p>\n<p>11:50-12:10\u0026nbsp; <span style=\"color: #3366ff;\"><strong>\u65B0\u7586\u4F01\u4E1A\u8F6C\u578B\u8DE8\u5883\u7535\u5546\u7684\u7ECF\u9A8C\u5206\u4EAB\uFF08\u9080\u8BF7\u4E2D\uFF09<\/strong><\/span><\/p>\n<p>\u8BB2\u5E08\uFF1A\u65B0\u7586\u4E2D\u6CF0\u5316\u5B66\u80A1\u4EFD\u6709\u9650\u516C\u53F8<\/p>\n<p>12:10-12:40 \u0026nbsp;<span style=\"color: #3366ff;\"><strong>\u65B0\u7586\u4F01\u4E1A\u51FA\u53E3\u5236\u88C1\u53CA\u5408\u89C4\u5E94\u5BF9\uFF08\u7EBF\u4E0B\u975E\u76F4\u64AD\uFF09<\/strong><\/span><\/p>\n<p>\u8BB2\u5E08\uFF1A\u725B\u73A5\uFF0C\u5927\u6210\u5F8B\u5E08\u4E8B\u52A1\u6240\u5317\u4EAC\u5408\u4F19\u4EBA\uFF0C\u4E2D\u56FD\u53CA\u7F8E\u56FD\u7EBD\u7EA6\u5DDE\u3001\u65B0\u6CFD\u897F\u5DDE\u53CA\u7F8E\u56FD\u8054\u90A6\u6700\u9AD8\u6CD5\u9662\u51FA\u5EAD\u5F8B\u5E08<\/p>","contact":"<p>\u8054\u7CFB\u4EBA\uFF1A\u8D75\u7ECF\u7406<\/p>\n<p>\u7535\u8BDD\uFF1A010-82217959<\/p>\n<p>\u90AE\u7BB1\uFF1Azhaotian@ccpit.org<\/p>","attachments":[],"disabled":false,"recommend":true,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":{"id":1603,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"signStartDate":null,"signEndDate":"2021-10-19T15:00:00.000+08:00","signLimitPersonNumber":null,"signNeedApproval":true,"uploadBankSlip":null,"showInvoice":null,"signMeetingSteps":[{"id":3257,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepOrder":null,"title":"\u4F01\u4E1A\u4FE1\u606F","componentList":[{"id":11949,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepId":3257,"signFormComponentId":101,"componentOrder":0,"isRequired":true,"signFormComponent":{"id":101,"createDate":"2018-05-28T17:17:52.000+08:00","updateDate":"2019-03-22T23:53:23.000+08:00","isDelete":null,"type":"input","label":"\u516C\u53F8\u540D\u79F0","placeholder":null,"tips":null,"errorTips":null,"valueLength":50,"description":"\u516C\u53F8\u540D\u79F0","uploadFileAllowTypes":null,"uploadFileMaxKbSize":null,"uploadImgWidth":null,"uploadImgHeight":null,"creatorAdminUserId":0,"options":null,"groupId":2,"verifyRegexp":null,"verifyRegexpErrorMessage":null,"invisible":false,"mustComponent":true,"optionsArray":[]}}]},{"id":3258,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepOrder":null,"title":"\u53C2\u4F1A\u4EBA\u4FE1\u606F","componentList":[{"id":11950,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepId":3258,"signFormComponentId":2,"componentOrder":0,"isRequired":true,"signFormComponent":{"id":2,"createDate":"2018-03-30T12:56:36.000+08:00","updateDate":"2021-09-16T12:09:03.000+08:00","isDelete":null,"type":"input","label":"\u59D3\u540D","placeholder":null,"tips":null,"errorTips":null,"valueLength":100,"description":"\u59D3\u540D","uploadFileAllowTypes":null,"uploadFileMaxKbSize":null,"uploadImgWidth":null,"uploadImgHeight":null,"creatorAdminUserId":0,"options":null,"groupId":1,"verifyRegexp":null,"verifyRegexpErrorMessage":null,"invisible":false,"mustComponent":true,"optionsArray":[]}},{"id":11951,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepId":3258,"signFormComponentId":1,"componentOrder":1,"isRequired":true,"signFormComponent":{"id":1,"createDate":"2018-03-30T12:56:36.000+08:00","updateDate":"2019-03-22T23:53:23.000+08:00","isDelete":null,"type":"input","label":"\u624B\u673A","placeholder":null,"tips":null,"errorTips":null,"valueLength":20,"description":"\u624B\u673A","uploadFileAllowTypes":null,"uploadFileMaxKbSize":null,"uploadImgWidth":null,"uploadImgHeight":null,"creatorAdminUserId":0,"options":null,"groupId":1,"verifyRegexp":"^[1][0-9]{10}$","verifyRegexpErrorMessage":"\u8BF7\u8F93\u516511\u4F4D\u624B\u673A\u53F7","invisible":false,"mustComponent":true,"optionsArray":[]}},{"id":11952,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepId":3258,"signFormComponentId":4,"componentOrder":2,"isRequired":true,"signFormComponent":{"id":4,"createDate":"2018-03-30T12:56:36.000+08:00","updateDate":"2021-09-16T12:09:03.000+08:00","isDelete":null,"type":"input","label":"\u90AE\u7BB1","placeholder":null,"tips":null,"errorTips":null,"valueLength":300,"description":"\u90AE\u7BB1","uploadFileAllowTypes":null,"uploadFileMaxKbSize":null,"uploadImgWidth":null,"uploadImgHeight":null,"creatorAdminUserId":0,"options":null,"groupId":1,"verifyRegexp":"^[A-Za-z0-9u4e00-u9fa5._-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$","verifyRegexpErrorMessage":"\u8BF7\u8F93\u5165\u6709\u6548\u7684\u90AE\u7BB1","invisible":false,"mustComponent":true,"optionsArray":[]}},{"id":11953,"createDate":"2021-09-29T16:24:32.000+08:00","updateDate":"2021-09-29T16:24:32.000+08:00","isDelete":null,"meetingId":1646,"stepId":3258,"signFormComponentId":6,"componentOrder":3,"isRequired":true,"signFormComponent":{"id":6,"createDate":"2018-03-30T12:56:36.000+08:00","updateDate":"2018-03-30T12:56:36.000+08:00","isDelete":null,"type":"input","label":"\u804C\u4F4D","placeholder":null,"tips":null,"errorTips":null,"valueLength":20,"description":"\u804C\u4F4D","uploadFileAllowTypes":null,"uploadFileMaxKbSize":null,"uploadImgWidth":null,"uploadImgHeight":null,"creatorAdminUserId":0,"options":null,"groupId":1,"verifyRegexp":null,"verifyRegexpErrorMessage":null,"invisible":false,"mustComponent":false,"optionsArray":[]}}]}]},"publishUser":{"id":35,"createDate":"2018-12-13T11:28:29.000+08:00","updateDate":"2020-11-06T10:55:54.000+08:00","isDelete":null,"name":"zhaotian","nickname":"\u8D75\u606C","salt":"e5cf4f","pwd":"b29e8f4dbc7fcf85be959d212e4b45b5","parentAdminUserId":1,"auditByCcpit":false},"creatorUser":null,"visitCount":66,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"85eed397-bb76-40c5-9805-9f0466aa779f","signInCode":"5dba7029-8d3d-439d-9842-1cc9793078b8","forCJK":false,"forYJ":false}
+  var recommendMeetings = [{"id":1407,"createDate":"2021-04-19T10:03:09.000+08:00","updateDate":"2021-09-30T22:45:19.000+08:00","isDelete":null,"title":"2021\u4E2D\u56FD\uFF08\u6DF1\u5733\uFF09\u56FD\u9645\u7535\u5546\u9009\u54C1\u91C7\u8D2D\u4EA4\u6613\u4F1A","startDate":"2021-12-02T09:00:00.000+08:00","endDate":"2021-12-04T17:00:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":"\u5E7F\u4E1C\u7701","addressCity":"\u6DF1\u5733\u5E02","addressDetail":"\u6DF1\u5733\u56FD\u9645\u4F1A\u5C55\u4E2D\u5FC3\uFF08\u5B9D\u5B89\u65B0\u9986\uFF09","onLineMeeting":false,"kind":"exhibition","host":"<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u5546\u4E1A\u884C\u4E1A\u59D4\u5458\u4F1A<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\u5546\u4E1A\u884C\u4E1A\u5546\u4F1A<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u6DF1\u5733\u5E02\u59D4\u5458\u4F1A<\/p>\n<p><span style=\"font-size: 14pt;\"><em>\u8054\u5408\u4E3B\u529E\u5355\u4F4D\uFF1A<\/em><\/span><\/p>\n<p>\u4EBF\u90A6\u52A8\u529B<\/p>\n<p>\u6DF1\u5733\u5E02\u96F6\u552E\u5546\u4E1A\u884C\u4E1A\u534F\u4F1A<\/p>","organizer":"<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u5546\u4E1A\u884C\u4E1A\u59D4\u5458\u4F1A<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\u5546\u4E1A\u884C\u4E1A\u5546\u4F1A<\/p>","hideHost":false,"coverImgPath":"meeting\/files\/f9aece675614a5967373143b3f59e0cc.png","privacyKind":null,"creatorAdminUserId":35,"publishAdminUserId":35,"publishDate":"2021-04-19T10:10:03.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":true,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":1555,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"5694624e-8f38-4348-95ff-9d4e80fbd6f4","signInCode":"fb4c70c3-e039-4bce-9e6e-ea20d1dfa8a5","forCJK":false,"forYJ":false},{"id":1621,"createDate":"2021-09-15T15:38:04.000+08:00","updateDate":"2021-10-01T00:29:34.000+08:00","isDelete":null,"title":"2021\u5C71\u4E1C\u7701\u5927\u6570\u636E\u4EA7\u4E1A\u53D1\u5C55\u7EBF\u4E0A\u4EA4\u6D41\u4F1A","startDate":"2021-10-12T09:00:00.000+08:00","endDate":"2021-10-12T11:40:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":null,"addressCity":null,"addressDetail":null,"onLineMeeting":true,"kind":"meeting","host":"<p>\u4E2D\u56FD\u8D38\u4FC3\u4F1A\u4FE1\u606F\u4E2D\u5FC3<\/p>\n<p>\u5C71\u4E1C\u7701\u8D38\u4FC3\u4F1A<\/p>\n<p>\u6CF0\u5B89\u5E02\u4EBA\u6C11\u653F\u5E9C<\/p>\n<p><em><span style=\"font-size: 14pt;\">\u652F\u6301\u65B9<\/span><\/em><\/p>\n<p>\u5C71\u4E1C\u7701\u5DE5\u4E1A\u548C\u4FE1\u606F\u5316\u5385<\/p>","organizer":"<p>\u6CF0\u5B89\u5E02\u8D38\u4FC3\u4F1A<\/p>\n<p><em><span style=\"font-size: 14pt;\">\u6307\u5BFC\u5355\u4F4D\uFF08\u6392\u540D\u4E0D\u5206\u5148\u540E\uFF09<\/span><\/em><\/p>\n<p>\u5C71\u4E1C\u7701\u7EDF\u8BA1\u5C40\uFF08\u9080\u8BF7\u4E2D\uFF09<\/p>\n<p>\u5C71\u4E1C\u7701\u5927\u6570\u636E\u5C40\uFF08\u9080\u8BF7\u4E2D\uFF09<\/p>\n<p>\u5C71\u4E1C\u5927\u5B66<\/p>\n<p>\u5C71\u4E1C\u7701\u5927\u6570\u636E\u534F\u4F1A<\/p>\n<p>\u5C71\u4E1C\u4EA7\u4E1A\u6280\u672F\u7814\u7A76\u9662<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\u533A\u5757\u94FE\u521B\u65B0\u670D\u52A1\u59D4\u5458\u4F1A<\/p>","hideHost":false,"coverImgPath":"meeting\/files\/f6f70f933dfbdaf3ee194ef322dee528.png","privacyKind":null,"creatorAdminUserId":35,"publishAdminUserId":35,"publishDate":"2021-09-15T16:23:31.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":true,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":843,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"56a649c5-48a9-4c37-9cb9-de9f8f21576d","signInCode":"287e70b3-98af-4004-81b9-023478e0e276","forCJK":false,"forYJ":false},{"id":1488,"createDate":"2021-06-28T10:27:38.000+08:00","updateDate":"2021-10-01T08:54:34.000+08:00","isDelete":null,"title":"2022\u7B2C\u5341\u4E00\u5C4A\u4E2D\u56FD\uFF08\u4E0A\u6D77\uFF09\u56FD\u9645\u6D41\u4F53\u673A\u68B0\u5C55\u89C8\u4F1A","startDate":"2022-12-08T00:00:00.000+08:00","endDate":"2022-12-11T00:00:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":"\u4E0A\u6D77\u5E02","addressCity":"\u5E02\u8F96\u533A","addressDetail":"\u4E0A\u6D77","onLineMeeting":false,"kind":"exhibition","host":"<p>\u4E2D\u56FD\u901A\u7528\u673A\u68B0\u5DE5\u4E1A\u534F\u4F1A<\/p>","organizer":"<p>\u4E2D\u56FD\u901A\u7528\u673A\u68B0\u5DE5\u4E1A\u534F\u4F1A<\/p>","hideHost":false,"coverImgPath":"meeting\/files\/1bd08c56b8ca3cbf1478434f757ea11e.jpg","privacyKind":null,"creatorAdminUserId":155,"publishAdminUserId":155,"publishDate":"2021-07-05T09:49:32.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":363,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"6f622548-2c93-4461-a970-98706026a840","signInCode":"78cdf37b-aa8b-414b-b56f-0d5482c2f890","forCJK":false,"forYJ":false},{"id":1193,"createDate":"2020-09-28T15:48:15.000+08:00","updateDate":"2021-10-01T07:07:28.000+08:00","isDelete":null,"title":"2022\u6B27\u6D32\u56FD\u9645\u7CBE\u7EC6\u5316\u5DE5\u5C55\uFF08Chemspec Europe\uFF09","startDate":"2022-05-30T00:00:00.000+08:00","endDate":"2022-06-01T00:00:00.000+08:00","addressCountry":"\u5883\u5916","addressProvince":null,"addressCity":null,"addressDetail":"\u5FB7\u56FD\u6CD5\u5170\u514B\u798F","onLineMeeting":false,"kind":"exhibition","host":"<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u5316\u5DE5\u884C\u4E1A\u5206\u4F1A<\/p>","organizer":null,"hideHost":false,"coverImgPath":"meeting\/files\/e765bfdaa48d3aabc9efd9e8a3d9eba4.jpg","privacyKind":null,"creatorAdminUserId":147,"publishAdminUserId":147,"publishDate":"2020-09-28T15:48:27.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":1604,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"eaafd044-2d86-4677-85e1-b5c95b967423","signInCode":"8ffd40cf-7463-485a-87bd-058bdcec5db0","forCJK":false,"forYJ":false},{"id":1386,"createDate":"2021-03-29T14:23:06.000+08:00","updateDate":"2021-09-29T13:50:12.000+08:00","isDelete":null,"title":"2021\u4E2D\u56FD\uFF08\u6DF1\u5733\uFF09\u56FD\u9645\u7535\u5546\u9009\u54C1\u91C7\u8D2D\u4EA4\u6613\u4F1A","startDate":"2021-12-02T09:00:00.000+08:00","endDate":"2021-12-04T17:00:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":"\u5E7F\u4E1C\u7701","addressCity":"\u6DF1\u5733\u5E02","addressDetail":"\u6DF1\u5733\u56FD\u9645\u4F1A\u5C55\u4E2D\u5FC3\uFF08\u5B9D\u5B89\u65B0\u9986\uFF09","onLineMeeting":false,"kind":"exhibition","host":"<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u5546\u4E1A\u884C\u4E1A\u59D4\u5458\u4F1A<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\u5546\u4E1A\u884C\u4E1A\u5546\u4F1A<\/p>\n<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u6DF1\u5733\u5E02\u59D4\u5458\u4F1A<\/p>","organizer":"<p><strong>\u627F\u529E\u5355\u4F4D\uFF1A<\/strong>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u5546\u4E1A\u884C\u4E1A\u59D4\u5458\u4F1A\u3001\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\u5546\u4E1A\u884C\u4E1A\u5546\u4F1A<\/p>\n<p><strong>\u652F\u6301\u5355\u4F4D\uFF1A<\/strong>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\u6D77\u5357\u7701\u59D4\u5458\u4F1A<\/p>","hideHost":false,"coverImgPath":"meeting\/files\/06f009510182da3ec248506bdc0beb4b.jpg","privacyKind":null,"creatorAdminUserId":12,"publishAdminUserId":12,"publishDate":"2021-03-29T15:05:37.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":1,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":812,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"95a008dd-b829-4723-a5ab-f9e786a7a21a","signInCode":"32dcf3dc-4dbe-4e01-ab44-ee60a79d8559","forCJK":false,"forYJ":false},{"id":1102,"createDate":"2020-08-17T14:13:25.000+08:00","updateDate":"2021-10-01T10:20:17.000+08:00","isDelete":null,"title":"\u3010\u54C1\u724C\u7ECF\u7406\u4EBA\u3011\u7EBF\u4E0A\u57F9\u8BAD\u8BFE\u7A0B","startDate":"2021-11-30T00:00:00.000+08:00","endDate":"2022-08-17T00:00:00.000+08:00","addressCountry":"\u4E2D\u56FD","addressProvince":null,"addressCity":null,"addressDetail":null,"onLineMeeting":true,"kind":"training","host":"<p>\u4E2D\u56FD\u56FD\u9645\u8D38\u6613\u4FC3\u8FDB\u59D4\u5458\u4F1A\uFF08\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\uFF09\u57F9\u8BAD\u4E2D\u5FC3<\/p>\n<p>\u54C1\u724C\u8054\u76DF\uFF08\u5317\u4EAC\uFF09\u54A8\u8BE2\u80A1\u4EFD\u516C\u53F8<\/p>","organizer":null,"hideHost":false,"coverImgPath":"meeting\/files\/d6d0541b71215f3a33ca4ff286965b0f.jpg","privacyKind":null,"creatorAdminUserId":6,"publishAdminUserId":6,"publishDate":"2020-12-08T09:55:20.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":0,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":1847,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"c5e70ecc-cb21-43bd-993f-d96c9f196204","signInCode":"18344fa4-f303-4c47-8138-c1ce0d1845c0","forCJK":false,"forYJ":false},{"id":650,"createDate":"2019-09-11T18:22:53.000+08:00","updateDate":"2021-10-01T01:04:00.000+08:00","isDelete":null,"title":"\u56FD\u9645\u5546\u4F1A\u5B66\u9662\u5728\u7EBF\u57F9\u8BAD\u8BA4\u8BC1\u8BFE\u7A0BIncoterms\u00AE2020","startDate":"2021-11-30T00:00:00.000+08:00","endDate":null,"addressCountry":"\u4E2D\u56FD","addressProvince":null,"addressCity":null,"addressDetail":"\u5728\u7EBF\u57F9\u8BAD","onLineMeeting":true,"kind":"training","host":"<p>\u56FD\u9645\u5546\u4F1A\u4E2D\u56FD\u56FD\u5BB6\u59D4\u5458\u4F1A\u79D8\u4E66\u5C40<\/p>","organizer":null,"hideHost":false,"coverImgPath":"meeting\/files\/6fe265458c088c6768afcb9ccbb65b31.jpg","privacyKind":null,"creatorAdminUserId":7,"publishAdminUserId":7,"publishDate":"2019-09-12T07:40:53.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":0,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":5793,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"4afdb937-ae3a-40e0-9f1f-ff1cb8a6fb36","signInCode":"6942bc4c-8881-49bb-9bc4-5db453d741e5","forCJK":true,"forYJ":false},{"id":907,"createDate":"2020-03-09T15:16:15.000+08:00","updateDate":"2021-10-01T01:25:04.000+08:00","isDelete":null,"title":"\u4E13\u5BB6\u89E3\u8BFB\u56FD\u9645\u89C4\u5219\u7CFB\u5217\u8BFE\u7A0B","startDate":"2021-11-30T00:00:00.000+08:00","endDate":null,"addressCountry":"\u4E2D\u56FD","addressProvince":null,"addressCity":null,"addressDetail":null,"onLineMeeting":true,"kind":"training","host":"<p>\u4E2D\u56FD\u8D38\u4FC3\u4F1A\uFF08\u4E2D\u56FD\u56FD\u9645\u5546\u4F1A\uFF09\u57F9\u8BAD\u4E2D\u5FC3<\/p>","organizer":null,"hideHost":false,"coverImgPath":"meeting\/files\/fa47962ae29af968fbc4075cd658c8b6.png","privacyKind":null,"creatorAdminUserId":6,"publishAdminUserId":6,"publishDate":"2020-03-09T15:22:39.000+08:00","needRegistration":null,"status":2,"briefIntroduction":null,"agenda":null,"contact":null,"attachments":null,"disabled":false,"recommend":false,"free":0,"note":null,"hidden":false,"live":false,"liveExpiredTime":null,"signSetting":null,"publishUser":null,"creatorUser":null,"visitCount":2767,"signInCount":null,"waitToReviewSignInCount":null,"previewCode":"a12ea660-dc0c-4e07-a73e-5d813d21d672","signInCode":"c0a7f6b4-40ab-45c7-8537-d37a29f84011","forCJK":false,"forYJ":false}]
+  var content =  $('meta[name="share-desc"]').attr('content');
+  $('meta[name="share-desc"]').attr('content', '时间：' + getMeetingTime() + '  地址：' + content);
+
+</script>
+<script type="text/javascript">
+  $(function () {
+    $('.meeting-time').text(getMeetingTime())
+
+    var player =  new TcPlayer('live_video', {
+      "m3u8": "https://itclive.ccpit.org/live/m" + meeting.id +".m3u8",
+      "flv": "https://itclive.ccpit.org/live/m" + meeting.id + ".flv", //增加了一个 flv 的播放地址，用于PC平台的播放 请替换成实际可用的播放地址
+      "autoplay" : true,      //iOS 下 safari 浏览器，以及大部分移动端浏览器是不开放视频自动播放这个能力的
+      "poster" : "/meetings/cover/show?path=" + meeting.coverImgPath,
+      "width" :  '480',//视频的显示宽度，请尽量使用视频分辨率宽度
+      "height" : '320'//视频的显示高度，请尽量使用视频分辨率高度
+    });
+  })
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      meeting: {},
+      recommendMeetings: recommendMeetings
+    },
+    methods: {
+      isZhiXiaShi: function (province) {
+        if (province === '北京市' || province === '天津市' || province === '上海市' || province === '重庆市') {
+          return true
+        }
+        return false
+      },
+      isHongKong: function (province) {
+        return province.indexOf('香港') !== -1
+      },
+      isMacao: function (province) {
+        return province.indexOf('澳门') !== -1
+      },
+      getCityName: function (country, province, city) {
+        if (country === '中国') {
+          if (!province) {
+            return ''
+          }
+
+          if (this.isZhiXiaShi(province)) {
+            return province.substring(0, province.length - 1)
+          } else if (this.isHongKong(province)) {
+            return '香港'
+          } else if (this.isMacao(province)) {
+            return '澳门'
+          } else {
+            if (city.indexOf('市') === city.length - 1) {
+              return city.substring(0, city.length - 1)
+            }
+            return city
+          }
+        }
+        return country
+      },
+      formatDateWithPattern: function (timestamp, pattern) {
+        if (timestamp) {
+          moment.locale('cn')
+          return moment(timestamp).format(pattern)
+        } else {
+          return null
+        }
+      },
+      formatDate: function (timestamp) {
+        if (timestamp) {
+          moment.locale('cn')
+          return moment(timestamp).format('MM-DD ddd')
+        } else {
+          return null
+        }
+      }
+    },
+    mounted: function () {
+      this.meeting = meeting
+      var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 6,
+        spaceBetween: 10,
+        watchOverflow: true,
+        loop: false,
+        breakpoints: {
+          //当宽度小于等于320
+          320: {
+            slidesPerView: 1
+          },
+          //当宽度小于等于480
+          480: {
+            slidesPerView: 2
+          },
+          //当宽度小于等于640
+          640: {
+            slidesPerView: 3
+          }
+        },
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      })
+    }
+  })
+</script>
+
+</body>
+</html>

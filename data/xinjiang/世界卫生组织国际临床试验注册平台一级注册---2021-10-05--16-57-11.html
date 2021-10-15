@@ -1,0 +1,1054 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>中国临床试验注册中心 - 世界卫生组织国际临床试验注册平台一级注册机构</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link href="/templates/default/css/Css.css" rel="stylesheet" type="text/css" />
+    <link href="/Lib/UI/jquery-ui-1.8.6.custom/css/ui-lightness/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
+    <link href="/templates/default/css/WdatePicker.css" rel="stylesheet" type="text/css" />
+    <script src="/templates/default/js/jquery.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.query.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.form.js" type="text/javascript"></script>
+    <script src="/templates/default/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="/templates/default/js/messages_cn.js" type="text/javascript"></script>
+    <script src="/templates/default/js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/Lib/UI/jquery-ui-1.8.6.custom/js/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
+     
+<script type="text/javascript" src="/js/saas.js"></script>
+    <script type="text/javascript">
+        $("#clickEn").click(function () {
+            var url = location.pathname;
+            var iurl = url.substring(0, url.length - 1);
+            if (iurl == "index.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+            if (iurl == "enIndex.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+        });
+        $("#clickCn").click(function () {
+            var url = location.pathname;
+            var iurl = url.substring(0, url.length - 1);
+            if (iurl == "index.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+            if (iurl == "enIndex.aspx") {
+                $("#clickCn").removeClass();
+                $("#clickCn").addClass("selected");
+            }
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="header_area">
+        <a class="logo" title="中国临床试验注册中心" href="/"></a>
+        <div class="r">
+            
+            <p>
+                今天是：2021-10-06&nbsp;星期三</p>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="l">
+            <ul>
+                
+                <li class="menuitem"><a href='index.aspx'>网站首页</a>|</li>
+                
+                <li class="menuitem"><a href='about.aspx'>ChiCTR简介</a>|</li>
+                
+                <li class="menuitem"><a href='searchproj.aspx' class="menusel">检索入口</a>|</li>
+                
+                <li class="menuitem"><a href='filelist.aspx'>重要文件</a>|</li>
+                
+                <li class="menuitem"><a href='registry.aspx'>注册指南</a>|</li>
+                
+                <li class="menuitem"><a href='question.aspx'>常见问题</a></li>
+                
+            </ul>
+        </div>
+        <div class="r">
+            <a href="index.aspx" id="clickCn" class="selected">简体中文</a>|<a href="enIndex.aspx" id="clickEn">English</a>
+        </div>
+    </div>
+<script type="text/javascript" charset="utf-8" src="/js/_downloadFile.js?v=1.0"></script>
+<script type="text/javascript">
+    function CascadeCheck(allSelector, itemSelector, checkedVals) {
+        var rootThis = this;
+        this.Parent = $(allSelector);
+        this.Children = $(itemSelector);
+        var load = function () {
+            var allChecked = false;
+            if (checkedVals && checkedVals.length > 0) {
+                allChecked = true;
+                rootThis.Children.each(function () {
+                    var checked = false;
+                    for (var i = 0; i < checkedVals.length; i++) {
+                        var $this = $(this);
+                        if ($this.val() == checkedVals[i]) {
+                            $this.attr("checked", "checked");
+                            checked = true;
+                            break;
+                        }
+                    }
+                    allChecked = allChecked && checked;
+                    return true;
+                });
+            }
+            rootThis.Parent.attr("checked", allChecked ? "checked" : "");
+        };
+        this.Init = function () {
+            load();
+            rootThis.Children.click(function () {
+                var allChecked = true;
+                if (this.checked) {
+                    rootThis.Children.each(function () {
+                        if (this.checked)
+                            return true;
+                        allChecked = false;
+                        return false;
+                    });
+                }
+                else
+                    allChecked = false;
+                rootThis.Parent.attr("checked", allChecked ? "checked" : "");
+            });
+            rootThis.Parent.click(function () {
+                var status = this.checked;
+                rootThis.Children.each(function () {
+                    this.checked = status;
+                });
+            });
+        };
+        this.GetCheckedChildren = function () {
+            return rootThis.Children.filter(function () {
+                return this.checked;
+            });
+        };
+        this.GetCheckedValues = function () {
+            var array = new Array();
+            this.GetCheckedChildren().each(function () {
+                array.push(this.value);
+            });
+            return array;
+        };
+        this.CheckAll = function () {
+            rootThis.Children.attr("checked", "checked");
+            rootThis.Parent.attr("checked", "checked");
+        };
+        this.ClearAll = function () {
+            rootThis.Children.attr("checked", "");
+            rootThis.Parent.attr("checked", "");
+        };
+        this.Inverse = function () {
+            return rootThis.Children.attr("checked", function () {
+                return !this.checked;
+            });
+        };
+    };
+</script>
+
+
+<link href="/templates/default/css/projStatisticCss.css" rel="stylesheet" type="text/css" />
+<link href="/templates/default/css/projStatisticShowCss.css?v=1.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    function serchPage(page) {
+        var query = $.query.set("createyear", $.trim($("#CreateYear1_listCreateYear").val()))
+            .set("page", page);
+        location.href = query.toString();
+    }
+    $(function () {
+        var total = "0";
+        $(".count").each(function () {
+            var $this = $(this);
+            var count = parseFloat($this.text());
+            var rate;
+            if (total <= 0)
+                rate = "0.00%";
+            else
+                rate = ((count / total) * 100).toFixed(2) + "%";
+            var $process = $this.next("span").text(rate).next("div.process").children();
+            try {
+                $process.animate({ width: rate }, 1000);
+            }
+            catch (e) {
+                $process.width(rate);
+            }
+        });
+    });
+</script>
+<div class="index_part2">
+    <ul>
+        <li>
+            <p>
+                <a href="searchproj.aspx">
+                    <img src="/templates/default/cn/images/ico_0.jpg" alt="检索试验" /></a></p>
+            <p>
+                <a href="searchproj.aspx">检索试验</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="countryproj.aspx">
+                    <img src="/templates/default/cn/images/ico_1.jpg" alt="按国家、省（市）统计" /></a></p>
+            <p>
+                <a href="countryproj.aspx">按国家、省（市）统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="ailmentcodeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_2.jpg" alt="按疾病代码统计" /></a></p>
+            <p>
+                <a href="ailmentcodeproj.aspx">按疾病代码统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="sponsorproj.aspx">
+                    <img src="/templates/default/cn/images/ico_3.jpg" alt="按试验实施单位统计" /></a></p>
+            <p>
+                <a href="sponsorproj.aspx">按试验实施单位统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="secsponsorproj.aspx">
+                    <img src="/templates/default/cn/images/ico_4.jpg" alt="按试验主办单位统计" /></a></p>
+            <p>
+                <a href="secsponsorproj.aspx">按试验主办单位统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="sourceofspendsproj.aspx">
+                    <img src="/templates/default/cn/images/ico_5.jpg" alt="按经费或物资来源统计" /></a></p>
+            <p>
+                <a href="sourceofspendsproj.aspx">按经费或物资来源统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="recruitmentstatusproj.aspx">
+                    <img src="/templates/default/cn/images/ico_6.jpg" alt="按征募研究对象情况统计" /></a></p>
+            <p>
+                <a href="recruitmentstatusproj.aspx">按征募研究对象情况统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="regstatusproj.aspx">
+                    <img src="/templates/default/cn/images/ico_7.jpg" alt="按注册状态统计" /></a></p>
+            <p>
+                <a href="regstatusproj.aspx">按注册状态统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="measureproj.aspx">
+                    <img src="/templates/default/cn/images/ico_8.jpg" alt="按干预措施统计" /></a></p>
+            <p>
+                <a href="measureproj.aspx">按干预措施统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="ethicalcommitteeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_9.jpg" alt="按伦理委员会统计" /></a></p>
+            <p>
+                <a href="ethicalcommitteeproj.aspx">按伦理委员会统计</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="studytypeproj.aspx">
+                    <img src="/templates/default/cn/images/ico_10.jpg" alt="按研究类型统计" /></a></p>
+            <p>
+                <a href="studytypeproj.aspx">按研究类型统计</a>
+            </p>
+        </li>
+    </ul>
+    <div class="divclear">
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/_search.js?v=1.0"></script>
+<div>
+    <div style="line-height: 36px; font-size: 16px; font-weight: bold; padding-left: 10px;">
+        检索试验
+    </div>
+    <div>
+        <table width="98%" cellspacing="1" cellpadding="0" border="0" style="margin-bottom: 10px;"
+            class="table_add">
+            <tbody>
+                <tr>
+                    <th colspan="6">
+                        项目筛选条件
+                    </th>
+                </tr>
+                <tr>
+                    <td style="width: 155px;" class="left_title">
+                        注册题目
+                    </td>
+                    <td style="width: 185px;">
+                        <input type="text" class="texbox" id="txtTitle" name="txtTitle"  value=""/>
+                    </td>
+                    <td style="width: 100px;" class="left_title">
+                        正式科学名
+                    </td>
+                    <td style="width: 180px;">
+                        <input type="text" class="texbox" id="txtOfficialName" name="txtOfficialName" value="" />
+                    </td>
+                    <td class="left_title">
+                        研究课题代号(代码)
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtSubjectID" name="txtSubjectID" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        注册状态
+                    </td>
+                    <td>
+                        
+                        <select id="listRegStatus" name="listRegStatus">
+                            <option value="0">不限</option>
+                            <option  value="1008001">预注册</option>
+                            <option  value="1008002">补注册</option>
+                        </select>
+                    </td>
+                    <td class="left_title">
+                        注册号
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtRegNo" name="txtRegNo" value="" />
+                    </td>
+                    <td class="left_title">
+                        在其它机构的注册号
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtSecondaryID" name="txtSecondaryID" value="" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody style="display: none;" id="myfiltertable">
+                <tr>
+                    <td class="left_title">
+                        申请注册联系人
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtApplier" name="txtApplier" value="" />
+                    </td>
+                    <td class="left_title">
+                        研究负责人
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtStudyLeader" name="txtStudyLeader" value="" />
+                    </td>
+                    <td class="left_title">
+                        年份
+                    </td>
+                    <td>
+                        
+                        <select id="listCreateYear" name="listCreateYear">
+                            <option value="0">所有</option>
+                            <option value='2021'>2021</option><option value='2020'>2020</option><option value='2019'>2019</option><option value='2018'>2018</option><option value='2017'>2017</option><option value='2016'>2016</option><option value='2015'>2015</option><option value='2014'>2014</option><option value='2013'>2013</option><option value='2012'>2012</option><option value='2011'>2011</option><option value='2010'>2010</option><option value='2009'>2009</option><option value='2008'>2008</option><option value='2007'>2007</option><option value='2006'>2006</option><option value='2005'>2005</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        研究实施负责（组长）单位
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtSponsor" name="txtSponsor" value="" />
+                    </td>
+                    <td class="left_title">
+                        试验主办单位
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtSecSponsor" name="txtSecSponsor" value="新疆医科大学第一附属医院" />
+                    </td>
+                    <td class="left_title">
+                        经费或物资来源
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtSourceOfSpends" name="txtSourceOfSpends" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        研究疾病名称
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtStudyAilment" name="txtStudyAilment" value="" />
+                    </td>
+                    <td class="left_title">
+                        研究疾病代码
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtStudyAilmentCode" name="studyailmentcode" value="" />
+                    </td>
+                    <td class="left_title">
+                        研究类型
+                    </td>
+                    <td>
+                        
+                        <select id="listStudyType" name="listStudyType" style='width:155px'>
+                            <option value="0">不限</option>
+                            
+                            <option  value="1">干预性研究/Interventional study</option>
+                            
+                            <option  value="2">预防性研究/Prevention</option>
+                            
+                            <option  value="3">诊断试验/Diagnostic test</option>
+                            
+                            <option  value="4">病因学/相关因素研究/Cause/Relative factors study</option>
+                            
+                            <option  value="5">预后研究/Prognosis study</option>
+                            
+                            <option  value="6">流行病学研究/Epidemilogical research</option>
+                            
+                            <option  value="7">病因学/相关因素研究/Cause/Relative factors study</option>
+                            
+                            <option  value="8">观察性研究/Observational study</option>
+                            
+                            <option  value="55">筛查/Screening</option>
+                            
+                            <option  value="56">卫生服务研究/Health services reaserch</option>
+                            
+                            <option  value="61">治疗研究/Treatment study</option>
+                            
+                            <option  value="72">卫生服务研究/Health Services Research</option>
+                            
+                            <option  value="73">基础科学研究/Basic Science</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        研究所处阶段
+                    </td>
+                    <td>
+                        
+                        <select id="listStudyStage" name="listStudyStage" style='width:155px'>
+                            <option value="0">不限</option>
+                            
+                            <option  value="9">I期临床试验/1</option>
+                            
+                            <option  value="10">II期临床试验/2</option>
+                            
+                            <option  value="11">III期临床试验/3</option>
+                            
+                            <option  value="12">上市后药物/4</option>
+                            
+                            <option  value="14">I期+II期/1-2</option>
+                            
+                            <option  value="15">探索性研究/预试验/0</option>
+                            
+                            <option  value="16">IV期临床试验/4</option>
+                            
+                            <option  value="17">其它/N/A</option>
+                            
+                            <option  value="40">治疗新技术临床试验/New Treatment Measure Clinical Study</option>
+                            
+                            <option  value="42">诊断试验新技术临床试验/Diagnostic New Technique Clincal Study</option>
+                            
+                            <option  value="48">回顾性研究/Retrospective study</option>
+                            
+                            <option  value="70">II-III期临床试验/2-3</option>
+                            
+                        </select>
+                    </td>
+                    <td class="left_title">
+                        研究设计
+                    </td>
+                    <td>
+                        
+                        <select style="width: 155px;" id="listStudyDesign" name="listStudyDesign">
+                            <option value="0">不限</option>
+                            
+                            <option  value="18">横断面/Cross-sectional</option>
+                            
+                            <option  value="19">非随机对照试验/Non randomized control</option>
+                            
+                            <option  value="20">队列研究/Cohort study</option>
+                            
+                            <option  value="21">病例对照研究/Case-Control study</option>
+                            
+                            <option  value="22">随机平行对照/Parallel</option>
+                            
+                            <option  value="23">连续入组/Sequential</option>
+                            
+                            <option  value="24">诊断试验诊断准确性/Diagnostic test for accuracy</option>
+                            
+                            <option  value="25">诊断性病例对照试验/Diagnostic test: case-control</option>
+                            
+                            <option  value="26">单臂/Single arm</option>
+                            
+                            <option  value="27">随机交叉对照/Cross-over</option>
+                            
+                            <option  value="28">半随机对照/Quasi-randomized controlled</option>
+                            
+                            <option  value="36">随机抽样/Randomly Sampling</option>
+                            
+                            <option  value="37">单病例随机对照研究/N of 1 Trial</option>
+                            
+                            <option  value="44">巢式病例-对照研究/Nested case-control study</option>
+                            
+                            <option  value="53">不同剂量对照/Dose comparison</option>
+                            
+                            <option  value="58">整群随机抽样/Cluster randomly sampling</option>
+                            
+                            <option  value="59">整群随机分组/Cluster randomization</option>
+                            
+                            <option  value="60">历史对照研究/Historical control</option>
+                            
+                            <option  value="67">病例研究/Case study</option>
+                            
+                            <option  value="69">偏倚化抛硬币设计/Biased Coin Design</option>
+                            
+                            <option  value="71">析因分组（即根据危险因素或暴露因素分组）/Factorial</option>
+                            
+                        </select>
+                    </td>
+                    <td class="left_title">
+                        研究实施时间
+                    </td>
+                    <td>
+                        <p>
+                            从<input type="text" style="width: 90px;" class="Wdate" id="txtMinStudyExecuteTime"
+                                name="txtMinStudyExecuteTime" value="" /></p>
+                        <p>
+                            至<input type="text" style="width: 90px;" class="Wdate" id="txtMaxStudyExecuteTime"
+                                name="txtMaxStudyExecuteTime" value="" /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        征募研究对象情况
+                    </td>
+                    <td>
+                        
+                        <select style="width: 155px;" id="listRecruitmentStatus" name="listRecruitmentStatus">
+                            <option value="0">不限</option>
+                            <option  value="1004001">尚未开始</option>
+                            <option  value="1004002">正在进行</option>
+                            <option  value="1004003">暂停或中断</option>
+                            <option  value="1004004">结束</option>
+                        </select>
+                    </td>
+                    <td class="left_title">
+                        性别
+                    </td>
+                    <td>
+                        
+                        <select id="listGender" name="listGender">
+                            <option value="0">不限</option>
+                            <option  value="男性">男性</option>
+                            <option  value="女性">女性</option>
+                            <option  value="男女均可">男女均可</option>
+                        </select>
+                    </td>
+                    <td class="left_title">
+                        签署知情同意书
+                    </td>
+                    <td>
+                        
+                        <select id="listAgreeToSign" name="listAgreeToSign">
+                            <option value="">不限/All</option>
+                            <option  value="1">是/Yes</option>
+                            <option  value="0">否/No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        实施地点
+                    </td>
+                    <td colspan="5">
+                        <p>
+                            国家(地区)：<input type="text" class="texbox" id="txtCountry" name="txtCountry" value="中国" />省(直辖市)：<input
+                                type="text" class="texbox" id="txtProvince" name="txtProvince" value="新疆维吾尔自治区" />市(区县)：<input type="text"
+                                    class="texbox" id="txtCity" name="txtCity" value="" /></p>
+                        <p>
+                            单位(医院)：<input type="text" class="texbox" id="txtInstitution" name="txtInstitution" value="" />单位级别：&nbsp;&nbsp;&nbsp;<input
+                                type="text" class="texbox" id="txtInstitutionLevel" name="txtInstitutionLevel" value="" /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">
+                        干预措施
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtMeasure" name="txtMeasure" value="" />
+                    </td>
+                    <td class="left_title">
+                        干预措施代码
+                    </td>
+                    <td>
+                        <input type="text" class="texbox" id="txtIntercode" name="txtIntercode" value="" />
+                    </td>
+                    <td class="left_title">
+                        获伦理委员会批准
+                    </td>
+                    <td>
+                        
+                        <select id="listEthicalCommitteeSanction" name="listEthicalCommitteeSanction">
+                            <option value="">不限/All</option>
+                            <option  value="1">是/Yes</option>
+                            <option  value="0">否/No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left_title">公开试验结果文件</td>
+                    <td>
+                        
+                        <select id="listWhetherPublic" name="listWhetherPublic">
+                            <option value="">不限/All</option>
+                            <option  value="1">是/Yes</option>
+                            <option  value="0">否/No</option>
+                        </select>                    
+                    </td>
+                    <td class="left_title">上传试验结果文件</td>
+                    <td>
+                        
+                        <select id="listIsUploadRF" name="listIsUploadRF">
+                            <option value="">不限/All</option>
+                            <option  value="1">是/Yes</option>
+                            <option  selected="selected" value="0">否/No</option>
+                        </select>                    
+                    </td>
+                    <td colspan="2"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td colspan="5">
+                        <input type="button" value="筛选结果" id="btnGo" onclick="serchPage(1)" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);"
+                            id="moreOption">更多筛选</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="background-color: #ffc; padding: 8px 8px 3px 8px; color: #f00;">
+        <p>
+            共检索到<b>59</b>个符合检索条件的试验。</p>
+    </div>
+    <div>
+        
+        <table width="98%" cellspacing="1" cellpadding="0" border="0" class="table_list">
+            <tbody>
+                <tr class="alt">
+                    <th style="width: 100px;">
+                        历史版本
+                    </th>
+                    <th style="width: 150px;">
+                        注册号
+                    </th>
+                    <th>
+                        注册题目
+                    </th>
+                    <th style="width: 90px;">
+                        研究类型
+                    </th>
+                    <th style="width: 80px;">
+                        注册时间
+                    </th>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2100051733" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2100051733
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=134609">咳嗽反射评分对于评估气管插管患者拔管后再插管可能性的应用研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        观察性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2021/10/01
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2100051374" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2100051374
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=134060">右心室造影指导无导线起搏器中间隔植入技术的安全性和可行性</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        干预性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2021/09/22
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2100050751" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2100050751
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=133028">请与我们联系上传伦理审批文件。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;基于血清GP73水平测定的TIPS术后肝功能变化的研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        观察性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2021/09/04
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2100049592" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2100049592
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=131245">耳穴贴压缓解儿童齿科焦虑症状的交叉试验研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        干预性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2021/08/05
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2100047874" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2100047874
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=129026">低剂量长疗程PEG&#32;IFN-α-2b（45μg）治疗乙肝相关肝细胞癌的前瞻性、随机、对照、开放研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        干预性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2021/06/27
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2000040813" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2000040813
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=64155">血液净化对脓毒症患者肠道微生态紊乱的影响研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        观察性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2020/12/10
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2000040333" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2000040333
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=64408">一项评价脊柱微创手术机器人定位系统用于完成脊柱外科手术中椎弓根内手术通道制作的安全性和有效性的单组多中心临床研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        干预性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2020/11/28
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2000039308" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2000039308
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=63140">贾文霄医师：请上传有关该试验的知情同意书模板，而非院内检查知情同意书；请尽快在ResMan&#32;IPD平台上传原始数据以完成补注册。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;基于影像组学的颅内动脉粥样硬化性高危斑块识别及其卒中发病机制的研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        观察性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2020/10/22
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2000039168" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2000039168
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=63079">请上传研究计划书。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Venus&#32;P-Valve经导管人工肺动脉瓣膜系统应用于经导管介入人工肺动脉瓣植入术的新技术临床研究</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        干预性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2020/10/20
+                        
+                    </td>
+                </tr>
+                
+                <tr class="">
+                    <td>
+                        <a href="historyversionpub.aspx?regno=ChiCTR2000038610" class="" title="查看历史版本">历史版本</a>
+                    </td>
+                    <td>
+                        ChiCTR2000038610
+                    </td>
+                    <td>
+                        <p>
+                            <a href="showproj.aspx?proj=62008">请于伦理委员会批准后才开始征募参试者，并与我们联系上传伦理批件。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;新疆颅脑创伤患者的流行病学特点和现状调查</a></p>
+                        <p>
+                            新疆医科大学第一附属医院
+                        </p>
+                    </td>
+                    <td>
+                        
+                        观察性研究
+                        
+                    </td>
+                    <td>
+                        
+                        2020/09/26
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </div>
+    <div>
+        <div id="pgProj" class="pagearea">
+    
+    <a style="margin-right: 5px;" id="paging" href="javascript:;">首页</a>
+    
+    <a style="margin-right: 5px;background-color: #3399FF;color: #FFFFFF;" href="javascript:;">1</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(2)" href="javascript:;">2</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(3)" href="javascript:;">3</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(4)" href="javascript:;">4</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(5)" href="javascript:;">5</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(6)" href="javascript:;">6</a>
+    
+    <a style="margin-right: 5px;" onclick="serchPage(2)" href="javascript:;">下一页</a> 
+    <a style="margin-right: 5px;" onclick="serchPage(6)"    href="javascript:;" >尾页</a> 
+    <span><label>第1页 共6页</label></span>
+    
+</div>
+
+    </div>
+
+    <div class="dlgVerifyCode" style="display: none;" title="请填写验证码Please fill in the verification code">
+        <div style="text-align:center; height:5px;margin-top: 5px;">
+            <input type="hidden" name="cPage" id="cPage"/>
+        </div>
+        <div class="ProjetInfo_ms ProjetStudyPlan_ms">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr class="">
+                    <td>
+                        <p class="cn title">
+                            请填写验证码以获取更多搜索结果
+                        </p>
+                        <p class="en title">
+                            Please fill in the verification code for more search results
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <p>
+                                <input type="text" name="txtVerifyCode" id="txtVerifyCode" value="" title="请填写验证码Please fill in the verification code" 
+                                    style="width: 60%;text-align:center;margin: 0 0 5px 0;" onchange="verifyCodeChange(this)"/>
+                                &nbsp;&nbsp;
+                                <img onclick="reloadimg()" alt="看不清楚吗？点击图片换一张。" style="cursor: pointer;margin:0 0 -5px 0;" 
+                                    id="imgVerify" src="" />
+                            </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="errorMsg" style="color:Red">&nbsp;</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="showanniu" style="text-align:center;padding:10px 0 2px 0">
+            <input id="btnSaveProRes" type="button" name="btn" title="确认Confirm" value="确认Confirm" class="bt_subm" onclick="doSubmit();"/>
+        
+        </div>
+    </div>
+
+</div>
+
+<div class="footer_links">
+    <a target="_blank" href="http://www.medresman.org">
+        <img alt="临床试验公共管理平台 Clinical Trial Management Public Platform" src="/templates/default/images/ecrf.jpg"/></a>
+    <a target="_blank" href="">
+        <img alt="中国注册临床试验伦理审查委员会 chinese ethics committee of registering clinical trials"	
+            src="/templates/default/images/chictrdb.jpg"/></a> <a target="_blank" href="">
+                <img alt="医学期刊出版与编辑伦理网 Medical Journal Publication and Edite Ethics Network" src="/templates/default/images/mjpe.jpg"/></a>
+    <a target="_blank" href="http://www.who.int/ictrp/zh/">
+        <img alt="欢迎访问WHO国际临床试验注册平台" src="/templates/default/images/who.jpg"/></a> <a target="_blank"
+            href="http://www.cct.cuhk.edu.hk">
+            <img alt="Clinical Trials Hong Kong" src="/templates/default/images/cuhk.jpg"/></a>
+    <a target="_blank" href="http://ottawagroup.ohri.ca/">
+        <img alt="Ottawa Statement on Trial Registration" src="/templates/default/images/ottawagroup.jpg"/></a>
+
+    <a href="http://www.acmctr.org" target="_blank" alt="北京针灸临床试验注册中心">
+<img alt="北京针灸临床试验注册中心" src="/templates/default/images/amcrt.jpg"/>
+
+    </a>
+
+</div>
+<div class="footer_nav">
+    <ul>
+        <li><a href="index.aspx">网站首页</a>| </li>
+        <li><a href="about.aspx">ChiCTR简介</a>| </li>
+        <li><a href="searchproj.aspx">检索入口</a>| </li>
+        <li><a href="filelist.aspx">重要文件</a>| </li>
+        <li><a href="registry.aspx">注册指南</a>| </li>
+        <li><a href="question.aspx">常见问题</a> </li>
+    </ul>
+</div>
+<div class="footer">
+    
+    <p>
+        <b>中国临床试验注册中心 - 世界卫生组织国际临床试验注册平台一级注册机构</b></p> 
+    <p>
+        Copyright(c) (2005 - 2015) Chictr.org.All rights reserved. 中国临床试验注册中心 版权所有  <a href="" target="_blank"></a>
+    </p>
+    <p>
+        <a href="" title="系统支持" target="_blank">深圳启奥华科技有限公司</a></p>
+    <p>
+        <a href="http://beian.miit.gov.cn/">粤ICP备13012814号-2</a></p>
+    <p>
+        提示：推荐使用IE8.0以上版本 宽屏显示分辨率下使用系统。</p>
+    <p>
+        
+        
+    </p>
+    <p>
+        <script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=6c3b757d-f258-42af-9aa5-ea8c662c8b7d&width=36&height=50&type=1" type="text/javascript" charset="utf-8"></script>
+    </p>
+
+</div>
+</body> </html>

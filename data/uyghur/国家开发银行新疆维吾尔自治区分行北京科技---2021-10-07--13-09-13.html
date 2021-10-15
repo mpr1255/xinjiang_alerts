@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<title>国家开发银行新疆维吾尔自治区分行</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北京科技大学学生就业指导中心</title>
+
+<link rel="stylesheet" href="/assets/global/plugins/bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/template/ustb/css/clndr.css" media="all">
+<link rel="stylesheet" href="/template/ustb/css/jquery.webui-popover.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/idangerous.swiper.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/edua-icons.css" media="all" />
+<link rel="stylesheet" href="/njs/font-awesome-4.7.0/css/font-awesome.css" media="all" />
+<link rel="stylesheet" href="/template/ustb/css/edu/core.css">
+    <link rel="stylesheet" href="/template/ustb/css/edu/shortcode/header.css">
+<link rel="stylesheet" href="/template/ustb/css/customStyle.css">
+<link href="/template/ustb/css/common.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/template/ustb/css/show.css?v=20210922" media="all">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="/njs/ueditor/ueditor.parse.min.js"></script>
+
+<link rel="shortcut icon" href="/template/ustb/favicon.ico">
+
+<script type="text/javascript" src="/template/ustb/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/njs/ueditor/ueditor.parse.min.js"></script>
+	<script type="text/javascript" src="/njs/jquery.PrintArea.js"></script>
+	<style>
+		.corp-detail-text ul li a {
+			color: #337ab7;
+			border-bottom: 1px dashed;
+		}
+	</style>
+</head>
+<body>
+<!-- Start of header area -->
+<div class="searchwraper" style="display: none;">
+	<div class="search clearfix">
+		<form id="searchForm" name="input" action="/front/search.jspa" method="get" class="">
+			<input type="text" class="keywords" name="keywords" id="keywords" onblur="if (this.value == '') {this.value = '请输入查找关键字';}" onfocus="if (this.value == '请输入查找关键字') {this.value = '';}" value="请输入查找关键字" >
+			<button type="submit" class="button"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+	<div class="hotList">
+		热门关键字：
+			<a href="javascript:void(0)" onclick="searchhot('双选会');">双选会</a><a href="javascript:void(0)" onclick="searchhot('新能源');">新能源</a><a href="javascript:void(0)" onclick="searchhot('首钢');">首钢</a><a href="javascript:void(0)" onclick="searchhot('京东方');">京东方</a><a href="javascript:void(0)" onclick="searchhot('宝钢');">宝钢</a><a href="javascript:void(0)" onclick="searchhot('微软');">微软</a><a href="javascript:void(0)" onclick="searchhot('马钢');">马钢</a>
+	</div>
+</div>
+<header class="header-area">
+	<div id="mobile-search" style="display: none">
+		<div class="searchbox">
+			<!--<form name="input" action="/front/search.jspa" method="get" class="">
+				<input type="text" class="keywords" name="keywords"  onblur="if (this.value == '') {this.value = '请输入搜索关键字...';}" onfocus="if (this.value == '请输入搜索关键字...') {this.value = '';}" value="请输入搜索关键字..." >
+				<button type="submit" class="button"><i class="fa fa-search"></i></button>
+			</form>-->
+			<a href="javascript:;" class="fa fa-search" id="searchicon"></a>
+		</div>
+		<div class="btn-login">
+			<button class="s2 v_login submit" id="login">登录</button>
+			<div class="btn-group" id="logout" style="display:none">
+				<button type="button" id="logou_btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					退出<i class="fa fa-angle-down"></i>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="/membercenter/toIndex.do">进入功能区</a></li>
+					<li><a href="/membermanage/loginout.jspa">安全退出</a></li>
+				</ul>
+				<script type="text/javascript">
+					$(function(){
+						$(".btn-group").hover(function(){
+							$(this).toggleClass("open");
+							$(".btn-group>.btn span").toggleClass("loginlogo");
+							$(".btn-group>.btn span").toggleClass("caret");
+						});
+						$("#logou_btn").click(function(){
+							//window.location.href = "/membermanage/loginout.jspa";
+						});
+
+
+						$("#searchicon,#searchicon2").click(function(){
+							$(".searchwraper").slideToggle('fast');
+						});
+						/*
+                        $("#keywords").focus(function(){
+                            $(this).css({"width":"180px","background":"#fff"});
+                            $(".searchBut").css({"color":"#004a99","background":"#fff"});
+                        });
+                        $("#searchForm").hover(function(){
+                            $(this).children("input").css({"width":"180px","background":"#fff"});
+                            $(".searchBut").css({"color":"#004a99","background":"#fff"});
+                        });
+                        $("#keywords").blur(function(){
+                            $(this).css({"width":"25px","background":"#004a99"});
+                            $(".searchBut").css({"color":"#fff","background":"#004a99"});
+                        });
+*/
+
+					});
+                    // 热门搜索
+                    function searchhot(keyword) {
+                        $('#keywords').val(keyword);
+                        $('#searchForm').submit();
+                    }
+				</script>
+	</div>
+		</div>
+	</div>
+	<div class="header-top">
+		<div class="container">
+			<div class="col-xs-6">
+				<div class="logo">
+					<a href="/"><img src="/template/ustb/img/logocc.png"></a>
+				</div>
+			</div>
+			<div class="col-xs-6 hidden-sm hidden-xs">
+			<div class="topbar2">
+				<ul class="topnav">
+					<li>
+						<a href="javascript:;" class="fa fa-search" id="searchicon2"></a>
+						<!--<form name="searchForm" id="searchForm" method="post" action="/front/search.jspa">
+							<input type="text" name="keywords" id="keywords" placeholder="搜索关键字..." />
+							<input type="hidden" name="siteId" value="202" />
+							<button type="submit"  class="searchBut"><i class="fa fa-search"></i></button>
+						</form>-->
+					</li>
+					<li>
+						<a href="http://www.ustb.edu.cn/" target="_blank" >学校首页</a>
+					</li>
+					<li>
+						<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)"class="a-2">加入收藏</a>
+					</li>
+					<li>
+						<a href="/front/advisory.jspa" target="_blank">在线咨询</a>
+					</li>
+					<li>
+						<div class="btn-login">
+							<button class="s2 v_login submit" id="login2"> 登录</button>
+							<div class="btn-group" id="logout2" style="display:none">
+								<button type="button" id="logou_btn2" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									退出 <i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li style="border-bottom: 1px solid #ddd;">
+										<a href="/membercenter/toIndex.do">
+											进入功能区
+										</a>
+									</li>
+									<li>
+										<a href="/membermanage/loginout.jspa">
+											安全退出
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom stick-h2">
+		<!--NAV START-->
+		<div class="container">
+<div class="nav menu-area">
+    <nav id="dropdown">
+        <ul id="mainNav" class="navigation clearfix">
+            <li class="first">
+                <a class="big" href="/">首页</a>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=694&parentId=694" id="big_694">企业服务
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=812&parentId=694">生源信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=815&parentId=694">招聘指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=841&parentId=694">联系我们</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=763&parentId=763" id="big_763">招聘信息
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=764&parentId=763">单位需求信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=765&parentId=763">实习信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=766&parentId=763">招聘会信息</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=710&parentId=710" id="big_710">新闻公告
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=712&parentId=710">通知公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=729&parentId=710">就业新闻</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=839&parentId=710">项目公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=846&parentId=710">每日发布</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=699&parentId=699" id="big_699">就业政策
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=704&parentId=699">学校文件</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=705&parentId=699">中央部委</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=731&parentId=699">地方政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=745&parentId=699">创业相关</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=701&parentId=701" id="big_701">基层就业
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=732&parentId=701">国家政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=733&parentId=701">学校政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=734&parentId=701">奖金申请</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=735&parentId=701">榜样力量</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=695&parentId=695" id="big_695">求职指导
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=746&parentId=695">生涯规划</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=843&parentId=695">职业测评</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=747&parentId=695">笔试面试</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=751&parentId=695">职业决策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=752&parentId=695">经典案例</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=703&parentId=703" id="big_703">手续办理
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=753&parentId=703">就业手续办理指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=814&parentId=703">常用表格下载</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=844&parentId=703">网签入口</a>
+                                </li>
+                                <li>
+                                    <a class="v_login" memberTypeId="86" returnUrl="/front/channel.jspa?channelId=845&parentId=703" href="/front/channel.jspa?channelId=845&parentId=703">户档迁移登记</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=700&parentId=700" id="big_700">职场生涯
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=759&parentId=700">法律维权</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=760&parentId=700">职场新人</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=761&parentId=700">同事相处</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=762&parentId=700">人事制度</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=816&parentId=816" id="big_816">下属社团
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=817&parentId=816">职业发展协会</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=818&parentId=816">BOE俱乐部</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=842&parentId=842" id="big_842">一帮一专区
+                </a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
+	
+	   
+    
+    
+
+
+
+		</div>
+		<!--NAV END-->
+	</div>
+</header>
+<!-- mobile-menu-area start -->
+<div class="mobile-menu-area">
+	<div class="container">
+		<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+<div class="nav menu-area">
+    <nav id="dropdown">
+        <ul id="mainNav" class="navigation clearfix">
+            <li class="first">
+                <a class="big" href="/">首页</a>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=694&parentId=694" id="big_694">企业服务
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=812&parentId=694">生源信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=815&parentId=694">招聘指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=841&parentId=694">联系我们</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=763&parentId=763" id="big_763">招聘信息
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=764&parentId=763">单位需求信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=765&parentId=763">实习信息</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=766&parentId=763">招聘会信息</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=710&parentId=710" id="big_710">新闻公告
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=712&parentId=710">通知公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=729&parentId=710">就业新闻</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=839&parentId=710">项目公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=846&parentId=710">每日发布</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=699&parentId=699" id="big_699">就业政策
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=704&parentId=699">学校文件</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=705&parentId=699">中央部委</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=731&parentId=699">地方政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=745&parentId=699">创业相关</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=701&parentId=701" id="big_701">基层就业
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=732&parentId=701">国家政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=733&parentId=701">学校政策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=734&parentId=701">奖金申请</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=735&parentId=701">榜样力量</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=695&parentId=695" id="big_695">求职指导
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=746&parentId=695">生涯规划</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=843&parentId=695">职业测评</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=747&parentId=695">笔试面试</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=751&parentId=695">职业决策</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=752&parentId=695">经典案例</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=703&parentId=703" id="big_703">手续办理
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=753&parentId=703">就业手续办理指南</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=814&parentId=703">常用表格下载</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=844&parentId=703">网签入口</a>
+                                </li>
+                                <li>
+                                    <a class="v_login" memberTypeId="86" returnUrl="/front/channel.jspa?channelId=845&parentId=703" href="/front/channel.jspa?channelId=845&parentId=703">户档迁移登记</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=700&parentId=700" id="big_700">职场生涯
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=759&parentId=700">法律维权</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=760&parentId=700">职场新人</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=761&parentId=700">同事相处</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=762&parentId=700">人事制度</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=816&parentId=816" id="big_816">下属社团
+                        <i class="fa fa-angle-down"></i>
+                </a>
+
+                    <ul class="submenu">
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=817&parentId=816">职业发展协会</a>
+                                </li>
+                                <li>
+                                    <a  href="/front/channel.jspa?channelId=818&parentId=816">BOE俱乐部</a>
+                                </li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="big" href="/front/channel.jspa?channelId=842&parentId=842" id="big_842">一帮一专区
+                </a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
+	
+	   
+    
+    
+
+
+
+		</div>
+	</div>
+</div>
+<script type="text/javascript" language="javascript">
+    // 热门搜索
+    function searchhot(keyword) {
+        $('#keywords').val(keyword);
+        $('#searchForm').submit();
+    }
+
+    //加入收藏
+    function AddFavorite(sURL, sTitle) {
+        sURL = encodeURI(sURL);
+        try{
+            window.external.addFavorite(sURL, sTitle);
+        }catch(e) {
+            try{
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+            }
+        }
+    }
+</script>	<div class="main">
+		<div class="container">
+			<div class="row content-page">
+				<div class="col-xs-12">
+					<div class=" page-bar">
+						<div class="pull-left clearfix">
+							<h5 class="page-detail">
+								当前位置：
+								<a href="">首页</a>
+								>
+							<a href="/front/channel.jspa?channelId=763&parentId=764">招聘信息</a>
+								>
+							<a href="/front/channel.jspa?channelId=764&parentId=764">单位需求信息<!--&gt;--></a>
+							</h5>
+						</div>
+					</div>
+					<div class="content_title_box">
+						<h3 class="content_title common-head">国家开发银行新疆维吾尔自治区分行</h3>
+						<div class="content_time">
+							有效期：<span>2022-01-07</span>
+						发布日期：<span>2021-10-07</span>
+						浏览次数：<span id="clickCount">8</span>
+						<span class="qrcode">
+							<span class="">
+								二维码
+								<i class="fa fa-qrcode"></i>
+								<i class="fa fa-caret-down"></i>
+							</span>
+							<div id="qrCode" style="display: none">
+								<img alt="扫描分享" src="https://job.ustb.edu.cn/front/qrCode.jspa?method=zpxx&param1=764&param2=114076"/>
+								<p style="margin-top:-25px;">扫一扫分享本页</p>
+							</div>
+						</span>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 maintext">
+					<div class="common-box">
+
+						<div class="corp-detail-box">
+							<div class="job_c q">
+								<p class="b_bottom">
+									<b>单位所在地：</b>
+新疆乌鲁木齐市天山区								</p>
+								<p class="b_bottom">
+									<b>单位地址：</b>
+									中山路333号国开行大厦
+								</p>
+								<p class="b_bottom">
+									<b>招聘说明：</b>
+特别提示：同学们在应聘时，如遇到用人单位&ldquo;收取押金/扣押证件/收取任何费用&rdquo;以及提出不正当面试要求等不规范招聘的情况，请立刻中止应聘，并将该情况告知就业指导中心（62332010）或学院就业专任教师。
+第三方机构未经我校允许擅自转载或变更信息未能及时更新及提醒毕业生，导致相关后果的，学校不承担相关责任。								</p>
+								<!-- <a class="v_login" href="/front/zpxx.jspa?channelId=764&tid=114076" returnUrl="/front/zpxx.jspa?channelId=764&tid=114076" memberTypeId="86">登录</a>后查看单位详细信息 -->
+								<p class="b_bottom">
+									<b style="float: left;">学校推荐意见：</b>
+										<a class="v_login" href="/front/zpxx.jspa?&tid=114076" returnUrl="/front/zpxx.jspa?tid=114076" memberTypeId="86">登录</a>后可见
+								</p>
+							</div>
+
+								<p><b>单位简介</b></p>
+								<div class="content">
+					            		新疆在党和国家工作大局中具有特殊重要战略地位，是我国西北的战略屏障、西部大开发的重点地区、我国向西开放的重要门户、中国重要能源资源的战略基地。国家开发银行新疆分行成立于1999年12月，历经艰苦创业、快速成长、跨越发展、新的征程四大阶段，始终围绕中央治疆方略，聚焦新疆社会稳定和长治久安总目标，主动承担金融戍边使命。截至2021年8月末，累计向新疆提供社会融资总量11388亿元，表内本外币贷款余额3429亿元，连续第15年保持同业第一，是新疆第一家表内贷款余额超过3000亿元的银行业金融机构，表内人民币贷款余额3008亿元，进一步体现了开发性金融的责任担当和主动作为，成为金融援疆的“排头兵”和“主力军”。
+2013年6月和2015年8月，系统内二级分支机构——伊犁分行、喀什分行相继开业，标志着开行金融援疆和支持新疆向西开放的工作进入加速发展的快车道。新疆分行荣获了“全国文明单位”、“全国五一劳动奖状”、“全国青年文明号”、“开发建设新疆奖章”等多项全国及省部级荣誉，累计168人次员工获省部级以上荣誉。
+					            </div>
+
+								<div class="corp-detail-text clearfix">
+									<!--
+									<h3 style="font-size: 22px !important;">需求职位</h3>
+									-->
+									<ul id="">
+										<li class="">
+											<br>
+											<h4 style="font-weight: 600">
+												需求职位：<a href="/front/zwxx.jspa?xqzwId=58796&zpxxId=114076"> 国家开发银行新疆分行2022年高校毕业生招聘 </a>
+												<small>(2021.10.07-2021.10.20)</small>
+											</h4>
+											<div class="corp-detail-info">
+												<!--<h4 class="wrap-title">职位详情</h4>-->
+												<p><b>学历要求：</b>本科及以上</p>
+												<p><b>工作地点：</b>新疆乌鲁木齐市</p>
+												<p><b>每月薪水：</b>10k以上</p>
+												<p><b>招聘人数：</b>20&nbsp;人</p>
+												<p><b>行业：</b>金融保险 </p>
+												<p><b>性质：</b>国有企业</p>
+												<p><b>所在地：</b>新疆乌鲁木齐市天山区</p>
+
+													<p><b>简历接收邮箱：</b></p>
+
+													<p><b>网申网址：</b><a href="http://www.cdb.com.cn" target="_blank">http://www.cdb.com.cn</a></p>
+											</div>
+
+											<p><b>职位要求</b></p>
+											<div>
+												<p style="text-align:center;line-height:37px"><span style="font-size:27px">&nbsp;</span></p><p style="text-align:center;line-height:37px"><span style="font-size:24px;font-family:方正大标宋简体">国家开发银行新疆分行</span><span style="font-size:24px">2022</span><span style="font-size:24px;font-family:方正大标宋简体">年高校毕业生招聘公告</span></p><p style="line-height:37px"><span style="font-size:21px">&nbsp;</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:方正仿宋简体">新疆在党和国家工作大局中具有特殊重要战略地位，是我国西北的战略屏障、西部大开发的重点地区、我国向西开放的重要门户、中国重要能源资源的战略基地。国家开发银行新疆分行成立于</span><span style="font-size:20px">1999</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">12</span><span style="font-size:20px;font-family:方正仿宋简体">月，历经艰苦创业、快速成长、跨越发展、新的征程四大阶段，始终围绕中央治疆方略，聚焦新疆社会稳定和长治久安总目标，主动承担金融戍边使命。截至</span><span style="font-size:20px">2021</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">8</span><span style="font-size:20px;font-family:方正仿宋简体">月末，累计向新疆提供社会融资总量</span><span style="font-size:20px">11388</span><span style="font-size:20px;font-family:方正仿宋简体">亿元，表内本外币贷款余额</span><span style="font-size:20px">3429</span><span style="font-size:20px;font-family:方正仿宋简体">亿元，连续第</span><span style="font-size:20px">15</span><span style="font-size:20px;font-family:方正仿宋简体">年保持同业第一，是新疆第一家表内贷款余额超过</span><span style="font-size:20px">3000</span><span style="font-size:20px;font-family:方正仿宋简体">亿元的银行业金融机构，表内人民币贷款余额</span><span style="font-size:20px">3008</span><span style="font-size:20px;font-family:方正仿宋简体">亿元，进一步体现了开发性金融的责任担当和主动作为，成为金融援疆的</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">排头兵</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">和</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">主力军</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">2013</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">6</span><span style="font-size:20px;font-family:方正仿宋简体">月和</span><span style="font-size:20px">2015</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">8</span><span style="font-size:20px;font-family:方正仿宋简体">月，系统内二级分支机构</span><span style="font-size:20px">——</span><span style="font-size:20px;font-family:方正仿宋简体">伊犁分行、喀什分行相继开业，标志着开行金融援疆和支持新疆向西开放的工作进入加速发展的快车道。新疆分行荣获了</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">全国文明单位</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">、</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">全国五一劳动奖状</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">、</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">全国青年文明号</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">、</span><span style="font-size:20px">“</span><span style="font-size:20px;font-family:方正仿宋简体">开发建设新疆奖章</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">等多项全国及省部级荣誉，累计</span><span style="font-size:20px">168</span><span style="font-size:20px;font-family:方正仿宋简体">人次员工获省部级以上荣誉。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:方正仿宋简体">国家开发银行新疆分行拟面向境内外各高等院校招聘</span><span style="font-size:20px">2022</span><span style="font-size:20px;font-family:方正仿宋简体">年应届毕业生若干名，吸纳更多一流的人才开发建设边疆，相信青年人在这个干事创业的广阔舞台上将大有可为。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:黑体">一、岗位要求</span></p><p style="text-indent:40px;line-height:37px"><strong><span style="font-size:20px">1.</span></strong><strong><span style="font-size:20px;font-family:&amp;#10">工作单位：国家开发银行新疆分行</span></strong></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:方正仿宋简体">工作地点：新疆乌鲁木齐市；岗位需求：授信评审岗、信贷管理岗、国际业务岗、法律事务岗、财会营运岗、党务行政岗。</span></p><p style="text-indent:40px;line-height:37px"><strong><span style="font-size:20px">2.</span></strong><strong><span style="font-size:20px;font-family:&amp;#10">工作单位：国家开发银行伊犁分行</span></strong></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:方正仿宋简体">工作地点：新疆伊宁市；岗位需求：信贷管理岗。</span></p><p style="text-indent:40px;line-height:37px"><strong><span style="font-size:20px">3.</span></strong><strong><span style="font-size:20px;font-family:&amp;#10">工作单位：国家开发银行喀什分行</span></strong></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:方正仿宋简体">工作地点：新疆喀什市；岗位需求：经营分析岗、信贷管理岗。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:黑体">二、招聘范围</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">1.</span><span style="font-size:20px;font-family:方正仿宋简体">国内普通高等院校本科及以上学历应届毕业生，获得国家认可的</span><span style="font-size:20px">2022</span><span style="font-size:20px;font-family:方正仿宋简体">年度毕业证、学位证和就业报到证。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">2.</span><span style="font-size:20px;font-family:方正仿宋简体">初次就业的海外院校留学归国人员，在</span><span style="font-size:20px">2021</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">7</span><span style="font-size:20px;font-family:方正仿宋简体">月</span><span style="font-size:20px">1</span><span style="font-size:20px;font-family:方正仿宋简体">日至</span><span style="font-size:20px">2022</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">6</span><span style="font-size:20px;font-family:方正仿宋简体">月</span><span style="font-size:20px">30</span><span style="font-size:20px;font-family:方正仿宋简体">日期间取得学历学位，并于</span><span style="font-size:20px">2022</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">9</span><span style="font-size:20px;font-family:方正仿宋简体">月</span><span style="font-size:20px">30</span><span style="font-size:20px;font-family:方正仿宋简体">日前取得国家教育部国外学历学位认证。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">3.</span><span style="font-size:20px;font-family:方正仿宋简体">符合开发银行亲属回避政策，需回避的亲属关系包括夫妻关系、直系血亲关系、三代以内旁系血亲以及近姻亲关系。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">4.</span><span style="font-size:20px;font-family:方正仿宋简体">最终获得开发银行录用资格的毕业生，须满足上述条件并按时完成入职报到，且未与其他单位建立劳动关系，否则视为本人自动放弃录用资格，开发银行不承担任何责任。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:黑体">三、基本条件</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">1.</span><span style="font-size:20px;font-family:方正仿宋简体">具有中华人民共和国国籍。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">2.</span><span style="font-size:20px;font-family:方正仿宋简体">遵纪守法，诚实守信，品行端正，踏实肯干，吃苦耐劳，具备良好的道德素养和团队协作精神，有强烈的责任心，无违法违规违纪行为，有志实践开发性金融事业，投身西部开发、边疆建设伟业。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">3.</span><span style="font-size:20px;font-family:方正仿宋简体">身心健康，五官端正；具有正常履行岗位职责的身体条件，符合《公务员录用体检通用标准（试行）》（</span><span style="font-size:20px">2017</span><span style="font-size:20px;font-family:方正仿宋简体">年修订）、《公务员录用体检操作手册（试行）》（</span><span style="font-size:20px">2017</span><span style="font-size:20px;font-family:方正仿宋简体">年修订）的相关规定。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">4.</span><span style="font-size:20px;font-family:方正仿宋简体">学历、专业等招聘具体要求请参照网上报名时对应的岗位条件。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px;font-family:黑体">四、报名须知</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">1.</span><span style="font-size:20px;font-family:方正仿宋简体">报名时间为</span><span style="font-size:20px">2021</span><span style="font-size:20px;font-family:方正仿宋简体">年</span><span style="font-size:20px">9</span><span style="font-size:20px;font-family:方正仿宋简体">月</span><span style="font-size:20px">30</span><span style="font-size:20px;font-family:方正仿宋简体">日－</span><span style="font-size:20px">10</span><span style="font-size:20px;font-family:方正仿宋简体">月</span><span style="font-size:20px">20</span><span style="font-size:20px;font-family:方正仿宋简体">日</span><span style="font-size:20px">24</span><span style="font-size:20px;font-family:方正仿宋简体">点（北京时间），统一采取网上报名方式，不接受其他形式的报名。详情请登录开行门户网站（</span><span style="font-size:20px">http://www.cdb.com.cn</span><span style="font-size:20px;font-family:方正仿宋简体">）。</span></p><p style="text-indent:40px;line-height:37px"><span style="font-size:20px">2.</span><span style="font-size:20px;font-family:方正仿宋简体">请网上已报名者邮寄材料一份（明确注明本人姓名、出生年月、政治面貌、生源地、专业、毕业时间、联系方式的个人简历，成绩单、相关证书复印件，附彩色生活照一张），寄至新疆乌鲁木齐市中山路</span><span style="font-size:20px">333</span><span style="font-size:20px;font-family:方正仿宋简体">号国家开发银行新疆分行人事处（请注明</span><span style="font-size:20px">“2022</span><span style="font-size:20px;font-family:方正仿宋简体">届校园招聘</span><span style="font-size:20px">”</span><span style="font-size:20px;font-family:方正仿宋简体">，写明拟应聘的工作单位、工作岗位以及是否服从调剂和调剂意向）。所有应聘材料代为保密，恕不退还，谢绝来电来访。欢迎广大有志之士踊跃报名！</span></p><p><br/></p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+					</div><br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="nav-quick">
+	<div class="container">
+		<div class=" main-nav">
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/channel.jspa?channelId=769&parentId=772" target="_blank">
+					<img src="/template/ustb/img/link/shouxu-blank.png">
+					<h4>就业手续</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/advisory.jspa" target="_blank">
+					<img src="/template/ustb/img/link/zixun-blank.png">
+					<h4>在线咨询</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/submitform/submitform.jspa?keyCode=5adcd41368006032f0f8dfe55a628b6f" target="_blank">
+					<img src="/template/ustb/img/link/wenjuan-blank.png">
+					<h4>调查问卷</h4>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-3 nav-link">
+				<a href="/front/channel.jspa?channelId=841&parentId=694" target="_blank">
+					<img src="/template/ustb/img/link/lianxi-blank.png"/>
+					<h4>联系方式</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Footer-->
+<footer class="footer-bg padding-top pb-20">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">校内链接</h4>
+					<li>
+						<a href="http://cy.ustb.edu.cn/" target="_blank">北京科技大学创新创业中心 </a>
+					</li>
+					<li>
+						<a href="http://www.ustb.edu.cn" target="_blank">学校首页 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">相关政府部门</h4>
+					<li>
+						<a href="http://www.mohrss.gov.cn/" target="_blank">国家人力资源与社会保障部 </a>
+					</li>
+					<li>
+						<a href="http://www.ncss.org.cn/" target="_blank">全国大学生就业公共服务立体化平台 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">高校就业信息网</h4>
+					<li>
+						<a href="http://career.buaa.edu.cn/" target="_blank">北航就业信息网 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<ul>
+					<h4 class="heading">各类人才招聘网站</h4>
+					<li>
+						<a href="http://www.newjobs.com.cn/" target="_blank">中国国家人才网 </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4 footer_panel" style="text-align: right !important;display: flex;justify-content: flex-end;margin-top: 10px">
+				<!--<img src="/template/ustb/img/logod.png" style="margin-bottom:20px;" />
+				<div>
+					<a href="https://weibo.com/ustbjiuye?is_all=1" target="_blank">
+						<i class="fa fa-weibo"></i>
+					</a>
+					<a href="http://page.renren.com/601799408/channel-251527" target="_blank">
+						<i class="fa fa-renren"></i>
+					</a>
+					<i class="wechat fa fa-wechat"></i>
+					<div id="wechats" style="display: none">
+						<h4 class="heading">微信公众号</h4>
+						<div class="hover-right"></div>
+						<img src="/template/ustb/img/jobcenter.png" />
+					</div>
+				</div>-->
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/sy.png" />
+					<span>北科生涯</span>
+				</div>
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/fwh.png" />
+					<span>北科服务号</span>
+				</div>
+				<div class="wx-box">
+					<img src="/template/ustb/img/footer-weixin/dyh.png" />
+					<span>北科订阅号</span>
+				</div>
+			</div>
+			<style>
+				.wx-box {margin-left: 10px;}
+				.wx-box img {width: 80px}
+				.wx-box span {display: block; text-align: center;font-size: 12px;margin-top: 5px;}
+			</style>
+		</div>
+	</div>
+	<br><br>
+	<div class="copyright">
+		<div class="container">
+			<div class="text-center">
+				<p class="visible-xs">版权所有 © 2014-2018<br> 北京科技大学学生就业指导中心，并保留所有权利</p>
+				<p class="hidden-xs">版权所有 © 2014-2018 北京科技大学学生就业指导中心，并保留所有权利</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--FOOTER ends-->
+
+<!--[if lt IE 9]>
+<!--<script src="/assets/global/plugins/respond.min.js"></script>-->
+<!--[endif]-->
+<script src="/template/ustb/js/edu/plugins.js"></script>
+<script src="/template/ustb/js/edu/main.js"></script>
+<script src="/assets/global/plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/assets/frontend/layout/scripts/back-to-top.js" type="text/javascript"></script>
+
+<script src="/template/ustb/js/show.js"></script>
+<!--artDialog6提示框  -->
+<link href="/njs/artDialog6/css/ui-dialog.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/njs/artDialog6/dist/dialog-min.js"></script>
+<script type="text/javascript" src="/njs/artDialog6/dist/dialog-plus-min.js"></script>
+<script>
+    var session_memberTypeId = '';
+    $(function(){
+        //验证是否已经登录，未登录弹出登录窗口
+        $('.v_login').click(function() {
+            var returnUrl = $(this).attr('returnUrl');
+            var memberTypeId = $(this).attr('memberTypeId');
+            if(session_memberTypeId == ''){
+                if(typeof(returnUrl) != 'undefined'){
+                    returnUrl = returnUrl.replace("" , "");
+                    var target = "/membermanage/toPopLogin.do?memberTypeId="+memberTypeId+"&returnUrl="+encodeURIComponent(returnUrl);
+                }else{
+                    var target = "/membermanage/toPopLogin.do?callback=changeButton";
+                }
+				var d = dialog({
+					title: ' 用户登录',
+					width:300,
+					height:350,
+					padding:5,
+					url: target,
+					fixed: true,
+					//quickClose: true,
+					onclose: function () {
+						if (this.returnValue) {
+							//改变按钮状态
+							//changeButton();
+							window.location.href = "/membercenter/toIndex.do";
+						}
+					}
+				});
+				d.showModal();
+				return false;
+            }else{
+                if(typeof(memberTypeId) != 'undefined' && memberTypeId != session_memberTypeId){
+                    if(memberTypeId == '86'){
+                        alert('此功能需要学生账号登录');
+                    }
+                    if(memberTypeId == '87'){
+                        alert('此功能需要用人单位账号登录');
+                    }
+                    if(memberTypeId == '88'){
+                        alert('此功能需要院系账号登录');
+                    }
+                    return false;
+                }else{
+                    //alert('您已登录');
+                }
+                return true;
+            }
+        });
+    });
+
+    function changeButton(){
+        //	var list = art.dialog.list; for (var i in list) { list[i].close(); };
+        $('#login,#login2').hide();
+        $('#logout,#logout2').show();
+        //alert(111)
+        parent.window.location.href = '/membercenter/toIndex.do';
+    }
+
+    //检测登录
+    $.getJSON('/membermanage/checkSession.jspa', {}, function(data) {
+        if(data.msg == 'Y'){
+            var vo = jQuery.parseJSON(data.vo);
+            //alert(vo.memberTypeId);
+            if(vo.memberTypeId == 86){
+            }
+			/*if(vo.memberTypeId == 87){
+				 //alert(vo.name);
+				 $(".name").text(vo.name);
+				 $('#empForm').hide().siblings().show();
+			 }
+			 if(vo.memberTypeId == 88){
+				 //alert(vo.name);
+				 $(".name").text(vo.vo);
+				 $('#collegeForm').hide().siblings().show();
+			 } */
+            $('#login,#login2').hide();
+            $('#logout,#logout2').show();
+        }
+    });
+
+    //收藏操作
+    function studentFavourAdd (url, name, type, contentId) {
+
+        $.post('/front/addFavour.jspa',
+            {url:url, name:name, type:type, contentId:contentId},
+            function(data) {
+                if (data.msg == 'N') {
+                    alert('未登录');
+                } else if (data.msg == 'E') {//系统异常
+                    alert('未登录或不是学生用户登录');
+                } else if (data.msg == 'Y') {
+                    alert('收藏成功!');
+                } else if (data.msg == 'C') {
+                    alert('您已收藏过了！');
+                }
+                else {
+                    alert('未知错误');
+                }
+            },'json');
+    }
+
+
+    $(".wechat").hover(function(){
+        $("#wechats").css("display","block");
+    },function(){
+        $("#wechats").css("display","none");
+    });
+
+    $(".qrcode").hover(function(){
+        $("#qrCode").css("display","block");
+    },function(){
+        $("#qrCode").css("display","none");
+    });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?07164994ec702ed090faab5d501c2a78";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+	<script type="text/javascript">
+	        ///计数操作.
+	        $(function(){
+	            $.post('/front/clickCount.jspa',{
+	            	contentId:114076,
+	            	key: 'tid',
+	            	clickColumn: 'click',
+	            	tableName: 'career_zpxx'
+	            },
+	            function(data){
+	                eval(data);
+	            });
+	        });
+
+	        function studentFavour() {
+	        	studentFavourAdd ("/front/zpxx.jspa?tid=114076", "国家开发银行新疆维吾尔自治区分行", "2", "114076");
+	        }
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="SiteName" content="网站名称">
+    <meta name="SiteDomain" content="网站域名">
+    <meta name="SiteIDCode" content="政府网站标识码">
+    <meta name="Description" content="描述">
+    <meta name="Keywords" content="关键词">
+    <!-- 页面css -->
+    <link rel="stylesheet" href="newwz/js/lib/chosen/chosen.css">
+    <link rel="stylesheet" href="newwz/css/common.css">
+    <link rel="stylesheet" href="newwz/css/headerCommon.css">
+    <link rel="stylesheet" href="newwz/css/subjectDetails.css">
+    <!-- jquery -->
+    <script src="newwz/js/lib/jquery.min.js"></script>
+    <!-- 页面标题 -->
+    <title>新疆公共资源交易网</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- 正文 -->
+    <div class="container">
+        <!-- 地址 -->
+        <div class="address">
+            您所在的位置:<a href="index_new.html">首页</a> &gt; 
+			<a href="subjectInfo_new.html?type=1">主体信息</a> &gt; <span>主体详情</span>
+        </div>
+		<input type="hidden" id="headcatenum" value="ztxx">
+        <div class="details-hd clearfix">
+            <h3 class="details-tt l">主体详情</h3>
+        </div>
+        <table class="details-table">
+            <tbody>
+                <tr>
+                    <td width="160" class="keep-bg">
+                        <span>联系地址</span>
+                    </td>
+                    <td width="490">
+                        <span id="address">
+                            
+                        </span>
+                    </td>
+                    <td width="160" class="keep-bg">
+                        <span>所属地区</span>
+                    </td>
+                    <td width="490">
+                        <span id="city"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="keep-bg">
+                        <span >单位名称</span>
+                    </td>
+                    <td>
+                        <span id="danweiname">
+                            
+                        </span>
+                    </td>
+                    <td class="keep-bg">
+                        <span>单位类型</span>
+                    </td>
+                    <td>
+                        <span id="danweitype"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="keep-bg">
+                        <span>法人</span>
+                    </td>
+                    <td>
+                        <span id="faren">
+                          
+                        </span>
+                    </td>
+                    <td class="keep-bg">
+                        <span>机构地址</span>
+                    </td>
+                    <td>
+                        <span id="jigouaddress"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="keep-bg">
+                        <span>联系人</span>
+                    </td>
+                    <td>
+                        <span id="lianxiren">
+                            
+                        </span>
+                    </td>
+                    <td class="keep-bg">
+                        <span>电话号码</span>
+                    </td>
+                    <td>
+                        <span id="mobile"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="keep-bg">
+                        <span>所属省份</span>
+                    </td>
+                    <td>
+                        <span id="province">
+                            
+                        </span>
+                    </td>
+                    <td class="keep-bg">
+                        <span>机构代码</span>
+                    </td>
+                    <td>
+                        <span id="unitorgnum"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="keep-bg">
+                        <span>注册资金</span>
+                    </td>
+                    <td>
+                        <span id="zhuceziben">
+                            
+                        </span>
+                    </td>
+                    <td class="keep-bg">
+                        <span>资本单位</span>
+                    </td>
+                    <td>
+                        <span id="zhucezibencurrency"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- footer -->
+    <div id="footer"></div>
+    <!-- 工具js -->
+	<script src="js/webBuilderCommon.js"></script>
+	<script src="js/lib/mustache.js"></script>
+	<script src="js/ServiceUtil.js"></script>
+    <script src="newwz/js/lib/chosen/chosen.jquery.js"></script>
+    <script src="newwz/js/lib/util.f9x.js"></script>
+    <script src="newwz/js/common.js"></script>
+	<script src="js/listinfo.js"></script>
+</body>
+
+</html>

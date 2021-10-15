@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh_CN" style="overflow-y: auto;">
+	<head>
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" />
+		<meta name="keywords" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="320" name="MobileOptimized" />
+		<script type="text/javascript" src="https://pub-point.hizh.cn//static/app/js/jweixin-1.6.0.js"></script>
+		<link rel="stylesheet" charset="utf-8" href="/mobiletemplate/css/bootstrap.min.css" />
+		<link rel="stylesheet" charset="utf-8" href="/mobiletemplate/css/contentApp.css?temp=126827538932795" />
+		<link rel="stylesheet" charset="utf-8" href="/mobiletemplate/css/openapp.css" />
+		<link rel="stylesheet" charset="utf-8" href="/mobiletemplate/css/contentWeb.css?temp=237498365987329723" />
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/jquery.cycle.all.js"></script>
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" charset="utf-8" rel="stylesheet" src="/mobiletemplate/js/swipeslider.min.js"></script>
+		<style>
+			figcaption{
+				text-align: left;
+				font-size: 3.5vw;
+				color: #999;
+				line-height: 5vw;
+			}
+			p img{
+				max-width: 100% !important;
+				width:auto !important;
+				height:auto !important;
+			}
+			body{
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+			.expend_btn{
+				height: 50px;
+				line-height: 21px;
+				padding: 13px 13px;
+				background: red;
+				border-radius: 3px;
+				/*color: #fff;*/
+				display: inline-block;
+				text-decoration: none;
+				font-size: 18.75px;
+				outline: none;
+				width:90%;
+			}
+			.variety{
+				-webkit-background-clip: text;
+				color: transparent;
+			}
+			.zhtqb_logo_img{
+				/*display:none !important;*/
+				content: url(/mobiletemplate/img/shareImg.jpg);
+			}
+			.my-video-dimensions {
+				height:201.11px;
+				text-align: center;
+			}
+			.contact-us-wrap p {
+				margin-bottom: unset;
+			}
+			#particularPageWeb.COMPO video{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<!-- 20210518wyy -->
+		<script>
+			$(document).ready(function(){
+				// var storyType = COMPO;
+				window.webFlag = false;
+				$('#top_open').css('display', 'unset');
+				$('.template_web').css('display', 'unset');
+				$('.template_web_layout').css('display', 'unset');
+				$('#comment_app').css('display', 'unset');
+				$('#comment_web').css('display', 'none');
+				$('#main_devide').css('display', 'flex');
+				$('#main_baseline').css('display', 'block');
+				$('#columns_web').css('display', 'none');
+				$('#share_qrcode').css('display', 'none');
+				// 手机端打开
+				if (navigator.userAgent.match(/Android/i)
+					|| navigator.userAgent.match(/webOS/i)
+					|| navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)
+					|| navigator.userAgent.match(/BlackBerry/i)
+					|| navigator.userAgent.match(/Windows Phone/i)) {
+					// 设置window全局变量
+					window.webFlag = false;
+					$('#top_open').css('display', 'unset');
+					$('.template_web').css('display', 'unset');
+					$('.template_web_layout').css('display', 'unset');
+					$('#comment_app').css('display', 'unset');
+					$('#comment_web').css('display', 'none');
+					$('#main_devide').css('display', 'flex');
+					$('#main_baseline').css('display', 'block');
+					$('#columns_web').css('display', 'none');
+					$('#share_qrcode').css('display', 'none');
+				} else {
+					//web端打开
+					window.webFlag = true;
+					$('#top_open').css('display', 'none');
+					// 'width':'70%', 'margin-left': 'calc((100% - 70%) / 2)', 
+					$('.template_web').css({'display': 'flex'});
+					$('.template_web_layout').css('width', 'calc(100% - 400px)');
+					$('#comment_app').css('display', 'none');
+					$('#comment_web').css('display', 'unset');
+					$('#main_devide').css('display', 'none');
+					$('#main_baseline').css('display', 'none');
+					$('#columns_web').css({'display': 'unset', 'margin-top': '9px'});
+					$('.share_mg_bt').css({'display': 'block', 'margin-bottom': '20px'});
+					$('.contact-us-wrap p').css('margin-bottom' , 'unset !important');
+					$('#share_qrcode').css('display', 'block');
+					var figcaptionList = document.getElementsByTagName('figcaption');
+					var length = $(figcaptionList).length;
+					if(length > 0) {
+						$.each($(figcaptionList), function(i,v){
+							v.style.textAlign = 'left';
+							v.style.fontSize = '16px';
+							v.style.color = '#999';
+							v.style.lineHeight = '16px';
+							v.style.marginTop = '12px';
+						});
+					}
+					// 加载标题栏、右侧广告位、底端相关声明等
+					$('#header_web').load("https://"+window.location.host+"/header.html");
+					$('#right_web').load("https://"+window.location.host+"/right.html");
+					$('#footer_web').load("https://"+window.location.host+"/footer.html");
+
+					// 二维码
+					jQuery('#qrcode').qrcode({
+						render: "canvas",
+						width: 150,
+						height: 150,
+						text: window.location.href,
+						correctLevel: 0
+					});
+				}
+			});
+		</script>
+		<script>
+			$(function(){
+			// 	// var reprintUrl = 'https://' + window.location.host + '/rest/v2/site/cms/api/applist.json?tenantId=' + "zjyapp";
+				var reprintUrl = 'https://' + window.location.host + '/rest/v2/site/cms/api/applist.json';
+				console.log({"id":"AP61599991e4b052b2546a146e","oid":"AP61599991e4b052b2546a146e","title":"\u65B0\u7586\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u65B0\u589E2\u4F8B\u65E0\u75C7\u72B6\u611F\u67D3\u8005","comment":"","createdBy":"","updated":"2021-10-03T11:52:49.776+0000","updatedBy":"","properties":{"picNames":"\u56FE\u72471","newFounderStory":null,"version_order":null,"order_number":null,"subscriptionEnterdescribe":null,"showPosterCover":"0","video":null,"allowShare":"1","subscriptionArticleId":null,"subscriptionColumnId":null,"text":null,"audio":null,"editor":"\u8D75\u806A","smallTitle":null,"mapping":null,"subscriptionEnterLittleImage":null,"subscriptionVideoId":null,"wailianUrl":null,"sign_up":null,"searchType":null,"searchLocation":null,"subscriptionBackgroundUrl":null,"photo":null,"wailiangao":"0","reviewEditor":"\u5E94\u7ACB\u67AB","link_title":null,"team":null,"modelType":"1","sharePosterCover":"1","version_name":null,"primeMoverIndustry":null,"subscriptionType":null,"materials":["PO603a10f8d5debdf440f36984"],"manuscriptClassification":null,"repthe":"RT0F14BD8AA37B45799326E529064F2CED20201224175122568","developType":null,"isArtwork":"1","simliarStoriesIds":[],"jianbaoTime":null,"subscriptionId":null,"subscriptionEnterName":null,"platForm":"\u65B0\u5A92\u4F53","orderTag":"1000","isSmartCheck":"false"},"content":"<p>10\u67083\u65E5\uFF0C\u65B0\u7586\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u5728\u4E09\u59291\u6B21\u5E38\u89C4\u6838\u9178\u68C0\u6D4B\u4E2D\uFF0C\u53D1\u73B02\u4EBA\u6838\u9178\u68C0\u6D4B\u7ED3\u679C\u5448\u9633\u6027\uFF0C\u7ECF\u4E13\u5BB6\u8BCA\u65AD\u5747\u4E3A\u65B0\u51A0\u80BA\u708E\u65E0\u75C7\u72B6\u611F\u67D3\u8005\uFF0C\u76EE\u524D\u5DF2\u8F6C\u8FD0\u81F3\u970D\u5C14\u679C\u65AF\u5E02\u5B9A\u70B9\u533B\u9662\u8FDB\u884C\u9694\u79BB\u533B\u5B66\u89C2\u5BDF\u3002<\/p><p>\u5F53\u65E5\uFF0C\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u75AB\u60C5\u9632\u63A7\u5DE5\u4F5C\u6307\u6325\u90E8\u7ACB\u5373\u542F\u52A8\u5E94\u6025\u54CD\u5E94\uFF0C\u5DF2\u6392\u67E5\u5BC6\u5207\u63A5\u89E6\u8005192\u4EBA\uFF0C\u5168\u90E8\u843D\u5B9E\u9694\u79BB\u533B\u5B66\u89C2\u5BDF\u63AA\u65BD\uFF0C\u76F8\u5173\u6D41\u8C03\u6392\u67E5\u3001\u6838\u9178\u68C0\u6D4B\u7B49\u5DE5\u4F5C\u6B63\u5728\u8FDB\u884C\u4E2D\u3002<\/p><figure class=\"image\" style=\"display: table;\"><img src=\"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/615999917036086c7c0a60aa.jpeg\" id=\"img-615999917036086c7c0a60aa\"><figcaption style=\"display: table-caption; caption-side: bottom;\"><\/figcaption><\/figure>","secretLevel":0,"indexed":1,"channelId":"zjyapp","columnId":"5dd92265e4b0bf88dd8c1175","author":"\u8D75\u806A","url":"https:\/\/pub-zhtb.hizh.cn\/a\/202110\/03\/AP61599991e4b052b2546a146e.html","storyType":"COMPO","storyResource":{"info":"","length":0,"shortVideoUrl":null},"thumbnailStyle":0,"contentType":0,"canComment":1,"publishTime":"2021-10-03T11:52:48.000+0000","publishStatus":1,"language":"","originUrl":"","wordCount":160,"editor":"\u8D75\u806A","sourceId":"CO61599803d5deec4c8305be12","story":{"oid":"AP61599991e4b052b2546a146e","folder":"5dcd1232e4b0b3bff1cd5725","path":"\/APP\/AP61599991e4b052b2546a146e","title":"\u65B0\u7586\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u65B0\u589E2\u4F8B\u65E0\u75C7\u72B6\u611F\u67D3\u8005","keywords":null,"tags":null,"comment":"","created":"2021-10-03T19:52:49.776+08:00","createdBy":"system","updated":"2021-10-03T19:52:49.776+08:00","updatedBy":"system","properties":{},"content":"<p>10\u67083\u65E5\uFF0C\u65B0\u7586\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u5728\u4E09\u59291\u6B21\u5E38\u89C4\u6838\u9178\u68C0\u6D4B\u4E2D\uFF0C\u53D1\u73B02\u4EBA\u6838\u9178\u68C0\u6D4B\u7ED3\u679C\u5448\u9633\u6027\uFF0C\u7ECF\u4E13\u5BB6\u8BCA\u65AD\u5747\u4E3A\u65B0\u51A0\u80BA\u708E\u65E0\u75C7\u72B6\u611F\u67D3\u8005\uFF0C\u76EE\u524D\u5DF2\u8F6C\u8FD0\u81F3\u970D\u5C14\u679C\u65AF\u5E02\u5B9A\u70B9\u533B\u9662\u8FDB\u884C\u9694\u79BB\u533B\u5B66\u89C2\u5BDF\u3002<\/p><p>\u5F53\u65E5\uFF0C\u4F0A\u7281\u5DDE\u970D\u5C14\u679C\u65AF\u5E02\u75AB\u60C5\u9632\u63A7\u5DE5\u4F5C\u6307\u6325\u90E8\u7ACB\u5373\u542F\u52A8\u5E94\u6025\u54CD\u5E94\uFF0C\u5DF2\u6392\u67E5\u5BC6\u5207\u63A5\u89E6\u8005192\u4EBA\uFF0C\u5168\u90E8\u843D\u5B9E\u9694\u79BB\u533B\u5B66\u89C2\u5BDF\u63AA\u65BD\uFF0C\u76F8\u5173\u6D41\u8C03\u6392\u67E5\u3001\u6838\u9178\u68C0\u6D4B\u7B49\u5DE5\u4F5C\u6B63\u5728\u8FDB\u884C\u4E2D\u3002<\/p><figure class=\"image\" style=\"display: table;\"><img src=\"*\u0026root*#Path*\u0026\/images\/202110\/03\/615999917036086c7c0a60aa.jpeg\" id=\"img-615999917036086c7c0a60aa\"><figcaption style=\"display: table-caption; caption-side: bottom;\"><\/figcaption><\/figure>","atts":[{"id":"615999917036086c7c0a60aa","contentType":"image\/jpeg","filename":"CO61599803d5deec4c8305be12_content_0.jpeg","uploadDate":"2021-10-03T19:52:49.742+08:00","extMap":{"filename":"CO61599803d5deec4c8305be12_content_0.jpeg","aliases":null,"chunkSize":261120,"uploadDate":"2021-10-03T19:52:49.742+08:00","length":844209,"width":1080,"comment":"","_id":{"timestamp":1633261969,"counter":680106,"date":"2021-10-03T19:52:49.000+08:00","time":1633261969000,"machineIdentifier":7353864,"processIdentifier":27772,"timeSecond":1633261969},"contentType":"image\/jpeg","md5":"ab175a041c33293eb9ddabad8be457f5","height":2078},"chunkSize":261120,"md5":"ab175a041c33293eb9ddabad8be457f5","length":844209,"type":"image","path":null},{"id":"615999917036086c7c0a60af","contentType":"image\/jpeg","filename":"CO61599803d5deec4c8305be12_thumb_0.jpeg","uploadDate":"2021-10-03T19:52:49.772+08:00","extMap":{"filename":"CO61599803d5deec4c8305be12_thumb_0.jpeg","aliases":null,"chunkSize":261120,"uploadDate":"2021-10-03T19:52:49.772+08:00","length":20933,"width":533,"comment":"","_id":{"timestamp":1633261969,"counter":680111,"date":"2021-10-03T19:52:49.000+08:00","time":1633261969000,"machineIdentifier":7353864,"processIdentifier":27772,"timeSecond":1633261969},"contentType":"image\/jpeg","md5":"f05f0f97248e30dd94ff6457d0547346","height":299},"chunkSize":261120,"md5":"f05f0f97248e30dd94ff6457d0547346","length":20933,"type":"image","path":null}],"version":null,"secretLevel":0,"indexed":1,"library":"story","channelId":"zjyapp","columnId":"5dd92265e4b0bf88dd8c1175","columnNameTag":null,"origin":"\u592E\u89C6\u65B0\u95FB","author":"\u8D75\u806A","thumbs":[{"thumbnailUrl":"*\u0026root*#Path*\u0026\/images\/202110\/03\/615999917036086c7c0a60af.jpeg","type":"16:9"}],"url":"","storyIdColumn":null,"description":"\u8BE6\u89C1\u5185\u6587","storyType":"COMPO","storyResource":{"info":"","length":0,"shortVideoUrl":null},"orderTag":0,"order":1633261968000000,"thumbnailStyle":0,"contentType":0,"category":0,"canComment":1,"publishTime":"2021-10-03T19:52:48.000+08:00","publishStatus":1,"mapProperties":{"picNames":"\u56FE\u72471","newFounderStory":null,"version_order":null,"order_number":null,"subscriptionEnterdescribe":null,"showPosterCover":"0","video":null,"allowShare":"1","subscriptionArticleId":null,"subscriptionColumnId":null,"text":null,"audio":null,"editor":"\u8D75\u806A","smallTitle":null,"mapping":null,"subscriptionEnterLittleImage":null,"subscriptionVideoId":null,"wailianUrl":null,"sign_up":null,"searchType":null,"searchLocation":null,"subscriptionBackgroundUrl":null,"photo":null,"wailiangao":"0","reviewEditor":"\u5E94\u7ACB\u67AB","link_title":null,"team":null,"modelType":"1","sharePosterCover":"1","version_name":null,"primeMoverIndustry":null,"subscriptionType":null,"materials":["PO603a10f8d5debdf440f36984"],"manuscriptClassification":null,"repthe":"RT0F14BD8AA37B45799326E529064F2CED20201224175122568","developType":null,"isArtwork":"1","simliarStoriesIds":[],"jianbaoTime":null,"subscriptionId":null,"subscriptionEnterName":null,"platForm":"\u65B0\u5A92\u4F53","orderTag":"1000","isSmartCheck":"false"},"language":"","special":null,"primersTitle":"","subTitle":"","originUrl":"","wordCount":160,"editor":"\u8D75\u806A","responsibleEditor":"\u5E94\u7ACB\u67AB","expired":null,"sourceId":"CO61599803d5deec4c8305be12","recommends":null,"attachedFiles":null,"type":"AP","locked":false,"innerId":"615999917036086c7c0a60b1"},"relatedStories":[{"summary":"\u5E02\u793E\u4F1A\u798F\u5229\u4E2D\u5FC3\u4E3E\u529E\u7CFB\u5217\u56FD\u5E86\u4E3B\u9898\u6D3B\u52A8","publishTime":"2021-10-03 15:29:56","img":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/61595bf57036086c7c0a5e40.jpeg","id":"AP61595bf5e4b052b25469e0e9","title":"\u56FD\u65D7\u62DB\u5C55\uFF01\u5E02\u793E\u4F1A\u798F\u5229\u4E2D\u5FC3\u957F\u8005\u3001\u9752\u5E74\u3001\u5B69\u7AE5\u6B22\u5EA6\u56FD\u5E86","thumbnails":[{"thumbnailUrl":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/61595bf57036086c7c0a5e40.jpeg","type":"3:2","proportion":"3:2","url":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/61595bf57036086c7c0a5e40.jpeg"}],"url":"https:\/\/pub-zhtb.hizh.cn\/a\/202110\/03\/AP61595bf5e4b052b25469e0e9.html"},{"summary":"\u5F00\u62D3\u201C\u4E00\u5E26\u4E00\u8DEF\u201D\u6CBF\u7EBF\u591A\u5143\u5316\u5E02\u573A","publishTime":"2021-09-29 20:03:43","img":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/29\/615456227036086c7c0a301a.jpeg","id":"AP61545622e4b052b25464a370","title":"\u5E02\u5546\u52A1\u5C40\u7EC4\u7EC7\u73E0\u4F01\u53C2\u52A0\u6D77\u4E1D\u535A\u89C8\u4F1A\uFF0C\u610F\u5411\u6210\u4EA4\u989D\u8FBE2000\u4E07\u5143\uFF01","thumbnails":[{"thumbnailUrl":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/29\/615456227036086c7c0a301a.jpeg","type":"3:2","proportion":"3:2","url":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/29\/615456227036086c7c0a301a.jpeg"}],"url":"https:\/\/pub-zhtb.hizh.cn\/a\/202109\/29\/AP61545622e4b052b25464a370.html"},{"summary":"\u5E02\u5DE5\u5546\u8054\u5177\u6709\u5C0A\u5E08\u91CD\u6559\u7684\u4F18\u826F\u4F20\u7EDF","publishTime":"2021-09-23 21:24:02","img":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/23\/614c7ff3ad637e4512fd70b3.png","id":"AP614c7ff3e4b0999535c11779","title":"\u5E02\u5DE5\u5546\u8054\u6350\u8D6060\u4E07\u5143\uFF0C\u52A9\u529B\u6597\u95E8\u8FD9\u4E09\u6240\u5B66\u6821\u6539\u5584\u529E\u5B66\u6761\u4EF6","thumbnails":[{"thumbnailUrl":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/23\/614c7ff3ad637e4512fd70b3.png","type":"16:9","proportion":"16:9","url":"https:\/\/pub-point.hizh.cn\/\/images\/202109\/23\/614c7ff3ad637e4512fd70b3.png"}],"url":"https:\/\/pub-zhtb.hizh.cn\/a\/202109\/23\/AP614c7ff3e4b0999535c11779.html"}],"source":"\u592E\u89C6\u65B0\u95FB","shareUrl":"https:\/\/pub-zhtb.hizh.cn\/s\/202110\/03\/AP61599991e4b052b2546a146e.html","coverImages":[{"type":null,"tag":null,"url":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/615999917036086c7c0a60af.jpeg"}],"columnName":"\u70ED\u70B9","channelName":"\u89C2\u6D77\u878D\u5A92","jsonUrl":"https:\/\/pub-zhtb.hizh.cn\/a\/202110\/03\/AP61599991e4b052b2546a146e.json","summary":"\u8BE6\u89C1\u5185\u6587","mediaStream":{"duration":0,"url":""},"thumbnails":[{"thumbnailUrl":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/615999917036086c7c0a60af.jpeg","type":"16:9","proportion":"16:9","url":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/615999917036086c7c0a60af.jpeg"}],"subtitle":"","leadinLine":"","categories":0,"reviewEditor":"\u5E94\u7ACB\u67AB","published":"2021-10-03T11:52:48.000+0000","columnDirname":"redian","coverStyle":0,"imageCount":1,"images":[{"id":"615999917036086c7c0a60aa","comment":"","url":"https:\/\/pub-point.hizh.cn\/\/images\/202110\/03\/615999917036086c7c0a60aa.jpeg","width":1080,"height":2078,"contentType":"","type":""}],"locked":false})
+				$.ajax({
+					type:"GET",
+					url:reprintUrl,
+					data:{"tenantId":"zjyapp"},
+					success: function(data){
+						if(data.code == 0) {
+							var li = document.getElementById('columns_web').getElementsByTagName('li');
+							for(i in data.data.column){
+								var li = $('<li attr-data="'+ data.data.column[i].uuid +'"><span style="color:#fff;font-weight: 600;">·&nbsp;&nbsp;</span>'+data.data.column[i].name+'</li>');
+								if("5dd92265e4b0bf88dd8c1175" == data.data.column[i].uuid) {
+									li.addClass('active_column');
+								}
+								$('#columns_web ul').append(li);
+							}
+							$("#columns_web ul").on("click","li",function(){
+								window.open("http://www.hizh.cn/?cid="+$(this).attr('attr-data'));
+							});
+						}
+					}
+				});
+			})
+		</script>
+		
+		<!-- 替换中新社的ico -->
+		<!--<link rel="shortcut icon" th:href="@{/static/img/favicon.ico}"/> -->
+		<title>新疆伊犁州霍尔果斯市新增2例无症状感染者</title>
+	</head>
+	<body>
+		<div id="header_web"></div>
+		<div class="template_web">
+			<div id="columns_web" class="column_style">
+				<ul></ul>
+			</div>
+			<div class="template_web_layout">
+				<!-- 隔离分享打开区域 修改20210510-->
+				
+				<input type="hidden" id="story_url" value="https://pub-zhtb.hizh.cn/a/202110/03/AP61599991e4b052b2546a146e.html" />
+				<input type="hidden" id="story_share" value=""/>
+				<input type="hidden" id="repthe" value=""/>
+				
+				
+				
+				
+				<!--直播中-->
+				
+				<!--直播中-->
+				
+				
+				
+					
+			<main role="main">
+				<input type="hidden" id="storyId_hidden" value="AP61599991e4b052b2546a146e" />
+				<input type="hidden" id="storyTitle_hidden" value="新疆伊犁州霍尔果斯市新增2例无症状感染者" />
+				<input type="hidden" id="storyAuthor_hidden" value="赵聪" />
+				<input type="hidden" id="storyColumn_hidden" value="热点" />
+				<input type="hidden" id="myColumnId" value="5dd92265e4b0bf88dd8c1175" />
+				<script>
+					$(document).ready(function(){
+						if (window.webFlag) {
+							$('#particularPage').css('display', 'none');
+							$('#particularPageWeb').css('display', 'unset');
+							$('#divide').css('display', 'none');
+							// 加载A' B' C' D'
+						} else {
+							$('#particularPage').css('display', 'block');
+							$('#particularPageWeb').css('display', 'none');
+							$('#divide').css('display', 'flex');
+							// 不加载A' B' C' D'
+						}
+					});
+				</script>
+				<div>
+					<div id="particularPage" value="COMPO">
+						<input type="hidden" id="second" value="" />
+						<div class="row">
+							<div class="col-md-12 blog-main main_content">
+								<!-- 标题 -->
+								<div class="row story_title titletextsize" >
+									<span>
+										新疆伊犁州霍尔果斯市新增2例无症状感染者
+									</span>
+								</div>
+								<!-- 来源时间 -->
+								
+                                    <div class="subscribe_number" style="margin: 0 1.4vw 1.6vw 1.4vw;">
+                                        <div style="justify-content: center;align-items: center;">
+											<span class="timetext" style="font-size:10pt;margin: 0;margin-bottom: 9pt;">
+                                                <span>央视新闻</span>
+                                            </span>
+                                          	<span class="timetext" style="font-size:10pt;margin:0;color: black;margin-bottom:5pt;margin-left: 5pt;">
+                                                2021-10-03 19:52
+                                            </span>
+                                        </div>
+                                    </div>
+								
+								<!-- 订阅号信息 -->
+								
+								<!-- 正文 -->
+								<div class="row mainarea">
+									<div class="col-md-12">
+										<span><p>10月3日，新疆伊犁州霍尔果斯市在三天1次常规核酸检测中，发现2人核酸检测结果呈阳性，经专家诊断均为新冠肺炎无症状感染者，目前已转运至霍尔果斯市定点医院进行隔离医学观察。</p><p>当日，伊犁州霍尔果斯市疫情防控工作指挥部立即启动应急响应，已排查密切接触者192人，全部落实隔离医学观察措施，相关流调排查、核酸检测等工作正在进行中。</p><figure class="image" style="display: table;"><img src="https://pub-point.hizh.cn//images/202110/03/615999917036086c7c0a60aa.jpeg" id="img-615999917036086c7c0a60aa"><figcaption style="display: table-caption; caption-side: bottom;"></figcaption></figure></span>
+									</div>
+								</div>
+								<!-- 责任编辑 -->
+								<div class="row spurcetext editor_in_charge_content">
+									<!-- 团队 -->
+									
+									
+									
+									
+									
+									
+									<span class="editor_in_charge_title">
+										编辑：赵聪
+									</span>
+									<span class="editor_in_charge_title">
+										责任编辑：应立枫
+									</span>
+								</div>
+								<!-- 责任编辑end -->
+							</div>
+						</div>
+					</div>
+					<div id="particularPageWeb" value="COMPO" class="COMPO">
+						<input type="hidden" id="second" value="" />
+						<div class="row row_web">
+							<div class="col-md-12 blog-main main_content">
+								<!-- 标题 -->
+								<div class="row row_web story_title_web">
+									新疆伊犁州霍尔果斯市新增2例无症状感染者
+								</div>
+								<!-- 来源 时间 -->
+								
+									<div class="row row_web story_title_source_web">
+										
+											<span style="margin-right: 10px;">央视新闻</span>
+										
+										<span class="published_web">2021-10-03 19:52</span>
+									</div>
+								
+								<!-- 订阅号信息 -->
+								
+								<!-- 正文 -->
+								<div class="row row_web mainarea mainarea_web">
+									<div class="col-md-12">
+										<span><p>10月3日，新疆伊犁州霍尔果斯市在三天1次常规核酸检测中，发现2人核酸检测结果呈阳性，经专家诊断均为新冠肺炎无症状感染者，目前已转运至霍尔果斯市定点医院进行隔离医学观察。</p><p>当日，伊犁州霍尔果斯市疫情防控工作指挥部立即启动应急响应，已排查密切接触者192人，全部落实隔离医学观察措施，相关流调排查、核酸检测等工作正在进行中。</p><figure class="image" style="display: table;"><img src="https://pub-point.hizh.cn//images/202110/03/615999917036086c7c0a60aa.jpeg" id="img-615999917036086c7c0a60aa"><figcaption style="display: table-caption; caption-side: bottom;"></figcaption></figure></span>
+									</div>
+								</div>
+								<!-- 责任编辑 -->
+								<div class="row row_web spurcetext editor_in_charge_content_web">
+									<!-- 团队 -->
+									
+									
+									
+									
+									
+									
+									<span class="editor_in_charge_title">
+										编辑：赵聪
+									</span>
+									<span class="editor_in_charge_title">
+										责任编辑：应立枫
+									</span>
+								</div>
+								<!-- 责任编辑end -->
+							</div>
+						</div>
+					</div>
+				</div> 
+			</main>
+			<!-- 分隔 -->
+			<div id="divide" class="row areainterval"></div>
+
+			<script>
+				var hasSubscribe = false;
+				window.playPause=function(){
+					var myVideo = document.getElementsByTagName('video');
+					var myAudio = document.getElementsByTagName('audio');
+					if(myVideo!=null){
+						for(var i = myVideo.length -1;i>=0;i--){
+							var t = myVideo[i];
+							t.pause();
+						}
+					}
+					if(myAudio!=null){
+						for(var i = myAudio.length -1;i>=0;i--){
+							var t = myAudio[i];
+							t.pause();
+						}
+					}
+				}
+				// 点击订阅号名称图标跳转
+				function subscriptionJump() {
+					SubscribeJump.postMessage("");
+				}
+				// 点击订阅按钮
+				function subscription() {
+					if (hasSubscribe) {
+						Subscribe.postMessage("1"); // 取消订阅
+					} else {
+						Subscribe.postMessage("0"); // 订阅
+					}
+				}
+				// 订阅成功更新按钮状态
+				function subscriptionSuccessful() {
+					document.getElementById('subscriptionButton').value = "已订阅";
+					hasSubscribe = true;
+				}
+				// 取消订阅成功更新按钮状态
+				function unsubscribeSuccessful() {
+					document.getElementById('subscriptionButton').value = "订阅";
+					hasSubscribe = false;
+				}
+				// 初始化更新按钮状态
+				function isSubscribe(isSubscribe) {
+					if (isSubscribe) {
+						document.getElementById("subscriptionButton").style.visibility="visible";
+						document.getElementById('subscriptionButton').value = "已订阅";
+						hasSubscribe = true;
+					} else {
+						document.getElementById("subscriptionButton").style.visibility="visible";
+						document.getElementById('subscriptionButton').value = "订阅";
+						hasSubscribe = false;
+					}
+				}
+			</script>
+		
+				
+				<!--视频直播稿，分享中的且正在直播时，不加载下部分内容-->
+				
+					<!--分享页面中的打开app按钮 修改20210510-->
+					
+					<!--评论版本修改 start 修改20210510-->
+					<!-- 手机端显示 -->
+					<div id="comment_app">
+						
+							<!--评论-->
+							<div class="app_comment">
+								<label class="app_hot_comment">热门评论:</label>
+								<!--<th:block th:include="@{|/${templateTag}/|}+'comments' ::storyListInfo(${commentList})"/>-->
+								<div id="commentDiv">
+									<div style="text-align:center;">
+										<!--<img cms:src="img/nocomments.png"/>-->
+										<p style="color:#888888;">暂时没有评论</p>
+									</div>
+								</div>
+							</div>
+							<!--评论-->
+							<!-- 分隔 修改20210510-->
+							<div class="row areainterval"></div>
+							<!-- 分隔end -->
+							<!--推荐阅读-->
+							<div class="app_reading">
+								<label class="app_reading_comment">延伸阅读:</label>
+								
+									
+		<head>
+			<meta charset="utf-8"/>
+			<style>
+				.NR:link {
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				} 
+				.NR:visited { 
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:hover {
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:active{
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration:none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:focus{
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				} 
+			</style>
+		</head>
+		<body>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html">国旗招展！市社会福利中心长者、青年、孩童欢度国庆</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-10-03 15:29:56</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" target="_blank" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202110/03/61595bf57036086c7c0a5e40.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html">国旗招展！市社会福利中心长者、青年、孩童欢度国庆</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="市社会福利中心举办系列国庆主题活动" class="titletextsize NR summary_web">市社会福利中心举办系列国庆主题活动</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-10-03 15:29:56</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" target="_blank" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202110/03/61595bf57036086c7c0a5e40.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html">市商务局组织珠企参加海丝博览会，意向成交额达2000万元！</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-29 20:03:43</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/29/615456227036086c7c0a301a.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html">市商务局组织珠企参加海丝博览会，意向成交额达2000万元！</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="开拓“一带一路”沿线多元化市场" class="titletextsize NR summary_web">开拓“一带一路”沿线多元化市场</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-29 20:03:43</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/29/615456227036086c7c0a301a.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html">市工商联捐赠60万元，助力斗门这三所学校改善办学条件</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-23 21:24:02</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/23/614c7ff3ad637e4512fd70b3.png" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html">市工商联捐赠60万元，助力斗门这三所学校改善办学条件</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="市工商联具有尊师重教的优良传统" class="titletextsize NR summary_web">市工商联具有尊师重教的优良传统</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-23 21:24:02</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/23/614c7ff3ad637e4512fd70b3.png" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+		</body>
+    
+								
+							</div>
+							<!-- 推荐阅读 -->
+						
+					</div>
+					<!-- web端显示 -->
+					<div id="comment_web">
+						
+							<!--推荐阅读-->
+							<div class="app_reading app_reading_web">
+								<label class="app_reading_comment">延伸阅读:</label>
+								<div style="border-bottom: 1px solid #e1e1e1;"></div>
+								
+									
+		<head>
+			<meta charset="utf-8"/>
+			<style>
+				.NR:link {
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				} 
+				.NR:visited { 
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:hover {
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration: none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:active{
+					font-size: 16px;
+					color: rgb(33,33,33);
+					text-decoration:none;
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				}
+				.NR:focus{
+					border: 0 !important;
+					border-color: #fff !important;
+					outline:none;
+					-moz-outline:none;
+				} 
+			</style>
+		</head>
+		<body>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html">国旗招展！市社会福利中心长者、青年、孩童欢度国庆</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-10-03 15:29:56</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" target="_blank" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202110/03/61595bf57036086c7c0a5e40.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html">国旗招展！市社会福利中心长者、青年、孩童欢度国庆</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="市社会福利中心举办系列国庆主题活动" class="titletextsize NR summary_web">市社会福利中心举办系列国庆主题活动</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-10-03 15:29:56</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="国旗招展！市社会福利中心长者、青年、孩童欢度国庆" target="_blank" href="https://pub-zhtb.hizh.cn/a/202110/03/AP61595bf5e4b052b25469e0e9.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202110/03/61595bf57036086c7c0a5e40.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html">市商务局组织珠企参加海丝博览会，意向成交额达2000万元！</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-29 20:03:43</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/29/615456227036086c7c0a301a.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html">市商务局组织珠企参加海丝博览会，意向成交额达2000万元！</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="开拓“一带一路”沿线多元化市场" class="titletextsize NR summary_web">开拓“一带一路”沿线多元化市场</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-29 20:03:43</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市商务局组织珠企参加海丝博览会，意向成交额达2000万元！" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/29/AP61545622e4b052b25464a370.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/29/615456227036086c7c0a301a.jpeg" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+				<div>
+					<script>
+						$(document).ready(function(){
+							// web端
+							if (window.webFlag) {
+								$('.reading_content').css('display', 'none');
+								$('.reading_content_web').css('display', 'flex');
+							} else { // 手机端
+								$('.reading_content').css('display', 'flex');
+								$('.reading_content_web').css('display', 'none');
+							}
+						});
+					</script>
+					<!-- 手机端延伸阅读 -->
+					<div class="row recommendbody reading_content">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html">市工商联捐赠60万元，助力斗门这三所学校改善办学条件</a>
+								</div>
+
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-23 21:24:02</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html" name="anchor">
+									<div>
+										<!-- <img id="recimg" class="recommend-img"
+											th:unless="${#lists.isEmpty(story.coverImages)}"
+											th:src="${story.coverImages[0].url}"
+											onerror="javascript:this.src='异常时显示图片src';this.onerror = null" /> -->
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/23/614c7ff3ad637e4512fd70b3.png" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<!-- web端延伸阅读 -->
+					<div class="row recommendbody reading_content_web">
+						
+							<div class="recommend-rightdiv reading_cont1">
+								<div class="recommend-adiv width_100">
+									<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" class="titletextsize NR" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html">市工商联捐赠60万元，助力斗门这三所学校改善办学条件</a>
+								</div>
+								<div class="recommend-adiv width_100">
+									<div title="市工商联具有尊师重教的优良传统" class="titletextsize NR summary_web">市工商联具有尊师重教的优良传统</div>
+								</div>
+								<div class="reading_dates">
+									<span class="spanNR">2021-09-23 21:24:02</span>
+								</div>
+							</div>
+							<div class="recommend-imgdiv reading_img">
+								<a title="市工商联捐赠60万元，助力斗门这三所学校改善办学条件" target="_blank" href="https://pub-zhtb.hizh.cn/a/202109/23/AP614c7ff3e4b0999535c11779.html" name="anchor">
+									<div>
+										<img class="recommend-img" id="recimg" src="https://pub-point.hizh.cn//images/202109/23/614c7ff3ad637e4512fd70b3.png" />
+									</div>
+								</a>
+							</div>
+						
+						
+					</div>
+					<script>
+						window.initFontSize=function(){
+							$('.NR').each(function(){
+								$(this).css("font-size","16px");
+							});
+							$('.spanNR').each(function(){
+								$(this).css("font-size","2.3vw");
+							});
+						}
+					</script>
+				</div>
+			
+		</body>
+    
+								
+							</div>
+							<!-- 推荐阅读 -->
+							<!-- 分隔 修改20210510-->
+							<!-- <div class="row areainterval"></div> -->
+							<!-- 分隔end -->
+							<!--评论-->
+							<div class="app_comment_web">
+								<label class="app_hot_comment_web">最新评论:</label>
+								<div style="border-bottom: 1px solid #e1e1e1;"></div>
+								<!--<th:block th:include="@{|/${templateTag}/|}+'comments' ::storyListInfo(${commentList})"/>-->
+								<div id="commentDivWeb">
+									<div style="text-align:center;">
+										<!--<img cms:src="img/nocomments.png"/>-->
+										<p style="color:#888888;text-align: center;font-size: 14px;margin-top: 10pt;">暂时没有评论</p>
+									</div>
+								</div>
+							</div>
+							<!--评论-->
+						
+					</div>
+
+					<p id="main_baseline" class="end_line">-我已经到底线啦-</p>
+					<!-- 分隔 -->
+					<div id="main_devide" class="row areainterval"></div>
+					
+					<!-- 分隔end -->
+					<script>
+						$(document).ready(function(){
+							/**
+							*替换分享图片
+							*/
+							var host = window.location.host;
+							var shareImg=$(".zhtqb_logo_img");
+							if(shareImg!=null){
+								shareImg.attr("src","https://"+host+"/mobiletemplate/img/shareImg.jpg");
+							}
+
+							var story_share = $("#story_share").val();
+							var story_height = $("#particularPage").height();
+							var repthe = $("#repthe").val();
+
+							//评论页面加载start
+							var commentUrl = "/channels/storyInfo/comments/"+$("#storyId_hidden").val()+"?share=" + story_share;
+							$("#commentDiv").load(commentUrl, null , function(){});
+							$("#commentDivWeb").load(commentUrl, null , function(){});
+							//end
+
+							if(story_share === "11") {
+								if(repthe!='1'){
+									$("#particularPage").after('<div class="particular_page1"><a th:text="打开观海，阅读体验更佳" class="expend_btn" onclick="goToApp();" style="color:#fff"/></div>');
+									if(story_height > 465){
+										$("#particularPage").after('<div class="variety particular_page2"><a onclick="expendtext()" id="expend"><img class="recommend-img" cms:src="img/expendstory.png"/></a></div>');
+										$("#particularPage").css({"max-height":"500px","overflow":"hidden"});
+									}
+								}
+							}
+							var $audio = $("audio");
+							if($audio.length > 0){
+								$audio.attr("controlsList","nodownload");
+							}
+						});
+						function goToApp(){
+							//window.location.href="/s/goToApp/"+$("#storyId_hidden").val();
+							var storyId = $("#storyId_hidden").val();
+							window.location.href="https://a.app.qq.com/o/simple.jsp?pkgname=com.ygsoft.mobile.news\u0026ios_scheme=zhtbapp://"+storyId+"\u0026android_schema=zhtbapp://"+storyId;
+						};
+						function expendtext(){
+							$("#particularPage").css({"max-height":""});
+							$("#expend").hide();
+						}
+					</script>
+				
+			</div>
+			<script>
+				var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?ba311c77fc37e3e1b1e0e31ea5e8035a";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
+			<div>
+				<div id="share_qrcode">
+					<div class="share">
+						<h2 class="fl">分享文章</h2>
+						<hr class="hr fr" />
+					</div>
+					<div id="qrcode" class="qrcode"></div>
+					<div class="code_tip_text">扫描二维码，把这篇文章分享给好友吧</div>
+				</div>
+				<div id="right_web"></div>
+			</div>
+		</div>
+		<div id="footer_web"></div>
+	</body>
+</html>

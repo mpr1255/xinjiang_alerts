@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" content="text/html; charset=utf-8" />
+<title>新疆维吾尔自治区机械工程学会</title>
+<link href="/templates/main/css/style.css" rel="stylesheet" type="text/css" />
+<!--栏目滑动显示>-->
+<script type="text/javascript" src="/templates/main/js/jquery.SuperSlide1.js"></script>
+<script type="text/javascript" charset="utf-8" src="/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/templates/main/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/templates/main/js/common.js"></script>
+<!--<返回顶部>-->
+<script type="text/javascript" src="js/topscript.js"></script>
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<!--新闻图片切换>-->
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(function(){
+	        $("#KinSlideshow").KinSlideshow({
+			        moveStyle:"right",
+			        titleBar:{titleBar_height:30,titleBar_bgColor:"#000",titleBar_alpha:0.7},
+			        titleFont:{TitleFont_size:15,TitleFont_color:"#FFFFFF",TitleFont_weight:"normal"},
+			        btn:{btn_bgColor:"#FFFFFF",btn_bgHoverColor:"#1072aa",btn_fontColor:"#000000",btn_fontHoverColor:"#FFFFFF",btn_borderColor:"#cccccc",btn_borderHoverColor:"#1188c0",btn_borderWidth:1}
+	        });
+        })
+    </script>
+    <script type="text/javascript">
+    $(function(){
+	    $(".focusbox").flexslider({
+		    directionNav: false,
+		    pauseOnAction: false
+	    });
+    });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        function doZoom(size) {
+               document.getElementById('in_zw').style.fontSize = size;
+            }
+            function printMe() {
+                document.body.innerHTML = document.getElementById('Content_box').innerHTML;
+                window.print();
+            }
+    </script>
+</head>
+<body>
+<!--头部开始-->
+    
+<!--默哀代码开始-->
+    
+<!--默哀代码结束-->
+<!--头部开始-->
+<script type="text/javascript">
+    $(function () {
+        $(".exit").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/tools/submit_ajax.ashx?action=user_exit&site=main",
+                dataType: "json",
+                data: "",
+                timeout: 20000,
+                success: function (data, textStatus) {
+                    if (data.status == 1) {
+                        dialog({ title: '提示', width: 200, content: "状态：" + data.msg, okValue: '确定', ok: function () { } }).showModal();
+                        location.href = data.url;
+                    }
+                }
+            });
+        });
+    })
+
+</script>
+<div class="header-box-bg">
+  <div class="top-login">
+      
+          <div class="top-link-sgin pull-left"><a href="/register.html">会员注册</a>|</div>
+      
+      <div class="top-login-a pull-right">
+          
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td><a href='/login.html'>会员登录</a></td>
+                  </tr>
+                </tbody>
+              </table>
+         
+        </div>
+  </div>
+</div>
+
+<div class="header-box">
+  <div class="header">
+    <div class="logo-box ">
+      <div class="logo pull-left"></div>
+      <div class="dj pull-right">
+        <div class="star-box pull-left">
+          <div class="star-tit">中国社会组织评估等级</div>
+          <div class="star-ico-box">
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+            <div class="star-ico pull-left"></div>
+          </div>
+        </div>
+        <div class="searchBox pull-left">
+          <input class="search-inp pull-left" name="keywords" type="text" id="keywords" value="全站搜索" dataIgnore="dataIgnore"  onclick="if (value == defaultValue) { value = ''; }" onkeydown="if(event.keyCode==13){SiteSearch('/search.html', '#keywords');return false};"
+                onblur="if(!value){value=defaultValue;}"/>
+          <a href="JavaScript:;" class="pull-right search-btu" onclick="SiteSearch('/search.html','#keywords');"></a>
+        </div>
+
+      </div>
+    </div>
+    <!--导航开始-->
+    <div class="clear"></div>
+    <div class="nav">
+      <div class="nav-font pull-left">
+        <ul class="navb navb-pills" role="tablist">
+          <li role="presentation" class="active"><a href="/index.html">网站首页</a></li>
+          <li role="presentation"><a href="/article/56.html">机构概况</a></li>
+          <!--<li role="presentation"><a href="/fwzy/106.html">供需服务</a></li>-->
+          <li role="presentation"><a href="/article/278.html">供需服务</a></li>
+          <li role="presentation"><a href="/article/70.html">职称评审</a></li>
+          <li role="presentation"><a href="/article/106.html">产品鉴定</a></li>
+          <li role="presentation"><a href="/article/230.html">技能鉴定</a></li>
+          <li role="presentation"><a href="/article/59.html">技术标准</a></li>
+          <li role="presentation"><a href="/article/57.html">教育培训</a></li>
+          <li role="presentation"><a href="/article/63.html">会员服务</a></li>
+          <li role="presentation"><a href="/article/62.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--导航结束--> 
+  </div>
+</div>
+<!--头部结束-->
+<!--头部结束--> 
+
+<!--mainbody开始-->
+<div class="wrap"> 
+  <!--当前位置开始-->
+  <div class="at-in"> <a href="/index.html"  class="at-in-f">首页</a>&nbsp;&gt;&nbsp;<a href="/article/53.html">通知通告</a>&nbsp;&gt;&nbsp;关于开展2021年度自治区工程系列机械电子等6个专业、经济系列工商管理专业、工艺美术系列专业技术职务任职资格评审工作的通知</div>
+  <!--当前位置结束-->
+    <div id="Content_box" class="Content_box">
+    <div class="in_box">
+      <h1 class="in_tit">关于开展2021年度自治区工程系列机械电子等6个专业、经济系列工商管理专业、工艺美术系列专业技术职务任职资格评审工作的通知</h1>
+      <div class="h10"></div>
+        <div class="time">
+            发布时间：2021-10-10 &nbsp;&nbsp;来源：本站&nbsp;&nbsp;作者：  &nbsp;&nbsp;阅读次数：<script type="text/javascript" src="/tools/submit_ajax.ashx?action=view_article_click&id=696&click=1"></script>&nbsp;&nbsp;【字体 <a href="javascript:doZoom('22px')">大</a> <a href="javascript:doZoom('18px')">中</a> <a href="javascript:doZoom('14px')">小</a>】 &nbsp;&nbsp;<a href="javascript:void(0);" onclick="printMe()" class="printer" target="_blank">打印</a>
+        </div>
+      <hr class="hr_top" />
+      <div id="in_zw" class="in_zw"><table style="text-align:center;width:100%;" cellpadding="2" cellspacing="0" border="1" bordercolor="#000000">
+	<tbody>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101336238530.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101336579950.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101337141560.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101337291930.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101337443340.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101337584010.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101338121660.png" alt="" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img src="/upload/202110/10/202110101338273240.png" alt="" /><br />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div style="text-align:center;">
+	<br />
+</div>
+<div style="text-align:center;">
+</div></div>
+      <div class="fenxiang ">  <!-- JiaThis Button BEGIN --> 
+  <div id="ckepop">
+      <span class="jiathis_txt">分享到：</span>
+      <a class="jiathis_button_tqq">腾讯</a>
+      <a class="jiathis_button_tsina">新浪</a>
+      <a class="jiathis_button_renren">人人网</a>
+      <a class="jiathis_button_email">邮件</a>
+      <a class="jiathis_button_fav">收藏夹</a>
+      <a class="jiathis_button_copy">复制网址</a> 
+      <a href="http://www.jiathis.com/share/?uid=90225" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a> 
+      <a class="jiathis_counter_style"></a> 
+  </div> 
+  <!-- JiaThis Button END -->
+  <script type="text/javascript">var jiathis_config={data_track_clickback:true};</script> 
+  <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js?uid=1336353133859589" charset="utf-8"></script></div>
+      <hr class="hr_bottom" />
+      <div class="bottom_tit">相关文件</div>
+        <div class="bottom_tit_text_box">
+            
+                <div class="nodata">暂无相关的文章...</div>
+                
+        </div>
+  </div>
+</div>
+  <div class="h10"></div>
+</div>
+<!--mainbody结束-->
+
+<!--footer开始-->
+    <div class="clear"></div>
+<!--footer开始-->
+<div class="wrap-1080">
+  <div class="h15"></div>
+  <div class="copyright">
+    <div class="cp-adress"> <a href='https://beian.miit.gov.cn/#/Integrated/index' style='color:black'> 新ICP备15003369号</a> | 新疆维吾尔自治区机械工程学会  |  版权所有 Copyright 2018-2021 <br>
+      地址：新疆乌鲁木齐市光明路140号  |  电话：0991-8809304,8893646  |  传真：0991-8809304  |  电子信箱：Xinjiang@cmes.org  |  邮编:830002<br>
+
+           您是本站第<span class="cp-fk">446213</span>位访客  | <a href="http://www.xjerp.com.cn/index/" target="_blank">技术支持：新疆电子研究所股份有限公司研发中心(0991-3137683)</a> </div>
+  </div>
+</div>
+<!--footer结束-->
+<div class="pull-left cp-ico-box"> <a href="#" class="pull-left cp-ico1"></a> <a href="#" class="pull-left cp-ico2"></a> <a href="#" class="pull-left cp-ico3"></a> <a href="#" class="pull-left cp-ico4"></a> </div>
+<div class="bottom_tools"> <a id="scrollUp" href="javascript:;" title="返回顶部"></a></div>
+<!--footer结束-->
+</body>
+</html>

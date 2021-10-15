@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="新疆人社公共服务平台,新疆,社保,社会保障" />
+            <meta name="description" content="新疆智慧人社网上服务大厅，新版社保网厅，可办理社保查询，社保证明打印，社保关系转移，失业金申领，工伤保险业务，社保卡申领、激活、挂失、制卡进度查询，毕业生报到，单位参保登记，社会保险网上申报等业务。" />
+    <title>新疆人社公共服务平台</title>
+    
+    
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/site.css?v=YPVQijdHRN7A3hlaQ5jxHhMmVy23GqJUzb2Xzk3NYbg" />
+    
+
+    
+    
+
+
+</head>
+
+<body onscroll="$('#xsMenuBtn').blur();">
+    <header id="top" role="banner">
+        <div class="bg-primary pinned visible-xs" style="height:1px;padding:0;margin:0;z-index:9"></div>
+        <p id="onload" class="bg-danger" style="z-index:8;position:fixed;top:0;left:45%;padding:5px;display:none;">正在加载…</p>
+        <div class="container-fluid" style="background-color:#7FC8F7; padding:0px;background-image:url(/images/bg.jpg); background-repeat:repeat;">
+            <div class="container" style="padding:0 0 10px 0;position:relative;background-image:url(/images/bgstar.png);background-repeat:repeat;">
+                <nav style="padding:20px 0 10px 8px;">
+                    <a href="/"><img src="/images/logox.png" class="hidden-xs" style="height:45px"><img src="/images/markx.png" style="height:45px;"></a>
+                    <div class="btn-group btn-logon" role="group">
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-info" id="btn-area" style="color:#ff0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                全国
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="btn-area" style="min-width:120px">
+                                <li><a href="javascript:void(0);" class="modal-province-a" style="color:#A94442;" data-toggle="modal" data-target="#provinceModal"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> 切换省份...</a></li>
+                                <li role="separator" class="divider" style="margin:5px 0 5px 0;"></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group visible-xs" role="group">
+                            <a class="btn btn-success" id="btn-site" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                人社服务
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="btn-site" style="min-width:120px">
+                                <li><a href="/search">人社服务</a></li>
+                                <li role="separator" class="divider" style="margin:5px 0 5px 0;"></li>
+                                <li><a href="javascript:alert('招聘服务暂未发布…');void(0);" @*asp-controller="job" asp-action="index" asp-route-a="@PageArea.AreaSpell"*@>招聘服务</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn hidden-xs btn-success" href="/search">人社服务</a>
+                        <a class="btn hidden hidden-xs btn-info" href="javascript:alert('招聘服务暂未发布…');void(0);" @*asp-controller="job" asp-action="index" asp-route-a="@PageArea.AreaSpell"*@>招聘服务</a>
+                            <a class="btn btn-info" id="btnLogin" href="javascript:void(0);" onclick="login(this);"><span class="hidden-xs">用户</span>登录</a>
+                    </div>
+                    <img class="hidden-sm hidden-xs" title="人力资源和社会保障信息服务" alt="人力资源和社会保障信息服务" src="/images/introx.png" style="height:50px; float:right; margin-right:85px;">
+                    <img class="hidden-xs imgmask" title="人力资源和社会保障信息服务公众号" alt="人力资源和社会保障信息服务公众号" src="/images/qrx.png" style="height:76px;position:absolute;top:5px; right:5px;" />
+                </nav>
+            </div>
+        </div>
+
+        
+
+
+    <nav class="navbar-blue" style="z-index:2;margin:0; padding:0;min-height:30px;">
+
+        <div class="container" style="padding-left:5px;padding-right:5px;">
+
+
+            <div>
+                <ul id="TopBarMenu" class="nav navbar-nav visible-lg visible-md autobar" style="font-size:16px;">
+                    <li ><a href="/">首页</a></li>
+                    <li class="active"><a href="/platform">官网平台</a></li>
+                    <li ><a href="/query">个人社保</a></li>
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">在线缴费 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="" href="/yibaojiaofei">居民医保缴费</a></li>
+                                <li><a class="" href="/yanglaojiaofei">居民养老保险缴费</a></li>
+                                <li><a class="" href="/gerenjiaofei">灵活就业人员缴费</a></li>
+                            </ul>
+                        </li>
+                    <li ><a href="/policy">政策法规</a></li>
+                    <li ><a href="/qa">问答指南</a></li>
+                    <li ><a href="/agency">联系方式</a></li>
+                    <li class="hidden-lg hidden-md"><a href="/manage">用户中心</a></li>
+                    <li ><a href="/search">更多业务</a></li>
+                </ul>
+                <ul class="nav navbar-nav hidden-lg hidden-md" style="font-size:16px;">
+                    <li style="float:left;">
+                        <a class="xsMenuBtn" href="javascript:$('#xsMenu').toggle();void(0);" onblur="javascript: $('#xsMenu').hide();"><span id="xsMenuTitle"></span></a>
+                    </li>
+                </ul>
+                <form method="get" target="_blank" class="navbar-form navbar-right visible-lg" role="search" action="/search">
+                    <input type="text" name="kw" class="form-control" style="width:220px;" placeholder="搜索关键词">
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right hidden-lg hidden-md" style="font-size:16px;">
+                    <li>
+                        <a class="xsMenuBtn" href="javascript:$('#xsMenu').toggle();void(0);" onblur="javascript: $('#xsMenu').hide();"><span class="glyphicon glyphicon-th-large" style="color:#ee0;"></span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div id="xsMenu" style="display:none;z-index:9;position:absolute;width:100%;background-color:#f6f6f6; border-bottom:solid 2px #ddd; -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <div class="row row-menu link-black">
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/">系统首页</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/platform">官网平台</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/query">个人社保</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/pay">在线缴费</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/agency">联系方式</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/policy">政策法规</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/qa">问答指南</a>
+                <a style="padding: 14px 0 14px 0;" class="col-xs-3" href="/search">更多业务</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    </header>
+
+    
+
+
+
+
+
+
+
+
+<div class="container body-content">
+    <table style="width:100%;">
+        <tr>
+            <td class="rightcontent">
+
+                    <div class="rightcontentbox">
+
+                            <h1 class="hidden-xs">新疆人社公共服务平台</h1>
+                            <hr class="hidden-xs" />
+
+                        <p id="j-plt" onmousemove="showplatformurl();" onmouseout="$(this).children('span').hide();">
+                                <span style='position:absolute;padding:5px 20px 5px 20px;z-index:3;background-color:#ff0; display:none;'>
+                                            <a id="a-platform" rel="noreferrer noopener nofollow" href="#">……</a>
+                                </span>
+                                                            <img class="imgmask" style="width:100%;max-width:500px;" src="/upfile/download/78f067cc-25b3-d27d-9706-a217a3128213.jpg" />                         </p>
+                        <form id="FormPlatformUrl" method="post" role="form" class="hidden" action="/platform/AjaxPlatformUrl">
+                            <input type="hidden" name="id" value="muka" />
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DjHxx2joPtFqVdp8-Zd5MvFG4pezWSJWygEMvI43FLc2fwGyURn1HeV_zgP2bodXq1yN2ISbxzaVijvcEiMBZ3ezWbCzXV8toccTMI7apuZ7aBu0JuMrYMZhYouPveF0bv5WHV7OeIxn2OzqMWfDCQ" /></form>
+
+
+<p>新疆智慧人社网上服务大厅，新版社保网厅，可办理社保查询，社保证明打印，社保关系转移，失业金申领，工伤保险业务，社保卡申领、激活、挂失、制卡进度查询，毕业生报到，单位参保登记，社会保险网上申报等业务。</p>
+
+                    </div>
+                        <div class="hidden-lg hidden-md" style="height:15px;"></div>
+                        <div class="rightcontentbox" style="border-top-color:#94CFF3;padding-bottom:10px;">
+                            <p class="text-danger text-center">
+                                    <a id="a-platform-go" rel="noreferrer noopener nofollow" class="text-danger" href="#" onclick="getplatformurl();">……</a>
+                            </p>
+                        </div>
+                            <div class="hidden-lg hidden-md" style="height:15px;"></div>
+                            <div class="rightcontentbox" style="border-top-color:#94CFF3;">
+                                <table style="width:100%; margin-top:15px;">
+                                    <tr>
+                                        <td style="vertical-align:middle;">
+                                            <p class="text-info" style="font-size:18px;font-weight:bold;"><span class="glyphicon glyphicon-hand-right"></span> 微信关注人社通</p>
+                                            <p class="muted">分享图片（二维码）到微信</p>
+                                            <p class="muted">从微信识别关注</p>
+                                        </td>
+                                        <td style="width:110px; text-align:left;"><img class="imgmask" style="width:100px;opacity:0.7" src="/images/qr2.png" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="hidden-lg hidden-md" style="height:15px;"></div>
+                            <div class="rightcontentbox" style="border-top-color:#94CFF3;">
+                                <h2><span class="glyphicon glyphicon-hand-right visible-xs-inline"></span><span class="hidden-xs">新疆人社公共服务平台</span> 业务资讯 <a style="float:right;padding-right:10px;font-size:14px;" class="text-muted" href="/policy/xinjiang.aspx">[More]</a></h2>
+
+                                <hr class="visible-xs" />
+                                <p class="text-muted small">暂时没有 新疆人社公共服务平台的业务资讯</p>
+
+                            </div>
+
+            </td>
+
+            <td width="25%" class="visible-lg visible-md leftmenu">
+                <p class="text-primary menulabel"><a style="text-decoration:none;" href="/query">人社官方网站/平台</a></p>
+                <nav id="leftMenu" class="list-group">
+                    <div id="leftmenu01" class="menulist">
+                            <a class="list-group-item bg_leftmenu" href="/platform/wkk.html">新疆自治区人力资源和社会保障厅</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/eys.html">新疆维吾尔自治区医疗保障局</a>
+                            <a class="list-group-item list-group-item-selected" href="/platform/muka.html">新疆人社公共服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/wka.html">新疆人力资源和社会保障网上办事大厅</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/mure.html">新疆医保公共服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/dwp.html">新疆生产建设兵团人社局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/dws.html">新疆生产建设兵团医疗保障局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/eyi.html">兵团人力资源和社会保障公共服务门户</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/muzm.html">新疆生产建设兵团住房公积金管理中心</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/muzi.html">新疆自治区税务局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/ree.html">新疆劳动监察网上投诉举报</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/dsd.html">新疆政务服务网·政务服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/rau.html">新疆维吾尔自治区统计局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/m.html">人力资源和社会保障部</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/ibm.html">国家医疗保障局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/zs.html">住房和城乡建设部（公积金监管）</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/wk.html">中央政府/国务院</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/mya.html">国家社会保险公共服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/ccs.html">国家医保服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/mukz.html">中国人事考试网</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/muky.html">全国职称评审信息查询平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/muki.html">全国专业技术人员职业资格证书查询</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/mukr.html">专业技术人员资格考试报名服务平台</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/muyd.html">职业资格证书、技能等级证书查询系统</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/mukk.html">流动人员人事档案管理服务机构查询</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/murr.html">全国各省市劳动保障监察举报投诉</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/rrb.html">国家企业信用信息公示系统</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/ryu.html">国家统计局</a>
+                            <a class="list-group-item bg_leftmenu" href="/platform/rcf.html">国家税务总局</a>
+                    </div>
+                </nav>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container" style="padding:18px 0 0 0;">
+            <a href="#top" style="font-size:20px;opacity:0.5;position:absolute;right:10px;top:25px;"><span class="glyphicon glyphicon-arrow-up"></span></a>
+            <p style="line-height:24px;margin:0;padding:0;">
+                <a class="link-muted" href="/readme">关于我们</a> ｜
+                <a class="link-muted" href="javascript:void(0);" onclick="feedback(this,'1',window.location.href);"><span class="hidden-xs">信息</span>纠错</a>
+                    <span>｜ </span><a class="link-muted" href="javascript:void(0);" onclick='ask(this, 0, 0, 988888, "");'>用户反馈</a>
+                <span class="visible-xs-inline"><br /></span><span class="hidden-xs">｜ </span>Copyright &copy; All Rights Reserved
+            </p>
+
+            <p class="hidden-xs" style="line-height:20px;margin:9px 0 0 0;padding:0;">
+                <a class="link-muted" target="_blank" rel="external nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61019402000041">
+                    <img src="/images/beian.png" />
+                    陕公网安备 61019402000041号
+                </a>
+                <a class="link-muted" target="_blank" rel="external nofollow" style="margin-left:7px;" href="https://beian.miit.gov.cn/">陕ICP备17002931号</a>
+                <a class="link-muted" target="_blank" rel="external nofollow" style="margin-left:7px;" href="/images/trademark.jpg">商标注册第27872674号</a>
+            </p>
+        </div>
+
+        <div class="modal" tabindex="-1" id="provinceModal" role="dialog" data-backdrop="static" style="text-align:left;color:#333;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> 选择地区
+                </h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills">
+                        <li style="min-width:72px;"><a href="/platform/beijing.aspx">北京</a></li>
+                        <li style="min-width:72px;"><a href="/platform/tianjin.aspx">天津</a></li>
+                        <li style="min-width:72px;"><a href="/platform/hebei.aspx">河北</a></li>
+                        <li style="min-width:72px;"><a href="/platform/shanxi.aspx">山西</a></li>
+                        <li style="min-width:72px;"><a href="/platform/neimenggu.aspx">内蒙古</a></li>
+                        <li style="min-width:72px;"><a href="/platform/liaoning.aspx">辽宁</a></li>
+                        <li style="min-width:72px;"><a href="/platform/jilin.aspx">吉林</a></li>
+                        <li style="min-width:72px;"><a href="/platform/heilongjiang.aspx">黑龙江</a></li>
+                        <li style="min-width:72px;"><a href="/platform/shanghai.aspx">上海</a></li>
+                        <li style="min-width:72px;"><a href="/platform/jiangsu.aspx">江苏</a></li>
+                        <li style="min-width:72px;"><a href="/platform/zhejiang.aspx">浙江</a></li>
+                        <li style="min-width:72px;"><a href="/platform/anhui.aspx">安徽</a></li>
+                        <li style="min-width:72px;"><a href="/platform/fujian.aspx">福建</a></li>
+                        <li style="min-width:72px;"><a href="/platform/jiangxi.aspx">江西</a></li>
+                        <li style="min-width:72px;"><a href="/platform/shandong.aspx">山东</a></li>
+                        <li style="min-width:72px;"><a href="/platform/henan.aspx">河南</a></li>
+                        <li style="min-width:72px;"><a href="/platform/hubei.aspx">湖北</a></li>
+                        <li style="min-width:72px;"><a href="/platform/hunan.aspx">湖南</a></li>
+                        <li style="min-width:72px;"><a href="/platform/guangdong.aspx">广东</a></li>
+                        <li style="min-width:72px;"><a href="/platform/guangxi.aspx">广西</a></li>
+                        <li style="min-width:72px;"><a href="/platform/hainan.aspx">海南</a></li>
+                        <li style="min-width:72px;"><a href="/platform/chongqing.aspx">重庆</a></li>
+                        <li style="min-width:72px;"><a href="/platform/sichuan.aspx">四川</a></li>
+                        <li style="min-width:72px;"><a href="/platform/guizhou.aspx">贵州</a></li>
+                        <li style="min-width:72px;"><a href="/platform/yunnan.aspx">云南</a></li>
+                        <li style="min-width:72px;"><a href="/platform/xizang.aspx">西藏</a></li>
+                        <li style="min-width:72px;"><a href="/platform/shannxi.aspx">陕西</a></li>
+                        <li style="min-width:72px;"><a href="/platform/gansu.aspx">甘肃</a></li>
+                        <li style="min-width:72px;"><a href="/platform/qinghai.aspx">青海</a></li>
+                        <li style="min-width:72px;"><a href="/platform/ningxia.aspx">宁夏</a></li>
+                        <li style="min-width:72px;"><a href="/platform/xinjiang.aspx">新疆</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </footer>
+    
+    
+    
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/js/site.js?v=Tm6a3Mx8fqSGhr1-veGuzKysqb6yFXPtv8uiViy9-cI"></script>
+                    <script>
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?6e86bfe959d0d9c192c6e7d9abcbfeda";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
+    
+
+    
+    
+
+        <script type="text/javascript">
+
+            function showplatformurl() {
+                if ($("#a-platform").attr("href") == "#") {
+                    $("#a-platform").attr("href", "javascript:void(0);");
+                    $.post("/platform/AjaxPlatformUrl", $('#FormPlatformUrl').serialize(), function (data, status) {
+                        if (status == "success") {
+                            if (data.state == "success") {
+                                $("#a-platform").attr("href", data.url);
+                                $("#a-platform").attr("target", "_blank");
+                                $("#a-platform").text("点击进入");
+                                $('#j-plt').children('span').show();
+                            }
+                            else {
+                                alert(data.msg);
+                                $("#a-platform").text("无法获取网址");
+                            }
+                        }
+                        else {
+                            alert("网络连接失败。错误代码：" + status);
+                            $("#a-platform").text("无法获取网址");
+                        }
+                    });
+                }
+                $('#j-plt').children('span').show();
+            }
+
+            function getplatformurl() {
+                if ($("#a-platform").attr("href") == "#") {
+                    $("#a-platform").attr("href", "javascript:void(0);");
+                    $.post("/platform/AjaxPlatformUrl", $('#FormPlatformUrl').serialize(), function (data, status) {
+                        if (status == "success") {
+                            if (data.state == "success") {
+                                $("#a-platform").attr("href", data.url);
+                                $("#a-platform").attr("target", "_blank");
+                                $("#a-platform").text("点击进入");
+                            }
+                            else {
+                                alert(data.msg);
+                                $("#a-platform").text("无法获取网址");
+                            }
+                        }
+                        else {
+                            alert("网络连接失败。错误代码：" + status);
+                            $("#a-platform").text("无法获取网址");
+                        }
+                    });
+                }
+                $("#a-platform-go").attr("href", $("#a-platform").attr("href"));
+                $("#a-platform-go").attr("target", "_blank");
+                $("#a-platform-go").text("点击进入");
+            }
+
+            getplatformurl();//自动运行
+
+
+        </script>
+
+
+
+
+
+</body>
+
+</html>

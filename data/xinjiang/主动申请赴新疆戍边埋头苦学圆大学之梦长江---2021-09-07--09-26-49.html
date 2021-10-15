@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>
+长江日报
+-
+主动申请赴新疆戍边 埋头苦学圆大学之梦
+</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+
+.btn-audio-stop{
+    display: block;
+    width: 90px;
+    height: 15px;
+    float: left;
+}
+
+.btn-audio-play{
+    display: block;
+    width: 15px;
+    height: 15px;
+    float: left;
+}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        
+<map name=PagePicMap2><Area coords="8,51,499,51,499,129,140,129,140,287,131,287,131,305,166,305,166,138,499,138,499,476,8,476" shape="polygon" href="content_210973.htm"><Area coords="523,44,699,44,699,751,523,751" shape="polygon" href="content_210975.htm"><Area coords="2,501,279,501,279,775,2,775" shape="polygon" href="./content_210982.htm"><Area coords="298,501,498,501,498,776,298,776" shape="polygon" href="content_210986.htm"><Area coords="3,782,702,782,702,1022,3,1022" shape="polygon" href="content_210993.htm"></map>
+<img img width=400 height=575 src=../../../images/2021-09/07/4/07r04c_s.jpg border=0 USEMAP=#PagePicMap2>
+
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            4版:要闻
+&nbsp;&nbsp;
+            <a href=../../../images/2021-09/07/4/07r04c.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_3.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_5.htm">下一版 </a>
+			<span><a href="node_tc.htm"><img src="../../../tplimg/button3.gif" border="0" style="float:right;padding-right:40px"/></a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img  src="../../../tplimg/长江日报.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_4.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>主动申请赴新疆戍边 埋头苦学圆大学之梦</h1>
+<h2>27岁藏族小伙考上中南财经政法大学</h2>
+<h4></h4>
+        
+        <div class="c_c">
+          
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;长江日报讯（记者谭芳&nbsp;通讯员卓张鹏）9月6日下午2时许，27岁的藏族小伙拉元刚到达武汉天河国际机场，随后前往中南财经政法大学报到。25岁时，拉元刚决定重新参加高考。9年里3次参加高考，他终于圆梦，走进理想中的大学。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9年前曾考上大学，因家中变故休学</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9月5日，拉元刚拿到核酸检测阴性报告，收拾好了将随自己出行的小皮箱。几天前，他已把多数行李打包寄往武汉。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;拉元刚并非第一次走进大学校园。2012年，他首次参加高考，考入某院校，就读自动化专业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;一场突如其来的变故彻底改变了拉元刚的生活。2014年，拉元刚的母亲心脏病突然发作，不幸辞世。得知消息后，他连忙赶回家。他回忆，那是一个闷热的夏天，回去的路上花了21小时。此后，他因自身原因中途休学。2018年，拉元刚办理了退学手续。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;主动申请到新疆部队当炮兵</p><p>&nbsp;&nbsp;&nbsp;&nbsp;休学期间，拉元刚应征入伍。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2016年，原本被分配到杭州的他主动申请去新疆。他想的是，边陲更能锻炼自己。就这样，这名身高178厘米的藏族小伙成了新疆某军营的一名炮兵。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;两年军旅生活让拉元刚迅速成长。新疆夏季的烈日、冬季没膝的大雪，他都见过。单杆、双杆、蛇形跑等训练让他的体形变得越来越精干的同时，也启发他深入思考“自己以后到底适合干什么”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在部队里，拉元刚每天都写日记。到退伍时，他足足写了3本日记。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;挑战自我重新高考，两战圆梦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;军旅生涯让拉元刚变得更加自信、不畏困难。当兵第二年，在部队军事体育运动会武装5公里竞赛中，他获得第三名，为多年没拿过名次的所在连队添了一枚奖牌。拉元刚认为，一个人只要在训练中肯吃苦，就可以让“不擅长”变为“能行”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;渴望进入大学深造的拉元刚于2019年底正式开始自学备战高考，原本是理科生的他打算学法学类专业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2020年，他第二次参加高考，成绩并不理想。面对失败，他想再给自己一次机会。改进复习策略后，不问寒暑埋头学习的他今年高考发挥良好，总成绩比去年高了100多分，被中南财经政法大学刑事司法学院录取，成为该校今年年龄最大的本科新生。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“人生只有短短几十年，一个人真的要干几件到老的时候想起来觉得很有意义的事。”拉元刚说，到目前为止，他做了两件很有意义的事，一是参军，二是重新参加高考。</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+	  <a id="btn-audio" class="btn-audio-stop" href="#"><img width="15px" height="15px"  src="../../../tplimg/voice_stop.png" />语音读报</a>
+	
+      <a href=node_4.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+<a class=preart href="content_210975.htm"> 上一篇</a>&nbsp;&nbsp;<a class=preart href="content_210986.htm">下一篇</a></div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;长江日报讯（记者谭芳&nbsp;通讯员卓张鹏）9月6日下午2时许，27岁的藏族小伙拉元刚到达武汉天河国际机场，随后前往中南财经政法大学报到。25岁时，拉元刚决定重新参加高考。9年里3次参加高考，他终于圆梦，走进理想中的大学。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9年前曾考上大学，因家中变故休学</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9月5日，拉元刚拿到核酸检测阴性报告，收拾好了将随自己出行的小皮箱。几天前，他已把多数行李打包寄往武汉。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;拉元刚并非第一次走进大学校园。2012年，他首次参加高考，考入某院校，就读自动化专业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;一场突如其来的变故彻底改变了拉元刚的生活。2014年，拉元刚的母亲心脏病突然发作，不幸辞世。得知消息后，他连忙赶回家。他回忆，那是一个闷热的夏天，回去的路上花了21小时。此后，他因自身原因中途休学。2018年，拉元刚办理了退学手续。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;主动申请到新疆部队当炮兵</p><p>&nbsp;&nbsp;&nbsp;&nbsp;休学期间，拉元刚应征入伍。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2016年，原本被分配到杭州的他主动申请去新疆。他想的是，边陲更能锻炼自己。就这样，这名身高178厘米的藏族小伙成了新疆某军营的一名炮兵。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;两年军旅生活让拉元刚迅速成长。新疆夏季的烈日、冬季没膝的大雪，他都见过。单杆、双杆、蛇形跑等训练让他的体形变得越来越精干的同时，也启发他深入思考“自己以后到底适合干什么”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在部队里，拉元刚每天都写日记。到退伍时，他足足写了3本日记。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;挑战自我重新高考，两战圆梦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;军旅生涯让拉元刚变得更加自信、不畏困难。当兵第二年，在部队军事体育运动会武装5公里竞赛中，他获得第三名，为多年没拿过名次的所在连队添了一枚奖牌。拉元刚认为，一个人只要在训练中肯吃苦，就可以让“不擅长”变为“能行”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;渴望进入大学深造的拉元刚于2019年底正式开始自学备战高考，原本是理科生的他打算学法学类专业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2020年，他第二次参加高考，成绩并不理想。面对失败，他想再给自己一次机会。改进复习策略后，不问寒暑埋头学习的他今年高考发挥良好，总成绩比去年高了100多分，被中南财经政法大学刑事司法学院录取，成为该校今年年龄最大的本科新生。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“人生只有短短几十年，一个人真的要干几件到老的时候想起来觉得很有意义的事。”拉元刚说，到目前为止，他做了两件很有意义的事，一是参军，二是重新参加高考。</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">长 江 日 报 报 业 集 团 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_210973.htm><div style="display:inline" id=mp_nw.D420100cjrb_20210907_1-4>马克思主义基本原理<BR/>与中华优秀传统文化有着内在一致性</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_210975.htm><div style="display:inline" id=mp_nw.D420100cjrb_20210907_2-4>推行“认同教育”培养大写之人</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_210982.htm><div style="display:inline" id=mp_nw.D420100cjrb_20210907_3-4>主动申请赴新疆戍边 埋头苦学圆大学之梦</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_210986.htm><div style="display:inline" id=mp_nw.D420100cjrb_20210907_4-4>开学首日奔赴西藏支教</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_210993.htm><div style="display:inline" id=mp_nw.D420100cjrb_20210907_5-4>公益广告</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<SCRIPT language=Javascript src="../../../tplimg/jquery.min.js"></SCRIPT>
+<script src="../../../tplimg/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript">
+
+//设置图片热区
+$('img[usemap]').rwdImageMaps();
+(function($){
+ //播放语音按钮
+	var audioEle = document.createElement('audio');
+	 audioEle.id = "mp3Btn";
+
+	 var url = window.location.href;
+	 var id =url.substring(url.lastIndexOf("/") + 1,url.lastIndexOf(".htm"));
+	 var dtime = url.substring(url.lastIndexOf("/") - 10,url.lastIndexOf("/"));
+	 var content = encodeURIComponent(".c_c");
+	 var url = "/asm/getAudio.do?id="+id+"&dtime="+dtime+"&content="+content;
+	 audioEle.src = url;
+	 
+	 document.body.appendChild(audioEle);  
+	
+	
+	//播放完毕
+	$('#mp3Btn').on('ended', function() {
+		console.log("音频已播放完成");
+		$('#btn-audio img').attr("src","../../../tplimg/voice_stop.png");
+	})
+	//播放器控制
+	var audio = document.getElementById('mp3Btn');
+	audio.volume = .5;
+	$('#btn-audio').click(function() {
+		event.stopPropagation();//防止冒泡
+		if(audio.paused){ //如果当前是暂停状态
+			$('#btn-audio img').attr("src","../../../tplimg/voice_play.png");
+			audio.play(); //播放
+			return;
+		}else{//当前是播放状态
+			$('#btn-audio img').attr("src","../../../tplimg/voice_stop.png");
+			audio.pause(); //暂停
+		}
+	});
+})(jQuery)
+
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?703a2e4b7c1acee6e7f0cf6d71017dee";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</html>
+
+<!--mpproperty <founder-date>
+2021-09-07
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>主动申请赴新疆戍边 埋头苦学圆大学之梦
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle>27岁藏族小伙考上中南财经政法大学</founder-subtitle>
+<founder-type>1</founder-type>
+<founder-description>    长江日报讯（记者谭芳 通讯员卓张鹏）9月6日下午2时许，27岁的藏族小伙拉元刚到达武汉天河国际机场，随后前往中南财经政法大学报到。25岁时，拉元刚决定重新参加高考。9年里3次参加高考，他终于圆...</founder-description>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://cjrb.cjn.cn/cjrb/images/2021-09/07/4/07r04c_b.jpg</founder-pagepicurl>
+<founder-pagenum>4</founder-pagenum>
+<founder-papername>长江日报</founder-papername>
+<founder-nodeid>4</founder-nodeid> /mpproperty-->
+
+

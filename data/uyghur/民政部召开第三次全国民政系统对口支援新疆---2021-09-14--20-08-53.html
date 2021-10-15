@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>内蒙古民政厅</title>
+<meta name="keywords" content="内蒙古民政厅,内蒙古自治区民政厅,民政厅"/>
+<meta name="description" content="内蒙古自治区民政厅门户网站"/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/css/global.css" />
+<link rel="stylesheet" href="/css/project.css" />
+<link rel="stylesheet" href="/css/hf.css" />
+<link rel="stylesheet" href="/css/fyys.css" />
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['Zoom'] : document.getElementById('Zoom');
+        zoom.style.fontSize = size + 'px';
+    }
+
+        $.ajax({
+            url : "/webappnew/view/focus.jsp?id=49303&u=ok",
+            type : "get",
+            cache : false,
+            async : false,
+            success : function(data) { 
+          	}
+    	});
+</script>
+</head>
+<body class="g-tbody">
+
+<!-- 头部 --> 
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    // JavaScript Document
+// 加入收藏 < a onclick="AddFavorite(window.location,document.title)" >加入收藏< /a>
+
+function AddFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+//设为首页 < a onclick="SetHome(this,window.location)" > 设为首页 < /a>
+function SetHome(obj,vrl){
+        try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }
+        }
+}
+
+    
+</script>
+<div class="g-thead">
+	<div class="m-thead">
+    	<a href="/" class="f-fl">
+        	<img src="/images/t_logo.png" width="466" height="103" />
+        </a>
+        <div class="f-fr">
+        	<div class="m-ttpwz f-fr">
+                <a href="#" onclick="SetHome(this,window.location)"  class="f-fl">设为首页</a><span class="f-fl">|</span> 
+                <a href="#" onclick="AddFavorite(window.location,document.title)"  class="f-fl">加入收藏 </a><span class="f-fl">|</span>
+                <a href="/wzdt/index.html" target="_blank" class="f-fl">网站地图</a>
+            </div>
+            <!--搜索-->
+            <form name="search" action="/webappnew/Search/index.jsp" method="get" onSubmit="return go(this)" document.charset='utf-8';>
+            <div class="m-tss">
+                <span class="f-fl"></span>
+                <input type="text" id="keyword" name="keyword" onFocus="if(this.value=='请输入关键词'){this.value='';}" value="请输入关键词" class="u-txt f-fl f-cb8 f-fs13" />
+                <a onclick="go(document.search)" target="_blank" class="u-tss f-fl"></a>
+            </div>
+            </form>
+            <!--/搜索-->
+            <script type="text/javascript">
+                var keyword = document.getElementById("keyword");
+                function go(form) {
+                    if(form.keyword.value.trim()==""||form.keyword.value.trim()=="请输入关键词") {
+                        alert("输入关键词！");
+                        keyword.focus();
+                        return false;
+                    } else {
+                        form.submit();
+                    }
+                }
+
+                String.prototype.trim = function() {
+                    return this.replace(/(^\s*)|(\s*$)/g, "");
+                }
+            </script>
+        </div>
+    </div>
+    <!-- 导航 --> 
+    <div class="m-tnavs">
+        <a href="http://mgl.nmg.gov.cn/mzt" class="f-fl u-tmwb" target="_blank"><span class="f-cbw f-fs15 f-tac">内蒙古民政蒙文版</span></a>
+
+        <div class="m-tnav f-fl">
+        	<a href="/" id="shouye" class="f-fl f-cb0 f-fs18 hover">首页</a>
+            <a href="/jggl/jjz/index.html" id="jggl" class="f-fl f-cb0 f-fs18">机构概览</a>
+            <a href="/zzqjwzmztjjz/" id="nscs2" class="f-fl f-cb0 f-fs18">纪检监察</a>
+            <a href="/nscs/zhbg_168/" id="nscs" class="f-fl f-cb0 f-fs18">内设处室</a>
+            <a href="/yfxz/index.html" id="bsfw" class="f-fl f-cb0 f-fs18">依法行政</a>
+            <a href="/xzgg/xzqhbggg/index.html" id="xzgg" class="f-fl f-cb0 f-fs18">行政公告</a>
+            <a href="/gs/tzgg/index.html" id="gs" class="f-fl f-cb0 f-fs18">公示</a>
+            <!--<a href="/dzqk" class="f-fl f-cb0 f-fs18" id="dzqk" style="margin-right:0;">电子期刊</a>-->
+            <!--<a href="/bsfw/bszn/shzz_300/index.html" class="f-fl f-cb0 f-fs18"  style="margin-right:0;">办事服务</a> -->
+			<a href="/bsfw/" class="f-fl f-cb0 f-fs18"  style="margin-right:0;">办事服务</a>
+        </div>
+    </div>
+    <!-- /导航 --> 
+</div>
+
+<script>
+ var abc= document.getElementById("shouye");
+ var url = window.location.pathname; 
+ if(window.location.pathname == "/"){
+   abc.className="f-fl f-cb0 f-fs18 hover";
+  }else{
+  abc.className= "f-fl f-cb0 f-fs18";
+  }
+ var jggl= document.getElementById("jggl"); 
+ var nscs= document.getElementById("nscs");
+ var nscs2= document.getElementById("nscs2"); 
+ var bsfw= document.getElementById("bsfw"); 
+ var xzgg= document.getElementById("xzgg"); 
+ var gs= document.getElementById("gs"); 
+ var dzqk= document.getElementById("dzqk"); 
+
+  if(url.substring(0,5)=="/jggl"){
+      jggl.className="f-fl f-cb0 f-fs18 hover";
+ }
+ 
+ if(url.substring(0,14)=="/nscs/zhbg_168"){
+      nscs.className="f-fl f-cb0 f-fs18 hover";
+ }
+ 
+ 
+  if(url.substring(0,13)=="/zzqjwzmztjjz"){
+      nscs2.className="f-fl f-cb0 f-fs18 hover";
+ }
+ 
+   if(url.substring(0,5)=="/bsfw"){
+      bsfw.className="f-fl f-cb0 f-fs18 hover";
+ }
+    if(url.substring(0,5)=="/xzgg"){
+      xzgg.className="f-fl f-cb0 f-fs18 hover";
+ }
+    if(url.substring(0,3)=="/gs"){
+      gs.className="f-fl f-cb0 f-fs18 hover";
+ }
+    if(url.substring(0,5)=="/dzqk"){
+      dzqk.className="f-fl f-cb0 f-fs18 hover";
+ }
+ </script>
+<!-- /头部 -->
+
+<!-- 主体 -->
+<div class="g-tdoc">
+    <!-- 当前位置 --> 
+	<div class="m-tdqwz f-cb5">
+    	<span>当前位置：</span><a href="../../../../" title="首页" class="CurrChnlCls">首页</a><span> > </span><a href="../../../" title="内设处室" class="CurrChnlCls">内设处室</a><span> > </span><a href="../../" title="办公室（政策法规处）" class="CurrChnlCls">办公室（政策法规处）</a><span> > </span><a href="../" title="工作动态" class="CurrChnlCls">工作动态</a>
+    </div>
+    <!-- /当前位置 -->
+	
+    <div class="m-tzycon">
+    	<table width="100%;" border="0" cellpadding="0" cellspacing="0">
+        	<tr>
+                <!-- 右内容标题 --> 
+                <td class="m-tlmbt" width="808" valign="top">
+                	<span class="f-fs18 f-fl">工作动态</span>
+                </td>
+                <!-- /右内容标题 -->
+            </tr>
+            <tr>
+                <!-- 右内容 --> 
+                <td class="m-trt" width="808" valign="top">
+                    <div class="m-gkp-nry">
+                    	<div class="bt f-fs20">民政部召开第三次全国民政系统对口支援新疆工作推进会议</div>
+                        <div class="zjbf f-cb6">发布时间：2021-09-13 21:09　　　浏览次数：<script type="text/javascript">
+                  $.ajax({
+                        url : "/webappnew/view/focus.jsp?id=49303",
+                        type : "get",
+                        cache : false,
+                        async : false,
+                        success : function(data) {
+                        var result = jQuery.parseJSON(data);
+                        viewCount = result.count;
+                        document.write(viewCount);
+                        $("#gz").html(viewCount);
+                      }
+                  });
+             </script>次　　　来源：民政部门户网站　　　字号:［<a href="javascript:doZoom(16)">大</a>&nbsp;&nbsp;<a href="javascript:doZoom(14)"> 中</a>&nbsp;&nbsp;<a href="javascript:doZoom(12)"> 小</a>］</div>
+                        <div class="nr" id="Zoom" style="word-wrap: break-word;"><style type="text/css">.TRS_Editor P{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor DIV{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor TD{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor TH{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor SPAN{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor FONT{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor UL{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor LI{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor A{line-height:2;font-family:宋体;font-size:14pt;}</style><div class=TRS_Editor><style type="text/css">
+.TRS_Editor P{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor DIV{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor TD{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor TH{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor SPAN{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor FONT{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor UL{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor LI{line-height:2;font-family:宋体;font-size:14pt;}.TRS_Editor A{line-height:2;font-family:宋体;font-size:14pt;}</style>
+<p>　　&nbsp;<span>9月13日，第三次全国民政系统对口支援新疆工作推进会议在新疆乌鲁木齐召开。新疆维吾尔自治区党委书记陈全国和民政部党组书记、部长李纪恒出席会议并讲话。新疆维吾尔自治区党委副书记、自治区政府主席雪克来提·扎克尔，新疆维吾尔自治区党委副书记、新疆生产建设兵团党委书记王君正，新疆维吾尔自治区政府和新疆生产建设兵团领导彭家瑞、哈德尔别克·哈木扎、穆坦里甫·买提托合提出席会议。会议由民政部党组成员、副部长高晓兵主持。</span>　　<o:p style="font-size: 14pt;"></o:p>&nbsp;</p>
+<p align="justify">　　陈全国代表自治区党委、政府、兵团及全区各族人民，向民政部、援疆省市、社会组织长期以来给予新疆工作的关心、支持和帮助，表示衷心感谢。陈全国指出，全国民政系统坚决贯彻落实以习近平同志为核心的党中央决策部署，贯彻落实新时代党的治疆方略，把援疆工作作为一项重大政治任务、摆在重要位置，扎实推进民政援疆，助力新疆民政事业发展，为推进新疆社会稳定和长治久安作出了重要贡献，开创了新时代民政事业助力新疆稳定发展的好局面。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　陈全国指出，当前，全疆上下正在认真学习宣传、贯彻落实习近平总书记“七一”重要讲话精神，完整准确贯彻新时代党的治疆方略，牢牢扭住社会稳定和长治久安总目标，奋力开创新疆稳定发展各项工作的新局面。我们将不断增强“四个意识”、坚定“四个自信”、做到“两个维护”，坚决把思想和行动统一到以习近平同志为核心的党中央关于对口援疆工作的决策部署上来，深入贯彻落实第三次中央新疆工作座谈会精神特别是习近平总书记重要讲话精神，按照第八次全国对口支援新疆工作会议的安排部署，立足新发展阶段、贯彻新发展理念、构建新发展格局，把民政工作摆上突出位置，用好民政援疆工作优势，营造良好环境，抓好各项民政事业，全力做好民政工作，充分发挥民政事业兜底性、基础性作用，不断提升对口援疆综合效益，努力建设新时代中国特色社会主义新疆。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　李纪恒表示，第二次全国民政系统对口支援新疆工作会议以来，民政部党组持续强化组织领导，加强倾斜支持力度，加大智力支援，动员社会组织参与，对口援疆工作取得显著成效，为改善新疆各族群众生活、促进民族团结进步作出了积极贡献。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　李纪恒指出，对口援疆是党中央交办的重大政治任务，各级民政部门要准确把握对口援疆工作新形势新任务，深入学习贯彻习近平总书记“七一”重要讲话精神和关于新疆工作的重要指示精神，贯彻落实中央民族工作会议精神、第三次中央新疆工作座谈会和第八次全国对口支援新疆工作会议重要部署，完整准确贯彻新时代党的治疆方略，扎实做好新时代民政对口援疆工作。要围绕凝聚民心，支持新疆加强基本民生保障，兜牢兜好民生底线；聚焦促进各民族交往交流交融，支持新疆推进基层治理体系和治理能力现代化建设，铸牢中华民族共同体意识；坚持问题导向，精准谋划和实施对口支援项目，让各族群众有更多获得感幸福感安全感；广泛动员社会力量参与，更好发挥社会组织特色优势，精准推进民生保障、产业发展、文化润疆等各类援助项目落地见效。要加强组织领导，压实各方责任，齐心协力、攻坚克难、善作善成，担当好支援新疆发展的历史使命，为建设新时代中国特色社会主义新疆作出更大贡献。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　会上，江西省、福建省民政厅，新疆和田地区、新疆生产建设兵团第三师民政局以及爱佑慈善基金会、中国社会艺术协会有关负责同志分别代表援疆省、受援地和社会组织作了交流发言。援疆省（市）民政厅（局）与受援地签署对口支援协议。社会组织代表签订捐赠协议，启动“情暖天山·大爱无疆——社会组织援疆行动”。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　会前，9月10日至12日，李纪恒还深入乌鲁木齐市新市区，伊犁州霍城县、伊宁市、尼勒克县、新源县和兵团第四师可克达拉市等地，调研社会救助、基层社会治理、养老服务、民政疫情防控等工作，走访慰问少数民族困难群众，并看望民政部援疆干部。<o:p></o:p>&nbsp;</p>
+<p align="justify">　　民政部有关司局和直属事业单位负责同志，对口援疆省（市）民政厅（局）和深圳市民政局负责同志，28家参加“情暖天山·大爱无疆——社会组织援疆行动”的社会组织代表，新疆维吾尔自治区民政厅、新疆生产建设兵团民政局党组班子成员，新疆维吾尔自治区14个市（地、州）、新疆生产建设兵团14个师民政局负责同志参加会议。</p>
+<p align="justify">&nbsp;</p></div></div>
+<!------------------------页面分享star------------------------------->
+<script type="text/javascript">
+	function shareToSinaWb(){
+        window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(document.location.href)+'&source=bookmark','_blank','width=450,height=400');
+    }
+
+    function shareToTencentWb(){
+        var _t = encodeURI(document.title);
+        var _url = encodeURI(document.location);
+        var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+        var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....）
+        var _site = '';//你的网站地址
+        var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
+        window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+    }
+
+    function shareToQzone(){
+        window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url='+encodeURIComponent(document.location.href),'_blank');
+    }
+</script>
+   <!-- <div class="p_rnfx" style="border-top:#CCC dashed 1px;padding-top:10px;margin-top:10px;" >
+	转发至：<a href="javascript:void(0);" onClick="shareToSinaWb();return false;" title="分享到新浪微博"><img src="/images/zx_28.gif" alt="分享到新浪微博" border="0" /></a>
+                <a href="http://t.qq.com/"  target="_blank"  title="分享到腾讯微博"><img alt="分享到腾讯微博" src="/images/zx_29.gif" border="0" /></a>
+                <a href="javascript:void(0);" onClick="shareToQzone();return false;" title="分享到QQ"><img src="/images/zx_30.gif" alt="分享到QQ" border="0" /></a>
+	</div>-->
+<div class="p_rnfx">
+	转发至：<!--<a href="javascript:void(0);" onClick="shareToSinaWb();return false;" title="分享到新浪微博"><img src="/images/zx_28.gif" alt="分享到新浪微博" border="0" /></a>
+                <a href="javascript:void(0)" onClick="shareToTencentWb();return false;" class="tmblog" title="分享到腾讯微博"><img alt="分享到腾讯微博" src="/images/zx_29.gif" border="0" /></a>
+                <a href="javascript:void(0);" onClick="shareToQzone();return false;" title="分享到QQ"><img src="/images/zx_30.gif" alt="分享到QQ" border="0" /></a>-->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+<!------------------------页面分享end------------------------------->               	
+                    </div>
+            
+                </td>
+                <!-- /右内容 -->
+            </tr>
+            <tr height="45">
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /主体 -->
+
+<!-- 底部 --> 
+<!-- 底部 --> 
+<div class="g-tfoot">
+	
+	<div class="m-tfoot">
+<div class="m-tdz" style="left:0">
+        	               <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/07/000/0000/60418022/CA070000000604180220005.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+    	<p class="f-tac">版权所有：内蒙古自治区民政厅　联系电话：0471-6944785  <a href="https://beian.miit.gov.cn/" target="_blank">蒙ICP备20000143号</a>　邮编：010055　政府网站标识码：1500000049 <br/>
+地址：呼和浩特市新华大街63号　<script type="text/javascript" src="/webappnew/view/custom_site.jsp"></script>　<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278839518'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1278839518%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>　技术支持：<a>内蒙古世纪泓科技有限公司</a></p>
+		
+              <div class="m-tdz" ><script id="_jiucuo_" sitecode='1500000062'src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></div>
+    </div>
+</div>
+<!-- /底部 -->
+<!-- /底部 -->
+
+</body>
+</html>

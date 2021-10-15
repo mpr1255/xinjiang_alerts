@@ -1,0 +1,481 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="/public/shandian/pc/images/icon_ico.ico" type="images/x-ico" />
+  <script type="text/javascript">
+    window.HOST_TYPE = '2'
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/public/shandian/pc/css/swiper.min.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="/public/shandian/pc/css/public.css?v=2" />
+  <link rel="stylesheet" type="text/css" href="/public/shandian/pc/css/gloal_style.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="/public/shandian/pc/css/list_hao_details.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="/public/shandian/pc/css/media.css?v=1" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="./css/swiper.min.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="http://file.iqilu.com/custom/new/v2016/css/public.css" />
+  <link rel="stylesheet" type="text/css" href="./css/gloal_style.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="./css/list_hao_details.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="./css/media.css?v=1" /> -->
+
+  <title>艾尔肯·吐尼亚孜任新疆维吾尔自治区人民政府代主席</title>
+  <script src="https://api.map.baidu.com/getscript?v=2.0&ak=Gz0c1IfjT1EDAPXgzK0TW6wI6LaO7AiA&s=1"></script>
+  <script src="/public/shandian/pc/js/jquery-1.11.1.js?v=1"></script>
+  <script src="/public/shandian/pc/js/hls.min.js"></script>
+  <script src="/public/shandian/pc/js/template-web.js?v=1"></script>
+  <script src="/public/shandian/pc/js/tools.js?v=1"></script>
+  <script src="/public/shandian/pc/js/getNavList.js?v=1"></script>
+  <script src="/public/shandian/pc/js/list_hao_details.js?v=1"></script>
+  <script src="/public/shandian/pc/js/style.js?v=1"></script>
+
+  <!-- <script src="https://api.map.baidu.com/getscript?v=2.0&ak=Gz0c1IfjT1EDAPXgzK0TW6wI6LaO7AiA"></script>
+  <script src="./js/jquery-1.11.1.js?v=1"></script>
+  <script src="./js/hls.min.js"></script>
+  <script src="./js/getNavList.js?v=1"></script>
+  <script src="./js/template-web.js?v=1"></script>
+  <script src="./js/tools.js?v=1"></script>
+  <script src="./js/list_hao_details.js?v=1"></script>
+  <script src="./js/style.js?v=1"></script> -->
+
+
+</head>
+
+<script>
+  function isMobile() {
+    var userAgentInfo = navigator.userAgent;
+
+    var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+
+    var mobile_flag = false;
+
+    //根据userAgent判断是否是手机
+    for (var v = 0; v < mobileAgents.length; v++) {
+      if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+        mobile_flag = true;
+        break;
+      }
+    }
+    return mobile_flag
+  }
+  var mobile_flag = isMobile(); // true为PC端，false为手机端
+  if (mobile_flag) {
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          var size = 100 * (clientWidth / 750)
+          docEl.style.fontSize = size > 100 ? 100 + 'px' : size + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  }
+</script>
+
+<body style="line-height: 0;">
+
+  <span id="cityname" style="display: none"></span>
+  <!-- 导航 -->
+<div class="nav">
+	<div class="nav_list clear_float border_size">
+		<img src="/public/shandian/pc/images/icon_logo.png" class="logo_css">
+		<img src="/public/shandian/pc/images/icon_shandianxinwen.png" class="shandian_css">
+		<ul class="shou_xia">
+			<li class="nav_item nav_item_active">
+				<a href="https://sd.iqilu.com?0&1">头条</a>
+			</li>
+			<li class="nav_item" id="navdijishi_contain">
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/my?2&0">闪电号</a>
+				<ul class="level-nav">
+				</ul>
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/list/2.html?3&2">时政</a>
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/list/3.html?4&3">视频</a>
+				<ul class="level-nav" id="nav2_contain">
+				</ul>
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/list/110.html?5&110">智库</a>
+				<ul class="level-nav" id="nav2_contain">
+				</ul>
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/list/7.html?6&7">热点</a>
+				<ul class="level-nav" id="nav1_contain">
+				</ul>
+			</li>
+
+			<li class="nav_item">
+				<a href="/articlePc/list/4.html?7&4">体育</a>
+				<ul class="level-nav">
+				</ul>
+			</li>
+			<li class="nav_item">
+				<a href="/articlePc/list/6.html?8&6">健康</a>
+				<ul class="level-nav">
+				</ul>
+			</li>
+			<li class="nav_item">
+				<img src="/public/shandian/pc/images/icon111.png" class="sanjiao11" style="display: none;">
+				<img src="/public/shandian/pc/images/icon222.png" class="sanjiao2">
+			</li>
+		</ul>
+		<div class="search fr clear_float" id="search_contain">
+			<input class="search_input fl" id="searchId" type="text" placeholder="请输入你想搜的内容" />
+			<a href="" target="_black" id="search_a">
+				<div class="search_icon fl" id="search_btn"></div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- 固定的样式 -->
+<div class="nav_show1" id="city_contain">
+
+</div>
+
+<div class="nav_show">
+	<a href="/articlePc/list/61.html?9&61">
+		<div class="diji">
+			评论
+		</div>
+	</a>
+	<a href="/articlePc/list/64.html?9&64">
+		<div class="diji">
+			图片
+		</div>
+	</a>
+	<a href="/articlePc/list/68.html?9&68">
+		<div class="diji">
+
+			文娱
+		</div>
+	</a>
+	<a href="/articlePc/list/69.html?9&69">
+		<div class="diji">
+			房产
+		</div>
+	</a>
+	<a href="/articlePc/list/71.html?9&71">
+		<div class="diji">
+			专题
+		</div>
+	</a>
+</div>
+
+
+<div style="position: fixed;right: 15%;cursor: pointer;top: 65%;" class="sahng">
+	<img src="/public/shandian/pc/images/shang.png" style="width: 50px;height: 50px;">
+</div>
+
+
+  <div class="wrapper clear_float">
+    <!-- 左侧 -->
+    <div class="index_left_content">
+      <!-- position -->
+      <div class="navigation">
+        <ul class="clear_float">
+          <!-- <li><a href="javascript:;" title="">闪电号：</a></li> -->
+          <li><a href="https://sd.iqilu.com/articlePc/my?2&0" title="" target="_brank">闪电号></a></li>
+                    <li><a href="https://sd.iqilu.com/articlePc/all.html?2&0&76"
+              title="">专栏号></a></li>
+                    <li><a href="https://sd.iqilu.com/articlePc/sdh.html?catid=161" title=""
+              target="_brank">资讯24小时</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 中间部分 -->
+      <div class="content_size">
+        <div class="details_title">
+          <!-- <a href="https://sd.iqilu.com/articlePc/sdh.html?catid=161"> -->
+          艾尔肯·吐尼亚孜任新疆维吾尔自治区人民政府代主席        </div>
+        <!-- <div class="details_author">来源：来自闪电新闻客户端 作者： 2021年10月01日</div> -->
+        <!-- <div class="content_img">
+          <img src=http://img8.iqilu.com/ksdimgs/2020/08/20/4977ddc793d15409bef4919c17dfbf5b.jpg />
+          <div>新疆日报</div>
+        </div> -->
+        <div class="content_img">
+                    <a target="_brank">
+            <img src=http://img8.iqilu.com/ksdimgs/2020/08/20/4977ddc793d15409bef4919c17dfbf5b.jpg />
+          </a>
+                    <div style="margin-top: 15px;">
+            <div>
+                            <a href="javascript:;">
+                新疆日报              </a>
+                          </div>
+                        <a href="javascript:;">
+              <div class="details_author">2021年10月01日              </div>
+            </a>
+                      </div>
+        </div>
+
+        <!-- 虚线 -->
+        <div class="xuxian">
+        </div>
+
+        <div class="art_content">
+                    <p style="text-align: center;"><strong>新疆维吾尔自治区人民代表大会常务委员会关于艾尔肯·吐尼亚孜代理自治区人民政府主席的决定</strong></p>
+<p style="text-align: center;">（2021年9月30日新疆维吾尔自治区第十三届人民代表大会常务委员会第二十九次会议通过）</p>
+<p>根据《中华人民共和国地方各级人民代表大会和地方各级人民政府组织法》第四十四条的规定，新疆维吾尔自治区第十三届人民代表大会常务委员会第二十九次会议决定：艾尔肯·吐尼亚孜代理自治区人民政府主席。</p>        </div>
+
+      </div>
+
+      
+            <div class="tuijian">
+        相关推荐
+      </div>
+      
+      <!-- 相关推荐 -->
+      <div class="g_list">
+                <div class="g_list_contain">
+          <a href="https://sd.iqilu.com/articlePc/detail/5817819.html" target="_blank">
+            <img src="http://img8.iqilu.com/ksdimgs/2019/07/30/9c779628b1ddf2a44e23838d76643d11.png"></img>
+          </a>
+          <div class="g_content">
+            <div class="g_list_contain_title">
+              <a href="https://sd.iqilu.com/articlePc/detail/5817819.html" target="_blank">
+                新疆维吾尔自治区人大常委会副秘书长艾尼瓦尔·吐尔逊被查              </a>
+            </div>
+            <div class="g_desc">
+              <div><span>07-30｜闪电热点</span></div>
+              <div class="g_number">
+                <img src="/public/shandian/pc/images/icon_yanjing.png">
+                <span>
+                  29.8w                </span>
+              </div>
+            </div>
+            <div class="g_share1">
+              <div class="mgr10"> 分享到：</div>
+              <a target="_blank"
+                href="http://service.weibo.com/share/share.php?url=https://sd.iqilu.com/articlePc/detail/5817819.html&title=新疆维吾尔自治区人大常委会副秘书长艾尼瓦尔·吐尔逊被查&pic=http://img8.iqilu.com/ksdimgs/2019/07/30/9c779628b1ddf2a44e23838d76643d11.png&summary=来自闪电新闻客户端&appkey=#_loginLayer_1596177107797">
+                <img src="/public/shandian/pc/images/icon_weixin.png" class="weixin">
+              </a>
+              <a target="_blank"
+                href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sd.iqilu.com/articlePc/detail/5817819.html&title=新疆维吾尔自治区人大常委会副秘书长艾尼瓦尔·吐尔逊被查&desc=&summary=来自闪电新闻客户端&site=&pics=http://img8.iqilu.com/ksdimgs/2019/07/30/9c779628b1ddf2a44e23838d76643d11.png">
+                <img src="/public/shandian/pc/images/icon_pengyou.png" class="pengyouquan">
+              </a>
+              <a target="_blank"
+                href="https://connect.qq.com/widget/shareqq/index.html?url=https://sd.iqilu.com/articlePc/detail/5817819.html&title=新疆维吾尔自治区人大常委会副秘书长艾尼瓦尔·吐尔逊被查&source=&summary=来自闪电新闻客户端&desc=&pics=http://img8.iqilu.com/ksdimgs/2019/07/30/9c779628b1ddf2a44e23838d76643d11.png">
+                <img src="/public/shandian/pc/images/icon_qq.png" class="qq">
+              </a>
+            </div>
+
+          </div>
+        </div>
+                <div class="g_list_contain">
+          <a href="https://sd.iqilu.com/articlePc/detail/4822092.html" target="_blank">
+            <img src="http://img8.iqilu.com/ksdimgs/2018/07/04/c153c95926ed4f0e22e359134d8f5c9e.jpg"></img>
+          </a>
+          <div class="g_content">
+            <div class="g_list_contain_title">
+              <a href="https://sd.iqilu.com/articlePc/detail/4822092.html" target="_blank">
+                新疆维吾尔自治区人民政府党组组织中心组学习              </a>
+            </div>
+            <div class="g_desc">
+              <div><span>07-04｜新时代</span></div>
+              <div class="g_number">
+                <img src="/public/shandian/pc/images/icon_yanjing.png">
+                <span>
+                  7.0w                </span>
+              </div>
+            </div>
+            <div class="g_share1">
+              <div class="mgr10"> 分享到：</div>
+              <a target="_blank"
+                href="http://service.weibo.com/share/share.php?url=https://sd.iqilu.com/articlePc/detail/4822092.html&title=新疆维吾尔自治区人民政府党组组织中心组学习&pic=http://img8.iqilu.com/ksdimgs/2018/07/04/c153c95926ed4f0e22e359134d8f5c9e.jpg&summary=来自闪电新闻客户端&appkey=#_loginLayer_1596177107797">
+                <img src="/public/shandian/pc/images/icon_weixin.png" class="weixin">
+              </a>
+              <a target="_blank"
+                href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sd.iqilu.com/articlePc/detail/4822092.html&title=新疆维吾尔自治区人民政府党组组织中心组学习&desc=&summary=来自闪电新闻客户端&site=&pics=http://img8.iqilu.com/ksdimgs/2018/07/04/c153c95926ed4f0e22e359134d8f5c9e.jpg">
+                <img src="/public/shandian/pc/images/icon_pengyou.png" class="pengyouquan">
+              </a>
+              <a target="_blank"
+                href="https://connect.qq.com/widget/shareqq/index.html?url=https://sd.iqilu.com/articlePc/detail/4822092.html&title=新疆维吾尔自治区人民政府党组组织中心组学习&source=&summary=来自闪电新闻客户端&desc=&pics=http://img8.iqilu.com/ksdimgs/2018/07/04/c153c95926ed4f0e22e359134d8f5c9e.jpg">
+                <img src="/public/shandian/pc/images/icon_qq.png" class="qq">
+              </a>
+            </div>
+
+          </div>
+        </div>
+              </div>
+    </div>
+
+    <!-- 右侧 -->
+    <div class="right_contain">
+      <img src="" class="banner">
+      <div class="tit">
+        <div class="tit_title">
+          <div style="margin-right: 5px;">
+            |
+          </div>
+          闪电热榜
+        </div>
+      </div>
+
+      <!-- 热点 -->
+      <div class="hot_list" id="right_1_contain">
+      </div>
+
+      <!-- 二维码 -->
+      <div class="shandian_erweima">
+        <img src="/public/shandian/pc/images/icon_erweima.jpg" class="erweima_img">
+        <div class="shandian_erweima_title">
+          <div> 扫码下载</div>
+          <div>闪电新闻客户端</div>
+          <a href="https://sd.iqilu.com//share/download" target="_blank">
+            <img src="/public/shandian/pc/images/icon_anzhuo.png" class="anzhuo">
+          </a>
+          <a href="https://sd.iqilu.com/share/download" target="_blank">
+            <img src="/public/shandian/pc/images/icon_ios.png" class="ios">
+          </a>
+        </div>
+      </div>
+      <div class="tit">
+        <div class="tit_title">
+          <div style="margin-right: 5px;">
+            |
+          </div>
+          专题推荐
+        </div>
+      </div>
+
+
+      <!-- 专题 -->
+      <div class="zhuanti_list" id="zhuanti_contain">
+      </div>
+      <img src="" class="banner">
+    </div>
+
+  </div>
+
+
+  <!-- 底部 -->
+  <div class="web-footer">
+    <div style="text-align: center;">
+      <a href="https://sd.iqilu.com/download.html" target="_blank">
+        <span>关于闪电新闻客户端
+      </a>
+      </span>
+      <span>|</span>
+      <a href="http://www.iqilu.com/intro/150586.shtml" target="_blank">
+        <span>联系我们</span>
+      </a>
+      <span>|</span>
+      <a href="http://www.iqilu.com/intro/150587.shtml" target="_blank">
+        <span>站点地图</span>
+      </a>
+      <span>|</span>
+      <a href="http://www.iqilu.com/intro/150588.shtml" target="_blank">
+        <span>法律声明</span>
+      </a>
+      <span>|</span>
+      <a href="http://www.iqilu.com/html/zt/shandong/rmfwsc/" target="_blank">
+        <span>广告合作</span>
+      </a>
+    </div>
+    <div style="text-align: center;margin-top: 32px;font-size: 16px;font-family: FZLTHK;">
+      版权所有： 闪电新闻客户端 All Rights Reserved
+    </div>
+  </div>
+
+
+  <!-- 右侧 热榜 -->
+  <script id="right_1" type="text/template">
+    {{each message}}
+			<div class="hot_list_content">
+        <div class="hot_number">{{ $index +1 }}</div>
+        {{if $value.type == 'article' }}
+          <div class="hot_list_title">
+            <a href={{ "https://sd.iqilu.com/v7/articlePc/detail/"+ $value.id }} target="_blank">
+              {{$value.title}}
+            <a>
+          </div>
+          {{else if $value.type == 'url' }}
+          <div class="hot_list_title">
+            <a href={{ $value.url }} target="_blank">
+              {{$value.title}}
+            <a>
+          </div>
+          {{else if $value.type == 'live' }}
+          <div class="hot_list_title">
+            <a href={{'https://sd.iqilu.com/share/live/' + $value.id  + '.html' }} target="_blank">
+              {{$value.title}}
+            <a>
+          </div>
+        {{/if}}
+			</div>
+		{{/each}}
+  </script>
+
+
+  <!-- 专题推荐 -->
+  <script id="zhuanti" type="text/template">
+    {{each message.slice(0,5)}}
+		<div class="zhuanti_list_img">
+			<a href={{ $value.url }} target="_blank">
+			<img src={{$value.img}}>
+			<div class="zhuanti_list_title">
+				<a href={{ $value.url }} target="_blank">
+					{{$value.title}}
+				</a>
+			</div>
+		</div>
+		{{/each}}
+	</script>
+
+
+  <!-- 地级市渲染-->
+  <script id="city" type="text/template">
+    {{each message}}
+		<a href={{"https://sd.iqilu.com/articlePc/list/" + $value.id + ".html?1&" + $value.id }}>
+			<!-- <a href={{"./index.html?1&" + $value.id }} target="_blank"> -->
+			<div class="diji" data-city={{$value.name}}>
+			<!-- <a href={{"./index.html?1&" + $value.id }} target="_blank"> -->
+			<!-- <a href="https://sd.iqilu.com/articlePc/list/9.html?1&9&青岛" target="_blank"> -->
+				{{$value.name}}
+			</div>
+		</a>
+			{{/each}}
+	</script>
+
+  <!-- 单个地级市 -->
+  <script id="navdijishi" type="text/template">
+    {{each message}}
+			<div class="clear_float">
+				<a href={{"https://sd.iqilu.com/articlePc/list/" + $value.id + ".html?1&" + $value.id }} style="display: inline-block;"
+					class="dijishi">{{$value.name}}</a>
+				<img src="/public/shandian/pc/images/icon_bottom_sanjiao.png" class="sanjiao1">
+			</div>
+			<ul class="level-nav" id="nav_contain">
+			</ul>
+		{{/each}}
+	</script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a024fd6185174b7675b9ad94c7a5507b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+</body>
+
+</html>

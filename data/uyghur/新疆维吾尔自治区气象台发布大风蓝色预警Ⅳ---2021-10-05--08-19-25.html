@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="description" content="中国气象局提供权威的天气预报、气象预警、卫星云图、雷达图等专业服务产品"> 
+  <meta name="keywords" content="中国气象局、气象局、天气、天气预报、气候、气象、气候、气候变化、预警"> 
+  <link rel="shortcut icon" href="/assets/favicon.ico"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1145929_t7e3a52mhxh.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css"> 
+  <link rel="stylesheet" href="/assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/cma/css/pub.css?v=20211005235544"> 
+  <script type="text/javascript" src="/assets/lib/jquery-1.9.1.min.js"></script> 
+  <!--[if lt IE 9]>
+　<script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <script src="/static/bootstrap-slider/html5shiv.min.js"></script>
+<![endif]--> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=9"> 
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c758855eca53e5d78186936566552a13";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> 
+  <script>
+	var ctx = '/web';
+</script> 
+  <title>中国气象局-天气预报-预警信号</title> 
+ </head> 
+ <body> 
+  <nav class="navbar navbar-default top-navbar" style="margin-bottom:0;"> 
+   <div class="container"> 
+    <div class="collapse navbar-collapse" style="padding:0;"> 
+     <ul class="nav navbar-nav"> 
+      <li class="active_"><a href="http://www.cma.gov.cn">主站首页</a></li> 
+      <li class="active_"><a href="http://www.cma.gov.cn/2011zwxx/2011zbmgk/">领导主站</a></li> 
+      <li class="active_"><a href="http://www.cma.gov.cn/2011zwxx/2011zbmgk/">部门概况</a></li> 
+      <li class="active_"><a href="http://www.cma.gov.cn/2011xwzx/2011xqxxw/">新闻资讯</a></li> 
+      <li class="active_"><a href="http://zwgk.cma.gov.cn/zfxxgk/gkzn/">信息公开</a></li> 
+      <li class="active_"><a href="http://www.cma.gov.cn">服务办事</a></li> 
+      <li class="active_"><a href="/web">天气预报</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </nav> 
+  <nav id="header" class="navbar" style="margin-bottom:0;"> 
+   <div class="container"> 
+    <div class="collapse navbar-collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li class="active"><a href="//weather.cma.cn" style="background-color: #fff;"><img src="/assets/cmalogo.png"></a></li> 
+     </ul> 
+     <form class="navbar-form navbar-right" style="margin-top:15px;"> 
+      <div class="searchForm"> 
+       <input type="text" id="searchInput" placeholder="输入城市名称查询天气" autocomplete="off" class="ac_input"> 
+       <i class="iconfont icon-search"></i> 
+       <div id="selectCityDiv" style="display: none;"> 
+        <ul class="nav nav-tabs tab2 tabrank tabflag" role="tablist"> 
+         <li class="active"><a class="tabflag" href="#gn" data-toggle="tab" aria-expanded="true">国内</a></li> 
+         <li class=""><a class="tabflag" href="#gw" data-toggle="tab" aria-expanded="false">国外</a></li> 
+        </ul> 
+        <div class="tab-content" style="overflow: hidden; border-top:1px solid #ddd; padding:4px;"> 
+         <div class="tab-pane active" id="gn" style="padding:0 15px;"> 
+          <div class="row citylist"> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58367.html">上海</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/51463.html">乌鲁木齐</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/52889.html">兰州</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/54511.html">北京</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58238.html">南京</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58606.html">南昌</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58968.html">台北</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58321.html">合肥</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/53463.html">呼和浩特</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/50953.html">哈尔滨</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/53772.html">太原</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/59287.html">广州</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/56294.html">成都</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/55591.html">拉萨</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/56778.html">昆明</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58457.html">杭州</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57494.html">武汉</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/54342.html">沈阳</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/54823.html">济南</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/59758.html">海口</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/59493.html">深圳</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/53698.html">石家庄</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/58847.html">福州</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/52866.html">西宁</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57036.html">西安</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57816.html">贵阳</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57083.html">郑州</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57516.html">重庆</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/53614.html">银川</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/54161.html">长春</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/57679.html">长沙</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/54517.html">天津</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/45005.html">香港</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/45011.html">澳门</a>
+           </div> 
+           <div class="col-xs-2 city">
+            <a href="/web/weather/59431.html">南宁</a>
+           </div> 
+          </div> 
+         </div> 
+         <div class="tab-pane" id="gw" style="padding:0 15px;"> 
+          <div class="row citylist"> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/062721.html">喀土穆</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/003772.html">伦敦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/068816.html">开普敦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061641.html">达喀尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05021.html">弗里敦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065563.html">亚穆苏克罗</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063260.html">摩加迪沙</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064950.html">雅温得</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05020.html">朱巴</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063980.html">维多利亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061832.html">科纳克里</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065472.html">阿克拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/067665.html">卢萨卡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/067341.html">马普托</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064500.html">利伯维尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05019.html">温得和克</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061442.html">努瓦克肖特</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05025.html">罗安达</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063125.html">吉布提市</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063450.html">亚的斯亚贝巴</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063740.html">内罗毕</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065125.html">阿布贾</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064700.html">恩贾梅纳</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05024.html">布拉柴维尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/067775.html">哈拉雷</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/060390.html">阿尔及尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05018.html">多多马</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063894.html">达累斯萨拉姆</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064390.html">布琼布拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/008589.html">普拉亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/063705.html">坎帕拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05017.html">班珠尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065387.html">洛美</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064387.html">基加利</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/060135.html">拉巴特</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/067083.html">塔那那利佛</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/060715.html">突尼斯市</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040103.html">的黎波里</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/062010.html">的黎波里</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/062366.html">开罗</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064810.html">马拉博</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05009.html">蒙罗维亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061291.html">巴马科</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/047108.html">首尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/044292.html">乌兰巴托</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048698.html">新加坡市</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/097390.html">帝力</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048647.html">吉隆坡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048074.html">内比都</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048991.html">金边</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048820.html">河内</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048940.html">万象</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/096315.html">斯里巴加湾市</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041571.html">伊斯兰堡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/043466.html">科伦坡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041923.html">达卡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/044454.html">加德满都</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/043555.html">马累</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041217.html">阿布扎比</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040582.html">科威特城</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/017130.html">安卡拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041170.html">多哈</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041256.html">马斯喀特</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040100.html">贝鲁特</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040438.html">利雅得</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041150.html">麦纳麦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040754.html">德黑兰</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040650.html">巴格达</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040948.html">喀布尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/037864.html">巴库</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/037545.html">第比利斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/037788.html">埃里温</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/035188.html">阿斯塔纳</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/038353.html">比什凯克</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/038836.html">杜尚别</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/038457.html">塔什干</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/048455.html">曼谷</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/096741.html">雅加达</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/098425.html">马尼拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/041404.html">萨那</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05010.html">尼科西亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/027612.html">莫斯科</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/011035.html">维也纳</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/016716.html">雅典</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/012375.html">华沙</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/013274.html">贝尔格莱德</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/011520.html">布拉格</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/015614.html">索非亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/011816.html">布拉迪斯拉发</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/013615.html">地拉那</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/014240.html">萨格勒布</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/014654.html">萨拉热窝</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/013462.html">波德戈里察</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/026038.html">塔林</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/026730.html">维尔纽斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/014014.html">卢布尔雅那</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/012843.html">布达佩斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/013586.html">斯科普里</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/015420.html">布加勒斯特</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/026422.html">里加</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/033345.html">基辅</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/026850.html">明斯克</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/033815.html">基希讷乌</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05005.html">瓦莱塔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/008535.html">里斯本</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05011.html">卢森堡</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/093439.html">惠灵顿</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/094035.html">莫尔斯比港</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05007.html">阿皮亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05022.html">阿洛菲</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05004.html">苏瓦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05014.html">帕利基尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05013.html">阿瓦鲁阿</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05003.html">努库阿洛法</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05012.html">维拉港</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/085574.html">圣地亚哥</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05023.html">乔治敦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/006240.html">阿姆斯特丹</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/086580.html">蒙得维的亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/080415.html">加拉加斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05016.html">帕拉马里博</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G84071.html">基多</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/084628.html">利马</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/078762.html">圣何塞</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/078806.html">巴拿马城</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05015.html">圣萨尔瓦多</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05006.html">圣多明各</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/078970.html">西班牙港</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/078862.html">圣约翰</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05026.html">罗索</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05008.html">圣乔治</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05002.html">布里奇顿</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/078224.html">哈瓦那</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/G05001.html">金斯敦</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/047662.html">东京</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/072405.html">华盛顿</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/006180.html">哥本哈根</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/094926.html">堪培拉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/076680.html">墨西哥城</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040080.html">大马士革</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/﻿001492.html">奥斯陆</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040270.html">安曼</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061052.html">尼亚美</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/083377.html">巴西利亚</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/007149.html">巴黎</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/087582.html">布宜诺斯艾利斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/006451.html">布鲁塞尔</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/047058.html">平壤</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/042299.html">廷布</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/076405.html">拉巴斯</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/002464.html">斯德哥尔摩</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/042182.html">新德里</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/010385.html">柏林</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065344.html">波多诺伏</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/071628.html">渥太华</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064650.html">班吉</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/065503.html">瓦加杜古</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/016242.html">罗马</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/040183.html">耶路撒冷</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/067001.html">莫罗尼</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/002974.html">赫尔辛基</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/061990.html">路易港</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/064210.html">金沙萨</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/038880.html">阿什哈巴德</a>
+           </div> 
+           <div class="col-xs-3 city">
+            <a href="/web/weather/008221.html">马德里</a>
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </nav> 
+  <nav class="navbar navbar-default cma-navbar" style="margin-bottom:10px;"> 
+   <div class="container"> 
+    <a href="/" target="_self" style="width:12.5%;">首页</a> 
+    <a href="/web/channel-d3236549863e453aab0ccc4027105bad.html" target="_self" style="width:12.5%;">天气实况</a> 
+    <a href="/web/channel-380.html" target="_self" style="width:12.5%;">气象公报</a> 
+    <a href="/web/alarm/map.html" target="_self" style="width:12.5%;">气象预警</a> 
+    <a href="/web/weather/map.html" target="_self" style="width:12.5%;">城市预报</a> 
+    <a href="http://www.cma.gov.cn" target="_blank" style="width:12.5%;">天气资讯</a> 
+    <a href="http://www.cma.gov.cn/2011xwzx/2011xztbd/" target="_blank" style="width:12.5%;">气象专题</a> 
+    <a href="http://www.cma.gov.cn/kppd/index.html" target="_blank" style="width:12.5%;">气象科普</a> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="col-xs-12"> 
+     <ol class="breadcrumb mybreadcrumb" id="breadcrumb"> 
+      <li><span class="glyphicon glyphicon-home myglyphicon-home" aria-hidden="true"></span> <a href="/">首页</a></li> 
+      <li><a href="/web/alarm/map.html">预警</a></li> 
+      <li class="active">详细</li> 
+     </ol> 
+     <div class="row"> 
+      <div class="col-xs-12"> 
+       <!--左侧部分--> 
+       <div class="wrap alarm"> 
+        <div style="background-color:#eee; padding:20px;"> 
+         <table class="table" style="margin-bottom:0;"> 
+          <tbody>
+           <tr> 
+            <td style="width:100px; border:0;padding-top:12px;"><img src="http://data.cma.cn/dataGis/static/ultra/img/gis/disasterWarning/11B06_BLUE.png" onerror="this.onerror='';this.src='http://data.cma.cn/dataGis/static/ultra/img/gis/disasterWarning/11B99_BLUE.png';this.alt='图片不存在！'"></td> 
+            <td style="border:0;"> 
+             <div class="alarm-title" style="font-size:24px; font-family:微软雅黑;color:#000000;">
+              新疆维吾尔自治区气象台发布大风蓝色预警[Ⅳ级/一般]
+             </div> 
+             <div class="alarm-effective" style="margin-top:20px;">
+              发布日期：2021年10月05日13时32分
+              <span style="padding-left:40px;">发布单位：新疆维吾尔自治区气象台</span>
+             </div> </td> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <p style="text-indent: 2em;" class="description">新疆维吾尔自治区气象台2021年10月5日13时25分发布大风蓝色预警信号：预计10月6日白天至8日夜间，伊犁州、博州、塔城地区、阿勒泰地区、克拉玛依市、乌鲁木齐市、昌吉州、阿克苏地区北部、巴州北部、吐鲁番市、哈密市等地的部分区域先后有5级左右西北风，南疆塔里木盆地中部和东部有5级左右偏东风，阵风8～9级，风口风力10～11级，吐鲁番市、哈密市等地风口阵风12级，请加强防范。（预警信息来源：国家预警信息发布中心）</p> 
+        <table class="table table-bordered" id="fmeans-table"> 
+         <thead> 
+          <tr> 
+           <td width="50%">标准</td> 
+           <td width="50%">防御指南</td> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td>24小时内可能受大风影响,平均风力可达6级以上，或者阵风7级以上；或者已经受大风影响, 平均风力为6？7级，或者阵风7？8级并可能持续。</td> 
+           <td>1.政府及相关部门按照职责做好防大风工作；<br>2.关好门窗，加固围板、棚架、广告牌等易被风吹动的搭建物，妥善安置易受大风影响的室外物品，遮盖建筑物资；<br>3. 相关水域水上作业和过往船舶采取积极的应对措施，如回港避风或者绕道航行等；<br> 4.行人注意尽量少骑自行车，刮风时不要在广告牌、临时搭建物等下面逗留；<br>5.有关部门和单位注意森林、草原等防火。</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> 
+       <!--左侧部分--> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--下半部分 start--> 
+   <div class="row"> 
+    <div class="col-xs-9"> 
+     <div class="hp mt15"> 
+      <div class="hd icon_fzkp">
+       防灾科普
+       <a href="http://www.cma.gov.cn/2011xzt/2015tgmb" class="more" target="_blank">更多</a>
+      </div> 
+      <div class="row hb" style="padding-bottom:0;"> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/t20210928_585319.html" title="图看气象部门如何践行“我为群众办实事”" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/W020210928594462290171.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          图看气象部门如何践行“我为群众办实事”
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/t20210928_585292.html" title="联合图解：从秋天里的天气说安全" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/W020210928360126831378.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          联合图解：从秋天里的天气说安全
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/t20210903_584145.html" title="收好这份防御手册，远离强降雨引发的次生灾害！" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202109/W020210903582088141980.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          收好这份防御手册，远离强降雨引发的次生灾害！
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/t20210831_583867.html" title="气象灾害防御微科普之高温" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/W020210831580518643741.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          气象灾害防御微科普之高温
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/t20210831_583858.html" title="汛期安全明白卡之高温" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/W020210831564976514126.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          汛期安全明白卡之高温
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/t20210824_583530.html" title="气象灾害防御微科普之暴雨" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/W020210824549178542066.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          气象灾害防御微科普之暴雨
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/t20210824_583513.html" title="汛期安全明白卡之冰雹" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202108/W020210824377323457452.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          汛期安全明白卡之冰雹
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202107/t20210729_581959.html" title="汛期安全明白卡之暴雨" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202107/W020210729515100849187.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          汛期安全明白卡之暴雨
+         </div> </a> 
+       </div> 
+       <div class="col-xs-4"> 
+        <a href="http://www.cma.gov.cn/2011xzt/2015tgmb/202107/t20210723_581497.html" title="汛期安全明白卡之台风" class="zt-item" target="_blank"> <img src="http://www.cma.gov.cn/2011xzt/2015tgmb/202107/W020210723590371495703.jpg" onerror="this.src='/assets/cma/img/zt_01.png';"> 
+         <div>
+          汛期安全明白卡之台风
+         </div> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-xs-3"> 
+     <div class="hp mt15"> 
+      <div class="hd icon_yjgl">
+       应急管理
+      </div> 
+      <div class="hb" style="padding:10px;"> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202109/t20210902_3791282.html" title="《国家突发事件预警信息发布情况月报》2021年第8期（总第66期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第8期（总第66期）</a> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202109/t20210902_3791277.html" title="《国家突发事件预警信息发布情况月报》2021年第7期（总第65期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第7期（总第65期）</a> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202107/t20210701_3480050.html" title="《国家突发事件预警信息发布情况月报》2021年第6期（总第64期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第6期（总第64期）</a> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202106/t20210601_3371061.html" title="《国家突发事件预警信息发布情况月报》2021年第5期（总第63期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第5期（总第63期）</a> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202105/t20210507_3156750.html" title="《国家突发事件预警信息发布情况月报》2021年第4期（总第62期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第4期（总第62期）</a> 
+       <a href="http://zwgk.cma.gov.cn/zfxxgk/gknr/tfsjyd/yjxxfbqkyb/202104/t20210401_3042901.html" title="《国家突发事件预警信息发布情况月报》2021年第3期（总第61期）" class="newitem" target="_blank">《国家突发事件预警信息发布情况月报》2021年第3期（总第61期）</a> 
+      </div> 
+     </div> 
+     <div class="hp mt15"> 
+      <div class="hd icon_zjjd">
+       专家解读
+       <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/index_588.html" class="more" target="_blank">更多</a>
+      </div> 
+      <div class="hb" style="padding-bottom:8px; padding-top:8px;"> 
+       <div class="cma-media-wrap"> 
+        <div class="media cma-media"> 
+         <div class="media-left"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/t20211005_585532.html" target="_blank"> <img src="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/W020211005410859113111.jpg" onerror="this.src='/assets/cma/img/zt_01.png';" style="width: 64px; height: 64px;"> </a> 
+         </div> 
+         <div class="media-body"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/t20211005_585532.html">专家解读：华西华北黄淮秋雨不断降温剧烈 南方高温 出行注意天气变化</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="cma-media-wrap"> 
+        <div class="media cma-media"> 
+         <div class="media-left"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/t20211002_585509.html" target="_blank"> <img src="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/W020211002520998556233.jpg" onerror="this.src='/assets/cma/img/zt_01.png';" style="width: 64px; height: 64px;"> </a> 
+         </div> 
+         <div class="media-body"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202110/t20211002_585509.html">专家解读：北方持续性强降雨来袭 假期出行需防范</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="cma-media-wrap"> 
+        <div class="media cma-media"> 
+         <div class="media-left"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210923_585040.html" target="_blank"> <img src="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/W020210923590484028338.jpg" onerror="this.src='/assets/cma/img/zt_01.png';" style="width: 64px; height: 64px;"> </a> 
+         </div> 
+         <div class="media-body"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210923_585040.html">专家解读：华北黄淮四川陕西“雨又来” 防范重叠影响 做好作物抢晴收种</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="cma-media-wrap"> 
+        <div class="media cma-media"> 
+         <div class="media-left"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210919_584922.html" target="_blank"> <img src="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/W020210919533749918837.jpg" onerror="this.src='/assets/cma/img/zt_01.png';" style="width: 64px; height: 64px;"> </a> 
+         </div> 
+         <div class="media-body"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210919_584922.html">专家解读：华北黄淮开启降雨模式，是否影响中秋赏月？</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="cma-media-wrap"> 
+        <div class="media cma-media"> 
+         <div class="media-left"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210915_584695.html" target="_blank"> <img src="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/W020210915738738609027.jpg" onerror="this.src='/assets/cma/img/zt_01.png';" style="width: 64px; height: 64px;"> </a> 
+         </div> 
+         <div class="media-body"> 
+          <a href="http://www.cma.gov.cn/2011wmhd/2011wzbft/2011wftzb/202109/t20210915_584695.html">华西地区为何阴雨不断？专家详解近期西南西北降雨过程</a>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--下半部分 end--> 
+  </div> 
+  <div class="footer"> 
+   <div class="container clearfix" style="padding: 20px 0;"> 
+    <div class="f_left clearfix"> 
+     <div class="dcs">
+      <a href="http://bszs.conac.cn/sitename?method=show&amp;id=10C5A3062A721232E053022819AC4A2F" target="_blank"><img src="/assets/ydyl/img/blue_error.png"></a>
+     </div> 
+     <div class="content"> 
+      <p>中国气象报社 版权所有</p> 
+      <p>地址：北京市海淀区中关村南大街46号</p> 
+      <p>邮政编码：100081</p> 
+      <p>京ICP备05004897号 京公网安备11041400161号</p> 
+     </div> 
+    </div> 
+    <div class="f_right"> 
+     <div class="footer-header">
+      相关链接
+     </div> 
+     <ul class="links clearfix"> 
+      <li><a href="https://www.yidaiyilu.gov.cn" target="_blank">中国一带一路网</a></li> 
+      <li><a href="http://www.typhoon.org.cn" target="_blank">中国台风网</a></li> 
+      <li><a href="#" target="_blank">中国新闻网</a></li> 
+      <li><a href="http://www.people.com.cn" target="_blank">人民网</a></li> 
+      <li><a href="http://www.cma.gov.cn" target="_blank">中国气象网</a></li> 
+      <li><a href="https://public.wmo.int/zh-hans" target="_blank">世界气象组织</a></li> 
+      <li><a href="http://www.gov.cn" target="_blank">中国政府网</a></li> 
+      <li><a href="http://www.xinhuanet.com" target="_blank">新华网</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="/assets/lib/jquery.cookie.js" type="text/javascript"></script> 
+  <script src="/assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.js" type="text/javascript"></script> 
+  <script src="/assets/lib/jquery.autocomplete.js" type="text/javascript"></script> 
+  <script src="/assets/lib/bootstrap-hover-dropdown.min.js" type="text/javascript"></script> 
+  <script src="/assets/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+  <script src="/assets/lib/echarts.min.js" type="text/javascript"></script> 
+  <script>
+	$(function(){
+		$('.dropdown-toggle').dropdownHover();
+		
+		$("#searchInput").autocomplete('/api/autocomplete', {
+			width: 345,
+			max: 10,
+			scroll: true,
+			scrollHeight: 400,
+			matchCase:true,
+			parse:function(rows){
+				var parsed = [];
+				for (var i=0; i < rows.data.length; i++) {
+					var row = rows.data[i];
+					if (row) {
+						parsed[parsed.length] = {
+							data: row,
+							value: row.split('|')[0]
+						};
+					}
+				}
+				return parsed;
+			},
+			focusEvent:function(input, event){
+				var v = $(input).val();
+				if(v == ''){
+					$('#selectCityDiv').show();
+				} else {
+					$('#selectCityDiv').hide();
+				}
+			},
+			formatItem: function(row) {
+				$('#selectCityDiv').hide();
+				var arr = row.split('|');
+				return '<div class="row-fluid"><div class="pull-left">' + arr[1] + '</div><div class="pull-right">' + arr[3] + '</div></div>';
+			}
+		}).result(function(event, row, formatted) {
+			var arr = row.split('|');
+			$("#searchInput").val(arr[1]);
+			window.location.href = '/web/weather/' + arr[0] + '.html';
+		});
+		
+		$(document).click(function(e){
+			var obj = $(e.srcElement || e.target);
+			var c = obj.attr('class') || null;
+			var id = obj.attr('id') || null;
+			console.log(c)
+			console.log(id)
+			if((c != null && c.indexOf('tabflag') > -1) || (id != null && (id == 'selectCityDiv' || id == 'searchInput'))) {
+				return true;
+			} else {
+				$('#selectCityDiv').hide();
+			}
+		});
+	});
+</script> 
+  <input type="hidden" name="页面生成时间" value="2021-10-05 23:55:44">
+ </body>
+</html>

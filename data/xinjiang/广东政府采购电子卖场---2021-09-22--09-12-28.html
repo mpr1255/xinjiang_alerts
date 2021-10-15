@@ -1,0 +1,1543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+<title>&#25919;&#24220;&#37319;&#36141;&#20113;&#24179;&#21488;-商品详情</title>
+<meta name="KEYWORDS" content="政府采购平台,网上商城,网上商城平台,&#25919;&#24220;&#37319;&#36141;&#20113;&#24179;&#21488;-商品详情">
+
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css/zTreeIcons.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css/zTreeStyle.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/font/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/plugin/poshytip/tip-yellowsimple/tip-yellowsimple.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/red/css/jquery-ui-1.12.1.custom.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/viewer/viewer.min.css">
+
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css/sass/common.css" type="text/css" />
+<link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/indexStyle.css" type="text/css" /><script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery-migrate-1.2.1.js"> </script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery-ui-1.12.1.custom.min.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/mall.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery.ztree.all.min.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/public.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/json.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery.marquee.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/plugin/form/jquery.form.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/plugin/form/jquery.validate.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/plugin/poshytip/jquery.poshytip.min.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/plugin/form/lib/jquery.metadata.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/viewer/viewer.min.js"></script>
+<script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/common/js/jquery.ajaxupload.3.6.js"></script>
+
+
+</head>
+<body style="position:relative;">
+    <link rel="stylesheet" type="text/css" href="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="https://gdgpo.czt.gd.gov.cn/resources/plugin/editselect/css/jquery.editable-select.css"/>
+    <script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources/plugin/editselect/js/jquery.editable-select.js"></script>
+    <script type="text/javascript">var regionguid = "2137001";
+$(function () {
+    regionguid = "2137001";
+    if (regionguid != '') {
+        $.cookie("regionguid", regionguid, {expires: 100, path: '/'});
+    }
+    if (regionguid == null || regionguid == '') {
+        regionguid = $.cookie('regionguid');
+    }
+    if (regionguid == null || regionguid == '') {
+        regionguid = "";
+    }
+    $("#menu").load("https://gdgpo.czt.gd.gov.cn/gpmall/index/initgoodsclass.html?alturl=" + url, function () {
+        $("#menu").hide();
+        $("#menu_goods").hover(function () {
+            $("#menu").show();
+        }, function () {
+            $("#menu").hide();
+        })
+        window.hidenLoading();
+    });
+
+
+    //通过url来判断当前处于什么页面  给菜单栏增加选中样式
+    var url = "/gpmall/shopping/goodspricedetail.html";
+    if (url.indexOf("provid") != -1 || url.indexOf("fixedpoint") != -1 || url.indexOf("supplierProvideQuoteDetail") != -1) {
+        $("#provide").addClass("check_a");
+        //关闭浮动菜单栏
+        $("#menu_goods").addClass("focus").css("pointer-events", "none");
+
+    } else if (url.indexOf("supermarketindex") != -1) {
+        $("#supermarket").addClass("check_a");
+        $("#goodssource").val(4);
+        //关闭浮动菜单栏
+        $("#menu_goods").addClass("focus").css("pointer-events", "none");
+
+    } else if (url.indexOf("noticelist_regulations") != -1) {
+        $("#noticelist_regulations").addClass("check_a");
+    } else if ((url.indexOf("noticelist") != -1 && url.indexOf("noticelist") == 8) || url.indexOf("noticeform") != -1) {
+        $("#notice").addClass("check_a");
+        //关闭浮动菜单栏
+        $("#menu_goods").addClass("focus").css("pointer-events", "none");
+    } else if (url.indexOf("biddingnoticelist") != -1) {
+        $("#inquiry").addClass("check_a");
+    } else if (url.indexOf("inquiry") != -1) {
+        $("#inquiry").addClass("check_a");
+    } else if (url.indexOf("agreement") != -1) {
+        $("#goodsprice").addClass("check_a");
+        //关闭浮动菜单栏
+        $("#menu_goods").addClass("focus").css("pointer-events", "none");
+    }else if (url.indexOf("requiretable") != -1) {
+        $("#quirement").addClass("check_a");
+    }else if (url.indexOf("customerservice") != -1) {
+        $("#customerservice").addClass("check_a");
+    }
+    else if (url.indexOf("lawnotice") != -1) {
+        $("#lawnotice").addClass("check_a");
+    } else if (url.indexOf("helpnotice") != -1) {
+        $("#helpnotice").addClass("check_a");
+    } else if (url.indexOf("violationnotice") != -1) {
+        $("#violationnotice").addClass("check_a");
+    } else if (url.indexOf("cgrxznotice") != -1) {
+        $("#cgrxznotice").addClass("check_a");
+    } else if (url.indexOf("epidemic") != -1) {
+        $("#epidemic").addClass("check_a");
+    }
+    else if (url.indexOf("index") != -1 || url.indexOf("gpmall") != -1) {
+        $("#index").addClass("check_a");
+    } else if (url.indexOf("bidding") != -1) {
+        $("#goodsprice").addClass("check_a");
+    }else if (url.indexOf("epidemic") != -1) {
+        $("#epidemic").addClass("check_a");
+    }
+    if(url.indexOf("index.html") != -1 && (regionguid != '3201001' || regionguid != '3203'|| regionguid != '320201' || regionguid != '320202' || regionguid != '320203' || regionguid != '320204')){
+        //关闭浮动菜单栏
+        // $("#menu_goods").addClass("focus").css("pointer-events", "none");
+    }
+    //如果不是甘肃省本级,帮助公告就隐藏掉, 这个仅限甘肃 不影响下面兰州
+    if(regionguid != '3201001'){
+        $("#helpnotice").hide();
+    }
+
+    var browser = navigator.appName;
+    if (browser == "Microsoft Internet Explorer") {
+        if (document.documentMode < 8) {
+            $("#tips").show();
+        }
+    }
+
+    /*  document.getElementById('Indexregion').style.display = "block";*/
+
+
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getByRegion.html", {"regionguid": regionguid}, function (region) {
+        // if(region.regionguid == '704001'){
+        //     $('#agreementtype-four').hide();
+        //     $('#agreementtype-two').hide();
+        // }
+        if (region.logopath != null && region.logopath != '') {
+            $('#logo').attr("src", region.logopath);
+        } else {
+            $('#logo').attr("src", "https://gdgpo.czt.gd.gov.cn/resources/common/logo/logo.png");
+        }
+        /* 控制5大模块是否显示*/
+        if (region.goodsprice != 0) {
+            $('#goodsprice').show();
+            $('#bidding_li').show();
+            $('#bidding_div').show();
+        }
+        if (region.supermarket != 0) {
+            $('#supermarket').show();
+        }
+        if (region.provide != 0) {
+            $('#provide').show();
+            $('#provide_li').show();
+            $('#provide_div').show();
+        }
+        if (region.inquiry != 0) {
+            $('#inquiry').show();
+            $('#inquiry_li').show();
+            $('#inquiry_div').show();
+        }
+        if(region.quirement == 1) {
+            $('#quirement').show();
+        }
+        if(region.customerservice == 1) {
+            $('#customerservice').show();
+        }
+        if (region.notice != 0) {
+            $('#notice').show();
+        }
+        if (region.epidemic == 1) {
+            $('#epidemic').show();
+        }
+        //西藏的话  显示违规通报和 采购人须知
+        if (region.regionguid == '2991001') {
+            $('#violationnotice').show();
+            $('#cgrxznotice').show();
+        }
+        /* 控制5大模块的名称*/
+        if (region.goodspricename != null && region.goodspricename != '') {
+            $('#goodsprice').text(region.goodspricename);
+        }
+        if (region.supermarketname != null && region.supermarketname != '') {
+            $('#supermarket').text(region.supermarketname);
+        }
+        if (region.providename != null && region.providename != '') {
+            $('#provide').text(region.providename);
+        }
+        if (region.inquiryname != null && region.inquiryname != '') {
+            $('#inquiry').text(region.inquiryname);
+        }
+        if (region.noticename != null && region.noticename != '') {
+            $('#notice').text(region.noticename);
+        }
+        if (region.epidemicname != null && region.epidemicname != '') {
+            $('#epidemic').text(region.epidemicname);
+        }
+        /* 控制系统名称,修改页面title*/
+        if (region.systemname != null && region.systemname != '') {
+            document.title = region.systemname;
+            $('#systemname').text(region.systemname);
+        }
+        // 内蒙的话隐藏商品库跳转
+        if (region.regionguid == '374001') {
+            $('#gcysupplier').hide();
+        }
+
+    });
+
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getRegionName.html", {"regionguid": regionguid}, function (region) {
+        var data = region.regionname
+        $('#presentregion').text(data);
+        $("#presentregion").attr("code", region.regioncode);
+        $('#Indexregion').text(data.substring(data.lastIndexOf("_") + 1, data.length));
+    });
+    // 当前场馆名
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getPlatformName.html", function (data) {
+        $("#platformname").text(data);
+    });
+
+
+    var drp = $(".dropdownWrap");
+    $(".indexRegion").on("click", (function (e) {
+        if (drp.hasClass('active')) {
+            drp.removeClass('active');
+            $("#state").removeClass("fa-angle-up").addClass("fa-angle-down")
+        } else {
+            drp.addClass('active');
+            $("#state").removeClass("fa-angle-down").addClass("fa-angle-up")
+        }
+        e.stopPropagation();
+    }));
+    $("body").on("click", function (e) {
+        $(".dropdownWrap").removeClass("active");
+        $("#state").removeClass("fa-angle-up").addClass("fa-angle-down")
+    });
+    drp.on("click", function (e) {
+        e.stopPropagation();
+    });
+    // $("#region_div").load("https://gdgpo.czt.gd.gov.cn/gpmall/index/getNewRegion.html");
+
+    var isOrg = 'false';
+    if (isOrg != false && isOrg != "false") {
+        $(".indexRegion").unbind("click");
+    }
+
+
+    //判断是否704001
+    if(regionguid == "704001"){
+        $(".hrb_href").show();
+        $("#tzggli").hide();
+    }
+
+    //如果甘肃。显示购物车数量
+    if(regionguid == "3201001" || regionguid == "3203"|| regionguid == "320201"){
+        showCartNum();
+    }
+    showCartNumHrb();
+});
+
+
+//搜索
+function searchkeyword() {
+    $("input[name='keyword']").val($("#searchkeyword").val());
+    $("#searchform_index").submit();
+}
+
+function appendprovice() {
+    $("#addressList").load("https://gdgpo.czt.gd.gov.cn/gpmall/index/getRegion.html");
+}
+
+
+function setCookie(regionguid, regionname, regioncode) {
+    var cookieguid = 'regionguid';
+    var cookieName = 'regionname';
+    var cookieCode = "regioncode";
+    var text = regionname;
+    var code = regionguid;
+    var regioncode = regioncode;
+    if (text == null || text == '') {
+        code = $("#presentregion").val();
+        text = $("#presentregion").text();
+        regioncode = $("#presentregion").attr("code");
+    }
+    $.cookie(cookieguid, code, {expires: 100, path: '/'});
+    $.cookie(cookieName, text, {expires: 100, path: '/'});
+    $.cookie(cookieCode, regioncode, {expires: 100, path: '/'});
+    $('#presentregion').text(text);
+    $('#Indexregion').text(text);
+    $('#close').click();
+    location.reload();
+}
+
+function changeRead() {
+    var stationguids = '';
+    $(".mess_con ul li").each(function () {
+        stationguids = stationguids + $(this).attr("name") + ',';
+    });
+    if (stationguids == '') {
+        return;
+    }
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/station/updateStation.html", {guids: stationguids}, function (data) {
+        if (data <= 0) {
+            alert("操作失败");
+        } else {
+            $(".mess_con ul").empty();
+            getStation();
+        }
+    });
+}
+
+function getStation() {
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/station/getStationByReceiver.html", function (data) {
+        if (data != null && data.length != 0) {
+            for (var i = 0; i < data.length; i++) {
+                $(".mess_con ul").append("<li name='" + data[i].stationguid + "'>" +
+                    "<a class='msgbox' href='https://gdgpo.czt.gd.gov.cn/gpmall/station/getStationList.html?stationguid=" + data[i].stationguid + "'>" +
+                    "<div class='div-cell msg-title'><i class='fa fa-commenting-o'></i>" + data[i].title + "</div>" +
+                    "<div class='div-cell' style='width:122px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;'>" + data[i].sendtimename + "</div>" +
+                    "</a></li>");
+            }
+            $("#num").text("(" + data.length + ")");
+            $("#num").css("color", "red");
+            $("#mess").css("color", "red");
+        } else {
+            $(".mess_con ul").append("<li class='text-center' style='border:0'>暂无消息</li>");
+            $("#num").text("(0)");
+            $("#num").css("color", "black");
+            $("#mess").css("color", "black");
+        }
+    });
+}
+
+$(document).ready(function () {
+    getStation();
+    $(".msg").hover(function () {
+        $(this).addClass("msg_bg");
+        $(this).children(".mess_list").show();
+    }, function () {
+        $(this).removeClass("msg_bg");
+        $(this).children(".mess_list").hide();
+    });
+
+    /* var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+     if (keys) {
+         for (var i = keys.length; i--;) {
+             if(keys[i] == 'regionguid' || keys[i] == 'regioncode' || keys[i] == 'JSESSIONID'){
+                 continue;
+             }
+             document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();//清除当前域名下的,例如：m.kevis.com
+             document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();//清除当前域名下的，例如 .m.kevis.com
+             document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();//清除一级域名下的或指定的，例如 .kevis.com
+         }
+     }*/
+});
+
+//退出登录 ,先请求清理cookie过期,再调用退出url
+function logout() {
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/logoutRemoveCookie.html", {}, function (returnMessage) {
+        if (returnMessage.code = 200) {
+            window.localStorage.clear();
+            window.sessionStorage.clear();
+            /* var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+             if (keys) {
+                 for (var i = keys.length; i--;) {
+                     if(keys[i] == 'regionguid'){
+                         continue;
+                     }
+                     document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();//清除当前域名下的,例如：m.kevis.com
+                     document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();//清除当前域名下的，例如 .m.kevis.com
+                     document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();//清除一级域名下的或指定的，例如 .kevis.com
+                 }
+             }*/
+            window.location.href = 'https://gdgpo.czt.gd.gov.cn/gpmall/j_spring_security_logout';
+        }
+    });
+}
+
+function logon() {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;) {
+            if(keys[i] == 'regionguid'){
+                continue;
+            }
+            document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();//清除当前域名下的,例如：m.kevis.com
+            document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();//清除当前域名下的，例如 .m.kevis.com
+            document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();//清除一级域名下的或指定的，例如 .kevis.com
+        }
+    }
+    window.location.href="https://gdgpo.czt.gd.gov.cn/gpmall/todo/mytodo.html";
+}
+
+
+function showCartNum(){
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getCartNum.html?regionguid="+regionguid, function (message) {
+        if(message.code == 200){
+            $("#cartnumdiv").text(message.data);
+            $("#cartdiv").attr("style","display: inline-block;width: 130px;")
+            $("#cartnumdiv").show();
+        }
+    });
+}
+
+
+function showCartNumHrb() {
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getCartNum.html?regionguid="+regionguid, function (message) {
+        if(message.code == 200){
+            $("#countnum1").text("（"+message.data+"）");
+        }
+    });
+}
+
+
+function refeshPlatform(platform) {
+    $.cookie('platform', platform, {expires: 100, path: '/'});
+    $.post("https://gdgpo.czt.gd.gov.cn/gpmall/index/getPlatformName.html", function (data) {
+        $("#platformname").text(data);
+    });
+}
+
+function refeshNowPlatform(platform) {
+    $.cookie('platform', platform, {expires: 100, path: '/'});
+    window.location.reload();
+}
+
+</script>
+    <div id="tips" class="update_broswer" style="display: none;">温馨提示：为了更好的用户体验，建议您使用<a
+                href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">8以上IE版本浏览器</a>或者使用<a
+                href="http://www.firefox.com.cn/download/">火狐</a> / <a
+                href="http://rj.baidu.com/soft/detail/14744.html?ald">谷歌</a>浏览器
+    </div>
+    <div class="container-fluid headerNav paddingLeft0 paddingRight0">
+        <div class="headerNavi clearfix">
+            <div class="pull-left logo">
+                <a href="https://gdgpo.czt.gd.gov.cn/gpmall-web/index.html" class="logo_pic">
+                    <!-- 这里logo图片路径会根据系统区域中的路径进行替换 -->
+                    <img id="logo" src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerImg/logo.png">
+                </a>
+            </div>
+            <div class="dropdown seltProject pull-left">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="cg"><img src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerImg/changguan.png" alt=""></span>
+                    <span class="cg-text" id="platformname">业务场馆</span>
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <div class="dropdown-menu cgList">
+                    <div style="border-bottom: 1px solid #E3F3FD;padding-bottom: 4px;margin-bottom: 8px;text-align: right;padding-right: 25px;">
+                        <a href="https://gdgpo.czt.gd.gov.cn/gpmall-web/index.html#/adminIndex">
+                            <h5 style="color:#1597eb;">返回首页</h5></a>
+                    </div>
+
+                    <ul class="divbox">
+                        <li class="cgname">集采馆</li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('1')">
+                                <p class="cgentryi p1"></p>
+                                <p class="cgentryn">集采商城</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('3')">
+                                <p class="cgentryi p2"></p>
+                                <p class="cgentryn">定点集市</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="divbox">
+                        <li class="cgname">行业馆</li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('5')">
+                                <p class="cgentryi p3"></p>
+                                <p class="cgentryn">消防馆</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('6')">
+                                <p class="cgentryi p4"></p>
+                                <p class="cgentryn">教育馆</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="divbox">
+                        <li class="cgname">网上超市</li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('4')">
+                                <p class="cgentryi p5"></p>
+                                <p class="cgentryn">货物超市</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('4')">
+                                <p class="cgentryi p6"></p>
+                                <p class="cgentryn">服务超市</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="divbox">
+                        <li class="cgname">特色馆</li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('2')">
+                                <p class="cgentryi p7"></p>
+                                <p class="cgentryn">扶贫馆</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="">
+                                <p class="cgentryi p8"></p>
+                                <p class="cgentryn">创新馆</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="refeshNowPlatform('11')">
+                                <p class="cgentryi p6"></p>
+                                <p class="cgentryn">疫情防控馆</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="divbox">
+                        <li class="cgname" style="line-height: 14px;">供应商生态</li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="">
+                                <p class="cgentryi p9"></p>
+                                <p class="cgentryn">电子发票</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="">
+                                <p class="cgentryi p10"></p>
+                                <p class="cgentryn">安装服务</p>
+                            </a>
+                        </li>
+                        <li class="cgentry text-center">
+                            <a href="javascript:void(0);" onclick="">
+                                <p class="cgentryi p11"></p>
+                                <p class="cgentryn">配送服务</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pull-right clearfix">
+                <div class="pull-left textbtn">
+                    <span class="bgi">
+                        <img src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerImg/backindex.png" alt="">
+                    </span>
+                    <a href="https://gdgpo.czt.gd.gov.cn/gpmall-web/index.html#/index">返回控制台首页</a>
+                </div>
+                <div class="pull-left textbtn">
+                    <span class="bgi">
+                       <img src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerImg/oval.png" width="30px">
+                    </span>
+
+                </div>
+                <div class="pull-left textbtn">
+                    <a href="javascript:logout()">
+                       <span class="bgi">
+                       <img src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/css_2137001/headerImg/quit.png" alt="">
+                    </span>
+                        <span>退出</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="https://gdgpo.czt.gd.gov.cn/resources/plugin/magiczoom/css/MagicZoom.css" type="text/css"/>
+    <script src="https://gdgpo.czt.gd.gov.cn/resources/plugin/magiczoom/js/MagicZoom.js" type="text/javascript"></script>
+    <script src="https://gdgpo.czt.gd.gov.cn/resources/common/js/anchor.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://gdgpo.czt.gd.gov.cn/resources\common\echarte\echarts.js"></script>
+    <script type="text/javascript">$(function () {
+    var accessoryHeight = $("#accessorytip").outerHeight(true) + $("#accessorycontent").outerHeight(true);
+    /*获取要定位元素距离浏览器顶部的距离*/
+    var navH = $("#midnavi").offset().top;
+    var bottomH = $("#bottomdiv").offset().top;
+    /*滚动条事件*/
+    $(window).scroll(function () {
+        //获取滚动条的滑动距离
+        var scroH = $(this).scrollTop();
+        //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+        if (scroH >= navH) {
+            $("#midnavi").css({"position": "fixed", "top": 0,"z-index":2});
+        } else {
+            // if(scroH<navH)
+            $("#midnavi").css({"position": "static"});
+        }
+    });
+
+    //禁用数字输入
+    if (typeof(inputNumbervalidator) == "function") {
+        inputNumbervalidator();
+    }
+
+    $("#main_sub").live('click', function () {
+        var curval = parseInt($("#main_qty").val()) - 1;
+        if (curval < 1) {
+            curval = 1
+        }
+        $(".accessNum").val(curval);
+        $("#main_qty").val(curval);
+    });
+
+
+    $(".a_midnavi").live('click', function () {
+        $(this).parent().siblings().each(function () {
+            $(this).attr("class", "");
+        });
+        $(this).parent().attr("class", "this");
+    });
+
+    //详细信息初始化
+    showxygys();
+    showcjjl();
+    showsppj();
+    showqwbj();
+
+    var countsitesp = "0";
+    if(countsitesp==0){
+        detailShow(2);
+    }
+
+    loadOverCart();
+
+    $("#goodsbranddiv").load("/gpmall/shopping/brotherGoodsPrice.html?goodsclassguid=2ca4a74d72c1de340172cccbf82901d4"+"&regionguid=2137001");
+
+    //设置图片框显隐
+    var picRule = "5";
+    if(picRule != 1){
+        $("#smalldiv").css("display","block");
+    }
+
+    $(".tips_pic").hover(function () {
+        $(this).siblings(".tips_word").css("display","block");
+    }, function () {
+        $(this).siblings(".tips_word").css("display","none");
+    })
+
+    $(".price_box .new_pri span.pri_use").on("click", function (){
+        var price = $(this).attr("data-price");
+        var link = $(this).attr("data-url");
+        $(".price_box .new_pri span.pri_use").removeClass("pri_active");
+        $(this).addClass("pri_active");
+        $(".price_box .new_pri .pic_show").text(price);
+        $(".price_box .new_pri .pic_link").attr("href", link);
+    })
+});
+//保存最近浏览记录
+saverecently();
+
+var goodsform = null;
+<!--保存最近浏览记录 -->
+function saverecently() {
+    var parray = new Array();
+    if ($.cookie("recently") != null) {
+        parray = $.parseJSON($.cookie("recently"));
+    }
+    if (parray.length >= 8) {
+        parray.shift();
+    }
+    for (var i = 0; i < parray.length; i++) {
+        if (parray[i].goodscode == $("input[name='goodscode']").val()) {
+            return;
+        }
+    }
+    var price = new Object();
+    price.goodspriceguid = $("input[name='goodspriceguid']").val();
+    price.goodscode = $("input[name='goodscode']").val();
+    price.currentprice = $("input[name='price']").val();
+    price.pic = $("#mainpic").attr("src");
+    parray.push(price);
+    var strjson = $.toJSON(parray);
+    $.cookie("recently", strjson, {expires: 30, path: "/"});
+}
+
+function addOne() {
+    var curval = parseInt($("#main_qty").val());
+    $("#main_qty").val(curval + 1);
+    $(".accessNum").val(curval + 1);
+}
+
+
+function changeimg(imgpath) {
+    $(".mainpicclass").attr("href", imgpath);
+    $(".mainpicclass img").attr("src", imgpath);
+}
+
+//显示协议供应商
+function showxygys() {
+   var suppliername =$("#suppliername").val();
+   var regionguid = $("#regionguid").val();
+    if(suppliername==null || suppliername == undefined || suppliername == ""){
+        $("#xygys_div").load("/gpmall/shopping/goodstosupplierlist.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839&goodsguid=2ca4a732763fbb730176a7fef835376d&regionguid="+regionguid);
+    }else {
+        $("#xygys_div").load(encodeURI(encodeURI("/gpmall/shopping/goodstosupplierlist.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839&goodsguid=2ca4a732763fbb730176a7fef835376d&suppliername="+suppliername+"&regionguid="+regionguid)));
+    }
+
+}
+
+//商品评价
+function showsppj() {
+    $("#sppj_div").load("/gpmall/shopping/searchGoodsEvaluation.html?goodsguid=2ca4a732763fbb730176a7fef835376d", function () {
+        window.hidenLoading();
+    });
+}
+
+
+//成交记录
+function showcjjl() {
+    $("#cjjl_div").load("/gpmall/shopping/tradingrecord.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839", function () {
+        window.hidenLoading();
+    });
+}
+
+//全网比价
+function showqwbj() {
+    $("#qwbj_div").load("/gpmall/shopping/showSiteSpList.html?goodsguid=2ca4a732763fbb730176a7fef835376d", function () {
+        window.hidenLoading();
+    });
+}
+
+
+//显示配件服务 更换配置
+function changeaccessorytbody(index, e) {
+    $(e).parent().parent().find("li").each(function () {
+        $(this).attr("class", "");
+    });
+    $(e).parent().attr("class", "this");
+    $(".accessorytbody").hide();
+    $("#accessorytbody_" + index).show();
+}
+
+var price_trendloadflag = true;
+
+function show_ana_pri() {
+    if (price_trendloadflag) {
+        $("#price_trend").load("/gpmall/shopping/goodscharts.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839", function () {
+            price_trendloadflag = false;
+            $("#price_trend").show();
+        });
+    } else {
+        $("#price_trend").show();
+    }
+}
+
+function hide_ana_pri() {
+    $("#price_trend").hide();
+}
+
+
+//协议供应商/成交记录/商品评价 分页
+var clickDiv = '';
+
+function choosDiv(data) {
+    clickDiv = data;
+}
+
+function change(pager_offset) {
+    var suppliername =$("#suppliername").val();
+    var regionguid = $("#regionguid").val();
+    //协议供应商分页
+    if (clickDiv == 'xygys_div') {
+        $("#xygys_div").load("/gpmall/shopping/goodstosupplierlist.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839&goodsguid=2ca4a732763fbb730176a7fef835376d&suppliername="+suppliername+"&pageno=" + pager_offset+"&regionguid="+regionguid, function () {
+            window.hidenLoading();
+        });
+    }
+    //成交记录分页
+    if (clickDiv == 'cjjl_div') {
+        $("#cjjl_div").load("/gpmall/shopping/tradingrecord.html?goodspriceguid=2ca4a732763fbb730176a83c9e6e3839&pageno=" + pager_offset, function () {
+            window.hidenLoading();
+        });
+    }
+    //商品评价分页
+    if (clickDiv == 'sppj_div') {
+        $("#sppj_div").load("/gpmall/shopping/searchGoodsEvaluation.html?goodsguid=2ca4a732763fbb730176a7fef835376d&pageno=" + pager_offset, function () {
+            window.hidenLoading();
+        });
+    }
+}
+
+
+function frontOrBack(state) {
+    var $imgpath = $(".mainpicclass img").attr("src");
+    var paths = new Array();
+    var index = 0;
+    var length = 0;
+    $(".com_box img").each(function (i, data) {
+        paths.push(this.src);
+        if (this.src == $imgpath) {
+            index = i;
+        }
+    });
+    if (state == 0) {
+        index += 1;
+        if (index == paths.length) {
+            index = 0;
+        }
+    }
+    else {
+        index -= 1;
+        if (index == -1) {
+            index = paths.length - 1;
+        }
+    }
+    $(".mainpicclass").attr("href", paths[index]);
+    $(".mainpicclass img").attr("src", paths[index]);
+}
+
+
+function showmore() {
+    $("#select_supplier").css('height', '450px');
+    $("#supp_list").show();
+    $("#showmore").hide();
+    $("#hidemore").show();
+}
+
+function hidemore() {
+    $("#select_supplier").css('height', '300px');
+    $("#supp_list").hide();
+    $("#showmore").show();
+    $("#hidemore").hide();
+}
+function updateAccessoryQty(id, num) {
+    var qty = parseInt($(id).val()) + parseInt(num);
+    if (qty <= 0) {
+        return;
+    }
+    $(id).val(qty);
+}
+
+
+
+//选择供应商
+function selectSupplier(goodsguid,goodspriceguid){
+    var main_qty = $("#main_qty").val();
+    $(".accessoryTwo").val(main_qty);
+
+    $.ajax({
+        type: 'POST',
+        url: '/gpmall/cart/hasGoodsToAgent.html',
+        data: $('#goodsform').serialize(),
+        success: function(returnmessage){
+            if(returnmessage.code == 200){
+                $("#select_supplier").load("/gpmall/shopping/searchoffer.html",{goodsguid:goodsguid,goodspriceguid:goodspriceguid},function(){
+                    window.hidenLoading();
+                })
+                $("#select_supplier").dialog({
+                    title:'选择供应商',
+                    autoOpen : true,
+                    modal:true,
+                    resizable : false,
+                    width :950,
+                    height :500,
+
+                });
+            }else{
+                alert(returnmessage.message);
+                return;
+            }
+        }
+    });
+}
+
+function choiceagreementsupplier () {
+    var goodsclassguid = $("#goodsclassguid").val();
+    var brandguid = $("#goodsbrandguid").val();
+
+    $("#agreement_supplier").load("https://gdgpo.czt.gd.gov.cn/gpmall/cart/addToCartChoiceAgreementSupplier.html", {goodsclassguid: goodsclassguid,brandguid: brandguid});
+    $("#agreement_supplier").dialog({
+        title: '选择协议供应商',
+        autoOpen: true,
+        width: 1300,
+        height: 600,
+        modal: true,
+        buttons: {
+            '取消': function () {
+                $(this).dialog('close');
+            },
+            '确认': function () {
+                if ($("input[type='radio'][name='chioce_supplier']:checked").length == 0 ) {
+                    alert("请选择数据");
+                }
+                var supplierguid = $("input[type='radio'][name='chioce_supplier']:checked").val();
+                 $("#sellsupplierguid").val(supplierguid);
+                $(this).dialog('close');
+            }
+        }
+    });
+}
+//加入购物车
+function savetocart(goodspriceguid){
+    var accessoryAll = '';
+    var my_checkboxs=$(".acc-check");
+    goodsform =  $("#goodsform").validate();
+    for(var i=0;i<my_checkboxs.length;i++){
+        var ob = my_checkboxs[i];
+        if($(ob).prop("checked")){
+            if(accessoryAll != ''){
+                accessoryAll = accessoryAll + "," + $("#accessory_"+i).val() + ":" + $("#accessory_qty_"+i).val();
+            }else{
+                accessoryAll = $("#accessory_"+i).val() + ":" + $("#accessory_qty_"+i).val();
+            }
+        }
+    }
+    if(accessoryAll != ''){
+        $("#accessoryAll").val(accessoryAll);
+    }
+    $.ajax({
+        type: 'POST',
+        url: '/gpmall/cart/hasGoodsToAgent.html',
+        data: $('#goodsform').serialize(),
+        success: function (rm) {
+            if (rm.code != 200) {
+                if(rm.message == "未登录,请登录后重试"){
+                    logon();
+                    return;
+                }
+                alert(rm.message);
+                return;
+            }
+            if (rm.code == 200) {
+                add_cart();
+            //     var goodssource = $("#goodssource").val();
+            //     var goodsclassguid = $("#goodsclassguid").val();
+            //     var brandguid = $("#goodsbrandguid").val();
+            //     $.post("https://gdgpo.czt.gd.gov.cn/gpmall/shopping/directGoodsRuleJudgment.html",{goodspriceguid:goodspriceguid,goodssource:goodssource},function (data) {
+            //         if (data.code == 400) {
+            //             alert(data.message);
+            //             return;
+            //         }
+            //         if (data.code == 200) {
+            //             add_cart();
+            //         }
+            //         if (data.code == 300) {
+            //             $("#agreement_supplier").load("https://gdgpo.czt.gd.gov.cn/gpmall/cart/addToCartChoiceAgreementSupplier.html", {goodsclassguid: goodsclassguid,brandguid: brandguid});
+            //             $("#agreement_supplier").dialog({
+            //                 title: '选择协议供应商',
+            //                 autoOpen: true,
+            //                 width: 900,
+            //                 height: 600,
+            //                 modal: true,
+            //                 buttons: {
+            //                     '取消': function () {
+            //                         $(this).dialog('close');
+            //                     },
+            //                     '确认': function () {
+            //                         if ($("input[type='radio'][name='chioce_supplier']:checked").length == 0 ) {
+            //                             alert("请选择数据");
+            //                             return;
+            //                         }
+            //                         var supplierguid = $("input[type='radio'][name='chioce_supplier']:checked").val();
+            //                         $("#sellsupplierguid").val(supplierguid);
+            //                         $(this).dialog('close');
+            //                         add_cart();
+            //                     }
+            //                 }
+            //             });
+            //         }
+            //
+            //     });
+            }
+        }
+    });
+}
+
+function logon() {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;) {
+            if(keys[i] == 'regionguid'){
+                continue;
+            }
+            document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();//清除当前域名下的,例如：m.kevis.com
+            document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();//清除当前域名下的，例如 .m.kevis.com
+            document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();//清除一级域名下的或指定的，例如 .kevis.com
+        }
+    }
+    window.location.href="https://gdgpo.czt.gd.gov.cn/gpmall/todo/mytodo.html";
+}
+
+function add_cart () {
+    //加入购物车操作
+    $.ajax({
+        type: 'POST',
+        url: '/gpmall/cart/saveToCartNew.html',
+        data: $('#goodsform').serialize(),
+        success: function (returnMessage) {
+            if (returnMessage.code == 200) {
+                if (returnMessage.data != null) {
+                    var data = returnMessage.data;
+                    $("#rGoodsname").text(data["name"]);
+                    $("#rQty").text(data["qty"]);
+                    $("#rPrice").text(data["price"]);
+                    $("#rAccPrice").text(data["accPrice"]);
+                    $("#rAccQty").text(data["accQty"]);
+                    $("#rTotalPrice").text(data["rTotalPrice"]);
+                    showCartRequest();
+                }
+
+            } else {
+                alert(returnMessage.message);
+            }
+
+        }
+    });
+}
+
+//全选
+function selectAllMy(obj){
+    var obj1=$("#"+obj);
+    if(obj1.prop("checked")){
+        $("."+obj).attr("checked",true);
+    }else{
+        $("."+obj).attr("checked",false);
+    }
+}
+
+function changecheck(obj) {
+    var my_totalcount=0;
+    var my_checkboxs=$("."+obj);
+    for(var i=0;i<my_checkboxs.length;i++){
+        var ob=my_checkboxs[i];
+        if($(ob).prop("checked")){
+            my_totalcount++;
+        }
+    }
+    if(my_totalcount==my_checkboxs.length){
+        $("#"+obj).attr("checked",true);
+    }else{
+        $("#"+obj).attr("checked",false);
+    }
+}
+//配件及更换配置div显隐
+function  changePeijianDiv(catalog) {
+        $(".peijian").css("display","none");
+        $("#peijianDiv_"+catalog).css("display","block");
+        $(".accessorybtn").removeClass("btn");
+        $("#peijianBtn_"+ catalog).addClass("btn");
+    }
+
+
+//具体参数显影
+function detailShow(num) {
+    $(".details").css("display","none");
+    if(num == 1){
+        $("#qwbj_div").css("display","block");
+    }else if(num == 2){
+        $("#spjs_div").css("display","block");
+        $("#csgg_div").css("display","block");
+    }else if(num == 3){
+        $("#csgg_div").css("display","block");
+    }else if(num == 4){
+        $("#xygys_div").css("display","block");
+    }else if(num == 5){
+        $("#cjjl_div").css("display","block");
+    }else if(num == 6){
+        $("#sppj_div").css("display","block");
+    }
+}
+
+function loadOverCart() {
+    $("#toCartdialog").load("/gpmall/cart/overCart.html", function () {
+        window.hidenLoading();
+    });
+}
+function showCartRequest(){
+
+    $('#toCartdialog').dialog({
+        title: "系统提示",
+        autoOpen: true,
+        width: 450,
+        height: 350,
+        resizable: false,
+        modal: true,
+        buttons: {
+            '继续购物': function () {
+                $(this).dialog('close');
+            }, '前往购物车': function () {
+                window.open("https://gdgpo.czt.gd.gov.cn/gpmall/cart/mycart.html");
+            }
+        }
+    });
+}
+function jumpZG(keyword) {
+    window.open("http://search.zol.com.cn/s/all.php?kword="+keyword);
+}
+function numcheck() {
+    var num = $("#main_qty").val();
+    var reg = /^[1-9]\d*$/;
+    if (!reg.test(num)) {
+        $("#main_qty").val(1);
+    }
+}
+
+//商品比价
+function contrastgoods(goodspriceguids) {
+    window.location.href = 'https://gdgpo.czt.gd.gov.cn/gpmall/followgoods/followgoodscompare.html?goodspriceguids='+goodspriceguids;
+}
+
+function chakanQuoteSupplier(goodsquotepriceguid){
+    $("#GoodsQuotePriceDetailDiv_div").load("https://gdgpo.czt.gd.gov.cn/gpmall/goodsquoteprice/goodsQuotePriceDetail.html", {goodsquotepriceguid:goodsquotepriceguid});
+    $("#GoodsQuotePriceDetailDiv_div").dialog({
+        title: '我的报价信息',
+        autoOpen: true,
+        width: 1000,
+        height: 500,
+        modal: true,
+        buttons: {
+            '关闭': function () {
+                $("#GoodsQuotePriceDetailDiv_div").html("");
+                $(this).dialog('close');
+            }
+        }
+    });
+
+}</script>
+<style>
+    .spjs p img {
+        max-width: 901px;
+    }
+    .spjs ul li img {
+        max-width: 901px;
+    }
+
+    .alertInfo {
+        width: 100%;
+        padding: 8px 8px;
+        background: #FFF4EF;
+        border: 1px solid #FFE6DE;
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    .alertInfo .tishi {
+        font-size: 12px;
+        color: #EC6841;
+        margin-bottom: 6px;
+        vertical-align: middle;
+    }
+    .moneyInfo {
+        width: 100%;
+        font-size: 12px;
+        line-height: 30px;
+        margin-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background: #FFF7F3;
+    }
+</style>
+    <div class="middle_box">
+        <div class="middle" style="width: 1240px!important;padding: 16px 0;">
+            <form id="goodsform" name="goodsform" action="/gpmall/cart/savetocart.html" method="post">
+                <input type="hidden" name="goodspriceguid" value="2ca4a732763fbb730176a83c9e6e3839">
+                <input type="hidden" name="goodscode" value="20201343441018778816512">
+                <input type="hidden" name="goodsguid" value="2ca4a732763fbb730176a7fef835376d">
+                <input type="hidden" name="price" value="169.00">
+                <input type="hidden" id="sellsupplierguid" name="sellsupplierguid"/>
+
+                <input type="hidden" id="goodsclassguid" value="2ca4a74d72c1de340172cccbf82901d4"/>
+                <input type="hidden" id="goodsbrandguid" value="2ca4a74d7374374c01738f4856f7001f"/>
+                <input type="hidden" id="goodssource" value="4"/>
+                <input type="hidden" id="regionguid" value="2137001"/>
+
+                <input type="hidden" id="accessoryAll" name="accessoryAll"/>
+                <div class="posit clearfix" style="margin-bottom: 1px;border-bottom: 0">
+                    <span class="posit-text">
+                        <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172cccbf82901d4"> 休闲零食</a>
+                        &gt;
+                        <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172cccbf82901d4&goodsbrandguid=2ca4a74d7374374c01738f4856f7001f"> ☆</a>
+                        &gt;
+                        <a>坚果果干礼盒->新疆休闲零食组合装</a>
+                    </span>
+                </div>
+
+                <div class="com_pro_title clearfix">
+                    <div class="com_pro_title_left">
+                        <div class="main_com">
+                            <a href="https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136261189.jpg"
+                               class="MagicZoom mainpicclass" id="MagicZoom">
+                                <img id="mainpic" class="pic1" style="max-height: 338px;"
+                                     src="https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136261189.jpg">
+                            </a>
+                        </div>
+                        <div class="small_com" id="smalldiv" style="display: none;">
+                            <a class="front" href="javascript:void(0);" onclick="frontOrBack(1)" id="front1"><img
+                                        src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/red/css/images/icon/pic_128.png"></a>
+
+                                        <a class="com_box"
+                                           href="javascript:changeimg('https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136255071.jpg');"><img
+                                                    src="https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136255071.jpg"></a>
+                                        <a class="com_box"
+                                           href="javascript:changeimg('https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136261189.jpg');"><img
+                                                    src="https://gdgpo.czt.gd.gov.cn/uploader-gpmall/upload/fupin/commoninfo/2020/12/28/1609136261189.jpg"></a>
+
+                            <a class="back" href="javascript:void(0);" onclick="frontOrBack(0)" id="back"><img
+                                        src="https://gdgpo.czt.gd.gov.cn/resources/common/skin/red/css/images/icon/pic_131.png"></a>
+                        </div>
+
+                        <div class="collect">
+                            <div class="pull-left">
+                                        商品编号：
+                                        20201343441018778816512
+                            </div>
+                            <div class="text-right reportGoods">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="com_pro_title_right" style="width: 650px">
+                        <h1>☆ 坚果果干礼盒 新疆休闲零食组合装
+                            <a onclick="jumpZG('%BC%E1%B9%FB%B9%FB%B8%C9%C0%F1%BA%D0%D0%C2%BD%AE%D0%DD%CF%D0%C1%E3%CA%B3%D7%E9%BA%CF%D7%B0')" href="javascript:void(0);" target="_blank"
+                               class="pull-right"
+                               style="margin-left: 30px;color: #2577e3;font-size: 12px;text-decoration:underline;">ZOL搜索</a>
+                        </h1>
+                        <div class="price_box clearfix">
+                            <div class="col-xs-10">
+                                <div class="price_left clearfix">
+                                    <div class="new_pri clearfix">
+                                        <div class="pull-left" style="/*width: 250px*/">
+                                            政府采购价：<span>￥169.00
+</span>
+                                        </div>
+                                        <div class="discount-rate pull-left"><a class="rate-title">优惠率</a><a class="rate-number">0.00%</a></div>
+
+
+                                </div>
+                                        <div class="new_pri clearfix">
+                                            <div class="pull-left" style="width: 250px;position: relative;">
+
+                                                    自营官网价:
+                                                        <span style="color:#666;font-size: 14px;">￥169.00</span>
+                                            </div>
+                                        </div>
+                                    <br/>
+                                    <p class="org" style="width:250px;margin-right: 0px;">
+                                        最低成交单价：暂无
+</p>
+                                    <p class="org" style="margin-right: 20px;">
+                                        最近成交单价：暂无
+</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-2 paddingLeft0 paddingRight0">
+                                <div class="price_right trend text-center">
+                                    <div class=""><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i></div>
+                                    <a href="javascript:show_ana_pri();">价格趋势图</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pri_trend" id="price_trend" style="display:none;">
+                        </div>
+
+                        <div class="price_middle">
+                            <div class="bor1">累计成交量：<span> 0 </span></div>
+                            <div>累计评价：<span> 0 </span></div>
+                        </div>
+
+                        <div class="goodsinfo">
+                            <div class="divtable">
+                                <div class="div-cell" style="width: 50%">
+暂无
+                                </div>
+                                <div class="div-cell" style="width: 50%"> 配送说明：免配送费</div>
+                            </div>
+                            <div class="divtable">
+                                <div class="div-cell" style="width: 50%">
+                                    联系人：暂无</div>
+                                <div class="div-cell">
+                                    售前咨询电话：暂无</div>
+                            </div>
+                            <div class="divtable">
+                            </div>
+                        </div>
+
+                        <div class="pay_way" style="display: none">
+                            <em>付款方式： </em>
+                            <ul>
+                                <li class="pay_way_1 unable">货到付款<span class="pay_way_direction">商品到货后采购人使用公务卡支付。</span>
+                                </li>
+                                <li class="pay_way_2 ">
+                                    按月结算<span class="pay_way_direction">按月对已供货订单进行汇总生成月度结算合同，采购单位按照结算合同进行支付。</span></li>
+                                <li class="pay_way_3 ">
+                                    集中支付<span class="pay_way_direction">采购单位凭已下达采购计划进行采购，由国库部门根据采购合同进行集中支付。</span></li>
+                            </ul>
+                        </div>
+                            <div class="sum-num pull-left" style="margin-top: 35px;">
+                                <em>购买数量： </em>
+                                <div class="num">
+                                    <a class="plus" href="javascript:void(0);" id="main_sub">-</a>
+                                    <input type="text" name="qty" onchange="numcheck();" value="1" id="main_qty"
+                                           class="number {required:true,min:1,digits:true}">
+                                    <a class="plus" href="javascript:void(0);" id="main_plus" onclick="addOne()">+</a>
+                                </div>
+                            </div>
+                            <div class="btn_box pull-left">
+                                <div class="cart">
+                                        <a href="javascript:void(0);"
+                                           onclick="savetocart('2ca4a732763fbb730176a83c9e6e3839');">
+                                            加入购物车
+                                        </a>
+
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="classify pull-right" style="width: 210px">
+                        <h1 style="margin-top: 20px;font-size: 18px;">同款商品报价
+                            <a href="javascript:contrastgoods('2ca4a732763fbb730176a83c9e6e3839');" style="font-size: 16px;color: #dddddd;" class="compare">对比</a></h1>
+                            <div style="width:200px;padding-top: 10px;text-align: center">暂无同款商品
+                            </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </form>
+            <div class="intro_box" id="menu1">
+
+                <div class="intro_left">
+                        <div class="classify" id="goodsclassdiv">
+                            <h1>相关分类</h1>
+                            <table cellpadding="0" cellspacing="0" class="table mrt_tab2 qt_table table_no"
+                                   style="text-indent: 1em;">
+
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccc7cf1d01c2"
+                                               title="冲调品">冲调品</a>
+                                        </td>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccc8441401c4"
+                                               title="饮料">饮料</a>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccc8a17801c7"
+                                               title="蔬果罐头">蔬果罐头</a>
+                                        </td>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccc9055901c9"
+                                               title="肉类罐头">肉类罐头</a>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccc959f601cb"
+                                               title="饼干糕点">饼干糕点</a>
+                                        </td>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccca72f901cf"
+                                               title="肉类零食">肉类零食</a>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172cccbf82901d4"
+                                               title="休闲零食">休闲零食</a>
+                                        </td>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172cccc441401d5"
+                                               title="速冻蔬菜">速冻蔬菜</a>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172cccc8cec01d7"
+                                               title="方便速食品">方便速食品</a>
+                                        </td>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d72c1de340172ccccd32e01d8"
+                                               title="糖果">糖果</a>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <a href="/gpmall/shopping/goodspricelist.html?goodsclassguid=2ca4a74d73ceab020173d612273e0042"
+                                               title="其它休闲食品">其它休闲食品</a>
+                                        </td>
+                                    <td></td>
+                                    </tr>
+
+                            </table>
+
+                        </div>
+                    <div class="classify" id="goodsbranddiv">
+                    </div>
+                </div>
+                <div class="intro_right">
+                    <div class="business_intro" id="midnavi">
+                        <ul>
+                            <li class="this"><a href="javascript:void(0);"
+                                                                                            class="a_midnavi" id="spjs"
+                                                                                            onclick="detailShow(2)">商品介绍</a>
+                            </li>
+                            <li class=""><a href="javascript:void(0);" class="a_midnavi" id="ggcs"
+                                            onclick="detailShow(3)">规格参数</a></li>
+                            <li class=""><a href="javascript:void(0);" class="a_midnavi" id=""
+                                            onclick="detailShow(5)">成交记录<span></span></a></li>
+                            <li class=""><a href="javascript:void(0);" class="a_midnavi" id="sppj"
+                                            onclick="detailShow(6)">商品评价<span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="intro_info details spjs" id="spjs_div" name="spjs_div" style="display: none;padding-left: 30px;">
+                        <p>-薄皮核桃500克*1<br />
+一级灰枣500克*1<br />
+雪霜巴旦木仁175克*1<br />
+玫瑰香葡萄干260g*1</p>
+                        <table cellpadding="0" cellspacing="0" class="table mrt_tab2 table_no" style="border: 0">
+                            <tbody>
+                            <tr>
+                                <td width="100" align="right">商品名称：</td>
+                                <td width="350">坚果果干礼盒</td>
+                                <td align="right" width="100">商品型号：</td>
+                                <td>新疆休闲零食组合装</td>
+                            </tr>
+                            <tr>
+                                <td align="right" width="100">品牌名称：</td>
+                                <td width="350">☆</td>
+                                <td align="right" width="100">商品类别：</td>
+                                <td>休闲零食</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="intro_info details" id="csgg_div" name="csgg_div" style="display: none;">
+                            <div id="ggcs_div" class="intro_info">
+                                    <div class="main"
+                                         style="margin-top: 20px;margin-bottom: 10px;">基本参数</div>
+                                    <table cellpadding="0" cellspacing="0" class="table mrt_tab2 table_bot">
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">产区</td>
+                                                    <td>新疆</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">保质期</td>
+                                                    <td>12个月</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">包装形态</td>
+                                                    <td>箱</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">单位</td>
+                                                    <td>箱</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">品名</td>
+                                                    <td>休闲零食组合装</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="120" align="right"
+                                                        style="padding-right: 16px;">规格（净含量）</td>
+                                                    <td>1435g</td>
+                                                </tr>
+                                    </table>
+                            </div>
+                    </div>
+                    <div class="table_8 cjjl details" id="cjjl_div" name="cjjl_div" onclick="choosDiv('cjjl_div')">
+                    </div>
+                    <div class="table_8 sppj details" id="sppj_div" name="sppj_div" onclick="choosDiv('sppj_div')">
+                    </div>
+                    <div class="table_8 sppj details" id="qwbj_div" name="qwbj_div" onclick="choosDiv('qwbj_div')">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="bottomdiv"></div>
+
+        <div style="display:none;" class="box" id="select_supplier">
+        </div>
+
+
+        <div id="toCartdialog" style="display:none;background:#fff">
+
+        </div>
+
+        <div id="GoodsQuotePriceDetailDiv_div" class="pur_agree" style="display:none"></div>
+        <div style="display:none;" class="box" id="agreement_supplier">
+        </div>
+    </div>
+   </body>
+</html>
+
+
+<style>
+    .discount-rate {
+        line-height: 15px;
+        font-size: 12px;
+        background: #fff;
+        vertical-align: middle;
+        border-radius: 2px;
+        border: 1px solid #ff5342;
+        margin-top: 6px;
+        margin-left: 8px;
+    }
+    .rate-title {
+        color: #fff;
+        padding: 0 4px;
+        background: #ff5342;
+        font-size: 12px;
+    }
+    .rate-number {
+        color: #ff5342;
+        padding: 0 4px;
+        font-size: 12px;
+    }
+    .price_box .new_pri span {
+        margin-right: 8px;
+        font-size: 14px;
+        color: #323232;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    .price_box .new_pri span.pri_active{
+        color: #f40;
+    }
+    .price_box .new_pri span.pri_disable{
+        color: #666;
+    }
+</style>

@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>新疆艺术学院2021大学教师招聘-学术桥</title>
+<meta name="keywords" content="新疆艺术学院2021大学教师招聘高校教师招聘,学术桥"/>
+<meta name="description" content="                                          新疆艺术学院成立于1958年，位于素有“歌舞之乡”、“丹青之乡”美誉的新疆维吾尔自治区首府乌鲁木齐。学校是全国八所综合性艺术院校之一，也是我国西北地区唯一一所综合性高等艺术学府。学校党委坚持为党育人、为国育才办学导向"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" type="text/css" href="/app/static/css/basic.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/app/static/css/zhaopin.css" media="all" />
+
+<link rel="stylesheet" type="text/css" href="/app/static/css/home.css" media="all" />
+
+<script src="/app/static/scripts/jQuery_latest.min.js"></script>
+<script type="text/javascript" src="//www.eol.cn/js/global/jQuery_index.js" charset="UTF-8"></script>
+<script src="/app/static/scripts/user/index.js"></script>
+<script src="/app/static/scripts/user/divselect.js"></script>
+<script src="/app/static/scripts/com/gopage.js"></script>
+<script src="/app/static/scripts/www/user.js"></script>
+<script type="text/javascript" src="/app/static/scripts/user/user_login.js"></script>
+<script type="text/javascript" src="/app/static/scripts/user/user_register.js"></script>
+<script src="/app/static/scripts/user/career.js"></script>
+
+<script src="/app/static/scripts/index.js"></script>
+<script src="/app/static/scripts/user/career_apply.js"></script>
+ <script src="/app/static/scripts/user/fieldLayer.js"></script>
+     <script language="javascript" type="text/javascript" src="/app/static/scripts/ajaxupload.3.6.js"></script>
+</head>
+
+<body>
+    <!--弹出框 begin-->
+     <!-- <div id="favsuc" class=" hide">
+        <div class="login_bg"></div>
+        <div class=" float-public float-200">
+             <h2><em><a href="javascripts:void(0);" onclick="$('#favsuc').hide();return false;"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>提示信息</h2>
+                <div class="float-pad">
+                <h4>请输入正确的页码数</h4>
+                </div>
+            </div>
+        </div> -->
+    <!--弹出框 end-->
+
+
+<!--注册 begin-->
+<div class=" hide" id="registerapply"  >
+<div class="login_bg"></div>
+<div class="float-public float-400">
+	<h2>
+  <em><a onclick="closeregister()"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>
+ 用户注册</h2>
+    <div class=" font-color mar-t-15">
+    <form name="from_register" id="form_register"   method="post" action="/user/user/register?act=do">
+		 <table width="380" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="90" height="50" align="center" ><font>*</font>姓　　名：</td>
+    <td width="280"><input  id="username" name="username" type="text" class="input-30 left input-l-220 input-color" placeholder="请填写姓名"></td>
+  </tr>
+  <tr>
+    <td width="90" height="50" align="center" ><font>*</font>帐　　号：</td>
+    <td width="280"><input  id="email1" name="email1" type="text" class="input-30 left input-l-220 input-color" placeholder="请填写正确的邮箱地址"></td>
+  </tr>
+  <tr>
+    <td height="50" align="center" ><font>*</font>密　　码：</td>
+    <td><input name="passwd" type="password" id="password" type="text" class="input-30 left input-l-220" value=""></td>
+  </tr>
+   <tr>
+    <td height="50" align="center" ><font>*</font>确认密码：</td>
+    <td><input name="passwd2" type="password" class="input-30 left input-l-220" value=""></td>
+  </tr>
+  <tr>
+    <td height="20" align="center"></td>
+  <td ><div><font class="font-12"  id="register_formmsg"> </font></div></td>
+  </tr>
+  <tr>
+    <td height="50" colspan="2" align="left"><input name="isread"  type="checkbox" value="" class="in" id="isread" checked><font>*</font>我已阅读并接受教育人才招聘的 <span class="blue-font"><a onclick="changenote(1)">用户协议</a></span> 和 <span class="blue-font"><a onclick="changepolicy(1)">隐私协议</a></span></td>
+  </tr>
+</table>
+<div class="btn-b-200 wihte " style="margin-top:5px; margin-bottom:10px;"><a onclick="submit_check()">立即注册</a></div>
+</form>
+</div>
+<div class="no_way"></div>
+<div class="mar-t-20"></div>
+</div>
+</div>
+<!--注册 end-->
+<!--注册结果弹框 begin-->
+<div  id="register_result" style="display:none;">
+<div class="login_bg"></div>
+<div class="float-public float-400 box">
+    <p class="titt succ_msg">注册成功！</p>
+    <div class=" font-color mar-t-15">
+  <p class="tok">感谢使用学术桥，您需要先完善个人信息方能应聘职位。</p>
+        <span class="tabb"><a target="_blank" href="/user/user/index" id="complete_info">完善个人信息</a></span>
+        <span class="tabb"><a style="background: #476ac2;" href="javascript:void(0);" onclick="$(this).parent().parent().parent().parent().attr('style','display:none;');$('.login_bg').hide()">稍后操作</a></span>
+    </div>
+    <script>
+        $(document).on('click', '#complete_info', function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 1200);
+        });
+    </script>
+<div class="no_way"></div>
+<div class="mar-t-20"></div>
+</div>
+</div>
+<!--注册结果弹框 end-->
+<!--注册提示跳转页面 begin-->
+<div  id="jump_to_step" style="display:none;">
+<div class="login_bg"></div>
+<div class="float-public float-400 box">
+    <p class="titt">提 示</p>
+    <div class=" font-color mar-t-15">
+        <p style="padding:20px 0;">抱歉，您需要先完善个人信息方能应聘职位。</p>
+        <p style="margin:0 0 20px 0;">如果您需要继续投递简历请点击「完善个人信息」系统将会为您打开完善简历页面。您也可以点击「稍后完善」继续浏览招聘信息。</p>
+        <span class="tabb"><a target="_blank" href="/user/user/index">完善个人信息</a></span>
+        <span class="tabb"><a style="background: #476ac2;" href="javascript:void(0);" onclick="$(this).parent().parent().parent().parent().attr('style','display:none;');$('.login_bg').hide()">稍后完善</a></span>
+    </div>
+
+<div class="no_way"></div>
+<div class="mar-t-20"></div>
+</div>
+</div>
+<style>
+  .box{
+    padding: 12px;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+  .titt{
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    height: 25px;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .tok{
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    border-top: 1px dashed darkblue;
+    margin-bottom: 10px;
+  }
+  .tabb{
+    display: block;
+    width: 50%;
+    text-align: center;
+    float: left;
+    border-radius:15px;
+  }
+  .tabb a{
+    display:block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #fff;
+    background: #ff9900;
+    border-radius: 15px;
+  }
+
+</style>
+<!--注册结果弹框 end-->
+
+<!--head begin-->
+<div class="top_bg">
+	<div class="top pos-r">
+    	<div class="logo pos-a"><a href="/lists"><h1 class="hide">学术桥人才招聘</h1></a></div>
+    		                <div class="btn wihte w-150 pos-a "><a href="/lists">返回职位搜索</a></div>
+                                        	
+        <div class="login pos-a">
+				 		   <div class="dropout pos-a">
+            <span class="blue-font drop-menu-effect">
+            <a onclick="javascript:void(0)">登录</a>
+            <div class="pos-a login-login p-login submenu" id="login_all" style="display:none">
+              <p align="center"><img width="10" height="6" src="/app/static/images/dt.jpg"></p>
+              <ul>
+                <li><a onclick='hide_login();openlogin();' href="#" style="cursor:pointer"  >用户登录</a></li>
+                <li><a href="#" onclick="hide_login();location.href='/com/company/login'">单位登录</a></li>
+              </ul>
+            </div>
+
+            </span>&nbsp;<span class="gary-font">|</span>&nbsp;<span class="blue-font drop-menu-effect">
+            <a onclick="javascript:void(0)">注册</a>
+            <div class="pos-a login-login p-login submenu" id="register_all" style="right:-25px;display:none">
+              <p align="center"><img width="10" height="6" src="/app/static/images/dt.jpg"></p>
+              <ul>
+                <li><a href="#" onclick='hide_register();openregister();' style="cursor:pointer">用户注册</a></li>
+                <li><a href="#" onclick="hide_register();location.href='/com/company/register'">单位注册</a></li>
+              </ul>
+            </div>
+
+            </span>
+			
+			<em class="hide"><a href="/user/user/logout">退出</a></em></div>
+						
+		   <!--add-->
+			<script>
+			//单位登录注册
+
+				function show_login(){
+					$("#login_all").show();
+					$("#register_all").hide();
+					
+
+				}
+				function hide_login(){
+					 $("#login_all").hide();
+					 //setTimeout('$("#login_all").hide();',1000);
+
+				}
+
+
+				function show_register(){
+					$("#register_all").show();
+					$("#login_all").hide();
+					
+
+				}
+				function hide_register(){
+					 $("#register_all").hide();
+           $('#yhxy').load('/app/templates/user/note_policy_header.html');
+					 //setTimeout('$("#register_all").hide();',1000);
+
+				}
+			
+			
+			</script>
+			
+			<!--add-->
+        </div>
+        
+                    
+        
+    </div>
+</div>
+<!--head end-->
+
+
+			<!--登录注册效果js-->
+
+        <script type="text/javascript">
+        function dropMenu(obj){
+          $(obj).each(function(){
+            var theSpan = $(this);
+            var theMenu = theSpan.find(".submenu");
+            var tarHeight = theMenu.height();
+            theMenu.css({height:0,opacity:0});
+            theSpan.hover(
+              function(){
+                $(this).addClass("selected");
+                theMenu.stop().show().animate({height:tarHeight,opacity:1},100);
+              },
+              function(){
+                $(this).removeClass("selected");
+                theMenu.stop().animate({height:0,opacity:0},100,function(){
+                  $(this).css({display:"none"});
+                });
+              }
+            );
+          });
+        }
+
+        $(document).ready(function(){
+          
+          dropMenu(".drop-menu-effect");
+
+        });
+        </script>
+
+
+
+     
+<script language="javascript" type="text/javascript">
+     
+ $(document).ready(function() {
+         var button = $('#upload_button1'), interval;
+        new AjaxUpload(button,{
+
+            action: "/user/user/uploaddir",
+            name: 'userfile1',
+            autoSubmit:true,
+            onSubmit : function(file, ext){ 
+             
+            },
+            onComplete: function(file, json){
+              
+                    var json = JSON.parse(json);
+                     if(json.status == '2'){
+                        $('#dir_formmsg').html('上传失败,请检查文件格式');
+                    }else{
+                        $('#file_name1').val(json.message.file_name);
+                        $('#client_name1').val(json.message.client_name);
+                        $('#file_size1').val(json.message.file_size);
+                    }
+                 
+                }
+ 
+        });
+})
+
+</script>
+
+
+<script language="javascript" type="text/javascript">
+     
+ $(document).ready(function() {
+         var button = $('#upload_button'), interval;
+new AjaxUpload(button,{
+
+            action: "/user/user/upload",
+            name: 'userfile',
+            autoSubmit:true,
+            onSubmit : function(file, ext){ 
+             
+            },
+            onComplete: function(file, json){
+                 var json = JSON.parse(json);
+                 if(json.status == '2'){
+                        $('#tishixinxi').html('上传失败,请检查文件格式');
+                    }else{
+                        $('#file_name').val(json.message.file_name);
+                        $('#client_name').val(json.message.client_name);
+                        $('#file_size').val(json.message.file_size);
+                    }
+                 
+                }
+ 
+        });
+})
+</script>
+<script type="text/javascript" >
+function closeapplysuc()
+{ 
+    $('#applysuc').hide();
+}
+
+function closefav()
+{
+ 
+    $('#favsuc').hide();
+}
+function closeerrfav()
+{
+ 
+    $('#faverr').hide();
+}
+function closeapplyerr()
+{
+ 
+    $('#applyerr').hide();
+}
+//更换验证码
+function changeImageDir() 
+{
+    randNumber = Math.random();
+    $("#DirImageID").attr("src","/user/user/creImage?"+randNumber);
+}
+
+</script>
+
+		<!--登录注册效果js-->
+<!--立即申请职位 end--> 
+<!--已收藏 begin-->
+<div class="hide" id="favsuc">
+<div class="login_bg"></div>
+<div class=" float-public float-200">
+    <h2><em><a onclick="closefavsuc();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>提示信息</h2>
+    <div class="float-pad">
+    <h3 id="favsuc_msg">收藏成功!</h3>
+    </div>
+</div>
+</div>
+<!--已收藏 end--> 
+<!--职位单个申请，批量申请，申请成功/失败弹框 begin -->
+ <script language="javascript" type="text/javascript" src="/app/static/scripts/ajaxupload.3.6.js"></script>
+
+<script language="javascript" type="text/javascript">
+     
+ $(document).ready(function() {
+         var button = $('#upload_button'), interval;
+new AjaxUpload(button,{
+
+            action: "/user/user/upload",
+            name: 'userfile',
+            autoSubmit:true,
+            onSubmit : function(file, ext){ 
+             
+            },
+            onComplete: function(file, json){
+				
+				 var json = JSON.parse(json);
+                     if(json.status == '2'){
+						 $('#tishixinxi').html('上传失败,请检查文件格式'); 
+                    }else{
+                        $('#file_name').val(json.message.file_name);
+                        $('#client_name').val(json.message.client_name);
+                        $('#file_size').val(json.message.file_size);
+                    }
+				 
+                 
+                }
+ 
+        });
+})
+</script>
+
+<script language="javascript" type="text/javascript">
+function checkall(o) 
+{ 
+var cur = $(o).attr('checked');
+var me=$(o).parent().parent().parent();
+var code_Values = $(me).find("input");//document.getElementsByTagName("input");
+//console.log(code_Values);
+if(cur == 'checked')
+{
+    for(var i = 0;i < code_Values.length;i++)
+    { 
+        if(code_Values[i].type == "checkbox") 
+        { 
+            code_Values[i].checked = true; 
+        }
+    }
+}
+else
+{
+    for(var i = 0;i < code_Values.length;i++)
+    { 
+        if(code_Values[i].type == "checkbox") 
+        { 
+            code_Values[i].checked = false; 
+        }
+    }
+}
+}
+</script>
+
+<!--申请职位单个要求/不要求上传附件 begin-->
+ <form class="form-horizontal" method="POST"  name="form_name" id="form_name" action="" enctype="multipart/form-data">
+<div   id ="apply"  class=" hide">
+<div class="login_bg"></div>
+<div class="float-public float-400">
+    <h2>    <em><a onclick="closeapply();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>职位申请</h2>
+    <div class="no_way"></div>
+    <div class="float-pad">
+    <div class="line_24 font-12 font-color gary-font">
+    <p><span class="blue-font"><a href="/www/resume/view?resumeid=">预览个人简历</a></span>，选择简历附件：</p>
+    
+    </div>
+  <table width="420" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#153B90" class="line_22 mar-t-15">
+  <tr>
+    <td width="35" align="center" valign="middle" bgcolor="#2752B1" class="wihte"><input name="" type="checkbox" value="" disabled></td>
+    <td width="148" align="center" valign="middle" bgcolor="#2752B1" class="wihte">附件名称</td>
+    <td width="215" align="center" valign="middle" bgcolor="#2752B1" class="wihte">上传时间</td>
+  </tr>
+    <td align="center" valign="middle" bgcolor="#FFFFFF" class="blue-font" colspan="3">暂无简历附件</td>
+     
+</table>
+
+<div class="line_24 font-12 font-color gary-font mar-t-15" id="isfile">
+    <p><font>*请下载填写并上传该单位要求的附加文档：</font></p>
+     <p><font id="tishixinxi"></font></p>
+    </div>
+    <div style="margin-top:10px;" id="isfile_choose">
+        
+        <input name="file_name" id="file_name" type="text" class="input input-210 left"></input>
+        <input name="client_name" id="client_name" type="hidden" class="input input-210 left"></input>
+         <input name="file_size" id="file_size" type="hidden" class="input input-210 left"></input>
+        <div class="btn btn-bg btn-p wihte left" id="upload_button"><a onclick="userfile.click();">选择</a></div>
+        <input type="file" name="userfile" id="userfile"  style="display:none" /> 
+         
+    </div>
+    <div class="no_way"></div>
+ 
+ <div class="btn-mar">
+      <div class="btn btn-bg btn-p wihte left"><a isfile="" id="apply_single" onclick="submit_apply();">申请职位</a></div>
+    <div class="btn border btn-p wihte-bg right"><a onclick="closeapply();">&nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+    </div>
+     <div class="no_way"></div>
+<div class="mar-t-15"></div>
+</div>
+</div>
+<input type="hidden" name="resumeid" value=""></input>
+<input type="hidden" name="comid" id="single_comid1" value="6612"></input>
+<input type="hidden" name="cid" id="single_cid1" value=""></input>
+</div>
+</form>
+<!--申请职位单个要求上传附件 end-->
+
+<!--申请职位 end-->
+<!--已申请 begin-->
+<div class=" hide " id="applysuc">
+<div class="login_bg"></div>
+<div class=" float-public float-200">
+    <h2><em><a onclick="closeapplysuc();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>提示信息</h2>
+    <div class="float-pad">
+    <h3 id="apply_message">申请成功!</h3>
+    <h5>可在<span class="blue-font"><a href="/user/user/listsaply">职位申请记录</a></span>中查看</h5>
+    </div>
+</div>
+</div>
+<!--已申请 end-->
+
+<!--申请失败 begin-->
+<div class=" hide" id="applyerr" >
+<div class="login_bg"></div>
+<div class=" float-public" style="width: 260px;margin: 15% auto 0;height: auto;margin-left: -130px;">
+    <h2><em><a onclick="closeapplyerr();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>提示信息</h2>
+    <div class="float-pad">
+    <h4 id="err_message" style="text-indent:1em;line-height:24px;font-size:14px;color: #333;font-weight: normal;">申请失败!</h4>
+    </div>
+</div>
+</div>
+<!--申请失败 end--> 
+
+ <!--申请职位批量 begin-->
+<div id="allapply" name="allapply" class="hide">
+      <form name="applyall_form" id="applyall_form" action="/user/career/lists" method="get" >
+<div class="login_bg"></div>
+<div class=" float-public float-400" style="min-height: 280px;max-height: 600px;">
+    <h2><em><a onclick="closeallapply();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>批量申请</h2>
+    <div class="float-pad">
+    <div class="line_24  font-color">
+    <p>您已选择了<font  id="allcount">20</font>个职位进行批量申请,
+    
+    <div id="isfilecom"></div> 
+    <p>此次操作只完成了<font  id="realcount">20</font>个职位的批量申请。</p>
+    <p><span class="blue-font"><a href="/www/resume/view?resumeid=">预览个人简历</a></span>，选择简历附件：</p>
+    </div>
+   <table width="420" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#153B90" class="line_22 mar-t-15">
+  <tr>
+    <td width="35" align="center" valign="middle" bgcolor="#2752B1" class="wihte"><input name="" type="checkbox" value="" disabled></td>
+    <td width="148" align="center" valign="middle" bgcolor="#2752B1" class="wihte">附件名称</td>
+    <td width="215" align="center" valign="middle" bgcolor="#2752B1" class="wihte">上传时间</td>
+  </tr>
+     <td align="center" valign="middle" bgcolor="#FFFFFF" class="blue-font" colspan="3">暂无简历附件</td>
+       
+</table>
+  <div id='yzm_apply'>
+    <div class="line_24 font-12 font-color mar-t-15">
+    <p><font>*</font>请输入验证码</p>
+    </div>
+    <div style="margin-top:10px;">
+    <input name="number" id="number" type="text" class="input input-102 left input-color" placeholder="请输入验证码">
+    <span class="left mar-r-20"><img src="/user/user/creImage" width="65" height="27"  id="ImageIDUser"   onclick='changeImageUser();'></span>
+    <span class="left blue-font mar-t-10" ><a  onclick='changeImageUser();'>看不清，换一张</a></span>
+    </div>
+    <div class="no_way"></div>
+    
+       <input type="hidden" name="resumeid" id="resumeid" value=" "></input>
+<input type="hidden" name="comid_list"  id="comid_list" value=""></input>
+<input type="hidden" name="cid_list"  id="cid_list" value=""></input>
+
+    <div class="btn-mar">
+    <div class="btn btn-bg btn-p wihte left"><a  onclick="applyall(2);">申请职位</a></div>
+    <div class="btn border btn-p wihte-bg right"><a onclick="closeallapply();">&nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+    </div>
+  </div>
+<div class="no_way"></div>
+</div>
+</div>
+</form>
+</div>
+<!--申请职位批量 end--> 
+
+<!--职位单个申请，批量申请，申请成功/失败弹框 end -->    
+<!--收藏 begin-->
+<div class="hide" id="faverr">
+<div class="login_bg"></div>
+<div class=" float-public float-200">
+    <h2><em><a href="javascripts:void(0);"onclick=" closefaverr();return false;"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>提示信息</h2>
+    <div class="float-pad">
+    <h4  id='faverr_msg'>收藏失败！</h4>
+    </div>
+</div>
+</div> 
+<div id='yhxy'></div>
+<!--登录 begin-->
+<div id="loginapply" class=" hide">
+<div class="login_bg"></div>
+<div class="float-public float-400">
+    <h2><em><a onclick="closelogin();"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>用户登录</h2>
+    <div class=" font-color mar-t-15">
+    <form method="post" name="login_form" id="login_form" >
+         <table width="430" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="90" height="50" align="center" ><font>*</font>帐　号：</td>
+    <td width="340"><input name="email" id="email"  type="text" class="input-30 left input-l-220 input-color" placeholder ="请填写正确的邮箱地址"></td>
+  </tr>
+  <tr>
+    <td height="50" align="center" ><font>*</font>密　码：</td>
+    <td><input name="passwd"  id="passwd" type="password"  class="input-30 left input-l-220" value=""><span class="left blue-font mar-t-15 mar-t-t"><a href="/user/user/forget">忘记密码？</a></span></td>
+  </tr>
+  <tr>
+    <td height="50" align="center" class="txt"><font>*</font>验证码：</td>
+    <td><input name="number" id="number"  type="text" class="input-30 left input-l-130" value="" onblur="checkImage(this)" >
+    <span class="left mar-t-t"><img src="/user/user/creImage" width="65" height="27" id="ImageID" onclick='changeImage();'></span>
+    <span class="left blue-font mar-t-15"><a onclick='changeImage();'>换一张</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td height="20" align="center"></td>
+    <td  ><font class="font-12" id="login_formmsg"></font></td>
+  </tr>
+  <tr>
+    <td height="40" align="center"></td>
+    <td><input name="remember" type="checkbox" value="1"  class="in">下次自动登录<span class="gary-font">（公共场请勿勾选）</span></td>
+  </tr>
+</table>
+<div class="btn-b-200 wihte left mar-t-5" style="margin-left:75px; margin-right:20px;"><a onclick="submit_logincheck('http://zpjob.acabridge.cn/school/6612',0)">登录</a></div>
+<div class="w-190 left line_22 font-12 mar-t-5">
+    <p>没有账号，<span class="blue-font"><a href="javascript:void(0);" onclick="$('#yhxy').load('/app/templates/user/note_policy_header.html');openregister();return false;">立即注册</a></span></p>
+</div>
+
+</form>
+</div>
+<div class="no_way"></div>
+<div class="mar-t-20"></div>
+</div>
+</div>
+    <!--学科领域模板 begin-->
+ <div  style="display:none" id="tpl">
+    <div class="fieldcontent">
+        <div class="pos-a pop-490 border p-50 fieldparent hide"  style="top:31px; left:auto; right:24px; z-index:10000;">
+          <div  class="co-l">
+            <em><a href="javascript:void(0)" data-action="close"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>
+          </div>
+            <div class="no_way"></div>
+            <div class="fuzzy">
+                  <div class="fuz-search">
+                    <div class="fuz-tit">学科领域模糊查询</div>
+                    <div class="fuz-ipt"><input type="text" class="search-input"></div>
+                    <a class="fuz-btn search-btn" href="javascript:;">搜索</a>
+                  </div>
+                  <div class="fuz-result">
+                        <div class="search-result">
+                        </div>
+                  </div>
+                </div>
+            <h3 style="margin-top:-5px;">学科门类</h3>
+            <div class="h-80">
+                                                <span><input name="level1" type="radio" value="010000" class="in"><em>哲学</em></span>
+                                    <span><input name="level1" type="radio" value="020000" class="in"><em>经济学</em></span>
+                                    <span><input name="level1" type="radio" value="030000" class="in"><em>法学</em></span>
+                                    <span><input name="level1" type="radio" value="040000" class="in"><em>教育学</em></span>
+                                    <span><input name="level1" type="radio" value="050000" class="in"><em>文学</em></span>
+                                    <span><input name="level1" type="radio" value="060000" class="in"><em>历史学</em></span>
+                                    <span><input name="level1" type="radio" value="070000" class="in"><em>理学</em></span>
+                                    <span><input name="level1" type="radio" value="080000" class="in"><em>工学</em></span>
+                                    <span><input name="level1" type="radio" value="090000" class="in"><em>农学</em></span>
+                                    <span><input name="level1" type="radio" value="100000" class="in"><em>医学</em></span>
+                                    <span><input name="level1" type="radio" value="110000" class="in"><em>军事学</em></span>
+                                    <span><input name="level1" type="radio" value="120000" class="in"><em>管理学</em></span>
+                                    <span><input name="level1" type="radio" value="130000" class="in"><em>艺术学</em></span>
+                                    <span><input name="level1" type="radio" value="000000" class="in"><em>专业不限</em></span>
+                
+                        </div>
+
+            <div class="hide level2">
+            <p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+            <h3>一级学科</h3>
+            <div class="h-80 border">
+            </div>
+            </div>
+
+            <div class="hide level3">
+            <p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+            <h3>二级学科（专业）</h3>
+            <div class="h-80 border" style="height:auto">
+            </div>
+            </div>
+
+            <div class="alchosen">
+            <p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+            <h3>已选二级学科（专业）</h3>
+            <div class="h-80" >
+            </div>
+            </div>
+
+            <div class="btn-70 left wihte btn btn-bg mar-l-150"><a href="javascript:void(0)" data-action="write">确定</a></div>
+            <div class="btn-70 left border btn btn-b"><a href="javascript:void(0)" data-action="close">取消</a></div>
+            <div class="no_way"></div>
+            </div>
+    </div>
+</div>
+<!--学科领域模板 结束-->
+    <!--收藏 begin-->
+<!--立即申请职位 begin-->
+    <div id="nowapply" class=" hide">
+        <div class="login_bg"></div>
+        <!--  <div class="float-public float-500" style="margin-top:0%;margin-right:50%">-->
+        <div class="float-public float-400 fast" style="margin-top:0%;">
+            <h2><em><a onclick="closenowapply();" class="close"><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em>快速申请</h2>
+            <div class=" font-color mar-t-15">
+                <form class="form-horizontal" method="POST" name="form_direct" id="form_direct" action="" enctype="multipart/form-data">
+                     <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="140" height="50" align="right" ><font>*</font>姓　　名：</td>
+                            <td width="300">
+                                <input name="name" id="name" type="text" class="input-30 w-300 left input-l-220 input-color" placeholder="请填写正确的姓名" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>电子邮箱：</td>
+                            <td>
+                                <input name="dir_email" id="dir_email" type="text" class="input-30 w-300 left input-l-220 input-color" placeholder="请填写正确的邮箱地址" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right" valign="top"><span class="fastTit">
+                                <font>*</font>求&nbsp;职&nbsp;信：</span></td>
+                            <td valign="top">
+                                <textarea cols="" rows="" style="height: 100px;" class="input-30  w-340 input-color" name="content" id="content" placeholder="不超过1000字"></textarea>
+                            </td>
+                            <input type="hidden" name="comid" value="6612"></input>
+                            <input type="hidden" name="cid" value=""></input>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>学　　历：</td>
+                            <td>
+                                <select name="education" id="education" class="input-color">
+                                    <option value="">请选择</option>
+                                    <option value="1">博士</option>
+                                    <option value="2">硕士</option>
+                                    <option value="3">本科</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>学科领域：</td>
+                            <td align="left">
+                                <div class="input input-220 input-220-2 input-ov left" id='subfield' style="overflow:auto;" onclick="$(this).fieldLayer({layer:3,name:'afieldlist',right:'2px'});">
+                                                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>海外学习/工作经历：</td>
+                            <td>
+                                <select id="isabroad" name="isabroad" class="input-color">
+                                    <option value="">请选择</option>
+                                    <option value="1">是</option>
+                                    <option value="2">否</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>上传简历附件：</td>
+                            <td>
+                                <input name="file_name1" id="file_name1" type="hidden" class="input input-210 left" />
+                                <input name="client_name1" id="client_name1" type="text" class="input input-210 left" placeholder="仅支持*doc、*docx、*pdf 格式的文件" />
+                                <input name="file_size1" id="file_size1" type="hidden" class="input input-210 left" />
+                                <div class="btn btn-bg btn-p wihte left" style="margin-top:3px;" id="upload_button1"><a onclick="userfile1.click();">选择上传</a></div>
+                                <input type="file" name="userfile1" id="userfile1" style="display:none" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50" align="right">
+                                <font>*</font>验证码：</td>
+                            <td>
+                                <input name="dirnumber" id="dirnumber" type="text" class="input-30 left input-l-102" value="">
+                                <span class="left mar-t-t"><img src="/user/user/creImage" width="65" height="27"  id="DirImageID"  onclick='changeImageDir();'></span>
+                                <span class="left blue-font mar-t-15 font-12"><a onclick='changeImageDir();'>换一张</a></span></td>
+                        </tr>
+                         <tr>
+                            <td height="30" align="right"></td>
+                            <td class="line_22 font-12"  colspan=2> <font id="dir_formmsg"> </font></td>
+                         </tr>
+                    </table>
+                    <!--学科领域 begin-->
+                    <!--学科领域 begin-->
+<script src="/app/static/scripts/user/subfield.js"></script>
+<div class="pos-a pop-490 border p-50 " id="fielddiv" style="display:none;">
+<em><a href="javascript:void(0)"><img src="/app/static/images/close-blue.jpg" width="12" height="11" onclick="fieldtoggle();"></a></em>
+<div class="no_way"></div>
+<h3 style="margin-top:-5px;">学科门类</h3>
+<div class="h-80">
+			<span><input name="level1" type="radio" value="010000" class="in" onclick="showlevel2(this);">哲学</span>
+			<span><input name="level1" type="radio" value="020000" class="in" onclick="showlevel2(this);">经济学</span>
+			<span><input name="level1" type="radio" value="030000" class="in" onclick="showlevel2(this);">法学</span>
+			<span><input name="level1" type="radio" value="040000" class="in" onclick="showlevel2(this);">教育学</span>
+			<span><input name="level1" type="radio" value="050000" class="in" onclick="showlevel2(this);">文学</span>
+			<span><input name="level1" type="radio" value="060000" class="in" onclick="showlevel2(this);">历史学</span>
+			<span><input name="level1" type="radio" value="070000" class="in" onclick="showlevel2(this);">理学</span>
+			<span><input name="level1" type="radio" value="080000" class="in" onclick="showlevel2(this);">工学</span>
+			<span><input name="level1" type="radio" value="090000" class="in" onclick="showlevel2(this);">农学</span>
+			<span><input name="level1" type="radio" value="100000" class="in" onclick="showlevel2(this);">医学</span>
+			<span><input name="level1" type="radio" value="110000" class="in" onclick="showlevel2(this);">军事学</span>
+			<span><input name="level1" type="radio" value="120000" class="in" onclick="showlevel2(this);">管理学</span>
+			<span><input name="level1" type="radio" value="130000" class="in" onclick="showlevel2(this);">艺术学</span>
+			<span><input name="level1" type="radio" value="000000" class="in" onclick="showlevel2(this);">专业不限</span>
+	
+</div>
+
+<div id="fieldlevel2" style="display:none;">
+<p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+<h3 style="margin-top:10px;">一级学科</h3>
+<div class="h-80 border" id="level2home">
+</div>
+</div>
+
+<div id="fieldlevel3" style="display:none;">
+<p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+<h3 style="margin-top:10px;">二级学科（专业）</h3>
+<div class="h-80 border" style="height:auto" id="level3home">
+</div>
+</div>
+
+<div id="fieldopen">
+<p align="center"><img src="/app/static/images/jt-down.jpg" width="30" height="11"></p>
+<h3 style="margin-top:10px;">已选二级学科（专业）</h3>
+<div class="h-80" id="fieldhomeopen">
+</div>
+</div>
+
+<div class="btn-70 left wihte btn btn-bg mar-l-150" onclick="fieldtoggle();"><a href="javascript:void(0)">确定</a></div>
+<div class="btn-70 left border btn btn-b" onclick="fieldtoggle();"><a href="javascript:void(0)">取消</a></div>
+<div class="no_way"></div>
+</div>
+<!--学科领域 end-->
+
+                    <!--学科领域 end-->
+
+                  <div class="sqBox">
+                    <div class="wihte sqBtn" ><a class="btn btn-bg btn-p" onclick="direct_check();">立即申请</a></div>
+                    <div class="sqBtn" ><a class="close btn btn-p border" onclick="closenowapply();">取消</a></div>
+                  </div>
+                </form>
+            </div>
+            <div class="no_way"></div>
+            <div class="mar-t-20"></div>
+        </div>
+    </div>
+    <!--立即申请职位 end-->
+<div class="bg-EDF">
+    <div class="main">
+        <div class="banner overhidden">
+            <div class="school left">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td height="125" align="center" valign="middle">
+				<img src="/app/upload/file/logo/com/1630480167-25745_thumb.png" width="108" height="108">
+				</td>
+            </tr>
+            </table>
+            </div>
+            <div class="w-800 right">
+                <h1>新疆艺术学院招聘</h1>
+                <h2>Xinjiang Arts University</h2>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="main mar-t-20">
+    <div class="tabTit">
+      <div class="pos-a">
+        <div class="tabBtn"><a href="javascript:;" class="cur">招聘职位</a></div>
+        <div class="tabBtn"><a href="/schoolinfo/6612" class="">单位介绍</a></div>
+        <div class="no_way"></div>
+      </div>
+    </div>
+
+  <div class="border overhidden">
+      <div class="dwgg">
+              
+    <script>
+    $(function(){
+       var f = false;
+       $(".dgMore").click(function(){
+         if(f = !f){
+          $(".dwgg").addClass("hauto");
+          $(".dgMore").html("收起 ∧");
+         }else{
+          $(".dwgg").removeClass("hauto");
+          $(".dgMore").html("更多 ∨");
+         }
+       });
+    });  
+    </script>
+      </div>
+
+          <form name="search_form" id="search_form" action="/school/6612#target" method="get" >
+
+    <select name="type" class="in-put left mar-l-30 pos-r">
+        <option value="">职位类型</option>
+            <option value="1" >院士/外籍院士</option>
+            <option value="2" >特聘教授/讲座教授</option>
+            <option value="3" >院长/副院长</option>
+            <option value="4" >省部级人才项目</option>
+            <option value="5" >国家级人才项目</option>
+            <option value="6" >学科带头人/学术带头人</option>
+            <option value="7" >教师/教学研究类</option>
+            <option value="8" >辅导员/教辅类</option>
+            <option value="9" >行政/工勤类</option>
+            <option value="381" >博士后</option>
+    
+        <option value="other" >其他</option>
+    </select>
+	<input name='comid' value="6612" style="display:none">
+    <select name="subfield" class="in-put left pos-r">
+        <option value="">所有专业</option>
+            <option value="010102" >中国哲学</option>
+            <option value="010103" >外国哲学</option>
+            <option value="030501" >马克思主义基本原理</option>
+            <option value="040201" >基础心理学</option>
+            <option value="040203" >应用心理学</option>
+            <option value="050105" >中国古代文学</option>
+            <option value="050106" >中国现当代文学</option>
+            <option value="050107" >中国少数民族语言文学</option>
+            <option value="050108" >比较文学与世界文学</option>
+            <option value="050301" >新闻学</option>
+            <option value="050302" >传播学</option>
+            <option value="050402" >音乐学</option>
+            <option value="050403" >美术学</option>
+            <option value="050404" >设计艺术学</option>
+            <option value="050406" >电影学</option>
+            <option value="050407" >广播电视艺术学</option>
+            <option value="050408" >舞蹈学</option>
+            <option value="070101" >基础数学</option>
+            <option value="070102" >计算数学</option>
+            <option value="070104" >应用数学</option>
+            <option value="130299" >音乐与舞蹈学</option>
+    
+    </select>
+    
+    <select name="departmentid" class="in-put left pos-r">
+        <option value="">所有用人部门</option>
+            <option value="18704" >马克思主义学院</option>
+            <option value="18705" >音乐学院</option>
+            <option value="18706" >舞蹈学院</option>
+            <option value="18707" >设计学院</option>
+            <option value="18708" >书法学院</option>
+            <option value="18709" >传媒学院</option>
+            <option value="18710" >文化艺术学院</option>
+            <option value="18711" >附属中等艺术学 校</option>
+    
+    </select>
+      
+      <div class="in-put left pos-r">
+        <div class="model-select-box">
+        <div class="model-select-text" data-value="">
+                          <input class="model-select-input" type="hidden" name="education">
+                <div class="model-select-text" data-value="">不限<i><a href="#"></a></i></div>
+                      <ul class="model-select-option in-200 pos-a hide">
+                        <li data-option="3"><a href="#">博士及以上</a></li>
+                        <li data-option="2"><a href="#">硕士及以上</a></li>
+                        <li data-option="1"><a href="#">本科及以上</a></li>
+                        <li data-option="4"><a href="#">大专及以上</a></li>
+                        <li data-option="0"><a href="#">不限</a></li>
+            
+          </ul>
+		  </div>
+        </div>
+      </div>
+      <input type="hidden" name="ordertype" id="ordertype" value="desc">
+      </form>
+      <div class="btn-80 left wihte btn btn-bg" onclick="submit_search_form();"><a href="#">确定</a></div>
+      <div class="no_way"></div>
+            
+<div class="zwList">
+<form name="from_allapply" id="from_allapply" method="post" action="/www/career/listsall?format=json">
+<table width="940" border="0" align="center" cellpadding="12" cellspacing="1" bgcolor="#FFFFFF" class="mar-t-15 mar-b-20">
+  <tr>
+    <td width="141" align="center" valign="middle" bgcolor="#D3E0FE"><b>用人部门</b></td>
+    <td width="241"  align="center" valign="middle" bgcolor="#D3E0FE"><b>职位名称</b></td>
+    <td width="95"  align="center" valign="middle" bgcolor="#D3E0FE"><b>学历要求</b></td>
+    <td width="97"  align="center" valign="middle" bgcolor="#D3E0FE"><b>年龄要求</b></td>    <td width="96"  align="center" valign="middle" bgcolor="#D3E0FE"><b>招聘人数</b></td>
+    <td width="119"  align="center" valign="middle" bgcolor="#D3E0FE"><b>发布时间</b>&nbsp;<span class="j-u"><a href="javascript:void(0)" onclick="$('#ordertype').val('asc');document.getElementById('search_form').submit();return false;">&nbsp;&nbsp;&nbsp;</a></span></td>
+  </tr>
+ 	<a name='target' id='target'></a>
+     <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98750 "><label for="checkbox"></label>附属中等艺术学 校</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98750">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98749 "><label for="checkbox"></label>附属中等艺术学 校</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98749">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98748 "><label for="checkbox"></label>附属中等艺术学 校</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98748">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98747 "><label for="checkbox"></label>附属中等艺术学 校</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98747">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98746 "><label for="checkbox"></label>文化艺术学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98746">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98745 "><label for="checkbox"></label>传媒学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98745">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98744 "><label for="checkbox"></label>传媒学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98744">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98743 "><label for="checkbox"></label>书法学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98743">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98742 "><label for="checkbox"></label>设计学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98742">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+    <tr>
+    <td align="center" valign="middle" class="gary-font">
+	<input type="checkbox"  class="left" name="attr_id[]" value="6612-98741 "><label for="checkbox"></label>设计学院</td>
+    <td align="left" valign="middle" class="blue-font"><a href="/job/98741">教师</a></td>
+            <td align="center" valign="middle" class="gary-font">硕士及以上</td>
+                  <td align="center" valign="middle" class="gary-font">
+        详情见公告
+                </td>
+              <td align="center" valign="middle" class="gary-font">1人</td>
+    <td align="center" valign="middle" class="gary-font">2021-09-01</td>
+  </tr>
+  
+</table>
+	<div class="line-xx"></div>
+	 <div class="b-blue overhidden" style="">
+		<input type="checkbox" onclick="checkall(this);" class="in" value="" name=""><em class="left">全选</em>
+		<span class="btn btn-bg btn-p wihte apply_career"><a login_state="2" onclick="openallapply();">申请职位</a></span>
+		<span class="btn border btn-p wihte-bg sc"><a onclick="addfavall(2);">收藏职位</a></span>
+  </div>
+ </div>
+ </form>
+<div id="pagenav">
+        <ul>
+     <li class="active"><a href='javascript:void(0);'>1</a></li><li><a href="/www/company/view/2?ordertype=desc&comid=6612">2</a></li><li><a href="/www/company/view/2?ordertype=desc&comid=6612">下一页</a></li>
+     <li><em>到</em></li>
+     <li><input id="getpage"  type="text" class="inp" ></li>
+     <li><a href="javascript:void(0);" id="topagesubmit" onclick="gopage();return false;">确定</a></li>        </ul>
+        <div class="no_way"></div>
+     </div>
+        <div class="no_way"></div>
+        <div class="mar-t-15"></div>
+  <script>
+    // function toPage(){
+    //     var search = window.location.search,topage = $('#topage').val();console.log(search);
+    //     if(!/^[0-9]+$/.test(topage)){
+    //        $('#favsuc').show();
+    //     }else{
+    //         url='/www/company/view/'+topage+search;
+    //         window.location.href=url;
+    //     }
+    // }
+		function submit_search_form(){
+            if($("input[name='subfield_name']").val() && $("input[name='subfield_name']").val().length < 2){
+                alert("专业要求必须不小于2个字符");
+                return false;
+            }
+
+            document.getElementById('search_form').submit();
+        }
+
+		function url_com(){
+			var url = $("#com_url").attr("title");
+			
+			//判断格式
+			if(url.indexOf("http://") == 0 || url.indexOf("https://") == 0 ){
+			
+				window.open(url);
+			}else{
+				url = "http://"+url;
+				window.open(url);
+			}
+		
+		}
+    </script>
+	<script language="javascript" type="text/javascript">
+function checkall(o) 
+{ 
+var cur = $(o).attr('checked');
+var me=$(o).parent().parent().parent();
+var code_Values = $(me).find("input");//document.getElementsByTagName("input");
+//console.log(code_Values);
+if(cur == 'checked')
+{
+    for(var i = 0;i < code_Values.length;i++)
+    { 
+        if(code_Values[i].type == "checkbox") 
+        { 
+            code_Values[i].checked = true; 
+        }
+    }
+}
+else
+{
+    for(var i = 0;i < code_Values.length;i++)
+    { 
+        if(code_Values[i].type == "checkbox") 
+        { 
+            code_Values[i].checked = false; 
+        }
+    }
+}
+}
+</script>
+    
+    </div>
+
+
+</div>
+<div id="back-to-top" class="back-to-top back-to-top-show ">
+        <p class="bt-top"><a href="#" id="back-to-top-btn"  title="回到顶部"><img src="/app/static/images/back.jpg" width="30" height="58"></a></p>
+</div>
+<div class="copyright mar-t-20">
+    <div class="main gary-font  line_24">
+        <div class="w-440 left">
+            <p>
+                <img style="width: 18px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAEvElEQVQ4EX3RWUwUVhTG8YlVtDz5oImpuFuBWoVSgVajqIGAYKmKVBRR9h1UVkFCAFm0gspmwVZbsdUiZdWA0BmEkWFYS4FRgQGGZQBZFDRDgWrybyQtKWK8T/ecm/M7X3IFgvccGFo21l7smpsaWftrfFjjQFOuN8g13jPy7icmqnY150dlfudpM5Hq+CVnjhgR4WnJtXAbkr2OvWrIjs5hsnnvu6ff6gKLChNd2LJMn3jH7dw/YcQjdwM6go14UhTAnYzT6C81pCDeHmDhW+OzS3imMdYQU25u8BUJZ+xQRhkh1l6F2GQz1YcMEWku53mGDVl3U9i3dT+TLekFoFg0W/m3gi7ttnv+U3oa5tgdduFZsgnl+lpUGGjyYJs21fv1KdVZS77WCsbLTuLtH8WODbtRVkT3D7dc0ZyDMv6zfnJ8MIKFYdy8aI/CbQti7dVIdm5CoqdJ2ca1VJjocn/DR7S5bUVUEoNAzYP42BBUbZd0Z4HP5A80xsVuDxMTIhCo+5EdZU7jAV2kn6xCoq9J5R4dpBa6SPS1KNVcjtRch8d1UQjUPAkLDeH1aEopE2NrZtCa3LATw7f3cSM9FsHCEPLSHRiIM0OoqcHvxw2pTbOko8wZWeJBynRW0xlsTK04bDphyuVoJmXeDHUWnZ0Bn5QkpHVcNac8JwrB4gt4OzryUmJHtpUuRWYbkfrupC7UlHo/Y+oSrPi7J5ggFwcEagFUiBIYKviGDnHqjzNgY2ZgX8N5M4Zrw1hvlMQH6u7kHPic9ri9SA4YIDTbTJWrEQ8t9HgUaIzEyxR1dSdWfBbN85YYHqXtpTXPTz4DyrJ9xsVhpqiKjhEUkzS9+faalQzu1qLaYztFh/WoCjGhLdaSQeNPyV23CsECF3zC4/mr0o2qby3oEAV2zYDtRXH5shtWqOoDaRAmsGDlOUw+NCTjYw3ubVpJoeE6hF+sp8baANEeQ+wX6zNvSSDSwghUzeHI7zozWH859X/geWljyj5as5yZbA4m9lLa9G8L1BwQzLfDdKkFNussUZ9/GMECJwRq/viHRjIl96Oz0Iu232zprzlbMQP2SmNfNfzkRH3yMVquWDJSd4amskgunbbHN+Qc+Td9qcq25+jxIKy/9iEgKJL+h6fozNhP0zVr5HlHGWq9MDIDTqjqjihEzshu2VKbdJCq09sYk3gy1R7AVKsbqkpX+vNtmWz05fVoJJMyX5rijKlNsqLtriN9NT5MjBbvmAHfXKZUzUeVVb5jXeVuSGMtqEvcy2B9IEqhF50FDnQLPRj6I4CR5hBk31vzZ9ohlDWhKMQhI2ODecazsDfFaFfVrtZ8vwGl1IfeypMoilxRlrvTV+lDr/gkg7Wn6C314PHNQyiK3RmShdMtCUCW6TI80vHLXPCFIrVE1RPNUMtZ5EXetN9zp6fUE3m+Pb3lvnTfd0J21Yont2xRlHigEHoxUB/MC2UULwevZc1JSH+d+kDrxeROkYequ8SBkRoPBh440VVgh7LEAUWe7XTip9Xe9JQ50Ffjx3BnQvfo06wwiJg3B/yvUZfuv6Qs1smuONL8B9kdh8qm63ZN8hxHpaLQU/k4072ySxQsHGi8Ht+YH2dGxFzoH5wDKkhe8z1QAAAAAElFTkSuQmCC" alt="">京公网安备11010802034084号 | 人力资源服务许可证编号1101082020024
+            </p>
+            <p>
+                京ICP备12045350号-20 |
+                <a href="https://www.acabridge.edu.cn/about/gsjj/202101/t20210125_2072414.shtml" target="_blank">关于学术桥</a> |
+                <a href="https://www.acabridge.edu.cn/about/swhz/202101/t20210125_2072439.shtml" target="_blank">联系我们</a> |
+                <a href="https://www.acabridge.edu.cn/about/rczp/202101/t20210125_2072438.shtml" target="_blank">人才招聘</a>
+            </p>
+        </div>
+      <div class="w-220 right">
+            <div class="left">
+                <p align="center"><img src="/app/static/images/dy.jpg" width="97" height="97"></p>
+                <p align="center">服务号</p>
+            </div>
+            <div class="right">
+                <p align="center"><img src="/app/static/images/fw.jpg" width="97" height="97"></p>
+                <p align="center">订阅号</p>
+            </div>
+        </div>
+        <div class="no_way"></div>
+    </div>
+</div>
+
+<!--反馈 begin-->
+<script src="/app/static/scripts/www/feekback.js"></script>
+<div class="feedback border" onclick="login_envent();"><a href="javascript:void(0)"><img src="/app/static/images/fk.jpg" width="50" height="49"></a></div>
+<div class="fk-pop border" style="display:none;z-index:9999;" id="feekbackdiv">
+    <h2><div onclick="$('#feekbackdiv').toggle();" class="co-l"><em><a href="javascript:void(0)" ><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a></em></div>我要反馈</h2>
+    <div class="float-pad">
+    <form method="post" id="feek_form" name="feek_form">
+        <textarea  name="content" id="feekcontent" cols="" rows="" class="tex" placeholder="请您留下意见"></textarea>
+        <input name="email" id="feekemail" type="text" class="ipnt input left input-color" placeholder="留下邮箱我们尽快回复您 (选填)">
+        <input type="hidden" name="feek_usertype" id="feek_usertype" value="">
+        <div class="btn-70 left wihte btn btn-bg mar-t-20" onclick="feek_check();">
+            <a href="#">确定</a>
+        </div>
+    </form>
+    <div class="no_way"></div>
+    </div>
+</div>
+<script>
+var JPlaceHolder = {
+    //检测
+    _check : function(){
+        return 'placeholder' in document.createElement('input');
+    },
+    //初始化
+    init : function(){
+        if(!this._check()){
+            this.fix();
+        }
+    },
+    //修复
+    fix : function(){
+        jQuery(':input[placeholder]').each(function(index, element) {
+            var self = $(this), txt = self.attr('placeholder');
+            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
+            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left'),did=self.attr('id');
+            //由于定位不准原因，针对单个元素进行定位
+            if(did=='feekcontent'){
+                pos.top=15;
+            }else if(did=='feekemail'){
+                pos.top=25;
+            }else if(did=='email'){
+                pos.top+=10;
+            }else{
+                return;
+            }
+            //----------------
+            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+            self.focusin(function(e) {
+                holder.hide();
+            }).focusout(function(e) {
+                if(!self.val()){
+                    holder.show();
+                }
+            });
+            holder.click(function(e) {
+                holder.hide();
+                self.focus();
+            });
+        });
+    }
+};
+//执行
+jQuery(function(){
+    JPlaceHolder.init();
+});
+function login_envent(){
+    if($("#loginapply").length > 0){
+        $("#loginapply").show();
+        return false;
+    }else{
+        alert('请先登录！');window.location.href='/user/user/login';return false;
+    }
+}
+</script>
+<!--反馈 end-->
+<!--json提示 begin-->
+<div class="" id="jsonmessagediv" style="display:none">
+<div class="login_bg"></div>
+<div class=" float-public float-200">
+    <h2><em><a href="#"><img src="/app/static/images/close-blue.jpg" width="12" height="11" onclick="jsonmessagetoggle();"></a></em>提示信息</h2>
+    <div class="float-pad">
+    <div id="jsonmessage"><h3>申请成功!</h3></div>
+    </div>
+</div>
+</div>
+<!--json提示 end-->
+<!--返回top begin-->
+<div id="back-to-top" class="back-to-top back-to-top-show ">
+        <p class="bt-top"><a href="#" id="back-to-top-btn"  title="回到顶部"><img src="/app/static/images/back.jpg" width="30" height="58"></a></p>
+</div>
+<!--返回top end-->
+
+<!--js自动推送至百度-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!--统计-->
+<!-- eolcounter -->
+<script language="javascript">
+(function(){
+  var _doc=document.getElementsByTagName('body')[0];
+  var script=document.createElement('script');
+  script.setAttribute('type','text/javascript');
+  script.setAttribute('src','//stat.eol.cn/piwik.js');
+  _doc.appendChild(script);
+  function create(){
+    try {
+      var piwikTracker = Piwik.getTracker("//stat.eol.cn/mysql.php", 128);
+      piwikTracker.trackPageView();
+      piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+  }
+  if(document.all){
+    script.onreadystatechange=create;
+  }else{
+  script.onload=create;
+  }
+})();
+</script>
+<!-- End eolcounter Tag -->
+
+<!--访问统计-->
+<div style="display: none">
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256563566'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256563566' type='text/javascript'%3E%3C/script%3E"));
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8c9250332897645741aff756b258b000";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</div>
+
+<!--系统问题反馈-->
+<link href="/app/static/frm/css/materialdesignicons.min.css" rel="stylesheet">
+<div class="system-feedback" onclick="login_envent();">
+    <i class="mdi mdi-settings mdi-36px"></i>
+    <p style="font-size: 12.5px; margin: 3px auto 0;">系统反馈</p>
+</div>
+<div class="fk-pop border" style="display:none; z-index:9999;" id="system-feedback">
+    <h2>
+        <div onclick="$('#system-feedback').toggle();" class="co-l">
+            <em>
+                <a href="javascript:void(0)" ><img src="/app/static/images/close-blue.jpg" width="12" height="11"></a>
+            </em>
+        </div>
+        系统问题反馈
+    </h2>
+    <div class="float-pad">
+        <div>
+            <label>* 问题：</label>
+            <input id="question" type="text" style="width: 75%; height: 20px; padding: 5px;" placeholder="(必填) 请输入您遇到的问题">
+        </div>
+        <div style="margin: 10px 0;">
+            <label style="vertical-align: middle;">* 描述：</label>
+            <textarea id="describe" type="text" style="width: 75%; height: 100px; padding: 5px; font: 400 13.3333px Arial; vertical-align: middle;" placeholder="(必填) 请描述您所遇到的问题，最好附上问题链接地址"></textarea>
+        </div>
+        <div class="btn-70 right wihte btn btn-bg" style="margin-top: 8px;" id="sub-issue" data-type="2" onclick="system_feedback()"><a>确定</a></div>
+        <div class="no_way"></div>
+    </div>
+</div>
+
+
+
+
+<style>#qrcode2>canvas{ width:94px; height:94px; }</style>
+<div class="wx-r wx-r2 border">
+	<p align="center" id="qrcode2"></p>
+    <p class="line_22" align="center">扫一扫</p>
+    <p class="line_22" align="center">跟踪简历投递状态</p>
+</div>
+<script src="/app/static/scripts/jquery/jquery.qrcode.min.js"></script>
+<script>
+    jQuery('#qrcode2').qrcode({
+        text:"http://zpjob.acabridge.cn/school/6612"
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>
+        中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所
+        联系电话</title>
+    <meta name="keywords" content="中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所" />
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <link href="../css/ireset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/layout.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/query_v4.css" />
+    <script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/c-userList.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isInput = false;
+        var tip = '输入要查询的公司或电话号码';
+        // function $(v) { return document.getElementById(v); }
+        function inputFocus(o) {
+            isInput = true;
+            var box = $("#bBox")[0];
+            box.className = "b_box_f";
+            o.className = "b_w_f";
+            if (o.value == tip) { o.value = ""; }
+            $("#bClose")[0].style.display = "inline-block";
+        }
+        function inputBlur(o) {
+            isInput = false;
+            var box = $("#bBox")[0];
+            box.className = "b_box";
+            if (o.value == "" || o.value == tip)
+            { o.value = tip; o.className = "b_w"; $("#bClose")[0].style.display = "none"; } else { o.className = "b_w_f"; $("#bClose")[0].style.display = "inline-block"; }
+        }
+
+        function fn_error(obj, path) {
+            var src = path || "/images/default2.jpg";
+            $(obj).attr("src", src);
+            obj.onerror = null;
+        }
+    </script>
+</head>
+<body style="background: #fff;">
+    <div id="wrapper">
+        <div>
+            <div class="head" style="margin:0 auto;width:1200px;clear:both;height:60px;">
+                <div class="b_logo">
+                    <a href="/">
+                        <img alt="电话号码查询" src="/images/logo.gif" width="130" border="0" /></a></div>
+                <div class="head-nav" style="margin-right: 30px;height:60px;">
+                    <ul>
+        <li><a href="javascript:void(0);" id="A4">号码查询<i class="ico_triangle"></i></a>
+          <ul>
+            
+            <li><a href="/114.aspx">企业查询</a></li>
+            <li><a href="/dh/">号码归属地</a></li>
+            <li><a href="/kh/">空号查询</a></li>
+            <li><a href="/tel/">常用号码</a></li>
+			<li><a href="/qh/">号码区号</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0);" id="A5">号码标记<i class="ico_triangle"></i></a>
+          <ul>
+            <li><a href="/renzheng.aspx">认证标记</a></li>
+			<li><a href="/shensu.aspx">取消标记</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0);" id="A1">号码安全<i class="ico_triangle"></i></a>
+          <ul>
+            <li><a href="/jubaoList.aspx">号码举报</a></li>
+			<li><a href="/private.aspx">勿扰号</a></li>
+          </ul>
+        </li>
+         <li><a href="javascript:void(0);" id="A3">号码接口<i class="ico_triangle"></i></a>
+          <ul>
+			<li><a href="/sdk.aspx">SDK-API</a></li>
+            <li><a href="/cooperation.aspx">合作联系</a></li>
+            <li><a href="/OpenPlatform/index.aspx">开放平台</a></li>
+          </ul>
+        </li>
+         
+      </ul>
+                </div>
+                <div style="float: left; margin-top: 17px;">
+                    <form id="f1" name="f1" action="/114.aspx" method="get" target="_self">
+                    <span id="bBox" class="b_box">
+                        <input name="w" type="text" id="w" maxlength="200" size="30" class="b_w" value="输入要查询的公司或电话号码"
+                            onfocus="inputFocus(this);" onblur="inputBlur(this);" onmouseover="$('#bBox')[0].className = 'b_box_f';"
+                            onmouseout="if(isInput==false) $('#bBox')[0].className = 'b_box';" />
+                        <span id="bClose" class="b_close" onclick="var winput=document.getElementById('w');winput.value='';winput.focus();">
+                            X</span></span>
+                    <button type="submit" class="b_sbmt" style="margin-left:-5px;">
+                                电话号码查询</button>
+                    </form>
+                </div>
+                <div class="fr mt13" style="margin-top: 20px; position: relative;">
+                    <a href="#" class="p10">
+                        <img src="/images/ico_201606200857.png" width="14" height="14" /></a><a href="#"
+                            class="p10"><img src="/images/ico_201606200858.png" width="14" height="16" /></a><a
+                                href="javascript:void(0)" class="p10" id="userList"><img src="/images/ico_201606200856.png"
+                                    onerror="fn_error(this,'/images/ico_201606200856.png')" width="30" height="30" /></a>
+                    <ul class="userchild-ul-ul" id="ul_noLogin" isshow="true">
+                        <li><a href="/login.aspx"  onclick="try{showPage('/login.aspx?op=model',600,550);return false;}catch(e){}">登录</a></li>
+                        <li><a href="/register.aspx"  onclick="try{showPage('/register.aspx?op=model',600,550);return false;}catch(e){}">注册</a></li>
+                    </ul>
+                    <ul class="userchild-ul-ul" id="ul_Login" isshow="false">
+                        <li><a href="/mdfPwd.aspx" onclick="try{showPage('/mdfPwd.aspx?op=model',600,550);return false;}catch(e){}">修改密码</a></li>
+                         <li><a href="/user/center.aspx">个人中心</a></li>
+                        <li><a href="/user/mycollect.aspx">我的收藏</a></li>
+                        <li><a href="/loginOut.aspx">退出登录</a></li>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <script src="/js/user.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                fn_childUserInit(getCookie("user") || "");
+            </script>
+        </div>
+        <div class="sub-section2">
+           <div class="sub-nav2" style="width:500px;"><a href="/renzheng.aspx">企业号码认证</a><a href="/shensu.aspx">取消标记</a><a href="/jubaoList.aspx">号码举报</a><a href="/private.aspx">隐私号</a></div>
+        </div>
+        <div class="status" style="padding-left: 15px; display: none;">
+            <div style="width: 1200px; margin: 0 auto;">
+            </div>
+        </div>
+
+        <div id="content" class="content">
+            <input name="telToken" type="hidden" id="telToken" value="o/L8Xrt0/C8y3ZDUQv2mVapqx/r2EMz1IpsMaB+RcJZv1hBWV/GTmyv+nAX/++Cj" />
+            <input name="zID" type="hidden" id="zID" value="4701144356" />
+            <div class="contentleft2">
+                
+                <div class="navline2" style=" position:relative;">
+                    <div class="contact2">
+                        <div class="pic_tx">
+                            <img alt="" style="vertical-align: middle; max-width: 100px" src="/images/default2.jpg"
+                                onerror="fn_error(this)"></div>
+                        <div class="tb_tel2">
+                            <div>
+                                <h1>
+                                    <span>
+                                        中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所</span></h1>
+                            </div>
+                            <ul class="item">
+                                <li>企业名称：中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所</li>
+                                <li>所在地区：新疆 和田地区 洛浦县</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="clear: both;">
+                    </div>
+                    
+                    <input type="hidden" value="66859983" id="ComPanyID" />
+                    <div id="isRz"></div>
+                    
+                    
+                </div>
+                <div class="topline">
+                </div>
+                <div class="result" style="border-top: none; padding-top: 10px;">
+                    <div class="contact">
+                        <div class="safe" style="padding-bottom: 30px;height:260px;width:260px;">
+                            
+
+<div class="_iz4kcju5e6"></div>
+<script type="text/javascript">
+    (window.slotbydup = window.slotbydup || []).push({
+        id: "u6247817",
+        container: "_iz4kcju5e6",
+        async: true
+    });
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+</script>
+                        </div>
+                        <table border="0" class="tb_tel">
+                            
+                                    <tr>
+                                        <td class="item" style="max-width: 100px; text-overflow: ellipsis; overflow: hidden;"
+                                            title="手　机：">
+                                            <nobr>手　机：</nobr>
+                                        </td>
+                                        <td style="max-width: 450px; white-space: normal; word-wrap: break-word; word-break: break-all;">
+                                            <b name='ct'>1339***9000</b><span style="color: #999999; padding-left: 20px; font-size: 15px;"><a href="javascript:void(0);" onclick="fn_GetFullNumber();">查看完整号码</a></span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="item" style="max-width: 100px; text-overflow: ellipsis; overflow: hidden;"
+                                            title="地　址：">
+                                            <nobr>地　址：</nobr>
+                                        </td>
+                                        <td style="max-width: 450px; white-space: normal; word-wrap: break-word; word-break: break-all;">
+                                            新疆 和田地区 洛浦县拜什托格拉克乡<span style="color: #999999; padding-left: 20px; font-size: 15px;"></span>
+                                        </td>
+                                    </tr>
+                                
+                                <div>
+	
+                                    <tr><td colspan="2" style="height:80px"><i style="background-color:#fcf6c0; color: #555; font-size:11px;padding: 5px;">若对信息有异议，请联系网站底部客服QQ纠错或删除。</i></td></tr>
+                                
+</div>
+                            
+			
+                        </table>
+                    </div>
+
+
+                    <div class="about">
+                        <h3 class="tt">
+                            中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所介绍：</h3>
+                        <p class="business">
+                            代办、联通、电信、移动，销售：农业生产资料、日用品、粮、油及其副食品；叶面肥的销售及配饰，房屋租赁</p>
+                        <div class="note">我来：<a href="/renzheng.aspx">完善资料</a></div>
+                    </div>
+
+                    <div id="TS" style="background-color: #fcfcfc; background-color: #fcf6c0; color: #555; padding: 6px;
+                        margin-top: 15px; font-size: 12px; font-family: 微软雅黑;">
+                        风险提示：<i style="font-style: normal;">所展示中国邮政集团公司新疆维吾尔自治区洛浦县拜什托格拉克乡邮政所的信息未通过真实性认证，进行咨询或交易时请注意核实对方身份，以防上当受骗！<a
+                            href="/renzheng.aspx"><nobr>认证</nobr></a> <a href="/jubaoList.aspx">
+                                <nobr>举报</nobr>
+                            </a></i>
+                    </div>
+
+                </div>
+
+<div style="margin-top:15px;">
+<div class="_uhfp3mdrpwk"></div>
+<script type="text/javascript">
+    (window.slotbydup = window.slotbydup || []).push({
+        id: "u6247818",
+        container: "_uhfp3mdrpwk",
+        async: true
+    });
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+</script>
+
+</div>
+
+                <div style="margin-top: 20px; padding: 6px; border: 1px solid #f0f0f0; overflow: auto;"
+                    class="link">
+                    <div style="background-color: #f0f0f0; padding-left: 15px;">
+                        看了该信息的人还看了：</div>
+                    <div style="float: left; width: 310px; overflow: hidden; line-height: 24px; padding: 15px 16px 0;">
+                        
+                                <a href="/gs11/6647267514.html">
+                                    中国国家电网公司</a><br />
+                            
+                                <a href="/gs11/6647267692.html">
+                                    中国红十字总会</a><br />
+                            
+                                <a href="/gs11/8647267717.html">
+                                    中国扶贫基金会</a><br />
+                            
+                                <a href="/gs11/3647267728.html">
+                                    中国青少年发展基金会</a><br />
+                            
+                                <a href="/gs11/1647267734.html">
+                                    中国人寿保险（集团）公司</a><br />
+                            
+                                <a href="/gs11/4647267744.html">
+                                    中国人寿财产保险股份有限公司</a><br />
+                            
+                                <a href="/gs11/5647267759.html">
+                                    中国人寿保险股份有限公司</a><br />
+                            
+                                <a href="/gs11/7647267763.html">
+                                    中国人民保险集团股份有限公司</a><br />
+                            
+                    </div>
+                    <div style="float: right; width: 310px; overflow: hidden; line-height: 24px; padding: 15px 16px 0;">
+                        
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="contentright">
+                <div style="background-color: #fff; border: 1px solid #e0e0e0; text-align: center;
+                    width: 250px; display: none;">
+                    <div style="color: #ff6600; font-size: 32px; height: 60px; line-height: 70px;">
+                        68,548,662</div>
+                    <div style="color: #666; height: 35px;">
+                        家企业已加入</div>
+                    <div style="height: 40px; text-align: center; line-height: 40px;">
+                        <div class="reg">
+                            <a href="#">免费登记企业</a></div>
+                        <div class="login">
+                            <a href="#">用户登录</a></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div style="height: 226px; width: 270px; background: #fcfcfc; border: 1px solid #e5e5e5;
+                    padding: 5px;">
+                    <a href="/renzheng.aspx" target="_blank">
+                        <img style="border: 0px" src="/images/pic_201606171052.jpg"></a>
+                </div>
+                <div class="t_about">
+                    <div class="t_title">
+                        <h5>
+                            相关企业</h5>
+                        <a href="#" class="another">换一换</a><div style="clear: both;">
+                        </div>
+                    </div>
+                    <div style="margin: 0 15px">
+                        
+                                <a href="/gs37/4647267384.html">
+                                    山东航空集团有限公司</a><br />
+                            
+                                <a href="/gs11/1647267734.html">
+                                    中国人寿保险（集团）公司</a><br />
+                            
+                                <a href="/gs11/7647267763.html">
+                                    中国人民保险集团股份有限公司</a><br />
+                            
+                                <a href="/gs44/1647268003.html">
+                                    中国平安保险（集团）股份有限公司</a><br />
+                            
+                                <a href="/gs11/5647268021.html">
+                                    中国再保险(集团)股份有限公司</a><br />
+                            
+                                <a href="/gs11/9647268048.html">
+                                    中国太平保险集团公司</a><br />
+                            
+                                <a href="/gs00/6647268058.html">
+                                    中国太平保险集团（香港）管理总部</a><br />
+                            
+                                <a href="/gs11/4647268105.html">
+                                    华泰保险集团股份有限公司</a><br />
+                            
+                                <a href="/gs33/9647268404.html">
+                                    浙江吉利控股集团有限公司</a><br />
+                            
+                                <a href="/gs22/8647268435.html">
+                                    中国第一汽车集团公司</a><br />
+                            
+                    </div>
+                </div>
+                <div class="recommend w280">
+                    <div class="t_title">
+                        <h5></h5>
+                    </div>
+                    <div class="t_logo_del" style="padding: 15px;height:300px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="newfoot footer_div">
+           <ul class="valid footer_ul">
+                <li class="footer_li"><a  href="/dh/index.htm" >归属地查询</a></li>
+                <li class="footer_li"><a  href="/114.aspx" >企业查询</a></li>
+                <li class="footer_li"><a  href="/renzheng.aspx" >号码认证</a></li>
+                <li class="footer_li"><a  href="/jubaoList.aspx" >号码举报</a></li>
+                <li class="footer_li"><a  href="/private.aspx">认证隐私号</a></li>
+                <li class="footer_li"><a  href="/shensu.aspx">取消标记</a></li>
+                </ul>
+           <ul class="valid"><li>友情链接:</li>
+	<li><a href="http://www.189.cn/" target="_blank">中国电信</a></li>
+        <li><a href="http://www.10086.cn/" target="_blank">中国移动</a></li>
+        <li><a href="http://www.chinaunicom.com.cn/" target="_blank">中国联通</a></li>
+        <li><a href="http://www.hao123.com/" target="_blank">hao123</a></li>
+        <li><a href="http://hao.360.cn" target="_blank">360导航</a></li>
+	<li><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?efacfa12e118b6102aa81436a7522d14";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></li>
+            </ul>
+            <div class="copyright">
+                <p>Copyright &copy; 2007-
+                    <script>                document.write((new Date()).getFullYear());</script>
+                     All Rights Reserved.
+                </p>
+                <p>
+                    备案号：<a class="footer_a_style" href="http://www.miitbeian.gov.cn" target="_blank" >粤ICP备19011643号-1</a>
+                </p>
+                <p>版权所有&copy;2021 客服QQ：<a class="footer_a_style" href="tencent://Message/?Uin=2741665574&amp;websiteName=q-zone.qq.com&amp;Menu=yes">2741665574</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/tips.js" type="text/javascript"></script>
+    <script src="/js/pop.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function fn_GetFullNumber() {
+            var telToken = $("#telToken").val() || "";
+            var id = $("#zID").val() || "";
+            if (telToken != "" && id != "") {
+                $.ajax({
+                    url: "/Controller.ashx",
+                    type: "post",
+                    dataType: "json",
+                    data: { op: "fullnumber", telToken: telToken, id: id },
+                    success: function (result) {
+                        if (result.error >= 0) {
+                            $("table[class=tb_tel] tr").find("b[name='ct']").parents("tr").remove();
+                            for (var i = result.data.length - 1; i >= 0; i--) {
+                                $("table[class=tb_tel]").prepend($("<tr><td>" + result.data[i].ctTitle + "</td><td>" + result.data[i].ctValue + "<span style=\"color: #999999; padding-left: 20px; font-size: 15px;\">" + result.data[i].ctNote + "</span></td></tr>"));
+                            }
+                        } else if (result.error == -10) {
+                            showPage("/login_wx.aspx?op=model", 600, 550);
+                        } else {
+                            window.location.reload();
+                        }
+                    },
+                    error: function (xhr, error, errorThown) {
+                        window.location.reload();
+                        //alert("发生未知错误.");
+                    }
+                });
+            }
+        }
+        $(function () {
+            $("#follow").bind("click", function () {
+                var isfollow = $(this).attr("isfollow") || false;
+                var datas = {};
+                if (!isfollow || isfollow == "false") {
+                    datas.op = "addcpfirend";
+                    datas.id = $("#zID").val();
+                } else {
+                    datas.op = "mdfcpfirend";
+                    datas.id = $("#zID").val();
+                }
+
+                $.ajax({
+                    url: "/Controller.ashx",
+                    type: "post",
+                    dataType: "json",
+                    data: datas,
+                    success: function (result) {
+                        if (result.state == -10) {
+                            showPage("/login_wx.aspx?op=model", 600, 550);
+                        } else {
+                            if (datas.op == "addcpfirend") {
+                                $("#follow").attr("isfollow", true).text("取消关注")
+                            } else {
+                                $("#follow").attr("isfollow", false).text("+关注")
+                            }
+                        }
+                    },
+                    error: function (xhr, error, errorThown) { }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

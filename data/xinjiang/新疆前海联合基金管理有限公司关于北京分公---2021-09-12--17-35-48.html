@@ -1,0 +1,1034 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>证券日报网-新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告
+</title>
+<meta name="keywords" content="新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告<br/>">
+ 
+<meta name="description" content="新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告<br/>">
+
+
+<link href="../../../tplimg/csscontent.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../../../tplimg/clndr.css" type="text/css" />
+	
+<!--<script type="text/javascript" src="../../../tplimg/jquery-1.4.2.min.js"></script>-->
+
+
+<script type="text/javascript" src="../../../tplimg/jquery.js"></script>
+<script type="text/javascript" src="../../../tplimg/jquery.openCarousel.js"></script>
+<script type="text/javascript" src="../../../tplimg/jquery.xdomainrequest.min.js"></script>
+<!--<link href="../../../tplimg/node_v20180823.css" rel="stylesheet" type="text/css" />-->
+<link href="../../../tplimg/calendar.css"  rel="stylesheet" type="text/css">
+
+<!--<script type="text/javascript" src="../../../tplimg/calendarp.js"></script>
+<script type="text/javascript" src="../../../tplimg/mpcore.js"></script>
+<script type="text/javascript" src="../../../tplimg/public.js"></script>
+<script type="text/javascript" src="../../../tplimg/rangenew.js"></script>-->
+<script type="text/javascript" src="http://passport.zqrb.cn/loginMsg.php"></script>
+<SCRIPT>
+//画线--写title
+$(document).ready(function(){
+	var state = getcookie();
+	ajaxget(state);
+	});
+
+function drawredline() {
+
+	$.getScript('/tplimg/calendarp.js');
+	$.getScript('/tplimg/mpcore.js');
+	$.getScript('/tplimg/public.js');
+	$.getScript('/tplimg/rangenew.js');
+	
+	var obj = document.getElementsByName('PagePicMap');	
+	if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)){
+	    //alert('你是使用IE')
+		obj[0].onmouseover=function(){drawLine(event.srcElement, event);};
+	    obj[0].onmouseout=function(){MouseOutMap();};
+	}else if (navigator.userAgent.indexOf('Firefox') >= 0){
+	    //alert('你是使用Firefox')
+		obj[0].onmouseover=function(){drawLine(arguments[0].target, arguments[0]);};
+		document.getElementById("leveldiv").onmouseout=function(){MouseOutMap();};
+	}else if (navigator.userAgent.indexOf('Opera') >= 0){
+	    //alert('你是使用Opera')
+		obj[0].onmouseover=function(){drawLine(event.srcElement, event);};
+	    obj[0].onmouseout=function(){MouseOutMap();};
+	}else{
+	    //alert('你是使用其他的浏览器浏览网页！')
+		obj[0].onmouseover=function(){drawLine(event.srcElement, event);};
+	    obj[0].onmouseout=function(){MouseOutMap();};
+	}
+	//replacePageTitle();
+}
+
+function getcookie() {
+	var path = geturl();
+	//读取cookie内是否点赞、是否打分记录
+	//读取cookie数据
+	//cookie	=>	name:path,value:(1=isthumb,2=isscore,3=both)
+	var arr,reg=new RegExp("(^| )"+path+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg)) {
+		var state = unescape(arr[2]);
+	} else {
+		var state = 0;
+	}
+	return state;
+}
+
+function changepng(obj,pngname) {
+	obj.src = "../../../tplimg/"+pngname+".png";
+}
+
+function gettitle() {
+	var title = document.title;
+	return title.replace(/证券日报网-/,'');
+}
+
+function ajaxget(state) {
+	//ajax 获取文章相关数据
+	var url = geturl();
+	var source = 2;	//1=www,2=epaper,3=blog
+	//var title = gettitle();
+	var title = gettitle();
+	//var page = 2;	//来源为2=epaper时，版面信息
+	jQuery.support.cors = true;
+	$.ajax({
+		type: 'GET',
+		url : "http://score.zqrb.cn/ajax/ajaxget?url="+url+"&title="+encodeURI(title)+"&source="+source,
+		dataType: "json",
+		data: {},
+		async: false,
+		error: function() {
+			//alert('网络繁忙！');	//不影响用户体验 不再提示
+			drawredline();
+		},
+		success: function(data) {
+		
+			/**
+			*先画框，再填充内容
+			*只有请求成功才画框
+			*/
+			/*$("#df").html("<div class='df'><div class='xhwz'><p class='at'>喜欢文章</p><div class='dmz' id='dmz'></div><div class='dzs' id='dzs'></div></div><div class='xbtj'><div class='dfline'></div><div class='xxdf' id='xxdf'></div></div><div class='ly'><div style='float:left;'><textarea name='tablemsg' id='comment' cols='' rows='' border='0' style='margin:10px;width:670px;height:60px;border:solid 1px #bfc2c5;resize:none;' class='extarea' placeholder='说点什么...最多输入500个字符' onKeyUp='Huitextarealength(this);'></textarea><p style='float:left;width:670px;height:16px;position:absolute;'><em class='textarea-length'>0</em>/<am>500</am></p></div><div class='lyright' id='upcomment'><img src='../../../tplimg/tj-01.png' onmouseover='this.src=../../../tplimg/tj-02.png' onmouseout='this.src='../../../tplimg/tj-01.png' style='margin:10px;float:right;' onclick='ajaxComment();'></div></div></div>");*/
+		
+			if(state == 1 || state == 3) {
+				$("#dmz").html("<img src='../../../tplimg/zan2.png'>");
+			} else {
+				$("#dmz").html("<img src='../../../tplimg/zan1.png' onmouseover=\"changepng(this,'zan2');\" onmouseout=\"changepng(this,'zan1');\" onclick='ajaxThumb();'>");
+			}
+			$("#dzs").html(data.thumb_num);
+			if(state == 2 || state == 3) {
+				$("#xxdf").html("<p class='aat'>得分情况：</p><div class='tj' style='height:41px;margin:20px 0px;'><div class='sztj'><span class='onedf' style='font-size:20px;'>本文得分 :</span><span class='onesz' style='font-size:20px;'>"+data.score+"</span></div><div class='cyrs'><span class='onedf' style='font-size:20px;'>参与人数 :</span><span class='onesz2' style='font-size:20px;'>"+data.score_num+"</span></div></div><div class='dfline2'></div>");
+			} else {
+				$("#xxdf").html("<p class='aat'>给文章打分</p><div class='star'><span onmouseover='rate(this,event)'><img src=../../../tplimg/star.png title='很差' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='一般' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='还行' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='推荐' style='width:30px;height=30px;margin-right:10px;'/><img src=../../../tplimg/star.png title='力荐' style='width:30px;height=30px;margin-right:10px;'/></span><span class='pl' id='dxxx'></span></div><div class='tj'><div class='sztj'><span class='onedf'>本文得分 :</span><span class='onesz'>"+data.score+"</span></div><div class='cyrs'><span class='onedf'>参与人数 :</span><span class='onesz2'>"+data.score_num+"</span></div></div><div class='dfline2'></div>");
+			}
+			drawredline();
+		}
+	});
+}
+
+function geturl() {
+	//var url = "http://www.zqrb.cn/stock/abc_2.html";
+	//var href = window.location.href;	//http://www.zqrb.cn/stock/abc_2.html
+	var protocol = window.location.protocol;	//http:
+	var host = window.location.host;	//www.zqrb.cn
+	var pathname = window.location.pathname;	//stock/abc_2.html
+	var path_arr = pathname.split('?');	//_
+	if(path_arr.length>1 && host != "epaper.zqrb.cn") {
+		//path = path_arr[1].split('.');
+		//path = path[1];
+		pathname = path_arr[0];	//+'.'+path[1]
+	}
+	return encodeURI(protocol+'//'+host+pathname);
+}
+
+function setCookie(value)
+{
+	var url = geturl();
+	var Days = 30;
+	var exp = new Date();
+	exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	document.cookie = url + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+
+function ajaxThumb() {
+	//ajax 点赞操作
+	var url = geturl();
+	var source = 2;	//1=www,2=epaper,3=blog
+	var title = gettitle();
+	var state = getcookie();
+	if(u.userName!=""){
+		var islogin = 1;
+		var username = u.userName;
+		var userid = u.reId;
+	} else {
+		var islogin = 0;
+		var username = "";
+		var userid = "";
+	}
+	jQuery.support.cors = true;
+	$.ajax({
+		type: 'GET',
+		url : "http://score.zqrb.cn/ajax/ajaxthumb?url="+url+"&title="+encodeURI(title)+"&source="+source+"&islogin="+islogin+"&userid="+userid+"&username="+encodeURI(username),
+		dataType: "json",
+		data: {},
+		async: true,
+		error: function() {
+			alert('网络繁忙！');
+		},
+		success: function(data) {
+			$("#dmz").html("<img src='../../../tplimg/zan2.png'>");
+			$("#dzs").html(data.thumb_num);
+			if(state == 0) {
+				setCookie(1);
+			} else {
+				setCookie(3);
+			}
+		}
+	});
+}
+
+function ajaxComment() {
+	//ajax 评论操作
+	var url = geturl();
+	var source = 2;	//1=www,2=epaper,3=blog
+	var title = gettitle();
+	var comment = $("#comment").val();
+	if(u.userName!=""){
+		var islogin = 1;
+		var username = u.userName;
+		var userid = u.reId;
+	} else {
+		var islogin = 0;
+		var username = "";
+		var userid = "";
+	}
+	jQuery.support.cors = true;
+	$.ajax({
+		type: 'GET',
+		url : "http://score.zqrb.cn/ajax/ajaxcomment?url="+url+"&title="+encodeURI(title)+"&source="+source+"&comment="+encodeURI(comment)+"&islogin="+islogin+"&userid="+userid+"&username="+encodeURI(username),
+		dataType: "text",
+		data: {},
+		async: true,
+		error: function() {
+			alert('网络繁忙！');
+		},
+		success: function(data) {
+			alert(data);
+			$("#comment").html('');
+		}
+	});
+}
+
+
+function ajaxScore(score) {
+	//ajax 打分操作
+	var url = geturl();
+	var source = 2;	//1=www,2=epaper,3=blog
+	var title = gettitle();
+	var state = getcookie();
+	if(u.userName!=""){
+		var islogin = 1;
+		var username = u.userName;
+		var userid = u.reId;
+	} else {
+		var islogin = 0;
+		var username = "";
+		var userid = "";
+	}
+	jQuery.support.cors = true;
+	$.ajax({
+		type: 'GET',
+		url : "http://score.zqrb.cn/ajax/ajaxscore?url="+url+"&title="+encodeURI(title)+"&source="+source+"&islogin="+islogin+"&userid="+userid+"&username="+encodeURI(username)+"&score="+score,
+		dataType: "json",
+		data: {},
+		async: true,
+		error: function() {
+			alert('网络繁忙！');
+		},
+		success: function(data) {
+			$("#xxdf").html("<p class='aat'>得分情况：</p><div class='tj' style='height:41px;margin:20px 0px;'><div class='sztj'><span class='onedf' style='font-size:20px;'>本文得分 :</span><span class='onesz' style='font-size:20px;'>"+data.score+"</span></div><div class='cyrs'><span class='onedf' style='font-size:20px;'>参与人数 :</span><span class='onesz2' style='font-size:20px;'>"+data.score_num+"</span></div></div><div class='dfline2'></div>");
+			if(state == 0) {
+				setCookie(2);
+			} else {
+				setCookie(3);
+			}
+		}
+	});
+}
+
+//页面热区点击跳转
+function goPage(){
+var hrefTemp = $("#leveldiv").attr("class");
+document.location.href = hrefTemp;
+}
+</SCRIPT>
+<script type="text/javascript">
+	function lbtnover(obj) {
+		obj.src = "../../../tplimg/HONG-LEFT.png";
+	}
+	function lbtnout(obj) {
+		obj.src = "../../../tplimg/lan.png";
+	}
+	function rbtnover(obj) {
+		obj.src = "../../../tplimg/HONG-RIGHT.png";
+	}
+	function rbtnout(obj) {
+		obj.src = "../../../tplimg/LAN-RIGHT.png";
+	}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容  onclick="goPage()"; 
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body>
+<div class="top">
+  <div class="m">
+    <div class="lf logo"><a href="http://www.zqrb.cn" target="_blank"><img src="../../../tplimg/logo.jpg" width="159" height="43" border="0"></a></div>
+    <div class="rt">
+      <ul>
+        <li><a href="http://www.zqrb.cn" target="_blank">证券日报官网</a></li>
+        <li>|</li>
+        <div id="loginstate" style="float: left;height: 20px;padding: 1px 10px 0 10px;font-size: 18px;color: #3368AE;">
+          <a href="http://passport.zqrb.cn/login.php" target="_blank">登录/注册</a>
+        </div>
+        <li>|</li>
+        <li><a href="http://m.epaper.zqrb.cn" target="_blank">证券日报电子报手机版</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      if(u.userName!=""){
+        var pageHtml = '<a style="color:red;" href="http://passport.zqrb.cn/center.php">'+u.userName + '</a>  <a href="http://passport.zqrb.cn/logout.php?ComeUrl=http:/www.zqrb.cn">退出</a>';
+        $('#loginstate').html(pageHtml);
+      }
+    </script>
+
+    <div class="clear"></div>
+  </div>
+  
+</div>
+<div class="mian">
+    <div class="m">
+        <div class="left"><!--效果html开始-->
+            <div class="mkeFocus">
+                <div class="mkeUl">
+
+                    <!--span标签加onclick="goPage()"--改动3-->
+                    <SPAN id=leveldiv title=点击查看内容  onclick="goPage()";
+                          style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px">						  </SPAN>
+                    <!--body标签去掉 onLoad="initialize();initMPPage();"--改动4-->
+					<table style="border-spacing:0px;" width="484" height="700">
+<tr>
+    <td width=100% height=100% align="center" valign="middle"  id="graphics-js">
+        <map name=PagePicMap><Area coords="22,50,238,50,238,213,22,213" shape="polygon" href="content_767028.htm?div=-1"><Area coords="246,50,462,50,462,116,246,116" shape="polygon" href="content_767029.htm?div=-1"><Area coords="246,123,462,123,462,249,246,249" shape="polygon" href="content_767030.htm?div=-1"><Area coords="22,221,238,221,238,298,22,298" shape="polygon" href="content_767031.htm?div=-1"><Area coords="246,255,462,255,462,397,246,397" shape="polygon" href="content_767032.htm?div=-1"><Area coords="22,307,238,307,238,388,22,388" shape="polygon" href="content_767033.htm?div=-1"><Area coords="22,396,238,396,238,474,22,474" shape="polygon" href="content_767034.htm?div=-1"><Area coords="246,405,462,405,462,579,246,579" shape="polygon" href="content_767035.htm?div=-1"><Area coords="22,483,238,483,238,533,22,533" shape="polygon" href="content_767036.htm?div=-1"><Area coords="22,543,238,543,238,608,22,608" shape="polygon" href="content_767037.htm?div=-1"><Area coords="246,588,462,588,462,611,246,611" shape="polygon" href="./content_767038.htm?div=-1"><Area coords="246,616,462,616,462,652,246,652" shape="polygon" href="content_767039.htm?div=-1"><Area coords="22,617,238,617,238,676,22,676" shape="polygon" href="content_767040.htm?div=-1"><Area coords="246,658,462,658,462,679,246,679" shape="polygon" href="content_767041.htm?div=-1"></map><img src=../../../images/2021-09/13/D7/zqrb20210913D7_b.jpg width=484 height=700 border=0 USEMAP=#PagePicMap>
+    </td>
+</tr>
+</table>
+                    <!--<div class="mkeNum">
+                        <span class="mke_ns1">1</span>
+                        <span class="mke_ns2">1</span>
+                    </div>-->
+                    <div class="mkeLbtn"><a class=preart href="node_1206.htm"><b><img src='../../../tplimg/lan.png' onmouseover='lbtnover(this);' onmouseout='lbtnout(this);' width='46' height='46' border='0'></b></a></div>
+          <div class="mkeRbtn"><a class=preart href="node_1208.htm"><strong><img src='../../../tplimg/LAN-RIGHT.png' onmouseover='rbtnover(this);' onmouseout='rbtnout(this);' width='46' height='46' border='0'></strong></a></div>
+        </div>
+      </div>
+
+      <!--效果html结束--></div>
+    <div class="right">
+      <div class="menu">
+                <ul>
+                    <li><a href="http://epaper.zqrb.cn">电子报主页</a></li>
+                    <li onMouseOver="getElementById('pgn').style.display='block';getElementById('pgt').style.display='none';"><a href="#">版面目录</a>
+                        <!--<ul>
+                      <li><a href="#">机构简介</a></li>
+                    </ul>-->
+                    </li>
+                    <li onMouseOver="getElementById('pgt').style.display='block';getElementById('pgn').style.display='none';"><a href="#">标题导航</a>
+                        <!--<ul>
+                      <li><a href="#">机构简介</a></li>
+                    </ul>-->
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+	    <script type="text/javascript">
+					$( function(){	
+							$("#search_p").focus(function() {
+								if($("#search_p").val()=='请输入文字'){
+									$("#search_p").val('');
+								}
+							});
+
+							$("#search_p").click(function() {
+								if($("#search_p").val()=='请输入文字'){
+									$("#search_p").val('');
+								}
+							});
+
+							$("#search_p").blur(function() {
+								if($("#search_p").val()=='' || $("#search_p").val().length==0){
+									$("#search_p").val('请输入文字');
+								}
+								
+							});
+						}
+					);
+					
+					function checksearch() {
+						var search_p = $("#search_p").val();
+						if(search_p == "" || search_p == "请输入文字") {
+							alert("请先输入查询文字");
+							$("#search_p").focus();
+							return false;
+						} else {
+							var s_url = "http://search.zqrb.cn/search.php?src=epaper&q="+encodeURI(search_p)+"&f=title&s=newsdate_DESC";
+							$("#search_p").val("请输入文字");
+							window.open(s_url);
+						}
+					}
+				</script>
+            <div class="sou">稿件搜索</div>
+            <div class="biaodan"><input type="text" value="请输入关键词" class="dan" onClick="this.value=''" id="search_p"><span><img src="../../../tplimg/ss.png" width="26" height="26" id="search_btn" onClick="checksearch();"></span></div>
+            <div class="clear"></div>
+
+            <DIV id=pgt onMouseOver="getElementById('pgt').style.display='block';" onMouseOut="getElementById('pgt').style.display='none';" style="margin: 0 auto;width: 430px;position: absolute;overflow-y: scroll;background-color: #fff;display: none;">
+                <TABLE width="100%" border=0 cellPadding=2 cellSpacing=0 bgcolor="#FDFAF3">
+ <TBODY style="background-color: #e6ebf2">
+
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767028.htm?div=-1><div style="display:inline" id=mp767028>烟台中宠食品股份有限公司 关于使用部分闲置募集资金购买理财 产品的进展公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767029.htm?div=-1><div style="display:inline" id=mp767029>银河龙头精选股票型发起式证券投资基金非港股通交易日暂停申购、赎回、转换 和定期定额投资业务的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767030.htm?div=-1><div style="display:inline" id=mp767030>山东瑞丰高分子材料股份有限公司 创业板向不特定对象发行可转换公司债券网上发行中签率及优先配售结果公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767031.htm?div=-1><div style="display:inline" id=mp767031>洽洽食品股份有限公司 关于回购股份事项前十名股东及前十名 无限售条件股东持股情况的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767032.htm?div=-1><div style="display:inline" id=mp767032>扬州海昌新材股份有限公司 关于持股5%以上股东及其一致行动人 减持股份预披露公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767033.htm?div=-1><div style="display:inline" id=mp767033>关于泰康资产管理有限责任公司旗下部分基金2021年“中秋节、国庆节”期间不开放申购赎回等交易类业务的提示性公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767034.htm?div=-1><div style="display:inline" id=mp767034>华夏沪港通上证50AH优选指数证券投资基金（LOF）暂停申购、赎回、定期定额申购业务的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767035.htm?div=-1><div style="display:inline" id=mp767035>思瑞浦微电子科技（苏州）股份有限公司 首次公开发行部分限售股上市流通公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767036.htm?div=-1><div style="display:inline" id=mp767036>兴业中债3-5年政策性金融债指数证券 投资基金恢复大额申购公告公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767037.htm?div=-1><div style="display:inline" id=mp767037>银华安丰中短期政策性金融债债券型证券投资基金暂停大额申购（含定期定额投资及转换转入）业务的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=./content_767038.htm?div=-1><div style="display:inline" id=mp767038>新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767039.htm?div=-1><div style="display:inline" id=mp767039>平安基金管理有限公司 关于新增平安均衡优选1年持有期混合型证券投资基金销售机构的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767040.htm?div=-1><div style="display:inline" id=mp767040>关于招商上证港股通交易型开放式指数 证券投资基金2021年非港股通交易日 暂停申购和赎回业务的公告</div></a>
+</td>
+</TR>
+<tr>
+<td class=default valign="top">
+<img src="../../../tplimg/dian.png">
+</TD>
+<td class=default valign="top">
+<a href=content_767041.htm?div=-1><div style="display:inline" id=mp767041>东吴基金管理有限公司旗下基金 招募说明书更新的提示性公告</div></a>
+</td>
+</TR>
+
+
+</TBODY>
+</TABLE>
+
+            </DIV>
+            <DIV id="pgn" onMouseOver="getElementById('pgn').style.display='block';" onMouseOut="getElementById('pgn').style.display='none';" style="margin: 0 auto;width: 235px;height: 693px;position: absolute;overflow-y: scroll;margin-left:130px;display: none;">
+                <TABLE width="100%" border=0 cellPadding=2 cellSpacing=0 bgcolor="#FDFAF3">
+    <TBODY style="background-color: #FDFAF3">
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_2.htm class="blue" id=pageLink>第A1版：头版</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/A1/zqrb20210913A1.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_3.htm class="blue" id=pageLink>第A2版：今日基本面</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/A2/zqrb20210913A2.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_4.htm class="blue" id=pageLink>第A3版：热点聚焦</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/A3/zqrb20210913A3.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_1.htm class="blue" id=pageLink>第A4版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/A4/zqrb20210913A4.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_5.htm class="blue" id=pageLink>第B1版：金融机构</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/B1/zqrb20210913B1.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_6.htm class="blue" id=pageLink>第B2版：公司新闻</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/B2/zqrb20210913B2.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_7.htm class="blue" id=pageLink>第B3版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/B3/zqrb20210913B3.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_8.htm class="blue" id=pageLink>第B4版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/B4/zqrb20210913B4.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_9.htm class="blue" id=pageLink>第C1版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C1/zqrb20210913C1.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_10.htm class="blue" id=pageLink>第C2版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C2/zqrb20210913C2.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_11.htm class="blue" id=pageLink>第C3版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C3/zqrb20210913C3.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_12.htm class="blue" id=pageLink>第C4版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C4/zqrb20210913C4.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_709.htm class="blue" id=pageLink>第C5版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C5/zqrb20210913C5.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_710.htm class="blue" id=pageLink>第C6版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C6/zqrb20210913C6.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_711.htm class="blue" id=pageLink>第C7版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C7/zqrb20210913C7.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_712.htm class="blue" id=pageLink>第C8版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C8/zqrb20210913C8.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_713.htm class="blue" id=pageLink>第C9版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C9/zqrb20210913C9.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_714.htm class="blue" id=pageLink>第C10版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C10/zqrb20210913C10.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_715.htm class="blue" id=pageLink>第C11版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/C11/zqrb20210913C11.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_716.htm class="blue" id=pageLink>第C12版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/C12/zqrb20210913C12.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_13.htm class="blue" id=pageLink>第D1版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/D1/zqrb20210913D1.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_14.htm class="blue" id=pageLink>第D2版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/D2/zqrb20210913D2.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_15.htm class="blue" id=pageLink>第D3版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/D3/zqrb20210913D3.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_16.htm class="blue" id=pageLink>第D4版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/D4/zqrb20210913D4.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_1205.htm class="blue" id=pageLink>第D5版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/D5/zqrb20210913D5.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_1206.htm class="blue" id=pageLink>第D6版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/D6/zqrb20210913D6.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+ <TR>
+               <TD width="7" align=left height=37>&nbsp;</TD>
+               <TD align=left>&nbsp;<a href=node_1207.htm class="blue" id=pageLink>第D7版：信息披露</a>
+			   <div style="float: right;"><a href=../../../images/2021-09/13/D7/zqrb20210913D7.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+			   </TD>
+        
+        </TR>
+<TR bgColor=#e6ebf2  >
+         <TD align=left  height=37>&nbsp;</TD>
+           <TD align=left>&nbsp;<a href=node_1208.htm class="blue" id=pageLink>第D8版：信息披露</a>
+		   <div style="float: right;"><a href=../../../images/2021-09/13/D8/zqrb20210913D8.pdf><img style="vertical-align: middle;padding-right:10px;" src="../../../tplimg/l3.png"  onmouseover="this.src='../../../tplimg/l2.png'" onmouseout="this.src='../../../tplimg/l3.png'" width="22" height="20"></a></div>
+		   </TD>
+         
+        </TR>
+</TBODY></TABLE>
+            </DIV>
+      <div class="neiye">
+        <div class="neiyee">
+          <h3>
+
+
+      </h3>
+        <h1>
+新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告
+
+      </h1>
+          <h2>
+
+
+          </h2>
+		  <h4></h4>
+							<p id="contenthm">
+							<table width="315" border="0" cellspacing="0" cellpadding="0" align="left"></table>
+                                <!--enpcontent--><P>　　因业务发展需要，新疆前海联合基金管理有限公司（以下简称“本公司”）北京分公司的负责人发生变更，相关工商变更登记手续已办理完毕。变更后的信息如下：</P><P>　　公司名称：新疆前海联合基金管理有限公司北京分公司</P><P>　　营业场所：北京市朝阳区建国路112号16层1601-2</P><P>　　负责人：邹文庆</P><P>　　经营范围：基金销售。（市场主体依法自主选择经营项目，开展经营活动；依法须经批准的项目，经相关部门批准后依批准的内容开展经营活动；不得从事国家和本市产业政策禁止和限制类项目的经营活动。）</P><P>　　投资者可登陆本公司网站（www.qhlhfund.com）或拨打本公司客户服务电话（400-640-0099）垂询相关事宜。</P><P>　　特此公告。</P><P>　　新疆前海联合基金管理有限公司</P><P>　　二二一年九月十三日</P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+								</p>
+                              
+        </div>
+      </div>
+      <div class="neiye1">
+        <div class="lf"><a class=preart href="content_767037.htm?div=-1"><p class='pre_01'>&nbsp;上一篇&nbsp;</p></a></div>
+        <div class="rt"><a class=preart href="content_767039.htm?div=-1"><p' class='pre_02'>&nbsp;下一篇&nbsp;&nbsp;</p></a></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="floating_ck">
+	    <dl>
+			<dd class="mobile">
+				<div class="floating_left floating_ewm">
+					<div class="juzhong" style="text-align: center;">证券日报APP</div>
+					<i><img src="../../../tplimg/app-erweima.png" width="110" height="110" /></i>
+					<p class="qrcord_p01">扫一扫，即可下载</p>
+				</div>
+			</dd>
+		<!--<dd class="words">
+		    <div class="floating_left floating_ewm">
+			<div class="juzhong">客户端下载</div>
+			<i><img src="../../../tplimg/wx.jpg" width="110" height="110" /></i>
+			<p class="qrcord_p01">iPhone版</p>
+			<i><img src="../../../tplimg/wx2.jpg" width="110" height="110" /></i>
+			<p class="qrcord_p01">iPad版</p>
+			<i><img src="../../../tplimg/wx3.jpg" width="110" height="110" /></i>
+			<p class="qrcord_p012">Android版</p>
+		    </div>
+		</dd>-->
+		<dd class="quote">
+		    <div class="floating_left floating_ewm" style="padding-bottom:10px;">
+			<div class="juzhong">官方微信</div>
+			<i><img src="../../../tplimg/zqrbzs-wechat.png" width="110" height="110" /></i>
+			<p class="qrcord_p01">扫一扫 加关注</p>
+		</div>
+		</dd>
+		<dd class="qrcord">
+		    <div class="floating_left floating_ewm">
+			<div class="juzhong">官方微博</div>
+			<i><img src="../../../tplimg/sina-weibo.png" width="110" height="110" /></i>
+			<p class="qrcord_p01">扫一扫 加关注</p>
+			<!--<i><img src="../../../tplimg/wx2.jpg" width="110" height="110" /></i>
+			<p class="qrcord_p01">Iphone版</p>-->
+		    </div>
+		</dd>
+	    </dl>
+	</div>
+	
+	<!--thumb/score/comment start-->
+        <div class="clear"></div>
+        <!--<div class="df">
+            <div class="xhwz">
+                <p class="at">喜欢文章</p>
+                <div class="dmz" id="dmz"></div>
+                <div class="dzs" id="dzs"></div>
+            </div>
+            <div class="xbtj">
+                <div class="dfline"></div>
+                <div class="xxdf" id="xxdf">
+                </div>
+            </div>
+		<div class="ly">
+			<div style="float:left;">
+			<textarea name="tablemsg" id="comment" cols="" rows="" border="0" style="margin:10px;width:670px;height:60px;border:solid 1px #bfc2c5;resize:none;"" class="textarea"  placeholder="说点什么...最多输入500个字符" onKeyUp="Huitextarealength(this);"></textarea>
+			<p style="float:left;width:670px;height:16px;position:absolute;"><em class="textarea-length">0</em>/<am>500</am></p>
+				<!--<input type="text" value="留言" class="lyleft" id="lyl"style="margin-right:40px;width:680px;height:80px;margin-top: 10px;">-->
+			<!--</div>
+		    <div class="lyright" id="upcomment">
+			<img src="../../../tplimg/tj-01.png" onmouseover="this.src='../../../tplimg/tj-02.png'" onmouseout="this.src='../../../tplimg/tj-01.png'" style="margin:10px;float:right;" onclick="ajaxComment();">
+			</div>
+		</div>
+
+        </div>-->
+	<div id="df" class="df">
+            <div class="xhwz">
+                <p class="at">喜欢文章</p>
+                <div class="dmz" id="dmz">
+			<img src='../../../tplimg/zan1.png' onmouseover=\"changepng(this,'zan2');\" onmouseout=\"changepng(this,'zan1');\" onclick='ajaxThumb();'>
+		</div>
+                <div class="dzs" id="dzs">0</div>
+            </div>
+            <div class="xbtj">
+                <div class="dfline"></div>
+                <div class="xxdf" id="xxdf">
+			<p class='aat'>给文章打分</p><div class='star'><span onmouseover='rate(this,event)'><img src=../../../tplimg/star.png title='很差' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='一般' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='还行' style='width:30px;height=30px;margin-right:10px;' /><img src=../../../tplimg/star.png title='推荐' style='width:30px;height=30px;margin-right:10px;'/><img src=../../../tplimg/star.png title='力荐' style='width:30px;height=30px;margin-right:10px;'/></span><span class='pl' id='dxxx'></span></div><div class='tj'><div class='sztj'><span class='onedf'>本文得分 :</span><span class='onesz'>0</span></div><div class='cyrs'><span class='onedf'>参与人数 :</span><span class='onesz2'>0</span></div></div><div class='dfline2'></div>
+                </div>
+            </div>
+		<div class="ly">
+			<div style="float:left;">
+			<textarea name="tablemsg" id="comment" cols="" rows="" border="0" style="margin:10px;width:670px;height:60px;border:solid 1px #bfc2c5;resize:none;"" class="textarea"  placeholder="说点什么...最多输入500个字符" onKeyUp="Huitextarealength(this);"></textarea>
+			<p style="float:left;width:670px;height:16px;position:absolute;"><em class="textarea-length">0</em>/<am>500</am></p>
+				<!--<input type="text" value="留言" class="lyleft" id="lyl"style="margin-right:40px;width:680px;height:80px;margin-top: 10px;">-->
+			</div>
+		    <div class="lyright" id="upcomment">
+			<img src="../../../tplimg/tj-01.png" onmouseover="this.src='../../../tplimg/tj-02.png'" onmouseout="this.src='../../../tplimg/tj-01.png'" style="margin:10px;float:right;" onclick="ajaxComment();">
+			</div>
+		</div>
+
+        </div>
+<script type="text/javascript">
+var Huitextarealength = function (obj){
+    var html = $(obj).parent();
+    var tatal = html.find('am').html();
+    var sets = $(obj).val().length;
+
+    if(sets*1>tatal*1){
+        var str = '<div style="width: auto;position: absolute; left: 50%;color: red;">内容超出限制</div>';
+        $(obj).after(str);
+	$("#upcomment").html("<img src='../../../tplimg/tj-01.png' style='margin:10px;float:right;'>");
+        html.find('em').css({color:'red'});
+    }else {
+        $(obj).parent().find('div').remove();
+	$("#upcomment").html("<img src='../../../tplimg/tj-01.png' onmouseover=\"changepng(this,'tj-02');\" onmouseout=\"changepng(this,'tj-01');\" style='margin:10px;float:right;' onclick='ajaxComment();'>");
+        html.find('em').css({color:'black'});
+    }
+    //设置已输入数量
+    html.find('em').html(sets);
+}
+</script>
+	<!--thumb/score/comment end-->
+
+    
+	
+	
+</div>
+<!-- comment\score\thumb js start -->
+<script type="text/javascript">
+    function rate(obj,oEvent){
+// 图片地址设置
+        var imgSrc = "../../../tplimg/star.png"; //没有填色的星星
+        var imgSrc_2 = "../../../tplimg/bluestar.png"; //打分后有颜色的星星
+        if(obj.rateFlag) return;
+        var e = oEvent || window.event;
+        var target = e.target || e.srcElement;
+        var imgArray = obj.getElementsByTagName("img");
+        for(var i=0;i<imgArray.length;i++){
+            imgArray[i]._num = i;
+            imgArray[i].onclick=function(){
+                if(obj.rateFlag) return;
+                obj.rateFlag=true;
+                //alert(this._num+1); //this._num+1这个数字写入到数据库中,作为评分的依据
+		ajaxScore(this._num+1);
+            };
+        }
+        if(target.tagName=="IMG"){
+            var s=0;
+            for(var j=0;j<imgArray.length;j++){
+                if(j<=target._num){
+                    imgArray[j].src=imgSrc_2;
+                    s++;
+                } else {
+                    imgArray[j].src=imgSrc;
+                }
+            }
+            //alert(s);
+            if(s==0){
+                document.getElementById("dxxx").innerHTML="";
+            } else if(s==1){
+                document.getElementById("dxxx").innerHTML="很差";
+            } else if(s==2){
+                document.getElementById("dxxx").innerHTML="一般";
+            } else if(s==3){
+                document.getElementById("dxxx").innerHTML="还行";
+            } else if(s==4){
+                document.getElementById("dxxx").innerHTML="推荐";
+            } else if(j==5){
+                document.getElementById("dxxx").innerHTML="力荐";
+            }
+        } else {
+            for(var k=0;k<imgArray.length;k++){
+                imgArray[k].src=imgSrc;
+            }
+            document.getElementById("dxxx").innerHTML="";
+        }
+    }
+</script>
+<script type="text/javascript">
+    $( function(){
+                $("#lyl").focus(function() {
+                    if($("#lyl").val()=='留言'){
+                        $("#lyl").val('');
+                    }
+                });
+
+                $("#lyl").click(function() {
+                    if($("#lyl").val()=='留言'){
+                        $("#lyl").val('');
+                    }
+                });
+
+                $("#lyl").blur(function() {
+                    if($("#lyl").val()=='' || $("#lyl").val().length==0){
+                        $("#lyl").val('留言');
+                    }
+
+                });
+            }
+    );
+
+</script>
+<!-- comment\score\thumb js end -->
+<div class="foot">
+  <p style="font-size:16px; line-height:30px;">版权所有<font>证券日报网</font></p>
+  <p><img src="../../../tplimg/jh.png"> 京公网安备 11010202007567号<font>京ICP备17054264号</font></p>
+  <p>证券日报网所载文章、数据仅供参考，使用前务请仔细阅读法律申明，风险自负。</p>
+  <p>证券日报社电话：010-83251700<font>网站电话：010-83251800<font>网站传真：010-83251801<font>电子邮件：xmtzx@zqrb.net</font>
+</div>
+<script type="text/javascript">
+window.onload=function(){
+	var contenthtml=$(".neiyee").html();
+	//var str=contenthtml.match(/<!--enpcontent-->(.*?)<!--\/enpcontent-->/);
+	var val=contenthtml.toString().replace(/<p>\s+<\/p>/g,"");
+	$(".neiyee").html(val);
+}
+</script>
+<map name="Map" id="Map"> <area shape="rect" coords="502,4,606,35" href="http://www.zqrb.cn/" target="_blank" />
+<area shape="rect" coords="622,3,725,26" href="http://i.zqrb.cn" target="_blank" />
+</map>
+<div style="display:none;"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F63dcca6ee91813e5f435c35c310757f8' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+<div style="display:none;"> <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9d18b05458bf388fcb38b0778469e76d' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+<div style="display:none;"><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? " https://ssl." : " http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16011594-1");
+pageTracker._trackPageview();
+} catch(err) {}</script></div>
+</div>
+<script type="text/javascript">
+//百度推广
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+//百度统计  上官
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9ad5291ccdbd67ec8d39a921b7b5a320";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+var shareData={
+	imgUrl:"http://m.epaper.zqrb.cn/tplimg/logo_300.png"
+};
+</script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="../../../tplimg/weixinShareUtil-1.4.0-epaper.js"></script>
+<script>
+	initWeixin();
+</script>
+</body>
+</html>
+
+<!--mpproperty <founder-date>
+2021-09-13
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>新疆前海联合基金管理有限公司 关于北京分公司负责人变更的公告
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle></founder-subtitle>
+<founder-type>1</founder-type>
+<founder-description>　　因业务发展需要，新疆前海联合基金管理有限公司（以下简称“本公司”）北京分公司的负责人发生变更，相关工商变更登记手续已办理完毕。变更后的信息如下：　　公司名称：新疆前海联合基金管理有限公司北京分公司...</founder-description>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zqrb/images/2021-09/13/D7/zqrb20210913D7_b.jpg</founder-pagepicurl>
+<founder-pagenum>D7</founder-pagenum>
+<founder-papername>证券日报</founder-papername>
+<founder-nodeid>1,207</founder-nodeid> /mpproperty-->
+
+

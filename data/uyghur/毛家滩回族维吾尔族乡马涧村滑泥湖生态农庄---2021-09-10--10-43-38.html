@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>毛家滩回族维吾尔族乡马涧村滑泥湖生态农庄 - 农交网 </title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=yes"/>
+    <link href="/images/favicon.ico" rel="icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/fonts/iconfont.css">
+    <link rel="stylesheet" href="/css/auction_detail.css">
+    <link rel="stylesheet" href="/css/trade_center.css">
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="/css/vant-index.css">
+    <link rel="stylesheet" href="/css/vue-dplayer.min.css">
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script src="/js/vue.js"></script>
+    <script src="/js/vant.min.js"></script>
+    <script src="/js/DPlayer.min.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.min.3.4.js?v=202103251130"></script>
+</head>
+<body>
+<div class="new-head">
+    <div class="head-new up-center">
+        <a href="javascript:history.go(-1)" class="fanhui">
+            <i class="iconfont icon-fanhui"></i>
+        </a>
+        <a href="/" class="logo" title="首页">
+            <img src="/images/home_logo.png" alt="" >
+        </a>
+        <div class="nj-info">项目详情</div>
+    </div>
+        <a href="javascript:location.href='/user/login?url='+window.location.pathname" class="nj-login">
+            <i class="iconfont icon-denglu"></i>
+        </a>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".icon-denglu").on("click",function(){
+            // console.log('hello');
+            // $(".popBox").toggle()
+            // $(".popMongolia").toggle()
+            location.href = '/user/center/myCenter';
+        })
+        $(".popMongolia").on("click",function(){
+            $(".popBox").hide()
+            $(".popMongolia").hide()
+        })
+    })
+</script><div class="center" id="app">
+    <!--内容主体-->
+    <div class="nj-body">
+        <template>
+            <div class="van-swipe-box" style="position: relative">
+                <van-swipe @change="onChange" :loop="false">
+                        <van-swipe-item>
+                            <div v-if="isPlay==0" class="video-img">
+                                <img src="https://img6.nongjiao.com/root-target/file/20210805/d2c6c590-686f-4055-a7bb-9a681ab5a4b0.mp4?x-oss-process=video/snapshot,t_1000,f_jpg,w_800,h_600" alt="">
+                                <img src="/images/bofanganniuxhdpi.png" alt="" @click="onPlay" class="video">
+                            </div>
+                            <div v-show="isPlay==1" class="video-head">
+                                <div id="dplayer" class="play-root dplayer-playing dplayer-hide-controller"></div>
+                                <span class="iconfont icon_gold__imglabel" @click="onPause"></span>
+                            </div>
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/2668aa86-ec60-4415-9b92-2caf53538181.jpg?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/76f2b3e5-ec66-4e0b-95f6-76e1db5569d4.jpg?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/739bced5-6d54-4e55-afd3-fe36e91efca8.jpg?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/0931fdd2-f199-4f7a-910b-45a2ffcfac6f.JPG?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/07b66272-5dbe-4233-88b5-db434447d031.png?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+                        <van-swipe-item>
+                            <img src="https://img6.nongjiao.com/root-target/picture/20210805/69798ea2-23c7-4d3c-8996-2c51e9f3b036.jpg?x-oss-process=style/big_690_389" alt="">
+                        </van-swipe-item>
+
+                    <template #indicator>
+                            <div class="custom-head">
+                                <span :class="current <1 ? 'custom-left active':'custom-left' ">视频</span>
+                                <span :class="current > 0 ?'custom-right active':'custom-right' ">图片</span>
+                            </div>
+                        <div class="custom-indicator" v-if="videoUrl !=='' && current !==0  ">
+                            {{current}}/6</div>
+                        <div class="custom-indicator" v-if="videoUrl ==='' ">{{current +1}}/6</div>
+
+                    </template>
+                </van-swipe>
+
+                <div class="activity-tips">
+                    <div class="activity-status">
+                        <i class="iconfont icon-ArtboardCopy"></i>
+                        <span>报名中</span>
+                    </div>
+                    <div class="activity-time">
+                        <span>距离{{timeDesc}}仅剩: </span>
+                        <span><em>{{day}}</em>天<em>{{hou}}</em>时<em>{{min}}</em>分<em>{{sec}}</em>秒</span>
+                    </div>
+                </div>
+            </div>
+            <!--标题/区块链-->
+            <div class="auction-head">
+                <h1>毛家滩回族维吾尔族乡马涧村滑泥湖生态农庄</h1>
+                    <div class="auction-link">
+                        <div class="link-left">
+                            <img src="/images/money2.png" alt="">
+                            <span>农交链溯源存证</span>
+                        </div>
+                        <a class="link-right" href="https://app2.nongjiao.com/#/blockchain?businessType=AuctionProject&businessId=431">
+                            <span>查看存证</span>
+                            <span>></span>
+                        </a>
+                    </div>
+                <div class="auction-vx">
+                    <div class="price-box" v-if="businessStatus !==3 ">
+                        <span>竞拍底价</span>
+                        <span class="auction-price">150,000.00 </span>
+                        <span class="auction-priceunit"> 元（总价） </span>
+                    </div>
+                    <div class="price-box" v-if="businessStatus ===3 ">
+                        <span>竞拍底价</span>
+                        <span class="auction-price">{{currentBiddingPrice}}  </span>
+                        <span class="auction-priceunit"> 元（总价） </span>
+                    </div>
+
+                    <div class="view-box">
+                        <span>围观：</span>
+                        <span> 594</span>
+                        <span>次</span>
+                    </div>
+                </div>
+            </div>
+            <!--交易流程-->
+            <div class="auction-info">
+                <div class="info-head">
+                    <i class="iconfont icon-jiaoyiliucheng"></i>
+                    <h2>交易流程</h2>
+                </div>
+                <ul class="trading-process all-center">
+                    <li>
+                        <img src="/images/trading_1.png" alt="">
+                        <p>挂牌</p>
+                    </li>
+                    <li class="iconfont icon-gengduo1"></li>
+                    <li>
+                        <img src="/images/trading_2.png" alt="">
+                        <p>报名</p>
+                    </li>
+                    <li class="iconfont icon-gengduo1"></li>
+                    <li>
+                        <img src="/images/trading_3.png" alt="">
+                        <p>竞拍</p>
+                    </li>
+                    <li class="iconfont icon-gengduo1"></li>
+                    <li>
+                        <img src="/images/trading_4.png" alt="">
+                        <p>合同签订</p>
+                    </li>
+                    <li class="iconfont icon-gengduo1"></li>
+                    <li>
+                        <img src="/images/trading_5.png" alt="">
+                        <p>交易鉴证</p>
+                    </li>
+                </ul>
+            </div>
+            <!--基础信息-->
+            <div class="auction-info">
+                <div class="info-head">
+                    <i class="iconfont icon-ArtboardCopy6"></i>
+                    <h2>基础信息</h2>
+                </div>
+                <div class="info-list">
+                    <ul>
+                        <li>
+                            <span>起拍价:</span><span>150,000.00 元（总价）</span>
+                        </li>
+                        <li><span>保证金:</span><span>45,000.00 元</span></li>
+                            <li>
+                                <span>加价幅度:</span><span> 5,000.00 元（总价）</span>
+                            </li>
+                        <li>
+                            <span>转出面积:</span><span>10 亩</span>
+                        </li>
+                        <li>
+                            <span>转出期限:</span><span>10 年</span>
+                        </li>
+
+                        <li>
+                            <span>报名时间：</span>
+                            <span>2021-08-06 09:00  至 2022-08-05 17:00 </span>
+                        </li>
+                        <li>
+                            <span>竞价时间：</span>
+                            <span>2022-08-08 10:00  至 2022-08-08 10:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--交易中心展示-->
+            <div style="border-top: 8px solid #f6f6f6;border-bottom: unset;" class="trade-item trade-item2">
+                <div class="trade-item-top flex">
+                    <div class="trade-item-logo up-center">
+                        <img src="/images/trade2.png" alt="">
+                    </div>
+                    <div class="trade-item-title">
+                        <p>汉寿县农村产权交易服务中心</p>
+                        <span><span class="iconfont icon-dizhi"></span>湖南省常德市汉寿县沧浪街道陈家塔社区紫晶城小区</span>
+                    </div>
+                    <div class="trade-item-tel up-center">
+                         <p @click="appCall('0736-2112111')"
+                                                      class="iconfont icon-dadianhua"></p>
+                    </div>
+                    <div class="trade-item-code up-center" @click="codeCick(1,'')">
+                        <p class="iconfont icon-erweimatubiao"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 二维码弹窗 -->
+            <div class="qr_code_popup" v-if="code_show">
+                <div class="code_popup">
+                    <div class="code_close">
+                        <span class="iconfont icon-guanbi1" @click="codeCick(2,'')"></span>
+                    </div>
+                    <div class="code_box">
+                        <img :src="qrcode_src" alt="" srcset="">
+                        <span>扫码立即沟通</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--竞拍公共-->
+            <div class="auction-notice ">
+                <div class="notice-head">
+                    <i class="iconfont icon-ArtboardCopy7"></i>
+                    <h2>竞买公告</h2>
+                </div>
+                <div :class="['notice-content',showMore?'is-more':'']">
+                    <h3>竞价公告</h3>
+                    <div class="txt">
+                        <p>1、资质：需竞买方注册并登录后才能进行报名竞价。</p>
+                        <p>2、保证金：为保证交易正常进行，竞买方需在报名截止时间前，一次性缴纳交易保证金，逾期未足额缴纳交易保证金的企业所提交的报价视为无效，缴纳方式为线下缴纳</p>
+                    </div>
+                    <h3>竞价规则</h3>
+                    <div class="txt">
+                        <p>1、参与竞价的客户必须提前预约并缴纳保证金，取得报价资格后才能进行报价,价格不低于公布的底价。 </p>
+                        <p>2、本次竞价的商品重量不可拆分,参与竞价的重量必须为全部重量。</p>
+                        <p>3、竞买方可以按报价原则多次报价，系统采集最高报价为有效报价。</p>
+
+                            <p> 4、本次竞价方式为：<em>阶梯竞价</em>，每次加价幅度为最小变动单位（<em>5000元</em>）的整倍数。</p>
+                        <p>5、本次竞价持续时间为 <em>00天00时30分00秒</em> 。</p>
+                        <p>6、本次竞价最终成交价结束前不可见。</p>
+                        <p>7、本次竞价结束前不能查看其他客户报价。</p>
+                        <p>8、成交价按照“时间有限.价格优先”的原则确定。报价最高者中标，若出现相同报价者，系统将按时报价间先后排序，先报价者中标。</p>
+                        <p>9、中标者需在3个工作日内完成中标订单的支付，因客户自身原因造成的订单超时罚没竞价保证金。</p>
+                        <p>10、对与未中标者的客户，农村产权交易中心会在竞拍结束后7个工作日内将保证金按原路退还。</p>
+                    </div>
+                    <h3>保证金不退还规则</h3>
+                    <div class="txt">
+                        <p> 1、违反相关规则，扰乱市场秩序的客户。</p>
+                        <p>2、竞价成功后放弃付款的客户。</p>
+                        <p>3、未按规定时间完成订单结算的客户。</p>
+                        <p> 4、哄抬价格，牟取暴利等行为。</p>
+                    </div>
+                    <div class="notice-account">
+                        <h3>保证金收款账号信息</h3>
+                        <div class="account"><span>开户行:</span> <span>中国邮政储蓄银行股份有限公司汉寿县支行</span></div>
+                        <div class="account"><span>银行卡号:</span> <span>943009010028598902</span></div>
+                        <div class="account"><span>账户名称:</span> <span>汉寿土流信息有限公司</span></div>
+                    </div>
+                </div>
+                <div class="more-box" v-if="showMore" @click="showMore=false">
+                    <div class="more-box-index">
+                        <div class="more-label"></div>
+                        <div class="more-info">
+                            <span>查看更多 <i class="van-icon van-icon-arrow-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--标的信息-->
+            <div class="auction-info">
+                <div class="info-head">
+                    <i class="iconfont icon-ArtboardCopy8"></i>
+                    <h2>标的介绍</h2>
+                </div>
+                    <div class="info-list">
+                        <ul>
+                                <li><span>标的名称</span><span>毛家滩乡滑泥湖生态农庄</span></li>
+                                <li><span>所在地区</span><span>湖南省常德市汉寿县毛家滩回族维吾尔族乡马涧村</span></li>
+                                <li><span>面积/数量</span><span>10.0/亩</span></li>
+                                <li><span>四至</span><span>东至：111.8669 西至：111.8665 南至：28.8816 北至：28.8824</span></li>
+                                <li><span>其他说明</span><span>滑泥湖生态农庄出租，距汉德大道2.5公里，离县城10分钟路程。环境优美，交通便捷，建有餐饮区、休闲区、烧烤区、住宿区、设施齐全，2000亩湖泊可作垂钓及水上娱乐项目。有意者可致电汉寿县农场集体产权交易中心</span></li>
+                        </ul>
+                    </div>
+            </div>
+            <!--竞买记录-->
+            <div class="auction-bidding">
+                <div class="bidding-head">
+                    <i class="iconfont icon-ArtboardCopy5"></i>
+                    <h2>竞买记录</h2>
+                </div>
+                <div class="bidding-record">
+                    <div class="record-head">
+                        <span>状态</span>
+                        <span>竞买人</span>
+                        <span>价格</span>
+                        <span>时间</span>
+                    </div>
+                    <div class="record-list">
+                        <ul>
+                            <li v-for="item in tableData">
+                                <span :class="item.isFirst===1?'active':''"><i>{{item.isFirst===1?'领先':'出局'}}</i></span>
+                                <span>{{item.biddingPhone!=null ?item.biddingPhone:'匿名用户' }}</span>
+                                <span>{{item.biddingPrice}}{{item.priceUnitName}}</span>
+                                <span>{{item.biddingTimeStr}}</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--项目操作按钮-->
+            <div class="btn_bottom">
+                <div class="btn_one" v-if="businessStatus ===2">
+                    <div>
+                            <div class="click-btn" @click="apply">交保证金报名 <em>￥45000元</em></div>
+                    </div>
+                </div>
+                <div class="btn_two" v-if="businessStatus ===1">
+                    <div>
+                        <span>预告中</span>
+                    </div>
+                </div>
+                <div class="btn_two" v-if="businessStatus ===11">
+                    <div>
+                        <span>即将开拍</span>
+                    </div>
+                </div>
+                <div class="btn_three" v-if="businessStatus ===5">
+                    <div>
+                        <span>竞拍已结束</span>
+                    </div>
+                </div>
+                <div class="btn_three" v-if="businessStatus ===4">
+                    <div>
+                        <span>已成交</span>
+                    </div>
+                </div>
+                <div class="btn_four" v-if="businessStatus ===3">
+                    <div class="btn_four_one">
+                        <div class="btn_four_input">
+                            <button :class="[countNumber < pricenumber +auctionLadder ?'disabled':'','count-cud cursor'] "
+                                    @click="countNumber -= auctionLadder">
+                                <i>-</i>
+                            </button>
+                            <div class="four-input">
+                                <input type="text" id="fourInput"
+                                       v-model="countNumber" disabled >
+                            </div>
+
+                            <button class="count-add cursor" @click="countNumber =countNumber-0 + auctionLadder">
+                                <i>+</i>
+                            </button>
+                        </div>
+                        <div class="btn_four_text" id="popupShow" @click="bidding">
+                            <span>出价</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+</div>
+<!--公共底部-->
+<!--公共底部-->
+<div class="nj-foot">
+    <div class="nj-project-list">
+        <a href="https://m.nongjiao.com" >
+            <img src="/images/nongjiao_wap_icon.png" alt="">
+            <span>农交网</span>
+        </a>
+        <a href="https://m.nongjiao.com/solution" >
+            <img src="/images/nongjiao_wap_solution.png" alt="">
+            <span>解决方案</span>
+        </a>
+        <a href="https://m.tuliu.com/nongye/entry.html" >
+            <img src="/images/footer_icon3.png" alt="">
+            <span>农商入驻</span>
+        </a>
+        <a href="http://myxiangcun.com/" >
+            <img src="/images/footer_icon4.png" alt="">
+            <span>美丽新乡村</span>
+        </a>
+        <a href="https://m.tuliu.com/landitem/index" >
+            <img src="/images/footer_icon5.png" alt="">
+            <span>致富项目</span>
+        </a>
+        <a href="http://bbs.3s001.com/plugin.php?id=comiis_app_portal&amp;pid=3&amp;mobile=2" >
+            <img src="/images/footer_icon6.png" alt="">
+            <span>地信网</span>
+        </a>
+    </div>
+    <div class="nj-service-box">
+        <div class="nj-service">
+            <img src="/images/img-phone1.png" alt="">
+            <span>服务热线</span>
+            <span class="phone">166 7012 2999</span>
+            <span>/</span>
+            <span  class="phone">131 3501 1777</span>
+        </div>
+    </div>
+
+    <div class="nj-info">
+        <span class="nj-foot-text">农村产权交易网是土流集团有限公司旗下农村产权交易合作解决方案提供商</span>
+        <a class="nj-foot-text" href="https://beian.miit.gov.cn">湘ICP备14003170号</a>
+        <span class="nj-foot-text"><span> ©版权所有</span>土流集团有限公司  </span>
+    </div>
+</div>
+<!--统计代码-->
+<div style="display: none">
+    <script src="https://hm.baidu.com/hm.js?7c7cb4bdc0aa123b9d1314ef54d9c184"></script><script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7c7cb4bdc0aa123b9d1314ef54d9c184";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</div><script type="text/javascript">
+    var USER = "";
+    var DOMAIN_URL = window.location.origin;
+    var isApp = DOMAIN_URL.indexOf("app2021") != -1;
+    // var isApp = true;
+    var BUSINESS_STATUS = 2; //项目状态
+    var PRICENUMBER = "150000" - 0; //起拍价
+    var AUCTIONLADDER = "5000" - 0; //加价幅度
+    var SIGN_START_TIME = "2021-08-06 09:00:00"; //报名开始时间
+    var SIGN_END_TIME = "2022-08-05 17:00:00"; //报名截止时间
+    var AUCTION_START_TIME = "2022-08-08 10:00:00"; //竞拍开始时间
+    var AUCTION_END_TIME = "2022-08-08 10:30:00"; //竞拍截止时间
+    var PRICE_UNIT_NAME = "元（总价）"
+    var CURRENT_TIME = "2021-09-10 22:01:03"; //系统当前时间
+    var VIDEOURL = 'https://img6.nongjiao.com/root-target/file/20210805/d2c6c590-686f-4055-a7bb-9a681ab5a4b0.mp4';
+    var priceunitName = ''
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                showMore: true,
+                videoUrl: VIDEOURL,
+                isPlay: 0,
+                current: 0,
+                dp: '',
+                code_show:false,
+                qrcode_src:'/images/img-code.png',
+                videoDialog: false,
+                activeName: 'first',
+                num: "00",
+                day: "00",
+                hou: "00",
+                min: "00",
+                sec: "00",
+                ssec: "00",
+                endTime: '',
+                disprArr: [],
+                navActive: 1,
+                tableData: [],
+                totalTime: 3,
+                timeDesc: "",
+                countTime: 0,
+                leftTime: '',
+                currentBiddingPrice: PRICENUMBER,
+                businessStatus: BUSINESS_STATUS,
+                countNumber: PRICENUMBER,
+                pricenumber: PRICENUMBER,
+                auctionLadder: AUCTIONLADDER,
+                user: USER,
+                priceunitName: priceunitName,
+                bti: 1,
+                app: isApp
+            }
+        },
+        created() {
+            this.factRecordData();
+
+            let startTime;
+            if (this.businessStatus === 1) {
+                startTime = new Date(SIGN_START_TIME.replace(/-/g, "/")).getTime();
+                this.timeDesc = "报名开始"
+            } else if (this.businessStatus === 2) {
+                startTime = new Date(SIGN_END_TIME.replace(/-/g, "/")).getTime();
+                this.timeDesc = "报名结束"
+            } else if (this.businessStatus === 11) {
+                startTime = new Date(AUCTION_START_TIME.replace(/-/g, "/")).getTime();
+                this.timeDesc = "竞拍开始"
+            } else if (this.businessStatus === 3) {
+                startTime = new Date(AUCTION_END_TIME.replace(/-/g, "/")).getTime();
+                this.timeDesc = "竞拍结束"
+            }
+            var sysTime = new Date(CURRENT_TIME.replace(/-/g, "/")).getTime();
+            this.leftTime = startTime - sysTime;
+            // 如下状态更新倒计时
+            if (this.businessStatus === 1 || this.businessStatus === 3 || this.businessStatus === 2 || this.businessStatus === 11) {
+                this.BackDate()
+            }
+
+        },
+        methods: {
+            codeCick:function(type,qrcode){
+                if(type=='1'){
+                    if(qrcode!=null&&qrcode!=''){
+                        this.qrcode_src=qrcode;
+                    }
+                    this.code_show=true;
+                }else if(type=='2'){
+                    this.qrcode_src='/images/img-code.png';
+                    this.code_show=false;
+                }
+            },
+            appCall: function (phone) {
+                if (this.app) {
+                    appCall.postMessage(phone);
+                } else {
+                    vant.Dialog.confirm({
+                        className: 'tel-dialog',
+                        cancelButtonText: '取消',
+                        confirmButtonText: '拨打',
+                        confirmButtonColor: '#FFFFFF',
+                        cancelButtonColor: '#333333',
+                        message: phone || "暂无号码"
+                    }).then(() => {
+                        console.log('拨打')
+                        window.location.href = 'tel:' + phone;
+                    }).catch(() => {
+                        console.log('取消拨打')
+                    });
+                }
+            },
+            onChange(index) {
+                if (this.isPlay === 1) {
+                    if (index !== 0) {
+                        this.onPause()
+                    }
+                }
+                this.current = index;
+            },
+            //视频播放
+            onPlay() {
+                this.dp = this.dplater()
+                this.isPlay = 1;
+                this.dp.play()
+            },
+            // 视频暂停
+            onPause() {
+                this.dp.toggle()
+            },
+            dplater() {
+                var player = new DPlayer({
+                    // 配置参数
+                    container: document.getElementById('dplayer'),
+                    // autoplay: false,
+                    theme: '#FADFA3',
+                    loop: false,
+                    lang: 'zh-cn',
+                    preload: 'auto',
+                    volume: 0.7,
+                    video: {
+                        url: this.videoUrl,
+                        type: 'auto',
+                    },
+                });
+
+                return player;
+            },
+            validUser() {
+                if (this.user === "") {
+                    vant.Toast.fail("提示：登录后才能执行操作！")
+                    setTimeout(function () {
+                        window.location.href = DOMAIN_URL + "/user/login?url=/auction/detail-" + 431;
+                    }, 1500);
+                    return false;
+                }
+                return true
+            },
+            scorllBtn(value) {
+                this.navActive = value
+                window.scrollBy(0, 500);
+            },
+            apply() {
+                console.log(33399311)
+                if (this.validUser()) {
+                    window.location.href = DOMAIN_URL + "/auction/apply/" + 431;
+                }
+            },
+            bidding() {
+
+                if (this.validUser()) {
+                    vant.Dialog.confirm({
+                        title: '您发送的报价为',
+                        message: this.countNumber + this.priceunitName,
+                    })
+                        .then(() => {
+                            let param = new FormData()
+                            param.append('id', 431)
+                            param.append('price', this.countNumber)
+                            axios.post(DOMAIN_URL + '/auction/bidding', param)
+                                .then(res => {
+                                    console.log(res.data);
+                                    if ("200" === res.data.code) {
+                                        vant.Toast.success("出价成功");
+                                    } else {
+                                        vant.Toast.fail(res.data.msg)
+                                        // this.$message.success("出价成功");
+                                        // this.$alert(res.data.msg, {
+                                        //     confirmButtonText: '知道了',
+                                        //     confirmButtonClass:"alertTextBtn",
+                                        //     showClose:false,
+                                        //     center: true
+                                        // });
+                                    }
+                                    this.factRecordData()
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                });
+                        })
+                        .catch(() => {
+                            return
+                        });
+
+
+                }
+            },
+            // 初始化数据
+            factRecordData() {
+                axios.get(DOMAIN_URL + '/auction/bidding/record/' + 431)
+                    .then(res => {
+                        this.tableData = res.data
+                        if (res.data.length > 0) {
+                            this.currentBiddingPrice = res.data[0].biddingPrice
+                            if (this.countNumber <= res.data[0].biddingPrice) {
+                                this.countNumber = res.data[0].biddingPrice
+                                this.pricenumber = res.data[0].biddingPrice
+                            }
+                        }
+                        console.log(this.tableData)
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            },
+            // 倒计时
+            BackDate() {
+                const that = this
+                that.leftTime -= 1000
+
+                //定义变量 d,h,m,s保存倒计时的时间
+                let d = 0
+                let h = 0
+                let m = 0
+                let s = 0
+
+                if (that.leftTime >= 0) {
+                    d = Math.floor(that.leftTime / 1000 / 60 / 60 / 24);
+                    h = Math.floor(that.leftTime / 1000 / 60 / 60 % 24);
+                    m = Math.floor(that.leftTime / 1000 / 60 % 60);
+                    s = Math.floor(that.leftTime / 1000 % 60);
+                }
+
+                this.day = d <= 9 ? "0" + d : d;
+                this.hou = h <= 9 ? "0" + h : h;
+                this.min = m <= 9 ? "0" + m : m;
+                this.sec = s <= 9 ? "0" + s : s;
+                // 倒计时为0的时候刷新页面，未防止后台状态未更新，判定刷新次数为10次
+                if (that.leftTime <= 0 && that.leftTime > -10000) {
+                    window.location.reload()
+                }
+                // 竞拍中数据刷新
+                if (that.businessStatus === 3 && that.leftTime >= 0) {
+                    this.factRecordData()
+                }
+                //递归每秒调用BackDate方法，显示动态时间效果
+
+                window.setTimeout(function () {
+
+                    // that.bti ++
+                    // vant.Toast.fail(that.bti)
+
+                    that.BackDate()
+                }, 1000);
+
+            }
+        },
+        // 一定要在mounted中创建
+        mounted() {
+            // var player = this.dp = this.dplater()
+            //  player.play();
+
+            // 禁止右键下载视频
+            document.oncontextmenu = new Function("event.returnValue=false;");
+            document.onselectstart = new Function("event.returnValue=false;");
+
+            // 修改循环播放显示
+            // document.getElementsByClassName('dplayer-setting-item dplayer-setting-loop')[0].getElementsByClassName('dplayer-label')[0].innerText = "循环播放"
+            // // 修改倍速播放显示
+            // document.getElementsByClassName('dplayer-setting-item dplayer-setting-speed')[0].getElementsByClassName('dplayer-label')[0].innerText = "播放倍速"
+
+        }
+    })
+</script>
+</body>
+</html>

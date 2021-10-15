@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>部门预决算公开</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=0.33, maximum-scale=1.0, user-scalable=yes,shrink-to-fit=no">
+	<meta http-equiv="Cache-Control" content="max-age=60" />
+	<link href="/static/css/base.css" rel="stylesheet">
+	<link href="/static/css/prism.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/images/dzj_logo1.png" />
+	<link href="/static/css/jquery.page.css" rel="stylesheet">
+	<link href="/static/css/liMarquee.css" rel="stylesheet">
+	<link href="/static/css/cms.css" rel="stylesheet">
+	<link href="/static/css/layui.css" rel="stylesheet">
+	<link href="/static/css/easySite.css" rel="stylesheet">
+	<link href="/static/css/easyBase.css" rel="stylesheet">
+	<!--<link href="/static/css/scienceStyle.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="/static/elementUI/lib-master/theme-chalk/index.css" />
+	
+
+	<script src="/static/js/jquery/jquery.min.js"></script>
+	<script src="/static/js/jquery/jquery-migrate.min.js"></script>
+	<script src="/static/js/jquery/jquery.SuperSlide.js"></script>
+
+	<script src="/static/js/comm.js"></script>
+	<script src="/static/js/jquery.page.js"></script>
+	<script src="/static/js/easy.ajax.js"></script>
+	<script src="/static/js/prism.js"></script>
+	<script src="/static/js/jquery.liMarquee.js"></script>
+	<script src="/static/js/layer.js"></script>
+	<script src="/static/js/easyBase.js"></script>
+	<script src="/static/js/vue.js"></script>
+	<script src="/static/js/httpRequest.js"></script>
+	<script src="/static/elementUI/lib-master/index.js"></script>
+
+	<style>
+		#container {
+			max-width: 100%;
+          min-width: 1200px;
+			height: 240px;
+			overflow: hidden;
+		}
+
+		.dzj_text_bg {
+			width: 100%;
+			min-width: 1200px;
+		}
+       /*@media only screen and (max-width: 770px) {
+     
+       #container {
+			max-width: 100%;
+          min-width: 770px;
+			height: 240px;
+			overflow: hidden;
+		}
+       .dzj_text_bg {
+         width: 100%;
+         min-width:770px; 
+       }
+       .lbox{
+          width:770px;
+       }
+     } */
+    
+	</style>
+</head>
+
+<body>
+	<div id="container">
+<div class="dzj_text_bg" >
+</div>
+<div id="slideBox1" class="slideBox1" opentype="page">
+  <div class="hd">
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="bd">
+    <ul style="width:100%;margin: 0 auto;">
+      <li>
+        <div class="tpxw_img1">
+          <img src="/static/images/dzj_header3.png" border="0" />
+        </div>
+      </li>
+      <li>
+        <div class="tpxw_img1">
+          <img src="/static/images/dzj_header4.png" border="0" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery(".slideBox1").slide({
+    mainCell: ".bd ul",
+    effect:"fold",
+    delayTime:700,
+    autoPlay: true
+  });
+</script>
+<!-- <style type="text/css">
+  html{
+  	width:100%;
+    min-width:320px;
+  }
+  .tpxw_img1 img{
+   width: 100%;
+  }
+</style> -->
+	</div>
+	<header id="header">
+		<div class="navbox">
+<nav id="nav">
+<ul id="starlist">
+  <li class="menu">
+    <a href="https://www.xjdzj.gov.cn">首页</a>
+  </li>
+    <li class="menu"> 
+          <a href="/organization/index.html">机构设置</a>
+          <!--<a href="/organization/index.html">机构设置</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/myinfo/index.html">本局概况</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/leader/index.html">领导简介</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/desc/index.html">机构概况</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/function/index.html">主要职责</a></li>
+          </ul>
+          <span></span>
+    </li>
+    <li class="menu"> 
+          <a href="/news/index.html">要闻动态</a>
+          <!--<a href="/news/index.html">要闻动态</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/realNews/index.html">时政要闻</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/quakeproof/index.html">防震减灾要闻</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/workDynamic/index.html">工作动态</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/domestic/index.html">市县工作</a></li>
+          </ul>
+          <span></span>
+    </li>
+    <li class="menu"> 
+          <a href="/government/index.html">政务公开</a>
+          <!--<a href="/government/index.html">政务公开</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/inform/index.html">通知通告</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/laws/index.html">政策法规</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/read/index.html">政策解读</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/info/index.html">政务信息</a></li>
+          </ul>
+          <span></span>
+    </li>
+    <li class="menu"> 
+          <a href="/partyBuildingGarden/index.html">党建园地</a>
+          <!--<a href="/partyBuildingGarden/index.html">党建园地</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/clean/index.html">党风廉政</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/partyBuilding/index.html">机关党建</a></li>
+          </ul>
+          <span></span>
+    </li>
+    <li><a href="/workService/index.html">办事服务</a></li>
+    <li class="menu"> 
+          <a href="/contact/index.html">互动交流</a>
+          <!--<a href="/contact/index.html">互动交流</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/leaderMail/index.html">领导信箱</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/leaveWord/index.html">公众留言</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/videocatlog/index.html">视频专题</a></li>
+          </ul>
+          <span></span>
+    </li>
+    <li class="menu"> 
+          <a href="/earthquake/index.html">地震频道</a>
+          <!--<a href="/earthquake/index.html">地震频道</a>-->
+          <ul class="sub">
+           <li> <a href="https://www.xjdzj.gov.cn/quakeInfo/index.html">震情信息</a></li>
+           <li> <a href="https://www.xjdzj.gov.cn/quakeRead/index.html">地震科普</a></li>
+          </ul>
+          <span></span>
+    </li>
+</ul>
+  
+  <!--<ul id="starlist">
+  <li class="menu">
+    <a href="https://www.xjdzj.gov.cn">首页</a>
+  </li>
+    <li class="menu"> 
+          <a href="/organization/index.html">机构设置</a>
+    </li>
+    <li class="menu"> 
+          <a href="/news/index.html">要闻动态</a>
+    </li>
+    <li class="menu"> 
+          <a href="/government/index.html">政务公开</a>
+    </li>
+    <li class="menu"> 
+          <a href="/partyBuildingGarden/index.html">党建园地</a>
+    </li>
+    <li class="menu"> 
+          <a href="/workService/index.html">办事服务</a>
+    </li>
+    <li class="menu"> 
+          <a href="/contact/index.html">互动交流</a>
+    </li>
+    <li class="menu"> 
+          <a href="/earthquake/index.html">地震频道</a>
+    </li>
+</ul>-->
+</nav>
+
+
+		</div>
+	</header>
+</body>
+	<style type="text/css">
+		.lbox{
+			width: 1000px;
+		}
+	</style>
+	<!--top end-->
+	<body>
+		<article>
+			<!--lbox begin-->
+			<div class="lbox">
+				<div class="contentpanel column" id="contentpanel" runat="server" name="通栏内容">
+					<div class="portlet" id="98079f9825214001bb49d6d2c06500b7"
+						pagemoduleid="94398708dc064bca9ee48effe5640f15">
+						<div align="left" class="portlet-header">
+							<span id="menu">
+							</span>
+							<div id="submenu98079f9825214001bb49d6d2c06500b7" class="shadow dn">
+								<ul class="float_list_ul">
+								</ul>
+							</div>
+						</div>
+						<div>
+							<div class="dqwz">
+									您的当前位置：
+									<span><a class="SkinObject" href="https://www.xjdzj.gov.cn" target="_parent">首页</a>
+												&nbsp;&gt;&nbsp;<a class="SkinObject" href="/government/index.html"
+													target="_parent">政务公开</a>
+												&nbsp;&gt;&nbsp;<a class="SkinObject" href="/info/index.html"
+													target="_parent">政务信息</a>
+												&nbsp;&gt;&nbsp;<a class="SkinObject" href="/govpayop/index.html"
+													target="_parent">部门预决算公开</a>
+									</span>
+							</div>
+							<div class="content"
+								style="display: flex;justify-content: space-between;flex-wrap: wrap;width: 100%;">
+								<div class="rightcon" id="rightcon" v-if="show">
+										<div class="working1">
+												<span class="span_1"></span>
+												<span class="span_2">
+													<a href="/govpayop/index.html">部门预决算公开</a>
+												</span>
+										</div>
+										<div class="t-type">
+											<div class="slideTxtBox8">
+												<div class="hd">
+													<ul>
+																<a href="/yjscatlog/index.html">
+																	<li>预决算公开目录</li>
+																</a>
+																<a href="/yjsreport/index.html">
+																	<li>预决算公开报告</li>
+																</a>
+													</ul>
+												</div>
+												<div class="bd">
+															<ul> </ul>
+															<ul> </ul>
+												</div>
+											</div>
+										</div>
+								</div>
+								<style type="text/css">
+									img {
+										border: 0;
+									}
+
+									a {
+										text-decoration: none;
+										color: #333;
+									}
+
+									a:hover {
+										color: #1974A1;
+									}
+
+									/* 本例子css */
+									.t-type {
+										width: 100%;
+										margin-top: 10px;
+									}
+
+									.slideTxtBox8 {
+										width: 100%;
+										text-align: left;
+									}
+
+									.slideTxtBox8 .hd {
+										height: 32px;
+										line-height: 32px;
+										background: #ffffff;
+										position: relative;
+									}
+
+									.slideTxtBox8 .hd ul {
+										width: 100%;
+										position: absolute;
+										height: 32px;
+										height: 100%;
+										min-height: 500px;
+									}
+
+									.slideTxtBox8 .hd ul li {
+										padding: 0 60px;
+										cursor: pointer;
+										font-size: 18px;
+										background: #FFFFFF;
+										color: #444444;
+										text-align: center;
+										border: 1px solid #ddd;
+										margin-top: 5px;
+									}
+
+									.slideTxtBox8 .hd ul li.on {
+										height: 28px;
+										line-height: 28px;
+										background: #fff;
+										border: 1px solid #ddd;
+										font-size: 18px;
+									}
+
+									.slideTxtBox8 .hd ul li:hover {
+										background: #1E60A7;
+										color: #FFF
+									}
+
+									.slideTxtBox8 .hd ul li.on a:link,
+									.slideTxtBox8 ul li a:visited {
+										background: #1E60A7
+									}
+
+									.slideTxtBox8 .hd ul li.on a:hover {
+										background: #1E60A7;
+										color: #fff;
+									}
+
+									.slideTxtBox8 .hd ul li.on a:hover {
+										color: #FFF
+									}
+
+									.slideTxtBox8 .hd ul li.on a:active {
+										background: #1E60A7
+									}
+
+									.slideTxtBox8 .hd ul li.on a:active {
+										color: #FFF
+									}
+
+									.slideTxtBox8 .bd ul {
+										padding: 2px 15px 0 15px;
+										zoom: 1;
+									}
+
+									.slideTxtBox8 .bd li {
+										height: 28px;
+										line-height: 28px;
+										list-style: disc;
+										color: #2153A6;
+										font-size: 16px;
+									}
+
+									.slideTxtBox8 .bd li .date {
+										float: right;
+										color: #999;
+									}
+
+									.slideTxtBox8 .bd ul li a {
+										overflow: hidden;
+										white-space: nowrap;
+										text-overflow: ellipsis;
+										color: #444444;
+									}
+								</style>
+								<div class="leftnav column" id="leftnav" runat="server" name="左侧列表">
+									<div class="pagelib_mk portlet" id="3ffebdb3ccda4330b9cfb856058c835b"
+										style="$portletStyle" pagemoduleid="b99e79f743094f51953b8d28916ef36e">
+										<div align="left" class="portlet-header">
+											<span id="menu"></span>
+											<div id="submenu3ffebdb3ccda4330b9cfb856058c835b" class="shadow dn">
+												<ul class="float_list_ul">
+												</ul>
+											</div>
+										</div>
+										<div class="pagelib_tit_con">
+											<div class="pagelib_tit">
+												<p class="pagelib_title">新疆维吾尔自治区地震局</p>
+											</div>
+										</div>
+										<div class="pagelib_con">
+												<div class="listNews pagelib" opentype="page">
+													<ul>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/finalaccountcatlog/20210819/612959157745614848.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局部门决算公开目录">新疆维吾尔自治区地震局部门决算公开目录</a><span
+																	class="date">[2021-08-19]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/finalaccountreport/20210819/612950196287963136.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2020年度部门决算公开说明">新疆维吾尔自治区地震局2020年度部门决算公开说明</a><span
+																	class="date">[2021-08-19]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/yjsreport/20210730/605737266282758144.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2020年部门决算公开">新疆维吾尔自治区地震局2020年部门决算公开</a><span
+																	class="date">[2021-07-30]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/39030.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2020年部门整体支出绩效目标申报公开表">新疆维吾尔自治区地震局2020年部门整体支出绩效目标申报公开表</a><span
+																	class="date">[2021-05-19]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210514/577799044718395392.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2021年中央财政部门预算公开">新疆维吾尔自治区地震局2021年中央财政部门预算公开</a><span
+																	class="date">[2021-05-15]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/41532.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2021年度部门预算公开">新疆维吾尔自治区地震局2021年度部门预算公开</a><span
+																	class="date">[2021-02-08]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/finalaccountreport/20210225/40496.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2019年度部门决算公开报告">新疆维吾尔自治区地震局2019年度部门决算公开报告</a><span
+																	class="date">[2020-10-12]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/39032.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2020年自治区部门整体支出绩效目标表">新疆维吾尔自治区地震局2020年自治区部门整体支出绩效目标表</a><span
+																	class="date">[2020-04-24]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetcatlog/20210225/38483.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局部门预算公开目录">新疆维吾尔自治区地震局部门预算公开目录</a><span
+																	class="date">[2020-02-21]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/38344.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2020年度部门预算公开">新疆维吾尔自治区地震局2020年度部门预算公开</a><span
+																	class="date">[2020-01-17]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/finalaccountreport/20210225/36802.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2018年部门决算公开报告">新疆维吾尔自治区地震局2018年部门决算公开报告</a><span
+																	class="date">[2019-08-16]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/34068.html"
+																	target="_blank"
+																	title="新疆地震局2019年度部门预算和“三公经费”预算公开报告">新疆地震局2019年度部门预算和“三公经费”预算公开报告</a><span
+																	class="date">[2019-01-31]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/33624.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2018年度部门预算公开补充资料">新疆维吾尔自治区地震局2018年度部门预算公开补充资料</a><span
+																	class="date">[2018-12-25]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/budgetreport/20210225/33794.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2017年度部门预算公开补充资料">新疆维吾尔自治区地震局2017年度部门预算公开补充资料</a><span
+																	class="date">[2018-12-25]</span>
+															</li>
+															<li class="list_set"><a
+																	href="https://www.xjdzj.gov.cn/finalaccountreport/20210225/34023.html"
+																	target="_blank"
+																	title="新疆维吾尔自治区地震局2016年度部门决算公开补充资料">新疆维吾尔自治区地震局2016年度部门决算公开补充资料</a><span
+																	class="date">[2018-12-25]</span>
+															</li>
+													</ul>
+												</div>
+												<div class="pagemore">
+													<div class="fenyemore">
+														<div class="list_feny" id="list_feny">
+<div class="page" id="Page">
+  <ul class="pagingUl">
+          <li class="disabled"><a href="javascript:;">首页</a></li>
+      <li class="disabled"><a href="javascript:;">上一页</a></li>
+          
+         <li class="active"><a href="index.html">1</a></li>
+         <li ><a href="index_2.html">2</a></li>
+         <li ><a href="index_3.html">3</a></li>
+      
+      <li><a href="index_2.html">下一页</a></li>
+      <li><a href="index_3.html">末页</a></li>
+      
+  </ul>
+</div>    
+ <style type="text/css">
+   .page ul li{
+     display: inline-block;
+   }
+  </style>
+														</div>
+														<div class="clear"></div>
+													</div>
+													<style>
+														.list_set {
+															display: flex;
+															width: 100%
+														}
+
+														.list_set>a {
+															flex: 1;
+															height: 20px;
+															overflow: hidden;
+															text-overflow: ellipsis;
+															white-space: nowrap;
+														}
+
+														/*list_feny*/
+														.fenyemore {
+															margin-top: 30px;
+															/*margin-bottom: 20px;*/
+														}
+
+														.libmore_l {
+															width: auto;
+															margin-top: 4px;
+															float: left;
+														}
+
+														.libmore_l span {
+															color: #18487b;
+														}
+
+														.list_feny {
+															background: #fff;
+															width: auto;
+															float: left;
+														}
+
+														.list_feny ol {
+															float: right;
+														}
+
+														.list_feny ol li {
+															overflow: hidden;
+															float: left;
+															*display: inline;
+															line-height: 30px;
+															margin-left: 5px;
+															color: #afafaf;
+															text-align: center;
+															vertical-align: middle;
+														}
+
+														.list_feny ol li font {
+															float: left;
+															display: block;
+															width: 30px;
+															height: 30px;
+															background: #327ebf;
+														}
+
+														.list_feny ol li span {
+															float: left;
+															height: 30px;
+														}
+
+														.list_feny ol li font.NormalRed {
+															color: #FFF;
+														}
+
+														.list_feny ol li a {
+															float: left;
+															display: block;
+															width: 32px;
+															height: 28px;
+															line-height: 28px;
+															border: 1px solid #ededed;
+															color: #3d3d3d;
+														}
+
+														.list_feny ol li .ipt_txt {
+															width: 28px;
+															line-height: 21px;
+															padding: 3px 0;
+															border: 1px solid #ededed;
+															text-align: center;
+															vertical-align: middle;
+														}
+
+														.list_feny ol li .ipt_btn {
+															width: 35px;
+															height: 28px;
+															background: #FFF;
+															line-height: 28px;
+															border: 1px solid #ededed;
+															cursor: pointer;
+														}
+
+														.list_feny ol li.ym {
+															margin-right: -5px;
+														}
+
+														.list_feny ol li.sx a {
+															width: 50px;
+															color: #cccccc;
+														}
+
+														.list_feny ol li.sx a.pagingNormal {
+															color: #3d3d3d;
+														}
+
+														.listNews ul li span {
+															float: right;
+														}
+
+														.pagelib_mk {
+															width: 100%;
+														}
+
+														.pagelib_tit_con {
+															height: 40px;
+															line-height: 40px;
+															border-bottom: 4px solid #2060a7;
+															margin-top: 10px;
+															margin-bottom: 15px;
+														}
+
+														.pagelib_tit {
+															/*border-bottom: 4px solid #2060a7;*/
+															color: #2060a7;
+															font-weight: bold;
+														}
+
+														.pagelib_tit p {
+															font-size: 18px;
+															line-height: 40px;
+															width: 100%;
+															text-overflow: ellipsis;
+															white-space: nowrap;
+															overflow: hidden;
+															text-align: center;
+														}
+
+														.leftnav {
+															width: 70%;
+														}
+
+														.rightcon {
+															width: 25%;
+															margin-top: 15px;
+														}
+
+														.working1 {
+															height: 30px;
+															border-bottom: 2px solid #f5f5f5;
+														}
+
+														.span_1 {
+															padding: 2px 2px;
+															font-size: 18px;
+															background: #2153A6;
+														}
+
+														.span_2 {
+															margin-left: 2%;
+															font-size: 18px;
+														}
+
+														.pagelib ul li {
+															margin: 10px 0;
+															border-bottom: 1px dashed #D7D7D7;
+															padding-bottom: 10px !important;
+															height: 20px !important;
+														}
+													</style>
+													<input type="hidden" name="article_paging_list_hidden"
+														moduleid="3ffebdb3ccda4330b9cfb856058c835b"
+														modulekey="3ffebdb3ccda4330b9cfb856058c835b" totalpage="1960" />
+												</div>
+											<script type="text/javascript">
+												$(function() {
+													// border的控制
+													var listModelOne = $('.pagelib');
+													$('li:nth-child(5n)', listModelOne).css({
+														"border-bottom": "1px dashed #c4c9cf",
+														"height": "26px",
+														"padding-bottom": "20px",
+														"margin-bottom": "10px"
+													});
+
+												});
+											</script>
+
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--lbox end-->
+		</article>
+<div class="page_footer">
+	<div class="footer" style='overflow: hidden;'>
+		<div class="footerlink">
+							<a href="/map/index.html">网站地图</a>
+			|
+			<a href="/emailadress/20210108/28541.html"> 联系我们</a>
+		</div>
+		<div class="cause_link">
+			<a href="http://bszs.conac.cn/sitename?method=show&id=144BEEA3D8BA7E97E053022819AC518E" target="_blank">
+				<img id="imgConac" vspace="0" hspace="0" border="0" src="/static/images/blue.png"
+					data-bd-imgshare-binded="1">
+			</a>
+		</div>
+		<div class="police_wrap">
+			<p>
+				<img class="public_img" src="/static/images/gh.png">
+				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=65010402000144"
+					target="_blank">新公网安备65010402000144号</a>
+			</p>
+			<p> 网站标识码：bm53300001</p>
+			<p> <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">ICP备案号：新ICP备09000737号-1 </a></p>
+		</div>
+		<div class="error_link">
+			<script id="_jiucuo_" sitecode='bm53300001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</div>
+		<div class="address_phone">
+			<p>地址：乌鲁木齐市新市区科学二街338号</p>
+			<p>电话：0991-3835623</p>
+		</div>
+		<div class="record_wrap">
+			<p>主办单位：新疆维吾尔自治区地震局</p>
+		</div>
+
+		<div class="business_unit">
+
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.page_footer {
+		width: 100%;
+		min-width: 1200px;
+		background: #e5e8ec;
+		height: 200px;
+		color: #333;
+		font-size: 16px;
+		font-weight: 600;
+		box-shadow: 0px -5px 10px -5px;
+		margin-top: 20px;
+	}
+
+	.footer {
+		width: 1200px;
+		margin: 0 auto;
+		padding-top: 35px;
+		text-align: center;
+		position: relative;
+	}
+
+	.footerlink {
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+
+	.police_wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	.police_wrap p {
+		display: flex;
+		margin: 0 10px;
+	}
+
+	.police_wrap p img.public_img {
+		display: block;
+		width: 18px;
+		height: 18px;
+		margin-top: 4px;
+		margin-right: 5px;
+	}
+
+	.police_wrap p a {
+		display: block;
+		text-align: center;
+		color: #333;
+		line-height: 26px;
+		font-size: 16px;
+	}
+
+	.cause_link {
+		position: absolute;
+		left: 12%;
+		top: 30%;
+	}
+
+
+	.error_link {
+		position: absolute;
+		right: 8%;
+		top: 35%;
+	}
+
+	.address_phone,
+	.record_wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	.address_phone p {
+		text-align: center;
+		color: #333;
+		line-height: 26px;
+		font-size: 16px;
+		font-weight: 600;
+		margin: 0 10px;
+	}
+
+	.record_wrap p,
+	.record_wrap p a {
+		display: block;
+		text-align: center;
+		color: #333;
+		line-height: 26px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.business_unit {
+		width: 220px;
+		position: absolute;
+		left: 0px;
+		top: 38px;
+	}
+
+	/*@media only screen and (max-width: 320px){
+		.page_footer {
+			width: 100%;
+			min-width: 320px;
+			background: #e5e8ec;
+			height: auto;
+			min-height: 200px;
+			box-shadow: 0px -5px 10px -5px;
+			margin-top: 20px;
+		}
+      
+        .page_footer .footer {
+          width: 100%;
+          padding-top: 20px;
+          text-align: center;
+          position: relative;
+          background: #e5e8ec
+        }
+      
+		.footerlink {
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.police_wrap a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+			background: url(/static/images/gh.png) center no-repeat;
+			background-position: 14% 50%;
+		}
+
+		.address_phone,
+		.record_wrap {
+			display: block;
+		}
+
+		.address_phone p {
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.record_wrap p,
+		.record_wrap p a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		.business_unit {
+			width: 100%;
+			position: inherit;
+          	left: 0px;
+    		top: 0;
+			
+		}
+	}
+  @media only screen and (max-width: 480px){
+		.page_footer {
+			width: 100%;
+			min-width: 320px;
+			background: #e5e8ec;
+			height: auto;
+			min-height: 200px;
+			box-shadow: 0px -5px 10px -5px;
+			margin-top: 20px;
+		}
+
+		 .page_footer .footer {
+          width: 100%;
+          padding-top: 20px;
+          text-align: center;
+          position: relative;
+          background: #e5e8ec
+        }
+
+		.footerlink {
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.police_wrap a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+			background: url(/static/images/gh.png) center no-repeat;
+			background-position: 14% 50%;
+		}
+
+		.address_phone,
+		.record_wrap {
+			display: block;
+		}
+
+		.address_phone p {
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.record_wrap p,
+		.record_wrap p a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		.business_unit {
+			width: 100%;
+			position: inherit;
+			left: 0px;
+          	top: 0;		
+		}
+	}
+    @media only screen and (max-width: 768px){
+		.page_footer {
+			width: 100%;
+			min-width: 320px;
+			background: #e5e8ec;
+			height: auto;
+			min-height: 200px;
+			box-shadow: 0px -5px 10px -5px;
+			margin-top: 20px;
+		}
+
+		 .page_footer .footer {
+          width: 100%;
+          padding-top: 20px;
+          text-align: center;
+          position: relative;
+          background: #e5e8ec
+        }
+
+		.footerlink {
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.police_wrap a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+			background: url(/static/images/gh.png) center no-repeat;
+			background-position: 20% 50%;
+		}
+
+		.address_phone,
+		.record_wrap {
+			display: block;
+		}
+
+		.address_phone p {
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.record_wrap p,
+		.record_wrap p a {
+			display: block;
+			text-align: center;
+			color: #333;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		.business_unit {
+			width: 100%;
+			position: inherit;
+			left: 0px;
+    		top: 0;
+		}
+	}*/
+</style>
+	</body>
+</html>

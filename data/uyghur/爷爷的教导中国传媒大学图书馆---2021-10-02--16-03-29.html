@@ -1,0 +1,3326 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>爷爷的教导</title>
+    <link rel="shortcut icon" href="/pages/i/m8.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="pages/dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pages/c/common.css">
+    <link rel="stylesheet" href="pages/c/list.css">
+    <link rel="stylesheet" href="pages/c/tagscloud.css?v=1">
+    <link rel="stylesheet" href="pages/c/easydropdown.css">
+    <link rel="stylesheet" href="pages/c/bookInfo.css">
+    <link rel="stylesheet" href="pages/c/share.css">
+    <link rel="stylesheet" href="pages/c/icon/iconfont.css">
+
+    <!--[if lt IE 9]>
+    <script src="pages/j/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+
+
+    <![endif]-->
+    
+    <script>
+        if (window.name != "hasLoad") {
+            location.reload();
+            window.name = "hasLoad";
+        } else {
+            window.name = "";
+        }
+
+    </script>
+    <style type="text/css">
+        b {
+            color: red;
+        }
+
+        #loading {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            z-index: 10000;
+            background-color: #F7F9FC;
+            line-height: 25px;
+            vertical-align: middle;
+            font-size: 11pt;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--header-->
+
+<style>
+a img{border:none}
+.testdiv *{
+vertical-align:middle;
+}
+</style>
+<nav class="navbar navbar-by">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+			<div class="testdiv">
+            <a class="navbar-brand" href="index.html">
+                <img src="pages/i/logo.png" style="margin-top: 0px"/>
+                <p class="t1"></p>
+                <p class="t2"><font size="5"><strong>中国传媒大学图书馆 | 书刊检索系统</strong></font></p>
+            </a>
+			</div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li id="retrive"><a class="nav-item" href="index.jsp">首页</a></li>-->
+				<li id="retrive"><a class="nav-item" href="index.html">书刊检索</a></li>
+                <!--<li id="erms"><a class="nav-item" href="jumpErmsDatabas.html">电子资源</a></li>-->
+                <span class="icon-bar"></span>
+                <li id="public"><a class="nav-item" href="newbook.html">新书通报</a></li>
+                <li id="navigation"><a class="nav-item" href="serial-character-list.html">期刊导航</a></li>
+                <li id="buy"><a class="nav-item" href="recommend-info.html">购书推荐</a></li>
+                <li id="ranking"><a class="nav-item" href="rank-list.html">排行榜</a></li>
+                
+                
+                    
+                    
+                <li id="my"><a href="caslogin.html">我的图书馆</a></li>
+
+                
+                <li id="information"><a class="nav-item" href="notice-list.html">信息发布</a></li>
+                
+                    <li id="report"><a class="nav-item" href="report.html">悦读报告</a></li>
+                
+                <li id="service"><a class="nav-item" href="discipline.html">学科服务</a></li>
+                
+
+                
+                    
+                    <li><a href="caslogin.html">登录</a></li>
+                    
+
+                    
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--/header-->
+
+<!--nav-->
+<nav class="navbar navbar-by navbar-er">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="labelA">书刊检索系统</li>
+                
+                
+                <li class="labelB">></li>
+                <li class="labelC">书刊详情</li>
+                <li class="labelC">｜</li>
+                <li class="labelC">爷爷的教导/亚尔买买提·塔依尔</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div data-toggle="dropdown" class="dropdown-toggle"
+                         type="button">
+                        <img src="pages/i/book_shelf.png">
+                        <span id="shelf_num"></span>
+                    </div>
+                    <ol role="menu" class="dropdown-menu" id="bookshelf">
+
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--/nav-->
+
+<!--main-->
+<div class="container-fluid box">
+    <div class="row">
+        <div class="col-md-9 col-sm-9"
+             style="border-right: 1px solid #AFAFAF;min-height: 700px;">
+            <div class="col-md-12 col-sm-12 bookInfo">
+                <div class="col-md-3 col-sm-3">
+                    
+                       
+                        <img src="pages/i/default.gif"/>
+                       
+                    
+                    
+                    
+                    <div>
+                        <span><img
+                                src="pages/i/borrowed.png"/>借阅：<span>1</span>人</span>
+                        <span><img
+                                src="pages/i/favorite_yes.png"/>收藏：<span>0</span>人</span>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <ul class="list-inline">
+                        <li><h3>爷爷的教导</h3><img src="pages/i/dot.png">
+                        </li>
+                        <li>
+                            <a href="machineCodes_01h0058262.html">查看机读格式</a>
+                        </li>
+                        
+                        
+                            
+                                
+                                    <li><a href="caslogin.html"></a></li>
+                                
+                                
+                            
+                            
+                        
+                    </ul
+
+                    
+                        <p> 维吾尔语 亚尔买买提·塔依尔著</p>
+                        
+                            
+                                
+
+                                
+                                    <p>ISBN/ISSN：<span
+                                            class="space">7-5631-1299-5</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>价格：<span
+                                            class="space">CNY6.50</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>出版：<span
+                                            class="space">乌鲁木齐 新疆大学出版社 ,2000</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>载体形态：<span
+                                            class="space">131页 ;21cm</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>其他题名：<span
+                                            class="space">维吾尔语</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>中图分类号：<span
+                                            class="space">H215.94:I1</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                            
+                                
+
+                                
+                                    <p>责任者：<span
+                                            class="space">亚尔买买提·塔依尔 著</span>
+                                    </p>
+                                
+
+                            
+
+                        
+                        
+
+                        
+
+                        
+                        
+                        
+                        
+                        
+
+
+                        <ul class="list-inline catogary">
+                            
+                                <li>故事</li>
+
+                            
+                                <li>--作品集</li>
+
+                            
+                                <li>--中国</li>
+
+                            
+                                <li>--当代</li>
+
+                            
+                        </ul>
+                    
+                    
+
+
+
+                        
+
+                       
+
+
+                    <ul class="list-inline">
+                        <li class="grade">
+                            <span>评分：</span>
+                            <span>
+                                
+                                
+                                    <img src="pages/i/star_normal.png"/>
+                                
+                                    <img src="pages/i/star_normal.png"/>
+                                
+                                    <img src="pages/i/star_normal.png"/>
+                                
+                                    <img src="pages/i/star_normal.png"/>
+                                
+                                    <img src="pages/i/star_normal.png"/>
+                                
+                        </li>
+                        <li class="add">
+                            <span><img
+                                    src="pages/i/book_shelf.png"/>加入暂存架</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+<div class="col-md-12 col-sm-12" style="padding: 20px 60px;">
+     <p style="font-size: 16px;">豆瓣内容简介：</p>
+    
+    
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;暂无内容</p>
+    
+    <p style="font-size: 16px;">豆瓣作者简介：</p>
+    
+    
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;暂无内容</p>
+    
+    
+
+	<div>
+        <!-- Nav tabs for holading information-->
+
+<!----------------------- 馆藏地图显示代码开始 2021.08.19 -------------------------------------------------------->
+        
+
+
+<!----------------------- 馆藏地图显示代码开始 2021.08.19 -------------------------------------------------------->
+<ul class="nav nav-tabs gradient" role="tablist">
+	<table class="table table-bordered">				
+		<tr>
+			<td align='center'>
+				
+				  <!--取记录控制号第1位，判断是否为图书，0:图书，1:期刊，2:声像，3:古籍-->
+					  <!--取记录控制号第2位，判断是否中文书，1:中文-->
+						  <!--使用match方法用正则表达式表达A-H类，在这里不使用这个方法，所以注释掉了！-->							
+						
+						
+						
+						
+						
+						
+						
+						  <!--H类-->
+							<img src="pages/layout/images/H.png" width="782" height="508" ><br><br>
+							<font color='000000' size='4'>注：流通部 <font color='#A00600'>H 类</font>藏书在图书馆<font color='#A00600'>三层</font>！库本库（仅限教师、研究生<font color='#A00600'>馆内阅览</font>）在图书馆六层！资料室藏书归各学院管理，不外借！<br>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					
+				
+			</td>
+		</tr>
+		<!--
+		<tr align='center'>
+			<td align='center'>
+				<font color='000000'>藏书部门为<font color='#A00600'>资料室</font>的，归各学院管理，<font color='#A00600'>不外借!</font></font>
+			</td>
+		</tr>
+		-->				
+	</table>
+</ul>
+<!----------------------- 馆藏地图显示代码结束 ------------------------------------------------------------------->
+<!----------------------- 馆藏地图显示代码结束 ------------------------------------------------------------------->
+
+        <ul class="nav nav-tabs gradient" role="tablist">
+            
+                
+                
+                    <li role="presentation" class="active"><a href="#holding"
+                                                              aria-controls="holding"
+                                                              role="tab"
+                                                              data-toggle="tab"
+                                                              style="color: #0f0f0f">馆藏信息</a>
+                    </li>
+                
+                <!--<li role="presentation"><a href="#course" aria-controls="course"
+                                           role="tab" data-toggle="tab"
+                                           onclick="referenceList()"
+                                           style="color: #0f0f0f">课程参考书</a>
+                </li>-->
+                <li role="presentation"><a href="#dianzi" aria-controls="dianzi"
+                                           role="tab" data-toggle="tab"
+                                           onclick="dianzi()"
+                                           style="color: #0f0f0f">其他电子资源</a>
+                </li>
+                <li role="presentation"><a href="#appendix"
+                                           aria-controls="appendix" role="tab"
+                                           data-toggle="tab"
+                                           onclick="fujianList()"
+                                           style="color: #0f0f0f">附件信息</a></li>
+            
+            
+        </ul>
+
+        <!-- Tab panes for holading information-->
+
+        <div class="tab-content"
+             style="font-size: 12px;border-bottom: 1px solid #a62c36;">
+            
+                
+                    <div role="tabpanel" class="tab-pane active" id="holding">
+
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active"
+                                 id="branch">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <td>分馆名</td>
+                                        <td>馆藏部门</td>
+                                       
+                                        <td>图书条码</td>
+                                        <td>索书号</td>
+                                        <td>登录号</td>
+                                        
+                                        <td>卷期</td>
+                                        <td>状态</td>
+                                        
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody id="guancanglist">
+                                    
+                                        
+                                            <tr>
+                                                
+                                                    
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                                    <td>A</td>
+                                                                    <td>流通部</td>
+                                                                   
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                            
+                                                                
+                                                            
+                                                        
+                                                        <td style="color: #a00600">823474</td>
+                                                        <td style="color: #a00600">H215.94:I1/YEM</td>
+                                                        <td style="color: #a00600">823474</td>
+                                                        
+                                                        
+                                                        <td style="color: #a00600"></td>
+                                                        <td style="color: #a00600">在架可借</td>
+
+                                                        
+
+                                                        
+                                                        
+
+                                                    
+                                                    
+                                                    
+                                                
+                                            </tr>
+                                        
+                                    
+                                    </tbody>
+                                </table>
+                                
+                               
+                                
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane"
+                                 id="goldDisc"></div>
+                            <div role="tabpanel" class="tab-pane"
+                                 id="huiwen"></div>
+                        </div>
+                    </div>
+                
+                
+
+                <div role="tabpanel" class="tab-pane" id="bindings">
+
+                    <ul class="nav nav-tabs nav-tab-two" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#branch" aria-controls="bindings-1"
+                               role="tab" data-toggle="tab">:: 装订刊信息 ::</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active"
+                             id="bindings-1">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>图书条码</td>
+                                    <td>索书号</td>
+                                    <td>登录号</td>
+                                    <td>藏书部门</td>
+                                    <td>流通状态</td>
+                                    <td>年卷期</td>
+                                    <td>装订册</td>
+                                    <td>装订方式</td>
+                                    <td>装订颜色</td>
+                                        
+                                </tr>
+                                </thead>
+                                <tbody id="bindings-list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            
+            <div role="tabpanel" class="tab-pane" id="course">
+                <ol id="course-ol"></ol>
+                <table class="table table-bordered">
+                    <tbody id="ref-head">
+
+                    </tbody>
+                    <tbody id="ref-list">
+                    </tbody>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="dianzi">
+            </div>
+            <div role="tabpanel" class="tab-pane" id="appendix">
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr class="active">
+                        <td>类型</td>
+                        <td>说明</td>
+                        <td>URL</td>
+                    </tr>
+                    </tbody>
+                    <tbody id="fujian-list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Nav tabs for borrowed books-->
+        <ul class="nav nav-tabs nav-tab-thr gradient" role="tablist">
+            <li role="presentation" class="active"><a href="#jieyue"
+                                                      aria-controls="jieyue"
+                                                      role="tab"
+                                                      data-toggle="tab"
+                                                      onclick="recBook('jieyue');">借阅本书的人还借过</a>
+            </li>
+            <li role="presentation"><a href="#shoucang" aria-controls="shoucang"
+                                       role="tab" data-toggle="tab"
+                                       onclick="recBook('shoucang');">收藏本书的人还收藏过</a>
+            </li>
+            <li role="presentation"><a href="#chakan" aria-controls="chakan"
+                                       role="tab" data-toggle="tab"
+                                       onclick="recBook('chakan');">查看本书的人还查看过</a>
+            </li>
+            <li role="presentation"><a href="#author" aria-controls="author"
+                                       role="tab" data-toggle="tab"
+                                       onclick="recBook('author');">同名作者的其他著作</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes for borrowed books-->
+        <div class="tab-content tab-content-thr">
+            <div role="tabpanel" class="tab-pane active" id="jieyue">
+
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="shoucang">
+
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="chakan">
+
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="author">
+
+            </div>
+        </div>
+
+        <table class="table table-bordered review">
+            <thead>
+            <tr class="gradient">
+                <td colspan="2">评 论</td>
+            </tr>
+            </thead>
+            <tbody id="list">
+
+            </tbody>
+        </table>
+        <nav style="text-align: center;">
+            <ul class="pagination pag" id="page">
+            </ul>
+        </nav>
+
+        <textarea class="form-control" rows="3" placeholder="请输入评论内容……"
+                  style="font-size: 12px;"
+                  id="content"></textarea>
+        <div class="commit-grade">
+            <span>评分：</span>
+            <span><img src="pages/i/star_normal.png"/><img
+                    src="pages/i/star_normal.png"/><img
+                    src="pages/i/star_normal.png"/><img
+                    src="pages/i/star_normal.png"/><img
+                    src="pages/i/star_normal.png"/></span>
+        </div>
+        
+        <span class="sns-share social">
+            <a href="" onclick="shareToQQZone()"><i
+                    class="icon iconfont icon-qqzone"></i></a>
+            
+            <a href="" onclick="shareToSinaWB()"><i
+                    class="icon iconfont icon-weibo"></i></a>
+            <a href="" onclick="shareToBaiduTB()"><i
+                    class="icon iconfont icon-share-tieba"></i></a>
+            <a href="" onclick="sharedouban()"><i
+                    class="icon iconfont icon-douban"></i></a>
+        </span>
+
+        
+        <span class="commit" onclick="commit()">发表</span>
+
+    </div>
+</div>
+
+<center>
+    <iframe src="http://service.t.sina.com.cn/widget/livestream/listlive.php?width=0&height=300&uid=2165774984&skin=1&pic=1&titlebar=1&border=1&publish=0&atalk=1&recomm=0&at=0&atopic=爷爷的教导"
+            name="mainFrame" id="mainFrame" style="" hidefocus=""
+            scrolling="auto" width="100%" height="320"
+            frameborder="no"></iframe>
+</center>
+
+        </div>
+        <div class="col-md-3 col-sm-3" style="padding: 20px;">
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                借阅关系图
+            </div>
+            <div class="col-md-12 col-sm-12">
+                
+                <a href="/relation_01h0058262.html"
+                   title="爷爷的教导"> <img src="pages/i/2dcode.png?v=22"
+                                               style="width: 100%;"
+                                               alt="爷爷的教导"></a>
+            </div>
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                热门检索信息
+            </div>
+            <div class="col-md-12 col-sm-12" style="overflow: hidden;">
+
+                
+
+
+<div id="tagscloud" class="col-md-12 col-sm-12">
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=摄影&solrType=TITLE');" class="tagc1" title="摄影">摄影</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=纪录片&solrType=TITLE');" class="tagc3" title="纪录片">纪录片</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=社会心理学&solrType=TITLE');" class="tagc1" title="社会心理学">社会心理学</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=ATESTU&solrType=TITLE');" class="tagc2" title="ATESTU">ATESTU</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=社会学&solrType=TITLE');" class="tagc2" title="社会学">社会学</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=新媒体&solrType=TITLE');" class="tagc3" title="新媒体">新媒体</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=传播学&solrType=TITLE');" class="tagc3" title="传播学">传播学</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=菊与刀&solrType=TITLE');" class="tagc2" title="菊与刀">菊与刀</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=1&solrType=TITLE');" class="tagc2" title="1">1</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=娱乐至死&solrType=TITLE');" class="tagc4" title="娱乐至死">娱乐至死</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=ETCPASSWD&solrType=TITLE');" class="tagc2" title="ETCPASSWD">ETCPASSWD</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=WEBINFWEBXML&solrType=TITLE');" class="tagc2" title="WEBINFWEBXML">WEBINFWEBXML</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=乡土中国&solrType=TITLE');" class="tagc3" title="乡土中国">乡土中国</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=三国&solrType=TITLE');" class="tagc3" title="三国">三国</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=红楼梦&solrType=TITLE');" class="tagc1" title="红楼梦">红楼梦</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=乌合之众&solrType=TITLE');" class="tagc4" title="乌合之众">乌合之众</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=心理学&solrType=TITLE');" class="tagc1" title="心理学">心理学</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=MATLAB&solrType=TITLE');" class="tagc1" title="MATLAB">MATLAB</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=游戏&solrType=TITLE');" class="tagc3" title="游戏">游戏</a>
+    
+        <a href="javascript:void(0)" onclick="location.href=encodeURI('http://lib.cuc.edu.cn/search-full-result1.html?keyword=电影&solrType=TITLE');" class="tagc2" title="电影">电影</a>
+    
+</div>
+
+            </div>
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                扫描图书信息
+            </div>
+            <div class="col-md-12 col-sm-12"
+                 style="text-align: center;padding-top: 20px;">
+                <span style="font-size: 10px;">扫描图片信息到手机上，便于查找书架！</span>
+                <img src="QRCode_DEMO.html?sids=01h0058262"
+                     style="width: 170px;margin: 15px;"/>
+            </div>
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                借阅趋势
+            </div>
+            <div class="col-md-12 col-sm-12" style="padding: 0;">
+                <div id="amount"
+                     style="height:400px;width: 300px;margin-left: -10px;"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                相关资源
+            </div>
+            <div class="col-md-12 col-sm-12" style="padding: 0px;">
+                <ul style="margin-top: 20px;">
+                    
+                        <li>
+                            <img src="pages/i/douban_icon.png"
+                                 style="height: 18px;margin: 5px 2px;">
+                            <a href="http://book.douban.com/isbn/7-5631-1299-5/">豆瓣相关资源</a>
+                        </li>
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <img src="pages/i/cnki_icon.png"
+                             style="height: 18px;margin: 5px 2px;">
+                        <a href="http://searchb.dangdang.com/?key=爷爷的教导">当当相关资源</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-12 col-sm-12 book-recommend-hd">
+                相关图书
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <ul class="book-recommend">
+                    
+                        
+                            <li>
+                                <a href="bookInfo_01h0057953.html">世界散文选 : 维吾尔语 . 上</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="bookInfo_01h0057981.html">世界寓言精品大全 : 维吾尔语</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="bookInfo_01h0058298.html">花狗崖 : 维吾尔语</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="bookInfo_01h0057666.html">影响世界的176则人生寓言 : 维吾尔语</a>
+                            </li>
+                        
+                    
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/main-->
+<!-- 二维码弹出框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document"
+         style="width: 300px;text-align: center;margin-top: 120px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">扫描二维码</h4>
+            </div>
+            <div class="modal-body">
+                <img src="QRCode_DEMO.html" id="qr_code"
+                     style="width: 170px;margin: 15px;"/>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 二维码弹出框 -->
+<!-- 弹出框 -->
+<div class="modal fade" id="myModaldata">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal">确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="add-books">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body" id="add-books-info">
+                <p>课程参考书管理员，您设置的课程‘’目前没有参考书！</p>
+            </div>
+            <div class="modal-footer" id="add-books-btn">
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal" onclick="addbooks(1)">增加参考书
+                </button>
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal" onclick="addbooks(2)">增加超链接
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框 -->
+<div class="modal fade tuijian" id="books" tabindex="-1" role="dialog"
+     aria-labelledby="booksLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 80%;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="booksLabel">课程增加：</h4>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+
+                <tbody id="jglist">
+                <tr>
+                    <td>课程代号<span color="red">*</span></td>
+                    <td><input type="text" id="courseId"></td>
+                </tr>
+                <tr>
+                    <td>课程名称<span color="red">*</span></td>
+                    <td><input type="text" id="courseName"></td>
+                </tr>
+                <tr>
+                    <td>教师姓名<span color="red">*</span></td>
+                    <td><input type="text" id="teacherName"></td>
+                </tr>
+                <tr>
+                    <td>教师职称</td>
+                    <td><input type="text" id="rank"></td>
+                </tr>
+                <tr>
+                    <td>授课单位</td>
+                    <td><input type="text" id="workPlace"></td>
+                </tr>
+                <tr>
+                    <td>授课专业</td>
+                    <td><input type="text" id="major"></td>
+                </tr>
+                <tr>
+                    <td>学时</td>
+                    <td><input type="text" id="hourCount"></td>
+                </tr>
+                <tr>
+                    <td>学分</td>
+                    <td><input type="text" id="cent"></td>
+                </tr>
+
+                <tr>
+                    <td>备注</td>
+                    <td><input type="text" id="note"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="modal-footer" id="">
+                <button type="button" class="btn btn-primary" id="addRef"
+                        onclick="addRef()">确定增加
+                </button>
+                <button type="button" class="btn btn-primary" id="clearRef"
+                        onclick="clearRef()">清空重写
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade tuijian" id="cbooks" tabindex="-1" role="dialog"
+     aria-labelledby="cbooksLabel"
+     aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 80%;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="cbooksLabel">参考书列表：</h4>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+
+                <tbody id="cbook">
+
+                </tbody>
+            </table>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal" onclick="addbooks(1)">增加参考书
+                </button>
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal" onclick="addbooks(2)">增加超链接
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade tuijian" id="dj-form" tabindex="-1" role="dialog"
+     aria-labelledby="yjLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 600px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="djLabel">馆员代借</h4>
+                <h5 class="modal-title" style="color: #F90D31">
+                    申请代借后的天内可取消代借</h5>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+
+                <tbody>
+                <tr>
+                    <td>学工号：</td>
+                    <td><input style="width: 400px" type="text" id="djAccount"
+                               value="" placeholder="必须填写">
+                    </td>
+                </tr>
+                <tr>
+                    <td>读者姓名：</td>
+                    <td><input style="width: 400px" type="text"
+                               id="djReaderName"
+                               value="" placeholder="必须填写">
+                    </td>
+                </tr>
+                <tr>
+                    <td>联系电话：</td>
+                    <td><input style="width: 400px" type="text" id="djPhone"
+                               value=""
+                               placeholder="必须填写"></td>
+                </tr>
+                <tr>
+                    <td>读者邮箱：</td>
+                    <td><input style="width: 400px" type="text"
+                               id="djReaderEmail"
+                               value="" placeholder="必须填写">
+                    </td>
+                </tr>
+                
+                </tbody>
+            </table>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        onclick="postHold()">确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade tuijian" id="cancel-form" tabindex="-1" role="dialog"
+     aria-labelledby="yjLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 600px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="cancelLabel">取消代借</h4>
+                <h5 class="modal-title" style="color: #F90D31">
+                    申请代借后的天内可取消代借</h5>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+
+                <tbody>
+                <tr>
+                    <td>学工号：</td>
+                    <td><input style="width: 400px" type="text"
+                               id="cancelAccount"
+                               value="" placeholder="必须填写">
+                    </td>
+                </tr>
+                <tr>
+                    <td>读者姓名：</td>
+                    <td><input style="width: 400px" type="text"
+                               id="cancelReaderName"
+                               value="" placeholder="必须填写">
+                    </td>
+                </tr>
+                
+                </tbody>
+            </table>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        onclick="cancelCircul()">确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ref-login" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document"
+         style="width: 300px;text-align: center;margin-top: 120px;">
+        <div class="modal-content" style="padding:20px;">
+            <div class="modal-body login-box">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="ref-account"
+                               placeholder="用户号">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" autocomplete="off"
+                               class="form-control" id="ref-password"
+                               placeholder="密码">
+                    </div>
+                    <div class="form-group" style="margin:20px 10px;">
+                        <button type="submit" class="btn btn-primary"
+                                onclick="ref_login()"
+                                style="width:100%;border-radius:20px;margin-top:20px;">
+                            登录
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade tuijian" id="yj-form" tabindex="-1" role="dialog"
+     aria-labelledby="yjLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 600px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="yjLabel">图书馆分校区预借系统：</h4>
+            </div>
+            <div id="loading" align="center"
+                 style="position:absolute;  top:40%;  left:40%;"><img
+                    src="/pages/i/timg.gif" alt=""/></div>
+            <table class="modal-body table table-bordered book-list">
+
+                <tbody>
+                <tr>
+                    <td>读者位置</td>
+                    <td><select tabindex="4" class="dropdown"
+                                id="yj-readerLibrary">
+
+                    </select>
+                    </td>
+                </tr>
+                
+
+                    <tr>
+                        <td>用户号：</td>
+                        <td><input type="text" id="yj-account"></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><input type="password" autocomplete="off"
+                                   id="yj-password"></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        onclick="prePreCheckout()">确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade tuijian" id="kj-form" tabindex="-1" role="dialog"
+     aria-labelledby="kjLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 600px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="kjLabel">开架申请：</h4>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+                <thead>
+                <tr>
+                    <td></td>
+                    <td width="73px">图书条码</td>
+                    <td width="73px">索书号</td>
+                    <td width="73px">馆藏部门</td>
+                    <td width="73px">流通状态</td>
+                    <td width="73px">应还日期</td>
+                    <td width="73px">申请开架</td>
+                </tr>
+                </thead>
+                <tbody id="kj-list">
+
+                </tbody>
+            </table>
+            
+
+                <table class="modal-body table table-bordered book-list">
+
+                    <tbody>
+
+                    <tr>
+                        <td>用户号：</td>
+                        <td><input type="text" id="kj-account"></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><input type="password" autocomplete="off"
+                                   id="kj-password"></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade hold" id="hold-form" tabindex="-1" role="dialog"
+     aria-labelledby="holdLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 800px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                
+                <h4 class="modal-title"
+                                                 id="holdLabel">
+                    预约方式：按种预约</h4>
+            </div>
+            <table class="modal-body table table-bordered book-list">
+                <thead>
+                <tr>
+                    <td width="15%">部门选择</td>
+                    <td width="20">馆藏部门</td>
+                    <td width="10%">索书号</td>
+                    <td width="10%">图书条码</td>
+                    <td width="20%">图书状态</td>
+                    <td width="10%">应还日期</td>
+                    <td width="15%">已预约数</td>
+                </tr>
+                </thead>
+                <tbody id="hold-list">
+                
+                </tbody>
+            </table>
+            <table class="modal-body table table-bordered book-list">
+                <tbody >
+                <tr>
+                    <td>
+                        <font size="30" color="red" style="float:left">请勿跨校区预约，预约书必须到图书所在校区借阅</font>
+                        <a href="javascript:;" onclick="yuyue_hold()">
+                            <input type="button" autocomplete="off" value="预约此书">
+                        </a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade hold" id="cancelPost-form" tabindex="-1" role="dialog"
+     aria-labelledby="holdLabel" aria-hidden="true">
+    <div class="modal-dialog"
+         style="width: 1000px;text-align: center;margin-top: 90px;">
+        <div class="modal-content">
+            <table class="modal-body table table-bordered book-list">
+                <thead>
+                <tr>
+                    <td width="200">题名</td>
+                    <td width="200">馆藏部门</td>
+                    <td width="100">图书条码</td>
+                    <td width="50">索书号</td>
+                    <td width="50">取消预借</td>
+                </tr>
+                </thead>
+                <tbody id="showCancel">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--footer-->
+
+
+
+<head>
+<script type="text/javascript">
+var code; //在全局 定义验证码
+function createCode() {
+ code = "";
+ var codeLength = 4;//验证码的长度
+ var checkCode = document.getElementById("checkCode");
+ checkCode.value = "";
+ var selectChar = new Array(2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D',
+   'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R',
+   'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+ for ( var i = 0; i < codeLength; i++) {
+  var charIndex = Math.floor(Math.random() * 32);
+  code += selectChar[charIndex];
+ }
+ if (code.length != codeLength) {
+  createCode();
+ }
+ checkCode.value = code;
+}
+
+function showMsg() {
+    swal("登录提示","读者登陆号，即在校生学号、教职工工作证号或一卡通号。" ,"info");
+}
+</script>
+<body>
+<!-- 登陆框 -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width: 300px;text-align: center;margin-top: 120px;">
+    <div class="modal-content" style="padding:20px;">
+      <div class="modal-body login-box">
+          <div class="form-group">
+              <select name="login_type" id="login_type" tabindex="4" class="form-control" >
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                      <option value="barcode" selected>读者条码</option>
+                      <option value="ident_id" >学工号</option>
+                      <option value="email" >Email</option>
+                  
+                  </select>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="account" placeholder="用户号">
+          </div>
+          <div class="form-group">
+            <input type="password" autocomplete="off" class="form-control" id="password" placeholder="密码">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="input1" placeholder="请输入验证码">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" readonly="true" id="checkCode" placeholder="请输入验证码">
+            <a href="#" onclick="createCode()">看不清,换一张</a>
+          </div>
+          <div class="form-group">
+            <a href="#" class="text-left col-sm-6" data-toggle="modal" data-target="#loginTwo">匿名登录</a>
+            <a href="#" class="text-right col-sm-6" data-toggle="modal" data-target="#findPwd">忘记密码</a>
+          </div>
+          <div class="form-group" style="margin:20px 10px;">
+            <button type="button" class="btn btn-primary" onclick="login()" style="width:100%;border-radius:20px;margin-top:20px;">登录</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 登陆框 -->
+<!-- 匿名登陆框 -->
+<div class="modal fade" id="loginTwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width: 370px;text-align: center;margin-top: 120px;">
+    <div class="modal-content" style="padding:20px;">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">填写您的信息</h4>
+      </div>
+      <div class="modal-body login-box">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">姓名<span style="color:red">*</span></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="name">
+            </div>
+          </div>
+      </div>
+      <div class="modal-body login-box">
+
+      <div class="form-group">
+            <label class="col-sm-4 control-label">联系电话<span style="color:red">*</span></label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="phone">
+            </div>
+          </div>
+        </div>
+      <div class="modal-body login-box">
+
+      <div class="form-group">
+            <label class="col-sm-4 control-label">email</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" id="email">
+            </div>
+          </div>
+        </div>
+      <div class="modal-body login-box">
+
+      <div class="modal-footer" style="text-align:center">
+        <button type="button" class="btn btn-primary" onclick="anonymous()">确定填写</button>
+        <button type="button" class="btn btn-default" onclick="clearText()">清空填写</button>
+      </div>
+        </div>
+      <a href="#" data-dismiss="modal">关闭</a>
+    </div>
+  </div>
+</div>
+<!-- 匿名登陆框 -->
+<!-- 匿名登陆框 -->
+<div class="modal fade" id="findPwd" tabindex="-1" role="dialog" aria-labelledby="pwdModalLabel">
+  <div class="modal-dialog" role="document" style="width: 370px;text-align: center;margin-top: 120px;">
+    <div class="modal-content" style="padding:20px;">
+      <div class="modal-header">
+        <h4 class="modal-title" id="pwdModalLabel">填写您的信息</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">用户号<span style="color:red">*</span></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="readerId">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">保密邮箱<span style="color:red">*</span></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="readerEmail">
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer" style="text-align:center">
+        <button type="button" class="btn btn-primary" onclick="findPwd()">确定发送</button>
+      </div>
+     <!--<a data-dismiss="modal">关闭</a>-->
+	  <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+<!-- 匿名登陆框 -->
+</body>
+</head>
+
+
+
+<!--footer-->
+<div class="container-fluid">
+    <p class="tac">Copyright © All Rights Reserved. <a href="http://libw.cuc.edu.cn/">中国传媒大学图书馆</a> / <a href="http://www.beian.miit.gov.cn/">京 ICP 备 10039564 号</a> 京公网安备 110402430031 号</p>
+    <p class="tac">欢迎第<span>476381</span>位用户访问本系统</p>
+
+</div>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JPRs5b2iODzDJyma",ck: "JPRs5b2iODzDJyma"})</script>
+<!--/footer-->
+<script src="pages/dist/jquery/jquery.min.js"></script>
+<script src="pages/dist/bootstrap/js/bootstrap.min.js"></script>
+<script src="pages/j/jquery.easydropdown.js"></script>
+<script src="pages/j/icheck.min.js"></script>
+<script src="pages/j/tagscloud.js"></script>
+<script src="pages/sweetalert-master/docs/assets/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        
+        createCode();
+    });
+
+    function login() {
+        var inputCode = document.getElementById("input1").value.toUpperCase();
+        var inputUserLoginName = document.getElementById("account").value;
+        var inputUserPassword = document.getElementById("password").value;
+        if (inputCode.length <= 0) {
+            alert("请输入验证码！");
+            return false;
+        } else if (inputCode != code) {
+            alert("验证码输入错误！");
+            createCode();
+            return false;
+        }
+        var params = {};
+        params.login_type = $("#login_type").val();
+        params.account = $("#account").val();
+        params.password = $("#password").val();
+        var reu = loginsuccess(params);
+        if (reu == 1) {
+            //window.location.href="http://lib.cuc.edu.cn/reader-setting.html";
+            window.location.reload();
+        }
+        return false;
+    }
+
+    function loginsuccess(params) {
+        var reu = 0;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//login.json",
+            type: "post",
+            async: false,
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    reu = 1;
+                }else if(data.result.code == 2){
+                    alert(data.result.msg);
+                    window.location.href = "http://lib.cuc.edu.cn/fixPassWord.html";
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+
+        });
+        return reu;
+    }
+
+    function anonymous() {
+        var params = {};
+        params.name = $.trim($("#name").val());
+        if (params.name == '') {
+            alert("姓名不能为空！");
+            return;
+        }
+        params.phone = $.trim($("#phone").val());
+        var test = /^1[3-9]\d{9}$/;
+        if (params.phone == "" || !test.test(params.phone)) {
+            alert("联系电话格式不对！");
+            return;
+        }
+        params.email = $.trim($("#email").val());
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//anonymous.json",
+            type: "post",
+            async: false,
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    window.location.href = "http://lib.cuc.edu.cn/reader-setting.html";
+                }
+            }
+
+        });
+        return false;
+    }
+
+    function clearText() {
+        document.getElementById('name').value = "";
+        document.getElementById('phone').value = "";
+        document.getElementById('email').value = "";
+    }
+    function findPwd() {
+        var params = {};
+        params.readerId = $.trim($("#readerId").val());
+        if (params.readerId == '') {
+            alert("用户号不能为空！");
+            return;
+        }
+        params.readerEmail = $.trim($("#readerEmail").val());
+        var test = /^[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?$/;
+       /* if (!test.test(params.readerEmail)) {
+            alert("保密邮箱不符合规则！");
+            return;
+        }*/
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//findPwd.json",
+            type: "post",
+            async: false,
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    alert("短信发送成功，请查收！");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+    function bigpage() {
+        var big = $("#total_page").text();
+        var jump = $("#jumpnum").val();
+        if (parseInt(jump) > parseInt(big)) {
+            alert("当前结果最大页数为" + big + "页,请不要超过最大页数！");
+            return -1;
+        }
+        return 1;
+    }
+</script>
+<script type="text/javascript">
+    var link = window.location.href.split("/").pop();
+    link = link.substring(0, link.indexOf(".html"));
+    link += ".html";
+    $(".nav-item").each(function () {
+        var href = $(this).attr("href");
+        if (link == href) {
+            $(this).parent().addClass("active");
+        }
+    });
+</script>
+<script>
+    var lastTime = new Date().getTime();
+    var currentTime = new Date().getTime();
+    var timeOut = 20 * 60 * 1000; //设置超时时间： 10分
+    $(function () {
+        /* 鼠标移动事件 */
+        $(document).mouseover(function () {
+            lastTime = new Date().getTime(); //更新操作时间
+
+        });
+    });
+    function testTime() {
+        var reader =
+        if (reader == undefined) {
+            return;
+        }
+        currentTime = new Date().getTime(); //更新当前时间
+        if (currentTime - lastTime > timeOut) {   //判断是否超时
+            alert("长时间未操作，请重新登陆");
+            window.location.href = 'http://lib.cuc.edu.cn/logout.html';
+        }
+    }
+    /* 定时器  间隔1秒检测是否长时间未操作页面  */
+    window.setInterval(testTime, 1000);
+</script>
+
+
+
+
+<!--/footer-->
+<script src="pages/j/share.js"></script>
+<script src="pages/j/pheibook.js"></script>
+<script type="text/javascript">
+    var _width = 600,
+        _height = 600,
+        _top = (screen.height - _height) / 2,
+        _left = (screen.width - _width) / 2,
+        // 需要修改这里的URL picURL title 。根据需求
+        _url = 'http://lib.cuc.edu.cn/bookInfo_01h0058262.html',
+        _pic = 'pages/i/default.gif',
+        _title = '爷爷的教导',
+        _source, _sourceUrl, _pic, _showcount, _desc,
+        _summary = '', _site;//这一行也是下面有的分享会用到的输入参数,有就输入,没有就不用
+    // 分享到豆瓣
+    function sharedouban() {
+        var _shareUrl = 'http://shuo.douban.com/!service/share?';
+        _shareUrl += 'href=' + encodeURIComponent(_url || location.href);    //分享的链接
+        _shareUrl += '&name=' + encodeURIComponent(_title || document.title);    //分享的标题
+        _shareUrl += '&image=' + encodeURIComponent(_pic || '');    //分享的图片
+        window.open(_shareUrl, '_blank', 'width=' + _width + ',height=' + _height + ',top=' + _top + ',left=' + _left + ',toolbar=no,menubar=no,scrollbars=no, resizable=1,location=no,status=0');
+    }
+
+    //分享到新浪微博
+    function shareToSinaWB(event) {
+        var _shareUrl = 'http://v.t.sina.com.cn/share/share.php?&appkey=895033136';     //真实的appkey，必选参数
+        _shareUrl += '&url=' + encodeURIComponent(_url || document.location);     //参数url设置分享的内容链接|默认当前页location，可选参数
+        _shareUrl += '&title=' + encodeURIComponent(_title || document.title);    //参数title设置分享的标题|默认当前页标题，可选参数
+        _shareUrl += '&source=' + encodeURIComponent(_source || '');
+        _shareUrl += '&sourceUrl=' + encodeURIComponent(_sourceUrl || '');
+        _shareUrl += '&content=' + 'utf-8';   //参数content设置页面编码gb2312|utf-8，可选参数
+        _shareUrl += '&pic=' + encodeURIComponent(_pic || '');  //参数pic设置图片链接|默认为空，可选参数
+        window.open(_shareUrl, '_blank', 'width=' + _width + ',height=' + _height + ',top=' + _top + ',left=' + _left + ',toolbar=no,menubar=no,scrollbars=no, resizable=1,location=no,status=0');
+    }
+
+    // 分享到腾讯微博
+    function shareToTXWB() {
+        var _shareUrl = 'http://v.t.qq.com/share/share.php?';
+        _shareUrl += 'title=' + encodeURIComponent(_title || document.title);    //分享的标题
+        _shareUrl += '&url=' + encodeURIComponent(_url || location.href);    //分享的链接
+        _shareUrl += '&appkey=5bd32d6f1dff4725ba40338b233ff155';    //在腾迅微博平台创建应用获取微博AppKey
+        _shareUrl += '&site=' + encodeURIComponent(_site || '');   //分享来源
+        _shareUrl += '&pic=' + encodeURIComponent(_pic || '');    //分享的图片，如果是多张图片，则定义var _pic='图片url1|图片url2|图片url3....'
+        window.open(_shareUrl, '_blank', 'width=' + _width + ',height=' + _height + ',top=' + _top + ',left=' + _left + ',toolbar=no,menubar=no,scrollbars=no, resizable=1,location=no,status=0');
+    }
+
+    function shareToQQZone() {
+        var _shareUrl = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
+        _shareUrl += 'url=' + encodeURIComponent(_url || document.location);   //参数url设置分享的内容链接|默认当前页location
+        _shareUrl += '&showcount=' + _showcount || 0;      //参数showcount是否显示分享总数,显示：'1'，不显示：'0'，默认不显示
+        _shareUrl += '&desc=' + encodeURIComponent(_desc || '分享的描述');    //参数desc设置分享的描述，可选参数
+        _shareUrl += '&summary=' + encodeURIComponent(_summary || '分享摘要');    //参数summary设置分享摘要，可选参数
+        _shareUrl += '&title=' + encodeURIComponent(_title || document.title);    //参数title设置分享标题，可选参数
+        _shareUrl += '&site=' + encodeURIComponent(_site || '');   //参数site设置分享来源，可选参数
+        _shareUrl += '&pics=' + encodeURIComponent(_pic || '');   //参数pics设置分享图片的路径，多张图片以＂|＂隔开，可选参数
+        window.open(_shareUrl, '_blank', 'width=' + _width + ',height=' + _height + ',top=' + _top + ',left=' + _left + ',toolbar=no,menubar=no,scrollbars=no, resizable=1,location=no,status=0');
+    }
+
+    // 分享到百度贴吧
+    function shareToBaiduTB() {
+        var _shareUrl = 'http://tieba.baidu.com/f/commit/share/openShareApi?';
+        _shareUrl += 'title=' + encodeURIComponent(_title || document.title);  //分享的标题
+        _shareUrl += '&url=' + encodeURIComponent(_url || document.location);  //分享的链接
+        _shareUrl += '&pic=' + encodeURIComponent(_pic || '');    //分享的图片
+        window.open(_shareUrl, '_blank', 'width=' + _width + ',height=' + _height + ',left=' + (screen.width - _width) / 2 + ',top=' + (screen.height - _height) / 2 + ',toolbar=no,menubar=no,scrollbars=no, resizable=1,location=no,status=0');
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        // 点赞
+        $("#favorite").click(function (event) {
+            var src = $(this).attr("src").split("_").pop().split(".").shift();
+            if (src == "no") {
+
+                var params = {};
+                params.sid = '01h0058262';
+                params.type = 0;
+                $.ajax({
+                    url: "http://lib.cuc.edu.cn//collect.json",
+                    type: "post",
+                    data: params,
+                    success: function (data) {
+
+                        if (data.result.code == 0) {
+                            $("#favorite").attr("src", 'pages/i/favorite_yes.png');
+                        }
+                    }
+
+                });
+            }
+            if (src == "yes") {
+
+                var params = {};
+                params.sid = '01h0058262';
+                params.type = 1;
+                $.ajax({
+                    url: "http://lib.cuc.edu.cn//collect.json",
+                    type: "post",
+                    data: params,
+                    success: function (data) {
+
+                        if (data.result.code == 0) {
+                            $("#favorite").attr("src", 'pages/i/favorite_no.png');
+                        }
+                    }
+
+                });
+            }
+        });
+
+ //点击收藏文字
+        $("#collectFavo").click(function (event) {
+            var src = $(this).prev().attr("src").split("_").pop().split(".").shift();
+            if (src == "no") {
+
+                var params = {};
+                params.sid = '01h0058262';
+                params.type = 0;
+                $.ajax({
+                    url: "http://lib.cuc.edu.cn//collect.json",
+                    type: "post",
+                    data: params,
+                    success: function (data) {
+
+                        if (data.result.code == 0) {
+                            $("#favorite").attr("src", 'pages/i/favorite_yes.png');
+                        }
+                    }
+
+                });
+            }
+            if (src == "yes") {
+
+                var params = {};
+                params.sid = '01h0058262';
+                params.type = 1;
+                $.ajax({
+                    url: "http://lib.cuc.edu.cn//collect.json",
+                    type: "post",
+                    data: params,
+                    success: function (data) {
+
+                        if (data.result.code == 0) {
+                            $("#favorite").attr("src", 'pages/i/favorite_no.png');
+                        }
+                    }
+
+                });
+            }
+        });
+
+        // 加入购物车
+        $(".add").on('click', function (event) {
+            var params = {};
+            params.sid = '01h0058262';
+            $.ajax({
+                url: "http://lib.cuc.edu.cn//addTempStorage.json",
+                type: "post",
+                data: params,
+                success: function (data) {
+                    if (data.result.code == 0) {
+                        alert("加入暂存架成功！");
+                        window.location.reload();
+                        tempStorage();
+                        var number = $("#shelf_num").text();
+                        number++;
+                        $("#shelf_num").text(number);
+                    } else {
+                        alert(data.result.msg);
+                    }
+                }
+
+            });
+
+        });
+        // 从购物车删除
+        $("#bookshelf").on('click', '.delete', function (event) {
+            event.preventDefault();
+            $(this).parent().parent().remove();
+            var number = $("#shelf_num").text();
+            number--;
+            $("#shelf_num").text(number);
+            var id = $(this).attr("data-formId");
+            deleteTempStorage(id, 0);
+        });
+        // 清空购物车
+        $(".release").click(function (event) {
+            $("#bookshelf").find('li').remove();
+            $("#shelf_num").text('0');
+            deleteTempStorage("deleteall", 1);
+
+        });
+
+        // 评分
+        $(".commit-grade").on('click', 'img', function (event) {
+            event.preventDefault();
+            var l = $(this).index() + 1;
+            grade(l);
+            for (var i = 0; i < l; i++) {
+                $(".commit-grade").find("img").eq(i).attr({
+                    src: 'pages/i/star_active.png'
+                });
+            }
+            for (var i = l; i < 6; i++) {
+                $(".commit-grade").find("img").eq(i).attr({
+                    src: 'pages/i/star_normal.png'
+                });
+            }
+        });
+        
+    });
+
+    function errorWin(statusIndex,esourceId,dbid,readerBarcode) {
+
+        var statusIndex = "#errorWords"+statusIndex;/*动态id*/
+        var errorWords = $(statusIndex).val();
+        if (errorWords.length==0 || errorWords==""){
+            alert("请输入反馈信息");
+        }else{
+            var params = {};
+            params.esourceId = esourceId;
+            params.dbid = dbid;
+            params.readerBarcode = readerBarcode;
+            params.errorMsg = errorWords;
+
+            $.ajax({
+                url: "http://lib.cuc.edu.cn//errorMsg.json",
+                type: "post",
+                data: params,
+                success: function (data) {
+                    if (data.result.code == 0) {
+                        alert("反馈成功！");
+
+                    } else {
+                        alert("反馈失败！");
+                    }
+                }
+
+            });
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        init(1);
+        tempStorage();
+        recBook("jieyue");
+    });
+
+    function dianzi() {
+        var params = {sid: '01h0058262'};
+
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//dianzi.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    var html = '<ul class="list-inline">';
+                    if (data.data.length > 0) {
+                        for (var j = 0; j < data.data.length; j++) {
+                            var items = data.data[j];
+                            html += '<li>';
+                            html += '<a href="' + items.locate + '">' + items.recNote + '</a>';
+                            html += '</li>';
+                        }
+                    } else {
+                        html += '<li>';
+                        html += '本书刊暂无其它电子资源数据！';
+                        html += '</li>';
+                    }
+
+                    html += '</ul>';
+                    $("#dianzi").html(html);
+//                    topage(data.data,data.pageNo,data.totalPage,pageSize);
+                }
+            }
+
+        });
+    }
+
+    function recBook(type) {
+
+        var params = {
+            rec_ctrl_id: '01h0058262',
+            type: type,
+            author: '亚尔买买提·塔依尔'
+        };
+
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//bookTypeRec.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    var html = '<ul class="list-inline">';
+                    for (var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+                        var uri = "";
+                        html += '<li>';
+                        if (item.imgUrl == "pages/i/default.gif") {
+                            uri = item.imgUrl;
+                        } else {
+                            uri = "https://images.weserv.nl/?url=" + item.imgUrl.substring(7, item.imgUrl.length);
+                        }
+                        html += '<a href="bookInfo_' + item.recCtrlId + '.html"><img src="' + uri + '" height="100px;"/></a>';
+                        html += '<p>' + item.title + '</p>';
+                        html += '<p>' + item.authors + '</p>';
+                        html += '</li>';
+                    }
+                    html += '</ul>';
+                    $("#" + type).html(html);
+                    //topage(data.data,data.pageNo,data.totalPage,pageSize);
+                }
+            }
+
+        });
+    }
+
+    function init(pageNo) {
+
+        var pageSize = 10;
+        var params = {
+            sid: '01h0058262',
+            pageNo: pageNo,
+            pageSize: pageSize
+        };
+
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//bookinfo_review.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    topage(data.data, data.pageNo, data.totalPage, pageSize);
+                }
+            }
+
+        });
+    }
+
+    function topage(data, page, totalPage, pageSize) {
+        var html = "";
+//        alert(data.length);
+        for (var i = 0; i < data.length; i++) {
+            var item = data[i];
+            html += '<tr>';
+            html += '<img src="' + item.headImg + '"/>';
+            html += '</td>';
+            html += '<td>';
+            html += '<p><span>' + item.readerBarcode + '</span><span class="flag">' + item.reDate + '</span></p>';
+            html += '<p>' + item.reContent + '</p>';
+            html += '<span class="flag"></span>';
+            html += '</tr>';
+        }
+        $("#list").html(html);
+        var pageHtml = "";
+        if (page > 1) {
+            pageHtml += '<li><a href="javascript:;" onclick="init(' + (page - 1) + ')">上一页</a></li>';
+        }
+        var start = page - 2 < 1 ? 1 : page - 2;
+        if (page == totalPage - 1) {
+            start = page - 3 < 1 ? 1 : page - 3;
+        }
+        if (page == totalPage) {
+            start = page - 4 < 1 ? 1 : page - 4;
+        }
+        var end = page + 2 > totalPage ? totalPage : page + 2;
+        if (page == 1) {
+            end = page + 4 > totalPage ? totalPage : page + 4;
+        }
+        if (page == 2) {
+            end = page + 3 > totalPage ? totalPage : page + 3;
+        }
+
+        for (var i = start; i <= end; i++) {
+
+            if (i == page) {
+                pageHtml += '<li class="active"><a href="javascript:;" >' + i + '</a></li>';
+            } else {
+                pageHtml += '<li><a href="javascript:;" onclick="init(' + i + ')">' + i + '</a></li>';
+            }
+        }
+        if (page < totalPage) {
+            pageHtml += '<li><a href="javascript:;" onclick="init(' + (page + 1) + ')">下一页</a></li>';
+        }
+        $("#page").html(pageHtml);
+    }
+
+</script>
+
+<script type="text/javascript">
+    var regrade = 0;
+    var type = 1;
+
+    function grade(g) {
+        regrade = g;
+    }
+
+    function commit() {
+
+        var params = {};
+        params.content = $.trim($("#content").val());
+        params.reGrade = regrade;
+        params.sid = '01h0058262';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//bookinfo_add_review.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    $("#content").val("");
+                    alert("提交评论成功！");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+
+        });
+    }
+
+    function fujianList() {
+        var params = {};
+        params.sid = '01h0058262';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//reader-fujian.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+
+                    var html = "";
+                    for (var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+
+                        html += '<tr>';
+                        html += '<td>' + item.accessoryType + '</td>';
+                        html += '<td>' + item.accessoryDesc + '</td>';
+                        html += '<td><a href="' + ((item.accessoryUrl == null) ? '' : item.accessoryUrl) + '">' + ((item.accessoryBrief == null) ? '' : item.accessoryBrief) + '</a></td>';
+                        html += '</tr>';
+                    }
+                    $("#fujian-list").html(html);
+                }
+            }
+
+        });
+    }
+
+    var courseId;
+    var courseName;
+
+    function referenceList() {
+
+        var params = {};
+        params.bookId = '01h0058262';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//references.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    var head = "";
+                    var ol = '';
+
+                    ol += '<li>课程参考管理员，您设置的课程如下：    <a href="javascript:;" onclick="add_ref()">[增加课程]</a></li>';
+                    $("#course-ol").html(ol);
+                    head += '<tr class="active">';
+                    head += '<td>序号</td>';
+                    head += '<td>课程代号</td>';
+                    head += '<td>课程名称</td>';
+                    head += '<td>授课单位</td>';
+                    head += '<td>教师姓名</td>';
+                    head += '<td>授课专业</td>';
+                    head += '<td>学时</td>';
+                    head += '<td>学分</td>';
+                    head += '<td>编辑</td>';
+                    head += '</tr>';
+                    $("#ref-head").html(head);
+                    var html = "";
+                    for (var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+                        courseId = item.courseId;
+                        html += '<tr>';
+                        html += '<td>' + (i + 1) + '</td>';
+                        html += '<td>' + item.courseId + '</td>';
+                        html += '<td><a href="javascript:;" onclick="showAddBooks(\'' + item.courseId + '\',\'' + item.courseName + '\')">' + item.courseName + '</a></td>';
+                        html += '<td>' + item.workPlace + '</td>';
+                        html += '<td>' + item.teacherName + '</td>';
+                        html += '<td>' + item.major + '</td>';
+                        html += '<td>' + item.hourCount + '</td>';
+                        html += '<td>' + item.cent + '</td>';
+                        html += '<td><a href="javascript:;" onclick="refInfo(\'' + item.courseId + '\')">修改</a>&nbsp;<a href="javascript:;" onclick="delRef(\'' + item.courseId + '\')">删除</a></td>';
+                        html += '</tr>';
+                    }
+                    $("#ref-list").html(html);
+                } else if (data.result.code == 2) {
+                    var html = "";
+                    html += '<li>使用说明:</li>';
+                    html += '<li>只有系统管理员授权的课程参考书管理员才有权限使用本模块;</li>';
+                    html += '<li>管理员正确输入条码和口令即可登录;</li>';
+                    html += '<li>管理员登录成功后，可以对课程和对应的参考书进行维护，包括添加，删除和修改等功能;</li>';
+                    
+                    html += '<li><a href="javascript:;" data-toggle="modal" data-target="#ref-login">:: 课程参考书管理登录 ::</a></li>';
+                    
+
+                    $("#course-ol").html(html);
+                    $("#ref-list").html("");
+                } else if (data.result.code == 3) {
+                    var html = "";
+
+                    html += '<li>课程参考管理员，您没有设置任何课程！</li>';
+                    html += '<li><a href="javascript:;" data-toggle="modal" data-target="#books">[增加课程]</a></li>';
+                    html += '<li>管理员登录成功后，可以对课程和对应的参考书进行维护，包括添加，删除和修改等功能;</li>';
+                    $("#course-ol").html(html);
+                    $("#ref-list").html("");
+                } else {
+                }
+            }
+
+        });
+    }
+
+    function clearRef() {
+        $("#courseId").val("");
+        $("#courseName").val("");
+        $("#workPlace").val("");
+        $("#major").val("");
+        $("#hourCount").val("");
+        $("#cent").val("");
+        $("#teacherName").val("");
+        $("#rank").val("");
+        $("#note").val("");
+    }
+
+    function refInfo(id) {
+        $("#addRef").text("确定修改");
+        type = 2;
+        var params = {};
+        params.courseId = id;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//info-reference.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    var item = data.data;
+                    $("#courseId").attr("disabled", "true");
+                    $("#courseId").val(item.courseId);
+                    $("#courseName").val(item.courseName);
+                    $("#workPlace").val(item.workPlace);
+                    $("#major").val(item.major);
+                    $("#hourCount").val(item.hourCount);
+                    $("#cent").val(item.cent);
+                    $("#teacherName").val(item.teacherName);
+                    $("#rank").val(item.rank);
+                    $("#note").val(item.note);
+                    $("#books").modal("show");
+
+                } else {
+                    alert("查询课程错误！");
+                }
+            }
+        });
+    }
+
+    function add_ref() {
+        $("#addRef").text("确定增加");
+        $("#courseId").removeAttr("disabled");
+//        $("#courseId").attr("disabled","true");
+
+        type = 1;
+        clearRef();
+        $("#books").modal("show");
+
+    }
+
+    function addRef() {
+
+        var params = {};
+        params.courseId = $.trim($("#courseId").val());
+        params.courseName = $.trim($("#courseName").val());
+        params.workPlace = $.trim($("#workPlace").val());
+        params.major = $.trim($("#major").val());
+        params.hourCount = $.trim($("#hourCount").val());
+        params.cent = $.trim($("#cent").val());
+        params.teacherName = $.trim($("#teacherName").val());
+        params.rank = $.trim($("#rank").val());
+        params.note = $.trim($("#note").val());
+        params.type = type;
+        if (params.courseId == '') {
+            alert("课程id不能为空！");
+            return;
+        }
+        if (params.courseName == '') {
+            alert("课程名不能为空！");
+            return;
+        }
+        if (params.teacherName == '') {
+            alert("教师名不能为空！");
+            return;
+        }
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//save-reference.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    if (type == 1) {
+                        alert("新增课程成功！");
+                    } else {
+                        alert("修改课程成功！");
+
+                    }
+                    referenceList();
+                    $("#books").modal("hide");
+
+                } else {
+                    alert("新增课程错误！");
+                    $("#books").modal("hide");
+
+                }
+            }
+        });
+    }
+
+    function delRef(courseId) {
+        if (!confirm("确认要删除该课程？")) {
+            return;
+        }
+        var params = {};
+        params.courseId = courseId;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//del-reference.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    alert("删除课程成功！");
+                    referenceList();
+                } else {
+                    alert("删除课程错误！");
+                }
+            }
+        });
+    }
+
+    function showAddBooks(id, name, type) {
+        courseId = id;
+        courseName = name;
+        var params = {};
+        params.courseId = id;
+        params.pageNo = 1;
+        params.pageSize = 100;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//reference-books.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    if (data.total > 0) {
+                        var html = "";
+                        html += '<tr>';
+                        html += '<td>编号</td>';
+                        html += '<td>题名</td>';
+                        html += '<td>著者</td>';
+                        html += '<td>出版社</td>';
+                        html += '<td>出版时间</td>';
+                        html += '<td>说明</td>';
+                        if (type == 1) {
+                            html += '<td>超链接</td>';
+                            html += '<td>操作</td>';
+                        } else {
+                            html += '<td>操作</td>';
+                        }
+                        html += '</tr>';
+                        for (var i = 0; i < data.data.length; i++) {
+                            var item = data.data[i];
+                            var numb = (params.pageNo - 1) * params.pageSize + i + 1;
+
+                            html += '<tr>';
+                            html += '<td>' + numb + '</td>';
+                            html += '<td><a href="' + (item.recCtrlId == null ? '#' : ('bookInfo_' + item.recCtrlId + '.html')) + '">' + item.title + '</a></td>';
+                            html += '<td>' + item.author + '</td>';
+                            html += '<td>' + item.publisher + '</td>';
+                            html += '<td>' + item.publishYear + '</td>';
+                            if (type == 1) {
+                                if (item.recCtrlId == '01h0058262') {
+                                    html += '<td><input type="text" id="r_' + item.recordId + '" value="' + (item.note == null ? "" : item.note) + '" maxlength="40"></td>';
+                                    html += '<td><input type="text" id="url_' + item.recordId + '" value="' + (item.refUrl == null ? "" : item.refUrl) + '" maxlength="100"></td>';
+                                    html += '<td><input type="button" onclick="updateBooks(\'' + item.recordId + '\')" value="提交"></td>';
+                                } else {
+                                    html += '<td><a href="' + (item.refUrl == null ? "" : item.refUrl) + '">' + (item.note == null ? "" : item.note) + '</a></td>';
+                                    html += '<td>' + (item.refUrl == null ? "" : item.refUrl) + '</td>';
+                                    html += '<td></td>';
+                                }
+
+                            } else {
+                                html += '<td><a href="' + (item.refUrl == null ? "" : item.refUrl) + '">' + (item.note == null ? "" : item.note) + '</a></td>';
+                                html += '<td><a href="javascript:;" onclick="deleteBooks(\'' + item.recordId + '\')">删除</a></td>';
+                            }
+                            html += '</tr>';
+                        }
+                        $("#cbook").html(html);
+                        $("#cbooks").modal("show");
+                    } else {
+                        $("#add-books-info").html("<p>课程参考书管理员，您设置的课程‘" + name + "’目前没有参考书！</p>");
+                        var html = '<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addbooks(1,\'' + id + '\')">增加参考书</button>';
+                        html += '<button type="button" class="btn btn-primary" data-dismiss="modal"  onclick="addbooks(2,\'' + id + '\')">增加超链接</button>';
+                        $("#add-books-btn").html(html);
+                        $("#add-books").modal("show");
+                    }
+                } else {
+                    alert("查看课程参考书错误！");
+                }
+            }
+        });
+    }
+
+    function daijieTip(bb, li, di, searchNo) {
+        dj_bookBarcode = bb;
+        dj_libraryId = li;
+        dj_departmentId = di;
+        dj_searchNo = searchNo;
+        $("#dj-form").modal("show");
+    }
+
+    function realAdd(type) {
+        var params = {};
+        params.courseId = courseId;
+        params.recCtrlId = '01h0058262';
+        params.type = type;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//add-reference-book.json",
+            type: "post",
+            data: params,
+            async: false,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    if (type == 2) {
+                        showAddBooks(courseId, courseName, 1);
+
+                        return;
+                    } else {
+                        alert("新增课程参考书成功！");
+                    }
+                } else if (data.result.code == 2) {
+                    if (type == 2) {
+                        showAddBooks(courseId, courseName, 1);
+                        return;
+                    } else {
+                        alert(data.result.msg);
+                    }
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+
+    function addbooks(type) {
+        $("#cbooks").modal("hide");
+        setTimeout(function () {
+            realAdd(type);
+        }, 1000);
+//        $(".modal-backdrop").remove();
+//        $("body").removeClass('modal-open');
+//        setTimeout(realAdd,2000);
+//        $("#cbooks").modal("hide");
+//        $("#cbooks").css('display','none');
+//        $(".modal-backdrop").each(function(){
+//            $(this).css('display','none');
+//        });
+//        $(".modal-backdrop").css('display','none');
+//        $(".modal-backdrop").css('display','none');
+//        $(".modal-backdrop").css('display','none');
+//        if(type==2){
+//            $("#cbooks").modal("hide");
+//        $("#add-books").modal("hide");
+//
+//        }
+
+
+    }
+
+    function updateBooks(recordId) {
+        $("#cbooks").modal("hide");
+
+        var params = {};
+        params.recordId = recordId;
+        params.note = $("#r_" + recordId).val();
+        params.refUrl = $("#url_" + recordId).val();
+        params.type = type;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//update-reference-book.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    alert("新增超链接成功！");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+
+    function deleteBooks(recordId) {
+        $("#cbooks").modal("hide");
+
+        var params = {};
+        params.recordId = recordId;
+        params.type = 'del';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//update-reference-book.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    alert("删除参考书成功！");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+
+    function ref_login() {
+        var params = {};
+        params.account = $.trim($("#ref-account").val());
+        params.password = $.trim($("#ref-password").val());
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//teacher.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    alert("登陆成功！");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+
+    var yj_bookBarcode;
+    var yj_libraryId;
+    var yj_departmentId;
+    var yj_recCtrlId;
+    var yj_v905;
+
+
+    var dj_bookBarcode;
+    var dj_libraryId;
+    var dj_departmentId;
+    var dj_recCtrlId;
+    var dj_v905;
+
+    function yujieTip(bb, li, di, id, v905) {
+        yj_bookBarcode = bb;
+        yj_libraryId = li;
+        yj_departmentId = di;
+        yj_recCtrlId = id;
+        yj_v905 = v905;
+      
+        var params = {};
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//campuses.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    var html = "";
+                    html += '<option value="" class="label" >读者位置</option>';
+                    for (var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+                        html += '<option value="' + item.campusCode + '">' + item.campusName + '</option>';
+                    }
+//                    html +='<option value="2">硕士</option>';
+//                    html +='<option value="3">博士</option>';
+                    $("#yj-readerLibrary").html(html);
+                    $("#yj-form").modal("show");
+                } else {
+                    swal("系统提示", data.result.msg, "error");
+                }
+            }
+        });
+    }
+
+    function holdTip() {
+        //$("#hold-form").mhold-formodal("show");
+        var sysid1 = 'B';
+        if (sysid1 == 'D') {
+            $("#hold-form").modal("show");
+        } else {
+            yuyueinfo('01h0058262', 99, 'A', '');
+            yuyue_hold();
+        }
+    }
+
+    function cancelPostHold() {
+        $("#cancel-form").modal("show");
+    }
+
+    var pp = {};
+
+    function yuyueinfo(recCtrlId, bookDepartid, libraryId, bookSearchNo) {
+        pp.recCtrlId = recCtrlId;
+        pp.libraryId = libraryId;
+        pp.departid = bookDepartid;
+        pp.bookSearchNo = bookSearchNo;
+    }
+
+    function ShowDiv() {
+        $("#loading").show();
+    }
+
+
+    function HiddenDiv() {
+        $("#loading").hide();
+    }
+
+    function replacedianzi(url) {
+        window.location.replace(url);
+    }
+
+    function yuyue_hold() {
+        var params = {};
+        params = pp;
+        params.sysid1 = 'B';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//hold.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 1  && data.result.msg == "预约成功") {
+
+                    swal({
+                        icon: "success",
+                        title: '系统提示',
+                        text: data.result.msg,
+                        buttons:{
+                            confirm: {
+                                text: '确认',
+                                value: true,
+                                visible: true,
+
+                            }
+                        }
+                    }).then(function (isConfirm) {
+                        if (isConfirm == true) {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-reserve.html");
+                        }
+                    });
+                }else if (data.result.code == 0  && data.result.msg == "预约成功") {
+
+                    swal({
+                        icon: "success",
+                        title: '系统提示',
+                        text: data.result.msg,
+                        buttons:{
+                            confirm: {
+                                text: '确认',
+                                value: true,
+                                visible: true,
+
+                            }
+                        }
+                    }).then(function (isConfirm) {
+                        if (isConfirm == true) {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-reserve.html");
+                        }
+                    });
+                }
+                else if(data.result.code == 1 && data.result.msg == "noPE"){
+                    swal({
+                        icon: "warning",
+                        title: '系统提示',
+                        text: '请完善好邮箱或电话号码后再来预约',
+                        buttons:{
+                            confirm: {
+                                text: '确认',
+                                value: true,
+                                visible: true,
+
+                            }
+                        }
+                    }).then(function (isConfirm) {
+
+                        if (isConfirm == true) {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-setting.html");
+                        }
+                    });
+                } else if(data.result.code == 1 && data.result.msg == "noP"){
+                    swal({
+                        icon: "warning",
+                        title: '系统提示',
+                        text: '请完善好电话号码后再来预约',
+                        buttons:{
+                            confirm: {
+                                text: '确认',
+                                value: true,
+                                visible: true,
+
+                            }
+                        }
+                    }).then(function (isConfirm) {
+
+                        if (isConfirm == true) {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-setting.html");
+                        }
+                    });
+                }
+                else {
+                    swal("系统提示", data.result.msg, "error");
+                }
+            }
+        });
+    }
+
+
+    function prePreCheckout() {
+        $.ajax({
+            url: "http://lib.cuc.edu.cn/prepreCheckout.json",
+            type: "post",
+            success: function (data) {
+                if (data.result.code == 2) {
+                    swal({
+                        title: '手机号校验',
+                        text: data.result.msg,
+                        type: 'info',
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "继续",
+                        cancelButtonText: "去设置",
+                        closeOnConfirm: false,
+                        closeOnCancel: false
+                    }).then(function (isConfirm) {
+                        if (isConfirm == true) {
+                            preCheckout();
+                        } else {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-setting.html");
+                        }
+                    })
+                } else {
+                    swal("系统提示", data.result.msg, "error");
+                }
+            }
+        });
+    }
+
+
+    function preCheckout() {
+        var params = {};
+        params.bookBarcode = yj_bookBarcode;
+        params.libraryId = yj_libraryId;
+        params.departmentId = yj_departmentId;
+        params.recCtrlId = yj_recCtrlId;
+        params.v905 = yj_v905;
+
+        params.password = $.trim($("#yj-password").val());
+        params.phone = $.trim($("#yj-phone").val());
+        params.readerLibrary = $.trim($("#yj-readerLibrary").val());
+        params.readerBarcode = $.trim($("#yj-account").val());
+        var test = /^1[3-9]\d{9}$/;
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//preCheckout.json",
+            type: "post",
+            data: params,
+            beforeSend: function (request) {
+                ShowDiv();
+                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            },
+            complete: function () {
+                HiddenDiv();
+            },
+            success: function (data) {
+                if (data.result.code == 0) {
+                    swal("系统提示", data.result.msg, "success").then(function (isConfirm) {
+                        if (isConfirm == true) {
+                            window.location.assign("http://lib.cuc.edu.cn//reader-borrowinfo.html");
+                        }
+                    });
+                } else {
+                    swal("系统提示", data.result.msg, "error");
+                }
+            }
+        });
+    }
+
+
+    function postHold() {
+        var params = {};
+        params.recCtrlId = '01h0058262';
+        params.bookBarCode = dj_bookBarcode;
+        params.libraryId = dj_libraryId;
+        params.departmentId = dj_departmentId;
+        params.bookSearchNo = dj_searchNo;
+        /*params.readerAddr = $.trim($("#djReaderAddr").val());*/
+        params.readerPhone = $.trim($("#djPhone").val());
+        params.readerAddr = "";
+        params.identId = $.trim($("#djAccount").val());
+        params.readerName = $.trim($("#djReaderName").val());
+        params.readerEmail = $.trim($("#djReaderEmail").val());
+        swal({
+            icon: "warning",
+            title: '邮箱确认',
+            text: '确认使用地址为'+params.readerEmail+'的邮箱进行代借吗',
+            buttons:{
+                confirm: {
+                    text: '确认',
+                    value: true,
+                    visible: true
+                },
+                cancel: {
+                    text: '取消',
+                    value: null,
+                    visible: true
+                }
+            }
+        }).then(function (isConfirm) {
+            if (isConfirm == true) {
+            $.ajax({
+                url: "http://lib.cuc.edu.cn/postHold.json",
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                },
+                type: "post",
+                data: params,
+                success: function (data) {
+                    if (data.result.code == 0) {
+                        swal("系统提示", "馆员代借成功", "success").then(function (isConfirm) {
+                            if (isConfirm == true) {
+                                window.location.reload();
+                            }
+                        });qikanInfos
+
+                    } else {
+                        swal("系统提示", data.result.msg, "error");
+                    }
+                }
+            });
+        }
+        });
+    }
+
+
+    function cancelCircul() {
+        var params = {};
+        params.recCtrlId = '01h0058262';
+        params.identId = $.trim($("#cancelAccount").val());
+        params.readerName = $.trim($("#cancelReaderName").val());
+        $.ajax({
+            url: "http://lib.cuc.edu.cn/cancelPostHold.json",
+            beforeSend: function (request) {
+                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            },
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    toCancelLost(data);
+                } else {
+                    swal("系统提示", data.result.msg, "error");
+                }
+            }
+        });
+    }
+
+
+    var kj_libraryId;
+
+    function kaijiaTip(library_id) {
+        kj_libraryId = library_id;
+        var params = {};
+        params.library_id = library_id;
+        params.rec_ctrl_id = '01h0058262';
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//shelves.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+
+                if (data.result.code == 0) {
+                    var html = "";
+                    html += '';
+                    for (var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+                        html += '<tr>';
+                        if (item.str_shelves_status == '0') {
+                            html += '<td><input type="radio" id="book_barcode" name="book_barcode" value="' + item.str_book_barcode + '" checked/></td>';
+
+                        } else {
+                            html += '<td><input type="radio" id="book_barcode" name="book_barcode" value="' + item.str_book_barcode + '" disabled/></td>';
+
+                        }
+                        html += '<td>' + item.str_book_barcode + '</td>';
+                        html += '<td>' + (item.str_book_search_no == null ? "" : item.str_book_search_no) + '</td>';
+                        html += '<td>' + item.str_department_name + '</td>';
+                        html += '<td>' + item.str_circul_desc + '</td>';
+                        html += '<td>' + item.str_date_due + '</td>';
+                        if (item.str_shelves_status == '0') {
+
+                            html += '<td><a  onclick="shelvesCheckout()">申请</a></td>';
+                        } else {
+                            html += '<td></td>';
+
+                        }
+                        html += '</tr>';
+
+                    }
+//                    html +='<option value="2">硕士</option>';
+//                    html +='<option value="3">博士</option>';
+                    $("#kj-list").html(html);
+                    $("#kj-form").modal("show");
+
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+
+
+    function doCancel(optDate, bookBarCode, libraryId, readerBarCode) {
+        /*  var params = {};
+          params.optDate = optDate;
+          params.bookBarCode = bookBarCode;
+          params.libraryId = libraryId;
+          params.readerBarCode = readerBarCode;*/
+        swal({
+            icon: "warning",
+            title: '删除确认',
+            text: '确认删除这条代借记录吗',
+            buttons:{
+                confirm: {
+                    text: '确认',
+                    value: true,
+                    visible: true,
+
+                },
+                cancel: {
+                    text: '取消',
+                    value: null,
+                    visible: true
+                }
+            }
+        }).then(function (isConfirm) {
+
+            if (isConfirm == true) {
+            $.ajax({
+                url: "http://lib.cuc.edu.cn/doCancelHost.json",
+                data: {
+                    readerBarCode: readerBarCode,
+                    optDate: optDate,
+                    bookBarCode: bookBarCode,
+                    libraryId: libraryId
+                },
+                dataType: "JSON",
+                contentType: "application/json",
+                success: function (data) {
+                    if (data.result.code == 0) {
+                        swal("系统提示", "取消馆员代借成功", "success").then(function (isConfirm) {
+                            if (isConfirm == true) {
+                                window.location.reload();
+                            }
+                        });
+                    } else {
+                        swal("系统提示", data.result.msg, "error");
+                    }
+                }
+            });
+        }
+        });
+
+    }
+
+    function shelvesCheckout() {
+        var params = {};
+        params.bookBarcode = $("input[name=book_barcode]:checked").val();
+        params.libraryId = kj_libraryId;
+        params.barcode = $.trim($("#kj-account").val());
+        params.password = $.trim($("#kj-password").val());
+        $.ajax({
+            url: "http://lib.cuc.edu.cn//shelvesCheckout.json",
+            type: "post",
+            data: params,
+            success: function (data) {
+                if (data.result.code == 0) {
+                    alert("开架失败!");
+                } else {
+                    alert(data.result.msg);
+                }
+            }
+        });
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    function addTempStorage(){
+
+    }
+    function deleteTempStorage(sid,type){
+        var params={};
+        params.sid = sid;
+        params.type = type;
+        $.ajax({
+            url:"http://lib.cuc.edu.cn//deleteTempStorage.json",
+            type:"post",
+            data:params,
+            success:function(data){
+
+                if(data.result.code==0){
+                    alert("删除暂存架成功！");
+                    tempStorage();
+                }else{
+                    alert(data.result.msg);
+                }
+            }
+
+        });
+    }
+
+    function tempStorage(){
+        var params={};
+        $.ajax({
+            url:"http://lib.cuc.edu.cn//tempStorage.json",
+            type:"post",
+            data:params,
+            success:function(data){
+                if(data.result.code==0){
+                    var html="";
+                    var sids = "";
+
+                    for(var i=0;i<data.data.length;i++){
+                        var item = data.data[i];
+                        html +='<li>';
+                        html +='<span>'+item.title+'</span>';
+                        html +='<span>'+item.authors+'</span>';
+                        html +='<span><a href="bookInfo_'+item.recCtrlId+'.html">查看馆藏</a><img src="pages/i/delete.png" class="delete" data-formId="'+item.recCtrlId+'"/></span>';
+                        html +='</li>';
+                        sids +=item.recCtrlId;
+                        if(i!=(data.data.length-1)){
+                            sids +=",";
+                        }
+                    }
+                    html +='<span class="dcode" data-toggle="modal" data-target="#myModal"><img src="pages/i/2dcode.png"/>批量生成二维码</span>';
+                    html +='<span class="release" onclick="deleteAll()"><img src="pages/i/release.png"/>清空暂存架</span>';
+
+                    $("#bookshelf").html(html);
+                    $("#shelf_num").text(data.data.length);
+                    $("#qr_code").attr("src","QRCode_DEMO.html?sids="+sids);
+                }else{
+                    alert(data.msg);
+                }
+            }
+
+        });
+
+    }
+    function deleteAll(){
+        $("#bookshelf").find('li').remove();
+        $("#shelf_num").text('0');
+        deleteTempStorage("deleteall",1);
+    }
+</script>
+<script src="pages/j/echarts.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('amount'));
+    $.get('bookBorrow.json?bookid=01h0058262').done(function (data) {
+        var option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            grid: {
+                left: '0%',
+                right: '5%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    splitLine: false,
+                    boundaryGap: false,
+                    splitArea: {
+                        show: false,
+                        onGap: false,
+                    },
+                    data: [data.data[6].operateDate, data.data[5].operateDate, data.data[4].operateDate, data.data[3].operateDate, data.data[2].operateDate, data.data[1].operateDate, data.data[0].operateDate]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    splitLine: false,
+                    show: false,
+                }
+            ],
+            series: [
+                {
+                    name: '年借阅量',
+                    type: 'line',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top'
+                        }
+                    },
+                    symbol: 'emptyCircle',
+                    symbolSize: 6 | 6,
+                    areaStyle: {
+                        normal: {
+                            color: '#D2D2D2'
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            type: 'solid',
+                            color: '#AED2F1'
+                        }
+                    },
+                    markPoint: {
+                        normal: {
+                            color: '#ccc',
+                        }
+                    },
+                    data: [data.data[6].bcount, data.data[5].bcount, data.data[4].bcount, data.data[3].bcount, data.data[2].bcount, data.data[1].bcount, data.data[0].bcount]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    });
+
+    //执行这一步可以放在ajax获取数据里面，获取到再显示数据。参考：http://echarts.baidu.com/tutorial.html#%E5%BC%82%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%92%8C%E6%9B%B4%E6%96%B0
+
+    function toCancelLost(data) {
+        var html = "";
+        for (var i = 0; i < data.data.length; i++) {
+            var item = data.data[i];
+            html += '<tr>';
+            html += '<td>' + item.title + '</td>';
+            html += '<td>' + item.departmentName + '</td>';
+            html += '<td>' + item.bookBarCode + '</td>';
+            html += '<td>' + (item.bookSearchNo == null ? "" : item.bookSearchNo) + '</td>';
+            html += '<td><input type="button" onclick="doCancel(\'' + item.optDate + '\',\'' + item.bookBarCode + '\',\'' + item.libraryId + '\',\'' + item.readerBarCode + '\')" value="取消代借"></td>';
+            html += '</tr>';
+        }
+        $("#showCancel").html(html);
+        $("#cancelPost-form").modal("show");
+    }
+
+
+</script>
+</body>
+</html>

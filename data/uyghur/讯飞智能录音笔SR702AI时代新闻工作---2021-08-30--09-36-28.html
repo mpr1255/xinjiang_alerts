@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta content="温州新闻,温州日报,温州新闻,温州新闻门户网" />
+
+
+        <meta name="mobile-agent" content="format=html5;url=http://www.wzrb.com.cn//mobile_show.aspx?id=1094319" />
+    <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="http://www.wzrb.com.cn//mobile_show.aspx?id=1094319" />
+                <title>讯飞智能录音笔SR702：AI时代，新闻工作者的贴身“搭档”-温州日报瓯网 - 温州新闻门户网 - 温州日报主办</title>
+    <META NAME="title" content="讯飞智能录音笔SR702：AI时代，新闻工作者的贴身“搭档” | 瓯网" />
+    <META NAME="subject" content="讯飞智能录音笔SR702：AI时代，新闻工作者的贴身“搭档”" />
+        <META NAME="description" content="本网8月30日讯敏锐的眼光，独到的观点是新闻工作者的特性，善于抓住新闻热点，从实录到暗访，都是新闻工作者要具备的能力。AI产品在新闻领域的进一步落地与普及，为新闻媒体行业的融合发展提供了极大支撑。科大讯飞作为AI技术中强有力的“中国声音”，专业从事智能语音及语言技术研究、语音信息服务等业务。2019年5月，科大讯飞推出讯飞智能录音笔，一经问世便广受新闻行业喜爱。2020年9月，科大讯飞推出讯飞智能录音笔SR" />
+                <link href="/Template/ow2016/css/wzrb.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="text/javascript" src="/Template/ow2016/js/jquery-1.8.3.min.js"></script>
+    <script src="/Template/ow2016/js/slider.js"></script>
+    <script type="text/javascript" src="/Template/ow2016/js/JScript.js"></script>
+</head><body style="background:#fafbfc;">
+    <div class="main_box">
+        <!-- 登录条 -->
+<script language="javascript">
+    //addLoadEvent(lanmuBind);
+    var searchid = 0;
+    function lanmuBind() {
+        jQuery('#s0').bind('click', function () { jQuery('#x2').toggle(); });
+        jQuery('#x2 a').bind('click', function () {
+            jQuery('#x2').hide();
+            jQuery('#s0').html(jQuery(this).html());
+            searchid = jQuery(this).attr('s');
+
+        });
+        jQuery('#search_bnt').bind('click', function () { Searcah(); });
+    }
+
+    function Searcah() {
+        var text = jQuery('#txtsearchkey'),
+            textstr = text.val();
+
+        if (textstr.length == 0) {
+            //alert('请输入搜索关键字!');
+            text.focus();
+            return;
+        }
+        console.log(encodeURI(textstr));
+        var url = "",type = 11;//parseInt(searchid)
+        switch (type) {
+            case 1:
+                document.charset = 'gbk';
+                Postwith('http://bbs.wzrb.com.cn/search.php?mod=forum', { formhash: GetFormHash(), srchtxt: textstr, searchsubmit: 'yes' });
+                break;
+            case 3:
+                url = "http://epaper.wzrb.com.cn/SearchList.aspx?sreachstr=" + textstr;
+                break;
+            case 2:
+                url = "http://wen.wzrb.com.cn/Question_list.aspx?skey=" + textstr;
+                break;
+            default:
+                url = "http://www.wzrb.com.cn/search_" + encodeURI(textstr) + "_1.html";
+                break;
+        }
+        if (url != '')
+            window.location = url;
+    }
+</script>
+    <!--<div id="topnologindiv" class="login_top">
+        <ul>
+            <p><a href="javascript:void(0)" onclick="SetHome(this,window.location)" >把瓯网设为首页</a></p>
+            <li>
+                用户名
+                <input id="txtusername" type="text" size="12" />
+                密码
+                <input id="txtpassword" type="password" size="12" />
+                <button onclick="UserLogin()">登录</button>
+                <a href="http://blog.wzrb.com.cn/member.php?mod=register">注册</a>
+            </li>
+        </ul>
+    </div>-->
+<!-- 登录条 end -->
+<!-- logo/nav -->
+    <div style="background:#fff;width:100%;">
+        <div class="logo_box"><ul><li><a href="http://www.wzrb.com.cn"><img src="/Template/ow2016/images/logo.png" alt="logo" /></a></li></ul></div>
+        <div class="nav_box">
+            <div class="search">
+                <input type="text" size="20" placeholder="请输入搜索关键词" id="txtsearchkey" />
+                <a href="javascript:;" onclick="Searcah()"><img src="/Template/ow2016/images/search_bt.gif" /></a>
+            </div>
+            <script>
+                $(function () {
+                    $('.nav li').hover(
+			 	     function () {
+			 	         $(this).find('div.nav_content').show();
+			 	     },
+				     function () {
+				         $(this).find('div.nav_content').hide();
+				     }
+			    );
+                })
+	  	    </script>
+            <div class="nav f_yahei">
+                <ol>
+                   <!-- <li>
+                        <div class="nav_css"><a href="http://www.wzrb.com.cn/ArticleClass_525.html" target="_blank" style="color:#f00;">
+                            聚焦十九大时光</a>
+                        </div>
+                    </li>-->
+                    <li>
+                        <div class="nav_css"><a href="index.html">新闻</a></div>
+                        <div class="nav_content" style="display:none;">
+                            <p><a href="ArticleClass_13.html" target="_blank">温州城</a></p>
+                            <p><a href="ArticleClass_12.html" target="_blank">看神州</a></p>
+                            <p><a href="ArticleClass_228.html" target="_blank">全球眼</a></p>
+                            <p><a href="http://channel.wzrb.com.cn/topic.aspx" target="_blank">文化</a></p>
+                            <p><a href="http://www.wzrb.com.cn/ArticleClass_115.html" target="_blank">要闻</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav_css"><a href="http://wlwz.wenzhou.gov.cn/" target="_blank">网络问政</a></div>
+                        <div class="nav_content" style="display:none;">
+                            <p><a href="http://wlwz.wenzhou.gov.cn/" target="_blank">问政中心</a></p>
+                            <p><a href="http://lc.wzrb.com.cn/" target="_blank">问鹿城</a></p>
+                            <p><a href="http://lc.wzrb.com.cn/w" target="_blank">微发布</a></p>
+                            <p><a href="http://channel.wzrb.com.cn/source/zqms/index.aspx" target="_blank">政情民声站</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav_css"><a href="http://www.wzrb.com.cn/ArticleClass_518.html" target="_blank">教育</a></div>
+                        <div class="nav_content" style="display:none;">
+                            <p><a href="http://www.wzrb.com.cn/company/5/list.html" target="_blank">学生记者团</a></p>
+                        </div>
+                    </li>
+                    <li>
+                       <div class="nav_css"><a href="ArticleClass_516.html" target="_blank">智库</a></div>
+                       <!-- <div class="nav_content" style="display:none;">
+                            <p><a href="ArticleClass_516.html" target="_blank">论文</a></p>
+                            <p><a href="ArticleClass_513.html" target="_blank">广告</a></p>
+                        </div>-->
+                       <!-- <div class="nav_css"><a href="http://www.wzrb.com.cn/ArticleClass_515.html" target="_blank">智库</a></div>
+                        <div class="nav_content" style="display:none;">
+                            <p><a href="ArticleClass_516.html" target="_blank">论文</a></p>
+                            <p><a href="ArticleClass_513.html" target="_blank">广告</a></p>
+                        </div>-->
+                        <div class="nav_content" style="display:none;">
+                            <p><a href="ArticleClass_513.html" target="_blank">广告</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav_css"><a href="http://www.wzrb.com.cn/Topic_1.html" target="_blank">专题</a></div>
+                    </li>
+                   	<li>
+                        <div class="nav_css"><a href="http://www.wzrb.com.cn/piclist.html" target="_blank">图闻</a></div>
+                    </li>
+                    <li>
+                        <div class="nav_css"><a href="http://www.wzrb.com.cn/" target="_blank">数字报</a></div>
+                        <div class="nav_content" style="display:none;">
+                            <!--<p><a href="http://epaper.wzrb.com.cn/" target="_blank">温州日报</a></p>
+                            <p><a href="http://epaper.wzrb.com.cn/default.aspx?etype=4" target="_blank">科技金融时报</a></p>-->
+                            <p><a href="http://epaper.wzrb.com.cn/dfssd" target="_blank">洞头新闻</a></p>
+                            <p><a href="http://epaper.wzrb.com.cn/dspy" target="_blank">都市平阳</a></p>
+                            <p><a href="http://epaper.wzrb.com.cn/default.aspx?etype=8" target="_blank">今日龙湾</a></p>
+                        </div>
+                    </li>
+                   <li>
+                       <div class="nav_css"><a href="https://hys.people-health.cn/m/#/pages/ncovSuff/index">求助</a></div>
+                   </li>
+                   <li>
+                       <div class="nav_css"><a href="http://www.piyao.org.cn/xxjbrk.htm">辟谣</a></div>
+                   </li>
+                </ol>
+            </div>
+        </div>
+        <div class="nav_bg"></div>
+    </div>
+<!-- logo/nav end-->        <div class="guide_bar f_yahei">
+            <a href="http://www.wzrb.com.cn">瓯网首页</a>
+             <span>></span>
+            <a href="ArticleClass_1.html" class="a8">温州日报</a>
+             <span>></span>
+            <a href="ArticleClass_513.html" class="a8">广告</a>
+                    </div>
+        <!-- news_content-->
+        <div class="news_content">
+            <!-- left-->
+            <div class="left">
+                <div class="content_news f_yahei">
+                    <h1>讯飞智能录音笔SR702：AI时代，新闻工作者的贴身“搭档”</h1>
+                    <p class="date">
+                        2021/08/30 17:22 来源：厂商供稿  浏览：2580
+                    </p>
+                                        <div>
+                        <h2></h2>
+                    </div>
+                                         <!---视频------>
+                    <!---视频end---->
+                    <!--图片-->
+                    <div id="articlepic" class="article_pic_news">
+                                            </div>
+                    <!--图片 end-->
+                    <a name="pagepoint"></a>
+                    <p id="article"><p style="text-indent: 2em;">本网8月30日讯&nbsp;敏锐的眼光，独到的观点是新闻工作者的特性，善于抓住新闻热点，从实录到暗访，都是新闻工作者要具备的能力。AI产品在新闻领域的进一步落地与普及，为新闻媒体行业的融合发展提供了极大支撑。科大讯飞作为AI技术中强有力的“中国声音”，专业从事智能语音及语言技术研究、语音信息服务等业务。2019年5月，科大讯飞推出讯飞智能录音笔，一经问世便广受新闻行业喜爱。</p><p style="TEXT-ALIGN: center"><img src="http://img.wzrb.com.cn/articlefile/20210830/20210830502085.jpg" title="QQ截图20210830172033.jpg" alt="QQ截图20210830172033.jpg"/></p><p style="text-indent: 2em;">2020年9月，科大讯飞推出讯飞智能录音笔SR702。作为一款为新闻工作者而生的智能录音笔，它集录音，拍照，翻译，转写多功能于一身，可以称之为“一机多能的智能采访神器”。讯飞智能录音笔SR702机身轻巧便携，122.5*62.45*12mm的机身尺寸，以及172g的机身重量为新闻记者们的行囊“减重”，同时，只要一笔在手，遍可拥有3G+32GB的存储空间和10小时的续航时间。</p><p style="TEXT-ALIGN: center"><img src="http://img.wzrb.com.cn/articlefile/20210830/20210830461987.jpg" title="QQ截图20210830172038.jpg" alt="QQ截图20210830172038.jpg"/></p><p style="text-indent: 2em;">作为一款专业的AI录音笔，讯飞智能录音笔SR702拥有2颗定向+6颗全向的麦克风配置，以及讯飞深度定制的voice 
+cube声立方技术，可以使收音距离最远达到15米远，且在不同的场景下，这款AI录音笔可以自己匹配相应的场景算法。而AI前端降噪，使得产品在5- 15 
+米录音时，人声更加清晰。</p><p style="text-indent: 2em;">除了机身和录音技术上的优越，讯飞智能录音笔SR702还拥有高准确度的转写功能，不仅可以对粤语，河南话，四川话，重庆话，云南话等12种方言进行转写，还能转写中文、英语、日语、韩语、俄语等8种语言，以及藏语、维吾尔语2种少数民族语言，在线转写准确率能够达到98％。</p><p style="TEXT-ALIGN: center"><img src="http://img.wzrb.com.cn/articlefile/20210830/20210830448716.jpg" title="QQ截图20210830172156.jpg" alt="QQ截图20210830172156.jpg"/></p><p style="text-indent: 2em;">此外，讯飞智能录音笔SR702在离线转写功能上也值得一提。即使没有4G或者WIFI网络，这款AI录音笔也能实现语音实时转文字，并在转写后文字内容会即可保存。而在录音笔中应用离线转写功能，有效的防止了高度机密信息的泄漏，很好的保障了用户的信息安全。</p><p style="text-indent: 2em;">科大讯飞深耕AI领域，匠心打造讯飞智能录音笔，从高端配置的硬件再到予人便捷的功能上，都做到了精益求精。随着AI技术的不断进步，未来讯飞智能录音笔也将不断升级优化，为每一位新闻工作者带来更便捷的用户体验。</p><p><br/></p></p>
+                    <div id="artcontent" style="display: none;"></div>
+                    <!--翻页-->
+                    <div id="cutinfo" style="text-align:center;line-height:30px;width:96%;margin:20px 2%;"></div>
+                    <!--相关搜索-->
+                                    </div>
+                <!-- 相关链接 -->
+                <div class="relevant_news f_yahei">
+                    <h2>相关新闻</h2>
+                                        <ul>
+                        <li>声明：凡本网注明转载自其他媒体的作品，转载目的在于传递信息，并不代表本网观点和对其真实性负责。</li>
+                    </ul>
+                </div>
+                <!-- 相关链接 end -->
+                <!-- 评论 -->
+                <div class="con_comment">
+                                    </div>
+                <!-- 评论 end -->
+            </div>
+            <!-- left end-->
+            <!-- right-->
+            <div class="right">
+                <div class="con_charts f_yahei">
+                    <div class="title"><h1>排行</h1></div>
+                    <ul>
+                        <li>
+                                                        <p><a href="/article1094404show.html" title="宣布中央和省委关于刘小涛同志任职决定" target="_blank">宣布中央和省委关于刘小涛同志任职决定</a></p>
+                                                        <p><a href="/article1094354show.html" title="“温州城市名片”上线 文旅加速数字化改革" target="_blank">“温州城市名片”上线 文旅加速数字化改革</a></p>
+                                                        <p><a href="/article1094407show.html" title="老旧小区改造 如何将这件好事办得更好" target="_blank">老旧小区改造 如何将这件好事办得更好</a></p>
+                                                        <p><a href="/article1094408show.html" title="温州当选2022年“东亚文化之都”" target="_blank">温州当选2022年“东亚文化之都”</a></p>
+                                                        <p><a href="/article1094410show.html" title="夫妻争吵放任妻子自杀 丈夫不作为罪责难逃" target="_blank">夫妻争吵放任妻子自杀 丈夫不作为罪责难逃</a></p>
+                                                        <p><a href="/article1094355show.html" title="我市五地入选 省红色根脉打卡地" target="_blank">我市五地入选 省红色根脉打卡地</a></p>
+                                                        <p><a href="/article1094409show.html" title="扰民的家禽已全部被转移 住户不再担心凌晨被叫醒" target="_blank">扰民的家禽已全部被转移 住户不再担心凌晨被叫醒</a></p>
+                                                        <p><a href="/article1094412show.html" title="梅筱鹿书法作品展在博山美术馆开幕" target="_blank">梅筱鹿书法作品展在博山美术馆开幕</a></p>
+                                                        <p><a href="/article1094411show.html" title="围墙脱落砸坏轿车 赔偿责任谁来担？" target="_blank">围墙脱落砸坏轿车 赔偿责任谁来担？</a></p>
+                                                        <p><a href="/article1094402show.html" title="中医“手砭”疗法成“新宠”" target="_blank">中医“手砭”疗法成“新宠”</a></p>
+                                                    </li>
+                    </ul>
+                </div>
+                <div class="con_banner">
+                <script language="javascript" src="http://app.wzrb.com.cn/ashx/AD_Handler.ashx?typeto=3&classid=93" charset='utf-8'></script></div>
+                <div class="con_picnews">
+                    <div class="title"><!--<a href="#"><span>更多</span></a>--><h1 class="f_yahei">图片新闻</h1></div>
+                                        <dl class="f_yahei">
+                        <dt><a href="/article1090468show.html" title="订单旺 加工忙"><img src="" /></a></dt>
+                        <dt><a href="/article1090468show.html" title="订单旺 加工忙">订单旺 加工忙</a></dt>
+                    </dl>
+                                        <dl class="f_yahei">
+                        <dt><a href="/article1081674show.html" title="数字化种车厘子"><img src="" /></a></dt>
+                        <dt><a href="/article1081674show.html" title="数字化种车厘子">数字化种车厘子</a></dt>
+                    </dl>
+                                        <dl class="f_yahei">
+                        <dt><a href="/article1081441show.html" title="中考 “热辣”开场"><img src="" /></a></dt>
+                        <dt><a href="/article1081441show.html" title="中考 “热辣”开场">中考 “热辣”开场</a></dt>
+                    </dl>
+                                        <dl class="f_yahei">
+                        <dt><a href="/article1080974show.html" title="百龙庆百年 百舸争上游"><img src="" /></a></dt>
+                        <dt><a href="/article1080974show.html" title="百龙庆百年 百舸争上游">百龙庆百年 百舸争上游</a></dt>
+                    </dl>
+                                    </div>
+            </div>
+            <!-- right end-->
+        </div>
+        <!-- news_content end-->
+        <script language="javascript">
+
+            //默认页
+
+            //每页显示字数
+            PageSize = 5000;
+            //分页模式
+            flag = 2; //1:根据字数自动分页 2:根据[NextPage]分页
+            //默认页
+            startpage = 1;
+            //导航显示样式 0:常规 1:直接 3:下拉
+            TopShowStyle = 1;
+            DownShowStyle = 1;
+
+            var currentSet, CutFlag, TotalByte, PageCount, key, tempText, tempPage;
+            key = "";
+            currentSet = 0;
+            document.getElementById("artcontent").innerHTML = document.getElementById("article").innerHTML;
+            var Text = document.getElementById("artcontent").innerHTML;
+            TotalByte = Text.length;
+            //手动分页
+            var j, sFlag, PageCount, sText;
+            var sTitleFlag;
+            var PageNum = new Array();
+            var PageTitle = new Array();
+
+            PageSize = 0;
+            j = 1;
+            PageNum[0] = -10;
+            PageTitle[0] = "";
+            sFlag = 0;
+            sText = Text;
+
+            do {
+                sText = Text.substring(PageNum[j - 1] + 10, TotalByte);
+
+                sFlag = sText.indexOf("[NEXTPAGE");
+
+                if (sText.substring(sFlag + 9, sFlag + 10) == "=") {
+                    sTitleFlag = sText.indexOf("]", sFlag);
+                    PageTitle[j] = sText.substring(sFlag + 10, sTitleFlag);
+                }
+                else {
+                    PageTitle[j] = "";
+                }
+
+                if (sFlag > 0) {
+                    PageNum[j] = sFlag + PageNum[j - 1] + 10;
+                }
+                else {
+                    PageNum[j] = TotalByte;
+                }
+
+                j += 1;
+            }
+            while (PageNum[j - 1] < TotalByte);
+            PageCount = j - 1;
+
+
+
+            //function ArticleInit() {
+            //    text_pagination(startpage);
+            //}
+            //addLoadEvent(ArticleInit);
+            //addLoadEvent(ImgInit);
+        </script>
+
+        <script>
+            (function () {
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+        <!-- 底部 -->
+        <div class="inc_bot">
+  <div class="bot_nav">
+    <a href="http://www.wzrb.com.cn/map.htm" target="_blank">网站地图</a>|
+    <a href="http://www.wzrb.com.cn/article10630_227show.html" target="_blank">网站简介</a>|
+    <a href="http://www.wzrb.com.cn/article10632_227show.html" target="_blank">服务条款</a>|
+    <a href="http://www.wzrb.com.cn/article10631_227show.html" target="_blank">版权声明</a>|
+    <a href="http://www.wzrb.com.cn/article10633_227show.html" target="_blank">联系方法</a>|
+    <a href="http://mail.wzrb.net/" target="_blank">日报邮箱</a>|
+    <a href="http://www.wzrb.com.cn/article577726show.html" target="_blank">日报广告征订</a>
+    <!--<a href="http://www.wzrb.com.cn/article577727show.html" target="_blank">瓯网广告价目</a>|-->
+  </div>
+  <div style="width:300px;margin:0 auto; padding:20px 0;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030202001652" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px;">
+      <img src="/Template/ow2016/images/gongan.png" style="float: left;"/>
+      <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393;">浙公网安备 33030202001652号</p >
+    </a>
+     <a target="_blank" href="https://beian.miit.gov.cn/" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px;">
+      <img src="/Template/ow2016/images/gongan.png" style="float: left;"/>
+      <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393;">浙ICP备09100296号-1 </p >
+    </a>
+ </div>
+  <p>地址：温州公园路日报大厦1204室 值班电话：0577-88096870 0577-88096580</p>
+  <ul>
+    <li>
+      <p>
+        瓯网客服：
+        <a target="_blank" href="tencent://message/?uin=837718954&Site=www.wzrb.com.cn&Menu=yes">
+          <img border="0" SRC='/Template/ow2016/images/pagif.gif' alt="">
+        </a>
+        <a href="http://www.wzrb.com.cn/rss.xml" title="rss" target="_blank">
+          <img src="/Template/ow2016/images/rss.png" border="0"/>
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" rel="nofollow">
+          <img src="/Template/ow2016/images/netpolice1.jpg" width="110" height="40"/>
+        </a>
+        <a href="https://weibo.com/wenzhouwj/profile?rightmod=1&wvr=6&mod=personnumber&is_hot=1" target="_blank" rel="nofollow">
+          <img src="/Template/ow2016/images/jd1.gif" width="128" height="40"/>
+        </a>
+        <!--<a href="#"><img src="images/jubao.png" width="125" height="23" title="不实信息举报中心" alt="不实信息举报中心"></a>-->
+      </p>
+    </li>
+  </ul>
+</div>        <!-- 底部 end -->
+    </div>
+
+
+</body>
+</html>

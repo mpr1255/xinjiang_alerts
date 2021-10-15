@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	华招器械网 - 新疆维吾尔自治区医用耗材阳光挂网关于报价的友情提醒
+</title><meta name="renderer" content="ie-comp" /><meta name="renderer" content="webkit" /><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="width=device-width,user-scalable=no" name="viewport" /><meta baidu-gxt-verify-token="601d4fda253eb0f0224158225c5db15f" /><meta name="baidu-site-verification" content="V7bljTz27W5DCuh5" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="华招器械，医疗器械，医用耗材，医疗器械销售" /><meta name="description" content="华招器械网是医械行业客户首选的专业网络数据服务商。华招器械网为器械耗材生产经营企业提供招标信息咨询、招标数据分析、招标软件研发、培训等服务，在行业内拥有广泛的影响力与稳定的客户群体,为企业提供及时、准确的产品投标中标价格, 帮助企业制定合理的报价，增加企业利润。" /><meta name="copyright" content="www.hzqx.cc 华招器械网" /><link rel="stylesheet" type="text/css" href="/hz.axd/siteCss/873607690/"/>
+    <link href="/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://www.hzqx.cc" rel="canonical" />
+    <style type="text/css">
+        .prev { left: 14px; bottom:3px !important /9; }
+        .next{ bottom:3px !important /9;}
+        .mF_rapoo .txt { width: 367px !important;}
+        .txt_bg { position: absolute; bottom: 0; z-index: 1; height: 36px; width: 100%;background: #000;filter: alpha(opacity=40);opacity: 0.4;}
+        .navbox li{z-index:9999;}
+        .aui_icon div{background-size:98px;width:98px;height:98px;}
+    </style>
+    <script type="text/javascript" src="/hz.axd/siteJs/70828878/"></script>
+    <script type="text/javascript">
+        (function (config) { config['path'] = "/js/artDialog" })(art.dialog.defaults);
+    </script>
+    
+    <link href="../js/Page/page.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/hz.axd/pageJs/1509371648/"></script>
+    <script type="text/javascript">
+        var _pageType = "NewDetail";
+    </script>
+    <script type="text/javascript">
+        var imageLoadding = "<div style=\"text-align:center; margin-top:100px;\"><img src=\"../images_new/wait.gif\" alt=\"\"></div>";
+        function VerCallBack(current_page, page_id) {
+            var result = true;
+            hz.postCallback("", function (obj) {
+                if (obj == "NULL") {
+                    if (page_id > 0 || current_page != page_id) {
+                        result = false;
+                        art.dialog.open('../Common/NoRights.aspx?role=-1&type=newdetail&id=' + '363333383830', {
+                            title: '提示',
+                            lock: true,
+                            id: 'noright',
+                            width: 530,
+                            height: 190,
+                            close: function () {
+                                var url = art.dialog.data('url');
+                                if (url != undefined) {
+                                    $("#hideurl_gz").attr("href", url)[0].click();
+                                }
+                            }
+                        }, false);
+                    }
+                }
+            }, true, "../share/IndexSubmit.aspx?flag=islogin");
+            return result;
+        }
+
+        function CallbackInfo(page_id, jq) {
+            GetProDt(page_id, 1);
+        }
+        function GetProDt(currentPage, index) {
+            $("#divDt").html(imageLoadding);
+            var infoid = '363333383830'; //加密后的项目Id
+            var projectId = "33303439";
+            var postData = { currentPage: currentPage + 1, projectId: projectId, type: "2", infoid: infoid, pageSize: 10 };
+            hz.postCallback(postData, function (data) {
+                if (data != "") {
+                    var rData = data.split("|;|");
+                    $("#divDt").html(rData[0]);
+                    if (currentPage == 0 && index == 0) {
+                        $("#divDt").height($("#divDt").innerHeight());
+                    }
+                    //console.log(rData[0]);
+                    $("#Pagination").pagination(rData[1], {
+                        verCallBack: VerCallBack,
+                        callback: CallbackInfo,
+                        prev_text: '上一页',
+                        next_text: '下一页',
+                        items_per_page: 10, //每页显示数量
+                        num_display_entries: 10,
+                        current_page: currentPage,
+                        num_edge_entries: 0
+                    });
+                }
+                else {
+                    $("#Pagination").hide();
+                    $("#divDt").html("暂无更多动态");
+                    $("#divDt").height("35");
+                }
+                isDt = true;
+            }, undefined, "../share/AjaxHandler.ashx?flag=GetProDt");
+        }
+
+        $(function () {
+
+            var contentC = $(".contentC", ".generalFr");
+            contentC.hover(function () {
+                $(this).css({ "overflow-y": "hidden", "overflow-x": "auto" })
+            }, function () {
+                $(this).css({ "overflow-y": "hidden", "overflow-x": "hidden" });
+            });
+            contentC.find("img").each(function (index) {
+                $(this).attr("title", "看不清楚？单击图片").wrap("<a target=\"_blank\" alt=\"\" href=\"" + $(this).attr("src") + "\"></a>");
+            });
+            if ('33' == "33") {
+                GetProDt(0, 0);
+            }
+            else {
+                $("#moredt,#divDt,#Pagination,#divDttitle").hide();
+            }
+            if ('33' == "58" || '33' == "41" || '33' == "43" || '33' == "37") {
+                $(".tendtab").css("display", "none");
+            }
+            else {
+                $(".tendtab").css("display", "");
+            }
+
+            var accountID = '';
+            if (accountID == null || accountID == "") {
+                $(document).bind("contextmenu", function (e) {
+                    return false;
+                });
+                $(document).bind("selectstart", function () {
+                    return false;
+                });
+                $(document).keydown(function () {
+                    return key(arguments[0])
+                });
+                $("#trHave").hide().remove();
+                //document.getElementById("ContentPlaceHolder1_dtDetail_trHave_0").style.display = "none";
+
+                $("body").css("-moz-user-select", "none");
+            }
+            else {
+                $("#trHave").show();
+                //document.getElementById("ContentPlaceHolder1_dtDetail_trHave_0").style.display = "table-row";
+                $("body").css("-moz-user-select", "text");
+            }
+            formAlink();
+            $("a.sourcefrom").click(function () { formAlink(); })
+        });
+
+        function formAlink() {
+            hz.postCallback("", function (data) {
+                var a = $("a.sourcefrom");
+                if (data == "NULL") { a.attr("href", "javascript:void(0);"); a.attr("target", "_self"); }
+                else { if (data == "25" || data == "28" || data == "30") { a.attr("href", "javascript:void(0);"); a.attr("target", "_self") } }
+            }, true, "../share/IndexSubmit.aspx?flag=isLoginR");
+        }
+
+        function key(e) {
+            var keynum;
+            if (window.event) {
+                keynum = e.keyCode; // IE
+            } else if (e.which) {
+                keynum = e.which; // Netscape/Firefox/Opera
+            }
+            if (keynum == 17) {
+                return false;
+            }
+        }
+
+       
+    </script>
+</head>
+<body class="bodybg">
+    <a id="atzym" href="" style="display: none;">&nbsp;</a>
+    <div class="top">
+    </div>
+    <!--头部-->
+    <div class="header_top">
+        <div class="header_box">
+            <p>
+                欢迎您进入华招器械网！<span>&nbsp;</span><span><a style="color: #fff;" href="javascript:addFavorite();">收藏本站</a></span></p>
+            <ul>
+                <li id="userInfo" style="display: none"></li>
+                <li><a href="javascript:void(0);" onclick="SetHome(this,'http://www.hzqx.cc');">设为首页</a><span>|</span></li>
+                <li><a href="../HomePage/ServiceContent.aspx">服务介绍</a><span>|</span></li>
+                <li><a href="../HomePage/memberRegister.aspx">注册会员</a></li>
+            </ul>
+        </div>
+        <div class="header_nav">
+            <div class="navbox">
+                <div class="logo">
+                    <a href="/">
+                        <img style="width: 176px; height: 50px;" src="../images/demo4.0/index/logo.png" alt="logo" /></a>
+                </div>
+                <ul>
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="../InfoManage/newProjectList-0.html">招标公告
+                        <img src="../images/demo4.0/index/push.png" alt="招标公告" width="10px" height="5px" /></a>
+                        <div class="revisblock">
+                            <a href="../InfoManage/newProjectList-1.html">省级挂网招标</a> <a href="../InfoManage/newProjectList-2.html">
+                                市级传统招标</a> <a href="../InfoManage/newProjectList-3.html">军区项目招标</a> <a href="../InfoManage/newProjectList-4.html">
+                                    其它重要招标</a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:;" rel="nofollow">招标动态
+                        <img src="../images/demo4.0/index/push.png" alt="招标动态" width="10px" height="5px" /></a>
+                        <div class="revisblock">
+                            <a href="../InfoManage/NewInfoList-33.html">省市招标动态</a> <a href="../InfoManage/NewInfoList-59.html">
+                                医院招标信息</a> <a href="../InfoManage/NewInfoList-60.html">血站招标信息</a> <a href="../InfoManage/NewInfoList-61.html">
+                                    疾控中心招标</a> <a href="../InfoManage/NewInfoList-62.html">政府采购信息</a> <a href="../InfoManage/NewInfoList-50.html">
+                                        设备招标信息</a> <a href="../InfoManage/NewInfoList-64.html">其它招标信息</a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:;" rel="nofollow">招标数据
+                        <img src="../images/demo4.0/index/push.png" alt="招标数据" width="10px" height="5px" /></a>
+                        <div class="revisblock">
+                            
+                            <a href="../HomePage/nNullSessione.aspx?t=7">全国开标数据</a> <a href="../HomePage/nNullSessione.aspx?t=6">
+                                全国中标数据</a> <a href="../HomePage/nNullSessione.aspx?t=30">限价调价结果</a> <a href="../HomePage/nNullSessione.aspx?t=31">
+                                    资审其它结果</a>
+                                    <a href="../HomePage/nNullSessione.aspx?t=35">设备中标结果</a> 
+                        </div>
+                    </li>
+                    <li><a href="javascript:;" rel="nofollow">分析报告
+                        <img src="../images/demo4.0/index/push.png" alt="分析报告" width="10px" height="5px" /></a>
+                        <div class="revisblock">
+                            
+                            <a href="../HomePage/nNullSessione.aspx?t=2&ty=3">行业政策解析</a> <a href="../HomePage/nNullSessione.aspx?t=2&ty=7">
+                                时事热点透析</a> <a href="../HomePage/nNullSessione.aspx?t=2&ty=8">资讯周刊速递</a> <a href="../HomePage/nNullSessione.aspx?t=2&ty=4">
+                                    月季年度期刊</a>
+                            
+                        </div>
+                    </li>
+                    <li><a href="../BusinessTraining/InBusinessTraining.html">培训交流</a></li>
+                    <li><a href="../InfoManage/NewInfoListWeb-58.html">网站公告</a></li>
+                </ul>
+                <div class="right_login">
+                    <div class="serach" style="position: relative;">
+                        <input type="text" id="keywords" name="" value="" placeholder="搜您想搜的" style="font-size: 14px;
+                            float: left; line-height: 40px; height: 40px; margin-left: 18px;" />
+                        <a href="javascript:;" rel="nofollow" id="hzSearch" style="position: absolute; top: 12px;
+                            *top: 10px; left: 139px;">
+                            <img src="../images/demo4.0/index/search.png" alt="搜索" width="17px" height="17px" />
+                        </a>
+                    </div>
+                    <div class="login" id="btn_login">
+                        <a href="../Login.aspx" style="*line-height: 36px;">登 录</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="showNotice" style="display: none; width: 100%; text-align: center; background-color: #fff;">
+    </div>
+    <!--头部-->
+    <form method="post" action="./NewDetail-363333383830-33-363333383830.html?infoid=363333383830&amp;pagetype=33&amp;pageid=363333383830" id="theForm" class="main">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0NjA3MDYxMDQPZBYCZg9kFgICAw9kFgICAQ9kFgJmDw8WBB4EVGV4dAUS55yB5biC5Yqo5oCB5L+h5oGvHgtOYXZpZ2F0ZVVybAUmLi4vSW5mb01hbmFnZS9OZXdJbmZvTGlzdC5hc3B4P3R5cGU9MzNkZGRKz8i69bY2mAUqnoUeOn04yRkEN7NLk4QgcjDKq3DxPQ==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6B2F8132" />
+    
+    <!--当前位置-->
+    <p class="location">
+        当前位置：<a href="../Index.html">首页</a>><a id="ContentPlaceHolder1_lbltype1" href="../InfoManage/NewInfoList.aspx?type=33">省市动态信息</a>
+    </p>
+    <!--招标公告页主体-->
+    <div>
+        <div class="generalFr ">
+             <p class="tedtitle">新疆维吾尔自治区医用耗材阳光挂网关于报价的友情提醒</p><p class="tedsource"><span>信息来源：</span><a href='' target="_blank" rel="noreferrer" class="sourcefrom">官方群</a><span style="margin-left:50px;">发布时间：2021-09-23</span></p>  <table border="0" cellspacing="0" cellpadding="0" class="tendtab"><tr><td class="tdstyle">所属项目：</td><td colspan="2"><p><a target="_blank"  href="../InfoManage/NewProDetail-33303439-0-33303439.html"title="关于印发2021年新疆维吾尔自治区《自治区、兵团医用耗材阳光挂网集中采购实施方案》的通知">关于印发2021年新疆维吾尔自治区《自治区、兵团医用耗材阳光挂网集中采购实施方案》的通知</a></p> </td></tr></table> <div class="tentext"><P style="MARGIN: 0pt" class=MsoNormal><FONT face=宋体>请各企业注意，医用耗材中正在自治区执行的集中带量采购中选产品，本次不参与报价，请已经报价的企业撤回报价，此类产品的价格后期进行批量导入。感谢配合！</FONT></SPAN><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><!--EndFragment--></div>
+            <div class="enclosure">
+                <p>
+                    相关附件</p>
+            </div>
+            暂无附件
+            <div class="enclosure" id="divDttitle">
+                <p>
+                    更多动态</p>
+            </div>
+            <ul class="moredynamic" id="divDt" style="height: 353px;">
+            </ul>
+            <div id="Pagination" class="pagination" style="text-align: center;">
+            </div>
+            <div class="enclosure"  style="display: none;">
+                <p style="width: 117px;">
+                    APP/微信推广</p>
+            </div>
+            <div class="tgimg"  style="display: none;">
+                <img src="../images_new/20160520163415.jpg" alt="" width="659px" height="234px" />
+            </div>
+        </div>
+    </div>
+
+    </form>
+    <a id="hideurl_gz" href="" style="display: none;">aa</a>
+    <div class="friendship" style="margin-top: 5px;">
+        <div class="friendship_box" style="padding: 20px 0;">
+            <div class="friendshipone">
+                <p class="link">
+                    友情链接</p>
+                <p class="web">
+                    <a target="_blank" href="http://www.emed.cc/">华招医药网</a> | <a target="_blank" href="http://www.infobidding.com/">
+                        中国招投标网</a></p>
+            </div>
+            <ul>
+                <li>
+                    <p class="link">
+                        <a target="_blank" href="../footer/about_us.html">关于我们</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/about_us.html#qyjj">企业简介</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/about_us.html#zzjg">组织架构</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/about_us.html#fzlc">发展历程</a>
+                    </p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/about_us.html#zzry">荣誉资质</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/about_us.html#qywh">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="link">
+                        <a target="_blank" href="../footer/index.html">产品及服务</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/index.html#fxxt">耗材招投标数据管理分析系统</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/index.html#glpt">市场准入信息管理平台</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/index.html#qxapp">华招器械APP</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/index.html#gxdz">个性定制服务</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/index.html#hyyt">行业研讨会</a></p>
+                </li>
+                <li>
+                    <p class="link">
+                        <a target="_blank" href="../footer/hr.html">人力资源</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/hr.html#xcfl">薪酬福利</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/hr.html#pxfz">培训发展</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/hr.html#zpjh">招聘计划</a></p>
+                </li>
+                <li>
+                    <p class="link">
+                        <a target="_blank" href="../footer/contactus.html">联系我们</a></p>
+                    <p class="web">
+                        <a target="_blank" href="../footer/contactus.html">联系我们</a></p>
+                </li>
+                <li style="margin-right: 90px;">
+                    <p class="link">
+                        版权声明</p>
+                    <p class="web">
+                        <a href="../HomePage/Copyright.aspx">版权信息</a></p>
+                    <p class="web">
+                        <a href="../HomePage/Message.aspx">网站声明</a></p>
+                </li>
+            </ul>
+            <div class="phone" style="padding-right: 10px;">
+                <div class="qx">
+                    <img src="../images/demo4.0/index/app2.png" alt="华招器械APP" style="width: 100px; height: 100px;" />
+                    <p>
+                        华招器械APP</p>
+                </div>
+                <div>
+                    <img src="../images/demo4.0/index/weixin2.png" alt="华招微信公众号" style="width: 100px;
+                        height: 100px;" />
+                    <p>
+                        微信公众号</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+         <p>
+            备案号：<a style="color: #999; margin-left: 0;" href="http://beian.miit.gov.cn" target="_blank">苏ICP备10059676号-5</a>&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务证书编号：<a href="../hzw/江苏华招互联网药品信息服务资格证.jpg"
+                    style="color: #999; margin-left: 0;" target="_blank">(苏)-经营性-2021-0006</a></p>
+        <p>
+            江苏华招网信息技术有限公司 Copyright 2010-2021 华招器械网<a href="http://www.hzqx.cc:8008/Background/default.aspx"><img
+                style="vertical-align: -5px;" height="20px" width="25px" src="../Image/lock.gif"
+                alt="华招器械网" /></a>all rights reserved</p>
+    </div>
+    <div class="login_shadow">
+    </div>
+    <div class="rightfloat">
+        <ul>
+            <li class="talk"><a href="javascript:;" rel="nofollow">
+                <img src="../images/demo4.0/index/sao.png" alt="扫码登录" width="30px" height="30px" /><p
+                    class="textstyle">
+                    扫一扫</p>
+            </a>
+                <div class="appbox" style="height: 140px; top: 0;">
+                    <div class="appcode" style="margin-top: 11px;">
+                        <img src="../images/demo4.0/index/app2.png" alt="华招器械APP" style="width: 100px; height: 100px;" /><p>
+                            华招器械APP</p>
+                    </div>
+                    <div class="appcode" style="margin-top: 11px; margin-left: 14px;">
+                        <img src="../images/demo4.0/index/weixin2.png" class="appimg" alt="华招微信公众号" style="width: 100px;
+                            height: 100px;" /><p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;微信公众号</p>
+                    </div> 
+                </div>
+            </li>
+            <li class="talkus linkus"><a href="javascript:;" rel="nofollow">
+                <img class='imgI' src="../images/demo4.0/index/phone.png" alt="联系华招" width="30px"
+                    height="30px" />
+                <p class="textstyle">
+                    联系我们</p>
+            </a>
+                <div class="appbox" style="height: 70px;">
+                    <div class="appcode" style="margin-top: 10px;">
+                        <p>
+                            025-84635130-8608(推广部)</p>
+                    </div>
+                    <div class="appcode" style="margin-top: 10px;">
+                        <p>
+                            025-84635130-8626(客服部VIP热线)</p>
+                    </div>
+                </div>
+            </li>
+            <li class="talk"><a href="javascript:;" rel="nofollow">
+                <img src="../images/demo4.0/index/qq.png" alt="加入华招器械QQ群" width="30px" height="30px" /><p
+                    class="textstyle">
+                    加入QQ群</p>
+            </a>
+                <div class="appbox" style="height: 70px;">
+                    <div class="appcode" style="margin-top: 10px;">
+                        <p>
+                            <a style="width: auto; height: auto;" title="加入交流群" href="http://shang.qq.com/wpa/qunwpa?idkey=99e1e053e88af4aa762aedaf5830572a784d896106a83b195fd330654ef07d62"
+                                target="_blank">招标咨询交流群(313179121)</a>
+                        </p>
+                    </div>
+                    <div class="appcode" style="margin-top: 10px;">
+                        <p>
+                            <a style="width: auto; height: auto;" title="加入服务群" href="http://shang.qq.com/wpa/qunwpa?idkey=dea7290e66dcad687de1fbf46c2f605198d4652c9d9d4461c027f979977b2a16"
+                                target="_blank">会员VIP服务群(292243404)</a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="talkus linkqq"><a target="_blank" title="在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin=2880948455&site=qq&menu=yes">
+                <img class='imgI' src="../images/demo4.0/index/talk.png" alt="在线咨询华招器械" width="30px"
+                    height="30px" /><p class="textstyle">
+                        在线咨询</p>
+            </a></li>
+            <li class="talk"><a href="javascript:;" rel="nofollow" onclick="gotoTop(2,2);return false;">
+                <img src="../images/demo4.0/index/top.png" alt="返回顶部" width="30px" height="30px" /><p
+                    class="textstyle">
+                    返回顶部</p>
+            </a></li>
+        </ul>
+        <div style="text-align: center; width: 72px; padding-top: 6px;">
+            <img id="litoggle" alt="收起" title="收起" src="../css/cssv4/close.png" style="cursor: pointer;
+                width: 18px; height: 18px;" /></div>
+    </div>
+    <div class="righttoggle">
+        <div class="contactusdiyou">
+            <span>工</span><span>具</span><span>栏</span>
+            <img alt="展开" class="hoverimg" title="展开" src="../css/cssv4/hoverbtnbg.gif" height="9"
+                width="13" />
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(".rightfloat ul li").hover(function () { $(this).find('.appbox').show(); }, function () { $(this).find('.appbox').hide(); });
+    $(".rightfloat ul .linkqq").mouseenter(function (event) {
+        $(this).find('.imgI').attr("src", "../images/demo4.0/index/consulting.png");
+    });
+    $(".rightfloat ul .linkqq").mouseleave(function (event) {
+        $(this).find('.imgI').attr("src", "../images/demo4.0/index/talk.png");
+    });
+    $(".rightfloat ul .linkus").mouseenter(function (event) {
+        $(this).find('.imgI').attr("src", "../images/demo4.0/index/contact.png");
+    });
+    $(".rightfloat ul .linkus").mouseleave(function (event) {
+        $(this).find('.imgI').attr("src", "../images/demo4.0/index/phone.png");
+    });
+    //门户工具栏展开/收起 开始
+    $("#litoggle").click(function () {
+
+        $.cookie("rightfloat", "1", { expires: 1, path: '/' });
+        $(".rightfloat").hide(); $(".righttoggle").show();
+    });
+    $(".righttoggle").click(function () {
+        $.cookie("rightfloat", "0", { expires: 1, path: '/' });
+        $(this).hide(); $(".rightfloat").show();
+    });
+    if ($.cookie("rightfloat") == "1") {
+        $(".rightfloat").hide(); $(".righttoggle").show();
+    }
+    else {
+        $(".righttoggle").hide(); $(".rightfloat").show();
+    }
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d527f6ccc59b38ff1ba632dffc087bdb";
+        var ss = document.getElementsByTagName("script");
+        var s = ss[ss.length - 1];
+        s.parentNode.insertBefore(hm, s);
+
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+        else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+        var sxs = document.getElementsByTagName("script");
+        var sx = sxs[sxs.length - 1];
+        sx.parentNode.insertBefore(bp, sx);
+    })();
+</script>
+</html>
