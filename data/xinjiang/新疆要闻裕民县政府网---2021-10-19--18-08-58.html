@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>新疆要闻-裕民县政府网</title>
+    <meta name="ColumnName" content="新疆要闻"> 
+
+    <meta name="ColumnType" content="新疆要闻"> 
+    <meta name="ColumnDescription" content="政务要闻"> 
+    <meta name="ColumnKeywords" content="政务要闻">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="裕民县政府网">
+<meta name="SiteDomain" content="www.xjym.gov.cn">
+<meta name="SiteIDCode" content="6542250032">
+<link href="/Upload/1607567728.ico" type="image/x-icon" rel="icon">
+<link href="/Upload/1607567728.ico" type="image/x-icon" rel="shortcut icon">
+
+
+    <link rel="stylesheet" href="/App/Tpl/Home/XJYM/Public/css/red.css">
+
+
+
+<!--页面样式-->
+<link rel="stylesheet" href="/App/Tpl/Home/XJYM/Public/css/animate.min.css">
+<script src="/App/Tpl/Home/XJYM/Public/js/jquery.min.js"></script>
+<!--jQuery库-->
+<script src="/App/Tpl/Home/XJYM/Public/js/wow.min.js"></script>
+<!--动画效果库-->
+<script src="/App/Tpl/Home/XJYM/Public/js/swiper.min.js"></script>
+<!-- swiper -->
+<script src="/App/Tpl/Home/XJYM/Public/js/Epp-2.1.1.min.js"></script>
+<!--Epp插件库-->
+<script>
+    $(document).ready(function (e) {
+        pageInit();
+        function pageInit() {
+            if ($(".user").length > 0) {
+                if ("0" == 1) {
+                    $.get("/public/getJson/l/cn", null, function (data) { UpdateLoginStatus(data['MemberID'], data['MemberName'], data['EnableMember']); }, "json");
+                } else {
+                    UpdateLoginStatus("", "", "1");
+                }
+            }
+        }
+        function UpdateLoginStatus(id, name, flag) {
+            if (flag == 0) return;
+            var html = "";
+            if (id) {
+               
+                html += '<a href="/member/public/index" target="_blank">会员中心&nbsp;</a>';
+                html += '<a href="/member/public/logout" target="_self">退出</a>';
+            } else {
+                html += '<a href="/public/login/l/cn" target="_self">登录</a>|'
+                html += '<a href="/public/reg/l/cn" target="_self">注册</a>';
+            }
+            $(".user").html(html);
+        }
+    });
+
+    $('.container .wid .data .inform .tabs ul li').click(function () {
+        var t = $(this).index();
+        $(this).addClass('acti').siblings().removeClass('acti');
+        $('.container .wid .data .inform .content .list').eq(t).addClass('show').siblings().removeClass('show');
+    })
+</script>
+</head>
+
+<body class="bg">
+    
+    <script>
+
+        $(function () {
+            //请求参数
+            var list = {};
+            //
+            $.ajax({
+                //请求方式
+                type: "POST",
+                //请求的媒体类型
+                contentType: "application/json;charset=UTF-8",
+                //请求地址
+                url: "http://wthrcdn.etouch.cn/weather_mini?city=%E8%A3%95%E6%B0%91",
+                //数据，json字符串
+                dataType: "jsonp",/*加上datatype*/
+                //请求成功
+                success: function (result) {
+
+
+                    $('#weather').html(result.data.city + '，' + result.data.forecast[0].type + '，' + result.data.forecast[0].high + '，' + result.data.forecast[0].low);
+                },
+                //请求失败，包含具体的错误信息
+                error: function (e) {
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            });
+        });
+	</script>
+
+<style>
+	html,body{
+	width:100;
+	height:100
+}
+body{
+  font-family: "华文细黑";
+  background:url("http://www.xjym.gov.cn/Public/Images/100.jpg") no-repeat;
+  background-size: 100;
+  background-color: #f2f2f2;
+
+}
+.head .nav .list{
+	background-color: rgba(0, 0, 0, 0);
+
+}
+.head .nav .list ul li h4 a{
+	font-weight: 900;
+       
+}
+.head{
+	background-color: rgba(0, 0, 0, 0);
+	padding-top:70px;
+}
+ 
+</style>
+
+<div class="head" >
+	<div class="tops">
+		<div class="wid">
+			<div class="logo fl">
+				<span>
+					<img src="/App/Tpl/Home/XJYM/Public/img/logo.png" alt="">
+				</span>
+			</div>
+			<div class="inform fr">
+				<div class="link">
+					<a href="https://www.gov.cn/index.htm">中国政府网</a> | <a href="http://www.xinjiang.gov.cn/">新疆政府网</a> |
+					<a href="/guestbook?pid=1">领导信箱</a>
+				</div>
+				<div class="search">
+					<form class="form" name="frmInfoSearch" method="post" action="/channel/search/l/cn">
+						<div class="input fl">
+							<div class="text fl">
+								<input type="text" name="Keywords" placeholder="搜索您想了解得政策/资讯/服务">
+							</div>
+							<div class="submit fr">
+								<button>搜索</button>
+							</div>
+						</div>
+					<input type="hidden" name="__hash__" value="55494e955605c591d0f85b5d7b1f40a3_7028fcc78c2476b0c8c90d8fd852d799" /></form>
+					<div class="user fr" id="user" style="padding-left: 1px; font-size: 15px;">
+
+					</div>
+				</div>
+				<div class="label">
+					2021年10月20日 星期三 | <span id="weather"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="wid">
+			<div class="list">
+				<ul>
+												<li class="li-item1">						<h4>
+							<a href="/" target="_self">网站首页</a>
+						</h4>
+												</li>							<li class="acti li-item2">
+														<h4>
+							<a href="/zwyw.html" target="_self">政务要闻</a>
+						</h4>
+						<div class="slide">
+								<a href="/tzgg.html" target="_self">通知公告</a><a href="/zyyw.html" target="_self">中央要闻</a><a href="/xjyw.html" target="_self">新疆要闻</a><a href="/jrym.html" target="_self">今日裕民</a><a href="/xzdt.html" target="_self">乡镇动态</a><a href="/bmdt.html" target="_self">部门动态</a>							</div>						</li>							<li class="li-item3">						<h4>
+							<a href="/zwgk.html" target="_self">政务公开</a>
+						</h4>
+						<div class="slide">
+								<a href="/qwfb.html" target="_self">权威发布</a><a href="/zfxxgk.html" target="_self">政府信息公开</a><a href="/zdlygk.html" target="_self">重点领域公开</a><a href="/26glyml.html" target="_self">26个领域目录</a>							</div>						</li>							<li class="li-item4">						<h4>
+							<a href="https://zwfw.xinjiang.gov.cn/?area=654225" target="_self">政务服务</a>
+						</h4>
+												</li>							<li class="li-item5">						<h4>
+							<a href="/zmhd.html" target="_self">政民互动</a>
+						</h4>
+						<div class="slide">
+								<a href="http://www.xjym.gov.cn/guestbook.html?pid=1" target="_self">领导信箱</a><a href="/dcwj.html" target="_self">调查问卷</a><a href="/zxft.html" target="_self">在线访谈</a><a href="/yjzj.html" target="_self">意见征集</a><a href="http://www.xjym.gov.cn/guestbook.html?pid=2" target="_self">在线留言</a>							</div>						</li>							<li class="li-item6">						<h4>
+							<a href="/ztzl.html" target="_self">专题专栏</a>
+						</h4>
+						<div class="slide">
+								<a href="/xdswsxbsskxj.html" target="_self">学党史 悟思想 办实事 开新局</a><a href="/zzccdyyqfkzjz.html" target="_self">众志成城打赢疫情防控阻击战</a><a href="/jzjstpgj.html" target="_self">决战决胜 脱贫攻坚</a><a href="/xxgclsddsjdjs.html" target="_self">学习贯彻落实党的十九大精神</a><a href="/zyhbdczgjxs.html" target="_self">中央环保督察整改进行时</a><a href="/mztjyjq.html" target="_self">民族团结一家亲</a>							</div>						</li>							<li class="none li-item7">
+														<h4>
+							<a href="/zjym.html" target="_self">走进裕民</a>
+						</h4>
+						<div class="slide">
+								<a href="/ymgk.html" target="_self">裕民概况</a><a href="/xzqh.html" target="_self">行政区划</a><a href="/xzgk.html" target="_self">乡镇概况</a><a href="/lsrw.html" target="_self">历史沿革</a><a href="/qhtz.html" target="_self">气候特征</a><a href="/jdgk.html" target="_self">地名探源</a>							</div>						</li>				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pages">
+	<div class="wid">
+		<div class="address">
+			<a href="/" target="_self">网站首页</a> >>
+					<a href="/zwyw.html" target="_self">政务要闻</a> >>
+										<a class="current_channel" href="/xjyw.html" target="_self">新疆要闻</a>		</div>
+
+    <div class="details">
+        <div class="sidebar fl">
+            <div class="list">
+                <ul>
+
+                                            <li>
+                                <div class="txt">
+                                    <a href="/tzgg.html">
+                                        通知公告                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/zyyw.html">
+                                        中央要闻                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/xjyw.html">
+                                        新疆要闻                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/jrym.html">
+                                        今日裕民                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/xzdt.html">
+                                        乡镇动态                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/bmdt.html">
+                                        部门动态                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/zwdt.html">
+                                        政务动态                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/spxx.html">
+                                        视频信息                                </div>
+                                </a>
+                            </li><li>
+                                <div class="txt">
+                                    <a href="/shxw.html">
+                                        社会新闻                                </div>
+                                </a>
+                            </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="informs fr">
+            <div class="title">
+                新疆要闻            </div>
+            <div class="content">
+                <div class="list">
+                    <ul>
+                        <li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18823.html">深入贯彻落实习近平法治思想 推动全面依法治疆迈上新台阶</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-05-24                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18647.html">自治区第十三届人民政府召开第120次常务会议</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-05-07                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18555.html">以求真务实精神确保巩固拓展 脱贫攻坚成果同乡村振兴有效衔接</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-28                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18481.html">雪克来提·扎克尔在乌鲁木齐县调研时强调：加快推进农业农村现代化 走出惠及群众的乡村振兴之路</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-21                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18409.html">自治区召开安全生产电视电话会议</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-19                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18407.html">我区实施生态环境专项执法“四季攻坚行动”</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-19                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18405.html">自治区防汛抗旱工作电视电话会议召开</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-19                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18337.html">以立行立改真改实改的成效 推动新疆工作不断开创新局面</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-14                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18335.html">深入学习贯彻习近平总书记重要讲话精神 提高政治站位推动党史学习教育向深度拓展</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-14                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18333.html">巩固脱贫攻坚成果为群众办实事解难题 让各族群众有更多获得感幸福感安全感</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-14                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18285.html">我区各单位扎实开展“我为群众办实事”实践活动把好事办到各族群众心坎上</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-13                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18283.html">陈全国雪克来提·扎克尔会见自治区伊协新一届领导班子成员</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-13                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18281.html">扛起政治责任强化政治担当从严从实抓好整改 为新疆社会稳定和长治久安提供坚强政治保障</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-13                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18273.html">聚焦乡村全面振兴 扎实做好当前“三农”重点工作</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-12                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18271.html">完整准确贯彻新时代党的治疆方略 聚焦总目标扎实推进兵地融合发展</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-12                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18269.html">坚决防范遏制重特大安全事故发生 坚决维护各族群众生命和财产安全</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-12                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18197.html">“新疆是个好地方”澳大利亚专场视频交流会在乌鲁木齐举行</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-08                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18193.html">自治区第一批政法队伍教育整顿工作推进视频会召开</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-08                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18179.html">农发行新疆分行 投放56亿元贷款支持棉花春耕备耕</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-07                                </div>
+
+                            </li><li>
+
+                                <div class="txt fl">
+                                    <a href="/xjyw/18177.html">我区出台绿色食品、农产品地理标志、标准化基地奖励管理办法 最高可奖励10万元</a>
+                                </div>
+                                <div class="time fr">
+                                    2021-04-07                                </div>
+
+                            </li>                    </ul>
+                </div>
+                <div class="page">
+                    <ul><span class='pageinfo'>共<label id='total'>107</label>条 2/6 页</span>  <a  class='pagefirst' href='/xjyw.html?pagesize=20&p=1' >首页</a>  <a class='pageup' href='/xjyw.html?pagesize=20&p=1'>上一页</a>    <a class='pagenum' href='/xjyw.html?pagesize=20&p=1'>&nbsp;1&nbsp;</a> <span class='current'>2</span> <a class='pagenum' href='/xjyw.html?pagesize=20&p=3'>&nbsp;3&nbsp;</a> <a class='pagenum' href='/xjyw.html?pagesize=20&p=4'>&nbsp;4&nbsp;</a> <a class='pagenum' href='/xjyw.html?pagesize=20&p=5'>&nbsp;5&nbsp;</a> <a class='pagenum' href='/xjyw.html?pagesize=20&p=6'>&nbsp;6&nbsp;</a>   <a class='pagedown' href='/xjyw.html?pagesize=20&p=3'>下一页</a> <a  class='pageend'  href='/xjyw.html?pagesize=20&p=6' >尾页</a></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="footer">
+    <div class="wid">
+        <div class="select">
+
+            <div class="box" style="padding-left: 22px;">
+                    <select name="" id="" onchange="window.location=this.value;" style="text-align-last:right;width:100%; margin-left: 35px;">
+                        <option style="direction: rtl;">国家部委</option>
+                        <option style="float:right;color: black;" value="https://www.fmprc.gov.cn/web/">外交部</option><option style="float:right;color: black;" value="https://www.ndrc.gov.cn/">国家发展改革委员会</option><option style="float:right;color: black;" value="http://www.moe.gov.cn/">教育部</option><option style="float:right;color: black;" value="http://www.most.gov.cn/index.html">科技部</option><option style="float:right;color: black;" value="https://www.miit.gov.cn/">工业和信息化部</option><option style="float:right;color: black;" value="https://www.neac.gov.cn/">国家民族事务委员会</option><option style="float:right;color: black;" value="https://www.mps.gov.cn/">公安部</option><option style="float:right;color: black;" value="http://www.mca.gov.cn/">民政部</option><option style="float:right;color: black;" value="http://www.mof.gov.cn/index.htm">财政部</option><option style="float:right;color: black;" value="http://www.mohrss.gov.cn/">人力资源和社会保障部</option><option style="float:right;color: black;" value="http://www.mee.gov.cn/">生态环境部</option><option style="float:right;color: black;" value="http://www.mohurd.gov.cn/">住房和城乡建设部</option><option style="float:right;color: black;" value="https://www.mot.gov.cn/">交通运输部</option><option style="float:right;color: black;" value="http://www.mwr.gov.cn/">水利部</option><option style="float:right;color: black;" value="http://www.moa.gov.cn/">农业农村部</option><option style="float:right;color: black;" value="http://www.mofcom.gov.cn/">商务部</option><option style="float:right;color: black;" value="http://www.nhc.gov.cn/">国家卫生健康委员会</option><option style="float:right;color: black;" value="https://www.mct.gov.cn/">文化和旅游部</option><option style="float:right;color: black;" value="http://www.mva.gov.cn/">退役军人事务部</option><option style="float:right;color: black;" value="https://www.mem.gov.cn/index.shtml">应急管理部</option>                    </select>
+                </div><div class="box" style="padding-left: 22px;">
+                    <select name="" id="" onchange="window.location=this.value;" style="text-align-last:right;width:100%; margin-left: 35px;">
+                        <option style="direction: rtl;">各省市政府部门</option>
+                        <option style="float:right;color: black;" value="http://www.beijing.gov.cn/">北京</option><option style="float:right;color: black;" value="http://www.tj.gov.cn/">天津</option><option style="float:right;color: black;" value="http://www.hebei.gov.cn/">河北</option><option style="float:right;color: black;" value="http://www.shanxi.gov.cn/">山西</option><option style="float:right;color: black;" value="http://www.nmg.gov.cn/">内蒙古</option><option style="float:right;color: black;" value="http://www.ln.gov.cn/">辽宁</option><option style="float:right;color: black;" value="http://www.jl.gov.cn/">吉林</option><option style="float:right;color: black;" value="https://www.hlj.gov.cn/">黑龙江</option><option style="float:right;color: black;" value="http://www.shanghai.gov.cn/">上海</option><option style="float:right;color: black;" value="http://www.jiangsu.gov.cn/">江苏</option><option style="float:right;color: black;" value="http://www.zj.gov.cn/?type=2">浙江</option><option style="float:right;color: black;" value="http://www.ah.gov.cn/">安徽</option><option style="float:right;color: black;" value="http://www.fujian.gov.cn/">福建</option><option style="float:right;color: black;" value="http://www.jiangxi.gov.cn/">江西</option><option style="float:right;color: black;" value="http://www.sd.gov.cn/">山东</option><option style="float:right;color: black;" value="http://www.henan.gov.cn/">河南</option><option style="float:right;color: black;" value="http://www.hubei.gov.cn/">湖北</option><option style="float:right;color: black;" value="http://www.hunan.gov.cn/">湖南</option><option style="float:right;color: black;" value="http://www.gd.gov.cn/">广东</option><option style="float:right;color: black;" value="http://www.gxzf.gov.cn/">广西</option><option style="float:right;color: black;" value="http://www.hainan.gov.cn/">海南</option><option style="float:right;color: black;" value="http://www.cq.gov.cn/">重庆</option><option style="float:right;color: black;" value="http://www.sc.gov.cn/">四川</option><option style="float:right;color: black;" value="http://www.guizhou.gov.cn/">贵州</option><option style="float:right;color: black;" value="http://www.yn.gov.cn/">云南</option><option style="float:right;color: black;" value="http://www.xizang.gov.cn/">西藏</option><option style="float:right;color: black;" value="http://www.shaanxi.gov.cn/">陕西</option><option style="float:right;color: black;" value="http://www.xinjiang.gov.cn/">新疆</option><option style="float:right;color: black;" value="http://www.gansu.gov.cn/">甘肃</option><option style="float:right;color: black;" value="http://www.nx.gov.cn/">宁夏</option><option style="float:right;color: black;" value="http://www.qh.gov.cn/">青海</option>                    </select>
+                </div><div class="box" style="padding-left: 22px;">
+                    <select name="" id="" onchange="window.location=this.value;" style="text-align-last:right;width:100%; margin-left: 35px;">
+                        <option style="direction: rtl;">地州市政府网站</option>
+                        <option style="float:right;color: black;" value="http://www.cj.gov.cn/">昌吉回族自治州</option><option style="float:right;color: black;" value="http://www.xjyl.gov.cn/">伊犁哈萨克自治州</option><option style="float:right;color: black;" value="http://www.xjboz.gov.cn/">博尔塔拉蒙古自治州</option><option style="float:right;color: black;" value="http://www.xjbz.gov.cn/">巴音郭楞蒙古自治州</option><option style="float:right;color: black;" value="http://www.xjkz.gov.cn/">克孜勒苏柯尔克孜自治州</option><option style="float:right;color: black;" value="http://www.urumqi.gov.cn/">乌鲁木齐</option><option style="float:right;color: black;" value="https://www.klmy.gov.cn/">克拉玛依市</option><option style="float:right;color: black;" value="http://www.xjalt.gov.cn/">阿勒泰地区</option><option style="float:right;color: black;" value="http://www.xjtc.gov.cn/">塔城地区</option><option style="float:right;color: black;" value="http://www.tlf.gov.cn/">吐鲁番地区</option><option style="float:right;color: black;" value="http://www.hami.gov.cn/">哈密地区</option><option style="float:right;color: black;" value="https://www.xjht.gov.cn/">和田地区</option><option style="float:right;color: black;" value="http://www.aks.gov.cn/">阿克苏地区</option><option style="float:right;color: black;" value="http://www.kashi.gov.cn/">喀什地区</option>                    </select>
+                </div><div class="box" style="padding-left: 22px;">
+                    <select name="" id="" onchange="window.location=this.value;" style="text-align-last:right;width:100%; margin-left: 35px;">
+                        <option style="direction: rtl;">塔城地区 县 市</option>
+                        <option style="float:right;color: black;" value="http://www.xjtcsh.gov.cn/">塔城市</option><option style="float:right;color: black;" value="http://www.xjws.gov.cn/">乌苏市</option><option style="float:right;color: black;" value="http://www.xjem.gov.cn/">额敏县</option><option style="float:right;color: black;" value="http://www.xjswx.gov.cn/">沙湾县</option><option style="float:right;color: black;" value="http://www.xjtl.gov.cn/">托里县</option><option style="float:right;color: black;" value="http://www.xjym.gov.cn/">裕民县</option><option style="float:right;color: black;" value="http://www.xjhbk.gov.cn/">和布克赛尔蒙古自治县</option>                    </select>
+                </div><div class="box" style="padding-left: 22px;">
+                    <select name="" id="" onchange="window.location=this.value;" style="text-align-last:right;width:100%; margin-left: 35px;">
+                        <option style="direction: rtl;">主流媒体</option>
+                        <option style="float:right;color: black;" value="http://www.ts.cn/">天山网</option><option style="float:right;color: black;" value="http://www.xinhuanet.com/">新华网</option><option style="float:right;color: black;" value="http://www.tcdqdjw.cn/">塔城党建网</option>                    </select>
+                </div>
+        </div>
+        <div class="text">
+            <div class="txt fl">
+                <p>
+                    开办单位：裕民县人民政府 | 主办单位：裕民县人民政府办公室 | 承办单位：裕民县信息化中心                </p>
+                <p>
+                    办公地址：裕民县巴尔鲁克西路27号 联系电话：0901-6526256 涉未成年人举报热线：0901-6526256                </p>
+                <p>
+                    新ICP备17002640号 政府网站标识码：6542250032 新公网安备 65422502000001号                </p>
+            </div>
+            <div class="imgs fr">
+                <div class="box fl">
+                    <a href="http://121.43.68.40/exposure/jiucuo.html?site_code=6542250032"><img src="/App/Tpl/Home/XJYM/Public/img/abb059_82x41.png" alt=""></a>
+                </div>
+                <div class="box fl">
+                   <a href="http://bszs.conac.cn/sitename?method=show&id=344606E99CF22C1AE053022819AC53F2"><img width="45" height="48" src="/App/Tpl/Home/XJYM/Public/img/2eec66_34x41.png" alt=""></a>
+                </div>
+                <div class="box fl">
+                   <a href="https://www.xjwljb.com/"> <img src="/App/Tpl/Home/XJYM/Public/img/b4aa55_107x41.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

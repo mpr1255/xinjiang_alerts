@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+   <title>西南交通大学与西藏大学、新疆农业大学开展异地同步课堂--西南交通大学新闻网</title>
+    <meta name="keywords" content="交大新闻网,西南交通大学" />
+    <meta name="description" content="交大新闻网,西南交通大学" />
+    <link rel="stylesheet" href="/templates/News/css/main.css">
+    <link rel="stylesheet" href="/templates/News/css/comm.css">
+    <link rel="stylesheet" type="text/css" href="/js/artdialog/ui-dialog.css" />
+    <script src="/templates/News/js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="/js/artdialog/dialog-plus-min.js"></script>
+    <script src="/templates/News/js/common.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+         function ArticleReportError(Id) {
+            var winDialog = top.dialog({
+                title: '新闻内容纠错',
+                url: '/dialog/dialog_aritcle_reporterror.aspx?id=' + Id,
+                width: 960,
+                //height:550,
+                data: window //传入当前窗口
+            }).showModal();
+        }
+
+        //发送AJAX请求
+    function sendAjaxUrl(winObj, postData, sendUrl) {
+        $.ajax({
+            type: "post",
+            url: sendUrl,
+            data: postData,
+            dataType: "json",
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                top.dialog({
+                    title: '提示',
+                    content: '尝试发送失败，错误信息：' + errorThrown,
+                    okValue: '确定',
+                    ok: function () { }
+                }).showModal(winObj);
+            },
+            success: function (data, textStatus) {
+                if (data.status == 1) {
+                    winObj.close().remove();
+                    var d = dialog({ content: data.msg }).show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        location.reload(); //刷新页面
+                    }, 2000);
+                } else {
+                    top.dialog({
+                        title: '提示',
+                        content: '错误提示：' + data.msg,
+                        okValue: '确定',
+                        ok: function () { }
+                    }).showModal(winObj);
+                }
+            }
+        });
+    }
+    </script>
+    
+    <!--Header-->
+        <div class="header">
+        <div class="box">
+            <a class="header__logo" href="http://news.swjtu.edu.cn">&nbsp;<img src="/templates/News/images/header_logo.png" class="header__logo__img" width="438" height="62"></a>
+            <div class="header__search">
+                <input type="text" name="keywords" id="keywords" class="search-input" onkeydown="if(event.keyCode==13){SiteSearch('/search.shtml', '#keywords');return false};" placeholder="关键字搜索" x-webkit-speech="" >
+                
+                <a id="btnsearch" name="btnsearch" class="icon icon-search" onclick="SiteSearch('/search.shtml', '#keywords');"  ></a>
+            </div>
+        </div>
+    </div>
+
+<!-- nav -->
+    <div class="nav bg-white">
+        <div class="box fat">
+            <div class="nav__left nav__left--home white">
+                <a href="/" class="link-btn white">首<br />页</a>
+            </div>
+            <div class="nav__left nav__left--links blue">
+                <ul class="nav__left__list">
+                    <li class="nav__left__list__item"><a href="showlist-82.shtml">交大要闻</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-83.shtml">媒体交大</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-84.shtml">教学科研</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-90.shtml">国际交流</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-132.shtml">党史学习</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-94.shtml">扬华校园</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-95.shtml">交大人物</a></li>
+                </ul>
+                <ul class="nav__left__list">
+                    <li class="nav__left__list__item"><a href="showlist-100.shtml">文化交大</a></li>
+                    <li class="nav__left__list__item"><a href="showposterlist-92.shtml">学术活动</a></li>
+                    <li class="nav__left__list__item"><a href="showlist-91.shtml">交大通知</a></li>
+                    <li class="nav__left__list__item"><a href="http://gbt.swjtu.edu.cn">校园广播</a></li>
+                    <li class="nav__left__list__item"><a href="http://video.swjtu.edu.cn">交大视频</a></li>
+                    <li class="nav__left__list__item"><a href="http://news.swjtu.edu.cn/epaper/index.shtml">电子校报</a></li>
+                    <li class="nav__left__list__item"><a href="showinfo-106.shtml">常用服务</a></li>
+                </ul>
+            </div>
+            <a href="http://www.swjtu.edu.cn" class="son nav__link nav__school-home white">学校主页</a>
+            <a href="/cas_login.aspx" class="son nav__link nav__news-contribute white">新闻投稿</a>
+        </div>
+    </div>
+        <!--/Header-->
+
+    
+
+    <!-- body -->
+    <div class="body">
+        <div class="box bg-white">
+            <div class="body__left fl">
+                <div class="body__left__title blue">
+                    <h3>交大要闻</h3>
+                </div>    
+            <!--文章-->
+                    <div class="article">
+
+                        <h1>西南交通大学与西藏大学、新疆农业大学开展异地同步课堂</h1>
+                        <div class="source">
+                            来源：教务处&nbsp;&nbsp;&nbsp;
+                            日期：2021/10/15 15:32:17&nbsp;&nbsp;&nbsp;
+                            点击数：516 
+                        </div>
+                        <div class="art_con">
+                            <div class="content14">
+                                <p style="text-align:center"><img src="/upload/202110/15/202110151524090983.jpg" width="700" height="Infinity" border="0" vspace="0"/></p><p>“西南交大，我这边是藏大，可以听得清楚。”“藏大，我这边是新疆农业大学，声音很清晰。”10月13日下午，一堂跨越近万里，覆盖三所高校的异地同步课程正在西藏大学纳金校区的沉浸式教室里进行，西南交通大学交通运输与物流学院的王琳老师在西藏大学的课堂上，为西南交通大学、西藏大学和新疆农业大学的同学共同讲授了一节精彩的“交通运输系统分析”专业课程。虽然三校学生相隔万里，但是在授课团队的精心设计和现代同步教学直播技术的支撑下，三地学生犹如同处一间教室，打破空间桎梏，实现了共同学习、互相讨论。</p><p>自2000年起，西南交通大学开始对口支援西藏大学建设以来，一直认真学习贯彻党的治藏方略，将对口支援西藏大学作为重大政治任务，在人才培养、师资队伍、学科建设、科学研究等方面不断加大支援力度，助力西藏大学在教学、科研等方面不断取得新进展新成效。2020年秋季学期开学以来，由西南交通大学教务处牵头，交通运输与物流学院和西藏大学工学院共同探索推出了“专业课直播（慕课）+混合式教学”异地同步直播课程，在疫情背景下实现了优质课程资源的共享。经过两个学期的实践，取得了良好的教学效果，“专业课直播（慕课）+混合式教学”获得了初步成功。</p><p>2021年秋季学期开始，西南交通大学把“专业课直播（慕课）+混合式教学”的形式进一步扩大，新疆农业大学也加入进来，实现了“三校互联”的异地同步课程模式，将优质教学资源惠及到西藏和新疆高校。</p><p style="text-align:center"><img src="/upload/202110/15/202110151524593698.jpg" width="700" height="Infinity" border="0" vspace="0"/></p><p>在本次直播课堂教学开始之前，西南交通大学交通运输与物流学院副院长闫海峰与分处三地教学现场的师生进行了亲切的交流。闫海峰表示，三校异地同步课程是一种新的教学尝试，给老师的教学带来挑战的同时，也给老师和同学们带来了新的机遇。他鼓励三校学生利用本次机会，认真学习相关专业知识，积极服务国家和西藏、新疆自治区轨道交通建设，为西藏和新疆自治区的建设贡献自己的力量。</p><p style="text-align:center"><img src="/upload/202110/15/202110151525327633.jpg" width="700" height="Infinity" border="0" vspace="0"/></p><p>“当站上讲台，看到同学们一张张活泼又质朴的脸时，一切的高原反应都消失了”，王琳老师在授课结束后说道。在谈到自己对异地同步课程的感想和带来的收获时，她表示“三校异地同步课堂”给教学带了非常多的挑战，为保证学生的学习效果，她在教学过程中不断通过同学们的作业情况和学习反馈及时调整教学内容的深度，丰富教学形式。同时也将一部分教学方法和手段成功实践到了自己的传统课堂中，实现了传统课堂与异地同步课堂的相互提升促进，收获颇丰。</p>
+                            </div>
+                            <div style="text-align:left; text-indent:4em; padding-top:20px; font-family:'Times New Roman', Times, serif;">
+                                <p>
+                                
+                            作者：吕宝雨 &nbsp;&nbsp;&nbsp;
+                            
+                                责任编辑：蔡京君
+                                    </p>
+                            </div>
+                        </div>
+                         <div style="text-align:center; font-size:12px; padding-top:10px;">
+                             [西南交通大学新闻网版权所有，未经书面授权禁止使用]
+                             </div>
+                        <div style="text-align:center; font-size:12px; padding-top:10px;">
+                           
+                                <a href="javascript:;" onclick="javascript:window.print();">[打印本页]</a> &nbsp; &nbsp;
+                            <a href="javascript:void(0)" onclick="ArticleReportError('3D9733C24C68FAC9')">[新闻纠错]</a> &nbsp; &nbsp;
+                                <a href="javascript:;" onclick="window.close();">[关闭窗口]</a>
+                          
+                            </div>
+                    </div>
+                    <!--文章 end-->
+
+            <!-- 其余四个 -->
+
+               
+            </div>
+
+
+             <div class="body__right fr">
+                <div class="body__right__title">
+    <h3>热点新闻</h3>
+</div>
+<ul class="body__right__list1">
+    
+    <li class="body__right__list1__item n1"><a href="/shownews-22980.shtml">西南交大举行两弹元勋陈能宽院士铜…</a></li>
+    
+    <li class="body__right__list1__item n2"><a href="/shownews-22983.shtml">关于举行“致敬百年芳华 共庆国庆…</a></li>
+    
+    <li class="body__right__list1__item n3"><a href="/shownews-22943.shtml">央视关注报道西南交通大学新生曾馨…</a></li>
+    
+    <li class="body__right__list1__item n4"><a href="/shownews-23010.shtml">西南交通大学城市轨道交通学院校园…</a></li>
+    
+    <li class="body__right__list1__item n5"><a href="/shownews-22934.shtml">西南交大召开2021-2022学年第一学…</a></li>
+    
+    <li class="body__right__list1__item n6"><a href="/shownews-23011.shtml">四川省常务副省长罗文来学校检查指…</a></li>
+    
+    <li class="body__right__list1__item n7"><a href="/shownews-22953.shtml">追忆强士中教授：宗师风范，浩气长…</a></li>
+    
+    <li class="body__right__list1__item n8"><a href="/shownews-23015.shtml">学校党委召开第179次常委会（扩大…</a></li>
+    
+    <li class="body__right__list1__item n9"><a href="/shownews-22982.shtml">学校党委召开第14次全体（扩大）会…</a></li>
+    
+    <li class="body__right__list1__item n10"><a href="/shownews-22944.shtml">央视专题报道西南交通大学数字迎新…</a></li>
+    
+</ul>
+<!--
+<div class="body__right__title">
+    <h3>印象交大</h3>
+</div>
+<div class="body__right__list2">
+    <ul class="scroll-img-contents">
+        <li class="fat scroll-img__item on">
+            <a href="##">
+                <img class="son scroll-img__item__img" src="./images/scroll-img-01.png" />
+                <p class="son scroll-img__desc">[组图]清华大学2018年毕业晚会上演1</p>
+            </a>
+        </li>
+        <li class="fat scroll-img__item">
+            <a href="##">
+                <img class="son scroll-img__item__img" src="./images/scroll-img-02.png" />
+                <p class="son scroll-img__desc">[组图]清华大学2018年毕业晚会上演2</p>
+            </a>
+        </li>
+        <li class="fat scroll-img__item">
+            <a href="##">
+                <img class="son scroll-img__item__img" src="./images/scroll-img-03.png" />
+                <p class="son scroll-img__desc">[组图]清华大学2018年毕业晚会上演3</p>
+            </a>
+        </li>
+    </ul>
+    <div class="scroll-img-tab">
+        <a href="##" data-index="0" class="scroll-img-tab-dot on"></a>
+        <a href="##" data-index="1" class="scroll-img-tab-dot"></a>
+        <a href="##" data-index="2" class="scroll-img-tab-dot"></a>
+    </div>
+</div>
+    -->
+
+<div class="body__right__title">
+    <h3>交大视频</h3>
+</div>
+
+
+<ul class="body__right__list3" id="ul_right_list3">
+    
+</ul>
+<script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: 'https://icp.swjtu.edu.cn/tools/data_ajax.ashx?action=get_videolist&categoryid=398_397&top=6',
+                type: 'get',
+                dataType: 'json',
+                success: function (data) {
+                    //方法中传入的参数data为后台获取的数据
+                    $.each(data, function (index, item) {
+                        var liHtml;
+                        liHtml = '<a href="http://video.swjtu.edu.cn/showvideo-' + item.ID + '.html">' + '<img width="135" height="83" src="http://video.swjtu.edu.cn/' + item.ThumbUrl + '" /></a>';
+                        liHtml = liHtml + '<p class="body__right__list3__item__desc">' + item.VideoName.substr(0,10) + '</p>';
+                        $("#ul_right_list3").append('<li class="body__right__list3__item">' + liHtml + '</li>');
+                    })
+
+                }
+            })
+        })
+    </script>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+     <!-- footer -->
+    <div class="footer white">
+        <div class="box fat">
+            <ul class="footer__links">
+                <li class="footer__links__item"><a href="showinfo-106.shtml">关于我们</a></li>
+                <li class="footer__links__item"><a href="http://dwxcb.swjtu.edu.cn/guashi-order.html">证件挂失</a></li>
+                <li class="footer__links__item"><a href="showinfo-107.shtml">投稿须知</a></li>
+                <li class="footer__links__item"><a href="showinfo-108.shtml">联系我们</a></li>
+                <li class="footer__links__item"><a href="showinfo-114.shtml">版权说明</a></li>
+                <li class="footer__links__item"><a href="/cas_login.aspx">宣传办公平台</a></li>
+                
+                <li class="footer__links__item"><a href="mailto:zhouwei@swjtu.cn">电子邮箱</a></li>
+                <li class="footer__links__item"><a href="/cas_login.aspx">我要投稿</a></li>
+                
+            </ul>
+            <p>copyright @ 2009-2013 西南交通大学新闻中心 http://news.swjtu.edu.cn</p>
+            <p>地址：中国四川省成都市高新区西部园区西南交通大学</p>
+            <p><a href="http://webscan.360.cn/index/checkwebsite/url/news.swjtu.edu.cn">蜀ICP备05026985号 360网站安全检测平台</a></p>
+            <div class="son qr">
+                <img class="qr__img" src="/templates/News/images/qr_wechat.jpg" />
+                <img class="qr__img" src="/templates/News/images/qr_weibo.png" />
+                <img class="qr__img" src="/templates/News/images/qr_toutiao.png" />
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+
+
+    <script type="text/javascript">
+        $(function() {
+            var dots = $('.scroll-img-tab-dot');
+            dots.on('click', function(e) {
+                e.preventDefault();
+                var $target = $(e.target);
+                if ($target.hasClass('on')) {
+                    return;
+                }
+                $target.siblings().removeClass('on');
+                $target.addClass('on');
+                
+                var index = +$target.data('index');
+                var pics = $('.body__right__list2 .scroll-img__item');
+                pics.removeClass('on');
+                $(pics[index]).addClass('on');
+            })
+        });
+    </script>
+</body>
+</html>

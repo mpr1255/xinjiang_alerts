@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>中国银行保险监督管理委员会</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="SiteName" content="">
+    <meta name="SiteDomain" content="">
+    <meta name="SiteIDCode" content="">
+    <meta name="ColumnName" content="">
+    <meta name="ColumnType" content="">
+    <meta name="ArticleTitle" content="">
+    <meta name="PubDate" content="">
+    <meta name="ContentSource" content="">
+    <meta http-equiv="Window-target" content="_top">
+    <meta property="og:image" content="/branch/static/images/share.jpg">
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/branch/css/common/base.css?v=20200108" rel="stylesheet" />
+    <link href="/branch/css/common/Common.css?v=20200108" rel="stylesheet" />
+    <!--[if lt IE 9]>
+       <script src="/branch/js/common/html5shiv.min.js"></script>
+       <script src="/branch/js/common/respond.js"></script>
+    <![endif]-->
+    <style>
+        .content,
+        .footer {
+            display: none;
+        }
+
+        .Section0 {
+            layout-grid-mode: line !important;
+            -ms-layout-grid-mode: line !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div  style="display: none">
+        <img src="/branch/static/images/share.jpg"   />
+    </div>
+    <div class="main ng-cloak" ng-app="myApp">
+        <tpl src="/branch/view/components/Header.html"></tpl>
+        <div class="content falvshengming" ng-controller="itemDetailCtrl">
+            <link href="/branch/css/common/share.css?v=20200108" rel="stylesheet" />
+            <div class="breadcrumb">
+                <ul>
+                    <li>当前位置：
+                        <a ng-href="{{breadcrumb_shouye}}">首页</a>
+                    </li>
+                    <li ng-repeat="x in breadcrumb_detail">
+                        <a ng-href="{{x|breadcrumbitemUrl}}" ng-hide="x.itemName=='首页'">{{x.itemName}}&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row container">
+                <div class="row pages-dateprint">
+                    <div class="col-lg-7 pages-date">
+                        <span>发布时间：{{data.publishDate|dateFormat2}}</span>
+                        <span class="pages-date-laiyuan" ng-hide="data.docSource==null">来源：{{data.docSource}}</span>
+                        <span class="pages-date-laiyuan" ng-hide="data.documentType==null||data.documentType==''">文章类型：{{documentTypeDetail}}</span>
+                    </div>
+                    <div class="col-lg-5 pages-print">
+                        <span onclick="printpage();">&emsp;<img src="/branch/static/images/common/dayin.png" alt=""
+                                class="pages-print-pic-dayin" />打印&emsp;</span>
+                        <span id="share-weibo"></span>微博&nbsp;
+                        <span id="share-weixin"></span>微信&nbsp;
+                        <div style="display: inline;">
+                            <span id="share-more">
+                                <img src="/branch/static/images/common/more.png" alt="" class="share-more-img" />更多
+                                <table id="share-more-all" class="share-more-all">
+                                    <tr>
+                                        <td id="share-qzone"></td>
+                                        <td style="cursor:text;">QQ空间</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="share-qq"></td>
+                                        <td style="float: left;cursor:text;">QQ</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wenzhang-title" ng-show="showTitle" ng-bind-html="data.docTitle|addBr">
+                </div>
+                <div class="wenzhang-content" id="wenzhang-content" ng-bind-html="data.docClob|trustHtml"
+                    ng-class="isWhite_space? 'iswhite-space': ''">
+                </div>
+                <div class="wenzhang-fulu" ng-bind-html="data.remark2|trustHtml"></div>
+                <div class="wenzhang-fujian mt25" ng-hide="data.attachmentInfoVOList[0].title==null">
+                    <div>附件信息:</div>
+                    <ul>
+                        <li ng-repeat="x in data.attachmentInfoVOList">
+                            <a ng-href="{{x.urlOtherName}}">{{x.title}}</a>
+                            <!-- <a ng-click="fileDownload(x.urlOtherName)">{{x.title}}</a> -->
+                        </li>
+                    </ul>
+                </div>
+                <div id="qrcode">
+                    <div>手机扫一扫打开此页</div>
+                </div>
+                <div class="banquanmianze">
+                    <div class="banquanmianze-title">版权与免责声明
+                        <!-- <img src="/branch/static/images/common/warn.png" /> -->
+                        <img src="/branch/static/images/common/warn.png" />
+                    </div>
+                    <div>
+                        1.凡本站及其子站注明“文章类型：原创”的所有作品，其版权属于中国银行保险监督管理委员会网站及其子站所有。其他媒体、网站或个人转载使用时必须注明：“文章来源：中国银行保险监督管理委员会网站”。
+                    </div>
+                    <div>
+                        2.凡本站及其子站注明“文章类型：转载”、“文章类型：编译”、“文章类型：摘编”的所有作品，均转载、编译或摘编自其他媒体，转载、编译或摘编的目的在于传递更多信息，并不代表本站及子站赞同其观点和对其真实性负责。其他媒体、网站或个人转载使用时必须注明文章来源，并自负法律责任。
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <tpl src="/branch/view/components/Footer.html"></tpl>
+
+    </div>
+
+    <script src="/branch/js/common/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/branch/js/common/angular.1.2.32.min.js"></script>
+    <script src="/branch/js/common/QRCode.js"></script>
+    <script src="/branch/js/common/jquery.share.min.js"></script>
+    <!--common-->
+    <script src="/branch/js/common/Script.js?v=20200108"></script>
+    <script src="/branch/js/common/Nav.js?v=20200108"></script>
+    <script src="/branch/js/common/grayscale.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*二维码*/
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: window.location.href,
+                width: 125,
+                height: 125
+            });
+
+            $('#share-more').myHoverTip('share-more-all');
+            $('#share-weixin').share({ sites: ['wechat'] });
+            $('#share-weibo').share({ sites: ['weibo'] });
+            $('#share-qzone').share({ sites: ['qzone'] });
+            $('#share-qq').share({ sites: ['qq'] });
+        })      
+    </script>
+    <script src="/branch/js/common/ItemDetail.js?v=20200108"></script>
+    <!--custom-->
+
+</body>
+
+</html>

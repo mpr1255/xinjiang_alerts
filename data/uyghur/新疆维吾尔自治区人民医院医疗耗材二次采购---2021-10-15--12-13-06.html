@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+  <meta name="keywords" content="市政工程">
+  <meta name="description"
+        content="新疆维吾尔自治区人民医院医疗耗材二次采购项目">
+
+  <link rel="stylesheet" href="/css/frontend/detail/index.css">
+
+  <link rel="stylesheet" href="https://www.jq22.com/jquery/reset.css">
+  <title>新疆维吾尔自治区人民医院医疗耗材二次采购项目-鱼泡招标</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/reset.css">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/frontend/pageHeader/index.css">
+    <link rel="stylesheet" href="/css/frontend/pageFooter/index.css">
+    <link rel="stylesheet" href="/css/frontend/person/css/login-register.css">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="shortcut icon" href="/images/home/title-icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+    <script src="/assets/layui/layui.js"></script>
+</head>
+<header class="header">
+    <div class="header-row">
+        <div class="block block-left">
+            <div class="block-left-item position" onclick="toCity()"><span class="area">[陕西]</span>切换</div>
+            <div class="block-left-item">客服电话：400-838-1888</div>
+            <div class="block-left-item">您好，欢迎来到鱼泡招标官网</div>
+        </div>
+        <div class="block block-right">
+
+            <div class="menu-nav-item website-nav"><a class="website block-right-link">网站导航</a>
+                <div class="website-model">
+                    <div class="website-row">
+                        <div class="info-type">
+                            <div class="website-title website-title-text-left">信息类型</div>
+
+                                                            <div class="type-info-item">
+                                    <a class="redirect" onclick="handleNavItemClick(this,'/zhaobiao/'+'gonggao')" >公告</a>
+                                </div>
+                                                            <div class="type-info-item">
+                                    <a class="redirect" onclick="handleNavItemClick(this,'/zhaobiao/'+'yugao')" >预告</a>
+                                </div>
+                                                            <div class="type-info-item">
+                                    <a class="redirect" onclick="handleNavItemClick(this,'/zhaobiao/'+'zhongbiao')" >中标</a>
+                                </div>
+                                                            <div class="type-info-item">
+                                    <a class="redirect" onclick="handleNavItemClick(this,'/zhaobiao/'+'biangeng')" >变更</a>
+                                </div>
+                                                    </div>
+                        <div class="website-line"></div>
+                        <div class="industry-type">
+                            <div class="website-title">行业类型</div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="工程建筑" href="/zhaobiao/quanbuleixing/gongchengjianzhu.html"  >工程建筑</a>
+                                                                            <a class="industry-type-row-item" title="钢结构" href="/zhaobiao/quanbuleixing/gangjiegou.html" >钢结构</a>
+                                                                            <a class="industry-type-row-item" title="岩土工程" href="/zhaobiao/quanbuleixing/yantugongcheng.html" >岩土工程</a>
+                                                                            <a class="industry-type-row-item" title="土石方" href="/zhaobiao/quanbuleixing/tushifang.html" >土石方</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="水利水电" href="/zhaobiao/quanbuleixing/shuilishuidian.html"  >水利水电</a>
+                                                                            <a class="industry-type-row-item" title="水电站" href="/zhaobiao/quanbuleixing/shuidianzhan.html" >水电站</a>
+                                                                            <a class="industry-type-row-item" title="汽轮机" href="/zhaobiao/quanbuleixing/qilunji.html" >汽轮机</a>
+                                                                            <a class="industry-type-row-item" title="发电机组" href="/zhaobiao/quanbuleixing/fadianjizu.html" >发电机组</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="交通运输" href="/zhaobiao/quanbuleixing/jiaotongyunshu.html"  >交通运输</a>
+                                                                            <a class="industry-type-row-item" title="专用车" href="/zhaobiao/quanbuleixing/zhuanyongche.html" >专用车</a>
+                                                                            <a class="industry-type-row-item" title="电动机" href="/zhaobiao/quanbuleixing/diandongji.html" >电动机</a>
+                                                                            <a class="industry-type-row-item" title="巡逻车" href="/zhaobiao/quanbuleixing/xunluoche.html" >巡逻车</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="环保绿化" href="/zhaobiao/quanbuleixing/huanbaolvhua.html"  >环保绿化</a>
+                                                                            <a class="industry-type-row-item" title="环卫车辆" href="/zhaobiao/quanbuleixing/huanweicheliang.html" >环卫车辆</a>
+                                                                            <a class="industry-type-row-item" title="焚烧炉" href="/zhaobiao/quanbuleixing/fenshaolu.html" >焚烧炉</a>
+                                                                            <a class="industry-type-row-item" title="环卫设备" href="/zhaobiao/quanbuleixing/huanweishebei.html" >环卫设备</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="农林牧渔" href="/zhaobiao/quanbuleixing/nonglinmuyu.html"  >农林牧渔</a>
+                                                                            <a class="industry-type-row-item" title="化肥" href="/zhaobiao/quanbuleixing/huafei.html" >化肥</a>
+                                                                            <a class="industry-type-row-item" title="播种机" href="/zhaobiao/quanbuleixing/bozhongji.html" >播种机</a>
+                                                                            <a class="industry-type-row-item" title="割灌机" href="/zhaobiao/quanbuleixing/geguanji.html" >割灌机</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="通讯电子" href="/zhaobiao/quanbuleixing/tongxundianzi.html"  >通讯电子</a>
+                                                                            <a class="industry-type-row-item" title="通信产品" href="/zhaobiao/quanbuleixing/tongxinchanpin.html" >通信产品</a>
+                                                                            <a class="industry-type-row-item" title="光纤通信" href="/zhaobiao/quanbuleixing/guangqiantongxin.html" >光纤通信</a>
+                                                                            <a class="industry-type-row-item" title="接收机" href="/zhaobiao/quanbuleixing/jieshouji.html" >接收机</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="消防安防" href="/zhaobiao/quanbuleixing/xiaofanganfang.html"  >消防安防</a>
+                                                                            <a class="industry-type-row-item" title="监控安防" href="/zhaobiao/quanbuleixing/jiankonganfang.html" >监控安防</a>
+                                                                            <a class="industry-type-row-item" title="系统集成" href="/zhaobiao/quanbuleixing/xitongjicheng.html" >系统集成</a>
+                                                                            <a class="industry-type-row-item" title="楼宇对讲" href="/zhaobiao/quanbuleixing/louyuduijiang.html" >楼宇对讲</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="办公文教" href="/zhaobiao/quanbuleixing/bangongwenjiao.html"  >办公文教</a>
+                                                                            <a class="industry-type-row-item" title="会议桌" href="/zhaobiao/quanbuleixing/huiyizhuo.html" >会议桌</a>
+                                                                            <a class="industry-type-row-item" title="篮球架" href="/zhaobiao/quanbuleixing/lanqiujia.html" >篮球架</a>
+                                                                            <a class="industry-type-row-item" title="电子白板" href="/zhaobiao/quanbuleixing/dianzibaiban.html" >电子白板</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="其他" href="/zhaobiao/quanbuleixing/qita.html"  >其他</a>
+                                                                            <a class="industry-type-row-item" title="勘察设计" href="/zhaobiao/quanbuleixing/kanchesheji.html" >勘察设计</a>
+                                                                            <a class="industry-type-row-item" title="造价咨询" href="/zhaobiao/quanbuleixing/zaojiazixun.html" >造价咨询</a>
+                                                                            <a class="industry-type-row-item" title="废物利用" href="/zhaobiao/quanbuleixing/feijiuwuzi.html" >废物利用</a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="采购" href="/zhaobiao/quanbuleixing/caigou.html"  >采购</a>
+                                                                            <a class="industry-type-row-item" title="政府采购" href="/zhaobiao/quanbuleixing/zhengfucaigou.html" >政府采购</a>
+                                                                            <a class="industry-type-row-item" title="企业采购" href="/zhaobiao/quanbuleixing/qiyecaigou.html" >企业采购</a>
+                                                                            <a class="industry-type-row-item" title="" href="/zhaobiao/quanbuleixing/caigou.html" ></a>
+                                                                    </div>
+                                                            <div class="industry-type-row">
+                                    <a class="industry-type-row-item" title="商业服务" href="/zhaobiao/quanbuleixing/shnagyefuwu.html"  >商业服务</a>
+                                                                            <a class="industry-type-row-item" title="快递" href="/zhaobiao/quanbuleixing/kuaidi.html" >快递</a>
+                                                                            <a class="industry-type-row-item" title="广告" href="/zhaobiao/quanbuleixing/guanggao.html" >广告</a>
+                                                                            <a class="industry-type-row-item" title="翻译" href="/zhaobiao/quanbuleixing/fanyi.html" >翻译</a>
+                                                                    </div>
+                                                    </div>
+                        <div class="website-line"></div>
+                        <div class="sub-station">
+                            <div class="website-title">分站</div>
+                            <div class="sub-station-row">
+                                                                                                                <div class="sub-station-item"><a title="北京招标网" href="http://beijing.88zhaobiao.com" class="sub-station-item-text">北京招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="安徽招标网" href="http://anhui.88zhaobiao.com" class="sub-station-item-text">安徽招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="福建招标网" href="http://fujian.88zhaobiao.com" class="sub-station-item-text">福建招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="甘肃招标网" href="http://gansu.88zhaobiao.com" class="sub-station-item-text">甘肃招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="广东招标网" href="http://guangdong.88zhaobiao.com" class="sub-station-item-text">广东招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="广西招标网" href="http://guangxi.88zhaobiao.com" class="sub-station-item-text">广西招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="贵州招标网" href="http://guizhou.88zhaobiao.com" class="sub-station-item-text">贵州招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="海南招标网" href="http://hainan.88zhaobiao.com" class="sub-station-item-text">海南招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="河北招标网" href="http://hebei.88zhaobiao.com" class="sub-station-item-text">河北招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="河南招标网" href="http://henan.88zhaobiao.com" class="sub-station-item-text">河南招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="黑龙江招标网" href="http://heilongjiang.88zhaobiao.com" class="sub-station-item-text">黑龙江招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="湖北招标网" href="http://hubei.88zhaobiao.com" class="sub-station-item-text">湖北招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="湖南招标网" href="http://hunan.88zhaobiao.com" class="sub-station-item-text">湖南招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="吉林招标网" href="http://jilin.88zhaobiao.com" class="sub-station-item-text">吉林招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="江苏招标网" href="http://jiangsu.88zhaobiao.com" class="sub-station-item-text">江苏招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="江西招标网" href="http://jiangxi.88zhaobiao.com" class="sub-station-item-text">江西招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="辽宁招标网" href="http://liaoning.88zhaobiao.com" class="sub-station-item-text">辽宁招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="内蒙古招标网" href="http://neimenggu.88zhaobiao.com" class="sub-station-item-text">内蒙古招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="宁夏招标网" href="http://ningxia.88zhaobiao.com" class="sub-station-item-text">宁夏招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="青海招标网" href="http://qinghai.88zhaobiao.com" class="sub-station-item-text">青海招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="山东招标网" href="http://shandong.88zhaobiao.com" class="sub-station-item-text">山东招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="山西招标网" href="http://shanxi.88zhaobiao.com" class="sub-station-item-text">山西招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="陕西招标网" href="http://sx.88zhaobiao.com" class="sub-station-item-text">陕西招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="上海招标网" href="http://shanghai.88zhaobiao.com" class="sub-station-item-text">上海招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="四川招标网" href="http://sichuan.88zhaobiao.com" class="sub-station-item-text">四川招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="天津招标网" href="http://tianjin.88zhaobiao.com" class="sub-station-item-text">天津招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="西藏招标网" href="http://xizang.88zhaobiao.com" class="sub-station-item-text">西藏招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="新疆招标网" href="http://xinjiang.88zhaobiao.com" class="sub-station-item-text">新疆招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="云南招标网" href="http://yunnan.88zhaobiao.com" class="sub-station-item-text">云南招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="浙江招标网" href="http://zhejiang.88zhaobiao.com" class="sub-station-item-text">浙江招标网</a></div>
+                                                                                                                                                    <div class="sub-station-item"><a title="重庆招标网" href="http://chongqing.88zhaobiao.com" class="sub-station-item-text">重庆招标网</a></div>
+                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                        </div>
+                        <div class="website-line"></div>
+                        <div class="qr-code">
+                            <div class="qr-code-item">
+                                <img src="https://cdn.88zhaobiao.com/images/bidding-download.png" class="code"/>
+                                <div class="qr-code-btn">下载招标APP</div>
+                            </div>
+                            <div class="qr-code-item">
+                                <img src="http://cdn.88zhaobiao.com/images/Lark20201110-185155.jpeg" class="code"/>
+                                <div class="qr-code-btn">关注公众号</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-nav-item"><a class="block-right-link to-center"     >我的订阅</a></div>
+            <div class="menu-nav-item"><a class="block-right-link to-center"     >我的收藏</a></div>
+            <div class="menu-nav-item app-download-block">
+                <span class="phone"></span>
+                <a href="javascript:;">APP下载</a>
+                <div class="app-download-image">
+                    <img src="https://cdn.88zhaobiao.com/images/bidding-download.png" alt="鱼泡招标" title="鱼泡招标">
+                </div>
+            </div>
+
+
+                                <div class="login-reg-box">
+                        <div class="login-reg-btn login-btn" onclick="openLoginModel()">登录</div>
+                        <div class="login-reg-btn register-btn" onclick="openRegModel()">免费注册</div>
+                    </div>
+            
+
+        </div>
+    </div>
+</header>
+
+<div class="logo-search">
+    <a href="/" target="_self" class="logo">
+        <div class="logo-img"></div>
+    </a>
+    <div class="search-box">
+        <img src="/images/home/ic_search.png" width="16" height="16" class="search-icon">
+        <input class="search"   placeholder="请输入招投标项目关键词，如“工程”"/>
+        <div class="btn" onclick="searchKeyWords()">搜索</div>
+    </div>
+</div>
+
+<div class="nav-bar" id="my-nav-bar">
+    <div class="nav-row">
+        <a  onclick="handleNavItemClick(this,'/')" id = 'nav-row-1' data-url="/" class="header-nav-item ">首页</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao')" id = 'nav-row-2' data-url="zhaobiao.html" class="header-nav-item">工程招标</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao/zhaobiaocaigou')"  id = 'nav-row-3' data-url="zhaobiaocaigou"  class="header-nav-item">招标采购</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao/yugao')" id = 'nav-row-4' data-url="yugao" class="header-nav-item ">预告</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao/zhongbiao')" id = 'nav-row-5' data-url="zhongbiao" class="header-nav-item">中标</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao/gonggao')"  id = 'nav-row-6' data-url="gonggao" class="header-nav-item">公告</a>
+        <a  onclick="handleNavItemClick(this,'/zhaobiao/biangeng')" id = 'nav-row-7' data-url="biangeng"  class="header-nav-item">变更</a>
+    </div>
+</div>
+
+<div class="out-mask">
+    <div class="out-model">
+        <div class="model-row">
+            <div class="model-title">
+                提示
+            </div>
+            <div class="model-text">
+                确定退出当前帐户？
+            </div>
+            <div class="model-btn-box">
+                <div class="model-btn cancel-btn" onclick="closeModel('cancel')">取消</div>
+                <div class="model-btn confirm-btn" onclick="closeModel('confirm')">确认</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="login-register-mask" style="display: none;">
+    <div class="login-regest-inner">
+        <div class="left"></div>
+        <div class="top-block"></div>
+        <div class="bottom-block"></div>
+        <div class="right">
+            <span class="clsoe">关闭</span>
+            <!-- 验证码登录 -->
+            <div class="code-login" style="display:block">
+                <h1>工程招标</h1>
+                <div class="content">
+                    <div class="phone">
+                        <p>手机号</p>
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="11" placeholder="请输入手机号" value="">
+                    </div>
+                    <div class="code-login-code">
+                        <p>验证码</p>
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="6" placeholder="请输入验证码" value="">
+                        <button class="get-code">获取验证码</button>
+                    </div>
+                    <p class="accout-login">账号登录</p>
+                    <button class="login">登录</button>
+                    <p class="register">免费注册</p>
+                </div>
+            </div>
+            <!-- //账号登录 -->
+            <div class="accout-login">
+                <h1>工程招标</h1>
+                <div class="content">
+                    <div class="phone">
+                        <p>账号</p>
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="11" placeholder="请输入账号/手机号"
+                               value="">
+                    </div>
+                    <div class="password">
+                        <p>请输入密码</p>
+                        <input type="password" maxlength="15" placeholder="请输入的密码" value="">
+                    </div>
+                    <p class="free-register">免费注册</p>
+                    <p class="forget-password-text">忘记密码?</p>
+                    <button class="login">登录</button>
+                    <p class="code-login-text">手机验证码登录</p>
+                </div>
+            </div>
+            <!-- 忘记密码 -->
+            <div class="forget-password" style="display: none;">
+                <h1>忘记密码</h1>
+                <div class="content">
+                    <div class="forget-phone">
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="11" placeholder="请输入手机号" value="">
+                    </div>
+                    <div class="forget-code">
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="6" placeholder="请输入验证码" value="">
+                        <button class="get-forget-code">获取验证码</button>
+                    </div>
+                    <div class="password-input">
+                        <input type="password" placeholder="请输入新密码" value="">
+                    </div>
+                    <button class="forget-submit">确定</button>
+                    <p class="go-login">去登录</p>
+                </div>
+            </div>
+            <!-- 注册 -->
+            <div class="register-block" style="display: none;">
+                <h1>欢迎您免费注册工程招标<br/>成为会员免费看所有招投标信息</h1>
+                <div class="content">
+                    <div class="register-phone">
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="11" placeholder="请输入手机号" value="">
+                    </div>
+                    <div class="register-code">
+                        <input type="text" oninput="value=value.replace(/[^\d]/g,'')" maxlength="6" placeholder="请输入验证码" value="">
+                        <button class="get-register-code">获取验证码</button>
+                    </div>
+                    <div class="register-input">
+                        <input type="password" placeholder="请输入密码" value="">
+                    </div>
+                    <button class="register-submit">注册</button>
+                    <p class="go-login">去登录</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="invate-mask">
+    <div class="right">
+        <img src="https://cdn.88zhaobiao.com/images/bidding-download.png" alt="鱼泡招标" title="鱼泡招标">
+        <p>下载鱼泡招标APP</p>
+        <div class="close">
+            
+        </div>
+    </div>
+</div>
+<script>
+// var _hmt = _hmt || [];
+// (function() {
+//   var hm = document.createElement("script");
+//   hm.src = "https://hm.baidu.com/hm.js?271ba72432ebbdbece8628c036b60b60";
+//   var s = document.getElementsByTagName("script")[0]; 
+//   s.parentNode.insertBefore(hm, s);
+// })();
+// </script>
+<!-- //百度统计 -->
+<script src="https://hm.baidu.com/hm.js?5cd51e82dcfad05416f1a612001f9820"></script>
+<script src="/js/frontend/pageHeader/index.js"></script>
+<script src="/js/frontend/person/js/login-register.js"></script><body>
+
+<div class="details">
+  <div class="bread">
+
+
+    <a href="/">首页</a> >
+    <a title="工程招标" href="javascript:;" onclick="headerClassifyChange('')">工程招标</a>>
+
+    <a title="工程招标" href="javascript:;" onclick="headerClassifyChange('')">市政工程</a>
+
+            <a>信息详情</a>
+
+
+
+  </div>
+  <div class="details-box">
+    <div class="details-left">
+      <div class="details-info">
+        <div class="details-info-row">
+          <div class="details-title">
+            新疆维吾尔自治区人民医院医疗耗材二次采购项目          </div>
+          <div class="details-data">
+            <div class="details-label">
+              <div class="details-label-item"> 新疆</div>
+              <div class="details-label-item">公告</div>
+              <div class="details-label-item">市政工程</div>
+            </div>
+            <div class="details-time-share">
+              <div class="details-time-share-item">
+                发布时间：2021-10-14              </div>
+              <div class="details-time-share-item">
+
+              </div>
+              <div class="details-time-share-item" onclick="collect()">
+                                  <img src="/images/home/ic_not_collected.png" width="12" height="12" class="details-data-icon">
+                                  收藏
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-content">
+        <div class="details-content-row"><div class="vF_detail_main">
+
+
+<div class="table">
+
+<table bgcolor="" border="0" cellspacing="1" style="text-align:left;" width="600">
+<tr><td colspan="4"><b>公告信息：</b></td></tr>
+<tr>
+<td class="title" width="128">采购项目名称</td>
+<td colspan="3" width="430">新疆维吾尔自治区人民医院医疗耗材二次采购项目</td>
+</tr>
+<tr>
+<td class="title">品目</td>
+<td colspan="3"><p>货物/专用设备/医疗设备/其他医疗设备</p></td>
+</tr>
+<tr>
+<td class="title">采购单位</td>
+<td colspan="3">新疆维吾尔自治区人民医院</td>
+</tr>
+<tr>
+<td class="title">行政区域</td>
+<td width="168">新疆维吾尔自治区</td>
+<td class="title" width="128">公告时间</td>
+<td width="168">2021年10月13日  22:50</td>
+</tr>
+<tr>
+<td class="title">开标时间</td>
+<td colspan="3">2021年10月19日  11:00</td>
+</tr>
+<tr>
+<td class="title">预算金额</td>
+<td colspan="3">￥20.322600万元（人民币）</td>
+</tr>
+<tr><td colspan="4"><b>联系人及联系方式：</b></td></tr>
+<tr>
+<td class="title">项目联系人</td>
+<td colspan="3">张贤吉</td>
+</tr>
+<tr>
+<td class="title">项目联系电话</td>
+<td colspan="3"><span style="color:red;">****</span>转8007</td>
+</tr>
+<tr>
+<td class="title" width="128">采购单位</td>
+<td colspan="3" width="430">新疆维吾尔自治区人民医院</td>
+</tr>
+<tr>
+<td class="title">采购单位地址</td>
+<td colspan="3">新疆乌鲁木齐市天池路91号</td>
+</tr>
+<tr>
+<td class="title">采购单位联系方式</td>
+<td colspan="3">黄老师 <span style="color:red;">****</span></td>
+</tr>
+<tr>
+<td class="title">代理机构名称</td>
+<td colspan="3">新疆同孚招投标有限公司</td>
+</tr>
+<tr>
+<td class="title">代理机构地址</td>
+<td colspan="3">乌鲁木齐市友好北路宏运大厦17楼G座</td>
+</tr>
+<tr>
+<td class="title">代理机构联系方式</td>
+<td colspan="3">张贤吉 <span style="color:red;">****</span>转8007</td>
+</tr>
+</table>
+</div>
+
+<div class="vF_detail_content_container">
+<div class="vF_detail_content">
+<p>　　新疆同孚招投标有限公司受新疆维吾尔自治区人民医院 委托，根据《中华人民共和国政府采购法》等有关规定，现对新疆维吾尔自治区人民医院医疗耗材二次采购项目进行其他招标，欢迎合格的供应商前来投标。</p>
+<p> </p>
+<p><strong>项目名称：</strong>新疆维吾尔自治区人民医院医疗耗材二次采购项目</p>
+<p><strong>项目编号：</strong>XJTF(YJ)2021ZF79</p>
+<p><strong>项目联系方式：</strong></p>
+<p>项目联系人：张贤吉</p>
+<p>项目联系电话：<span style="color:red;">****</span>转8007</p>
+<p> </p>
+<p><strong>采购单位联系方式：</strong></p>
+<p>采购单位：新疆维吾尔自治区人民医院</p>
+<p>采购单位地址：新疆乌鲁木齐市天池路91号</p>
+<p>采购单位联系方式：黄老师 <span style="color:red;">****</span></p>
+<p> </p>
+<p></p>
+<p><strong>代理机构联系方式：</strong></p>
+<p>代理机构：新疆同孚招投标有限公司</p>
+<p>代理机构联系人：张贤吉 <span style="color:red;">****</span>转8007</p>
+<p>代理机构地址： 乌鲁木齐市友好北路宏运大厦17楼G座</p>
+<p></p>
+<p> </p>
+<p><strong>一、采购项目内容</strong></p>
+<p></p>
+<p align="center" style="text-align:center;"> </p>
+<table border="0" cellpadding="0" cellspacing="0" style="width:652px;margin-left:-15.9pt;border-collapse:collapse;" width="815"> <tbody> <tr style="height:30px;"> <td colspan="7" nowrap="" style="width:567px;border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:30px;"> <p align="center" style="text-align:center;">第一包 心内科导引导丝参数（进口）</p> </td> <td nowrap="" style="width:29px;padding:0cm 5.4pt 0cm 5.4pt;height:30px;"> </td> <td style="width:57px;padding:0cm 5.4pt 0cm 5.4pt;height:30px;vertical-align:top;"> <p align="center" style="text-align:center;"> </p> </td> </tr> <tr style="height:44px;"> <td nowrap="" style="width:29px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">序号</p> </td> <td nowrap="" style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">产品名称</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">型号</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">单位</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">产品性能结构及组成</p> </td> <td style="width:170px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">注册证适用范围</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">最高限制单价（元）</p> </td> <td nowrap="" style="width:29px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">数量</p> </td> <td style="width:57px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">预算金额（元）</p> </td> </tr> <tr style="height:184px;"> <td nowrap="" style="width:29px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">1</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">导引导丝</p> </td> <td style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">各号</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">根</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="left">产品包括导引导丝和延长导丝。导引导丝由不锈钢芯丝和绕丝组成，总长度为190厘米或300厘米。芯丝的近端具有PTFE涂层，远端附有绕丝。不同型号规格导引导丝的绕丝长度不同。绕丝由两种材料组成，近端为不锈钢，头端为铂金/镍，作为不透射线头端。绕丝部分涂有亲水涂层，辅助通过血管。延长导丝是不锈钢导丝，不接触患者。产品经环氧乙烷灭菌，一次性使用</p> </td> <td style="width:170px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="left">适用于经皮腔内冠状动脉成形术(PTCA)或其他血管介入术期间帮助放置球囊扩张导管或其他介入治疗器械，不可用于脑血管系统。延长导丝可用于连接至Boston Scientific的可延伸导引导丝上，以更换经皮腔内冠状动脉成形术 (PTCA) 或经皮腔内血管成形术 (PTA) 导管，而无需从动脉中取出原有导引导丝</p> </td> <td nowrap="" style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">1170</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">10根</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:184px;"> <p align="center" style="text-align:center;">11700</p> </td> </tr> <tr style="height:154px;"> <td nowrap="" style="width:29px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">2</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">导引导丝</p> </td> <td style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">各号</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">根</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="left">由不锈钢芯丝和绕丝组成，总长度为190厘米或300厘米。芯丝的近端具有PTFE涂层，远端附有绕丝。绕丝由两种材料组成，近端为不锈钢，头端为铂金/镍，作为不透射线头端。导丝绕丝部分涂有亲水涂层，辅助通过血管。本产品经环氧乙烷灭菌，一次性使用</p> </td> <td style="width:170px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="left">适用于在经皮腔内冠状动脉成形术(PTCA)或其他血管介入术期间帮助放置球囊扩张导管或其他介入治疗器械，不可用于脑血管系统</p> </td> <td nowrap="" style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">1170</p> </td> <td nowrap="" style="width:29px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">10根</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:154px;"> <p align="center" style="text-align:center;">11700</p> </td> </tr> <tr style="height:28px;"> <td colspan="2" nowrap="" style="width:76px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:28px;"> <p align="center" style="text-align:center;">合计</p> </td> <td colspan="7" style="width:577px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:28px;"> <p align="center" style="text-align:center;">23400元</p> </td> </tr> </tbody>
+</table>
+<p> </p>
+<p style="line-height:17.4pt;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;"> </p>
+<p> </p>
+<p style="line-height:17.4pt;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;"> </p>
+<table border="0" cellpadding="0" cellspacing="0" style="width:615px;margin-left:-15.9pt;border-collapse:collapse;" width="768"> <tbody> <tr style="height:30px;"> <td colspan="7" nowrap="" style="width:530px;border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:30px;"> <p align="center" style="text-align:center;">第二包 心内科压力微导管产品参数（国产）</p> </td> <td nowrap="" style="width:30px;padding:0cm 5.4pt 0cm 5.4pt;height:30px;"> </td> <td style="width:57px;padding:0cm 5.4pt 0cm 5.4pt;height:30px;vertical-align:top;"> <p align="center" style="text-align:center;"> </p> </td> </tr> <tr style="height:44px;"> <td nowrap="" style="width:30px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">序号</p> </td> <td nowrap="" style="width:56px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">产品名称</p> </td> <td nowrap="" style="width:39px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">型号</p> </td> <td nowrap="" style="width:30px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">单位</p> </td> <td style="width:102px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">产品性能结构及组成</p> </td> <td style="width:198px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">注册证适用范围</p> </td> <td style="width:76px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">最高限制单价（元）</p> </td> <td nowrap="" style="width:30px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;"> <p align="center" style="text-align:center;">数量</p> </td> <td style="width:57px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:44px;vertical-align:top;"> <p align="center" style="text-align:center;">预算金额（元）</p> </td> </tr> <tr style="height:140px;"> <td nowrap="" style="width:30px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">1</p> </td> <td nowrap="" style="width:56px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">压力微导管</p> </td> <td nowrap="" style="width:39px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">各号</p> </td> <td nowrap="" style="width:30px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">根</p> </td> <td style="width:102px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">该产品由远端组件，近端组件，去应力管，针座，线缆组件组成。</p> </td> <td style="width:198px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="left">该产品在冠状动脉血管造影术和（或）介入手术中<br/>			测量成人患者冠状动脉病变血管的压力，适用于冠状动脉血管造影目测为中度狭窄（直径狭窄30%到70%）且狭窄段参考血管直径≥2.5mm的原发病变，在医疗机构中供具有资质和经验且培训合格的医技人员使用。</p> </td> <td nowrap="" style="width:76px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">16800</p> </td> <td nowrap="" style="width:30px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">5根</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:140px;"> <p align="center" style="text-align:center;">84000</p> </td> </tr> <tr style="height:21px;"> <td colspan="2" nowrap="" style="width:86px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:21px;"> <p align="center" style="text-align:center;">合计</p> </td> <td colspan="7" nowrap="" style="width:530px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:21px;"> <p align="center" style="text-align:center;">84000元</p> </td> </tr> </tbody>
+</table>
+<p style="line-height:17.4pt;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;"> </p>
+<p style="line-height:17.4pt;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;"> </p>
+<p> </p>
+<p> </p>
+<table border="0" cellpadding="0" cellspacing="0" style="width:568px;border-collapse:collapse;" width="710"> <tbody> <tr style="height:40px;"> <td colspan="8" nowrap="" style="width:521px;padding:.6pt .6pt 0cm .6pt;height:40px;"> <p align="center" style="text-align:center;">第四包 药学部一次性针头过滤器等耗材参数（进口）</p> </td> <td style="width:47px;padding:0cm 0cm 0cm 0cm;height:40px;vertical-align:top;"> <p align="center" style="text-align:center;"> </p> </td> </tr> <tr style="height:60px;"> <td style="width:36px;border:solid windowtext 1.0pt;border-right:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">序号</p> </td> <td style="width:59px;border:1pt solid windowtext;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;padding:0.6pt 0.6pt 0cm;height:60px;"> <p align="center" style="text-align:center;">产品名称</p> </td> <td style="width:19px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">单位</p> </td> <td style="width:38px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">产品型号</p> </td> <td style="width:57px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">注册证适用范围</p> </td> <td style="width:208px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">产品性能结构方式及组成</p> </td> <td style="width:47px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">最高限价（元）</p> </td> <td style="width:57px;border:solid windowtext 1.0pt;border-left:none;padding:.6pt .6pt 0cm .6pt;height:60px;"> <p align="center" style="text-align:center;">数量</p> </td> <td style="width:47px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 0cm 0cm 0cm;height:60px;"> <p align="center" style="text-align:center;">预算金额（元）</p> </td> </tr> <tr style="height:158px;"> <td style="width:36px;border:solid windowtext 1.0pt;border-top:none;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">1</p> </td> <td style="width:59px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">一次性针头过滤器</p> </td> <td style="width:19px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">支</p> </td> <td style="width:38px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">13mm</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">分析仪器耗材</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p>直径  13mm <br/>			形式   Minispike注射器式滤器  <br/>			滞带体积  <14μL <br/>			外壳  聚丙烯<br/>			孔径  0.2μm <br/>			样品体积   <10mL  <br/>			分离模式   水相  <br/>			溶剂/样品兼容  GHP</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">13.2</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:158px;"> <p align="center" style="text-align:center;">5000支</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm;height:158px;"> <p align="center" style="text-align:center;">66000</p> </td> </tr> <tr style="height:103px;"> <td style="width:36px;border:solid windowtext 1.0pt;border-top:none;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">2</p> </td> <td style="width:59px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">微孔过滤膜</p> </td> <td style="width:19px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">张</p> </td> <td style="width:38px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">47mm</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">分析仪器耗材</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p>直径  47mm<br/>			形式：溶剂过滤器 <br/>			孔径  0.2μm    <br/>			分离模式   水相  <br/>			溶剂/样品兼容  GHP</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">35.8</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:103px;"> <p align="center" style="text-align:center;">300张</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm;height:103px;"> <p align="center" style="text-align:center;">10740</p> </td> </tr> <tr style="height:156px;"> <td style="width:36px;border:solid windowtext 1.0pt;border-top:none;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">3</p> </td> <td style="width:59px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;"> 色谱柱</p> </td> <td style="width:19px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">支</p> </td> <td style="width:38px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">各号</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">分析仪器耗材</p> </td> <td style="width:208px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="left">配基密度   3.1μmol/㎡        碳载量      18%               封瑞类型    专利封瑞           UPS分类号    L1               pH范围       1-12             温度限制   LowpH=80℃<br/>			           High pH=60℃                   表面积     185㎡/g</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">9543</p> </td> <td style="width:57px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:156px;"> <p align="center" style="text-align:center;">2支</p> </td> <td style="width:47px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm;height:156px;"> <p align="center" style="text-align:center;">19086</p> </td> </tr> <tr style="height:35px;"> <td colspan="2" style="width:95px;border:solid windowtext 1.0pt;border-top:none;padding:.6pt .6pt 0cm .6pt;height:35px;"> <p align="center" style="text-align:center;">合计</p> </td> <td colspan="7" style="width:473px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.6pt .6pt 0cm .6pt;height:35px;"> <p align="center" style="text-align:center;">95826元</p> </td> </tr> </tbody>
+</table>
+<p> </p>
+<p> </p>
+<p><strong>二、开标时间：</strong>2021年10月19日 11:00</p>
+<p> </p>
+<p><strong>三、其它补充事宜</strong></p>
+<p></p>
+<p align="left" style="text-align:left;text-indent:12.0pt;line-height:17.4pt;background:white;"><a name="_GoBack">1</a>、获取议价文件时间：</p>
+<p align="left" style="text-align:left;text-indent:24.0pt;line-height:17.4pt;background:white;">报名时间：2021年10月14日至2021年10月18日（周六、周日及节假日除外）工作时间：上午10：30-13：30；下午15：30-18：30</p>
+<p align="left" style="text-align:left;text-indent:12.0pt;line-height:17.4pt;background:white;">2、获取议价文件方式：</p>
+<p align="left" style="text-align:left;text-indent:24.0pt;line-height:17.4pt;background:white;">请将完整报名信息发送至邮箱<span style="color:red;">****</span>，投标人应对所提供信息的真实性、合规性负责。报名资料不齐全或不符合报名要求的，报名将被拒绝。<strong>（报名信息：</strong><strong>投标人公司名称、法定代表人姓名、公司详细地址、所投项目名称、所投项目编号、所投内容名称、联系人、联系电话及QQ邮箱号）</strong></p>
+<p align="left" style="text-align:left;text-indent:12.0pt;line-height:17.4pt;background:white;">3、议价时间、地点</p>
+<p align="left" style="text-align:left;text-indent:24.0pt;line-height:17.4pt;background:white;">议价时间：2021年10月19日上午11：00（北京时间）</p>
+<p align="left" style="text-align:left;text-indent:24.0pt;line-height:17.4pt;background:white;">议价地点：乌鲁木齐市人民路38号新宏信大厦7楼新疆同孚招投标有限公司开标一厅</p>
+<p> </p>
+<p><strong>四、预算金额：</strong></p>
+<p>预算金额：20.<span style="color:red;">****</span> 万元（人民币）</p>
+<p> </p> <p> </p>
+<p></p>
+</div>
+</div>
+
+</div>
+</div>
+      </div>
+
+
+      
+      <div class="details-btn " onclick="openLoginModel()"  >查看完整信息</div>
+
+      
+    </div>
+    <div class="details-right">
+
+                        <img class="list-vip-banner"   data-link = ""   data-type = "0"  src="http://cdn.88zhaobiao.com/files/470a10ac6c76e0d456cebe1754b124b6.jpeg" width="280" height="220">
+              
+      <div class="category-tour">
+        <div class="tour-title">推荐招标信息</div>
+        <div class="tour-content">
+
+                                    <a class="tour-content-item" href="/328211016000148173.html" title="奇台县人工影响天气办公室奇台县人影办山区固态降水监测站采购项目单一来源采购公示" >
+                <span class="tour-content-item-label-blue">[推荐]</span>奇台县人工影响天气办公室奇台县人影办山区固态降水监测站采购项目单一来源采购公示
+              </a>
+                          <a class="tour-content-item" href="/980211016000131230.html" title="库尔勒市公安局库尔勒市交通安全基础设施改造升级项目更正公告" >
+                <span class="tour-content-item-label-blue">[推荐]</span>库尔勒市公安局库尔勒市交通安全基础设施改造升级项目更正公告
+              </a>
+                          <a class="tour-content-item" href="/765211016000129411.html" title="指挥中心建设项目-招标公告" >
+                <span class="tour-content-item-label-blue">[推荐]</span>指挥中心建设项目-招标公告
+              </a>
+                          <a class="tour-content-item" href="/294211016000121084.html" title="新疆宏力源工程项目管理有限公司关于阿图什市帕米尔牧业示范园（柯尔克孜羊良繁中心）建设项目采购种羊部分的更正公告" >
+                <span class="tour-content-item-label-blue">[推荐]</span>新疆宏力源工程项目管理有限公司关于阿图什市帕米尔牧业示范园（柯尔克孜羊良繁中心）建设项目采购种羊部分的更正公告
+              </a>
+                          <a class="tour-content-item" href="/746211016000116213.html" title="河南宏业建设管理股份有限公司关于和田县困难群众救助米、面、油物资采购项目的中标(成交)结果公告" >
+                <span class="tour-content-item-label-blue">[推荐]</span>河南宏业建设管理股份有限公司关于和田县困难群众救助米、面、油物资采购项目的中标(成交)结果公告
+              </a>
+                          <a class="tour-content-item" href="/671211016000115836.html" title="达坂城区2021年天山和阿尔泰山森林草原保护项目监理成交公告" >
+                <span class="tour-content-item-label-blue">[推荐]</span>达坂城区2021年天山和阿尔泰山森林草原保护项目监理成交公告
+              </a>
+                      
+        </div>
+        <div class="tour-content-more" onclick="typeChange('')">
+          更多信息
+        </div>
+      </div>
+      <div class="category-tour">
+        <div class="tour-title">最新招标信息</div>
+        <div class="tour-content">
+
+                                    <a class="tour-content-item"  href="/119211016092522306.html" title="黄陂区府河开闭所10KV电力线路通道配套工程（二次招标）（第一标段）"><span class="tour-content-item-label-yellow" >[推荐]</span>黄陂区府河开闭所10KV电力线路通道配套工程（二次招标）（第一标段）
+              </a>
+                          <a class="tour-content-item"  href="/499211016092505271.html" title="桑植县X059（夹石河～河口）公路升级改造工程初步设计招标"><span class="tour-content-item-label-yellow" >[推荐]</span>桑植县X059（夹石河～河口）公路升级改造工程初步设计招标
+              </a>
+                          <a class="tour-content-item"  href="/738211016054601670.html" title="霍山县采购文件ZFCG-2021-085霍山县淠河两岸控制性详细规划和城市设计及城区竖向专项规划采购项目"><span class="tour-content-item-label-yellow" >[推荐]</span>霍山县采购文件ZFCG-2021-085霍山县淠河两岸控制性详细规划和城市设计及城区竖向专项规划采购项目
+              </a>
+                          <a class="tour-content-item"  href="/326211016054600369.html" title="霍山县中标通知书ZFCG-2021-075新冠肺炎疫情防控应急物资采购项目（第一包）中标通知书"><span class="tour-content-item-label-yellow" >[推荐]</span>霍山县中标通知书ZFCG-2021-075新冠肺炎疫情防控应急物资采购项目（第一包）中标通知书
+              </a>
+                          <a class="tour-content-item"  href="/421211016054559282.html" title="霍山县中标通知书ZFCG-2021-075新冠肺炎疫情防控应急物资采购项目（第二包）中标通知书"><span class="tour-content-item-label-yellow" >[推荐]</span>霍山县中标通知书ZFCG-2021-075新冠肺炎疫情防控应急物资采购项目（第二包）中标通知书
+              </a>
+                          <a class="tour-content-item"  href="/177211016054558960.html" title="霍山县中标通知书ZFCG-2021-080霍山县政务公开专区建设项目中标通知书"><span class="tour-content-item-label-yellow" >[推荐]</span>霍山县中标通知书ZFCG-2021-080霍山县政务公开专区建设项目中标通知书
+              </a>
+                      
+        </div>
+        <div class="tour-content-more" onclick="typeChange('')">
+          更多信息
+        </div>
+      </div>
+      <div class="category-tour">
+        <div class="tour-title">推荐行业信息</div>
+        <div class="tour-content">
+
+                                    <a class="tour-content-item" href="/120211015143022537.html"  onclick="getDetail(this)">迪庆州德钦县2021年后期扶持项目-乌弄龙水电站库区燕门乡移民集中安置区移民商铺及附属工程建设项目              </a>
+                          <a class="tour-content-item" href="/269211016054546007.html"  onclick="getDetail(this)">大丰区农村生活污水管网建设工程3标段（新丰镇裕北村、裕南村）              </a>
+                      
+        </div>
+        <div class="tour-content-more" onclick="typeChange('')">
+          更多信息
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="details-des">
+    页面说明：全国鱼泡工程招标网平台融合市政工程公告工程招标网、市政工程公告建设工程招标网、市政工程公告建筑工程招标、市政工程公告招标采购
+    导航网等招标网站，为你提供专业的工程招标信息查询服务。
+  </div>
+</div>
+
+
+<head>
+    <link rel="stylesheet" href="/css/frontend/pageFooter/index.css">
+</head>
+<div class="footer">
+    <div class="footer-row">
+        <div class="link" >友情链接：
+                            <a href="http://beijing.88zhaobiao.com" title="北京招标网" > 北京招标网</a>  |
+                            <a href="http://anhui.88zhaobiao.com" title="安徽招标网" > 安徽招标网</a>  |
+                            <a href="http://fujian.88zhaobiao.com" title="福建招标网" > 福建招标网</a>  |
+                            <a href="http://gansu.88zhaobiao.com" title="甘肃招标网" > 甘肃招标网</a>  |
+                            <a href="http://guangdong.88zhaobiao.com" title="广东招标网" > 广东招标网</a>  |
+                            <a href="http://guangxi.88zhaobiao.com" title="广西招标网" > 广西招标网</a>  |
+                            <a href="http://guizhou.88zhaobiao.com" title="贵州招标网" > 贵州招标网</a>  |
+                            <a href="http://hainan.88zhaobiao.com" title="海南招标网" > 海南招标网</a>  |
+                            <a href="http://hebei.88zhaobiao.com" title="河北招标网" > 河北招标网</a>  |
+                            <a href="http://henan.88zhaobiao.com" title="河南招标网" > 河南招标网</a>  |
+                            <a href="http://heilongjiang.88zhaobiao.com" title="黑龙江招标网" > 黑龙江招标网</a>  |
+                            <a href="http://hubei.88zhaobiao.com" title="湖北招标网" > 湖北招标网</a>  |
+                            <a href="http://hunan.88zhaobiao.com" title="湖南招标网" > 湖南招标网</a>  |
+                            <a href="http://jilin.88zhaobiao.com" title="吉林招标网" > 吉林招标网</a>  |
+                            <a href="http://jiangsu.88zhaobiao.com" title="江苏招标网" > 江苏招标网</a>  |
+                            <a href="http://jiangxi.88zhaobiao.com" title="江西招标网" > 江西招标网</a>  |
+                            <a href="http://liaoning.88zhaobiao.com" title="辽宁招标网" > 辽宁招标网</a>  |
+                            <a href="http://neimenggu.88zhaobiao.com" title="内蒙古招标网" > 内蒙古招标网</a>  |
+                            <a href="http://ningxia.88zhaobiao.com" title="宁夏招标网" > 宁夏招标网</a>  |
+                            <a href="http://qinghai.88zhaobiao.com" title="青海招标网" > 青海招标网</a>  |
+                            <a href="http://shandong.88zhaobiao.com" title="山东招标网" > 山东招标网</a>  |
+                            <a href="http://shanxi.88zhaobiao.com" title="山西招标网" > 山西招标网</a>  |
+                            <a href="http://sx.88zhaobiao.com" title="陕西招标网" > 陕西招标网</a>  |
+                            <a href="http://shanghai.88zhaobiao.com" title="上海招标网" > 上海招标网</a>  |
+                            <a href="http://sichuan.88zhaobiao.com" title="四川招标网" > 四川招标网</a>  |
+                            <a href="http://tianjin.88zhaobiao.com" title="天津招标网" > 天津招标网</a>  |
+                            <a href="http://xizang.88zhaobiao.com" title="西藏招标网" > 西藏招标网</a>  |
+                            <a href="http://xinjiang.88zhaobiao.com" title="新疆招标网" > 新疆招标网</a>  |
+                            <a href="http://yunnan.88zhaobiao.com" title="云南招标网" > 云南招标网</a>  |
+                            <a href="http://zhejiang.88zhaobiao.com" title="浙江招标网" > 浙江招标网</a>  |
+                            <a href="http://chongqing.88zhaobiao.com" title="重庆招标网" > 重庆招标网</a>  |
+                            <a href="http://xianggang.88zhaobiao.com" title="香港招标网" > 香港招标网</a>  |
+                            <a href="http://aomen.88zhaobiao.com" title="澳门招标网" > 澳门招标网</a>  |
+                            <a href="http://taiwan.88zhaobiao.com" title="台湾招标网" > 台湾招标网</a>  |
+                            <a href="http://guowai.88zhaobiao.com" title="国外招标网" > 国外招标网</a>  |
+                    </div>
+        <div class="info">
+            <span>成都鱼泡科技有限公司</span>
+            <span><a style="color: #fff" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蜀ICP备17030551号-5</a></span>
+            <span>川公网安备51019002003850</span>
+            <span>联系电话：400-838-1888</span>
+            <span>公司地址：四川省成都市天府软件园G5</span>
+        </div>
+
+        <div>合作网站：<a style="color: #fff" href="http://www.yupaowang.com/" target="_blank">鱼泡网</a> <a style="color: #fff" href="http://www.zhaogongdi.com/" target="_blank">鱼泡机械网</a></div>
+    </div>
+    <div class="iq-imgs">
+        <div class="iq-item">
+            <img src="https://cdn.88zhaobiao.com/images/bidding-download.png" alt="鱼泡招标" title="鱼泡招标">
+            <p>下载招标APP</p>
+        </div>
+        <div class="iq-item">
+            <img src="http://cdn.88zhaobiao.com/images/Lark20201110-185155.jpeg" alt="鱼泡招标" title="鱼泡招标">
+            <p>关注公众号</p>
+        </div>
+    </div>
+</div>
+<script src="/js/frontend/pageFooter/index.js"></script>
+<script>
+   //点击右侧图片跳转
+   $(".details-box .details-right .list-vip-banner").click(function(){
+    if(! Cookies.get('access_token'))return  openLoginModel();
+    //拼接跳转的链接
+    window.location.href= location.origin + '/center/members.html'
+    
+  })
+
+  function openCenterMember() {
+
+    window.location.href = '/center/members.html'
+  }
+  function collect(is_collect) {
+    var url = "/api/v1/user/3466440/favorites/"
+    var msg = "收藏成功";
+    if (is_collect) {
+      url += "cancel";
+      msg = "取消收藏"
+    } else {
+      url += 'confirm';
+    }
+    bidRequest.requestData({
+      url: url,
+      type: "GET",
+      successCallback: function (data) {
+        if (data.code == 0) {
+          layer.msg(msg, {time: 1000, end: function(){
+            location.reload()
+          }})
+        }
+      }
+    })
+  }
+
+</script>
+
+</body>
+</html>

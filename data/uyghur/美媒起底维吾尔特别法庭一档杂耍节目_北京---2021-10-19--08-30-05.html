@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<!--
+ * @(#)content.html
+ * Copyright (C) 2017 Neusoft Corporation All rights reserved.
+ *
+ * VERSION        DATE       BY              CHANGE/COMMENT
+ * @version 1.00  2016/01/27 tai.bs          初版
+ *
+ -->
+<html lang="zh_CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+    <meta name="channelName" content="北京日报APP新闻" />
+    <meta name="columnName" content="热点" />
+    <meta name="description" content="“从‘大规模杀伤性武器’开始，美国式编故事已经在全球范围内产业化，最新产品就是所谓的‘维吾尔特别法庭’。”" />
+    <meta name="origin" content="长安街知事微信公众号" />
+    <meta name="category" content="长安街知事" />
+    <meta name="reporter" />
+    
+	<title>美媒起底“维吾尔特别法庭”：一档杂耍节目_北京日报APP新闻</title>
+    <meta property="og:type" content="news" />
+    <meta property="og:title" content="美媒起底“维吾尔特别法庭”：一档杂耍节目" />
+    <meta property="og:reporter" />
+    <meta property="og:category" content="长安街知事" />
+    <meta property="og:description" content="“从‘大规模杀伤性武器’开始，美国式编故事已经在全球范围内产业化，最新产品就是所谓的‘维吾尔特别法庭’。”" />
+    <meta property="og:publishTime" content="2021-10-19 16:16:17" />
+	<link rel="stylesheet" href="/asset/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/asset/css/style.min.css" />
+	<link rel="stylesheet" href="/asset/css/bjh-author-info.min.css" />
+	<link rel="stylesheet" href="/asset/css/jaudio.min.css" />
+	<link rel="stylesheet" href="/asset/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/asset/css/reporter-card.min.css" />
+	<!--[if lt IE 9]>
+	<script th:src="@{/asset/js/html5shiv.js}"></script>
+	<script th:src="@{/asset/js/respond.min.js}"></script>
+	<![endif]-->
+	<style>
+		main {
+			over-flow: auto; /* winphone8和android4+ */
+			-webkit-overflow-scrolling: touch; /* ios5+ */
+			overflow-y: scroll;
+			z-index: 1;
+		}
+
+		.swiper-container {
+			width: calc(100vw);;
+			height: calc(100vh);
+		}
+
+		#page {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		window.$AppContext = '/5b165687a010550e5ddc0e6a' + "/";
+		var imgDate = {};
+		var flag = true;
+
+		function imgShow(outerdiv, _this) {
+			var src = _this.attr("src");
+			var objs = document.querySelectorAll(".storyContent img");
+			UpdateImgSrc();
+			$("<img/>").attr("src", src).load(function () {
+				var windowW = $(window).width();
+				var windowH = $(window).height();
+				var realWidth = this.width;
+				var realHeight = this.height;
+				var imgWidth, imgHeight;
+				var scale = 0.8;
+				if (realHeight > windowH * scale) {
+					imgHeight = windowH * scale;
+					imgWidth = imgHeight / realHeight * realWidth;
+					if (imgWidth > windowW * scale) {
+						imgWidth = windowW * scale;
+					}
+				} else if (realWidth > windowW * scale) {
+					imgWidth = windowW * scale;
+					imgHeight = imgWidth / realWidth * realHeight;
+				} else {
+					imgWidth = realWidth;
+					imgHeight = realHeight;
+				}
+				$(outerdiv).fadeIn("fast");
+			});
+			var index = src.lastIndexOf("/");
+			src = src.substring(index + 1, src.length);
+			var i = 0;
+			for (i = 0; i < objs.length; i++) {
+				if (objs[i].src.indexOf(src) != -1 || src.indexOf(objs[i].src) != -1) {
+					break;
+				}
+			}
+			mySwiper.slideTo(i);
+			$(outerdiv).click(function () {
+				$(this).fadeOut("fast");
+				mySwiper.zoom.out();
+			});
+		};
+
+		function UpdateImgSrc() {
+			if (flag) {
+				var objs = document.querySelectorAll(".swiper-wrapper img");
+				var otherObjs = document.querySelectorAll(".storyContent img");
+				for (var i = 0; i < objs.length; i++) {
+					var src = $(otherObjs[i]).attr("src");
+					$(objs[i]).attr("src", src);
+				}
+				flag = false;
+			} else {
+				return;
+			}
+
+		};
+
+		function AddImgClickEvent() {
+			//var objss = document.querySelectorAll(".storyContent img");
+			//(objss[objss.length-1]).onload = function() {
+			var objs = document.querySelectorAll(".storyContent img");
+			for (var i = 0; i < objs.length; i++) {
+				var div = document.getElementsByClassName("swiper-wrapper")[0];
+				//添加 li
+				var divtwo = document.createElement('div');
+				divtwo.setAttribute("class", "swiper-slide");
+
+				var divthree = document.createElement('div');
+				divthree.setAttribute("class", "swiper-zoom-container");
+				//添加 img
+				var img = document.createElement("img");
+				//设置 img 图片地址
+				img.id = "img" + i;
+				img.src = $(objs[i]).attr("src");
+				img.onload = function (index, item) {
+					var maxWidth = $(window).width(); // 图片最大宽度
+					var maxHeight = $(window).height();    // 图片最大高度
+					var ratio = 0;  // 缩放比例
+					var width = this.width;    // 图片实际宽度
+					var height = this.height;  // 图片实际高度
+
+					// 检查图片是否超宽
+					if (width > maxWidth) {
+						ratio = maxWidth / width;   // 计算缩放比例
+						$(this).css("width", maxWidth); // 设定实际显示宽度
+						width = maxWidth;
+						height = height * ratio;    // 计算等比例缩放后的高度
+						$(this).css("height", height);  // 设定等比例缩放后的高度
+					}
+					if (height > maxHeight) {
+						ratio = maxHeight / height; // 计算缩放比例
+						$(this).css("height", maxHeight);   // 设定实际显示高度
+						height = maxHeight;
+						width = width * ratio;    // 计算等比例缩放后的高度
+						$(this).css("width", width * ratio);    // 设定等比例缩放后的高度
+					}
+					if (width != maxWidth && height != maxHeight) {
+						if (width != 0 && height != 0) {
+							ratio = maxWidth / width;   // 计算缩放比例
+							var other = maxHeight / height;
+							if (ratio > other) {
+								ratio = other;
+								$(this).css("height", maxHeight);   // 设定实际显示高度
+								width = width * ratio;    // 计算等比例缩放后的高度
+								$(this).css("width", width);    // 设定等比例缩放后的高度
+							} else {
+								$(this).css("width", maxWidth); // 设定实际显示宽度
+								height = height * ratio;    // 计算等比例缩放后的高度
+								$(this).css("height", height);  // 设定等比例缩放后的高度
+							}
+						}
+					}
+				}
+				divthree.appendChild(img);
+				divtwo.appendChild(divthree);
+				div.appendChild(divtwo);
+			}
+			//}
+		};
+		window.onload = function check() {
+			/*$(".storyContent img").click(function(){
+              var _this = $(this);//将当前的pimg元素作为_this传入函数
+              imgShow("#outerdiv", _this);
+            });*/
+			//AddImgClickEvent();
+			<!-- 只有isshare=2时才不显示下载信息,解决QQ、微信再分享的问题-->
+			if (document.getElementById('ad') != null) {
+				if (window.location.href.indexOf("isshare=2") == -1) {
+					document.getElementById('ad').style.display = "block";
+				} else {
+					document.getElementById('ad').style.display = "none";
+				}
+			}
+			textDotMore();
+
+			$('.storyContent img').each(function () {
+				if ($(this).data("src") != null) {
+					$(this).attr('src', $(this).data("src"));
+				}
+				if ($(this).width() > 200) {
+					$(this).width('100%');
+					$(this).height('auto');
+				}
+			});
+			$('.storyContent video').each(function () {
+				if ($(this).width() > 100) {
+					$(this).width('100%');
+					$(this).height('auto');
+					// 重新设置video高度
+					var style_width = parseInt($(this).css("width"));
+					var style_height = parseInt($(this).css("height"));
+					if (style_width < style_height) {
+						// 移除元素宽高
+						$(this).removeAttr("width");
+						$(this).removeAttr("height");
+						var height = style_width;
+						$(this).css("height", height);
+					}
+				}
+			});
+			$('.storyContent iframe').each(function () {
+				if ($(this).data("bjrb") != null) {
+					$(this).attr('src', $(this).data("bjrb"));
+				}
+			});
+
+			$('.commentContent img').each(function () {
+				if ($(this).data("src") != null) {
+					$(this).attr('src', $(this).data("src"));
+				}
+			});
+
+			videoAudioClickfunction(); // video,audio控制，多个时不同时播放
+
+			var referrer = window.location.href;
+			var udid = getCookie('udid');
+			var visitId = getCookie('vId');
+			var now = new Date();
+			var screenRatio = getScreenRatio();
+
+			if (!udid) {
+				udid = getUdid('/');
+				var expires = new Date();
+				expires.setTime(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+				addCookie('udid', udid, expires.toUTCString());
+			}
+
+				if (!visitId) {
+					visitId = udid + now.getTime();
+					addCookie('vId', visitId);
+				}
+
+				postData('/', udid, referrer, visitId);
+
+				// second
+				var hasSquareImgthumb = false;
+				var imgUrl = '/asset/img/logo1.png';
+				var imgthumbs = [{'prUrl':'//ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef255811.png','proportion':'1','thumbnailUrl':'https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef255811.png','type':'1','uri':'/images/202110/19/616e7ed1e4b08aedef255811.png','url':'https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef255811.png'}];
+				if (imgthumbs && imgthumbs.length > 0) {
+					imgUrl = imgthumbs[0].thumbnailUrl;
+					for (let index in imgthumbs) {
+						if (imgthumbs[index].type == 4) {
+							imgUrl = imgthumbs[index].thumbnailUrl;
+							hasSquareImgthumb = true;
+							break;
+						}
+					}
+					if (!hasSquareImgthumb){
+						for (let index in imgthumbs) {
+							if (imgthumbs[index].type == 1) {
+								imgUrl = imgthumbs[index].thumbnailUrl;
+								break;
+							}
+						}
+					}
+				}
+				var params = {};
+				params.wxsignurl = 'https://ie.bjd.com.cn:443/rest/site/api/wxshare/sign';
+				params.url = location.href.split('#')[0];
+				params.title = '\u7F8E\u5A92\u8D77\u5E95\u201C\u7EF4\u543E\u5C14\u7279\u522B\u6CD5\u5EAD\u201D\uFF1A\u4E00\u6863\u6742\u800D\u8282\u76EE';
+				params.imgUrl = imgUrl;
+				params.desc = '\u201C\u4ECE\u2018\u5927\u89C4\u6A21\u6740\u4F24\u6027\u6B66\u5668\u2019\u5F00\u59CB\uFF0C\u7F8E\u56FD\u5F0F\u7F16\u6545\u4E8B\u5DF2\u7ECF\u5728\u5168\u7403\u8303\u56F4\u5185\u4EA7\u4E1A\u5316\uFF0C\u6700\u65B0\u4EA7\u54C1\u5C31\u662F\u6240\u8C13\u7684\u2018\u7EF4\u543E\u5C14\u7279\u522B\u6CD5\u5EAD\u2019\u3002\u201D';
+				$WxShareController.secondShare(params);
+
+				// 计算图说字号
+				$("figure figcaption").each(function () {
+					$(this).css("font-size", ".14rem");
+					$(this).css("line-height", ".20rem");
+				});
+			}
+
+				window.onresize = function () {
+					if ($BrowerController.check() != "other") {
+						if (document.documentElement.clientWidth < 750) {
+							document.documentElement.style.fontSize = document.documentElement.clientWidth / 4.14 + 'px';
+						} else {
+							document.documentElement.style.fontSize = 750 / 4.14 + 'px';
+						}
+					}
+					textDotMore();
+				};
+
+				function textDotMore() {
+					$('span.commentSummary').each(function (i) {
+						var dotLnes = countTextLines($(this)[0])
+						var ori = $(this).clone()
+								.css({
+									display: '-webkit-box',
+									overflow: 'hidden',
+									'text-overflow': 'ellipsis',
+									'word-break': 'normal',
+									'-webkit-line-clamp': '6',
+									'-webkit-box-orient': 'vertical',
+									"font-size": '11pt',
+									visibility: 'hidden'
+								})
+								.appendTo('.commentSummaryArea')
+						var lc = countTextLines(ori[0]);
+						ori.remove();
+
+						var summaryMore = $(this).parents('.commentSummaryArea').find('.commentSummaryMore');
+						var eleMore = summaryMore[0];
+						if (lc > dotLnes) {
+							eleMore.style.display = "block";
+						} else {
+							eleMore.style.display = "none";
+						}
+					});
+				}
+
+				function isTextDot() {
+					var ele = document.getElementById("commentSummaryId");
+					var dotLnes = countTextLines(ele)
+					var ele = $("span.commentSummary");
+					var ori = ele.clone()
+							.css({
+								display: '-webkit-box',
+								overflow: 'hidden',
+								'text-overflow': 'ellipsis',
+								'word-break': 'normal',
+								'-webkit-line-clamp': '6',
+								'-webkit-box-orient': 'vertical',
+								"font-size": '11pt',
+								visibility: 'hidden'
+							})
+							.appendTo('.commentSummaryArea')
+							.attr("id", "commentSummaryFreeId");
+					var lc = countTextLines(ori.context);
+					ori.remove();
+					return lc > dotLnes;
+				};
+
+				function countTextLines(ele) {
+					var styles = window.getComputedStyle(ele, null);
+					var lh = parseInt(styles.lineHeight, 10);
+					var h = parseInt(styles.height, 10);
+					var lc = Math.round(h / lh);
+					return lc;
+				};
+
+				function closeCarousel() {
+					document.getElementById("ad-bottom").style.display = "none";
+				};
+
+				function reinitIframe() {
+					var iframe = document.getElementById("voteiframe");
+					try {
+						if (iframe.contentDocument != null) {
+							iframe.height = iframe.contentDocument.body.scrollHeight;
+						} else {
+							var bHeight = document.body.scrollHeight;
+							var dHeight = document.documentElement.scrollHeight;
+							var height = Math.max(bHeight, dHeight);
+							iframe.height = height;
+						}
+					} catch (ex) {
+					}
+				}
+
+				//完毕后干掉定时器
+				function changeFrameHeight() {
+					reinitIframe();
+				}
+
+				// 查看全部正文
+				function readMore() {
+					$(".sharePage").removeClass("sharePage");
+					$(".read-more").remove();
+				}
+
+				// 在app中打开滚动新闻详情页
+				function oppenItemStory(channelId, columnId, storyId, contentType, bjhChannelId, bjhColumnId, transverse) {
+					var isBjh = 0;
+					if (bjhChannelId && bjhColumnId) {
+						isBjh = 1;
+					}
+					var isHuati = transverse == '4' ? 1 : 0;
+					var pUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone";
+					var paramStr = "bjrbschemes://?storyId=" + storyId + "&channelId=" + channelId + "&columnId=" + columnId + "&contentType=" + contentType + "&isBjh=" + isBjh + "&isHuati=" + isHuati;
+
+					// ios测试代码
+					var u = navigator.userAgent
+					var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+					var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+					if (isAndroid) { //如果是安卓
+						var encodeStr = encodeURIComponent(paramStr);
+
+						var contentTypeIsNull = $("#contentTypeIsNull").val();
+						if (contentTypeIsNull) {
+							pUrl = pUrl + "&android_schema=" + encodeStr + "&ios_scheme=" + encodeStr;
+						}
+						window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+// 					if(is_weibo()){
+// 						console.log(pUrl);
+// // 						showGuideDiv(pUrl);
+// 						window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+// 						return;
+// 					}
+					} else if (isiOS) { //
+						// document.querySelector(".openApp a").href="https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId="+'AP616e7ed1e4b08aed9d925ea9'+"&channelId="+'5b165687a010550e5ddc0e6a';
+						pUrl = "https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId=" + storyId + "&channelId=" + channelId;
+						window.location.href = pUrl;
+						return;
+					} else {
+						window.location.href = "https://ie.bjd.com.cn/appstore/download";
+						return;
+					}
+					window.location.href = 'showGuidePage/guidePage.html?openUrl=' + pUrl;
+				}
+
+				// 引导页显示
+				function showGuideDiv(pUrl) {
+					$(".guide").css("width", document.documentElement.clientWidth + "px");
+					$(".guide").css("height", document.documentElement.clientHeight + "px");
+					$("body>*").css("display", "none");
+					$(".guide").css("display", "block");
+					setTimeout(function () {
+						window.location.href = pUrl;
+					}, 3000);
+				}
+
+				/**-- 判断是否在微信浏览器中打开 --**/
+				function is_weixin() {
+					var ua = navigator.userAgent.toLowerCase();
+					if (ua.match(/MicroMessenger/i) == "micromessenger") {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
+				/**-- 判断是否在新浪微博浏览器中打开 --**/
+				function is_weibo() {
+					var ua = navigator.userAgent;
+					if (ua.indexOf('Weibo') > -1) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
+				function videoAudioClickfunction() {
+					$("video").on("play", function () {
+						var $video = $(this)[0];
+
+						$('.storyContent video').each(function () {
+							if ($(this)[0] !== $video) {
+								$(this)[0].pause();
+							}
+						});
+					});
+
+					$("audio").on("play", function () {
+						var $audio = $(this)[0];
+
+						$('.storyContent audio').each(function () {
+							if ($(this)[0] !== $audio) {
+								$(this)[0].pause();
+							}
+						});
+					});
+				}
+
+		/*]]>*/
+	</script>
+	<style type="text/css">
+		.sharePage {
+			position: relative;
+			height: 1200px;
+			overflow: hidden;
+			margin-bottom: 40px;
+		}
+
+		.read-more {
+			display: none;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-image: linear-gradient(-180deg, hsla(0, 0%, 100%, 0) 6%, hsla(0, 0%, 100%, .48) 56%, hsla(0, 0%, 100%, .96) 92%);
+		}
+
+		.read-more .read-more-mask {
+			position: relative;
+			height: 236px;
+		}
+
+		.read-more .read-more-mask .read-more-zhankai {
+			position: absolute;
+			bottom: 6px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			animation: jump 1s ease-in-out infinite forwards;
+		}
+
+		.read-more-zhankai img {
+			width: 0.5rem;
+			height: auto;
+		}
+
+		.read-more-btm {
+			position: relative;
+			/* 			bottom: 0.53rem; */
+			height: 0.5rem;
+		}
+
+		.openApp {
+			width: 100%;
+			height: 0.4rem;
+			line-height: 0.4rem;
+			border: 1px solid #e92110;
+			background-color: #e92110;
+			border-radius: 5px;
+		}
+
+		@keyframes jump {
+			0% {
+				transform: translateY(0)
+			}
+			50% {
+				transform: translateY(5px)
+			}
+			to {
+				transform: translateY(0)
+			}
+		}
+
+		@media screen and (max-width: 374px) {
+			html {
+				font-size: 74px
+			}
+		}
+
+		@media screen and (min-width: 375px) and (max-width: 413px) {
+			html {
+				font-size: 90px
+			}
+		}
+
+		@media screen and (min-width: 414px) and (max-width: 767px) {
+			html {
+				font-size: 100px
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 833px) {
+			html {
+				font-size: 182px
+			}
+		}
+
+		@media screen and (min-width: 834px) and (max-width: 1023px) {
+			html {
+				font-size: 186px
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			html {
+				font-size: 240px
+			}
+		}
+	</style>
+</head>
+<body style="max-width: 750px;min-width: 310px;margin: 0 auto;overflow-y: auto;">
+<section id="about" class="page" style="padding-top:0.60rem; background-color: #ffffff;">
+	<div style="padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;">
+		<div id="outerdiv" style="position:fixed;top:0;left:0;background:#000000;z-index:2;width:100%;height:100%;display:none;touch-action:none;">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+
+				<!-- 如果需要滚动条 -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+		<div class="content2">
+			<input type="hidden" id="shareApp" name="shareApp" value="1" />
+			<input type="hidden" id="contentTypeIsNull" name="contentTypeIsNull" value="bjrbschemes%3A%2F%2F%3FstoryId%3DAP616e7ed1e4b08aed9d925ea9%26channelId%3D5b165687a010550e5ddc0e6a%26columnId%3D5b16573ae4b02a9fe2d558f9%26contentType%3D0%26isBjh%3D0" />
+			<div class="row">
+				<div class="col-lg-12" data-animation="fadeInRight" data-delay="600">
+					<!-- style="padding-left:0.167rem;padding-right:0.167rem;" -->
+					
+					
+					<div style="margin: 0 auto; text-align: left">
+						<div class="title">美媒起底“维吾尔特别法庭”：一档杂耍节目</div>
+					</div>
+					<div class="infomation">
+                        <span style="margin-right:0.03rem;">长安街知事微信公众号</span>
+						<span style="margin-right:0.03rem;">|</span>
+						
+						
+						
+						<span style="margin-right:0.03rem;">实习记者 刘晓琰</span>
+						
+						
+						
+						<p>
+                            <span>2021-10-19 16:16</span>
+							<!-- <th:block th:if="${story.storyType == 'COMPO' and #maps.containsKey(story.mapProperties, 'ttsAudioUrl') and story.mapProperties.ttsAudioUrl!=null and not #strings.isEmpty(story.mapProperties.ttsAudioUrl)}">
+                                <img id="ttsAudioPlayer" alt="语音播报" th:src="@{/asset/img/play.png}" style="height: 0.20rem;float: right;cursor: pointer;"/>
+                                <audio id="ttsAudio" preload="auto" th:src="${story.mapProperties.ttsAudioUrl}"></audio>
+                            </th:block> -->
+						</p>
+					</div>
+					
+					
+					<hr class="hr1" style="margin-top:0.22rem" />
+					<div class="storyContent" style="text-align:justify;word-break:normal;word-wrap: break-word;"><html>
+ <head></head>
+ <body>
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="1">“从‘大规模杀伤性武器’开始，美国式编故事已经在全球范围内产业化，最新产品就是所谓的‘维吾尔特别法庭’。”</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="3">当地时间17日，美国独立新闻网站“灰色地带”以《“维吾尔特别法庭”的背后：美国政府支持的分裂势力》为题，揭露美国政府的整套戏码，即以巨大的谎言制造机、巨额的美国政府资金，堂而皇之地支持分裂势力。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="5">文章称，CNN等主要西方媒体还制作了各种以法庭“明星证人”为特色的“杂耍节目”，以配合美国的谎言。整场“演出”就是西方针对目标国家部署的信息武器。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><img style="display: block; margin: auto;" src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580b.webp" data-src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580b.webp" id="img-616e7ed1e4b08aedef25580b"></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><span style="font-size: 14px;">报道截图</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="9"><span style="color: #ff0000;">美国政府奠定叙事基调</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="11">今年6月，反华分裂分子和美国政府资助的人权组织成立了所谓的“维吾尔特别法庭”，在长达80小时的冗长乏味的证词中宣布“立案”，声称中国政府在新疆维吾尔自治区犯下了所谓的“种族灭绝罪”。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="13">“没有提供任何动机或背景来解释为什么中国会实施这种假定的行为，但这却为所谓的‘法庭’提供了叙事基础。”文章指出，实际上，从1990年代初，中国新疆地区就开始出现恐怖主义活动，对中国民众的生命安全产生了极其严重的威胁。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="15">然而，西方媒体却几乎没有提及这些发生在中国的极端暴力事件。文章称，以BBC为代表的媒体，片面将中国在新疆的反恐行动污蔑为“镇压”，这不仅仅是欺骗行为，更是背后统一协调的结果。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="17"><span style="color: #ff0000;">美国政府资助分裂阵线</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="19">文章指出，这些为所谓“法庭”站台的西方媒体，主要包括美、英、澳政府管理的自由亚洲电台、美国之音、BBC、澳大利亚广播公司等。它们轮流声称该法庭是“独立的”并且“没有国家支持”。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="21">然而，所谓“法庭”的官方网站“关于”栏目下写着：美国政府资助的“世界维吾尔代表大会”通过“庭长”杰弗里·尼斯启动了该法庭。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="23">“世界维吾尔代表大会”由美国政府通过臭名昭著的国家民主基金会（NED）提供资金，NED是美国在全球范围内进行政治干预的资助机构，配合美国中央情报局（CIA）从事政权颠覆活动。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><img style="display: block; margin: auto;" src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580d.webp" data-src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580d.webp" id="img-616e7ed1e4b08aedef25580d"></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><span style="font-size: 14px;">NED介绍页</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="27">“世界维吾尔代表大会”只有一个可证明的收入来源：美国政府通过NED提供的年度拨款。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="29">合作发起该“法庭”的另一个组织是所谓的“种族灭绝应对联盟”。在该联盟的赞助人名单中，劣迹斑斑的澳大利亚退休法官迈克尔·柯比 （Michael Kirby）赫然在列。他曾领导缺乏任何证据的联合国对朝鲜涉嫌侵犯人权行为的调查，证人之一申东赫后来承认撒谎。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="31">除此之外，西方政府支持的反华宣传智库也向“法庭”提供了陈述。例如美国国务院资助的澳大利亚战略政策研究所（ASPI），澳大利亚和日本政府资助的“ChileFile”，以及由美国国务院、欧盟、加拿大、英国、日本和澳大利亚以及空中客车公司、洛克希德公司等资助的皇家联合服务研究所 (RUSI) 。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="33">虽然该“法庭”位于英国，但美国政府的压倒性影响不言而喻。”文章指出，事实非常清楚，一个打着人权幌子的组织网络已经建立，专门针对美国试图胁迫的国家进行所谓的“法庭调查”和报告发布，“维吾尔特别法庭”就是最新“产品”。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><img style="display: block; margin: auto;" src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580f.webp" data-src="https://ie.bjd.com.cn:443/images/202110/19/616e7ed1e4b08aedef25580f.webp" id="img-616e7ed1e4b08aedef25580f"></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;"><span style="font-size: 14px;">今年6月，尼斯（左）在“维吾尔特别法庭”</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="37"><span style="color: #ff0000;">明目张胆地纵容分裂势力</span></p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="39">文章指出，事实上，参与“法庭”的人，以及美国资助的“种族灭绝”宣传机器是明显的分裂主义运动的一部分。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="41">该“法庭”一直使用“东突”的称呼而不是新疆，参与者明目张胆地站在“东突”分离主义的旗帜前发表视频陈述。在诉讼程序中，分裂分子阿尔斯兰·希达亚特（Arslan Hidayat）为至少两名证人做口译。而此人一再呼吁对新疆的汉族人民进行种族清洗，并主张使用暴力来达到这一目的。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="43">文章称，大多数参与该“法庭”的人所表现出的堂而皇之的分裂主义被西方媒体集体视而不见。这些媒体不可能对“法庭”及其参与者的别有用心如此无知，但是它们仍然拒绝向公众提供完整信息，这进一步说明了他们精心编排的故事是如何剥夺了事实，并刻意大肆传播的。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="45">中国外交部发言人赵立坚此前表示，所谓“维吾尔特别法庭”就是一个彻头彻尾的谎言制造机，这帮反华分子不惜花钱请骗子，花钱买谎言，他们为了祸乱新疆、抹黑中国而采取的手段可谓是无所不用其极。</p> 
+  <p style="margin-top: 5px; margin-bottom: 20px;" data-track="47">“谎言重复一千次，仍然是谎言！”赵立坚说，虽然这些小丑们处心积虑耍尽花活，但是这部闹剧观者寥寥，那些谎言应者无几。</p>
+ </body>
+</html></div>
+					<hr class="hr1" style="margin-top:0.22rem;margin-bottom:0.28rem;border-top:1px solid #999999;" />
+					<div class="infomationFooterContainer" style="display: flow-root;">
+						<div class="infomationFooterLeft" style="width:auto">
+                            <p>编辑：郭涛</p>
+						</div>
+                    </div>
+					
+                    <div class="infomationFooterContainer">
+                        <div class="story-swipe-container">
+                            
+                        </div>
+                    </div>
+					<hr class="hr1" style="margin-top:0.1rem;margin-bottom:0.1rem;border-top:1px solid white;" />
+					<!--分享点赞用(爱心)(针对老稿件,没有存放判断字段) -->
+					
+					<!--分享点赞用(爱心) -->
+					<div style="border:1px solid #e92110;border-radius:25px;width:44%;margin-left:28%">
+						<div id="dianzanqian" align="center" style="height: 48/14em; width:100%;margin-top:0.1em;cursor: pointer;" onclick="dianzan()">
+							<img data-flag="comment" class="" style="height:1.7em;margin-top:-0.4em;cursor: pointer;" src="/asset/img/feidianzan.png" />
+                            <span id="likecntbefore" style="font-size:16px;margin-left:0.45em;color:#e92110;height:3em;line-height:3em;">2</span>
+						</div>
+						<div id="dianzanhou" align="center" style="height: 48/14em; width:100%;display:none;margin-top:0.1em">
+							<img data-flag="comment" class="" style="height:1.7em;margin-top:-0.4em;cursor: pointer;" src="/asset/img/dianzan.png" />
+                            <span id="likecntafter" style="font-size:16px;margin-left:0.45em;color:#e92110;height:3em;line-height:3em;"></span>
+						</div>
+					</div>
+					<!--分享点赞用(蜡烛) -->
+					
+					<!--分享点赞用(祈福) -->
+					
+				</div>
+			</div>
+			<!-- /*显示更多*/ -->
+			<div class="read-more">
+				<div class="read-more-mask">
+					<div class="read-more-zhankai" onclick="readMore();">
+						<img src="/asset/img/double-down.png" />
+					</div>
+				</div>
+				<div class="read-more-btm text-center">
+					<div class="openApp" style="color:white;font-size:0.18rem;cursor: pointer;" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616e7ed1e4b08aed9d925ea9&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);">
+						打开APP阅读全文
+					</div>
+					<!-- 						<div class="openApp" th:unless="${encodeOppenAppUrl == null}" > -->
+					<!-- 							<a th:href="'http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone&amp;android_schema='+${encodeOppenAppUrl}+'&amp;ios_scheme='+${encodeOppenAppUrl}" class="atc-block-btn" style="color:white;font-size:0.18rem;">打开APP阅读全文</a> -->
+					<!-- 						</div> -->
+				</div>
+
+				<script type="text/javascript">
+					/*<![CDATA[*/
+					var share = '1';
+					if (share == 1) {
+						// 1790 = 正文1200  +  多余的内外边距290  + 编辑 点赞等高度100  +  最小隐藏高度200
+						var contentH = document.querySelector(".content2").clientHeight - 1790;
+						if (contentH > 0) {
+							document.querySelector(".read-more").style.display = "block";
+							document.querySelector(".content2").className += " sharePage";
+						}
+					}
+
+					// ios打开新闻详情
+					// 						var u = navigator.userAgent
+					// 						var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+					// 						var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+					// 						if(isAndroid){ //如果是安卓
+					// 						    console.log("android");
+					// 						}else if(isiOS) { //
+					// 							document.querySelector(".openApp a").href="https://universallink.bjd.com.cn/apple-app-site-iosstore?storyId="+'AP616e7ed1e4b08aed9d925ea9'+"&channelId="+'5b165687a010550e5ddc0e6a';
+					// 						}
+					/*]]>*/
+				</script>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--请粘贴到广告位所在位置-->
+		<script type="text/javascript">
+			(function () {
+				document.write('<div id="90010134"></div>');
+				(window.adPosDup = window.adPosDup || []).push({
+					adPosID: '90010134',
+					container: '90010134',
+					async: false
+				});
+			})();
+		</script>
+		<!-- 写死广告 -->
+		<!--
+        <div id="90010134">
+        <div id="90010134">
+        <div style="position:relative;">
+        <img style="width: 100%;" data-flag="ad" src="https://ie.bjd.com.cn/ad/shounong.jpeg">
+        <span style="background:#858585;opacity:0.4;border:1px solid #f0f0f0;padding: 0px 5px;position:absolute;font-size: 0.7em;color: #f0f0f0;left: 2px;top: 2px;">广告</span>
+        </div>
+        </div>
+        </div>
+         -->
+		<!-- <br/><br/> -->
+		<div class="relationContent">
+			
+			
+		</div>
+		<!-- 热门评论 -->
+		<div class="commentContent">
+			
+			
+		</div>
+		<!-- 最新评论 -->
+		<div class="commentContent">
+			
+			
+		</div>
+		<div class="commentJoin" style="text-align:center;">
+			<!-- 北京日报 -->
+			<input type="button" style=";border:none;text-decoration:none;background:#f5f5f5;text-align:center;font-size:10pt;color:red;height:0.30rem;width:100%;margin-top:0.10rem;margin-bottom: 0.10rem;" value="打开北京日报, 参与评论" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616e7ed1e4b08aed9d925ea9&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+		</div>
+		
+	</div>
+</section>
+<section id="ad" style="max-width:750px;margin: 0 auto;position: fixed; top: 0px; height: 0.65rem; width: 100%; background-color: rgba(255, 255, 255, 1.0)">
+	<div id="ad" style="max-width:750px;margin: 0 auto;position: fixed; top: 0px; height: 0.65rem; width: 100%; background-color: rgba(255, 255, 255, 1.0)">
+		<!-- th:if="${channelId == '5b165687a010550e5ddc0e6a' || channelId == '5b165667a010550e5ddc0e68' }" -->
+		<!-- 北京日报	-->
+		<div style="position: absolute; margin-left: 0.28rem;">
+			<img style="height: 0.55rem; width: 0.55rem; margin-top: 0.06rem; border-radius: 2px; -webkit-border-radius: 2px;" src="/asset/img/logo1.png" />
+			<img style="height: 0.2rem; width: 1.3rem; margin-top: 0.06rem; margin-left: 2px; border-radius: 2px; -webkit-border-radius: 2px;" src="/asset/img/word1.png" />
+		</div>
+		<img style="position: absolute; right:0.30rem; height: 0.20rem; margin-top: 0.22rem; padding-left: 0.06rem; padding-right: 0.06rem;" src="/asset/img/openApp2.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616e7ed1e4b08aed9d925ea9&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+		<!-- <div
+            style="position: absolute; right: 16px; line-height: 30px; height: 60px">
+            <input type="button" value="点击下载"
+                style="color:#808080; text-align:center; line-height: 16px; height: 22px; margin-top: 18px; padding-left: 10px; padding-right: 10px; font-size: 12px; border: 1; border-radius: 15px; -webkit-border-radius: 15px; background-color: transparent;border-style:solid; border-width:1px; border-color:#e7e7e7;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div> -->
+	</div>
+	<!-- 长安街知事 -->
+	<!-- <div id="ad"  th:if="${channelId == '5a2785b3a0100de51663ea78' || channelId == '5af8ed80a010301f500f153d' }"
+        style="position: fixed; top: 0px; height: 0.60rem; width: 100%; background-color: rgba(0, 0, 0, 0.4)">
+
+        <div style="position: absolute; margin-left: 0.28rem;">
+            <img th:src="@{/asset/img/98.png}"
+                style="height: 0.40rem; width: 0.40rem; margin-top: 0.10rem; border-radius: 2px; -webkit-border-radius: 2px;" />
+        </div>
+        <div
+            style="position: absolute; right: 0.35rem; line-height: 0.30rem; height: 0.60rem">
+            <img th:src="@{/asset/img/openApp.png}"
+                     style="position: absolute; right:0.16rem; height: 0.22rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.06rem;"
+                     onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+            <input type="button" value="点击下载"
+                style="color:white; text-align:center; line-height: 0.16rem; height: 0.22rem; margin-top: 0.20rem; padding-left: 0.20rem; padding-right: 0.20rem; font-size: 0.12rem; border: 1; border-radius: 2px; -webkit-border-radius: 2px; background-color: transparent;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div>
+    </div> -->
+</section>
+<section id="ad-bottom" style="max-width:750px;margin: 0 auto;position: fixed; bottom: 0px; width: 100%; background-color: rgba(0, 0, 0, 0.4)">
+	<div id="carousel-ad" class="carousel slide" data-ride="carousel" style="max-width:750px;margin: 0 auto;position:relative; background-color: rgba(71, 71, 71, 0.4)">
+		<!-- th:if="${channelId == '5b165687a010550e5ddc0e6a' || channelId == '5b165667a010550e5ddc0e68' }" -->
+		<!-- 北京日报	-->
+		<!-- 指示符 -->
+		<ul class="carousel-indicators" style="bottom: -13px;">
+			<li data-target="#carousel-ad" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-ad" data-slide-to="1"></li>
+			<li data-target="#carousel-ad" data-slide-to="2"></li>
+			<li data-target="#carousel-ad" data-slide-to="3"></li>
+			<li data-target="#carousel-ad" data-slide-to="4"></li>
+			<li data-target="#carousel-ad" data-slide-to="5"></li>
+			
+		</ul>
+
+		<!-- 轮播图片 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<div style="margin-left: 0.28rem;;height:0.53rem">
+					<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee92be4b08aedef282f61_w300.jpeg" />
+					
+					<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+						<a style="text-align:left; color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP616ee92be4b08aed9d940644.html?isshare=1&amp;contentType=0&amp;isBjh=0" title="“第三针”开打 ！海淀新冠疫苗加强针接种点名单公布">“第三针”开打 ！海淀新冠疫苗加强针接种点名单公布</a>
+						<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${firstCarouselNews.title}]]</span> -->
+					</div>
+					
+					<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616ee92be4b08aed9d940644&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+				</div>
+			</div>
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee75fe4b08aedef282b50_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP616ee75fe4b08aed9d940335.html?isshare=1&amp;contentType=0&amp;isBjh=0" title="广西全区领导干部会议宣布中央决定：刘宁任自治区党委书记">广西全区领导干部会议宣布中央决定：刘宁任自治区党委书记</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616ee75fe4b08aed9d940335&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee6f5e4b08aedef282a3d_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP616ee6f5e4b08aed9d940277.html?isshare=1&amp;contentType=0&amp;isBjh=0" title="江西全省领导干部会议宣布中央决定：易炼红任省委书记">江西全省领导干部会议宣布中央决定：易炼红任省委书记</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616ee6f5e4b08aed9d940277&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee5e1e4b08aedef2826cd_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5e799028e4b0f99f4df7a04e/AP616ee569e4b08aed9d93ff5f.html?isshare=1&amp;contentType=9&amp;isBjh=0" title="现场直击｜北京丰台怡海花园小区连夜开展核酸检测">现场直击｜北京丰台怡海花园小区连夜开展核酸检测</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5e799028e4b0f99f4df7a04e&#39;,&#39;AP616ee569e4b08aed9d93ff5f&#39;,&#39;9&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee489e4b08aedef2823ad_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP616ee489e4b08aed9d93fdb7.html?isshare=1&amp;contentType=0&amp;isBjh=0" title="香港海关以全中式步操举行结业会操！开创纪律部队先河">香港海关以全中式步操举行结业会操！开创纪律部队先河</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616ee489e4b08aed9d93fdb7&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+			
+				<div class="item">
+					<div style="margin-left: 0.28rem;height:0.53rem">
+						<img style="height: 0.37rem; width: 0.493rem; margin-top: 0.08rem; border-radius: 2px; -webkit-border-radius: 2px;" src="https://ie.bjd.com.cn:443/images/202110/19/616ee1bee4b08aedef281b35_w300.jpeg" />
+						
+						<div class="carousel-caption" style="position: fixed; top: -13px; margin-left: 0.30rem; margin-right: 0.46rem; text-align:left;">
+							<a style="text-align:left;color:white; font-size: 0.13rem;overflow : hidden;text-overflow: ellipsis; word-break: normal; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" href="/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP616ee1bee4b08aed9d93f879.html?isshare=1&amp;contentType=0&amp;isBjh=0" title="孙春兰在药品审评中心调研：加快新冠治疗药物研发攻关">孙春兰在药品审评中心调研：加快新冠治疗药物研发攻关</a>
+							<!-- <span style="width:100%;font-size: 10pt;" th:inline="text">[[${carouselNews.title}]]</span> -->
+						</div>
+						
+						<img style="position: absolute; right:0.16rem; height: 0.17rem; margin-top: 0.20rem; padding-left: 0.06rem; padding-right: 0.16rem;" src="/asset/img/openApp.png" onclick="oppenItemStory(&#39;5b165687a010550e5ddc0e6a&#39;,&#39;5b16573ae4b02a9fe2d558f9&#39;,&#39;AP616ee1bee4b08aed9d93f879&#39;,&#39;0&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" />
+						<!-- <input type="button" value="打开客户端"
+                            style="position: absolute; right:16px; color:white; text-align:center; line-height: 16px; height: 22px; margin-top: 20px; padding-left: 6px; padding-right: 6px; font-size: 12px; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: #db2122;"
+                            onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" /> -->
+					</div>
+				</div>
+			
+
+			<!-- <div class="item" th:if="${carouselNewsList != null and #lists.size(carouselNewsList) > 1}">
+              <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg"/>
+            </div>
+            <div class="item" th:if="${carouselNewsList != null and #lists.size(carouselNewsList) > 2}">
+              <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg"/>
+            </div> -->
+		</div>
+	</div>
+	<!-- 长安街知事 -->
+	<!-- <div id="ad"  th:if="${channelId == '5a2785b3a0100de51663ea78' || channelId == '5af8ed80a010301f500f153d' }"
+        style="position: fixed; bottom: 0px; height: 0.60rem; width: 100%; background-color: rgba(71, 71, 71, 0.4)">
+
+        <div style="position: absolute; margin-left: 0.28rem;">
+            <img th:src="@{/asset/img/98.png}"
+                style="height: 0.40rem; width: 0.40rem; margin-top: 0.10rem; margin-left: 0.16rem; border-radius: 2px; -webkit-border-radius: 2px;" />
+        </div>
+        <div
+            style="position: absolute; right: 0.35rem; line-height: 0.30rem; height: 0.60rem">
+            <input type="button" value="打开客户端"
+                style="color:white; text-align:center; line-height: 0.20rem; height: 0.28rem; margin-top: 0.16rem; padding-left: 0.12rem; padding-right: 0.12rem; font-size: 0.14rem; border: none; border-radius: 2px; -webkit-border-radius: 2px; background-color: red;"
+                onclick="window.location='http://a.app.qq.com/o/simple.jsp?pkgname=com.neusoft.app.beijingdaily.phone'" />
+        </div>
+    </div> -->
+	<input type="button" value="x" id="btn_carousel_close" onclick="closeCarousel()" style="position: absolute; bottom: 0.36rem; right:2px; color:white; text-align:center; line-height: 0.16rem; height: 0.22rem; margin-top: 2px; padding-left: 0.06rem; padding-right: 0.02rem; font-size: 0.12rem; border: none; background-color: transparent;" />
+</section>
+<script src="/asset/js/jquery.min.js"></script>
+<script src="/asset/js/jaudio.min.js"></script>
+<!-- <script th:src="@{/asset/js/ttsaudio.min.js}"></script> -->
+<!--评论点赞用 -->
+<script src="/asset/js/contentAPP.min.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="/asset/js/bootstrap.min.js"></script>
+<script src="/asset/js/isotope.pkgd.min.js"></script>
+<script src="/asset/js/imagesloaded.min.js"></script>
+<script src="/asset/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="/asset/js/WxShareController.min.js"></script>
+<script type="text/javascript" src="/asset/js/statistic.min.js"></script>
+<script type="text/javascript" src="/asset/js/ContentMediaController.js"></script>
+<script type="text/javascript" src="/asset/js/BrowerController.js"></script>
+<script type="text/javascript" src="/asset/js/BjhAuthorController.js"></script>
+<script type="text/javascript" src="/asset/js/reporter-card.min.js"></script>
+<script src="/asset/js/swiper-bundle.min.js"></script>
+
+<!-- 请置于所有广告位代码之后 ,粘贴在网页的最后的</body>之前,每个页面中添加一次即可-->
+<script type="text/javascript" src="//adreq.bjd.com.cn/javascripts/tsw.js" defer="defer" async="async"></script>
+
+<!-- 获取作者信息 -->
+<script>
+	if (false) {
+		var bjhChannelId = null;
+		var bjhColumnId = null;
+		url = "/rest/site/api/" + bjhChannelId + "/bjhStory/getBjhAuthorInfo/{channelUUID}";
+		url = url.replace("{channelUUID}", bjhColumnId);
+		$.ajax({
+			url: url,
+			type: "get",
+			success: function (data) {
+				$("#bjhAuthorHeadUrl").attr("src", data['headUrl']);
+				//测试头像url
+				//$("#bjhAuthorHeadUrl").attr("src", "https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1532308227_9f8c7d8912d972ad499bb426c8e60cf0.png?x-oss-process=style/w180gl");
+				$("#bjhAuthorName").text(data['name']);
+				$("#bjhAuthorIntro").text(data['intro']);
+				$BjhAuthorController.getFocusStatus("brower");
+			}
+		});
+	}
+</script>
+<!-- 处理稿件内容插入稿件链接 -->
+<script>
+	$(".storyContent img").click(function () {
+		var _this = $(this);//将当前的pimg元素作为_this传入函数
+		imgShow("#outerdiv", _this);
+	});
+	AddImgClickEvent();
+	var mySwiper = new Swiper('.swiper-container', {
+		//   direction: 'vertical', // 垂直切换选项
+		loop: false, // 循环模式选项
+		zoom: {
+			minRatio: 1,
+		},
+		// 如果需要分页器
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+			clickable: true
+		},
+		// 如果需要滚动条
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		observer: true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true,
+		on: {
+			slideChangeTransitionStart: function () {
+				if (mySwiper.zoom.scale != 1) {
+					mySwiper.zoom.out();
+				}
+			},
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
+	$(".storyContent a").each(function () {
+		var href = $(this).attr("href");
+		var params = href.split(":");
+		if (params[0] == "innerId") {
+			if (params[3].startsWith("AP")) {
+				var storyShareUrlTemplate = "/" + params[1] + "/contentApp/" + params[2] + "/" + params[3] + "?isshare=1";
+				$(this).attr("href", storyShareUrlTemplate);
+			} else if (params[3].startsWith("WS")) {
+				$(this).attr("href", $(this).attr("data-issueUrl"));
+			}
+		}
+	});
+</script>
+<!-- 针对于文章点赞用 -->
+<script>
+	var dianzan = function() {
+		$('#dianzanqian').css('display', 'none');
+		$('#dianzanhou').css('display', '');
+		var baseUrl = self.origin;
+		var articleid = 'AP616e7ed1e4b08aed9d925ea9';
+		var a;
+		if ($("#likecntbefore").text() == '点赞') {
+			a = 0
+		} else {
+			a = Number($("#likecntbefore").text());
+		}
+		var likecntbefore1 = a + 1;
+		$.ajax({
+			url: baseUrl + "/rest/site/api/articlelike/add",
+			async: false,
+			cache: false,
+			data: 'articleid=' + articleid,
+			type: "POST",
+			dataType: "text",
+			success: function (data) {
+				var cnt = data;
+				if (data == 'error') {
+					document.getElementById('likecntafter').innerText = likecntbefore1;
+				} else {
+					document.getElementById('likecntafter').innerText = cnt;
+					dianzan = function() {}
+				}
+			}, error: function () {
+				document.getElementById('likecntafter').innerText = likecntbefore1;
+			}
+		});
+	}
+</script>
+</body>
+</html>

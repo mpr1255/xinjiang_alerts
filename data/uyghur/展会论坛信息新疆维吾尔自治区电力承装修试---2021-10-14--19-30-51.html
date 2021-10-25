@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    
+
+    <title>新疆维吾尔自治区电力承装修试企业协会</title>
+
+    
+
+    <meta charset="utf-8">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+    <meta name="keywords">
+
+    <meta name="description">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 970px)" href="/static/index/css/styles.css">
+
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 970px)" href="/static/index/css/sj.css">
+
+    <link rel="stylesheet" href="/static/index/layui/css/layui.css">
+
+    <script src="/static/index/layui/layui.js"></script>
+
+    <script src="/static/index/js/jquery-1.9.1.min.js"></script>
+
+    <script src="/static/index/js/calendar.js"></script>
+    <link rel="shortcut icon" href="/static/index/images/ico.png" />
+
+  </head>
+
+  <body>
+
+    <div class="head">
+
+  <div class="top">
+
+      <div class="left"><span>2021年10月15日</span><span  id="lunar"></span><span id="week"></span></div>
+
+      <div class="right">
+
+        
+        <a href="/login.html">登录</a> 
+
+        <a href="/register.html">注册</a>
+
+        
+      </div>
+
+  </div>
+
+  <div class="logo">
+
+      <div class="t1"><a href="/"><img src="/static/index/images/logo.png" alt=""></a></div>
+
+      <div class="b1"><form action="/search.html" onsubmit="return checkSear()"><input type="text" name="kw" value="" id="search" placeholder="请输入关键词"><!-- <select onchange="searchType(this)" style="float: left;"><option value="1">新闻</option><option value="2">单位</option></select> --><button>搜索</button></form></div>
+
+  </div>
+
+  <ul class="menu">
+
+    
+    <li><a href="/index.html"><img src="/static/index/images/nav1.png" alt="">首页</a></li>
+
+    
+    <li><a href="/about.html"><img src="/static/index/images/nav2.png" alt="">机构概况</a></li>
+
+    
+    <li><a href="/news.html"><img src="/static/index/images/nav3.png" alt="">新闻中心</a></li>
+
+    
+    <li><a href="/notice.html"><img src="/static/index/images/nav4.png" alt="">通知公告</a></li>
+
+    
+    <li><a href="/work.html"><img src="/static/index/images/nav5.png" alt="">党群工作</a></li>
+
+    
+    <li><a href="/policy.html"><img src="/static/index/images/nav6.png" alt="">政策宣导</a></li>
+
+    
+    <li><a href="/industry.html"><img src="/static/index/images/nav7.png" alt="">行业发展</a></li>
+
+    
+    <li><a href="/company.html"><img src="/static/index/images/nav8.png" alt="">企业风采</a></li>
+
+    
+    <li><a href="/service.html"><img src="/static/index/images/nav9.png" alt="">专业服务</a></li>
+
+    
+    <li><a href="/centre.html"><img src="/static/index/images/nav10.png" alt="">供需中心</a></li>
+
+    
+    <li><a href="/credit.html"><img src="/static/index/images/nav11.png" alt="">信用评价</a></li>
+
+    
+    <li><a href="/train.html"><img src="/static/index/images/nav12.png" alt="">技能培训</a></li>
+
+    
+    <li><a href="/review.html"><img src="/static/index/images/nav13.png" alt="">职称评审</a></li>
+
+    
+    <li><a href="/education.html"><img src="/static/index/images/nav14.png" alt="">继续教育</a></li>
+
+    
+    <li><a href="/skill.html"><img src="/static/index/images/nav15.png" alt="">技能竞赛</a></li>
+
+    
+    <li><a href="/appraisal.html"><img src="/static/index/images/nav16.png" alt="">技能等级</a></li>
+
+    
+    <li><a href="/query.html"><img src="/static/index/images/nav17.png" alt="">证书查询</a></li>
+
+    
+    <li><a href="/contact.html"><img src="/static/index/images/nav18.png" alt="">联系我们</a></li>
+
+    
+  </ul>
+
+</div>
+
+<script>
+
+  function  searchType(obj){
+
+    var _val = $(obj).val();
+
+    if(_val == 2){
+
+      $
+
+      $(obj).parent().attr('action','/company.html');
+
+    }
+
+  }
+
+  function checkSear(){
+
+        var search= document.getElementById('search');
+
+        if(search.value=="" || search.value=="请输入关键词"){
+
+            alert('请输入关键词');
+
+            search.focus();
+
+            return false;            
+
+        }
+
+        //进行下一步
+
+        return true;
+
+    }
+
+  var date = new Date();
+
+  var _year = parseInt("2021");
+
+  var _month = parseInt("10");
+
+  var _day = parseInt("15");
+
+  var _lunar = calendar.solar2lunar(_year,_month,_day);
+
+  $('#lunar').html(_lunar.gzYear+'年'+_lunar.IMonthCn+_lunar.IDayCn);
+
+  $('#week').html(_lunar.ncWeek);
+
+</script>
+    
+<div class="place">当前位置：<a href="/">首页</a> > <a href="/centre.html#pageContent">供需中心</a></div>
+
+    <div class="ny" id="pageContent">
+      <div class="left">
+        <dl class="nmenu">
+          <dt>供需中心</dt>
+                    <dd><a href="/centre13.html#pageContent"><i>◆</i>电力机具设备</a></dd>
+                    <dd><a href="/centre12.html#pageContent"><i>◆</i>工程项目信息</a></dd>
+                    <dd><a href="/centre14.html#pageContent"><i>◆</i>电力电缆安装</a></dd>
+                    <dd><a href="/centre15.html#pageContent"><i>◆</i>人才招聘信息</a></dd>
+                    <dd><a href="/centre16.html#pageContent"><i>◆</i>展会论坛信息</a></dd>
+                  </dl>
+        <div class="text">
+
+  <div><img src="/uploads/20210726/44613df2e578840f9a921446b69cc1a4.jpg" alt=""></div>
+
+  <dt>新疆维吾尔自治区电力承装修试企业协会</dt>
+
+  <dd>地址：乌鲁木齐市高新区高新街217号盈科广场A座1503</dd>
+
+  <!-- <dd>电话：09913851200</dd>
+
+  <dd>协会QQ群：</dd> -->
+
+  <dd>微信公众号：新疆电力协会</dd>
+  
+  <dd>对公账户：新疆维吾尔自治区电力承装修试企业协会，65001615400052502701</dd>
+  
+
+</div>      </div>
+      <div class="right">
+        <div class="title">展会论坛信息</div>
+        <div class="con">
+          <div class="news">
+            <ul>
+                            <li><a href="/article234.html"><em></em>亚洲电力电工暨智能电网展览会将于9月23日拉开帷幕！！</a><span>2021-09-21</span></li>
+                            <li><a href="/article195.html"><em></em>关于做好第四届中国国际进口博览会相关交易组织工作的通知</a><span>2021-09-08</span></li>
+                            <li><a href="/article166.html"><em></em>商博会推介会暨重点项目签约仪式举行 重点项目签约总额近两千亿元</a><span>2021-08-26</span></li>
+                            <li><a href="/article167.html"><em></em>2021线上（中国）亚欧商品贸易博览会开幕</a><span>2021-08-26</span></li>
+                          </ul>
+          </div>
+          <div class="page"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="ilink">
+      <div class="title">友情链接</div>
+      <div class="con">
+                <a href="http://zizhi.nea.gov.cn/" target="_blank">国家能源局资质中心</a>
+                <a href="http://www.nea.gov.cn/" target="_blank">国家能源局</a>
+                <a href=" http://xjb.nea.gov.cn/" target="_blank">国家能源局新疆监管办公室</a>
+                <a href="http://xjdrc.xinjiang.gov.cn/" target="_blank">新疆发展和改革委员会</a>
+                <a href="http://rst.xinjiang.gov.cn/" target="_blank">新疆人力资源和社会保障厅</a>
+              </div>
+    </div>
+    
+  <div class="bottom">
+      <div class="con">
+        <div class="blink">
+          <span>政府</span>
+          <select name="interest" onchange="window.open(options[selectedIndex].value)">
+                        <option value="http://zizhi.nea.gov.cn/">国家能源局资质中心</option>
+                        <option value="http://www.nea.gov.cn/">国家能源局</option>
+                        <option value=" http://xjb.nea.gov.cn/">国家能源局新疆监管办公室</option>
+                        <option value="http://xjdrc.xinjiang.gov.cn/">新疆发展和改革委员会</option>
+                        <option value="http://rst.xinjiang.gov.cn/">新疆人力资源和社会保障厅</option>
+                        <option value="http://yjgl.xinjiang.gov.cn/">新疆应急管理厅</option>
+                        <option value="http://mzt.xinjiang.gov.cn/">新疆民政厅</option>
+                        <option value="http://zjt.xinjiang.gov.cn/">新疆住房和城乡建设厅</option>
+                        <option value="http://gxt.xinjiang.gov.cn/">新疆工业和信息化厅</option>
+                        <option value="http://www.xjzgh.org.cn/">新疆总工会</option>
+                        <option value="http://gzw.xinjiang.gov.cn/">新疆国资委</option>
+                      </select>
+        </div>
+        <div class="blink">
+          <span>协会</span>
+          <select name="interest" onchange="window.open(options[selectedIndex].value)">
+                        <option value="https://www.cec.org.cn/">中国电力企业联合会</option>
+                        <option value="http://www.cepca.org.cn/">中国电力建设企业协会</option>
+                        <option value="http://www.gdnengyuan.com/">广东省能源协会</option>
+                        <option value="http://www.scdlqy.org/">四川省电力企业协会</option>
+                        <option value="http://www.fjepea.org.cn/index.aspx">福建省电力企业协会</option>
+                        <option value="http://www.hpepea.com/">河南省电力企业协会</option>
+                        <option value="http://www.bjepea.com/index.html">北京市电力行业协会</option>
+                        <option value="http://www.zjpecma.com/">浙江省承装修试电力设施企业协会</option>
+                        <option value="http://www.hnepeea.cn/">湖南省电力工程企业协会</option>
+                        <option value="http://www.jspeima.com/">江苏省电力工程企业协会</option>
+                        <option value="https://www.ahpea.cn/">安徽省电力协会</option>
+                        <option value="https://www.shepea.org.cn/">上海市电力工程行业协会</option>
+                        <option value="https://www.lpea.org.cn/">辽宁省电力工程协会</option>
+                        <option value="http://www.tjpea.com/">天津市电力工程协会</option>
+                        <option value="http://www.sdpea.org/">山东省电力企业协会</option>
+                      </select>
+        </div>
+        <div class="blink">
+          <span>企业</span>
+          <select name="interest" onchange="window.open(options[selectedIndex].value)">
+                        <option value="http://www.xj.sgcc.com.cn/">国网新疆电力有限公司</option>
+                        <option value="http://pmos.xj.sgcc.com.cn/pmos/index/login.jsp">新疆电力交易中心</option>
+                      </select>
+        </div>
+        <div class="blink">
+          <span>高校</span>
+          <select name="interest" onchange="window.open(options[selectedIndex].value)">
+                        <option value="https://zxxx.dljxjy.com/">华北电力大学在线学习平台</option>
+                        <option value="http://jxjy.xjie.edu.cn/">新疆工程学院继续教育学院</option>
+                      </select>
+        </div>
+      </div>
+      <div class="company">主办单位 — 新疆维吾尔自治区电力承装修试企业协会　　　承办单位 — 新疆久思科创信息技术有限公司　</div>
+      <div class="copyright">新公网安备 65010202000065号　 [<a href="https://beian.miit.gov.cn/" target="_blank">新ICP备2021000998号</a> ]　<img src="/static/index/images/gaba.png" alt=""> 新公网安备 65010402001778号<!-- 政府网站标识码：无需填写</div>
+  </div>
+
+    
+
+
+
+  </body>
+
+</html>
+
+
+
+ 
+

@@ -1,0 +1,416 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新疆刺绣技艺出新、桑皮纸生产“进园”、木器销售“上网”——传统工艺焕新机-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/article.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)" class="act"><script type="text/javascript" language="javascript">var currentId=2;</script><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)"><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+  <div class="banner"></div>
+  <div class="clear h10"></div>
+  <div class="side fr">
+    <div class="side_nav">
+      <div class="tit"> 喀什概况 </div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_16/Index.aspx">喀什概况</a></li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a></li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a></li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+   
+  </div>
+  <div class="main fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    
+    <a href="/Category_9/Index.aspx" target="_self">走进喀什</a>&gt;&gt;
+    <a href="/Category_122/Index.aspx" target="_self">文化旅游</a>&gt;&gt;
+    <a href="/Category_151/Index.aspx" target="_self">文化艺术</a> </div>
+      <div class="bd">
+        <h1>新疆刺绣技艺出新、桑皮纸生产“进园”、木器销售“上网”——传统工艺焕新机</h1>
+        <div class="line"> <span>来源：新疆日报</span><span> 作者：石榴云/新疆日报记者 魏永贵</span><span> 发布时间：2021年10月19日</span><span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=53350"></script>
+   </span> <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span><span> 【<a href="/Print.aspx?id=53350">打印</a>】</span>--> </div>
+        <div class="content" id="fontzoom"> 
+      
+     <p style="text-align: center;"> </p><p><img src="/UploadFiles/Overview/2021/10/202110191043012333.jpg" /><img src="/UploadFiles/Overview/2021/10/202110191043028747.jpg" /></p><p> </p><p><font align="center" class="img_info" style="display: block; text-align: center; color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">洛浦县传家宝手工艺品专业合作社的手工艺人在制作铜制工艺品（8月19日摄）。该合作社生产的铜制工艺品等旅游纪念品畅销多个省份，带动当地25名手工艺人就业。□许晓龙摄</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">每天清晨，清脆的“叮当”声会按时叫醒喀赞其。这是铁器、铜器作坊里匠人们的敲击声。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">莎车县喀赞其街是一条百年老街，因铁锅、铜锅作坊较多而被人所熟知。2019年9月，莎车县对喀赞其街进行改造升级。这座老街成为以铁艺、铜器制作为主，饮食、农产品销售为辅的文旅商业街区。目前，喀赞其街有近400家商铺，日营业额超百万元。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">像喀赞其街一样，如今，新疆一批传统手工艺得到传承与发扬，呈现出一派生机勃勃的景象。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">政策扶持 老行业</font><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; text-indent: 2em;">新生机</span></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“第一课是叶片的绣法，第二课是绣梅花，第三课是绣哈密瓜……”9月9日，在伊吾县下马崖乡，新一期新疆刺绣培训班开课了。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">培训班由哈密传统工艺工作站技师主讲，乡里有30多名妇女参加。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">新疆刺绣技艺被列入国家级非物质文化遗产名录。2016年在哈密市政府支持下成立的哈密传统工艺工作站，把刺绣工艺的传承、培训、资料整理和产品研发作为重要内容。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">工作站成立以来，中央财政先后拨付了200多万元补助资金，自治区文化和旅游厅和哈密市政府每年也有项目资金支持。工作站举办了近百期刺绣工艺培训班，培养了近8000名绣娘，并与山西、上海多家服装企业合作，取得了一批长期订单，一批批绣娘有了稳定收入。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">刺绣工艺本身在不断吸收新的养分。在巴里坤哈萨克自治县新安绣文化产业园，河南援疆工作指挥部请来河南安绣文化产业集团有限公司的技师，给绣娘们讲解安绣的针法、配线技巧、分丝技术、颜色过渡要领，很多已经掌握新疆刺绣工艺的绣娘们在学习中融会贯通，刺绣技艺快速提高。该县萨尔乔克乡苏吉西村绣娘古丽阿沙尔·托海每个月能完成两件大绣品、十来件小绣品，能挣2000多元。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">目前，刺绣已经成为全疆各地促进农村妇女就业创业、增收致富的重要途径。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">除了刺绣品，艾德莱斯绸是我区另一种有代表性的传统手工艺品。艾德莱斯绸制作工艺也被列入国家级非物质文化遗产名录。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">艾德莱斯绸的核心产区在和田市吉亚乡，年产量超过9000匹。和田市文化体育广播电视和旅游局有关负责人介绍，目前，和田市有3家龙头企业从事艾德莱斯绸生产销售。和田市不仅成立了艾德莱斯绸生产合作社，还组织龙头企业参加各类展会。其中，和田市艾德莱斯绸手工作坊开发了20多个品种、50多种花色的产品，被评为国家工业旅游示范点，实现年产值300万元，带动周边500多家农户稳定增收。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">文旅融合 小产业大市场</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">桑皮纸古称“汉皮纸”，源自中原，产于新疆，由桑树皮、胡杨碱等原料经13道工序制成，具有防虫蛀、不怕潮、字画不褪色等特性。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“桑皮纸主要产自和田地区墨玉县和吐鲁番市鄯善县。”桑皮纸传承推广人、新疆国画院常务副院长魏宝山介绍，目前，新疆国画院与当地合作，研发了工作用纸和书画用纸两类产品，并开发了书画残片工艺品、剪纸、折扇等15种文创产品，受到消费者欢迎。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">今年3月，墨玉县桑皮纸文化园建成开业，该文化园位于“桑皮纸之乡”普恰克其镇布达村，园内有桑皮纸制作工坊、桑皮纸博物馆、民宿、美食园等，吸引了众多游客。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“文旅融合，让桑皮纸成为促进当地农民增收致富的好产业。”魏宝山介绍，今年5月，新疆国画院携手爱心企业，为吐鲁番市捐建了4个“非遗桑皮纸手工作坊”，10名农民接受了集中培训，成为制作桑皮纸的技艺传承人。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">鄯善县鲁克沁镇三个桥村农民沙塔尔·司马义是吐鲁番市桑皮纸传承人，这几年，他靠制作桑皮纸每年能挣1万多元。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">文旅产业的发展，带动了一批传统手工艺品走向市场。阿克陶县巴仁乡萨依巴格村以前被称为“碗巷”，家家户户以制作土陶碗为生。随着经济发展，土陶碗的市场逐渐缩小，很多人都转了行。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“后来，旅游的人越来越多，土陶的生意也越来越好。”一直坚守这一行当的阿吉·艾买提说，土陶业的发展迎来了新机遇，他让3个儿子都跟着他一起干。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">经当地政府推荐，阿吉·艾买提的两个儿子前往江西省景德镇接受了3个月培训。眼界大开的年轻人回来后，决定引进电炉窑烧制土陶产品，良品率大幅提高。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">为确保质量，在成品最重要的打磨环节，还是由阿吉·艾买提带着工人手工打磨。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">精湛的传统手工技艺与现代设备的结合，让阿吉·艾买提的土陶产品在各类展会上斩获了大笔订单，成品单价也翻了三四倍。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">传承发扬 旧工坊新景观</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">新和县依其艾日克镇加依村被誉为“中国新疆民间手工乐器制作第一村”，在这里，320户农户中有106户参与乐器制作，形成了多家各具特色的乐器制作企业和专业户。都塔尔、弹布尔、手鼓……各类民族乐器种类齐全。村民们兴之所至，还会给游客即兴弹奏一曲。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">加依村如今靠制作乐器成为富裕村，村容村貌发生了巨大变化。“天籁加依”景区被评为国家AAA级旅游景区，加依村被评为“中国最美乡村旅游模范村”。村里的各个乐器作坊，也早已旧貌换新颜，成为新的景点。今年上半年，加依村接待游客近30万人次，旅游收入1.27亿元。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“依靠党的好政策，我们的村子越来越漂亮，村里给我们建的工作室也很漂亮，吸引了不少游客。”乐器制作技艺国家级非物质文化遗产传承人艾依提·依明说。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">在喀什老城阿图什巷，各类手工艺品店铺鳞次栉比，土陶制品、首饰、手工地毯、艾德莱斯绸、花帽、手工刺绣、印花土布以及各种铜器、木器、铁器……这些精美的手工艺品都可以现场制作，每一个店铺同时也是一个工坊。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">政府先后投入70多亿元，对喀什老城28个片区49083户507万平方米危旧房进行改造，喀什老城从此开启了美丽嬗变。如今，被称为“手工艺一条街”的阿图什巷，有精美的砖雕、样式古朴的路灯，还有精美的工艺品。这里，是老城生意最为火爆的区域。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">新的销售模式受到追捧。在一家木器店，店主迪力夏提在淘宝网上开了自己的店，店名叫“喀什代吾然”，网店销售额占全年的三成以上。</font></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; text-indent: 2em;"><font id="fnt" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">“我想去海南省三亚市开一个店，让更多的人了解新疆木器，了解新疆人的生活。”迪力夏提说。</font></p>
+    
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+</body>
+</html>

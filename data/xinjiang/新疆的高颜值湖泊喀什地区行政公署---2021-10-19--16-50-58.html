@@ -1,0 +1,443 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新疆的高颜值湖泊-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/news.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)" class="act"><script type="text/javascript" language="javascript">var currentId=2;</script><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)"><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+
+  <div class="side fr" id="list">
+    <div class="side_nav">
+      <div class="tit">走进喀什</div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_16/Index.aspx">喀什概况</a></li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a></li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a></li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+    <div class="hd">
+      <h3>点击排行</h3>
+    </div>
+    <div class="bd">
+      <ul class="hot">
+        
+            <li><a href="/Item/46529.aspx" target="_blank" title="标题：喀什概况&#xD;点击数：76851&#xD;发表时间：21年06月11日"><font style="color:#444444;">喀什概况</font></a></li><li><a href="/Item/47217.aspx" target="_blank" title="标题：喀什地区2018年国民经济和社会发展统计公报&#xD;点击数：26817&#xD;发表时间：19年04月30日"><font style="color:#444444;">喀什地区2018年国民经济和社会…</font></a></li><li><a href="/Item/24263.aspx" target="_blank" title="标题：喀什地区2014年国民经济和社会发展统计公报&#xD;点击数：26587&#xD;发表时间：15年03月25日"><font style="color:#444444;">喀什地区2014年国民经济和社会…</font></a></li><li><a href="/Item/49038.aspx" target="_blank" title="标题：喀什地区2019年国民经济和社会发展统计公报&#xD;点击数：26241&#xD;发表时间：20年05月09日"><font style="color:#444444;">喀什地区2019年国民经济和社会…</font></a></li><li><a href="/Item/41122.aspx" target="_blank" title="标题：喀什地区2016年国民经济和社会发展统计公报&#xD;点击数：25816&#xD;发表时间：17年05月19日"><font style="color:#444444;">喀什地区2016年国民经济和社会…</font></a></li><li><a href="/Item/45558.aspx" target="_blank" title="标题：喀什地区2017年国民经济和社会发展统计公报&#xD;点击数：22957&#xD;发表时间：18年04月27日"><font style="color:#444444;">喀什地区2017年国民经济和社会…</font></a></li><li><a href="/Item/11405.aspx" target="_blank" title="标题：喀什地区2012年国民经济和社会发展统计公报&#xD;点击数：18596&#xD;发表时间：13年03月09日"><font style="color:#444444;">喀什地区2012年国民经济和社会…</font></a></li><li><a href="/Item/21342.aspx" target="_blank" title="标题：喀什地区2013年国民经济和社会发展统计公报&#xD;点击数：17675&#xD;发表时间：14年06月16日"><font style="color:#444444;">喀什地区2013年国民经济和社会…</font></a></li><li><a href="/Item/32010.aspx" target="_blank" title="标题：喀什地区2015年国民经济和社会发展统计公报&#xD;点击数：16900&#xD;发表时间：16年04月19日"><font style="color:#444444;">喀什地区2015年国民经济和社会…</font></a></li><li><a href="/Item/51327.aspx" target="_blank" title="标题：喀什地区2020年国民经济和社会发展统计公报&#xD;点击数：13750&#xD;发表时间：21年03月31日"><font style="color:#444444;">喀什地区2020年国民经济和社会…</font></a></li>
+          
+ </ul>
+    </div>
+<!--<div class="clear h10"></div>
+    <div class="hd"> <a href="/Category_0/Index.aspx" class="fr">更多>></a>
+      <h3>热点专题</h3>
+    </div>
+    <div class="bd">
+             <ul class="special">
+
+</ul>
+        </div>-->
+  </div>
+  <div class="list_wrap fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    
+    <a href="/Category_9/Index.aspx" target="_self">走进喀什</a>&gt;&gt;
+    <a href="/Category_122/Index.aspx" target="_self">文化旅游</a>&gt;&gt;
+    <a href="/Category_983/Index.aspx" target="_self">喀什旅游</a> >> 正文内容 </div>
+      <div class="bd">
+        <h1>新疆的高颜值湖泊</h1>
+        <div class="line"> <span>来源：新疆日报</span>
+                           <span> 作者：</span>
+                           <span> 发布时间：2021年10月19日</span>
+                           <span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=53353"></script>
+   </span>
+                       <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                           <span> 【<a href="/Print.aspx?id=53353">打印</a>】</span>--></div>
+        <div class="content" id="fontzoom"> 
+      
+     <p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">博斯腾湖：“最大”的湖</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">博斯腾湖是中国最大的内陆淡水湖，位于博湖县境内，博斯腾湖国家湿地公园也是目前我国占地面积最大的国家湿地公园。这里湖水水域辽阔，烟波浩渺，风起时波浪滔滔；风静时波光潋滟，水天一色；星罗棋布的小湖相依相连，芦苇茂密，野莲成片。博斯腾湖与雪山、绿洲、沙漠互相映衬，组成多彩的风景画卷。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">每年清明前后，随着天气逐渐转暖，包括天鹅、白鹭等珍禽在内的野生鸟类陆续迁徙而来。在环湖湿地的草滩上，数千只候鸟聚集在这里悠闲觅食，或展翅低飞，或追逐嬉戏，是新疆观鸟的好去处。此外,湖里盛产各种淡水鱼，来这里游玩吃个“全鱼宴”也是很过瘾的。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">天山天池：有故事的湖</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">天山天池位于阜康市境内博格达峰北坡的半山腰，是一个湖面呈半月形的高山湖泊。景区以天池为中心，包括天池上下4个完整的山地垂直自然景观带。这里湖水清澈，晶莹如玉，能倒映出博格达峰；四周群山环抱，挺拔、苍翠的云杉、塔松，漫山遍岭。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">天山天池因西王母“瑶池盛会”名传国内外，被誉为人间仙境。传说这里就是西王母所居的瑶池——“瑶池仙境世绝殊，天上人间遍寻无”。天池风光最著名的八景分别为龙潭碧月、顶天三石、定海神针、南山望雪、西山观松、海峰晨曦、悬泉飞瀑和石门一线，这些景点多与西王母的神话传说有关。这里一年四季风景秀丽，是个有故事的湖。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">达瓦昆湖：沙漠中的湖</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">达瓦昆湖坐落于岳普湖县达瓦昆沙漠旅游风景区，景区内3000亩天然流动湖泊水面被5万亩沙漠环绕，湖岸边的布力曼库木沙漠沙丘起伏。湖水湛蓝、静卧于大漠怀中，是一道与众不同的风景，2001年这里被农业部命名为“中国沙漠风光旅游之乡”。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">游客可乘坐骆驼进入沙漠，沙漠中有千年柳树王、胡杨王，还有野生沙枣树。来这体验一下沙漠探险车几乎是必选项，在巨大的轰鸣声中探险车疾速冲向沙山顶尖，当它跃向顶端的一刹那，你才会看清，车轮前方竟是十分陡峭的沙山断崖，用惊心动魄来形容那一瞬间绝不过分。此外，这里的架子肉、烤包子等风味小吃也极为诱人。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">乌伦古湖：草原上的湖</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">乌伦古湖（也称布伦托海、福海）位于福海县境内，是新疆仅次于博斯腾湖的第二大渔业基地，像一块晶莹剔透的翡翠镶在阿勒泰草原上，以“戈壁大海”和盛产鲜美的“福海鱼”而著称。夏日，乌伦古湖湖面渔舟点点，波平沙软，水温适宜，湖岸有设备齐全的浴场及游乐设施，颇有海滨浴场的感觉。秋季，湖面水天相连，湖水周边辽阔的草原一望无际，极目远眺，心旷神怡。冬季冰上大拉网捕鱼吸引了众多疆内外游客观光游览，成为阿勒泰地区冰雪旅游的主打品牌。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">（石榴云/新疆日报记者 玛依古丽·艾依提哈孜整理）</p>
+    
+    </div>
+        <ul class="pn">
+          <li><span>【上一篇】：</span><a href="/Item/53266.aspx" target="_self">魅力新疆 旅游助力发展“新”脉动</a></li>
+          <li><span>【下一篇】：没有了！</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+
+</body>
+</html>

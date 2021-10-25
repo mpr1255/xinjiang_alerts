@@ -1,0 +1,443 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“这五年的变化有目共睹” —— 新疆广大党员干部群众热议自治区第十次党代会召开-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/news.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)"><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)" class="act"><script type="text/javascript" language="javascript">var currentId=3;</script><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" style="display:none;" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+
+  <div class="side fr" id="list">
+    <div class="side_nav">
+      <div class="tit">政务动态</div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_866/Index.aspx">中央要闻</a></li>
+<li><a href="/Category_867/Index.aspx">政务动态</a></li>
+<li class="act"><a href="/Category_868/Index.aspx">县市信息</a></li>
+<li><a href="/Category_869/Index.aspx">部门动态</a></li>
+<li><a href="/Category_873/Index.aspx">通知公告</a></li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+    <div class="hd">
+      <h3>点击排行</h3>
+    </div>
+    <div class="bd">
+      <ul class="hot">
+        
+            <li><a href="/Item/52117.aspx" target="_self" title="标题：2021年喀什地区面向社会公开招聘中小学和幼儿园教师公告&#xD;点击数：223529&#xD;发表时间：21年07月05日"><font style="color:#444444;">2021年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/50664.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员简章&#xD;点击数：65825&#xD;发表时间：21年01月13日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/51927.aspx" target="_self" title="标题：喀什地区面向社会人员开展普通话水平测试的公告&#xD;点击数：53205&#xD;发表时间：21年06月18日"><font style="color:#444444;">喀什地区面向社会人员开展普通…</font></a></li><li><a href="/Item/50795.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员资格初审结果公告&#xD;点击数：23453&#xD;发表时间：21年01月26日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/51176.aspx" target="_self" title="标题：关于开展喀什地区2020年面向社会公开招聘事业编制工作人员笔试考试的公告&#xD;点击数：14531&#xD;发表时间：21年03月09日"><font style="color:#444444;">关于开展喀什地区2020年面向社…</font></a></li><li><a href="/Item/50701.aspx" target="_self" title="标题：关于增加2020年喀什地区事业单位面向社会公开招聘工作人员岗位的公告&#xD;点击数：11667&#xD;发表时间：21年01月15日"><font style="color:#444444;">关于增加2020年喀什地区事业单…</font></a></li><li><a href="/Item/53161.aspx" target="_self" title="标题：关于国家医疗保障信息平台系统升级停机通告&#xD;点击数：11158&#xD;发表时间：21年10月08日"><font style="color:#444444;">关于国家医疗保障信息平台系统…</font></a></li><li><a href="/Item/52412.aspx" target="_self" title="标题：2021年喀什地区盖孜库山河流域管理处面向社会公开招聘自收自支事业单位工作人员简章&#xD;点击数：10102&#xD;发表时间：21年08月02日"><font style="color:#444444;">2021年喀什地区盖孜库山河流域…</font></a></li><li><a href="/Item/51367.aspx" target="_self" title="标题：2021年喀什地区工人文化宫面向社会公开招聘工作简章&#xD;点击数：9339&#xD;发表时间：21年04月13日"><font style="color:#444444;">2021年喀什地区工人文化宫面向…</font></a></li><li><a href="/Item/50968.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员面试成绩及入闱体检人员公告&#xD;点击数：8550&#xD;发表时间：21年02月09日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li>
+          
+ </ul>
+    </div>
+<!--<div class="clear h10"></div>
+    <div class="hd"> <a href="/Category_0/Index.aspx" class="fr">更多>></a>
+      <h3>热点专题</h3>
+    </div>
+    <div class="bd">
+             <ul class="special">
+
+</ul>
+        </div>-->
+  </div>
+  <div class="list_wrap fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    <a href="/Category_1/Index.aspx" target="_self">政务动态</a>&gt;&gt;
+    <a href="/Category_868/Index.aspx" target="_self">县市信息</a> >> 正文内容 </div>
+      <div class="bd">
+        <h1>“这五年的变化有目共睹” —— 新疆广大党员干部群众热议自治区第十次党代会召开</h1>
+        <div class="line"> <span>来源：新疆日报</span>
+                           <span> 作者：石榴云/新疆日报记者</span>
+                           <span> 发布时间：2021年10月22日</span>
+                           <span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=53412"></script>
+   </span>
+                       <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                           <span> 【<a href="/Print.aspx?id=53412">打印</a>】</span>--></div>
+        <div class="content" id="fontzoom"> 
+      
+     <p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"><span style="text-indent: 2em;">10月21日，自治区第十次党代会在乌鲁木齐召开，在我区广大党员干部群众中引发强烈反响。大家纷纷表示，过去五年，我区各项事业全面进步，社会大局持续稳定，经济实力显著增强，群众生活明显改善，民族团结发展进步，呈现出社会稳定、人民安居乐业的良好局面。站在新起点、踏上新征程，有决心有信心把祖国的新疆建设得更加美好。</span></p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">社会发展谱新篇</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“在以习近平同志为核心的党中央坚强领导下，群众的生活越来越好，新疆各项事业取得了巨大成就。”自治区第十次党代会代表、伊宁县温亚尔镇布力开村党支部原书记买买提江·吾买尔今年获得“七一勋章”。聆听大会报告后，买买提江·吾买尔难掩激动之情。他说：“5年来，天山南北的巨大变化，充分证明新时代党的治疆方略是无比英明正确的，完全符合新疆实际。”</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“5年来，社会稳定和长治久安总目标深入人心，是企业实现高质量发展的基本前提和基础。我们公司的发展也步入了快车道。”中石油克拉玛依石化有限责任公司党委书记、董事长许立甲说，“自治区第十次党代会的召开，是事关我区经济社会持续发展的大事喜事。公司党委将带领全体干部职工认真学习党代会精神，同心同德、砥砺奋进，牢牢聚焦总目标，全面贯彻新发展理念，让企业的发展更好更快更稳。”</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">在塔城重点开发开放试验区，国家电投、三一重能等一大批重点项目签约落地，项目施工现场一片繁忙。“报告振奋人心，我们将持续抓好试验区的项目落地和建设工作，努力推动塔城地区形成新一轮发展热潮，为建设团结和谐、繁荣富裕、文明进步、安居乐业、生态良好的新时代中国特色社会主义新疆作出新的贡献。”塔城地区商务局党组书记、副局长古丽巴尔青·胡沙英说。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">幸福花开香万里</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“搬迁后，我的生活越来越好。感谢党的好政策。”在克孜勒苏柯尔克孜自治州阿克陶县昆仑佳苑小区，村民阿西尔·塔依尔正在大棚里忙碌。昆仑佳苑小区是阿克陶县最大的易地扶贫搬迁安置点，历经5年建设，从大山里搬出来的牧民在这里实现了向“新型职业农民”的转变。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“农牧民安居乐业，口袋里鼓囊囊，精神上亮堂堂，这是新疆党员干部贯彻落实新时代党的治疆方略、接续奋斗的结果。带领乡亲们不断创造新的美好生活，是我们肩负的职责和使命。”新疆工程学院驻和田市吉亚乡工作队总领队，库塔孜买里村第一书记、工作队队长黄平说，“全面推进乡村振兴，早日实现共同富裕，工作队还有很多事情要做。大会的召开让我们精神振奋、斗志昂扬，我们要在新起点上再奋进。”</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">在麦盖提县库木库萨尔乡，刀郎画乡景区里常年有18位知名农民画师在创作。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“农民画师用手中的画笔，描绘干部群众亲如一家的场景、描绘家乡的建设成就、描绘群众的幸福生活，受到乡亲们的喜爱。”库木库萨尔乡文化站站长徐家巍说，“自治区第十次党代会的召开，对我们基层文化工作者是新的鼓舞和动员。我们将继续打造‘刀郎农民画’这个品牌，让农民画在宣传党的方针政策、全面推进乡村振兴中发挥更大作用。”</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">城乡处处有新景</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">深秋时节，喀什市北湖公园游人如织。“北湖公园2020年建成后，与旁边的盘陀湿地公园连成一体，喀什市区空气质量优良天数逐步增加。”喀什地委宣传部副部长张莉说。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">绿水青山就是金山银山。5年来，我区持续加强生态环境保护，深入推进乡村人居环境整治，城乡大地天蓝地绿水更清，处处有新景。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">在伊犁哈萨克自治州新源县阿勒玛勒镇的天山野果林区，茫茫林海绵延无际。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“2015年，野果林因病虫害枯死率高达80%。2016年，科技部启动天山野果林保护项目。历经5年治理，野果林重现生机。”新源县林业和草原局党组书记汪贵山说，新源县林草系统干部职工将接续奋斗，把新源县的绿水青山维护好、建设好。</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">“这5年，新疆的发展变化太大了。美丽乡村建设，让很多村庄发生了巨大变化。脱贫攻坚战，让贫困群众过上了好日子，很多贫困农牧民还变成了致富带头人。”自治区第十次党代会代表，巴里坤哈萨克自治县融媒体中心党支部书记、副主任成冬云在会场聆听了报告，非常振奋。她说：“谱写好中华民族伟大复兴中国梦的新疆篇章，最关键的是党的领导。在党的领导下，我区各族人民一定会把祖国的新疆建设得越来越好。”</p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;"> </p><p style="font-size: 14px; line-height: 26.6px; text-align: justify; overflow-wrap: break-word; font-family: 寰蒋闆呴粦, sans-serif; color: rgb(0, 0, 0); text-indent: 2em;">（记者魏永贵，参与记者盖有军、拍热扎提·阿不都、热依达、宋卫国、张婷、加孜拉·泥斯拜克）</p>
+    
+    </div>
+        <ul class="pn">
+          <li><span>【上一篇】：</span><a href="/Item/53406.aspx" target="_self">伽师县16万亩甜菜采收正当时</a></li>
+          <li><span>【下一篇】：</span><a href="/Item/53414.aspx" target="_self">鸿辉农业：循环育苗 探路做大龙虾产业</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+
+</body>
+</html>

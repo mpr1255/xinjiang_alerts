@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="./js2021/lib/swiper/swiper.css">
+	
+	    <link rel="stylesheet" href="https://zwfw.xinjiang.gov.cn/xjcommonheader2021/css/pageCommonindex.css">
+    <link rel="stylesheet" href="css2021/common.css">
+    <link rel="stylesheet" href="css2021/index.css">
+    <script src="./js2021/lib/jquery-1.12.min.js"></script>
+    <script src="https://zwfw.xinjiang.gov.cn/js/mustache.js"></script>
+	
+ 	<script src="https://zwfw.xinjiang.gov.cn/OAuth/js/js.cookie.min.js"></script>
+    <script src="https://zwfw.xinjiang.gov.cn/OAuth/js/OAuthCommon.js"></script>
+    <script src="https://zwfw.xinjiang.gov.cn/OAuth/js/OAuth.js"></script>
+    <script src="https://zwfw.xinjiang.gov.cn/js/extranetCommon.js"></script>
+	
+	<script src="https://zwfw.xinjiang.gov.cn/js/ABT/ABTLoad.js"></script>
+    <title>新疆政务服务首页</title>
+
+   <link rel="stylesheet" href="/css/webBuilderCommonGray.css"></head>
+
+<body> 
+<div class="ewb-banner" id="accessibilitymain">
+    <!-- 头部 -->
+    <div class="header">
+        <div class="container">
+            <div class="header-top clearfix">
+                <img class="l" src="https://zwfw.xinjiang.gov.cn/images/pages/page_logo.png" alt="logo" />
+                <div class="area-name l" id = "nowareaname">
+                	新疆维吾尔自治区
+                	 
+                </div>
+                <div class="area-change l">切换
+                    <div class="area-wrapper">
+                        <div class="innner">
+                          <!--   <p class="position">新疆维吾尔自治区</p> -->
+                            <ul style="width: 100%;" class="border position" id = "xjarea-title-ul">
+                               
+                     		</ul>
+                     		
+                            <ul class="change-list xj-area border clearfix" id = "xjarea-ul">
+                               
+                            </ul>
+                            <div class="website" style = "display: inline-block;">
+                                <span><a id = "xjarea-now" style="width:auto;" href = "javascript:;">新疆政务服务网>></a></span>
+                            </div>
+                            <p class="department">
+                                政务服务部门（<span id = "xjou-num"></span>）
+                            </p>
+                            <ul class="change-list xj-ou clearfix" id = "xjou-ul">
+                               
+                            </ul>
+                            <!-- <a href="javascript:;" class="more">
+                                <span>显示更多</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <ul class="link clearfix r">
+                    <li>
+                        <a href="http://gjzwfw.www.gov.cn/">国家政务服务平台</a>
+                    </li>
+                    <li>
+                        <a href="http://www.xinjiang.gov.cn/">新疆维吾尔自治区人民政府网</a>
+                    </li>
+                    <li>
+                        <a href="javascript:toolbar.Function.show.mainMethod();">无障碍浏览</a>
+                    </li>
+                    <li>
+                        <a href="./operation.html">操作指南</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="menu clearfix">
+                <li class="active">
+                    <a href="javascript:;">首页</a>
+                </li>
+                <li>
+                    <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personal.html">个人服务</a>
+                </li>
+                <li>
+                    <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personalfaren.html">法人服务</a>
+                </li>
+                <li>
+                    <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/newAppraise/review.html">好差评</a>
+                </li>
+                <li>
+                    <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/potency/potency.html">效能监督</a>
+                </li>
+                <li>
+                    <a href="https://zwfw.xinjiang.gov.cn/xinjiangzwfw/license_publicity.html">证照公示</a>
+                </li>
+                <li>
+                    <a href="https://ggzy.xinjiang.gov.cn/">公共资源</a>
+                </li>
+            </ul>
+            <div class="login">
+                <p class="hello" id= "welcome-text">早上好！</p>
+                <p class="login-user" style= "position:relative;">
+                    <a href="javascript:;"  id = "go_login">点击登录，</a><span id = "notloginnote"><br>查看个人办件信息</span><span style = "display:none;position:absolute;left:44%" class = "login-header-div">|</span>
+					<a href="javascript:;" style = "display:none;position:absolute;left:49%" class = "login-header-div" id = "go_logout">退出登录</a><br>
+					<a href="javascript:;" style = "display:none" class = "login-header-div" id = "go_grbj">我的办件</a><span style = "display:none;position:absolute;left:44%" class = "login-header-div">|</span>
+					<a href="javascript:;" style = "display:none;position:absolute;left:49%" class = "login-header-div" id = "go_grkj">我的空间</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- banner -->
+        <div class="banner">
+            <div class="container clearfix">
+                <div class="welcome l">
+                    <p class="welcome-tt">大美新疆欢迎您</p>
+                    <!-- 搜索 -->
+                    <div class="search clearfix">
+                        <input class="search-input l" type="text" id="search_input" placeholder="请输入您要办理的事项关键词" />
+                        <a class="search-btn l" id="search_qwjs" href="javascript:;"></a>
+                    </div>
+                    <!-- 热门搜索 -->
+                    <ul class="hot">
+                        <li class="hot-tt">热门搜索：</li>
+                        <li>
+                            <a href="https://zwfw.xinjiang.gov.cn/xjqwjs2021/search_result.html?wd=公积金" target="_blank">公积金</a>
+                        </li>
+                        <li>
+                            <a href="https://zwfw.xinjiang.gov.cn/xjqwjs2021/search_result.html?wd=社保" target="_blank">社保</a>
+                        </li>
+                        <li>
+                            <a href="https://zwfw.xinjiang.gov.cn/xjqwjs2021/search_result.html?wd=医保" target="_blank">医保</a>
+                        </li>
+                        <li>
+                            <a href="https://zwfw.xinjiang.gov.cn/xjqwjs2021/search_result.html?wd=取水许可" target="_blank">取水许可</a>
+                        </li>
+                        <li>
+                            <a href="https://zwfw.xinjiang.gov.cn/xjqwjs2021/search_result.html?wd=驾驶证" target="_blank">驾驶证</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="old-people r" style = "cursor: pointer;"  onclick = "window.location.href='https://zwfw.xinjiang.gov.cn/xjzwfw2021/eldertopics/elderTopics.html'">
+                    <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/eldertopics/elderTopics.html" class="btn">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <!-- 统一认证 -->
+        <div class="unify-wrapper">
+            <div class="container">
+                <ul class="unify-list">
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjwwrz/login/oauth2login?client_id=e79538ce-f924-4795-96c4-779e3b5ce07c&response_type=code&scope=user&redirect_uri=https://zwfw.xinjiang.gov.cn">
+                            统一身份认证
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/newAppraise/review.html">
+                            统一“好差评”
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personal.html">
+                            统一事项服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/complaint.html">
+                            统一咨询投诉
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xinjiangzwfwnew/mypermit1.html">
+                            统一证照服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://finpt.xjcz.gov.cn/finpt/index.do">
+                            统一支付平台
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<div id="qijiandian"></div>
+        <!-- 特色服务 -->
+        <div class="feature container">
+            <p class="feature-tt">特色服务
+                <span>便民利企 从“新”出发</span>
+            </p>
+            <ul class="service-list clearfix">
+                <li>
+                    <p class="service-name">区域通办</p>
+                    <ul class="matter">
+                        <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/platform1/platform_index.html">
+                                <p >丝路通办</p>
+                                <p>(跨省通办)</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/platform/platform_index.html">疆内通办</a>
+                        </li>
+                    </ul>
+                    <p class="link">
+                        <span>一地认证</span>
+                        <span class="split">|</span>
+                        <span>全网通办</span>
+                    </p>
+                    <p class="link">
+                        <span>异地可办</span>
+                        <span class="split">|</span>
+                        <span>就近办理</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="service-name">营商环境</p>
+                    <ul class="matter">
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=d965b4d3-88ab-4916-b0ae-5101713bf7d1&redirect_uri=http://222.82.232.232:8088/ICPSP/index.action">
+                                企业开办全程网办
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="http://www.xjtzxm.gov.cn/">
+                                投资监管平台
+                            </a>
+                        </li>
+                      <li id = "gcjssp">
+                            <a class="matter-item"  href="javascript:;">
+                                工程并联审批
+                            </a>  
+                        </li>
+                        <li>
+                            <a class="matter-item more" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/tszq/index.html">
+                                查看更多
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="service-name">我为亲戚办件事</p>
+                    <ul class="matter">
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/relative_work/relative_work.html">
+                                社保服务
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/relative_work/relative_work.html">
+                                医保服务
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/relative_work/relative_work.html">
+                                个人工商服务
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="service-name">疫情防控</p>
+                    <ul class="matter">
+                        <li>
+                            <a class="matter-item" href="http://www.xinjiang.gov.cn/xinjiang/c100223/fkxxgzbdgz.shtml">
+                                疫情动态
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="http://sousuo.gov.cn/s.htm?q=%E5%A4%8D%E5%B7%A5%E5%A4%8D%E4%BA%A7&t=zhengcelibrary&orpro=">
+                                复工复产
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="http://bmfw.www.gov.cn/xxgzbdfyjycxjkzg/index.html">
+                                检测机构查询
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="http://www.xinjiang.gov.cn/xinjiang/yqfkrx/fkxxgzbdgz_list.shtml">
+                                援助热线
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+				
+            </ul>
+			<!-- 个性化添加四个 -->
+			<ul class="service-list-gxh clearfix">
+			
+                <li>
+				  <p class="service-name">政策直达</p>
+                     <ul class="matter">
+                        <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/xjzwfw2021/policy.html">
+                              国家政策
+                            </a>
+							 
+                        </li>
+                       <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/xjzwfw2021/policy.html">
+                               自治区政策
+                            </a>
+							 
+                        </li>
+						<li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/xjzwfw2021/policy.html">
+                               查看更多
+                            </a>
+							 
+                        </li>
+                    </ul>
+                  
+                </li>
+                <li>
+				  <p class="service-name">智能审批</p>
+                     <ul class="matter">
+                        
+                        <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/bmfwtest/guidetest/guidance.html?taskcode=116523250102426792400012302000005">
+                               进入专区
+                            </a>
+							 
+                        </li>
+                    </ul>
+                </li>
+                <li>
+				  <p class="service-name">一站式企业服务</p>
+                     <ul class="matter">
+					 <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/onestop_service.html">
+                              一站式金融服务
+                            </a>
+                        </li>
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/onestop_service.html">
+                               查看更多
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+                <li>
+				  <p class="service-name">便民服务</p>
+                     <ul class="matter">
+					  <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/bmfwtest/conveniences.html">
+                               社保服务
+                            </a>
+							 
+                        </li>
+						 <li>
+                            <a class="matter-item" href = "https://zwfw.xinjiang.gov.cn/bmfwtest/conveniences.html">
+                               生活缴费
+                            </a>
+							 
+                        </li>
+                        <li>
+                            <a class="matter-item" href="https://zwfw.xinjiang.gov.cn/bmfwtest/conveniences.html">
+                               查看更多
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+				
+            </ul>
+
+			</div>
+        <!-- 个人服务/法人服务 -->
+        <div class="services" id="tab">
+            <div class="container">
+                <ul class="hd clearfix">
+                    <li class="active clicktab"  id = "themegrfw">个人服务</li>
+                    <li class = "clicktab"  id = "themefrfw">法人服务</li>
+                    <a class="common-more" id = "themefwlink" href="javascript:;">前往办理</a>
+                </ul>
+                <div class="bd">
+                    <div class="bdl">
+                        <ul class="services-list clearfix" id = "themetasklistul">
+                            
+                        </ul>
+                    </div>
+                    <div class="bdl" style="display: none;" >
+                        <ul class="services-list clearfix" id = "themetasklistfrul">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 主题集成服务 -->
+        <div class="theme">
+            <div class="container">
+                <p class="theme-tt clearfix">
+                    主题集成服务·<span>一件事一次办</span>
+                    <a class="common-more" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/onething/theme_integration_service.html">查看更多</a>
+                </p>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul class="theme-list">
+                            <li>
+                                <a href="https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=d965b4d3-88ab-4916-b0ae-5101713bf7d1&redirect_uri=http://222.82.232.233:8088/entservice/accpetUserserver?taskcode=1">
+                                    <img class="pic" src="./images2021/ztjc_qykb.png" alt="" />
+                                    <p class="theme-name">
+                                        <span>企业开办</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://zwfw.xinjiang.gov.cn/xjwwrz/rest/oauth2/authorize?state=aaa&response_type=code&client_id=d965b4d3-88ab-4916-b0ae-5101713bf7d1&redirect_uri=http://222.82.232.233:8088/entservice/accpetUserserver?taskcode=2">
+                                    <img class="pic" src="./images2021/ztjc_qyzx.png" alt="" />
+                                    <p class="theme-name">
+                                        <span>企业注销</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fuwu.xjylbz.cn/hallEnter/#/Index">
+                                    <img class="pic" src="./images2021/ztjc_ybydba.png" alt="" />
+                                    <p class="theme-name">
+                                        <span>异地就医备案</span>
+                                    </p>
+                                </a>
+                            </li>
+                           <li>
+                                <a href="http://www.xjtzxm.gov.cn/">
+                                    <img class="pic" src="./images2021/ztjc_tzjg.jpg" alt="" />
+                                    <p class="theme-name">
+                                        <span>投资项目监管</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+               <!--  <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
+            </div>
+
+        </div>
+        <!-- 好差评 -->
+        <div class="evaluate">
+            <div class="container">
+                <p class="evaluate-tt clearfix">
+                    政务服务好差评
+                    <span>本月统计数据</span>
+                    <a class="common-more" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/potency/potency.html">查看更多</a>
+                </p>
+                <ul class="evaluate-detail">
+                    <li>
+                        <p class="evaluate-name">办件量</p>
+                        <p class="evaluate-value">
+                          <span  id="bjnum"></span> <span class="unit">条</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="evaluate-name">评价数</p>
+                        <p class="evaluate-value">
+                              <span  id="pjnum"></span><span  class="unit">条</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="evaluate-name">差评数</p>
+                        <p class="evaluate-value">
+                          <span  id="badpjnum"></span>   <span   class="unit">条</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="evaluate-name">差评整改率</p>
+                        <p class="evaluate-value">
+                            <span  id="badpjchange"></span> <span id = "badpjchange" class="unit">%</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 服务清单/政策直通车 -->
+        <div class="wrapper container clearfix">
+            <!-- 服务清单 -->
+            <div class="service-list l">
+                <p class="service-list-tt">服务清单   <a class="common-more" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/fwqdnew/inventory.html">查看更多</a></p>
+                <ul class="list clearfix">
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/qzqdnew/responsibility_list.html">
+                            <img src="./images2021/index/bg-serlist1.jpg" alt="" />
+                            <p class="name">权责清单</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personalxzqlqd.html">
+                            <img src="./images2021/index/bg-serlist2.jpg" alt="" />
+                            <p class="name">行政权力清单</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personalggfwsxqd.html">
+                            <img src="./images2021/index/bg-serlist3.jpg" alt="" />
+                            <p class="name">公共服务事项清单</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personalzdpycqd.html">
+                            <img src="./images2021/index/bg-serlist4.jpg" alt="" />
+                            <p class="name">最多跑一次服务清单</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/fwqdnew/fwqd_tb.html">
+                            <img src="./images2021/index/bg-serlist5.jpg" alt="" />
+                            <p class="name">通办清单</p>
+                        </a>
+                    </li>
+      
+					<li>
+                        <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/personalbjmqd.html">
+                            <img src="./images2021/index/bg-serlist6.jpg" alt="" />
+                            <p class="name">不见面办理事项清单</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 政策直通车 -->
+            <div class="direct-train r">
+                <p class="direct-train-tt">
+                    政策直通车
+                    <a class="common-more" href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/policy.html">查看更多</a>
+                </p>
+                <div class="train-wrapper">
+                    <ul class="article">
+                        <li class="clearfix">
+                            <a href="http://zc.gjzwfw.gov.cn/art/2021/7/15/art_8_38125.html">
+                                <span class="name l">商务部关于印发《深化“证照分离”改革进一步激发市场主体发展活力工作实施方案》的通知（发文机关：国家商务部）。</span>
+                                <span class="time r">2021-09-17</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://zc.gjzwfw.gov.cn/art/2021/8/17/art_8_39188.html">
+                                <span class="name l">小微企业、个体工商户税费优惠政策指引（发文机关：国家税务总局），后附：1.小微企业、个体工商户税费优惠政策指引汇编。2.小微企业、个体工商户税费优惠政策指引文件目录。</span>
+                                <span class="time r">2021-09-17</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://gxt.xinjiang.gov.cn/gxt/jdhy/202102/184dc6779c9247da8466d0163ccf3371.shtml">
+                                <span class="name l">《保障农民工工资支付条例》政策解答（发文机关：自治区工信厅）后附相关链接：《保障农民工工资支付条例》。</span>
+                                <span class="time r">2021-09-17</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://gxt.xinjiang.gov.cn/gxt/tzgg/202109/219ddd2700c54900b1a40eb48f39a8cc.shtml">
+                                <span class="name l">新疆维吾尔自治区实施《优化营商环境条例》办法（发文机关：自治区人民政府令）。</span>
+                                <span class="time r">2021-09-17</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://www.npc.gov.cn/npc/c30834/201808/5f7ac8879fa44f2aa0d52626757371bf.shtml">
+                                <span class="name l">《中华人民共和国电子商务法》（发文机关：全国人民代表大会）</span>
+                                <span class="time r">2021-08-20</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://gkml.samr.gov.cn/nsjg/fgs/201906/t20190625_302771.html">
+                                <span class="name l">《中华人民共和国反不正当竞争法》（发文机关：国家市场监督管理总局）</span>
+                                <span class="time r">2021-08-20</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://www.gov.cn/xinwen/2016-11/07/content_5129723.htm">
+                                <span class="name l">《中华人民共和国网络安全法》（发文机关：中华人民共和国中央人民政府）</span>
+                                <span class="time r">2021-08-20</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="http://www.cac.gov.cn/2019-08/23/c_1124913903.htm">
+                                <span class="name l">《儿童个人信息网络保护规定》（发文机关：中共中央网络安全和信息化委员会办公室）</span>
+                                <span class="time r">2021-08-20</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li>
+                <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/workPublic.html" target="_blank">办件查询</a>
+            </li>
+            <li>
+                <a href="https://zwfw.xinjiang.gov.cn/znkfjkcs/robot/robot" target="_blank">智能客服</a>
+            </li>
+            <li>
+                <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/usercenter.html?childrenpage=zxts1&category=0">咨询投诉</a>
+            </li>
+            <li>
+                <a href="https://zwfw.xinjiang.gov.cn/bmfwtest/conveniences.html">便民服务</a>
+            </li>
+            <li>
+                <a href="javascript:;" id = "get-phonecode">纠错</a>
+            </li>
+            <li>
+                <a href="https://zwfw.xinjiang.gov.cn/xjzwfw2021/newAppraise/review.html">好差评</a>
+            </li>
+            <li>
+                <a class="toup" href="javascript:;">回到顶部</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 飘窗 -->
+    <div class="float-img" id = "float-img">
+        <div class="inner" id= "fisrtinner">
+            <span>
+            <a  href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/f5e90c60-dfd1-4d58-a71c-c56335b5f700.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/uploadfile/aadcc831-83c0-49d6-8840-3aa88be34c0d/部门整体绩效目标.png"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20210604/f5e90c60-dfd1-4d58-a71c-c56335b5f700.html">
+             	查看详情</a>
+        </div>
+        <div class="inner" style="display: none">
+            <span>
+            <a  href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20210918/42c8be1b-b7f7-404a-8ea0-e4c954c16c06.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/uploadfile/aadcc831-83c0-49d6-8840-3aa88be34c0d/200x100.jpg"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href =  "https://zwfw.xinjiang.gov.cn/wdzx/005001/20210918/42c8be1b-b7f7-404a-8ea0-e4c954c16c06.html">
+             	查看详情</a>
+        </div>
+          <div class="inner" style="display: none">
+            <span>
+            <a  href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20211001/8eb7e50c-2a66-4b25-9833-3cd9476198ab.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/uploadfile/aadcc831-83c0-49d6-8840-3aa88be34c0d/111.jpg"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20211001/8eb7e50c-2a66-4b25-9833-3cd9476198ab.html">
+             	查看详情</a>
+        </div>
+          <div class="inner" style="display: none">
+            <span>
+            <a  href = "https://zwfw.xinjiang.gov.cn/xjzwfw2021/wdzx/005001/20211011/6f0b885f-46b0-4936-87e0-890c82c2d9b9.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/uploadfile/aadcc831-83c0-49d6-8840-3aa88be34c0d/200x100-1.jpg"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "https://zwfw.xinjiang.gov.cn/xjzwfw2021/wdzx/005001/20211011/6f0b885f-46b0-4936-87e0-890c82c2d9b9.html">
+             	查看详情</a>
+        </div>
+          <div class="inner" style="display: none">
+            <span>
+            <a  href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20211014/358f5801-0daf-49f4-bca9-b5b7cb2998d6.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/uploadfile/aadcc831-83c0-49d6-8840-3aa88be34c0d/200x100-2.jpg"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "https://zwfw.xinjiang.gov.cn/wdzx/005001/20211014/358f5801-0daf-49f4-bca9-b5b7cb2998d6.html">
+             	查看详情</a>
+        </div>
+          <div class="inner" style="display: none">
+            <span>
+            <a  href = "http://gjzwfw.www.gov.cn/fwmh/crossProvincial/index.do">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/images/kstb.png"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "http://gjzwfw.www.gov.cn/fwmh/crossProvincial/index.do">
+             	查看详情</a>
+        </div>
+         
+         <div class="inner" style="display: none">
+            <span>
+            <a  href = "http://zwfw.xinjiang.gov.cn/wdzx/005001/20200314/1f66da31-aadd-496c-a205-0c311a86db20.html">
+            <img  style="width: 100%;height: 100%" 
+            src="https://zwfw.xinjiang.gov.cn/images/xjwtjkm.png"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "http://zwfw.xinjiang.gov.cn/wdzx/005001/20200314/1f66da31-aadd-496c-a205-0c311a86db20.html">
+             	查看详情</a>
+        </div>
+        <div class="inner" style="display: none">
+            <span>
+            <a  href = "http://gjzwfw.www.gov.cn/index.html">
+            <img  style="width: 100%;height: 100%" 
+            src ="https://zwfw.xinjiang.gov.cn/images/gjpt.png"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "http://gjzwfw.www.gov.cn/index.html">
+             	查看详情</a>
+        </div>
+         <div class="inner" id= "lastinner" style="display: none">
+            <span>
+            <a  href = "http://www.gjzwfw.gov.cn/col/col644/index.html">
+            <img  style="width: 100%;height: 100%" 
+            src = "https://zwfw.xinjiang.gov.cn/images/xwqy.png"/></a>
+            
+            </span>
+            <a class="detail" style="margin-top: 45px;display: block;"
+             href = "http://www.gjzwfw.gov.cn/col/col644/index.html">
+             	查看详情</a>
+        </div>
+       <!--  <p class="matter-name">此处为对应事项名称</p> -->
+        <div class="operation clearfix">
+          <!--   <a class="detail l" href="javascript:;">查看详情</a> -->
+            <div class="pager r">
+                <a class="prev" id="lastfloatimg"  href="javascript:;">上一页</a>
+                <a class="next" id="nextfloatimg"  href="javascript:;">下一页</a>
+            </div>
+        </div>
+        <span class="close"></span>
+    </div>
+	    <div id="footer"></div>		
+		</div>
+    <!--辖区导航-->
+    <script type="text/x-template" id="xjarea-tmpl">
+        {{#arealist}}
+			<li title="{{areaname}}"  id="{{areacode}}"  onclick="getArealist('{{areacode}}');" >
+             	{{areaname}}
+            </li>
+        {{/arealist}}
+    </script>
+     <!--辖区导航-->
+    <script type="text/x-template" id="xjarea-title-tmpl">
+        {{#areatitlelist}}
+			<li title="{{areaname}}"  id="{{areacode}}" style = "cursor: pointer;" onclick="getArealist('{{areacode}}');" >
+             	{{areaname}}
+            </li>
+        {{/areatitlelist}}
+    </script>
+	
+	<script type="text/x-template" id="xjou-tmpl">
+        {{#oulist}}
+
+
+<li title="{{orgname}}"  id="{{orgcode}}"  onclick="goOrg('{{orgcode}}','{{orgname}}','{{orgshortname}}');" >
+             	{{orgshortname}}
+            </li>
+
+
+        {{/oulist}}
+    </script>
+    
+    
+    <script type="text/x-template" id="xjthemetask-tmpl">
+        {{#themelist}}
+			
+			<li >
+             	<p class="name"><img style = "width:46px;height:55px;" src="{{appiconurl}}" alt="" />
+                        <span>{{text}}</span></p>
+			<ul class="detail">
+			{{#task}}
+			<li style= "overflow:hidden">
+             	<a href="https://zwfw.xinjiang.gov.cn/bmfwtest/guidetest/guidance.html?taskcode={{taskcode}}" title = "{{taskname}}">{{taskname}}</a>
+            </li>
+        	{{/task}}
+            
+			</ul>
+</li>
+        {{/themelist}}
+    </script>
+    <script>
+        var pageConfig = {
+            mySwiper: null
+        }
+    </script>
+	<script src="https://zwfw.xinjiang.gov.cn/xjzwfw2021/js/lib/layer/layer.js"></script>
+    <script src="https://zwfw.xinjiang.gov.cn/xjzwfw2021/js/layercom.js"></script>
+    <script src="./js2021/lib/jquery-tab.js"></script>
+    <script src="./js2021/lib/swiper/swiper.js"></script>
+	<script src="js2021/common_new.js"></script>
+    <script src="js2021/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+<!doctype html>
+<meta charset="utf-8">
+
+
+<head>
+
+
+<!-- webTerren -->
+
+<meta name="filetype" content="0"> 
+<meta name="publishedtype" content="1"> 
+<meta name="pagetype" content="1"> 
+<meta name="catalogs" content="2154"> 
+<meta name="contentid" content="800261346"> 
+<meta name="publishdate" content="2021-10-22"> 
+<meta name="author" content="石刚"> 
+<meta name="source" content="北京周报网"> 
+
+<!-- webTerren -->
+<title>新疆棉花收购忙（组图）</title>
+<link rel="shortcut icon" href="http://www.beijingreview.com.cn/2015css/brlogo.ico" />
+<link rel="bookmark" href="http://www.beijingreview.com.cn/2015css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://www.beijingreview.com.cn/2015css/article2.css">
+  <link rel="stylesheet" type="text/css" href="http://www.beijingreview.com.cn/2015css/fck.css">
+<link href="http://www.beijingreview.com.cn/2015css/se2.css" rel="stylesheet" title="se" type="text/css">
+<link href="http://www.beijingreview.com.cn/2015css/print.css" rel="stylesheet" title="print" type="text/css" disabled="disabled">
+<script type="text/javascript" src="http://www.beijingreview.com.cn/2015css/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://www.beijingreview.com.cn/2015css/se.js"></script>
+<script type="text/javascript" src="http://www.beijingreview.com.cn/2015css/scrolltopcontrol.js"></script>
+
+<script type="text/javascript" src="http://www.beijingreview.com.cn/2015css/html5media.min.js"></script>
+
+<script type="text/javascript" src="http://www.beijingreview.com.cn/images/crypto-js.min.js"></script>
+<script>
+var Audio = {
+	websocket:null,
+	audio:null,
+	complete:null,
+	texts:null,
+	vcn:'xiaoyan',
+	number:0,
+	current:null,
+	playlist:new Array(),
+	base:{
+		url:'wss://tts-api.xfyun.cn/v2/tts',
+		host:'tts-api.xfyun.cn',
+		appid:'5f519595',
+		apisecret:'e098c8bbf959f4e1dea66a0862c37c4f',
+		apikey:'3d861060100d266b3271dc2dbfce213c',
+		algorithm:'hmac-sha256',
+		headers:'host date request-line',
+		reqnum:0,
+		count:0,
+		seg:1000,
+		text:new Array()
+	},
+	init:function(){
+		this.websocket = null;
+		this.audio = null;
+		this.base.reqnum = 0;
+		this.base.count = 0;
+		this.base.text = new Array();
+		$('#audiobfbtn').show();
+	},
+	wssurl:function(){
+		var date = new Date().toGMTString();
+		var signatureOrigin = 'host: '+this.base.host+'\ndate: '+date+'\nGET /v2/tts HTTP/1.1';
+		var signatureSha = CryptoJS.HmacSHA256(signatureOrigin, this.base.apisecret);
+		var signature = CryptoJS.enc.Base64.stringify(signatureSha);
+		var authorizationOrigin = 'api_key="'+this.base.apikey+'", algorithm="'+this.base.algorithm+'", headers="'+this.base.headers+'", signature="'+signature+'"';
+	    var authorization = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(authorizationOrigin));
+	    return encodeURI(this.base.url+'?host='+this.base.host+'&date='+date+'&authorization='+authorization);
+	},
+	connect:function(){
+		if(!('WebSocket' in window)){
+			alert('浏览器不支持websocket，文字无法转换为语音');
+			return;
+		}
+		
+		this.websocket = new WebSocket(this.wssurl()); 
+				  
+		//连接成功建立的回调方法  
+		this.websocket.onopen = function(e) {  
+		    console.log('WebSocket连接成功');
+		    Audio.sendMsg(Audio.base.text[Audio.base.count++]);
+		} 
+				  
+		//接收到消息的回调方法  
+		this.websocket.onmessage = function(result){
+			var data = JSON.parse(result.data);
+			if(data.code == 0){
+				var audiobase64 = data.data.audio;
+				if(Audio.audio){
+					Audio.audio = Audio.audio.concat(CryptoJS.enc.Base64.parse(audiobase64));
+				}else{
+					Audio.audio = CryptoJS.enc.Base64.parse(audiobase64);
+				}
+				
+				if(data.data.status == 2){
+					if(Audio.base.count >= Audio.base.reqnum){
+						Audio.websocket.close();
+						var audiotxt = CryptoJS.enc.Base64.stringify(Audio.audio);
+						Audio.complete(Audio.number, audiotxt);
+						Audio.number++;
+					}else{
+		    			Audio.connect();
+					}
+				}
+				
+			}
+		}  
+		
+		//连接发生错误的回调方法  
+		this.websocket.onerror = function(e) {   
+			console.log(e); 
+		};  
+				  
+		//连接关闭的回调方法  
+		this.websocket.onclose = function(e) {  
+		    console.log('WebSocket连接断开:');
+		}  
+				  
+		//监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。  
+		window.onbeforeunload = function() {  
+			this.websocket.close();  
+		} 
+	},
+	send:function(text){
+		this.init();
+		var textlen = text.length;
+		this.base.reqnum = Math.ceil(textlen/this.base.seg);
+		for(var i=0;i<this.base.reqnum;i++){
+			var start = i*this.base.seg, end = (i+1)*this.base.seg;
+			if(end > textlen) end = textlen;
+			var segtxt = text.substring(start, end);
+			this.base.text.push(segtxt);
+		}
+		this.connect();
+	},
+	sendMsg:function(text){
+		var msg = {
+			common:{
+				app_id:this.base.appid
+			},
+			business:{
+				aue:'lame',
+				sfl:1,
+				vcn:Audio.vcn,
+				pitch:50,
+				speed:50,
+				tte:'UTF8'
+			},
+			data:{
+				status:2,
+				text:CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(text))
+			}
+		};
+		this.websocket.send(JSON.stringify(msg));
+	},
+	controllor:function(){
+		if(Audio.current != null){
+			if(Audio.current.paused){                 
+				Audio.current.play();
+			}else{
+				Audio.current.pause();
+			}
+		} 
+	},
+	cover:function(params){
+
+		if(params.text.length <= 0){
+			alert('没有找到需要转换的文字');
+			return false;
+		}
+
+		params.before();
+		this.complete = params.complete;
+		Audio.texts = params.text;
+
+		Object.defineProperty(Audio, 'number', {
+			get:function(){
+				return number;
+			},
+			set:function(newValue){
+				number = newValue;
+				if(newValue < Audio.texts.length){
+					Audio.send(Audio.texts[newValue]);
+				}
+			}
+		});
+
+		Audio.vcn = params.vcn;
+		Audio.number = 0;
+	}
+};
+
+
+function createAudio(e){
+	var qrtexts = new Array();
+	qrtexts.push($('#TRS_Editor_title').text()||'');
+
+	var auidx = 1; 
+	$('#TRS_Editor_kdxf p').each(function(){
+        var bynums = $(this).find('font[color="#808080"]').size();
+        if(bynums <= 0){
+		    var text = $.trim($(this).text()||'');
+		    if(text != '' && text != '↵'){
+				qrtexts.push(text);
+
+				$(this).attr({'auidx':auidx++,'title':'播放该段落'}).click(function(){
+					if(Audio.current){
+						Audio.current.pause();
+					}
+					var this_auidx = $(this).attr('auidx');
+					Audio.current = Audio.playlist[this_auidx];
+					Audio.current.currentTime = 0;
+					Audio.current.play();
+				});
+			}
+        }
+	});
+
+	Audio.cover({
+		text:qrtexts,
+		vcn:'x2_xiaoyuan',
+		before:function(data){
+			$(e).attr('src','http://www.bjreview.com/images/kdxf_loading.gif').removeAttr('onclick');
+		},
+		complete:function(index, audio){
+			var html = '<audio id="szjtcontroller_'+index+'" controls="controls" autobuffer="autobuffer" style="display:none;">';
+					html += '<source id="audiop_'+index+'" src="data:audio/mp3;base64,'+audio+'" />';
+				html += '</audio>';
+			$('body').append(html);
+
+			Audio.playlist[index] = document.getElementById('szjtcontroller_'+index);
+			Audio.playlist[index].loop = false;
+			Audio.playlist[index].addEventListener('ended', function () {  
+				Audio.current = Audio.playlist[index+1];
+				if(Audio.current) Audio.current.play();
+			}, false);
+
+			if(index == 0){
+				Audio.current = Audio.playlist[index];
+				Audio.current.play();
+				$(e).attr('src', 'http://www.bjreview.com/2020img/1228-ej.png').attr('onclick', 'Audio.controllor()');
+			}
+		}
+	});
+}
+
+	</script>
+
+
+<style media=print type="text/css">   
+.noprint{visibility:hidden}   
+</style>   
+
+<script type="text/javascript">
+
+
+var system ={
+
+win : false,
+
+mac : false,
+
+xll : false
+
+};
+
+
+
+var p = navigator.platform;
+
+system.win = p.indexOf("Win") == 0;
+
+system.mac = p.indexOf("Mac") == 0;
+
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+
+
+if(system.win||system.mac||system.xll){
+
+$("<link>")
+    .attr({ rel: "stylesheet",
+        type: "text/css",
+        href: "http://www.beijingreview.com.cn/2015css/zw1.css"
+    })
+    .appendTo("head");
+}else{
+
+$("<link>")
+    .attr({ rel: "stylesheet",
+        type: "text/css",
+        href: "http://www.beijingreview.com.cn/2015css/zw2.css"
+    })
+    .appendTo("head");
+
+}
+
+
+</script>
+
+<script>
+$(document).ready(function() 
+{ 
+var x = $(window).width();
+if(x < 1024){$("#sidel").hide();$("#sider").hide();}
+var y = parseInt((x-815)/2-145);
+$("#sidel").css({"left":y+"px"});
+$("#sider").css({"right":y+"px"});
+});
+$(window).resize(function(){
+var x = $(window).width();
+if(x < 1024){$("#sidel").hide();$("#sider").hide();}
+if(x >= 1024){$("#sidel").show();$("#sider").show();}
+var y = parseInt((x-815)/2-145);
+$("#sidel").css({"left":y+"px"});
+$("#sider").css({"right":y+"px"});
+if(x < 1024){$("#sidel").hide();$("#sider").hide();}
+});
+</script>
+
+</head>
+<body>
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+ <img src="http://www.beijingreview.com.cn/2017img/brlogo.jpg" />
+</div>
+<div id="top">
+  <div class="box1"> <span class="tpxt fl" >中国国家英文新闻周刊</span><a href="http://japanese.beijingreview.com.cn/"  target="_blank">日本語</a>  <a href="http://german.beijingreview.com.cn/"   target="_blank">Deutsch</a> <a href="http://french.beijingreview.com.cn/"  target="_blank">Français</a> <a href="http://www.bjreview.com/"  target="_blank">English</a> <a href="http://www.beijingreview.com.cn/"  target="_blank">中 文</a> <span id="time" class="fr" style="font-size:12px;line-height:14px">
+    <script type="text/javascript">   
+var time                   
+calendar = new Date();                    
+month = calendar.getMonth()+1;                       
+date = calendar.getDate();                       
+year = calendar.getYear();                       
+
+if (year< 2000) year = 1900 + year;                                            
+time=year+"年"+month+"月"+date+"日"
+document.write(time);
+</script>
+  </span> </div>
+</div>
+
+ <div class="box2 bian6" style="height:110px"><div class="fl box22" style="display:block; width:400px;"> <a href="http://www.beijingreview.com.cn/" target="_parent"><img src="http://www.beijingreview.com.cn/2015css/logo-z.jpg" name="logo" width="332" border="0" class="fl" style="margin-top:22px;border:0" /></a></div>
+  <div id="bd" class="fr" style="width:300px;padding-top:15px">
+     
+    
+      <table id="nav_m" width="240" border="0" cellspacing="0" cellpadding="0" align="right">
+  
+    <tr>
+	  
+      <td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/shishi/" target="_blank"  style="font-size:14px; font-weight:bold;">时事</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/caijing/" target="_blank"  style="font-size:14px; font-weight:bold;">财经</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/keji/" target="_blank"  style="font-size:14px; font-weight:bold;">科技</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/tupianji/" target="_blank"  style="font-size:14px; font-weight:bold;">图集</a></td>
+     
+     
+    </tr>
+    <tr>
+       <td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/wenhua/" target="_blank"  style="font-size:14px; font-weight:bold;">文化</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/minsheng/" target="_blank"  style="font-size:14px; font-weight:bold;">民生</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/chinafrica/" target="_blank"  style="font-size:14px; font-weight:bold;">中非</a></td>
+<td align="center" valign="top" style="font-size:14px; font-weight:bold;"><a href="http://www.beijingreview.com.cn/wenjian/" target="_blank"  style="font-size:14px; font-weight:bold;">文件</a></td>
+    </tr>
+
+</table>
+  </div>
+</div>
+
+
+
+
+ 	
+  
+ 
+<div id="mid" class="wrap">
+<div  style="margin:0px 0px 20px 0px;font-weight:bold;color:#064499;font-size:14px" class="wrap5 bian4 location">
+<a href="http://www.beijingreview.com.cn" style="font-weight:bold;color:#064499;font-size:14px">首页</a> >> <a href="../" title="财经" style='font-weight:bold;color:#064499;font-size:14px' class="CurrChnlCls">财经</a> &gt;&gt; 正文
+  </div>
+  <div  style="padding:15px ; margin:0 auto;border:#e9e9e9   solid  1px;">
+     <div style="position:relative;padding:5px 0px 8px 0px; text-align:center" >
+		<h4  id="TRS_Editor_title">新疆棉花收购忙（组图）</h4>
+		<div style="position:absolute;bottom:-40px;right:0;width:36px;">
+			<img id="coverBtn" class="pcelement" onclick="createAudio(this)" src="http://www.bjreview.com/2020img/1228-ej.png" style="display: inline;cursor: pointer;width: 100%;" />
+		</div>
+	</div>
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+        <td height="45" align="center" valign="middle" class="bian5 ly3">
+			&nbsp;&nbsp;·&nbsp;&nbsp; 
+			2021-10-22&nbsp;&nbsp;·&nbsp;&nbsp;
+			来源：北京周报网
+		</td>
+      </tr>
+    </table>
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px">
+      <tr>
+        <td width="67%" align="left" valign="middle" style=" font-weight:normal; padding-left:3px" class="ly">
+标签：新疆;棉花;财经</td>
+  <td align="right" valign="bottom"><div id="audiobofangbtn" onclick="createAudio(this)" style="float:right;cursor:pointer;font-family:黑体;font-size:13px;padding-right:20px;border-right:1px solid #999898;display:none;" class="ly">语音播报</div></td>
+            <td width="9%" align="center" valign="bottom"><div id="print" style="cursor:pointer;font-family:黑体;font-size:13px" class="print2 bian33">打印</div>
+        <td width="9%" align="center" valign="top"><a href="mailto:cn@bjreview.com.cn" style="font-family:黑体;" class="ly">纠错</a></td>
+            
+      </tr>
+    </table>
+        <div style="padding:25px 0px 0px 5px;" >
+
+         <div style="width:100%"  id="TRS_Editor_kdxf">
+<div id="audiocontent"></div>
+<style type="text/css">
+.TRS_Editor P{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor DIV{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TD{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TH{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor SPAN{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor FONT{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor UL{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor LI{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor A{margin-top:10px;margin-bottom:10px;line-height:1.5;}</style><style type="text/css">
+
+.TRS_Editor P{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor DIV{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TD{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TH{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor SPAN{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor FONT{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor UL{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor LI{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor A{margin-top:10px;margin-bottom:10px;line-height:1.5;}</style><div class=TRS_Editor><style type="text/css">
+.TRS_Editor P{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor DIV{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TD{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TH{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor SPAN{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor FONT{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor UL{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor LI{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor A{margin-top:10px;margin-bottom:10px;line-height:1.5;}</style>
+<div class="TRS_Editor"><style type="text/css">
+
+.TRS_Editor P{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor DIV{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TD{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor TH{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor SPAN{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor FONT{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor UL{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor LI{margin-top:10px;margin-bottom:10px;line-height:1.5;}.TRS_Editor A{margin-top:10px;margin-bottom:10px;line-height:1.5;}</style>
+<p align="justify" style="text-align: center;"><img src="./W020211022402873620365.jpg" style="border-width: 0px;" alt="" oldsrc="W020211022402873620365.jpg" /></p>
+<p align="justify">　　新疆沙湾市的棉农在一家棉花收购厂外排队等候销售（10月20日摄，无人机照片）。</p>
+<p align="justify">　　近日，新疆棉花的重要产区沙湾市田间地头一片繁忙景象，采棉机在棉田里轰鸣，满载棉花的卡车在乡间道路上往来穿梭。棉农抢抓农时，将采收的棉花售卖给收购厂，当地新棉收购工作有序进行。今年，沙湾市种植棉花176.62万亩，棉花收购价格高于去年同期。<span style="font-size: 12pt;">　　新华社记者胡虎虎 摄
+ </span> </p> </div> </div>
+ </div>
+		  
+		   <table width="100%" border="0" cellspacing="0" cellpadding="0" style=" margin:50px 0px 30px 0px">
+                   <tr>
+                     <td align="center" valign="middle" style="font-weight:bold;" class="f916"><span id='pagenav_0' >1</span><a id='pagenav_1' style='font-weight:normal;color:#000000;'  class='f916'target='_self' href='t20211022_800261346_1.html'>2</a><a id='pagenav_2' style='font-weight:normal;color:#000000;'  class='f916'target='_self' href='t20211022_800261346_2.html'>3</a><a id='pagenav_3' style='font-weight:normal;color:#000000;'  class='f916'target='_self' href='t20211022_800261346_3.html'>4</a><a id='pagenav_1' style='font-weight:normal;color:#000000;'  class='f916'target='_self' href='t20211022_800261346_1.html'>下一页</a>
+</td>
+                  </tr>
+          </table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:4px">
+              <tr>
+                <td align="left" valign="middle"><!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_7yzq"></div>
+</td>
+              </tr>
+          </table>
+<div class="box12"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="bian" style=" margin:15px 0px">
+                   <tr>
+                     <td width="64%" align="left" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+                       <tr>
+                         <td align="left" colspan="2" valign="top" style="padding:23px 5px 15px 0px;color:#000000;font-size:20px;font-family:黑体">相关文章：</td>
+      </tr>
+                       
+                       <tr>
+                         <td width="31" valign="middle" align="center" class="f15" style="color:#000000;font-size:14px;padding:5px 0px">•</td>
+                  <td width="427" align="left" valign="top" style="padding:5px 0px"><a href="../../shishi/202109/t20210926_800259107.html" target="_blank" class='f15' style='color:#000000;font-size:14px'>国务院新闻办发表《新疆的人口发展》白皮书</a></td>
+                  </tr>
+                       
+                       <tr>
+                         <td width="31" valign="middle" align="center" class="f15" style="color:#000000;font-size:14px;padding:5px 0px">•</td>
+                  <td width="427" align="left" valign="top" style="padding:5px 0px"><a href="../../wenjian/202109/t20210926_800259106.html" target="_blank" class='f15' style='color:#000000;font-size:14px'>《新疆的人口发展》白皮书</a></td>
+                  </tr>
+                       
+                       <tr>
+                         <td width="31" valign="middle" align="center" class="f15" style="color:#000000;font-size:14px;padding:5px 0px">•</td>
+                  <td width="427" align="left" valign="top" style="padding:5px 0px"><a href="../202108/t20210806_800255059.html" target="_blank" class='f15' style='color:#000000;font-size:14px'>新疆伽师瓜迎来上市旺季（组图）</a></td>
+                  </tr>
+                       
+                       <tr>
+                         <td width="31" valign="middle" align="center" class="f15" style="color:#000000;font-size:14px;padding:5px 0px">•</td>
+                  <td width="427" align="left" valign="top" style="padding:5px 0px"><a href="../../shishi/202107/t20210714_800252988.html" target="_blank" class='f15' style='color:#000000;font-size:14px'>国务院新闻办发表《新疆各民族平等权利的保障》白皮书</a></td>
+                  </tr>
+                       
+                       <tr>
+                         <td width="31" valign="middle" align="center" class="f15" style="color:#000000;font-size:14px;padding:5px 0px">•</td>
+                  <td width="427" align="left" valign="top" style="padding:5px 0px"><a href="../../wenjian/202107/t20210714_800252987.html" target="_blank" class='f15' style='color:#000000;font-size:14px'>新疆各民族平等权利的保障</a></td>
+                  </tr>
+                       
+                       </table></td>
+                     <td width="36%" align="right" valign="top"><table width="250" border="0" cellspacing="0" cellpadding="0">
+                       <tr>
+                         <td align="center" valign="top" style="padding:21px 0px 10px 0px" class="dl">微信关注 北京周报</td>
+                       </tr>
+                       <tr>
+                         <td align="center" valign="top" style="border:1px"><img src="http://www.beijingreview.com.cn/2015css/bjr.jpg" width="180" /></td>
+                       </tr>
+                       <tr>
+                         <td align="center" valign="top" style="padding:6px 0px 10px 0px"><p class="fs14">微信号</p>
+                               <p class="account fs14">beijingreview</p></td>
+                       </tr>
+                       </table></td>
+                   </tr>
+    </table></div>
+                 
+  </div></div>
+
+
+
+<table width="710" border="0" cellspacing="0" cellpadding="0" class="wrap2" style="margin-bottom:20px">
+  <tr>
+    <td align="left" valign="top"><div style="margin:0 auto;padding-top:10px; width:320px;" class="fl">
+      <h2>产品专区</h2>
+          <div class="fl" style="padding:20px 0px 0px 0px;width:320px">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top">
+                  <div style="width:100px;">   <a href="http://beijingreview.sinoperi.com/" target="_blank"><img src="../../chanpin/201504/W020150430346573253412.jpg" alt="历史资料库" height="60"/></a></div>
+			    <div style="width:100px;padding-top:4px; text-align:center ">  <a href="http://beijingreview.sinoperi.com/" target="_blank" class='xbt' style='color:#515150'>历史资料库</a> </div></td>
+    
+                <td align="center" valign="top">
+                  <div style="width:100px;">   <a href="http://www.beijingreview.com.cn/advertisement/201505/W020150507475969547028.jpg" target="_blank"><img src="../../chanpin/201504/W020150430344100814547.jpg" alt="BEIJING REVIEW" height="60"/></a></div>
+			    <div style="width:100px;padding-top:4px; text-align:center ">  <a href="http://www.beijingreview.com.cn/advertisement/201505/W020150507475969547028.jpg" target="_blank" class='xbt' style='color:#515150'>BEIJING REVIEW</a> </div></td>
+    </tr>
+  </table> </div>
+  
+    </div></td>
+    </tr>
+</table>
+
+</div>
+
+ <div class="cls"></div>
+<div class="box10" style="padding-top:30px;margin:0 auto; font-size:14px">
+  <style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+
+
+<table width="1000" height="33" border="0" cellpadding="0" cellspacing="0" style="background-color:#e7eff7;"> 
+  <tr>
+    <td align="center" valign="middle"><table width="480" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="130" align="center" valign="middle"><a href="http://www.beijingreview.com.cn/advertisement/202011/t20201106_800226183.html" target="_blank" class="ly2">关于我们</a></td>
+
+    <td width="130" align="center" valign="middle"><a href="http://www.beijingreview.com.cn/advertisement/201505/t20150507_800033183.html" target="_blank" class="ly2">联系我们</a></td>
+    <td width="90" align="center" valign="middle"><a href="http://www.beijingreview.com.cn/advertisement/201505/t20150507_800033184.html" target="_blank" class="ly2">广告</a></td>
+    <td width="130" align="center" valign="middle"><a href="http://www.beijingreview.com.cn/advertisement/201505/t20150507_800033185.html" target="_blank" class="ly2">订阅服务</a></td>
+  </tr>
+</table></td>
+</tr> 
+</table>
+
+
+
+
+
+     <table width="1000" border="0" cellspacing="0" cellpadding="0" height="33" class="box13"> 
+       <tr>  <td align="center" valign="middle" width="130">
+         			  <span class="STYLE2">合作伙伴：</span></td>
+ 
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.china.com.cn/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>中国网</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.chinatoday.com.cn/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>今日中国</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.rmhb.com.cn/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>人民画报</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.xinhuanet.com/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>新华网</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.people.com.cn/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>人民网</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.eastday.com/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>东方网</a> </div></td>
+
+  
+<td align="left" valign="middle">
+         			  <div style="width:50%;font-weight:normal" class="xbt" ><a href="http://www.catti.net.cn/" target="_blank" class='xbt' style='color:#000000;font-weight:normal'>全国翻译资格考试网</a> </div></td>
+ </tr> 
+</table> 
+
+  <div class="fl bian7 STYLE4"  style="display:block; background-color:#85b1e0;  padding:12px 0px 12px 0px;width:1000px;text-align:center;color:#ffffff">
+    <p class="STYLE33 ly2" >版权所有 2000-2018 北京周报中文网 <a href="https://beian.miit.gov.cn" target="_blank"  class="STYLE4 STYLE33 ly2" style="color:#FFFFFF">京ICP备08005356号</a> 京公网安备<a href="http://www.beian.gov.cn/portal/recordQuery?token=4c1e340a-1941-4311-82e3-beec129b0fef" target="_blank" class="STYLE4 STYLE33 ly2"  style="color:#FFFFFF">110102005860</a>号</p>
+    <br>
+    <p class="STYLE33 ly2" >本网站所刊登的来源为北京周报及北京周报网的各种新闻﹑信息和各种专题专栏资料，均为北京周报社版权所有。</p>
+  </div>
+</div>
+<div id="sidel" class="side bkj">
+
+
+</div>
+
+<div id="sider" class="side jiathis_style noprint bkj" style="border:0px solid #d5d4d4">
+ 
+</div>
+
+<!-- webTerren -->
+<div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://cl3.webterren.com/webdig.js?z=41' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+</div>
+<!-- webTerren -->
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5af00c13473e575c"></script>
+</body>
+</html>

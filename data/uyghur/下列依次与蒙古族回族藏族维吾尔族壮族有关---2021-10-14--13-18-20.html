@@ -1,0 +1,337 @@
+<!DOCTYPE html> <html> <head> <title>
+        下列依次与蒙古族、回族、藏族、维吾尔族、壮族有关的是：-热点资料-公务员考试_公考_小麦公考_2022国考_2022省考    </title> <meta name="Keywords" content="2022国考_公务员考试_公考_小麦公考_公考讲师刘文波"/> <meta name="description" content="省考面试、公务员考试课程、小麦公考提供国家公务员、国考、省考、热点、每日时评、模考、题库、刷题、申论、直播课、面授课、点播课、笔试面试辅导。"/> <meta name="author" content="XMGK"> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="renderer" content="webkit"> <meta http-equiv="Cache-Control" content="no-siteapp"/> <link href="/public/web/css/bootstrap.min.css" rel="stylesheet"> <link rel="icon" href="/public/web/images/favicon.ico" type="image/x-icon"> <link rel="shortcut icon" href="/public/web/images/favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="/public/web/css/common.css"> <link rel="stylesheet" href="/public/web/css/couser.css"> <link rel="stylesheet" href="/public/web/css/font-awesome-4.7.0/css/font-awesome.min.css"> <link rel="stylesheet" href="/public/web/css/font-awesome-4.7.0/css/font-awesome-ie7.min.css"> <script type="text/javascript" src="/public/web/js/jquery.min.js"></script> <script type="text/javascript" src="/public/web/js/bootstrap.min.js"></script> <link rel="stylesheet" href="/public/js/layui/css/layui.css" media="all"> <script src="/public/web/js/spin.js"></script> <script src="/public/web/js/archer.js"></script> <script src="/public/js/layui/layui.js"></script> <script type="text/javascript">
+	//全局变量
+	var GV = {
+		ROOT: "/",
+		WEB_ROOT: "/",
+		JS_ROOT: "public/js/",
+		TMPL_Public:'/themes/simplebogotx/Public'
+	};
+
+        var sign_url = "/user/login/login.html";
+        var register_url = "/user/Register/doregister.html";
+        var back_url = "/User/Login/retrieve_password.html";
+        var code_url = "/user/Register/getSmsCode.html";
+        //验证手机是否注册
+        var check_phone = "/user/register/checkphoneregiter.html";
+        var search_course_url = "/Course/Center/curriculum.html";//搜索课程
+        var search_face_url = "/Course/FaceCourse/facecourse_list.html";//搜索面授
+        var search_ques_url = "/Portal/Question/search.html";//搜索题库
+        var search_article_url = "/Portal/Article/article_index.html";//搜索资料
+        var code_img_url = "/api/checkcode/index/length/4/font_size/18/width/120/height/38/charset/1234567890/use_noise/1/use_curve/0.html";
+        //验证手机是否注册
+        var check_phone = "/user/register/checkphoneregiter.html";
+        $('.mod-nav_li,.mod-nav_popup').on('mouseover', function () {
+            $(this).find('.mod-nav_popup').show();
+        });
+        $('.mod-nav_li,.mod-nav_popup').on('mouseout', function () {
+            $('.mod-nav_popup').hide();
+        });
+        //边缘弹出
+        var message_count = "";
+        //如果有消息，弹出
+    $(document).ready(function () {
+        if (message_count > 0) {
+            $("#nav_message").append('<div class="tip">'+message_count+'</div>');
+        }
+    })
+
+    </script> <style>
+	.border-color-theme {
+		border-color: #eee !important;
+	}
+	#userlogout .popover-content {
+      text-align:right;
+	  width:150px;
+	  background-color:red;
+	  height:30px;
+	  float:right;
+    }
+    .navbar-nav {
+        font-size: 18px;
+        margin-left: 0px;
+    }
+	</style> </head> <body> <div id="header" > <nav class="navbar navbar-default navbar-static-top" id="header_nav"> <div class="container" style="position: relative;"> <div class="navbar-header"> <a class="navbar-brand" href="/"><img src="https://www.xiaomaigongkao.com/public/web/images/logo.png"></a> </div> <div class="collapse navbar-collapse"> <ul class="nav navbar-nav navbar-left"> <li class=""><a href="/">首页</a></li> <li ><a href="/Course/Center/curriculum.html">直播</a></li><li ><a href="/Course/Recorded/curriculum.html">点播</a></li><li ><a href="/Course/FaceCourse/facecourse_list.html">面授</a></li><li ><a href="https://www.xiaomaigongkao.com/shenPaper/lists.html">申论批改</a></li><li class="active"><a href="/Portal/Article/article_index.html">热点</a></li><li ><a href="/Portal/Page/appdownload.html">APP</a></li><li ><a href="javascript:bomb('search')"><i class="fa fa-search"></i> 搜索</a></li> </ul> <div class="pull-left message-ico"> </div> <div class=" navbar-right header_login"> <a href="javascript:bomb('sign-in')">登录&nbsp;&nbsp;</a> <a href="#"> | </a> <a href="javascript:bomb('sign-in','reg')">&nbsp;&nbsp;注册</a> </div> </div> </div> </nav> </div> <script>
+    var $dropdownLi = $('.header_login');
+
+    $dropdownLi.on({
+        mouseover:function(){
+            $(this).addClass('open');
+        }
+        ,
+        mouseout:function(){
+            $(this).removeClass('open');
+        }
+    })
+
+</script> <!--头部结束--> <style>	.content .search .material-science {
+		padding: 12px 32px;
+		border-bottom: 1px dashed #e5e5e5;
+	}
+	.media .collection {
+		position: static;
+		margin: 0;
+		float: left;
+		margin-right: 8px;
+		cursor: pointer;
+	}
+	.fa-thumbs-up,.fa-thumbs-down,.fa-heart{
+		color:#00967a;
+	}
+	.star{
+		color: #ffb200!important;
+	}
+	.highlight{
+		color: red!important;
+	}
+
+	.content .choice{
+		padding: 12px 26px;
+		background: #f5f5f5;
+		border-bottom: solid 1px #e5e5e5;
+	}
+	.content .search .enshrine{
+		width: 100%!important;
+	}
+	.ques_stem{
+		line-height: 1.8em;
+		margin-left: 50px;
+	}
+	.content .choice-item .option-content {
+		line-height: 20px;
+	}
+	.content .choice-item {
+		position: relative;
+		padding: 10px 32px;
+		font-size: 15px;
+	}
+	.tool{
+		padding: 16px 26px;
+		border-top: 1px dashed #999;
+		border-bottom: 1px dashed #999;
+		overflow: hidden;
+		font-size: 14px;
+	}
+	.tool .tool-a{
+		float: left;
+	}
+	.tool .tool-b{
+		float: right;
+		margin-right: 50px;
+
+	}
+	.tool .tool-b .collection{
+		float: left;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+	.tool .tool-b .collection i{
+		color: #00967a;
+	}
+
+	.tool .tool-c{
+		float: right;
+		margin:-16px -26px;
+		background: #00967a;
+		padding: 16px 26px;
+		cursor: pointer;
+	}
+	.tool .tool-c a{
+		color: #fff;
+		font-weight: bold;
+	}
+	.laiyuan{
+		padding: 16px 26px;
+		font-size: 14px;
+
+	}
+	.content .record .enshrine-box {
+		border-top: 3px solid #999;
+	}
+	.result-bar .kw-form {
+		float: left;
+		height: 50px;
+		line-height: 23px;
+		padding: 0 26px 0 8px;
+		position: relative;
+	}
+	.result-bar .rs-outer {
+		float: right;
+		height: 25px;
+		line-height: 32px;
+		margin-right: 20px;
+	}
+	.bgt{
+		background: #dcdcdc;
+		color: #5a5a5a;
+		padding: 5px 15px;
+		border-radius: 10px;
+		border: solid 1px;
+	}
+	.fl {
+		float: left;
+		_display: inline;
+	}
+	.search{
+		background: #fff;
+	}
+</style> <div class="container" id="location"> <ul class="breadcrumb"> <li><i class="fa fa-home" aria-hidden="true"></i> <a href="/">首页</a></li> <li><a href="/Portal/Article/article_index">热点资料</a></li> <li class="active">							下列依次与蒙古族、回族、藏族、维吾尔族、壮族有关的是：		</li> </ul> </div> <div class="container"> <div class="content"> <div class="search"> <div class="record"> <div class="enshrine-box"> <div class="enshrine"> <div class="choice"> <div class="fl"> <span class="theme-color">                                （单选）
+                                                            </span> </div> <div class="ques_stem"><p>下列依次与蒙古族、回族、藏族、维吾尔族、壮族有关的是：</p></div> </div> <div class="choice-item answer"> <div class="choice-item-x"> <div class="fl"> <i class="fa fa-circle-thin " aria-hidden="true"></i>									A、
+								</div> <span class="option-content"><p>酥油茶、馓子、青稞酒、馕、萨其马</p></span> </div><div class="choice-item-x"> <div class="fl"> <i class="fa fa-circle-thin " aria-hidden="true"></i>									B、
+								</div> <span class="option-content"><p>马头琴、冬不拉、铜钦、葫芦丝、芦笙</p></span> </div><div class="choice-item-x"> <div class="fl"> <i class="fa fa-circle-thin " aria-hidden="true"></i>									C、
+								</div> <span class="option-content"><p>那达慕大会、开斋节、雪顿节、古尔邦节、泼水节</p></span> </div><div class="choice-item-x"> <div class="fl"> <i class="fa fa-check-circle" aria-hidden="true"></i>																			D、
+								</div> <span class="option-content"><p>《嘎达梅林》、《穆斯林的葬礼》、《格萨尔王传》、《阿凡提的故事》、《刘三姐》</p></span> </div> </div> <div class="tool"> <div class="tool-a">							正确答案：<span class="color-success">D</span>，正确率：<span class="color-success">48%</span>，作答次数：<span class="color-success">1078</span> </div> <div class="tool-b"> <div class="collection js-btn-jiexi" data-type="can" data-click="" data-id="11142"> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>								能看懂解析
+							</div> <div class="collection js-btn-jiexi" data-type="not" data-click="0" data-id="11142"> <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>								看不懂解析
+							</div> <div class="collection js-btn-collection" data-type="0" data-click="0" data-id="11142"> <i class="fa fa-heart-o" aria-hidden="true"></i>								收藏
+							</div> <div class="collection js-error" data-type="0" data-click="0" data-id="11142"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>								纠错
+							</div> </div> </div> <div class="choice js-choice" id="js_11142"> <div class="media"> <span class="bgt" style="font-weight: bold;color: #00967a;">参考解析</span><br> <div class="media-analysis"><p>本题为<strong>生活常识。<br/></strong>第一步：<strong>分析考点<br/></strong>《嘎达梅林》为<strong>蒙古族长篇叙事民歌</strong>；《穆斯林的葬礼》描写了<strong>回族家族的兴衰</strong>；《格萨尔王传》为<strong>藏族人民集体创作的英雄史诗</strong>；《阿凡提的故事》描写了<strong>维吾尔族的阿凡提的智慧故事</strong>；《刘三姐》中的<strong>主人公原型为壮族人物</strong>，对应正确，所以选D。<br/><br/>第二步：<strong>分析选项<br/></strong>A选项：酥油茶为<strong>藏族</strong>的传统饮料；萨其马为<strong>满族</strong>的一种传统食物，对应错误，排除。<br/><br/>B选项：冬不拉为<strong>哈萨克族</strong>民间流行的弹拨乐器，葫芦丝为<strong>云南少数民族</strong>乐器，芦笙为<strong>西南地区</strong>的簧管乐器，对应错误，排除。<br/><br/>C选项：泼水节为<strong>傣族</strong>的节日，对应错误，排除。<br/><br/>故本题选D。<br/><strong>【2010-联考/甘肃-113】</strong></p></div> </div> </div> <div class="laiyuan"> <span class="bgt">来源</span><span class="laiyuans"></span> </div> </div> </div> </div> </div> </div> </div> <script>    var jiexi_url = '/Article/canRead.html';
+    var jiexi_cancel_url = '/Article/notRead.html';
+    var collection_url = '/user/Favorite/do_favorite_ques.html';
+    var cancel_url = '/user/Favorite/delete_favorite_ques.html';
+    var is_login = '0';
+
+
+    //纠错路径
+    var question_wrong='/Question/question_wrong.html';
+    //解析界面公共纠错按钮点击事件
+    $(document).on('click','.js-error',function () {
+        if(is_login<1){
+            bomb('sign-in');
+        }
+        bomb('error-correction',$(this).attr('data-id'),1);
+    });
+
+    //公共收藏按钮点击事件
+    $(document).on('click','.js-btn-collection',function () {
+        if(is_login<1){
+            bomb('sign-in');
+        }
+        var url ='';
+        var _this=$(this);
+        if($(this).attr('data-click') == 0){
+            url = collection_url;
+            var promise = $.post(url, {q_id:$(this).attr('data-id'),q_type:$(this).attr('data-type')}, function(msg){
+                if(msg.info == 'ok') {
+                    _this.find('i').removeClass('fa-heart-o').addClass('fa-heart');
+                    _this.attr('data-click',1);
+                    layui.use('layer', function() {
+                        var layer = layui.layer;
+                        layer.msg('收藏成功', {icon: 1,area: '180px'});
+                    });
+                }
+            },  'json');
+        }else{
+            url = cancel_url;
+            promise = $.post(url, {q_id:$(this).attr('data-id')}, function(msg){
+                if(msg.info == 'ok') {
+                    _this.find('i').removeClass('fa-heart').addClass('fa-heart-o');
+                    _this.attr('data-click',0);
+                    layui.use('layer', function() {
+                        var layer = layui.layer;
+                        layer.msg('取消成功', {icon: 7,area: '180px'});
+                    });
+                }
+            },  'json');
+        }
+    });
+
+
+    //公共解析按钮点击事件
+    $(document).on('click','.js-btn-jiexi',function () {
+        if(is_login<1){
+            bomb('sign-in');
+        }
+        var url =jiexi_url;
+        var _this=$(this);
+        var q_type = $(this).attr('data-type');
+        if(q_type == 'can'){
+            url = jiexi_url;
+            var promise = $.post(url, {q_id:$(this).attr('data-id')}, function(data){
+                console.log(data.code)
+                if(data.code == 2000) {
+                    if(_this.find('i').hasClass('fa-thumbs-o-up')){
+                        _this.find('i').removeClass('fa-thumbs-o-up').addClass('fa-thumbs-up');
+                        _this.next().find('i').removeClass('fa-thumbs-down').addClass('fa-thumbs-o-down');
+                    }else{
+                        _this.find('i').removeClass('fa-thumbs-up').addClass('fa-thumbs-o-up');
+                    }
+                    _this.attr('data-click',1);
+                    layui.use('layer', function() {
+                        var layer = layui.layer;
+                        layer.msg(data.msg, {icon: 1,area: '180px'});
+                    });
+                }
+            },  'json');
+        }else{
+            url = jiexi_cancel_url;
+            promise = $.post(url, {q_id:$(this).attr('data-id')}, function(data){
+                if(data.code == 2000) {
+                    if(_this.find('i').hasClass('fa-thumbs-o-down')){
+                        _this.find('i').removeClass('fa-thumbs-o-down').addClass('fa-thumbs-down');
+                        _this.prev().find('i').removeClass('fa-thumbs-up').addClass('fa-thumbs-o-up');
+                    }else{
+                        _this.find('i').removeClass('fa-thumbs-down').addClass('fa-thumbs-o-down');
+                    }
+                    _this.attr('data-click',0);
+                    layui.use('layer', function() {
+                        var layer = layui.layer;
+                        layer.msg(data.msg, {icon: 7,area: '180px'});
+                    });
+                }
+            },  'json');
+        }
+    });
+
+    $(document).on('click','.video-comment-list,.video-comment',function(){
+        var text = $(this).text();
+        var params = {
+            type: 2,
+            title: text,
+            shadeClose: true,
+            skin: 'layui-layer-nobg',
+            shade: [0.5, '#000000'],
+            area: ['800px', '500px'],
+            content:$(this).attr("href")
+        };
+        open_iframe_layer(1,'asdfsa',params);
+        return false;
+    })
+
+    // 禁止文本选中
+    $(document).on('selectstart',function () {
+        return false;
+    });
+</script> <div class="footer"> <div class="wrap-cooperation"> <h3 class="cooperation-title">            合作链接
+            <div class="phone-number"> <i class="fa fa-phone" aria-hidden="true"></i>                咨询电话：400-6655-132            </div> </h3> <ul class="cooperation-list"> <li><a class="link-cooperation" href="http://weibo.com/u/5654255795" target="_blank" title="小麦公考微博[求关注]"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考微博[求关注]</a></li><li><a class="link-cooperation" href="http://weibo.com/u/5056281722" target="_blank" title="小麦公考章文正"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考章文正</a></li><li><a class="link-cooperation" href="http://weibo.com/yanxiaowuvip" target="_blank" title="小麦公考郝帅"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考郝帅</a></li><li><a class="link-cooperation" href="http://weibo.com/zgliuwenbo " target="_blank" title="公考讲师刘文波"
+                       report-tdw="action=cooperation_click&amp;ver3=1">公考讲师刘文波</a></li><li><a class="link-cooperation" href="http://weibo.com/u/6251840144" target="_blank" title="小麦公考麦莉"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考麦莉</a></li><li><a class="link-cooperation" href="https://weibo.com/1877102845" target="_blank" title="小麦公考申文丽"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考申文丽</a></li><li><a class="link-cooperation" href="http://weibo.com/u/1929948905" target="_blank" title="小麦公考陈洁"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考陈洁</a></li><li><a class="link-cooperation" href="https://weibo.com/u/5816126870" target="_blank" title="小麦公考郝萌"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考郝萌</a></li><li><a class="link-cooperation" href="https://weibo.com/u/6592384686" target="_blank" title="小麦公考申佳文"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考申佳文</a></li><li><a class="link-cooperation" href="https://weibo.com/u/5616894132" target="_blank" title="小麦公考麦穗"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考麦穗</a></li><li><a class="link-cooperation" href="https://weibo.com/u/3674866813" target="_blank" title="小麦公考郝强"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考郝强</a></li><li><a class="link-cooperation" href="http://weibo.com/u/2442186732" target="_blank" title="小麦公考高飞"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考高飞</a></li><li><a class="link-cooperation" href="http://opinion.people.com.cn/GB/8213/49160/49219/" target="_blank" title="人民时评"
+                       report-tdw="action=cooperation_click&amp;ver3=1">人民时评</a></li><li><a class="link-cooperation" href="http://www.xinhuanet.com/comments/" target="_blank" title="新华网评"
+                       report-tdw="action=cooperation_click&amp;ver3=1">新华网评</a></li><li><a class="link-cooperation" href="http://www.xiaomaigongkao.com/index.php?s=/Portal/QuestionBank/datalist" target="_blank" title="题库"
+                       report-tdw="action=cooperation_click&amp;ver3=1">题库</a></li><li><a class="link-cooperation" href="https://www.xiaomaigongkao.com/Portal/Page/appdownload.html" target="_blank" title="小麦公考让你的选择更美好"
+                       report-tdw="action=cooperation_click&amp;ver3=1">小麦公考让你的选择更美好</a></li> </ul> </div> <div class="footer-information"> <p>		 Copyright © 2017-2020 xiaomai. All Rights Reserved. | 西安文都小麦教育科技有限公司版权所有 <a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;">陕ICP备2020016380号-2 &nbsp;&nbsp;</a> <!--| <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000399" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/public/images/beian.png" style="float:left;"/> &nbsp;&nbsp;陕公网安备 61010302000399号</a>        --> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001106" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/public/images/beian.png" style="float:left;"/>&nbsp;&nbsp;陕公网安备 61011302001106号</a> </p> <p><a href="###">小麦公考服务协议</a> | <a href="###">站点地图</a> | <span class="tj"><script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1261527001'%3E%3C/span%3E%3Cscript src='https://s95.cnzz.com/z_stat.php%3Fid%3D1261527001' type='text/javascript'%3E%3C/script%3E"));</script> </span> </p> </div> </div> <a class="MEIQIA-PANEL-HOLDER" href="javascript:scroll(0,0)" style="position: fixed;bottom: 166px;z-index: 2147483647;width: 41px;height: 34px;right: 0px;"><img src="/public/images/go-top.png" alt="返回顶部"></a> <script type='text/javascript'>	(function(m, ei, q, i, a, j, s) {
+		m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+		j = ei.createElement(q),
+			s = ei.getElementsByTagName(q)[0];
+		j.async = true;
+		j.charset = 'UTF-8';
+		j.src = '//static.meiqia.com/dist/meiqia.js';
+		s.parentNode.insertBefore(j, s);
+	})(window, document, 'script', '_MEIQIA');
+	_MEIQIA('entId', 57375);
+</script> <script type="text/javascript">var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol &&  window.location.href.indexOf('xiaomaigongkao.com')!=-1)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script> </body> </html>

@@ -1,0 +1,1127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="/styles/hunnu/css/master.css" rel="stylesheet" type="text/css" />
+<link href="/styles/hunnu/css/list.css" rel="stylesheet" type="text/css" />
+<title>卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”_湖南师范大学图书馆</title>
+	<link type="text/css" rel="stylesheet" href="/styles/opac/goldlib-opac.css" />
+<link type="text/css" rel="stylesheet" href="/styles/opac/skins/red/skin-opac.css" />
+<link href="/styles/hunnu/css/master.css" rel="stylesheet" type="text/css" />
+<link href="/styles/hunnu/css/list.css" rel="stylesheet" type="text/css" />
+
+<script src="/scripts/highcharts/js/jquery-1.5.js" type="text/javascript"></script>
+	
+	
+	<script type="text/javascript" src="/scripts/opac/common/common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/scripts/opac/share/button.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/scripts/opac/share/bshareC0.js"></script>
+	<script src="/scripts/highcharts/js/highcharts.js" type="text/javascript"></script>
+	<script src="/scripts/highcharts/js/modules/exporting.js" type="text/javascript"></script>
+	<script src="/scripts/main.js" type="text/javascript"></script>
+	<script src="/scripts/weebox/bgiframe.js" type="text/javascript"></script>
+	<script src="/scripts/weebox/weebox.js" type="text/javascript"></script>
+	<link href="/scripts/weebox/weebox.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/scripts/jq_tree/jquery.treeview.js"></script>
+	<script type="text/javascript" src="/scripts/jq_tree/jquery.treeview.async.js"></script>
+	<link type="text/css" href="/scripts/jq_tree/jquery.treeview.css" rel="stylesheet" />
+	<script src="/scripts/validate/jquery.validate.min.js;jsessionid=3F0528E37F570A126ECA8408DAC6469E" type="text/javascript"></script>
+	<script src="/scripts/validate/messages_cn.js;jsessionid=3F0528E37F570A126ECA8408DAC6469E" type="text/javascript"></script>
+	<script src="/scripts/validate/jquery.metadata.js;jsessionid=3F0528E37F570A126ECA8408DAC6469E" type="text/javascript"></script>
+	<script src="/scripts/validate/validate.extend.js;jsessionid=3F0528E37F570A126ECA8408DAC6469E" type="text/javascript"></script>
+	<script type="text/javascript" src="http://www.metacd.com/jquery/211010.js"></script>	
+	
+
+
+<script type="text/javascript">
+$(document).ready(function (){
+$.ajax({
+	url:"/opac/book/getCXBookUrl?isbn=7-5033-2070-2",
+	success:function (bookurl){
+     if (bookurl!=-1){
+        $("#detailsTable>tbody").append("<tr><th>电子图书：</th><td><a href='"+bookurl+"' target='_blank'><img src='/styles/opac/images/E_journal.gif'></img></a></td></tr>");
+         }else {
+        	 $("#detailsTable>tbody").append("<tr><th>电子图书：</th><td><img src='/styles/opac/images/E_journal.gif'></img>&nbsp;无记录</td></tr>");
+             }
+		}
+});
+	
+});
+
+</script>
+
+<script type="text/javascript">
+	//预约相关
+	function isAddReserver(bookid){
+		var aa=confirm("确定要预约吗?","addReserver('"+bookid+"')","");
+	}
+	function addReserver(barCode) {
+		var islogin="no";
+		if (islogin=='no'){
+			alert("请先<a href='/ucenter/login'>登录!</a>",3,null);
+		}else {
+			$.ajax({
+				type: "POSt",
+				url: "/opac/book/bespeakBook/"+barCode,
+				dateType:"json",
+				cache: false,
+				data :"",
+				success: function(result){
+					var list=eval("("+result+")");
+					alert(list.errorMessage,3,null);
+				}          
+			});
+		}
+	}
+</script>
+
+<script type="text/javascript">
+//委托相关
+	function isAddWeiTuo(barCode){
+		var aa=confirm("确定要委托吗?","addWeiTuo('"+barCode+"')","");
+		
+	}
+	function addWeiTuo(barCode) {
+		var islogin="no";
+		if (islogin=='no'){
+			alert("请先<a href='/opac/login'>登录!</a>",3,null);
+		}else {
+			$.ajax({
+				type: "POSt",
+				url: "/opac/book/entrustBook/"+barCode,
+				dateType:"json",
+				cache: false,
+				data :"",
+				success: function(result){
+					var list=eval("("+result+")");
+					alert(list.errorMessage,3,null);
+				}          
+			});
+		}
+	}
+</script>
+
+<script type="text/javascript">
+	//选显卡切换
+	$(document).ready(function (){
+		var corename='Book';
+		if (corename=='Journal'){
+			showdiv('journal');
+		} 
+		else{
+			showdiv('gc');
+		}
+	});
+	function showdiv(tag){
+		$("#a"+tag).attr("class","current");
+		$(".tabbable .nav-tabs a[id!=a"+tag+"]").attr("class","");
+		$("#div"+tag).show();
+		$("div[name='bookinfo'][id!=div"+tag+"]").hide();
+	
+	    //相关评论
+		if (tag=="pl"){
+			getCommentInfo();
+		}
+		//馆藏信息
+		if(tag=="gc"){
+			getLibInfo();
+			getCollectInfo();
+		}
+		//相关借阅
+		if (tag=="lend"){
+			 $("#divlend").html("<span class=\"noContent\">数据正在加载中……</span>");
+			 getBorrowerRelationList();
+		}
+		//附件信息
+	     if (tag=="fj"){
+	    	 $("#divfj").html("<span class=\"noContent\">数据正在加载中……</span>");
+	    	 $.post("/opac/book/attachmentList",{bookId:"408821"},function (result){
+	        	 	if($.trim(result)==""){
+	        	 		$("#divfj").html("<span class=\"noContent\">无附件信息</span>");
+	        	 	}
+	        	 	else{
+	        	 		$("#divfj").html(result);
+	        	 	}
+			        
+			});  
+	     }
+		//期刊签到信息
+	     if (tag=="journal"){
+    	 	if($.trim($("#tree").html()).length==0){
+    	 		$("#tree").treeview({
+	    	     	url:"/opac/book/journalSignInfo?bookId=408821"
+	    	 	});
+    	 	}
+	     }
+	     //借阅趋势
+	     if(tag=="lendTrend"){
+	    	 getBorrowedTrendList();
+	     }
+	}
+</script>
+
+<script type="text/javascript">
+	function showmore(){
+		$('.seriesArea').show();
+		$('#showmore').hide();
+		}
+	function packup(){
+		$('.seriesArea').hide();
+		$('#showmore').show();
+		}
+</script>
+
+<script type="text/javascript">
+	//加载二维码
+	$(document).ready(function (){
+		$("#imgQR").attr("src","/styles/opac/images/loading.gif");
+		$.ajax({   
+			url: "/static/QRCode/K/408821.png",
+			type:"GET",
+			processData: false,
+			success: function(){
+				$("#imgQR").attr("src","/static/QRCode/K/408821.png");
+			},
+			error: function(){
+				$.ajax({
+					type: "POST",
+					url: "/opac/book/getQRCode",
+					dateType:"text",
+					async: true,
+					cache: false,
+					data : {
+						bookId:"408821",
+						letter:"K",
+						title:"卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”",
+						callNo:"K826.3/2122",
+						isbn:"7-5033-2070-2",
+						author:"卡德尔著",
+						publisher:"解放军文艺出版社",
+						publishDate:"2007",
+						bookId:"408821"
+					},
+					success: function(result){
+						if(result.length>0){
+							setTimeout(function(){$("#imgQR").attr("src",result);},5000);
+							
+						}
+					}
+				});
+			} 
+		});
+	});
+</script>
+<script type="text/javascript">
+//借阅趋势
+function getBorrowedTrendList(){
+	var categoriesArray=new Array();
+	var dataArray=new Array();
+	$.ajax({
+		type: "GET",
+		url: "/opac/book/getBorrowedTrendList/408821",
+		dateType:"json",
+		cache: false,
+		data : "",
+		success: function(result){
+			if(result.length>0){
+				var list=eval("("+result+")");
+				for(var i=0;i<list.length;i++){
+					categoriesArray[i]=list[i].YEAR;
+					dataArray[i]=list[i].COUNT;
+				}
+			}
+		}
+	});
+	if($('#container').length > 0){
+		  $('#container').highcharts({
+			  exporting:{
+			  		enabled:false //用来设置是否显示‘打印’,'导出'等功能按钮，不设置时默认为显示 
+			   },
+			   chart: {
+		            type: 'spline'
+		        },
+		        title: {
+		            text: '图书年度借阅趋势'
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        xAxis: {
+		            categories: categoriesArray
+		        },
+		        yAxis: {
+		            allowDecimals: false,
+		            title: {
+		                text: '借阅量'
+		            },
+		            min:0,
+		            labels: {
+		                formatter: function() {
+		                    return this.value +'次'
+		                }
+		            }
+		        },
+		        tooltip: {
+		            crosshairs: true,
+		            shared: true,
+		            valueSuffix: '次'
+		        },
+		        plotOptions: {
+		            spline: {
+		                marker: {
+		                    radius: 4,
+		                    lineColor: '#666666',
+		                    lineWidth: 1
+		                }
+		            }
+		        },
+		        series: [{
+		            name: '卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”',
+		            marker: {
+		                symbol: 'square'
+		            },
+		            data: dataArray
+		        }]
+		  });
+	}
+}
+</script>
+
+<script type="text/javascript">
+	//获取相关借阅
+	function getBorrowerRelationList(){
+		$.ajax({
+			type: "GET",
+			url: "/opac/book/getBorrowerRelationList/408821",
+			dateType:"json",
+			cache: false,
+			async: true,
+			data : {
+				num:10
+			}, 
+			success: function(result){
+				if(result.length>0){
+					var list=eval("("+result+")");
+					$("#divlend").empty();
+					var table=$("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"jp-booksList\">");
+					table.appendTo($("#divlend"));
+					var trHead=$("<tr><th width=\"20%\">题名</th><th width=\"16%\">责任者</th><th width=\"16%\">出版者</th><th width=\"10%\">索书号</th></tr>");
+					trHead.appendTo(table);
+					for(var i=0;i<list.length;i++){
+						var tr=$("<tr></tr>");
+						tr.appendTo(table);
+						var td1=$("<td><a href=\"/opac/book/"+list[i].ID+"\" target=\"_blank\">"+list[i].bookMap.题名2+"</a></td>");
+						td1.appendTo(tr);
+						var td2=$("<td>"+list[i].bookMap.责任者2+"</td>");
+						td2.appendTo(tr);
+						var td3=$("<td>"+list[i].bookMap.出版者2+"</td>");
+						td3.appendTo(tr);
+						var td4=$("<td>"+list[i].bookMap.索书号A+"</td>");
+						td4.appendTo(tr);
+					}
+					$("#divlend").append("</table>");
+				}
+				else{
+					$("#divlend").html("<span class=\"noContent\">无相关借阅信息</span>");
+				}
+			}          
+		});
+	}                        
+</script>
+
+<script type="text/javascript">
+		//收藏
+		function collect(doc_id,doc_title,doc_type,author,publisher,publisherdate,call_number) {
+			var islogin="no";
+			if (islogin=="no"){
+				alert("请先<a href='/ucenter/login'>登录!</a>",3,null);
+			}
+			else {
+				$.ajax({
+					type: "POST",
+					url: "/opac/book/collectBook",
+					dateType:"json",
+					cache: false,
+					data : {
+						docid:doc_id,
+						doc_title:doc_title,
+						doc_type:doc_type,
+						author:author,
+						publisher:publisher,
+						publisherdate:publisherdate,
+						call_number:call_number
+					}, 
+					success: function(result){
+						var list=eval("("+result+")");
+						alert(list.errorMessage,3,null);
+					}          
+				});
+			}
+		}
+</script>
+
+<script type="text/javascript">
+//获取网络封面和简介
+	$(document).ready(function (){
+		var coverPath=$("#bookimage").attr("src");
+		if(coverPath.length<=1){
+			$("#bookimage").attr("src","/styles/opac/images/loading.gif");
+			$.ajax({
+				type: "GET",
+				url: "/opac/book/getInternetCoverAndSummary",
+				dateType:"json",
+				async: true,
+				cache: false,
+				data : {
+					bookId:'卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”',
+					isbn:'7-5033-2070-2'
+				}, 
+				success: function(result){
+					$("#bookimage").attr("src","/styles/opac/images/noPicture.jpg");
+					if($.trim(result).length>0){
+						var list=eval("("+result+")");
+						if(list.COVERPATH.length>0){
+							$("#bookimage").attr("src",""+list.COVERPATH);
+						}
+						if(!($("#doubansummarys").length)){
+							if(list.summary.length>0){
+								var tr=$("<tr id=\"summarys\"></tr>");
+								tr.appendTo($("#detailsTable"));
+								var th=$("<th>豆瓣简介：</th>");
+								th.appendTo(tr);
+								var td=$("<td>"+list.summary+"</td>");
+								td.appendTo(tr);
+							}
+						}	
+					}
+				}          
+			});
+		}
+	});
+</script>
+
+<script type="text/javascript">
+//书目信息marc信息选项卡切换
+$(document).ready(function (){
+	 $("#bookdata").click(function (){
+    	 $("#bookinfo").show();
+    	 $("#bookdata").attr("class","current");
+    	 $("#marcinfo").hide();
+    	 $("#marcdata").attr("class","");
+
+        });
+	$("#marcdata").click(function (){
+		 $("#bookinfo").hide();
+		 $("#bookdata").attr("class","");
+		 $("#marcinfo").show();
+		 $(this).attr("class","current");
+		 $("#marcinfo").html("");
+		 $.ajax({
+				type: "POST",
+				url: "/opac/book/getMarcTable",
+				dateType:"json",
+				cache: false,
+				data : {
+					bookId:'408821',
+					keyCode:'1',
+					indicant:"@"
+				}, 
+				success: function(result){
+					if($.trim(result).length>0){
+						var list=eval("("+result+")");
+						var table=$("<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">");
+						table.appendTo("#marcinfo");
+						for(var i=0;i<list.length;i++){
+							var tr=$("<tr></tr>");
+							tr.appendTo(table);
+							var th=$("<th>"+list[i].fieldname+"&nbsp;&nbsp;</th>");
+							th.appendTo(tr);
+							var td1=$("<td width=\"6%\">"+list[i].field+"</td>");
+							td1.appendTo(tr);
+							var td2=$("<td width=\"5%\">"+list[i].order+"</td>");
+							td2.appendTo(tr);
+							var td3=$("<td>"+list[i].value+"</td>");
+							td3.appendTo(tr);
+						}
+						$("#marcinfo").append("</table>");
+					}
+				}
+		 });
+	 });
+});
+</script>
+
+<script type="text/javascript">
+	//获取分馆信息
+	function getLibInfo(){
+		$.ajax({
+			type: "GET",
+			url: "/opac/book/getUnitHoldingGroup?bookId="+408821,
+			dateType:"json",
+			cache: false,
+			data : "", 
+			success: function(result){
+				if($.trim(result).length>0){
+					var htmlStr="<div class=\"subnav-tabs\">";
+					var list=eval("("+result+")");
+					for (var i=0;i<list.length;i++){
+						if(i==0){
+							htmlStr=htmlStr+"<a name=\"libId\" id=\""+list[i].馆键码+"\" href=\"javascript:void(0);\" onclick=\"showLib('"+list[i].馆键码+"')\" class=\"current\">"+list[i].单位名+"("+list[i].数量+")"+"</a>";
+						}
+						else{
+							htmlStr=htmlStr+"<a name=\"libId\" id=\""+list[i].馆键码+"\" href=\"javascript:void(0);\" onclick=\"showLib('"+list[i].馆键码+"')\" >"+list[i].单位名+"("+list[i].数量+")"+"</a>";
+						}
+					}
+					htmlStr=htmlStr+"</div>";
+					$("#divgc").html(htmlStr);
+				}
+			}
+		});
+	}
+</script>
+
+<script type="text/javascript">
+	//分馆聚合标签切换
+	function showLib(libId){
+		$("a[name='libId'][id!='"+libId+"']").attr("class","");
+		$("a[name='libId'][id='"+libId+"']").attr("class","current");
+		getCollectInfo();
+	}
+</script>
+
+<script type="text/javascript">
+	//获取馆藏信息
+	function getCollectInfo(){
+		var libId="";
+		if($("a[name='libId'][class='current']").length>0){
+			libId=$("a[name='libId'][class='current']").attr("id");
+		}
+		if(libId=='all'){
+			libId="";
+		}
+		$("#divgc table").remove();
+		$.ajax({
+			type: "GET",
+			url: "/opac/book/getHoldingsInformation/"+408821+"?libId="+libId,
+			dateType:"json",
+			cache: false,
+			data : "", 
+			success: function(result){
+				if($.trim(result).length>0){
+					var corename='Book';
+					var rfidsUrl='http://202.197.117.113:8081/tsdw/GotoFlash.aspx?szBarCode=';
+					var list=eval("("+result+")");
+					var table=$("<table id=\"gctable\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"jp-booksList\">");
+					table.appendTo($("#divgc"));
+					var tr=$("<tr></tr>");
+					tr.appendTo(table);
+
+					var th1=$("<th width=\"8%\">索书号</th>");
+					th1.appendTo(tr);	
+					//var th2=$("<th width=\"10%\">登录号</th>");
+					//th2.appendTo(tr);	
+					var th3=$("<th width=\"10%\">条形码</th>");
+					th3.appendTo(tr);	
+					
+					if(corename=='Journal'){
+						var th4=$("<th width=\"10%\">年卷期</th>");
+						th4.appendTo(tr);	
+						var th5=$("<th width=\"5%\">区分号</th>");
+						th5.appendTo(tr);	
+					}
+					var th6=$("<th width=\"15%\">所属校区</th>");
+					th6.appendTo(tr);
+					var th7=$("<th width=\"15%\">馆藏地址</th>");
+					th7.appendTo(tr);
+					
+					var th8=$("<th width=\"10%\">书刊状态</th>");
+					th8.appendTo(tr);
+					//var th9=$("<th width=\"5%\">预约</th>");
+					//th9.appendTo(tr);
+					//var th10=$("<th width=\"5%\">委托</th>");
+					//th10.appendTo(tr);
+					//if(rfidsUrl.length>0){
+					//	var th11=$("<th width=\"8%\">馆藏定位</th>");
+					//	th11.appendTo(tr);
+					//}
+
+					for (var i=0;i<list.length;i++){
+						var trResult=$("<tr></tr>");
+						if(i==list.length-1){
+							trResult=$("<tr class=\"last\"></tr>");
+						}
+						trResult.appendTo(table);
+
+						var td1=$("<td>"+list[i].索书号+"</td>");
+						td1.appendTo(trResult);
+						//var td2=$("<td>"+list[i].登录号+"</td>");
+						//td2.appendTo(trResult);
+						var td3=$("<td>"+list[i].条形码+"</td>");
+						td3.appendTo(trResult);
+						if(corename=='Journal'){
+							var td4=$("<td>"+list[i].年卷期+"</td>");
+							td4.appendTo(trResult);
+							var td5=$("<td>"+list[i].区分号+"</td>");
+							td5.appendTo(trResult);
+						}
+						
+
+						var td6=$("<td>"+list[i].单位名+"</td>");
+						td6.appendTo(trResult);
+						var td7=$("<td>"+list[i].部门名称+"</td>");
+						td7.appendTo(trResult);
+						
+						var td8=$("<td>"+list[i].bookstatus+"</td>");
+						if(list[i].borrowstatus=="不外借"){
+			        		td8=$("<td>不外借</td>");
+			        	}
+						td8.appendTo(trResult);
+			        //	var td9=$("<td>&nbsp;</td>");
+			        	//if(list[i].外借状态==1||0==1){
+				        //	td9=$("<td><a href=\"javascript:void(0);\" onclick=\"isAddReserver('"+list[i].条形码+"')\">预约</a></td>");
+			        	//}
+						//td9.appendTo(trResult);
+
+						//var td10=$("<td>&nbsp;</td>");
+			        	//if(list[i].canExtracted){
+				        //	td10=$("<td><a href=\"javascript:void(0);\" onclick=\"isAddWeiTuo('"+list[i].条形码+"')\">委托</a></td>");
+			        	//}
+						//td10.appendTo(trResult);
+
+					//	var td11=$("<td>&nbsp;</td>");
+						//if(rfidsUrl.length>0){
+						//	var td11=$("<td><a target=\"_blank\" href=\""+rfidsUrl+list[i].条形码+"\">定位</a></td>");
+						//}
+						//td11.appendTo(trResult);
+					}
+					
+					$("#divgc").append("</table>");
+					
+				}
+				else{
+					$("#divgc").html("<span class=\"noContent\">暂无馆藏信息</span>");
+				}
+			}          
+		});
+	}
+</script>
+<script type="text/javascript">
+//openUrl异步加载
+$(document).ready(function (){
+	$.ajax({
+		type: "GET",
+		url: "/opac/opacOpenurl/getOpenUrlByBookId/"+408821,
+		dateType:"json",
+		cache: false,
+		data : "", 
+		success: function(result){
+			if($.trim(result).length>0){
+				var list=eval("("+result+")");
+				var htmlUrl="";
+				for (var i=0;i<list.length;i++){
+					var encodedUrl=list[i].url;
+					htmlUrl=htmlUrl+"<li><a href=\""+encodedUrl+"\"target=\"_blank\">"+list[i].showName+"</a></li>";
+					
+				}
+				$("#aboutResources").prepend(htmlUrl);
+			}
+			
+		}          
+	});
+});
+</script>
+
+
+
+<script type="text/javascript">
+//图书评论提交
+$(document).ready(function (){
+	 $("#pinglun").validate({
+		 submitHandler:function(form){
+			var islogin="no";
+			if (islogin=="no"){
+				alert("请<a href='/ucenter/login'>登录!</a>后操作",3,null);
+			}
+			else{
+				 $.ajax({
+						url: "/opac/book/bookComment",
+						type: "post",
+						
+						data:$("#pinglun").serialize(),
+						success: function(msg){
+							alert(msg,3,null);
+							getCommentInfo();
+						}
+					});
+		     }    
+		}	
+	  });
+});
+
+//字符串补零
+function pad(num, n) {  
+    var len = num.toString().length;  
+    while(len < n) {  
+        num = "0" + num;  
+        len++;  
+    }  
+    return num;  
+}  
+
+//获取评论信息
+function getCommentInfo(){
+	$.ajax({
+		url: "/opac/book/getCommentInfo/"+408821,
+		type: "get",
+		dateType:"json",
+		cache: false,
+		data : "", 
+		success: function(msg){
+			var count=0;
+			
+			if(msg.length>0){
+				var list=eval("("+msg+")");
+				count=list.count;
+				if(count>0){
+					$(".booksCritique-list").show();
+					$("#pinluninfo").empty();
+					for(var i=0;i<list.commentsList.length;i++){
+						var li=$("<li></li>");
+						li.appendTo($("#pinluninfo"));
+						var h4=$("<h4></h4>");
+						h4.appendTo(li);
+						var a=$("<a href=\"javascript:;\">"+list.commentsList[i].USER_NAME+"</a>");
+						a.appendTo(h4);
+						var data = new Date(list.commentsList[i].LAST_EDIT_TIME);
+						var time=data.getFullYear()+"-"+pad((data.getMonth() + 1),2)+"-"+pad((data.getDate()),2)+" "+pad((data.getHours()),2)+":"+pad((data.getMinutes()),2)+":"+pad((data.getSeconds()),2);
+						var span=$("<span>"+time+"</span>");
+						span.appendTo(h4);
+						var div=$("<div class=\"critiqueContent\"></div>");
+						div.appendTo(li);
+						var p=$("<p>"+list.commentsList[i].CONTENT+"</p>");
+						p.appendTo(div);
+					}
+				}
+			}
+			$("#plcount").html(count);
+		}
+	});
+    $("#content").val('');
+}
+</script>
+
+<script type="text/javascript">
+//评分相关
+$(document).ready(function (){
+	ScoreInfo();
+});
+
+//获取评分信息
+function ScoreInfo(){
+	var islogin="no";
+	
+	$.ajax({
+		type: "GET",
+		url: "/opac/book/getBookScore/"+408821,
+		dateType:"json",
+		cache: false,
+		data : "", 
+		success: function(result){
+			if($.trim(result).length>0){
+				var list=eval("("+result+")");
+				if(list.myScoreMap){
+					var count=list.myScoreMap.SCORE;
+					$("#bookstar").html("");
+					for(var i=0;i<count;i++){
+						var a=$("<a href=\"javascript:void(0);\" name=\"imgMy\" class=\"scoreCurr\"></a>");
+						a.appendTo($("#bookstar"));
+					}
+				}
+				else{
+					if (islogin=="no"){
+						$("#bookstar").html("<font color=\"red\">请登录后查看</font>");
+					}
+					else{
+						//$("#bookstar").html("<font color=\"red\">尚未评分</font>");
+					}
+				}
+				var totalScore=0;
+				var scoreCount=0;
+				scoreCount=list.totalScoreMap.COUNT;
+				if(scoreCount>0){
+					totalScore=list.totalScoreMap.TOTAL;
+				}
+				$("#totalScore").attr("style","width:"+(totalScore*20)+"%");
+				$("#countScore").html("共("+scoreCount+")人");
+			}
+			
+		}          
+	});
+}
+
+
+//评分
+function bookScore(index){
+	var islogin="no";
+	if (islogin=="no"){
+		alert("请<a href='/ucenter/login'>登录!</a>后操作",3,null);
+	}
+	else{
+		 $.ajax({
+			url: "/opac/book/bookScore",
+			type: "post",
+			data:{
+				score:index,
+				bookId:"408821",
+				docType:"图书",
+				call_number:"K826.3/2122",
+				docTitle:"卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”"
+			},
+			success: function(msg){
+				ScoreInfo();
+				alert(msg,3,null);
+				//$("#myrating").attr("class","totalRating pull-left");
+				
+			}
+		});
+	}
+}
+function ChangeState(index){
+	$("#bookstar>a[name='img']").each(function (i,value){
+	    if (i<index-1){
+	    	$(this).attr("class","scoreCurr");
+	        }
+	    else {
+	    	$(this).attr("class","");
+	        }
+	});
+}
+function MouseOver(index){
+	ChangeState(index);
+}
+function MouseOut(){
+	ChangeState(1);
+}
+</script>
+
+	<script src="http://www.bj.cxstar.cn/bookcd/format/release/aspx/schoolInterface/JP_HNUL/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="http://www.bj.cxstar.cn/bookcd/format/release/aspx/schoolInterface/JP_HNUL/interface.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$.ajaxSetup({  
+			 async : false ,
+			 cache: false 
+		});  
+	</script>
+</head>
+<body>
+<div id="wrapper">
+  <!--header-->
+  <div class="header w1021">
+<iframe id='iframeTest' name='iframeTest' width='400px' height='400px'
+		src="/checkLoginOAuth/whetherToRefresh" style="visibility: hidden;"></iframe>
+  <div class="logo"><a href="/index.shtml"><img src="/styles/hunnu/images/logo.png" width="370" height="106" /></a></div>
+  <div class="ckepop">
+    <a href="/ucenter/login"  class="user_btn" title="用户登录">用户登录</a></div>
+  <div class="nav">
+    <a href="/">首页</a><a href="/category87/index.shtml">本馆概况</a><a href="/libweb/digitalDatabase">资源</a><a href="/category22/index.shtml">服务</a><a href="/category55/index.shtml">咨询&互动</a><a href="/category159/index.shtml">下载中心</a><a href="http://www.hunnu.edu.cn">湖南师范大学首页</a></div>
+</div>
+<!--main-->
+  <div class="main clearfix" style="width:1021px; margin:0px auto;">
+  <div class="list_nav" id="current_nav2" style="display:;">&nbsp;</div>
+      <input type="hidden" id="field" value="" />
+			<div class="jp-listSearch">
+				书籍详细信息：
+				<strong class="red">卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”</strong>
+			</div>
+
+			<div class="jp-main">
+
+				<div class="jp-viewContent">
+					<div class="jp-viewLeft">
+						<div class="jp-content">
+							<h3 class="nav-tabs">
+								<a href="javascript:;" class="current" id="bookdata">书目信息</a><a
+									href="javascript:void(0)" id="marcdata">机读格式(MARC)</a>
+							</h3>
+
+							<div class="jp-booksInfo">
+								<div class="booksCover">
+									
+									<img src="" alt="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》" title="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》"id="bookimage" />
+								</div>
+								<div class="booksInfo" id="bookinfo">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" id="detailsTable">
+										<tr><th>ISBN/价格：</th><td>7-5033-2070-2:CNY18.00</td></tr>
+<tr><th>作品语种：</th><td>chi</td></tr>
+<tr><th>出版国别：</th><td>CN  110000</td></tr>
+<tr><th>题名责任者项：</th><td>卡德尔日记/.卡德尔著/.新疆军区政治部编译</td></tr>
+
+
+
+<tr><th>出版发行项：</th><td>北京:,解放军文艺出版社:,2007</td></tr>
+<tr><th>载体形态项：</th><td>239页:;+照片:;+21cm</td></tr>
+
+
+
+
+<tr><th>提要文摘：</th><td>本书是从卡德尔·巴克一九六七年十月至二○○六年十月写的一千一百七十篇日记中精选编译的，共计一千零五十六篇。</td></tr>
+
+
+
+
+
+<tr><th>题名主题：</th><td>卡德尔   日记</td></tr>
+
+<tr><th>中图分类：</th><td>K826.3</td></tr>
+<tr><th>个人名称等同：</th><td>卡德尔  著</td></tr>
+
+
+
+<tr><th>记录来源：</th><td>CN  HD  20071015</td></tr>
+
+<tr>
+												<th>
+													豆瓣简介：
+												</th>
+												<td>
+													</td>
+											</tr>
+										</table>
+								</div>
+
+								<div class="booksInfo" id="marcinfo" style="display: none">
+
+								</div>
+							</div>
+							<div class="jp-booksScore">
+								<div class="totalRating pull-left">
+									<span class="pull-left">总体评分：</span><span
+										class="pull-left booksScore"> <a
+										href="javascript:void(0)" class="scoreCurr" id="totalScore"></a>
+									</span><span class="pull-left" id="countScore">（共0人）</span>
+								</div>
+								<div class="myRating pull-left" id="myrating">
+									<span class="pull-left">我的评分：</span>
+									<span class="pull-left booksScore" id="bookstar"> 
+										<a href="javascript:void(0);" name="img" onclick="bookScore(1)" onmouseover="MouseOver(1)" onmouseout="MouseOut()"></a> 
+										<a href="javascript:void(0);" name="img" onclick="bookScore(2)" onmouseover="MouseOver(2)" onmouseout="MouseOut()"></a> 
+										<a href="javascript:void(0);" name="img" onclick="bookScore(3)" onmouseover="MouseOver(3)" onmouseout="MouseOut()"></a> 
+										<a href="javascript:void(0);" name="img" onclick="bookScore(4)" onmouseover="MouseOver(4)" onmouseout="MouseOut()"></a> 
+										<a href="javascript:void(0);" name="img" onclick="bookScore(5)" onmouseover="MouseOver(5)" onmouseout="MouseOut()"></a> 
+									</span>
+								</div>
+								<div class="pull-right">
+									<!--<a href="#user_appraise" class="btn">评论</a>-->
+									<a href="javascript:void(0);"
+										onclick="collect('408821','卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”','图书','卡德尔著','解放军文艺出版社','2007','K826.3/2122');"
+										id="collect" class="btn">收藏</a>
+								</div>
+							</div>
+							
+						
+							
+
+							<div class="tabbable">
+								
+								<h3 class="nav-tabs">
+									<a href="javascript:void(0);" class="current" id="agc"
+												onclick="showdiv('gc')">馆藏信息</a>
+										<a href="javascript:void(0);" id="afj" onclick="showdiv('fj')">附件信息</a>
+									<a href="javascript:void(0);" id="apl" onclick="showdiv('pl')">评论信息</a>
+									<a href="javascript:void(0);" id="alend" onclick="showdiv('lend')">相关借阅</a>
+									
+									<a href="javascript:void(0);" id="alendTrend" onclick="showdiv('lendTrend')">借阅趋势</a>
+										<!--  <a href="javascript:void(0);" id="abook" onclick="showdiv('book')">您可能感兴趣的图书</a> -->
+								</h3>
+
+								<div class="tab-content">
+									<!-- 馆藏信息 -->
+									<div class="tab-pane active" id="divgc" name="bookinfo">
+										
+									</div>
+									<!-- 附件信息 -->
+									<div class="tab-pane jp-booksAttachment" id="divfj"
+										name="bookinfo">
+
+									</div>
+
+									<!-- 图书评论 -->
+									<div class="tab-pane jp-booksCritique" id="divpl"
+										name="bookinfo">
+
+										<div class="booksCritique-login">
+											评论共
+											<span class="red" id="plcount"></span>条
+											
+													，<a href="/ucenter/login">请登录</a>后发表评论</div>
+
+										<form name="pinglun" id="pinglun">
+											<div class="booksCritique-input">
+												<input type="hidden" name="bookId" id="bookId"
+													value="408821" />
+												<input type="hidden" name="docTitle" id="docTitle"
+													value="卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”" />
+												<input type="hidden" name="docType" id="docType"
+													value="图书" />
+												<input type="hidden" name="author" id="author"
+													value="卡德尔著" />
+												<input type="hidden" name="publisher" id="publisher"
+													value="解放军文艺出版社" />
+												<input type="hidden" name="publishdate" id="publishdate"
+													value="2007" />
+												<input type="hidden" name="call_number" id="call_number"
+													value="K826.3/2122" />
+												<input type="hidden" name="corename" id="corename"
+													value="Book" />
+												<div class="booksCritique-text">
+													<font color='red'><label class="error" for="content" generated="true" ></label></font>
+													<textarea name="content" class="{required:true,minlength:100,messages:{required:'评论内容不能为空',minlength:'至少输入100字符'}}" cols="" rows="3" id="content"></textarea>
+												</div>
+												<div class="booksCritique-button">
+													<input name="" type="submit" id="sub"
+														class="btn btn-success" value="提交" />
+												</div>
+											</div>
+										</form>
+
+										<div class="booksCritique-list" style="display: none;">
+											<h3>
+												用户评论
+											</h3>
+											<ul id="pinluninfo" class="booksCritique-info">
+
+											</ul>
+										</div>
+
+									</div>
+									<!-- 现刊签到信息 -->
+									<div class="tab-pane" id="divjournal" name="bookinfo">
+										<ul id="tree" class="filetree">
+										</ul>
+									</div>
+
+									<!-- 相关借阅 -->
+									<div class="tab-pane" id="divlend" name="bookinfo">
+
+									</div>
+									<!-- 图书借阅量年度统计 -->
+									<div class="tab-pane" id="divlendTrend" name="bookinfo">
+										<div class="jp-booksStatistics">
+											<div id="container"></div>
+										</div>
+									</div>
+
+									<!-- 您可能感兴趣的图书 -->
+									</div>
+							</div>
+
+
+
+						</div>
+					</div>
+
+					<div class="jp-mainRight">
+						<div class="jp-content">
+											<h3>
+												借阅关系图
+											</h3>
+											<div class="jp-booksDiagram">
+												<a href="/opac/swf/relation_graph.html?id=408821"
+													target="_blank"><img
+														src="/styles/opac/images/visual.png"
+														alt="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》借阅关系图,点击查看详情"
+														title="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》借阅关系图,点击查看详情" />
+												</a>
+											</div>
+										</div>
+									<div class="jp-content margin-top">
+							<h3>
+								分享到
+							</h3>
+							<div class="jp-shareCustom bshare-custom">
+								<a class="bshare-douban" title="分享到豆瓣"
+									href="javascript:void(0);">豆瓣</a>
+								<a class="bshare-sinaminiblog" title="分享到新浪微博"
+									href="javascript:void(0);">新浪微博</a>
+								<a class="bshare-qqmb" title="分享到腾讯微博"
+									href="javascript:void(0);">腾讯微博</a>
+								<a class="bshare-renren" title="分享到人人网"
+									href="javascript:void(0);">人人网</a>
+								<a class="bshare-kaixin001" title="分享到开心网"
+									href="javascript:void(0);">开心网</a>
+								<a class="bshare-qqim" title="分享到QQ好友"
+									href="javascript:void(0);">QQ好友</a>
+								<a class="bshare-maikunote" title="分享到麦库记事"
+									href="javascript:void(0);">麦库</a>
+								<a class="bshare-tianya" title="分享到天涯"
+									href="javascript:void(0);">天涯</a>
+							</div>
+						</div>
+
+						<div class="jp-content margin-top">
+							<h3>
+								相关资源
+							</h3>
+							<ul class="jp-aboutResources" id="aboutResources">
+								<li>
+									<a href="http://www.douban.com/search?q=%E5%8D%A1%E5%BE%B7%E5%B0%94%E6%97%A5%E8%AE%B0%3A%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%86%9C%E6%B0%91%E5%8D%A1%E5%BE%B7%E5%B0%94%C2%B7%E5%B7%B4%E5%85%8B%E7%9A%84%E2%80%9C%E8%A7%A3%E6%94%BE%E5%86%9B%E7%88%B1%E6%B0%91%E6%97%A5%E8%AE%B0%E2%80%9D"
+										target="_blank">豆瓣相关资源</a>
+								</li>
+								<!-- <li><a href="http://worldcat.org/search?q=" target="_blank">WorldCat相关资源</a></li> -->
+								<li>
+									<a href="http://www.google.com.hk/search?q=%E5%8D%A1%E5%BE%B7%E5%B0%94%E6%97%A5%E8%AE%B0%3A%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%86%9C%E6%B0%91%E5%8D%A1%E5%BE%B7%E5%B0%94%C2%B7%E5%B7%B4%E5%85%8B%E7%9A%84%E2%80%9C%E8%A7%A3%E6%94%BE%E5%86%9B%E7%88%B1%E6%B0%91%E6%97%A5%E8%AE%B0%E2%80%9D"
+										target="_blank">google相关资源</a>
+								</li>
+								<li>
+									<a href="http://search.cnki.net/search.aspx?q=%E5%8D%A1%E5%BE%B7%E5%B0%94%E6%97%A5%E8%AE%B0%3A%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E6%97%8F%E5%86%9C%E6%B0%91%E5%8D%A1%E5%BE%B7%E5%B0%94%C2%B7%E5%B7%B4%E5%85%8B%E7%9A%84%E2%80%9C%E8%A7%A3%E6%94%BE%E5%86%9B%E7%88%B1%E6%B0%91%E6%97%A5%E8%AE%B0%E2%80%9D"
+										target="_blank">CNKI学术搜索</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="jp-content margin-top">
+							<h3>
+								二维码
+							</h3>
+							<div class="jp-viewQRCode">
+								<img width="200" height="200" id="imgQR"
+									alt="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》二维码" title="《卡德尔日记:新疆维吾尔族农民卡德尔·巴克的“解放军爱民日记”》二维码" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+</div>  
+  <!--bottom-->
+  <div class="bottom">
+  <div class="b_text clearfix">
+  <a target="_blank" href="http://zx.library.hn.cn">湖南省图书馆联合在线咨询</a>
+    <span>|</span><a target="_blank" href="http://www.hnadl.cn">湖南省高校数字图书馆</a>
+    <span>|</span><a target="_blank" href="http://www.hun.calis.edu.cn:8090/">CALIS湖南省文献信息服务中心</a>
+    <span>|</span><a target="_blank" href="http://cadal.edu.cn/index/home">CADAL</a>
+    <span>|</span><a target="_blank" href="http://fuwu.hunnu.edu.cn/">阳光服务平台</a>
+    <span>|</span><a target="_blank" href="http://news.hunnu.edu.cn/">师大新闻网</a>
+    </div>
+  <div class="d_text">© 2005-2013 湖南师范大学图书馆<a href="http://lib.hunnu.edu.cn">(lib.hunnu.edu.cn)</a>版权所有   湘ICP备14009182号-2    <a href="/admin/login" target="_blank">后台管理</a><br />
+    地址:湖南省长沙市麓山路36号　Email:lib@hunnu.edu.cn　制作维护:图书馆系统部   <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253711543'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1253711543' type='text/javascript'%3E%3C/script%3E"));</script>
+</div></div>
+<script type="text/javascript">
+$(document).ready(function (){
+try{
+	//显示当前位置
+	var opac_current_span =  $("#current_nav").html();
+	
+	if(opac_current_span != null && opac_current_span !=""){
+		$("#current_nav2").html(opac_current_span);
+	}
+	
+	}catch(e){
+		$("current_nav2").html("");
+	}
+});
+</script>
+</body>
+</html>

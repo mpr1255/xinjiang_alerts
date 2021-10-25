@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>云南新增2例本土无症状感染者_正北方网</title>
+    <meta name="keywords" content="病例 医学观察 感染者 确诊 无症状"/>
+    <meta name="description" content="云南新增2例本土无症状感染者"/>
+    <script>
+    var isPC = function (){
+        var userAgentInfo = navigator.userAgent.toLowerCase();
+        var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+    var pcUlr = "http://www.northnews.cn";
+    var mobleUlr = "http://m.northnews.cn";// Jade
+    if(isPC()&&window.location.href.indexOf(mobleUlr)!=-1){
+        window.location.href = pcUlr+GetUrlRelativePath()
+    }else if(!isPC()&&window.location.href.indexOf(pcUlr)!=-1){
+        window.location.href = mobleUlr+GetUrlRelativePath()
+    }
+    function GetUrlRelativePath(){
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+</script>    <link rel="stylesheet" href="http://res.northnews.cn/assets/fonts/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/site.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/index.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css_2019/2016content.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/blue.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/assets/lib/dialog/style.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/article_picture.css"/>
+    <link rel="stylesheet" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/article_hang.css"/>
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://m.northnews.cn/p/2039698.html">
+    <script type="text/javascript" src="http://res.northnews.cn/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/article_hang.js"></script>
+    <!--[if IE]>
+    <script>
+        (function() {
+            if (!
+                    /*@cc_on!@*/
+                    0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <![endif]-->
+    <link rel="shortcut icon" href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css_2019/images/favicon2.ico" />
+</head>
+<body class="body-article">
+
+<script type="text/javascript" src="http://res.northnews.cn/assets/js/sensitive.js"></script>
+<script type="text/javascript" src="http://res.northnews.cn/assets/lib/jquery.xcConfirm/js/xcConfirm.js"></script>
+<link rel="stylesheet" type="text/css" href="http://res.northnews.cn/assets/lib/jquery.xcConfirm/css/xcConfirm.css"/>
+<header class="header">
+    <div class="column" style="height:105px;">
+        <h1 class="logo">
+            <a href="http://www.northnews.cn" title="正北方网" class="ie6_png32">
+                                <img src="http://img.northnews.cn/a/10001/201907/2fa7a7a900723ed5061a89dea2af9ab8.png?201806201523" />
+                            </a>
+        </h1>
+        <div class="icon">
+            <ul>
+                <li class="k01"><a href="http://www.northnews.cn/download/app/index.html" target="_blank">客户端</a></li>
+                <li class="k02"><a href="http://m.northnews.cn/" target="_blank">手机正北方</a></li>
+                <li class="k03"><a href="http://www.northnews.cn/about/tougao.html" target="_blank">投稿</a></li>
+            </ul>
+        </div>
+        <div class="today" id="localtime"></div>
+                        <script type="text/javascript">
+                            function showLocale(objD)
+                            {
+                                var str,colorhead,colorfoot;
+                                var yy = objD.getYear();
+                                if(yy<1900) yy = yy+1900;
+                                var MM = objD.getMonth()+1;
+                                if(MM<10) MM = '0' + MM;
+                                var dd = objD.getDate();
+                                if(dd<10) dd = '0' + dd;
+                                var hh = objD.getHours();
+                                if(hh<10) hh = '0' + hh;
+                                var mm = objD.getMinutes();
+                                if(mm<10) mm = '0' + mm;
+                                var ss = objD.getSeconds();
+                                if(ss<10) ss = '0' + ss;
+                                var ww = objD.getDay();
+                                if  ( ww==0 )  colorhead="<font color=\"#676767\">";
+                                if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#676767\">";
+                                if  ( ww==6 )  colorhead="<font color=\"#676767\">";
+                                if  (ww==0)  ww="星期日";
+                                if  (ww==1)  ww="星期一";
+                                if  (ww==2)  ww="星期二";
+                                if  (ww==3)  ww="星期三";
+                                if  (ww==4)  ww="星期四";
+                                if  (ww==5)  ww="星期五";
+                                if  (ww==6)  ww="星期六";
+                                colorfoot="</font>"
+                                str = colorhead + yy + "年" + MM + "月" + dd + "日&nbsp;&nbsp;" + ww + colorfoot;
+                                return(str);
+                            }
+                            function tick()
+                            {
+                                var today;
+                                today = new Date();
+                                document.getElementById("localtime").innerHTML = showLocale(today);
+                                window.setTimeout("tick()", 1000);
+                            }
+                            tick();
+                            </script>
+            <div class="search">
+<style>
+    #wd {
+        height: 35px;
+        width: 234px;
+        border: 1px solid #DDDDDD;
+        border-right: none;
+        border-radius: 3px 0px 0px 3px;
+        font-size: 14px;
+        text-indent: 10px;
+        float: left;
+    }
+    #search-btn {
+        cursor: pointer;
+        width: 45px;
+        height: 37px;
+        background-image: url('http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets//css/images/sBtn.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        float: left;
+        background-size: 16px 16px;
+        border: 1px solid #1e71b7;
+        background-color: #1e71b7;
+        border-radius: 0px 3px 3px 0px;
+    }
+</style>
+<form action="/s" name="search" method="get" style="margin-top:5px;">
+    
+    <input type="text" name="wd" id="wd" value="" autocomplete="on" placeholder="请输入关键字"/>
+    <button type="submit" id="search-btn"> </button>
+</form>
+<div style="clear: both;margin-bottom: 25px;"></div>            </div>
+    </div>   
+    <div class="navm">
+        <ul>
+            <li class="nav-one"><a href="http://www.northnews.cn/" target="_blank">首页</a></li>
+            <li><a href="http://www.northnews.cn/news.html" target="_blank">新闻</a></li>
+            <li><a href="http://www.northnews.cn/news/nmgnews/index.html" target="_blank">内蒙古</a></li>
+            <li><a href="http://www.northnews.cn/news/guonei/index.html" target="_blank">国内</a></li>
+            <li><a href="http://www.northnews.cn/news/guoji/index.html" target="_blank">国际</a></li>
+            <li><a href="http://www.northnews.cn/tourist/index.html" target="_blank">旅游</a></li>
+            <li><a href="http://www.northnews.cn/cywh/index.html" target="_blank">文化</a></li>
+            <li><a href="http://www.northnews.cn/photo.html" target="_blank">读图</a></li>
+            <li><a href="http://www.northnews.cn/news/jiaoyu/index.html" target="_blank">教育</a></li>
+            <li><a href="http://www.northnews.cn/news/shzx/index.html" target="_blank">生活</a></li>
+            <li><a href="http://www.northnews.cn/video/index.html" target="_blank">网视</a></li>
+            <li><a href="http://www.northnews.cn/finance/index.html" target="_blank">财经</a></li>
+            <li><a href="http://auto.northnews.cn/" target="_blank">汽车</a></li>
+            <li><a href="http://www.northnews.cn/news/sports/index.html" target="_blank">体育</a></li>
+            <li><a href="http://www.northnews.cn/news/yule/index.html" target="_blank">娱乐</a></li>
+            <li><a href="http://www.northnews.cn/news/clcpinlun/index.html" target="_blank">敕勒川评论</a></li>
+            <li><a href="http://www.northnews.cn/news/msnews/index.html" target="_blank">盟市新闻</a></li>
+            <li><a href="http://www.northnews.cn/news/rdzt/index.html" target="_blank">专题</a></li>
+            <li><a href="http://www.northnews.cn/news/lzp/index.html" target="_blank">老照片</a></li>
+        </ul>
+    </div>
+    <input type="hidden" name="alias" value = "" id="alias"/>
+</header>
+<!--AD-内容页-头部横通--><!--位置-->
+<div class="senav">
+    <div class="wp">
+        <p><a href="/">首页</a>
+           > <a href="http://www.northnews.cn/news/guonei/shehui/index.html">社会</a>
+ 
+           > 正文</p>
+    </div>
+</div>
+<!--位置-->
+<div class="column article mar-t-25 pos-r ov_v">
+    <div class="left-cont">
+        <!-- 文章主体 -->
+        <article class="article-main">
+            <h1 class="article-title">云南新增2例本土无症状感染者</h1>
+            <div class="article-infos">
+                                <time class="date">2021-10-24 10:29:45</time>
+                                <span class="source">
+                    <a href="javascript:;" target="_blank">央视新闻客户端</a>
+                </span>
+                                <span class="comment-box"><a href="#comment"><em></em></a></span>
+                <a href="#SOHUCS" class="comment-count"><span id="sourceId::2039698" class="cy_cmt_count">0</span></a>
+            </div>
+            <div class="article-content">
+                <p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">据云南省卫健委官方微信消息，10月23日0—24时，云南全省新增确诊病例1例，为境外输入确诊病例(老挝输入)。当日新增治愈出院病例16例，解除医学观察的密切接触者16例。</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">境外输入现有确诊病例123例。累计确诊病例1162例，累计治愈出院病例1039例，无死亡病例。</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">截至10月23日24时，云南全省现有确诊病例125例，累计治愈出院病例1431例，累计死亡病例2例，累计报告确诊病例1558例。累计追踪到密切接触者29419人，尚在医学观察的密切接触者541人。</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">云南全省新增无症状感染者7例，其中本土无症状感染者2例(陇川县在集中隔离管理密接人员核酸检测中发现)、境外输入无症状感染者5例(瑞丽市)；10例解除医学观察；尚在医学观察的无症状感染者63例(境外输入43例)。</p>
+                                <p style="text-align: right;"><span class="author">[责任编辑：宝华]</span></p>
+                            </div>
+            
+            <div class="article">
+                <!-- 文章投票挂件 -->
+                <!--投票-->
+<!--关联投票链接-->
+<!--关联专题链接-->
+<!--关联活动报名链接-->
+<!--关联视频链接-->
+            </div>
+        </article>
+
+        <!-- 文章附件 -->
+        
+        <!-- 分享 -->
+        <!--无外网则隐藏-云设置可设置-->
+<div class="sharebox" data-contentid="2039698">
+    <div class="f-l ">
+        <a href="javascript:digg.set('2039698', 'support');" class="digg" id="support"><i class="digg-icon"></i>点赞 0</a>
+                <a href="javascript:longWeibo('2039698');" class="weibo">发长微博</a>
+            </div>
+    <div class="f-r baidu">
+        <div class="bdsharebuttonbox">
+            <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+            <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+            <a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a>
+            <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+            <a href="#" class="bds_more" data-cmd="more"></a></div>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];if($){
+            $('.bdsharebuttonbox').on('click','[data-cmd]',function () {
+                var aid,sid,cid,suffix,url;
+                aid = shareVariable.aid;
+                sid = shareVariable.sid;
+                cid = shareVariable.cid;
+                suffix = shareVariable.suffix;
+                $.getJSON('http://tj'+suffix+'/tj.gif?action=share&type=pc&cid='+cid+'&sid='+sid+'&aid='+aid);
+
+            });
+        }</script>
+    </div>
+</div>
+<div class="hr-10"></div>
+
+        <!-- 相关阅读 -->
+        <!--相关阅读-->
+<div class="relatedread panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">相关阅读</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+                <li>
+            <a  href="http://www.northnews.cn/news/2020/0717/1879679.html" target="_blank" title="新疆新增新冠肺炎确诊病例5例 无症状感染者8例">新疆新增新冠肺炎确诊病例5例 无症状感染者8例</a>
+        </li>
+                <li>
+            <a  href="http://www.northnews.cn/news/2020/0617/1866696.html" target="_blank" title="河北新增1例新冠肺炎确诊病例 系无症状感染者转确诊">河北新增1例新冠肺炎确诊病例 系无症状感染者转确诊</a>
+        </li>
+                <li>
+            <a  href="http://www.northnews.cn/news/2021/0105/1953708.html" target="_blank" title="河北新增14例本土确诊病例、30例无症状感染者">河北新增14例本土确诊病例、30例无症状感染者</a>
+        </li>
+                <li>
+            <a  href="http://www.northnews.cn/news/2021/0525/1998303.html" target="_blank" title="六安市24日新增2例确诊病例，1例无症状感染者">六安市24日新增2例确诊病例，1例无症状感染者</a>
+        </li>
+                <li>
+            <a  href="http://www.northnews.cn/news/2020/0908/1900184.html" target="_blank" title="新疆新冠肺炎确诊病例、无症状感染者全部清零">新疆新冠肺炎确诊病例、无症状感染者全部清零</a>
+        </li>
+            </ul>
+  </div>
+</div>
+<script>
+    $(".relatedread.panel li a").each(function(){
+        var title= $(this).text();
+        if(title.length> 86){
+            $(this).text(title.substring(0,85)+"...");
+        }
+    })
+</script>
+
+        <!-- 评论 -->
+        <!--无外网则隐藏-云设置可设置-->
+
+                <!--AD-->
+                <!--版权声明-->
+        <div class="shengming sm_article">
+            <h3>版权声明</h3>
+            <p>一、凡注明来源为"正北方网"、"北方新报"、"内蒙古日报社"、"内蒙古日报社融媒体原创"的所有文字、图片、音视频、美术设计和程序等作品，版权均属内蒙古正北方网或相关权利人专属所有或持有所有。 未经本网书面授权，不得进行一切形式的下载、转载或建立镜像。否则以侵权论，依法追究相关法律责任。</p>
+            <p>二、凡本网注明"来源：XXX（非正北方网）"的作品，均转载自其它媒体，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。</p>
+            <p>三、转载声明：本网转载稿件有些作者不明，请相关版权单位或个人持有效证明速与本网联系，以便发放稿费。</p>
+            <p>正北方网联系方式：电话：0471-6651113 | E-mail：northnews@126.com</p>
+        </div>        <!—# 今日内蒙古 #—>
+        <!-- 图片内容页左栏今日内蒙古 -->
+<div class="todaynmg nmg_article">
+    <div class="tdtit">今日内蒙古</div>
+    <ul>
+                <li><a href="http://www.northnews.cn/news/2021/1012/2036470.html" target="_blank"><img src="http://img.northnews.cn/a/thumb/10001/202110/76a9103b52e529f97ccafa7269184f4f.jpg!w240_h180.jpg" alt="90后女法官任红霞：小小的个子，大大的能量！" title="90后女法官任红霞：小小的个子，大大的能量！"></a><p><a href="http://www.northnews.cn/news/2021/1012/2036470.html" title="90后女法官任红霞：小小的个子，大大的能量！" target="_blank">90后女法官任红霞：小小的个子，大大的能量！</a></p></li>
+                <li><a href="http://www.northnews.cn/news/2021/1017/2037871.html" target="_blank"><img src="http://img.northnews.cn/a/thumb/10001/202110/ccfaef7d6f99b48edd3d7df19250a1f8.jpeg!w240_h180.jpeg" alt="小西瓜熟了" title="小西瓜熟了"></a><p><a href="http://www.northnews.cn/news/2021/1017/2037871.html" title="小西瓜熟了" target="_blank">小西瓜熟了</a></p></li>
+                <li><a href="http://www.northnews.cn/news/2021/1017/2037908.html" target="_blank"><img src="http://img.northnews.cn/a/thumb/10001/202110/7d535295b5cfd0df654a2a0cf5a78688.jpeg!w240_h180.jpeg" alt="青城公园的摩天轮拆了？官方回应：换新的，下月见！" title="青城公园的摩天轮拆了？官方回应：换新的，下月见！"></a><p><a href="http://www.northnews.cn/news/2021/1017/2037908.html" title="青城公园的摩天轮拆了？官方回应：换新的，下月见！" target="_blank">青城公园的摩天轮拆了？官方回应：换新的，下月见！</a></p></li>
+                <li><a href="http://www.northnews.cn/news/2021/1013/2036646.html" target="_blank"><img src="http://img.northnews.cn/a/thumb/10001/202110/fe3e5777c364e2c8389a240e1c02506d.jpeg!w240_h180.jpeg" alt="时装大秀 霓裳炫彩" title="时装大秀 霓裳炫彩"></a><p><a href="http://www.northnews.cn/news/2021/1013/2036646.html" title="时装大秀 霓裳炫彩" target="_blank">时装大秀 霓裳炫彩</a></p></li>
+            </ul>
+</div>    </div>
+    <!-- 右侧主体 -->
+    <aside class="right-cont">
+        <!-- 微信/客户端二维码/关注 -->
+<!-- 侧边栏微信二维码与客户端二维码块 -->
+<div class="weixin">
+    <div class="top">
+                <p class="tit">关注我们</p>
+        <ul class="ico-list">
+                        <li><a href="https://weibo.com/northnews" target="_blank"><img src="http://res.northnews.cn/assets/images/ico/sina.png?201806201523" alt="新浪" width="24" height="24" title="新浪" class="ie6_png32"></a></li>
+                    </ul>
+                <ul class="ico-list" style="float:right;">
+            <li><a href="http://m.northnews.cn/wap/app/clienttype?type=ios&platform=pc" target="_blank"><img src="http://res.northnews.cn/assets/css/images/ico/ios.png" alt="iPhone版下载" width="24" height="24" title="iPhone版下载" class="ie6_png32"></a></li>
+            <li><a href="http://m.northnews.cn/wap/app/clienttype?type=android" target="_blank"><img src="http://res.northnews.cn/assets/css/images/ico/android.png" alt="Android版下载" width="24" height="24" title="Android版下载" class="ie6_png32"></a></li>
+        </ul>
+            </div>
+    <div class="qrcode">
+                <div class="left f-l mar-r-36">
+            <img src="http://img.northnews.cn/a/10001/201907/dab700c683d7ead4f64400590ed0074d.png?201806201523" alt="正北方网" width="120" height="120" title="正北方网">
+            <p>微信公众号</p>
+        </div>
+                <div class="right f-l">
+                        <div class="qrcode-outter app-2code" style="position: relative">
+                <div qrcode="http://m.northnews.cn/wap/app/client" width="108" height="108" title="正北方网">
+                </div>
+            </div>
+            <p>手机客户端</p>
+                    </div>
+    </div>
+</div>
+<div class="clear"></div>
+<style>
+    .app-2code:before{
+        content: " ";
+        background: url("") no-repeat;
+        background-size: 30px 30px;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -13px;
+        margin-top: -13px;
+        border-radius: 3px;
+    }
+</style>
+
+<!-- 广告位 -->
+<!-- 侧边栏广告块 -->
+
+<!-- 推荐文章列表 -->
+<!-- 侧边栏推荐文章列表块 -->
+<section class="rmwz ov">
+    <div class="mod-title1">
+        <h2>推荐文章</h2>
+    </div>
+    <div class="ov">
+        <ul class="pic-list">
+                        <li class="pic-img">
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/snsm/2021/1022/2039314.html" title="盐碱地要变身“致富田”啦！" target="_blank">
+                        <img width="280" height="168" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/3ae857206b3ec697396e2f699fdb5de3.jpeg!w280_h168.jpeg" alt="盐碱地要变身“致富田”啦！" title="盐碱地要变身“致富田”啦！"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/snsm/2021/1022/2039314.html" title="盐碱地要变身“致富田”啦！" target="_blank">盐碱地要变身“致富田”啦！</a></p>
+                </div>
+            </li>
+                        <li class="pic-img">
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/snsm/2021/1022/2039302.html" title="梧桐招来金凤凰，“明安黄芪”打出靓丽新名片" target="_blank">
+                        <img width="280" height="168" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/c0acc77d69fce7c5810c511fc2fc4d89.jpeg!w280_h168.jpeg" alt="梧桐招来金凤凰，“明安黄芪”打出靓丽新名片" title="梧桐招来金凤凰，“明安黄芪”打出靓丽新名片"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/snsm/2021/1022/2039302.html" title="梧桐招来金凤凰，“明安黄芪”打出靓丽新名片" target="_blank">梧桐招来金凤凰，“明安黄芪”打出靓丽新名片</a></p>
+                </div>
+            </li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/snsm/2021/1022/2039294.html" title="冬日送暖，共话“乡村振兴”" target="_blank">冬日送暖，共话“乡村振兴”</a></li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/news/2021/1022/2039268.html" title="《柳叶刀》报告：气候变化造成的死亡人数会远超新冠" target="_blank">《柳叶刀》报告：气候变化造成的死亡人数会远超新冠</a></li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/news/2021/1022/2039262.html" title="珍禽彩鹮现身甘肃张掖黑河湿地" target="_blank">珍禽彩鹮现身甘肃张掖黑河湿地</a></li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/snsm/2021/1022/2039229.html" title="2021年中组部 农业农村部农村实用人才带头人和到村任职 " target="_blank">2021年中组部 农业农村部农村实用人才带头人和到村任职 </a></li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/snsm/2021/1022/2039227.html" title="内蒙古超8000万亩粮食颗粒归仓" target="_blank">内蒙古超8000万亩粮食颗粒归仓</a></li>
+                        <li class="pic-txt"><a href="http://www.northnews.cn/news/2021/1022/2039189.html" title="东胜区第十二小学形式多样开展少先队建队日活动  " target="_blank">东胜区第十二小学形式多样开展少先队建队日活动  </a></li>
+                    </ul>
+    </div>
+</section><!--AD-文章页-R1PIC-->
+<div class="rmwz ov mar-t-20">
+    </div><!-- 热门文章列表 -->
+<!-- 侧边栏热门文章列表块 -->
+<section class="rmwz ov mar-t-20">
+    <div class="mod-title1">
+        <h2>热门文章</h2>
+    </div>
+    <div class="ov">
+        <ul class="pic-list">
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1019/2038531.html" title="新买的奔驰车屡屡打不着火 刘女士质疑车辆有质量问题" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/818e3b2bd99bef1f9e18bb391a3ff86f.jpeg!w80_h60.jpeg" alt="新买的奔驰车屡屡打不着火 刘女士质疑车辆有质量问题" title="新买的奔驰车屡屡打不着火 刘女士质疑车辆有质量问题"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1019/2038531.html" title="新买的奔驰车屡屡打不着火 刘女士质疑车辆有质量问题" target="_blank">新买的奔驰车屡屡打不着火 刘女士质疑车辆有质量问题</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1017/2037908.html" title="青城公园的摩天轮拆了？官方回应：换新的，下月见！" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/7d535295b5cfd0df654a2a0cf5a78688.jpeg!w80_h60.jpeg" alt="青城公园的摩天轮拆了？官方回应：换新的，下月见！" title="青城公园的摩天轮拆了？官方回应：换新的，下月见！"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1017/2037908.html" title="青城公园的摩天轮拆了？官方回应：换新的，下月见！" target="_blank">青城公园的摩天轮拆了？官方回应：换新的，下月见！</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1020/2038810.html" title="新冠疫苗加强针来了！北京启动加强免疫接种工作" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/acf8f6ce3ed3b7f15c6d57770a2e83b2.jpeg!w80_h60.jpeg" alt="新冠疫苗加强针来了！北京启动加强免疫接种工作" title="新冠疫苗加强针来了！北京启动加强免疫接种工作"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1020/2038810.html" title="新冠疫苗加强针来了！北京启动加强免疫接种工作" target="_blank">新冠疫苗加强针来了！北京启动加强免疫接种工作</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1019/2038451.html" title="有哈雷彗星“血统”的流星雨要光临地球啦！" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/77d1894ac95c549e6568a589054f7794.jpeg!w80_h60.jpeg" alt="有哈雷彗星“血统”的流星雨要光临地球啦！" title="有哈雷彗星“血统”的流星雨要光临地球啦！"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1019/2038451.html" title="有哈雷彗星“血统”的流星雨要光临地球啦！" target="_blank">有哈雷彗星“血统”的流星雨要光临地球啦！</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1019/2038315.html" title="美国首位黑人国务卿鲍威尔因新冠并发症去世" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/4a2367ad4d4181186a9632152f24f0d5.jpeg!w80_h60.jpeg" alt="美国首位黑人国务卿鲍威尔因新冠并发症去世" title="美国首位黑人国务卿鲍威尔因新冠并发症去世"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1019/2038315.html" title="美国首位黑人国务卿鲍威尔因新冠并发症去世" target="_blank">美国首位黑人国务卿鲍威尔因新冠并发症去世</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1020/2038655.html" title="耗时8小时和6艘船！加拿大一女子将新家“连根拔起”送往海对岸" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/4183a2c31d0598e903533a1271ade5cb.jpeg!w80_h60.jpeg" alt="耗时8小时和6艘船！加拿大一女子将新家“连根拔起”送往海对岸" title="耗时8小时和6艘船！加拿大一女子将新家“连根拔起”送往海对岸"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1020/2038655.html" title="耗时8小时和6艘船！加拿大一女子将新家“连根拔起”送往海对岸" target="_blank">耗时8小时和6艘船！加拿大一女子将新家“连根拔起”送往海对岸</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1017/2037828.html" title="全国电影总票房超400亿元 国产片33部票房过亿" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/d5deacee34882601aa789dc199e0718b.jpeg!w80_h60.jpeg" alt="全国电影总票房超400亿元 国产片33部票房过亿" title="全国电影总票房超400亿元 国产片33部票房过亿"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1017/2037828.html" title="全国电影总票房超400亿元 国产片33部票房过亿" target="_blank">全国电影总票房超400亿元 国产片33部票房过亿</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1018/2038119.html" title="时隔38年回归，《天书奇谭》这一幕让网友泪奔" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/648d8a166bf3ce7f316898aeb19b0c4d.jpeg!w80_h60.jpeg" alt="时隔38年回归，《天书奇谭》这一幕让网友泪奔" title="时隔38年回归，《天书奇谭》这一幕让网友泪奔"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1018/2038119.html" title="时隔38年回归，《天书奇谭》这一幕让网友泪奔" target="_blank">时隔38年回归，《天书奇谭》这一幕让网友泪奔</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1018/2038088.html" title="汤姆斯杯：中国队获得亚军" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/4fee2b7a46db7337b9bec4acb41ed3ff.jpeg!w80_h60.jpeg" alt="汤姆斯杯：中国队获得亚军" title="汤姆斯杯：中国队获得亚军"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1018/2038088.html" title="汤姆斯杯：中国队获得亚军" target="_blank">汤姆斯杯：中国队获得亚军</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="http://www.northnews.cn/news/2021/1018/2038245.html" title="北京冬奥会火种在希腊成功点燃" target="_blank">
+                        <img width="80" height="60" class="img" src="http://img.northnews.cn/a/thumb/10001/202110/ddf5b3d3022ee949e2f44441d1005ce0.jpeg!w80_h60.jpeg" alt="北京冬奥会火种在希腊成功点燃" title="北京冬奥会火种在希腊成功点燃"></a>
+                    <p class="summary"><a href="http://www.northnews.cn/news/2021/1018/2038245.html" title="北京冬奥会火种在希腊成功点燃" target="_blank">北京冬奥会火种在希腊成功点燃</a></p>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</section><!--AD-文章页-R2PIC-->
+<div class="rmwz ov mar-t-20">
+    </div>    </aside>
+</div>
+<div class="hr-10"></div>
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="column m-footer">
+        <p><a href="http://www.northnews.cn/about/index.html#northnews" target="_blank">网站介绍</a> | <a href="http://www.northnews.cn/about/index.html#sponsor" target="_blank">广告刊例</a> | <a href="http://www.northnews.cn/about/index.html#contact" target="_blank">联系方式</a> | <a href="http://www.northnews.cn/about/index.html#falv" target="_blank">法律声明</a></p>
+        <p><span class="r_bor">版权声明：正北方网版权所有，未经授权， 请勿转载或建立镜像，违者依法必究。</span><span><a href="http://www.northnews.cn/about/index.html#bad-information" target="_blank">违法和不良信息举报电话：0471-6659753</a></span></p>
+        <p><span class="r_bor">正北方网新闻热线：0471-6651113</span><span class="r_bor">传真：0471-6635129</span><span class="r_bor">广告合作热线：0471-6635225</span><span>Email：northnews@126.com（欢迎投稿 适时监控）</span></p>
+        <p>
+        <span class="copyright">正北方网 版权所有 Copyright © 2004-2021 northnews.cn All Rights Reserved.</span>        <a href="http://beian.miit.gov.cn/" target="_blank" class="white"><span class="icp r_bor">蒙ICP备10000005号</span></a>
+        <span>互联网新闻信息服务许可证：<a href="http://www.northnews.cn/aboutguo" target="_blank">15120180001</a></span>
+        <!--<span class="powerby">授权信息</span>-->
+        </p>
+    </div>
+</footer>
+<!-- Cmstop pv 统计代码，勿删 -->
+<script type="text/javascript">
+    var shareVariable = {
+        sid: '10001',
+        aid: '1',
+        cid: '2039698',
+    };
+    window.TJ = 'http://tj.northnews.cn/tj.gif';
+    (function() {
+        var unique = (function () {
+            var time= (new Date()).getTime()+'-', i=0;
+            return function () {
+                return time + (i++);
+            }
+        })();
+
+        var imgLog = function (url) {
+            var data = window['imgLogData'] || (window['imgLogData'] = {});
+            var img = new Image();
+            var uid = unique();
+            img.onload = img.onerror = function () {//销毁一些对象
+                img.onload = img.onerror = null;
+                img = null;
+                delete data[uid];
+            };
+            img.src = url + '&_uid=' + uid;
+        };
+        var src = window.TJ + '?sid=' + shareVariable.sid + '&cid=' + shareVariable.cid + '&aid=' + shareVariable.aid + '&url='+location.href;
+        imgLog(src);
+    })();
+</script>
+<!--中宣部大数据统计-->
+<script src="https://p.wts.xinwen.cn/dot-wts/spm.js"></script>
+<script>
+  if (window.spm) {
+    // 初始化配置
+    spm.config({
+	  protocol:'i',//可选项,url不添加参数
+      siteId: 'zm1019-001', // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+      additionalInfo: {
+        targetID: '', // 此处填写稿件ID
+        organization: 'zm1019', // 此处填写机构ID
+        // 上报进入事件
+        category: 'event',
+        action: 'comeIn'
+      }
+    });
+  }
+  window.onbeforeunload = function () {
+    // 上报离开事件
+    spm.push({ category: 'event', action: 'leave' });
+  };
+</script>
+
+<script id="longweibo-template" type="text/template">
+    <div class="lw-dialog">
+        <div class="lw-img-outter">
+            <div class="lw-img"><p><img class="loading" src="http://res.northnews.cn/assets/images/loading.gif"/></p></div>
+        </div>
+                <div class="lw-button-panel">
+            <a href="javascript:longWeiboSina('云南新增2例本土无症状感染者','2039698');" class="weibo"><div class="lw-sina-button f-fl f-csp"></div></a>
+            <a href="javascript:longWeiboTencent('云南新增2例本土无症状感染者');" class="weibo"><div class="lw-tencent-button f-fr f-csp"></div></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript" src="http://res.northnews.cn/assets/lib/jquery.corner/jquery.corner.js"></script>
+<script type="text/javascript" src="http://res.northnews.cn/assets/lib/qrcode/qrcode.min.js"></script>
+<link rel="stylesheet" href="http://res.northnews.cn/assets/lib/kdialog/style.css" />
+<script src="http://res.northnews.cn/assets/lib/kdialog/dialog.js"></script>
+<script type="text/javascript" src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/common.js"></script>
+<script type="text/javascript" src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/article.js"></script>
+<script src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/jplayer/jquery.jplayer.min.js"></script>
+<script src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/myAudio.js"></script>
+<script type="text/javascript" src="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/js/article_picture.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于新疆国瑞再生资源有限公司喀什分公司叶城县、巴楚县废旧铅酸蓄电池暂存点运营公告-喀什地区行政公署</title>
+<link href="/Skin/Gov/hr/public.css" rel="stylesheet" type="text/css" />
+<link href="/Skin/Gov/hr/news.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var siteSetup = {sitePath: '/',ajaxPath: '/ajax.aspx',skinPath: '/Skin/Gov/'};
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Skin/Gov/hr/js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var week,day,month,year,currenty,currentm
+function initArray(){
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+} 
+var LastModDate = new Date();
+var WeekArray = new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var MonthArray = new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+day = LastModDate.getDate() +"日";
+year = LastModDate.getFullYear() +"年";
+week = WeekArray[(LastModDate.getDay()+1)];
+month = MonthArray[(LastModDate.getMonth()+1)]; 
+currenty = LastModDate.getFullYear();
+currentm = LastModDate.getMonth()+1;
+function CurentTime(){
+var now = new Date();
+var hh = now.getHours();
+var mm = now.getMinutes();
+var ss = now.getTime() % 60000;
+ss = (ss - (ss % 1000)) / 1000;
+var clock = hh+':';
+if (mm < 10) clock += '0';
+clock += mm+':';
+if (ss < 10) clock += '0';
+clock += ss;
+return(clock); 
+} 
+
+function refreshCalendarClock(){
+document.getElementById("calendarClock").innerHTML = CurentTime(); 
+}
+</script>
+<div id="wrapIndex">
+<div class="header">
+  <div class="logo">
+    <!--<object type="application/x-shockwave-flash" data="/Skin/Gov/hr/banner.swf" width="1000" height="205">
+      <param name="movie" value="/Skin/Gov/hr/banner.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="6.0.65.0" />
+      <embed type="application/x-shockwave-flash" src="/Skin/Gov/hr/banner.swf" wmode="transparent" width="1000" height="205"> </embed>
+    </object>-->
+     <div class="topbar">
+      <div class="fr">
+ <a class="icon01" HREF="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.kashi.gov.cn');">设为首页</a> 
+<a class="icon02" HREF="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">加入收藏</a>
+ <!-- <a class="icon03" HREF="/Rss/Rss.aspx">RSS</a>  -->
+ <!-- <a class="icon04" HREF="/Category_0/Index.aspx">联系我们</a>  -->
+ </div>
+      <div class="fl">
+     <!-- <div class="topLogin"><img id="loginStatusSign2" src="/Skin/Gov/Images/loading.gif" alt="正在加载数据..." align="absmiddle" />
+      <ul id="loginField2" style="display:none;">
+      <li>用户名：<input id="username" name="username" type="text" maxlength="20" class="txt" /></li>
+      <li>密码：<input name="userpass" type="password" class="txt" /></li>
+      <li><input id="login2" type="image" value="" src="/Skin/Gov/hr/blue/images/logico.png" width="57" height="20"></li>
+      <li class="reg"><a href="/User/Register.aspx"></a></li>
+      </ul>
+      <ul id="loginedUserInfo2" class="loginedinfo" style="display: none">
+      <li>{username}，您好！您有：</li>
+      <li>待签文章：{signinArticle} 篇</li>
+      <li>登录次数：{loginCount} 次</li>
+      <li><a href="/User/Default.aspx">会员中心</a> | <a id="logout2" name="logout" href="javascript:void(0)">退出登录</a></li>
+      </ul>
+      </div>
+
+      <script type="text/javascript">
+      $(function() {      
+      var checkUserLogin2 = function() {
+      $.pe.ajax('checkUserLogin', { success: function(response) {
+      var _response = $(response);
+      if (_response.find('status').text() == 'ok') {
+      var _loginedUserInfo = $('#loginedUserInfo2');
+      _loginedUserInfo.html($.pe.replaceUserInfoVariable(_loginedUserInfo.html(), _response)).fadeIn();
+      $('#loginStatusSign2').hide();
+      $('#logout2').click(function() {
+      $.pe.ajax('logout', { success: function(response) {
+      if ($(response).find('status').text() == 'ok') {
+      $('#loginField2 input[name="username"]').val('');
+      $('#loginField2 input[name="userpass"]').val('');
+      $('#loginField2 input[name="validate"]').val('');
+      $('#loginField2 input[name="saveinfo"]').attr("checked", false);
+      location.reload();
+      }
+      }
+      });
+      })
+      } else {
+      $.pe.ajax('checkLoginValidate', { success: function(response) {
+      if ($(response).find('status').text() == 'yes') {
+      $('#validateSign2').click(function() { $.pe.refreshValidateCode('.validateSign'); });
+      $('#validateField2').show();
+      }
+      }
+      });
+      $('#validationCode2').focus(function(){$('#validateSign2').click();$('#validateSign2').show();})
+      $('#login2').click(function() {
+      var username = $('#loginField2 input[name="username"]');
+      var userpass = $('#loginField2 input[name="userpass"]');
+      var saveinfo = $('#loginField2 input[name="saveinfo"]');
+      var validate = $('#loginField2 input[name="validate"]');
+      
+      if (username.val() == '') {
+      alert('请填写用户名！');
+      username.focus();
+      return;
+      }
+      if (userpass.val() == '') {
+      alert('请填写密码！');
+      userpass.focus();
+      return;
+      }
+      
+      $.pe.ajax('userLogin', {
+      params: {
+      username: username.val(),
+      password: userpass.val(),
+      checkcode: validate.val(),
+      expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+      }, success: function(response) {
+      var _response = $(response)
+      switch (_response.find('status').text()) {
+      case "ok":
+      location.reload();
+      break;
+      case "err":
+      alert(_response.find('body').text());
+      $.pe.refreshValidateCode($('.validateSign'));
+      break;
+      }
+      }
+      })
+      })
+      $('#loginStatusSign2').hide();
+      $('#loginField2').fadeIn();
+      $('#loginField2').keypress(function(e) {
+      if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('#login2').click();
+      return false;
+      }
+      return true;
+      })
+      }
+      }
+      })
+      }
+      checkUserLogin2();
+      })
+      </script>-->
+</div>
+    </div>
+      <div id="banner">
+  <ul>
+  <li><img src="/Skin/Gov/hr/blue/images/top01.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top02.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top03.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top04.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top05.jpg" alt=""></li>
+  <li><img src="/Skin/Gov/hr/blue/images/top06.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script type="text/javascript">
+jQuery(".banner").slide({mainCell:"ul",autoPlay:"true",interTime:6000,delayTime:0}); 
+</script>
+  </div>
+  <div class="menu">
+  <div class="nav">
+    <div class="main_nav fl">
+      <ul class="fl">
+        <li id="n1" onmouseout="shownav()" onmousemove="shownav2(1)" onmouseover="shownav2(1)"><span class="top"><a href="/Default.aspx">网站首页</a></span><span class="bottom">Home</span></li>
+        <li id="n2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)"><span class="top"><a href="/Category_9/Index.aspx">走进喀什</a></span><span class="bottom">About Kashi</span></li>
+        <li id="n3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)" class="act"><script type="text/javascript" language="javascript">var currentId=3;</script><span class="top"><a href="/Category_1/Index.aspx">政务动态</a></span><span class="bottom">Govemment News</span></li>
+        <li id="n4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)"><span class="top"><a href="/Category_591/Index.aspx">政府信息公开</a></span><span class="bottom">Government information disclosure</span></li>
+        <li id="n5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)"><span class="top"><a href="/Category_14/Index.aspx">政民互动</a></span><span class="bottom">Interaction</span></li>
+        <li id="n6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)"><span class="top"><a href="http://zwfw.xinjiang.gov.cn/?area=653100">政务服务</a></span><span class="bottom">Government affairs services</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subnav" id="s1" style="display:none;">
+<div class="subnav">
+          <div class="search fr">
+            <input type="text" class="text" value="请输入搜索关键字" id="keyword" />
+            <input type="submit" class="submit" value="" id="Submit" onclick="OnSearchCheckAndSubmit();" />
+          </div>
+<script language="javascript" type="text/javascript">
+  function OnSearchCheckAndSubmit(){
+      var keyword = document.getElementById("keyword").value;
+      if (keyword == '' || keyword == null) {
+          alert("请填写您想搜索的关键词");
+          return;
+      }
+      else {
+      
+          window.location = "/search.aspx?searchtype=0&Keyword=" + escape(keyword);
+      }
+  }
+  </script>
+          <div class="date fl">今天是：
+            <script>document.write(year,month,day," ",week);</script>
+          </div>
+          <div class="wea fl">
+        <!--<iframe width="280" height="20" frameborder="0" allowTransparency="true" scrolling="no" marginheight="0" marginwidth="0" src=""http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=kashi&num=5"" name="weather_inc" ></iframe>-->
+        <!--<iframe width="300" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=10&icon=1&py=kashi"></iframe>-->
+          </div>
+        </div>
+</div>
+  <div class="subnav" style="display:none;" id="s2" onmouseout="shownav()" onmousemove="shownav2(2)" onmouseover="shownav2(2)">
+    <ul><li><a href="/Category_16/Index.aspx">喀什概况</a>|</li>
+<li><a href="/Category_122/Index.aspx">文化旅游</a>|</li>
+<li><a href="/Category_856/Index.aspx">瓜果特产</a>|</li>
+<li><a href="/Category_18/Index.aspx">统计年鉴</a></li></ul>
+  </div>
+  <div class="subnav" id="s3" onmouseout="shownav()" onmousemove="shownav2(3)" onmouseover="shownav2(3)">
+    <ul><li><a href="/Category_866/Index.aspx">中央要闻</a>|</li>
+<li><a href="/Category_867/Index.aspx">政务动态</a>|</li>
+<li><a href="/Category_868/Index.aspx">县市信息</a>|</li>
+<li><a href="/Category_869/Index.aspx">部门动态</a>|</li>
+<li><a href="/Category_873/Index.aspx">通知公告</a>|</li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s4" onmouseout="shownav()" onmousemove="shownav2(4)" onmouseover="shownav2(4)">
+    <ul><li><a href="/Government/PublicInfoList.aspx?ThemeId=2">政策</a>|</li>
+<li><a href="/Category_594/Index.aspx">依申请公开</a>|</li>
+<li><a href="/Category_129/Index.aspx">政府信息公开指南</a>|</li>
+<li><a href="/Category_592/Index.aspx">政府信息公开制度</a>|</li>
+<li><a href="http://www.kashi.gov.cn/Category_591/Index.aspx">法定主动公开内容</a>|</li>
+<li><a href="/Category_196/Index.aspx">政府信息公开年报</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s5" onmouseout="shownav()" onmousemove="shownav2(5)" onmouseover="shownav2(5)">
+    <ul><li><a href="/government/letter/letterlist.aspx?LetterTypeId=7">专员信箱</a>|</li>
+<li><a href="/Category_55/Index.aspx">网上调查</a>|</li>
+<li><a href="/Government/Interview/Index.aspx">在线访谈</a></li></ul>
+  </div>
+  <div class="subnav" style="display:none;" id="s6" onmouseout="shownav()" onmousemove="shownav2(6)" onmouseover="shownav2(6)">
+    <ul></ul>
+  </div>
+</div><script type="text/javascript" language="javascript">
+	var time;
+         
+        function shownav2(n){
+	  clearInterval(time);
+	  for (m = 1; m <= 6; m++) {
+            document.getElementById("s"+m).style.display="none";
+			document.getElementById("n"+m).className="";
+      }
+            document.getElementById("s"+n).style.display="block";
+			document.getElementById("n"+n).className="act";
+	 }
+    </script>
+</div>
+<div class="clear"></div>
+<div class="clear h10"></div>
+<div class="mainContent">
+
+  <div class="side fr" id="list">
+    <div class="side_nav">
+      <div class="tit">政务动态</div>
+      <div class="con">
+        <ul>
+<li><a href="/Category_866/Index.aspx">中央要闻</a></li>
+<li><a href="/Category_867/Index.aspx">政务动态</a></li>
+<li><a href="/Category_868/Index.aspx">县市信息</a></li>
+<li><a href="/Category_869/Index.aspx">部门动态</a></li>
+<li class="act"><a href="/Category_873/Index.aspx">通知公告</a></li>
+<li><a href="/Category_1054/Index.aspx">中央新疆工作会议</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear h10"></div>
+    <div class="hd">
+      <h3>点击排行</h3>
+    </div>
+    <div class="bd">
+      <ul class="hot">
+        
+            <li><a href="/Item/52117.aspx" target="_self" title="标题：2021年喀什地区面向社会公开招聘中小学和幼儿园教师公告&#xD;点击数：223002&#xD;发表时间：21年07月05日"><font style="color:#444444;">2021年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/50664.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员简章&#xD;点击数：65560&#xD;发表时间：21年01月13日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/51927.aspx" target="_self" title="标题：喀什地区面向社会人员开展普通话水平测试的公告&#xD;点击数：52918&#xD;发表时间：21年06月18日"><font style="color:#444444;">喀什地区面向社会人员开展普通…</font></a></li><li><a href="/Item/50795.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员资格初审结果公告&#xD;点击数：23261&#xD;发表时间：21年01月26日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/51176.aspx" target="_self" title="标题：关于开展喀什地区2020年面向社会公开招聘事业编制工作人员笔试考试的公告&#xD;点击数：14345&#xD;发表时间：21年03月09日"><font style="color:#444444;">关于开展喀什地区2020年面向社…</font></a></li><li><a href="/Item/50701.aspx" target="_self" title="标题：关于增加2020年喀什地区事业单位面向社会公开招聘工作人员岗位的公告&#xD;点击数：11493&#xD;发表时间：21年01月15日"><font style="color:#444444;">关于增加2020年喀什地区事业单…</font></a></li><li><a href="/Item/52412.aspx" target="_self" title="标题：2021年喀什地区盖孜库山河流域管理处面向社会公开招聘自收自支事业单位工作人员简章&#xD;点击数：9908&#xD;发表时间：21年08月02日"><font style="color:#444444;">2021年喀什地区盖孜库山河流域…</font></a></li><li><a href="/Item/51367.aspx" target="_self" title="标题：2021年喀什地区工人文化宫面向社会公开招聘工作简章&#xD;点击数：9152&#xD;发表时间：21年04月13日"><font style="color:#444444;">2021年喀什地区工人文化宫面向…</font></a></li><li><a href="/Item/50968.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员面试成绩及入闱体检人员公告&#xD;点击数：8372&#xD;发表时间：21年02月09日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li><li><a href="/Item/50891.aspx" target="_self" title="标题：2020年喀什地区面向社会公开招聘事业单位工作人员面试公告&#xD;点击数：7937&#xD;发表时间：21年02月02日"><font style="color:#444444;">2020年喀什地区面向社会公开招…</font></a></li>
+          
+ </ul>
+    </div>
+<!--<div class="clear h10"></div>
+    <div class="hd"> <a href="/Category_0/Index.aspx" class="fr">更多>></a>
+      <h3>热点专题</h3>
+    </div>
+    <div class="bd">
+             <ul class="special">
+
+</ul>
+        </div>-->
+  </div>
+  <div class="list_wrap fl">
+    <div class="art">
+      <div class="hd"> 您现在的位置：<a href="http://www.kashi.gov.cn">网站首页</a>>>
+    
+    
+    <a href="/Category_1/Index.aspx" target="_self">政务动态</a>&gt;&gt;
+    <a href="/Category_873/Index.aspx" target="_self">通知公告</a> >> 正文内容 </div>
+      <div class="bd">
+        <h1>关于新疆国瑞再生资源有限公司喀什分公司叶城县、巴楚县废旧铅酸蓄电池暂存点运营公告</h1>
+        <div class="line"> <span>来源：喀什地区生态环境局</span>
+                           <span> 作者：</span>
+                           <span> 发布时间：2021年10月18日</span>
+                           <span> 点击数：
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=53333"></script>
+   </span>
+                       <!--<span> 【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                           <span> 【<a href="/Print.aspx?id=53333">打印</a>】</span>--></div>
+        <div class="content" id="fontzoom"> 
+      
+     <p>    根据原自治区环保厅《关于落实我区铅蓄电池和再生铅行业规范化管理的意见》（新环发〔2017〕160号）、《关于印发&lt;新疆维吾尔自治区废铅蓄电池收集 贮存和转移管理规范（试行）&gt;的通知》（新环字〔2018〕90号）和《关于进一步加强废铅蓄电池收集贮存和转移活动环境监管工作的通知》（新环办发〔2018〕198号）等文件规定，喀什地区生态环境局受理了新疆国瑞再生资源有限公司喀什分公司叶城县、巴楚县废旧铅酸蓄电池暂存点建设项目运营的申请。经审查，该单位符合运营申请的条件，现同意新疆国瑞再生资源有限公司喀什分公司叶城县、巴楚县废旧铅酸蓄电池暂存点开展运营活动。公示信息如下：</p><table align="center" border="1" cellspacing="0" style="border-collapse:collapse;border:none;"><tbody><tr style="height:46px;"><td style="width:101px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"><strong>收贮中心编码</strong></p></td><td colspan="3" style="width:377px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"><strong>收贮中心</strong></p></td><td colspan="4" style="width:420px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"><strong>对应暂存点</strong></p></td><td style="width:52px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"><strong>备注</strong></p></td></tr><tr><td style="width:101px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;"> </p></td><td style="width:142px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>单位名称</strong></p></td><td style="width:113px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>单位地址</strong></p></td><td style="width:123px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>联系人及联系电话</strong></p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>暂存点编码</strong></p></td><td style="width:141px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>单位名称</strong></p></td><td style="width:109px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>单位地址</strong></p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:20.0000pt;"><strong>联系人及联系电话</strong></p></td><td style="width:52px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:1.0000pt solid windowtext;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;"> </p></td></tr><tr><td style="width:101px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">653101-01</p></td><td style="width:142px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">新疆国瑞再生</p><p align="center" style="text-align:center;line-height:22.0000pt;">资源有限公司</p><p align="center" style="text-align:center;line-height:22.0000pt;">喀什分公司</p></td><td style="width:113px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">喀什市经济开发区西区</p></td><td style="width:123px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">万新13999421258</p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">653101-01-003</p></td><td style="width:141px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">新疆国瑞再生</p><p align="center" style="text-align:center;line-height:22.0000pt;">资源有限公司</p><p align="center" style="text-align:center;line-height:22.0000pt;">喀什分公司叶城县废旧铅酸蓄电池暂存点</p></td><td style="width:109px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">喀什伟鑫再生资源回收利用产业基地有限责任公司叶城县分公司院内</p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">万新13999421258</p></td><td style="width:52px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"> </p></td></tr><tr><td style="width:101px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">653101-01</p></td><td style="width:142px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">新疆国瑞再生</p><p align="center" style="text-align:center;line-height:22.0000pt;">资源有限公司</p><p align="center" style="text-align:center;line-height:22.0000pt;">喀什分公司</p></td><td style="width:113px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">喀什经济开发区西区</p></td><td style="width:123px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">万新13999421258</p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">653101-01-004</p></td><td style="width:141px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">新疆国瑞再生</p><p align="center" style="text-align:center;line-height:22.0000pt;">资源有限公司</p><p align="center" style="text-align:center;line-height:22.0000pt;">喀什分公司巴楚县废旧铅酸蓄电池暂存点</p></td><td style="width:109px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">巴楚县大智汽车城</p></td><td style="width:85px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;">万新13999421258</p></td><td style="width:52px;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt ;border-left:1.0000pt solid windowtext;border-right:1.0000pt solid windowtext;border-top:none;border-bottom:1.0000pt solid windowtext;vertical-align:center;"><p align="center" style="text-align:center;line-height:22.0000pt;"> </p></td></tr></tbody></table><div style="clear:both;"> </div><p> </p><p align="right" style="text-align:right;"> 喀什地区生态环境局</p><p align="right" style="text-align:right;">                                          2021年10月14日</p>
+    
+    </div>
+        <ul class="pn">
+          <li><span>【上一篇】：</span><a href="/Item/53297.aspx" target="_self">喀什地区生态环境局关于2021年10月15日拟作出的建设项目环境影…</a></li>
+          <li><span>【下一篇】：</span><a href="/Item/53335.aspx" target="_self">关于淘汰新疆棉花产业（集团）叶城棉业有限责任公司零公里轧花…</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear h10"> </div>
+<div class="footer">
+      <div class="footer_nav">
+      <a href="javascript:if(document.all){window.external.addFavorite('http://','网站首页');}else if(window.sidebar){window.sidebar.addPanel('网站首页', 'http://','');}">设为首页</a>  |  <a href="javascript:if(document.all){window.external.addFavorite('http://www.kashi.gov.cn','喀什地区行政公署');}else if(window.sidebar){window.sidebar.addPanel('喀什地区行政公署', 'http://www.kashi.gov.cn','');}">收藏本站</a>  | <a href=" /Category_91/Index.aspx">网站地图</a>  |  <!-- <a href=" /Category_0/Index.aspx">隐私条款</a>  |  <a href=" /Category_0/Index.aspx">免责声明</a>  |  <a href="/Category_0/Index.aspx">联系我们</a> | --> <IMG src="/UploadFiles/Article/2013/11/201311141953202491.jpg"></div>
+<div align="center">
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="200">
+		<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/31/425/0000/60346230/CA314250000603462300001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+</td>
+		
+		<td width="650" colspan="4">
+		<p align="center"><font size="2"><br>开办单位：喀什地区行政公署　　
+主办单位：喀什地区行政公署办公室<br>
+承办单位：喀什地区电子政务服务中心　　地址：新疆喀什市解放北路46号　　邮编：844000
+    	</font></p>
+<P align=center><font size="2">政府网站标识码：6531000001　　【ICP备案号】新ICP备13001201号  【公安备案号】65310102653262
+<br></font>
+</P></td>
+		<td width="150">
+		<script id="_jiucuo_" sitecode='6531000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">　</td>
+		<td width="150" align="right"></td>
+		<td width="175" align="center">  </td>
+		<td width="150" align="center">　</td>
+		<td width="150">　</td>
+	</tr>
+</table>
+</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+	var img=jQuery(this); img.hide();
+	var imgInt=setInterval( function(){
+		if(img.width()>0){
+			clearInterval(imgInt);
+			if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+			img.show();
+		}
+	},50 );
+ });
+//双击鼠标滚动屏幕的代码
+var currentpos,timer;
+getViewPortScrollY = function()
+{
+    var scrollY = 0;
+    if ((document.documentElement) && (document.documentElement.scrollTop))
+    {
+        scrollY = document.documentElement.scrollTop;
+    }
+    else if ((document.body) && (document.body.scrollTop))
+    {
+        scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset)
+    {
+        scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY)
+    {
+        scrollY = window.scrollY;
+    }
+    return scrollY;
+}; 
+function initialize()
+{
+timer=setInterval ("scrollwindow ()",30);
+}
+function sc()
+{
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=getViewPortScrollY();
+window.scroll(0,++currentpos);
+if (currentpos !=getViewPortScrollY())
+sc();
+}
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+	document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>
+
+</body>
+</html>
