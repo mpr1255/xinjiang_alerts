@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html style="font-size:20px;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新疆交建2021年前三季度净利1.73亿元 同比净利增加109.71%</title>
+    <meta name="keywords" content="A股,新三板,科创板,港股,IPO,上市公司,新三板研究院" />
+    <meta name="description" content="是一家专注上市公司互联网信披的财经媒体，聚焦A股、新三板、科创板、港股等资本市场的信息传递。" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://files.wabei.cn/web/img/content/pageIcon.png" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js "></script>
+    <link href="/Content/css/index.css?math=20211026170044" rel="stylesheet" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_571153_lksm4xbdeb.css">
+    <link href="/Content/page.css?math=20211026170044" rel="stylesheet" />
+    <link href="/Content/css/about-us.css?math=20211026170044" rel="stylesheet" />
+</head>
+<body>
+    <!--公共头部开始-->
+    <header class="header">
+        <div class="focusWeixin">
+            <i class="closeFocus">×</i>
+            <p>扫码关注微信公众号</p>
+            <img src="http://files.wabei.cn/web/img/content/qr.png" />
+        </div>
+        <div>
+            <h2>
+                <a id="home_logo" href="/"><img src="http://files.wabei.cn/web/img/content/logo.png" alt=""  style="height:45px;margin-left:30px"/></a>
+            </h2>
+            <div id="menuDiv">
+
+                <ul id="menu">
+                    <li >
+                        <a href="/">首页</a>
+                    </li>
+                    <li >
+                        <a href="/a">A股</a>
+                    </li>
+
+                    <li >
+                        <a href="/company">新三板</a>
+                    </li>
+                    <li >
+                        <a href="/kcb">科创板</a>
+                    </li>
+                    <li>
+                        <a href="http://www.wabei.cn/cyb/" target="_blank">创业板</a>
+                    </li>
+                    <li>
+                        <a href="http://www.wabei.cn/jingxuanceng/" target="_blank">北交所</a>
+                    </li>
+                    <li >
+                        <a href="/hk">港股</a>
+                    </li>
+
+                    <li >
+                        <a href="/kx">快讯</a>
+                    </li>
+                    <li >
+                        <a href="/indus">行业</a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+ 
+            <span class="hidden-lg rightSlide rightSlide2"><i style="font-style: normal;font-size: 1.2rem;color: #333333;">></i></span>
+            <div class="search-input hides">
+                
+                <i class="iconfont icon-delete"></i>
+                <i class="iconfont icon-sousuo"></i>
+                <button type="submit"></button>
+            </div>
+            <div class="share_type bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1539157354118">
+
+                
+                <a class="bds_tsina visible-lg-inline-block" data-cmd="tsina" title="分享到新浪微博 "></a>
+                <a class="bds_weixin bds_weixin2 visible-lg-inline-block" title="关注微信公众号 "></a>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        
+
+<head>
+    <style type="text/css">
+        .divCfo {
+            height: 236px;
+            background-color: #fafafa;
+            padding: 22px;
+            font-family: 'Microsoft YaHei';
+        }
+
+        .hl {
+            float: left;
+            width: calc(80% - 15px);
+        }
+
+        .cfoHead {
+            font-size: 1rem;
+            color: #333333;
+            font-weight: 600;
+        }
+
+            .cfoHead span {
+                font-size: 1rem;
+                color: #337ab7;
+                font-weight: 600;
+            }
+
+        .cfoContent {
+            font-size: 0.85rem;
+            color: #333333;
+            margin-bottom: 36px;
+            margin-top: 36px;
+        }
+
+        .hr {
+            float: right;
+            /*width: calc(20% - 5px);*/
+            margin-left: .5rem;
+            padding: 4px 0;
+        }
+
+            .hr img {
+                width: 128px;
+                height: 128px;
+            }
+
+        .wechar {
+            font-size: 1rem;
+            margin-bottom: 38px;
+            width: 128px;
+        }
+
+            .wechar span {
+                font-size: 1rem;
+                color: #337ab7;
+                font-weight: bold;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var stockCode = "";
+            if (stockCode) {
+                $.ajax({
+                    url: "http://api.cfo.wabei.cn/sme/candidates/voting_simple_info?companyCode="+stockCode,  //调用AJAX方法"device_id":"2222","device_name":"华为mate10" ,4657760831832305034
+                    type: "GET",
+                    async: false,
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (data) {
+                        var r = data.data
+                        if (data.code === 0) {
+                            if (r.valid == true) {
+                                $("#cfoName").text(r.name);
+                                $("#cfoScore").text(r.score);
+                                $("#CfoVotesCount").text(r.votesCount);
+                            } else {
+                                 $(".divCfo").hide();
+                            }
+                         }else{
+						    $(".divCfo").hide();
+						 }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        $(".divCfo").hide();
+                    }
+                });
+            } else {
+                $(".divCfo").hide();
+            }
+            var classId = "4";
+            switch(classId) {
+                case "1":
+                    $("#a_class").attr("href", "/company");
+                    break;
+                case "2":
+                    $("#a_class").attr("href", "/a");
+                    break;
+                case "3":
+                    $("#a_class").attr("href", "/hk");
+                    break;
+                case "4":
+                    $("#a_class").attr("href", "/kx");
+                    break;
+                case "5":
+                    $("#a_class").attr("href", "/indus");
+                    break;
+                case "6":
+                    $("#a_class").attr("href", "/");
+                    break;
+                case "7":
+                    $("#a_class").attr("href", "/ipo");
+                    break;
+                case "8":
+                    $("#a_class").attr("href", "/zrz");
+                    break;
+                case "9":
+                    $("#a_class").attr("href", "/zt");
+                    break;
+                case "10":
+                    $("#a_class").attr("href", "/kcb");
+                    break;
+                default:
+                    $("#a_class").attr("href", "/");
+                    break;
+            }
+        })
+    </script>
+</head>
+<!--主体内容开始-->
+<div class="main">
+    <section class="main_content clearfix">
+        <div class="clearfix">
+            <div class="leftContent xiangqing">
+                <!--IPO标题开始-->
+                <div class="part ipo-title">
+                    <i></i>
+                    <p>
+                        <a href="/">挖贝网</a>>
+                        <a href="" id="a_class">快讯</a>>
+                        <i>详情</i>
+                    </p>
+                </div>
+                <!--详情文章开始-->
+                <div class="subject">
+                    <h1>新疆交建2021年前三季度净利1.73亿元 同比净利增加109.71%</h1>
+                    <div class="attr"><span class="time">2021/10/26 16:14:41</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="source">挖贝网</span> <span class="author">李辉</span></div>
+                    <div class="subject-content">
+                        <p style="margin-top: 0px; margin-bottom: 13px; text-indent: 2em; text-align: left; word-wrap: break-word;word-break: break-all;">挖贝网10月26日，新疆交建(002941)近日发布2021年前三季度报告，报告期内营业收入6,870,325,510.27元，同比增加75.40%；净利173,330,054.42元，同比净利增加109.71%。</p><p style="text-align: center;"><img src="http://files.wabei.cn/web/img/uploads/16352358347266706.png"/>
+ &nbsp;</p><p style="text-indent: 2em; text-align: left; word-wrap: break-word;word-break: break-all;">来源链接：http://www.szse.cn/disclosure/listed/bulletinDetail/index.html?48bfcf64-aff7-4cd0-b7c3-838ed3a3f0b0</p><p><br/></p>
+                    </div>
+                </div>
+                <div class="model-tags">
+                            <a class="tag" onclick="javascript:void(0)" title="新疆交建">新疆交建</a>
+
+                </div>
+                <div class="model-share">
+                    <dl class="model-share-inner">
+                        <dt>分享到</dt>
+                        <dd>
+                            <a href="javascript:void(0)" title="分享到微信" class="item item-wx"><i class="icon-share icon-share-wx"></i></a>
+                            <a href="javascript:void(0)" title="分享到微博" class="item item-wx"><i class="icon-share icon-share-wb"></i></a>
+                        </dd>
+                    </dl>
+                    <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1539157354118">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信" style="background-position: 0 -1612px"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    </div>
+                </div>
+                
+
+                <!--详情文章结束-->
+                <div class="bottomContent xiangguan">
+                    <p>相关阅读</p>
+                    <ul class="clearfix">
+                            <li>
+
+                                <a href="/Home/News/195971">电科院2021年前三季度净利1.45亿元 同比净利增加151.67%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195973">若羽臣2021年前三季度净利4641.11万元 同比净利减少28.26%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195974">双汇发展2021年前三季度净利34.53亿元 同比净利减少30.08%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195975">锐奇股份2021年前三季度净利1351.65万元 同比净利减少29.89%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195976">久之洋2021年前三季度净利4690.21万元 同比净利增加96.52%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195977">瑞玛工业2021年前三季度净利3431.7万元 同比净利减少23.44%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195978">中国天楹2021年前三季度净利5.39亿元 同比净利增加8.64%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195953">华电国际2021年前三季度净利16.23亿元 同比净利减少57.47%</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195955">建投能源2021年前三季度亏损7.4亿元 同比由盈转亏</a>
+                            </li>
+                            <li>
+
+                                <a href="/Home/News/195956">博云新材2021年前三季度净利1515.31万元 同比净利增加122.44%</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightContent visible-lg">
+                <!--推荐阅读-->
+                <div class="part tuijian">
+                    <i></i>
+                    <p>推荐阅读</p>
+                    <ul>
+                            <li>
+
+                                    <a href="/Home/News/194921" target="_blank">
+                                        <img src="http://files.wabei.cn/web/img//Files/e1586014-e3f3-4881-a112-2edf324defe4/605x300.jpg" alt="" />
+                                    </a>
+                                <a href="/Home/News/194921" target="_blank"><p class="news-title">北交所董事长徐明：推动保险资金、社保基金等入市 引导公募加大投资力度</p></a>
+                                <a href="/Home/News/194921" target="_blank">
+                                    <span class="author"></span>
+                                    <span class="title-time">2021/10/22 18:24:00</span>
+                                </a>
+                            </li>
+                            <li>
+
+                                    <a href="/Home/News/194505" target="_blank">
+                                        <img src="http://files.wabei.cn/web/img//Files/8322abbe-23a6-47a7-a3d4-83439b515fd2/605x300.jpg" alt="" />
+                                    </a>
+                                <a href="/Home/News/194505" target="_blank"><p class="news-title">1/4精选层公司获机构现场调研：9月份调研频次提高 券商最积极</p></a>
+                                <a href="/Home/News/194505" target="_blank">
+                                    <span class="author">高慧</span>
+                                    <span class="title-time">2021/10/20 18:51:23</span>
+                                </a>
+                            </li>
+                            <li>
+
+                                    <a href="/Home/News/194280" target="_blank">
+                                        <img src="http://files.wabei.cn/web/img//Files/059f912e-412d-4cd6-acd8-15a44c02b259/605x300.jpg" alt="" />
+                                    </a>
+                                <a href="/Home/News/194280" target="_blank"><p class="news-title">精选层战投格局初现：形成“2+3”格局</p></a>
+                                <a href="/Home/News/194280" target="_blank">
+                                    <span class="author">高慧</span>
+                                    <span class="title-time">2021/10/19 18:12:20</span>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+
+                <!--快讯-->
+                <div class="part kuaixun">
+                    <i></i>
+                    <p>
+                        <span>
+                            快讯
+                        </span>
+                        <a href="/kx">更多</a>
+                    </p>
+                    <ul>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 17:00</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195971" target="_blank">电科院2021年前三季度净利1.45亿元 同比净利增加151.67%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195973" target="_blank">若羽臣2021年前三季度净利4641.11万元 同比净利减少28.26%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195974" target="_blank">双汇发展2021年前三季度净利34.53亿元 同比净利减少30.08%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195975" target="_blank">锐奇股份2021年前三季度净利1351.65万元 同比净利减少29.89%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195976" target="_blank">久之洋2021年前三季度净利4690.21万元 同比净利增加96.52%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195977" target="_blank">瑞玛工业2021年前三季度净利3431.7万元 同比净利减少23.44%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:58</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195978" target="_blank">中国天楹2021年前三季度净利5.39亿元 同比净利增加8.64%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:47</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195953" target="_blank">华电国际2021年前三季度净利16.23亿元 同比净利减少57.47%</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:47</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195955" target="_blank">建投能源2021年前三季度亏损7.4亿元 同比由盈转亏</a>
+                            </li>
+                            <li>
+
+                                <i class="dot"></i>
+                                <span class="time">10-26 16:46</span>
+                                <span class="sep">|</span>
+                                <a href="/Home/News/195956" target="_blank">博云新材2021年前三季度净利1515.31万元 同比净利增加122.44%</a>
+                            </li>
+                    </ul>
+                </div>
+                <!--专题-->
+                <div class="part zhuanti">
+                    <i></i>
+                    <p>
+                        <span>
+                            专题
+                        </span>
+                        <a href="/zt">更多</a>
+                    </p>
+                    <ul>
+                            <li>
+
+                                <a href="http://www.wabei.cn/zt/20210901zt/" target="_blank">北京证券交易所成立   </a>
+                            </li>
+                            <li>
+
+                                <a href="http://www.wabei.cn/zt-cfo/2021/index.html" target="_blank">中国A股上市公司高级管理人员综合评价暨中国上市公司优秀CFO评选</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="hid_desc" value="挖贝网10月26日，新疆交建(002941)近日发布2021年前三季度报告，报告期内营业收入6,870,325,510.27元，同比增加75.40%；净利173,330,054.42元，同比净利增加109.71%。" />
+        <!--相关阅读开始-->
+        <!--相关阅读结束-->
+    </section>
+</div>
+
+    </div>
+    <!--跳转页面-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body" id="modal-body">
+                    <span style="color:black">将在<span id="totalSecond">3</span>秒后回到首页</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--公共底部-->
+    <footer class="footer footer-index ">
+        <div class="footer-top ">
+            <div class="wrapper ">
+                <dl>
+                    <dt>友情链接</dt>
+                </dl>
+                <p class="align-justify ">
+                    <a href="http://finance.ce.cn/ " target="_blank ">中国经济网</a>
+                    <a href="http://www.eastmoney.com/ " target="_blank ">东方财富网</a>
+                    <a href="http://tech.sina.com.cn/internet/ " target="_blank ">新浪科技</a>
+                    <a href="http://fortune.chinanews.com/ " target="_blank ">中新网金融</a>
+                    <a href="http://www.xinhuanet.com/it/index.htm " target="_blank ">新华IT</a>
+                    <a href="http://it.people.com.cn/GB/index.html " target="_blank ">人民IT</a>
+                    <a href="http://www.ebrun.com/ " target="_blank ">亿邦动力</a>
+                    <a href="http://www.kejixun.com/ " target="_blank ">科技讯</a>
+                    <a href="http://digi.163.com/ " target="_blank ">网易数码</a>
+                    
+                    <a href="http://stock.wabei.cn/ " target="_blank ">挖贝三板通</a>
+                    <a href="https://www.xinsanbanbao.com/ " target="_blank">新三板报</a>
+                    <a href=" http://www.91yicaopan.com/" target="_blank">50ETF期权</a>
+                    <a href="http://tech.tom.com/" target="_blank">TOM科技</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-common ">
+            <div class="wrapper ">
+                <p>
+                    <a href="/Home/Aboutus">关于我们</a><i class="sep ">┊</i>
+                    <a href="/Home/Contacts">联系我们</a><i class="sep ">┊</i>
+                    <a href="/Home/Links">友情链接</a><i class="sep ">┊</i>
+                    <a href="/Home/Joinus">加入我们</a><i class="sep ">┊</i>
+                    <!--<a href="http://info.wabei.cn/ ">新三板公告</a><i class="sep ">┊</i>-->
+                    <a href="/roll/index.html">实时更新</a><i class="sep ">┊</i>
+                    <a href="/roll/index.html">原创报道</a>
+                </p>
+                <p>WaBei.CN © 2007-2021 <a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备11034405号</a> 京公网安备110105010276 </p>
+                <p>挖贝网专注于新三板、A股和港股报道</p>
+            </div>
+        </div>
+    </footer>
+    <!--公共回到顶部效果-->
+    <div id="go-top-root ">
+        <div class="ant-back-top ">
+            <div class="ant-back-top-content " style="display:none; ">
+                <i class="iconfont icon-ictotop ">
+                </i>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/Scripts/commen.js?math=20211026170044"></script>
+    <script src="http://files.wabei.cn/web/js/jquery.pjax.js"></script>
+    <script src="http://files.wabei.cn/web/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var nextText = $("#menu li.active").next().find("a").text();
+            var nextUrl = $("#menu li.active").next().find("a").attr("href");
+            $("#t-next").addClass(nextUrl);
+            $("#t-next span").text(nextText);
+            if ($("#menu li.active").find("a").text() == "产业") {
+                $("#t-next").addClass($("#menu li").first().find("a").attr("href"));
+                $("#t-next span").text($("#menu li").first().find("a").text());
+            }
+            if ($("#menu li.active").find("a").length == 0) {
+                $(".pjax-switch").hide();
+            } else {
+                if ($("#menu li.active").find("a").text() == "首页") {
+                    $("#t-prev").addClass($("#menu li").last().find("a").attr("href"));
+                    $("#t-prev span").text($("#menu li").last().find("a").text());
+                } else {
+                    $("#t-prev").addClass($("#menu li.active").prev().find("a").attr("href"));
+                    $("#t-prev span").text($("#menu li.active").prev().find("a").text());
+                }
+            }
+            if ("home" == "error" && "news" != "warning") {
+                alert("news");
+                $('#myModal').modal('show');
+                var t1=setInterval(redirect, 1000);
+            }
+        });
+        var second = parseInt($("#totalSecond").text());
+        function redirect() {
+            if (second < 1) {
+                window.location.href = $("#home_logo").attr("href");
+                window.clearInterval(t1);
+            } else {
+                $("#totalSecond").text(second - 1);
+                second = parseInt($("#totalSecond").text());
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="TOPQH">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="keywords" content="中化新网"/>
+    <meta name="description" content="中化新网">
+    <title>BDO：年内三破3万元关口 - 中化新网</title>
+    <link href="http://res.topqh.net/webinc/webv2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/webinc/webv2/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/webinc/webv2/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="/webinc/webv2/css/navbar-static-top.css" rel="stylesheet"/>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/webinc/webv2/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://cres.topqh.net/webinc/webv2/js/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cres.topqh.net/webinc/webv2/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/webinc/webv2/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+    <script src="/webinc/webv2/js/ResizeSensor.min.js" type="text/javascript"></script>
+    <script src="/webinc/webv2/js/theia-sticky-sidebar.min.js" type="text/javascript"></script>
+    <link href="/webinc/webv2/css/base.css" rel="stylesheet"/>
+    <link href="/webinc/webv2/css/style.css" rel="stylesheet"/>
+	
+	
+    <link href="/webinc/webv2/css/0404.css" rel="stylesheet"/>
+    <script type="text/javascript">
+    var ctx = "";
+
+    var uuid;
+    if (localStorage) {
+        uuid = localStorage.getItem("user_guid");
+        if (!uuid) {
+            uuid = "";
+            localStorage.setItem("user_guid", uuid);
+        }
+    }
+    document.cookie = "uuid=" + uuid;
+    
+    $(function(){
+    	$("#searchBtn").click(function () {
+            $("#searchFrom").submit();
+        });
+    	
+        $('.col-md-r').theiaStickySidebar({
+          additionalMarginTop: 110,
+          additionalMarginBottom: 20,
+          updateSidebarHeight:false
+        });
+    });
+    
+    </script>
+    
+
+  <script src="/webinc/webv2/js/theia-sticky-sidebar.js" type="text/javascript"></script>
+  <script src="/webinc/webv2/js/responsiveslides.min.js"></script>
+  <script src="/webinc/webv2/js/site.js"></script>
+  <link type="text/css" rel="stylesheet" href="/webinc/webv2/js/dialog/jquery-confirm.min.css" />
+  <link type="text/css" rel="stylesheet" href="/webinc/webv2/css/me.css" />
+  <script src="/webinc/common/js/share/js/jquery.share.js"></script>
+  <link href="/webinc/common/js/share/css/share.min.css" rel="stylesheet" type="text/css">
+  <script src="/webinc/common/js/share/js/jquery.qrcode.min.js"></script>
+  <script src="/webinc/webv2/js/dialog/jquery-confirm.min.js"></script>
+  <script src="/webinc/webv2/js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.leftSidebar').theiaStickySidebar({ additionalMarginTop: 110, });
+      $('.rightSidebar').theiaStickySidebar({ additionalMarginTop: 110, additionalMarginBottom: 20, updateSidebarHeight:false });
+	  $('.sc-btn').click(function(){
+	  		if(true){d.notify("亲，您还没有登录");return;}
+	  		var faved =$(this).hasClass("active");
+	 	 	$.ajax({
+	 	 		method:"POST",dataType:"json",url:"/wapi/favorite",data:{"mId":297877,"fav":!faved,"type":"news"},
+	 	 		success:function(data){
+	 	 			if(data.status == "success"){
+	 	 		  		if (data.attrs.fav==='0') {$('.sc-btn').removeClass("active").find('span').text('收藏');d.notify("取消收藏成功！");
+	 	 		  		} else {$('.sc-btn').addClass("active").find('span').text('已收藏');d.notify("收藏成功！");}
+	 	 			}else{d.notify("收藏失败！");}
+	 	 		}
+	 	 	});
+	  	});
+	  	
+        $('#shareitem').empty().share({
+            url: 'http://m.ccin.com.cn/#/news/detail?id=297877&type=news', source: '中化新网', title: 'BDO：年内三破3万元关口', description: '　　从9月初开始，国内1,4-丁二醇(BDO)市场再次上行，年内第三次突破3万元(吨价，下同)关口。10月22日，BDO市场参考价约为3.1万元，较月初上涨2.74%。', image: 'http://cres.topqh.net/attached/image/2021/10/26/14736e681b5f4929a6a0f5d1080eb3fb_small.jpg',
+            sites: ['qzone', 'qq', 'weibo', 'wechat'], isCache: false
+        });
+    });
+  </script>
+  <style type="text/css">
+	.header-c .nav li {padding: 0 15px 0 0px;}
+	.news-content h1 {padding-right: 20px;}
+	.news-content-txt img{max-width: 100%;}
+	.hgh-user-img{overflow: hidden;width: 40px;height: 40px;margin-right: 10px;display: inline-table;}
+	.hgh-user-img img {width: 40px;height: 40px;border-radius: 50%;}
+	img {vertical-align: middle;}
+	.social-share {float: left;}
+	.news-content .news-content-info {text-align: right;line-height: 40px;}
+	.social-share .icon-wechat .wechat-qrcode{position:absolute;z-index:9;top:40px;left:-84px;}
+	.social-share .icon-wechat .wechat-qrcode:after{display: none;}
+	.sc-btn {padding: 9px 20px;}
+	.news-content-txt img {margin-bottom: -8px;}
+  </style>
+
+</head>
+<body>
+<div class="go-top dn" id="go-top">
+  <a href="javascript:;" class="go btn btn-link" role="button"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+</div>
+
+
+
+<!-- 顶部导航 -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+<li><a href="/c/tv_index" target="_blank">化工电视</a></li>
+<li><a href="/c/ind_safety_index" target="_blank">中国•责任关怀</a></li>
+<li><a href="/c/activity_index" target="_blank">会展在线</a></li>
+<!--<li><a href="/c/thinktank_index" target="_blank">产业智库</a></li> -->
+<!-- <li><a href="/c/finance_index" target="_blank">产业+金融</a></li>-->
+  <li><a href="http://124.207.49.121/pc/index" target="_blank">中国化工报电子版</a></li>
+
+
+<!-- <li><a href="../shop/index.html" >商城</a></li> -->
+<!--<li><a href="/c/kepu_index" target="_blank">科普平台</a></li>--> 
+<!-- <li><a href="/c/union_index" target="_blank">全媒体联盟</a></li>-->
+
+<li><a href="http://sso.ccin.com.cn/sso?clientUrl=http://mp.ccin.com.cn" target="_blank">我的化工号</a></li>
+      </ul>
+      <!-- --> <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">客户端 <span class="caret"></span></a>
+          <ul class="dropdown-menu ewm-box">
+            <img src="/images/web/qrapp.jpg"><p>扫描二维码，下载化工号APP</p>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">微信 <span class="caret"></span></a>
+          <ul class="dropdown-menu ewm-box">
+            <img src="/images/web/ewm.jpg"><p>扫描二维码，关注中国化工报微信公众号</p>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="head ">
+      <div class="header default">
+        <div class="container header-c">
+          <div class="logo">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
+          <a href="/c/ccin"><img src="/webinc/webv2/images/logo.png"></a>
+
+
+          </div>
+
+      <div class="slogen"><img src="/webinc/webv2/images/slogen.png"></div>
+
+          <form id="searchFrom" action="/c/search_news" method="get">
+          <div class="input-group search">
+            <input type="text" class="form-control" placeholder="请输入搜索内容" id="searchKey" name="keyword" value="" disableautocomplete autocomplete="off"  style="color:#999">
+            <span class="input-group-btn">
+              <button class="btn btn-info search-btn" type="button" id="searchBtn">搜索</button>
+            </span>
+          </div>
+          </form>
+          <div class="btn-group site-user" role="group">
+            
+            <a class="btn btn-link" href="http://sso.ccin.com.cn/sso?islogin=true&amp;clientUrl=http://www.ccin.com.cn" target="_blank">登录</a>
+            <span class="line">/</span>
+            <a class="btn btn-link" href="http://sso.ccin.com.cn/sso?clientUrl=http://www.ccin.com.cn" target="_blank">注册</a>
+            
+          </div>
+          <!-- 导航条 -->
+          
+        <ul class="nav navbar-nav navbar-right site-nav">
+
+	      <div class="news-dh "><a href="/c/ccin">中化新网</a><span>></span><a href="/c/index_market">市场信息</a><span>></span>正文内容</div>
+
+	   </ul>
+		
+        <div class="btn-group site-fz" role="group">
+          <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分站 <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+<li><a href="/c/tv_index" target="_blank">化工电视</a></li>
+<li><a href="/c/ind_safety_index" target="_blank">中国•责任关怀</a></li>
+<!--<li><a href="http://www.chinahse.org.cn/" target="_blank">中国•责任关怀</a></li>-->
+<li><a href="/c/activity_index" target="_blank">会展在线</a></li>
+<li><a href="/c/thinktank_index" target="_blank">产业智库</a></li>
+    <!--<li><a href="/c/finance_index" target="_blank">产业+金融</a></li>-->
+    <li><a href="http://124.207.49.121/pc/index" target="_blank">中国化工报电子版</a></li>
+    
+
+<!-- <li><a href="../shop/index.html" >商城</a></li> -->
+<li><a href="/c/kepu_index" target="_blank">科普平台</a></li>
+
+<li><a href="http://sso.ccin.com.cn/sso?clientUrl=http://mp.ccin.com.cn" target="_blank">化工号产品</a></li>
+          </ul>
+        </div>
+
+     </div>
+   </div>
+ </div>
+
+
+<div class="container site-main">
+<div class="row">
+
+        <!-- 内容左侧 -->
+        <div class="col-md-l">
+          <div class="news-content">
+            <h1>BDO：年内三破3万元关口</h1>
+            
+            <div class="news-content-info">
+            <div id="shareitem" class="shareitem"></div>
+            <div class="news-num">6411次阅读</div>
+            作者：李冬铃&nbsp;&nbsp;
+            
+            来源：中国化工报
+            &nbsp;&nbsp;
+            2021年10月26日
+            <a class="btn btn-link pull-right sc-btn"><i class="fa fa-star"></i> <span>收藏</span></a></div>
+        	<div class="news-content-txt"><p style="text-align: justify;">　　从9月初开始，国内1,4-丁二醇(BDO)市场再次上行，年内第三次突破3万元(吨价，下同)关口。10月22日，BDO市场参考价约为3.1万元，较月初上涨2.74%。</p><p style="text-align: justify;">　　业内人士普遍认为，在供应端缩紧、需求向好的支撑下，后期BDO市场大概率维持高位运行态势。</p><p style="text-align: justify;">　<span style="color: rgb(0, 112, 192);"><strong>　价格再破3万元</strong></span></p><p style="text-align: justify;">　　“这一轮上涨行情更多来自于供应端的利好支撑。”安迅思分析师马玉成认为，检修产能损失叠加现货流通受限成为BDO市场主要推高因素，但相较于年内前两次突破3万元关口，此次上行速度相对缓慢。</p><p style="text-align: justify;">　　按照惯例，每年的8~9月份是BDO企业例行的集中检修期。今年8月下旬时，BDO行业开工率在80%左右，之后因检修损失部分产能，到9月中旬时行业开工率已降至54.4%，接近年内最低水平。</p><p style="text-align: justify;">　　“另外，现货流通量有限也是支撑此轮BDO反弹的主要因素。”马玉成介绍说，随着前期检修装置陆续复产，10月份行业开工水平已经有所回升，但市场现货紧张的局面并没有得到有效缓解。因山西、陕西等地连降大雨，由新疆发运往华东地区的BDO货源运输受阻，延迟到货现象频发，导致市场出现阶段性供应紧缺。</p><p style="text-align: justify;">　　此外，前期停工的新疆天业及陕西陕化装置尚未重启，内蒙古东源及国泰装置均于10月17日停车检修或更换催化剂，10月中旬时行业整体开工率再次下滑，供应量缩减。工厂多以交付合约订单为主，贸易商报盘探涨。随着河南工厂网上挂牌价高位提振，业内心态积极，主力厂商整体报盘高位持坚，上行趋势延续。</p><p style="text-align: justify;">　　10月22日，开祥化工、河南能源出厂价报3.1万元；10月23日，三维华邦报价3.3万元；10月25日，新疆天业报价3.15万元，全部突破3.1万元。</p><p style="text-align: justify;">　<span style="color: rgb(0, 112, 192);"><strong>　供应面支撑延续</strong></span></p><p style="text-align: justify;">　　“目前BDO行业整体开工率仍不高，来自供应端的支撑还会延续。”金联创化工分析师段会会认为，虽然前期重启的工厂存放量预期，但新疆天业、内蒙古东源及陕西陕化装置均处于检修状态，且目前各个工厂库存低位，供方心态乐观，挺市心态依旧，贸易商获利意向下，维持高位报盘。</p><p style="text-align: justify;">　　近期，新疆天业2套共6万吨/年BDO装置国庆期间停车，目前尚未重启;陕西陕化9月8日停车更换催化剂，目前装置尚未重启;延长石油9月6日起停车检修，预计11月重启出产品;福建湄洲湾10月初停车，等待迁建;陕西融和10月底存检修计划，预计检修10天;新疆新业11月1~7日计划更换催化剂;内蒙古东源10月17日停车检修，预计检修15天。</p><p style="text-align: justify;">　　宏观层面来看，马玉成认为，天然气供应和物流运输受限也将对BDO供应产生影响。</p><p style="text-align: justify;">　　今冬，天然气供应趋紧会影响部分天然气制乙炔工艺的BDO装置。目前采用该工艺的BDO装置产能占比达19%左右。6月以来，我国天然气市场业呈现出淡季不淡的特征。近期，海外天然气价格再创新高，国内天然气价格高企，高峰限电导致开工率不足。随着四季度传统消费旺季来临，煤炭价格持续上涨抬升火电成本，天然气发电占比将逐渐提升，这也会进一步拉动天然气需求增长。后期，北方冬季天然气供暖需求叠加冬奥会用气需求，天然气供需将持续保持紧张状态，BDO生产必将受到一定影响。</p><p style="text-align: justify;">　　与此同时，近期多地出现的疫情反弹也使部分货运站运输受限，新疆货源物流受阻将对BDO阶段性供应产生影响。</p><p style="text-align: justify;">　　<span style="color: rgb(0, 112, 192);"><strong>需求端持续坚挺</strong></span></p><p style="text-align: justify;">　　按往年惯例，9~11月份是BDO需求的高峰期。后市来看，主力下游聚四氢呋喃(PTMEG)、聚对苯二甲酸丁二醇酯(PBT)又有新增产能落地预期;r-丁内酯行业受锂电池等需求支撑，也将从需求端给予BDO市场以上行动力。</p><p style="text-align: justify;">　　据马玉成介绍，目前来看，PTMEG和r-丁内酯行业情况较好，利润维持在较为健康的水平。高利润刺激厂家的生产积极性提升，支撑行业开工率维持较高水平。特别是PTMEG行业，其在BDO市场消费中占比为56%~58%，是BDO的最大下游。今年随着PTMEG下游氨纶行情火爆，所有企业都在满负荷生产，增加了对BDO的采购。此外，r-丁内酯在锂电池、医疗等行业有广泛需求，消费前景也较为乐观。</p><p style="text-align: justify;">　　新增产能方面，今年年底前，有1套10万吨/年PTMEG装置、2套6万吨/年PBT装置计划投产。如果这3套装置如期正常生产，理论月消耗BDO增量达1.6万吨。而3年内我国BDO新增产能很少，目前只有万华化学10万吨/年和新疆美克10万吨/年装置计划在明年投产，其他新装置产能基本都要3年后才能释放。下游新增产能落地叠加PTMEG—氨纶的快速扩产，未来3年我国BDO行业将处于供应紧平衡状态，需求端对市场起到积极的支撑作用。</p></div>
+        	<div class="news-content-txt">关键字：1 4-丁二醇</div>
+          </div>
+
+      <div class="list-box" style="width:100%;">
+      
+        <div class="tit-s01">
+          <span class="tit">相关推荐</span><!-- <a href="#">相关视频</a> | <a href="#">微新闻</a> | <a href="#">公众号</a> | <a href="#">微博</a> | <a href="#">人民号</a> | <a href="#">头条号</a> | <a href="#">行业媒体</a> | <a href="#">产业报告</a> | <a href="#">词云</a> -->
+        </div>
+        
+        <div class="news-list content-list">
+        
+
+
+      <div class="news-box">
+        
+        <div class="img"><a href="/detail/b453f67a54e405b03811db4c84329bc8" target="_blank"><img src="http://cres.topqh.net/attached/image/2021/10/27/28783596fdc0459d9eac4f9c4f2e26d0_small.jpg"></a></div>
+        <div class="news-bd">
+          <h2><a href="/detail/b453f67a54e405b03811db4c84329bc8" target="_blank">山西肥企呼吁稳煤价保春耕</a></h2>
+          <p>10月份以来，山西煤价一路飙升，无烟块煤价格已突破3100元（吨价，下同）大关，最高成交价达3300元，创历史最高水平。受此影响，化肥企业每生产1吨尿素就面临500~900元的亏损。山西肥企“趴在煤窝...</p>
+          <div class="news-tag">2021-10-27 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">山西能源和化工</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+
+      <div class="news-box">
+        
+        <div class="news-bd">
+          <h2><a href="/detail/cf9e79894b3c16f897f388545292c303" target="_blank">河北前三季度安全生产形势向好</a></h2>
+          <p>　　中化新网讯(记者赵晨光)10月22日，记者从河北省政府新闻办召开的发布会上获悉，今年前三季度河北安全生产形势持续稳定向好。　　据悉，1~9月份，河北省各类事故起数和死亡人数同比分别下降32....</p>
+          <div class="news-tag">2021-10-27 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">中国化工报</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+
+      <div class="news-box">
+        
+        <div class="img"><a href="/detail/67e0fc4421ee9a645c05cfc08105719e" target="_blank"><img src="http://cres.topqh.net/attached/image/2021/10/27/df689deb99664d348593dda25b033204_small.jpg"></a></div>
+        <div class="news-bd">
+          <h2><a href="/detail/67e0fc4421ee9a645c05cfc08105719e" target="_blank">兰石重装EPC总承包20万吨/年加氢项目投产</a></h2>
+          <p>　　10月15日，由兰石重装EPC总承包的张掖晋昌源煤业有限公司20万吨/年中温煤焦油加氢处理项目正式投产，产出1#轻质化煤焦油、2#轻质化煤焦油及部分附产...</p>
+          <div class="news-tag">2021-10-27 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">中国化工报</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+
+      <div class="news-box">
+        
+        <div class="news-bd">
+          <h2><a href="/detail/bf83261e1692f3ebdf388a85a60912a5" target="_blank">陕西石化业前三季产值增近四成</a></h2>
+          <p>　　记者上周从陕西省工信厅获悉，前三季度该省石油和化工行业工业总产值同比增长37.2%，前8个月实现利润387.1亿元，同比增长765%，各项经济指标延续大幅提升态势。</p>
+          <div class="news-tag">2021-10-26 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">中国化工报</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+
+      <div class="news-box">
+        
+        <div class="news-bd">
+          <h2><a href="/detail/f2d78a22e75ef5b49cf77e08c77196e4" target="_blank">化工现货高位震荡</a></h2>
+          <p>　　上周，国内化工现货市场高位震荡。截至10月22日，化工在线发布的中国化工产品价格指数(CCPI)收于6321点，跌幅为1.2%。</p>
+          <div class="news-tag">2021-10-26 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">中国化工报</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+
+      <div class="news-box">
+        
+        <div class="news-bd">
+          <h2><a href="/detail/6fe1cf8fa0753fb118d961bf415f5073" target="_blank">我国硫酸、硫磺市场迎来集体向好态势</a></h2>
+          <p>　　中化新网讯今年1~3季度，我国硫酸、硫磺及其下游市场迎来了集体向好的态势，10月18~19日在成都召开的2021年硫产业链秋季市场交流会传出上述信息。　　中国石油和化学工业联合会产业发展部副主任....</p>
+          <div class="news-tag">2021-10-26 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">中化新网</a></div>
+          <div class="news-share"></div>
+        </div>
+      </div>
+
+
+        </div>
+        <!-- <div class="load-more"><a href="#">加载更多</a></div> -->
+      </div>   
+
+        </div>
+        <!-- 内容右侧 -->
+        <div class="col-md-r">
+          <div class="right-ad"><img src="http://cres.topqh.net/attached/image/2020/02/24/74490c72c5324dae8cbc391c5b9dcc2d.jpg"></div>
+          <div class="right-box">
+            <div class="right-box-tit">24小时热文</div>
+            <div class="right-list">
+	          <ul>
+	          
+	          <li><a href="/detail/b3487816b3ccd70187f9ff9dec2bcde9" target="_blank">四重点子行业节能降碳再加码</a></li><!--  - 5869 -->
+	          
+	          <li><a href="/detail/6b6380825340e01b7555b67c0c0048fa" target="_blank">煤化工细颗粒物捕集技术获突破</a></li><!--  - 14011 -->
+	          
+	          <li><a href="/detail/f6103e555e550e1bacdd0c3857185e03" target="_blank">石家庄循环化工园区召开校地合作对接会</a></li><!--  - 5052 -->
+	          
+	          <li><a href="/detail/c0f6b41d16e58f725c47f62d3af0bdf5" target="_blank">《责任关怀工艺安全实施细则（讨论稿）》标准研讨会召开</a></li><!--  - 12907 -->
+	          
+	          <li><a href="/detail/0c68699dd450f9601c0a0594eac53423" target="_blank">国家发展改革委：煤炭主产区坑口煤价明显下降</a></li><!--  - 10493 -->
+	          
+	          <li><a href="/detail/d11e23b40666cca8a9d78628191f2040" target="_blank">版权声明  　　</a></li><!--  - 370560 -->
+	          
+	          <li><a href="/detail/78f391a78d1d74751fd17e8e64ed3439" target="_blank">关于征订2021年《中国化工报》的通知</a></li><!--  - 386001 -->
+	          
+	          <li><a href="/detail/e21d954f09f9c83306a425127f30b723" target="_blank">欢迎订阅2020年《中国化工报》</a></li><!--  - 0 -->
+	          
+	          <li><a href="/detail/9cff4e3105f5638c3155ae362a7da0a3" target="_blank">国家发展改革委研究建立规范的煤炭市场价格形成机制</a></li><!--  - 15618 -->
+	          
+	          <li><a href="/detail/77960b84d35842db15a74a1876f75de3" target="_blank">四川省拟认定化工园区名单（第一批）公示</a></li><!--  - 12226 -->
+	          
+	          <li><a href="/detail/46e2412c91721fbba9460081a2ad8845" target="_blank">中共中央 国务院发布“双碳”新蓝图</a></li><!--  - 0 -->
+	          
+	          </ul>
+            </div>
+          </div>
+        </div>
+        
+    
+  </div>
+</div>
+<script src="https://yb-public.oss-cn-shanghai.aliyuncs.com/yb-js/zghgb.js" type="text/javascript"></script>
+
+
+
+
+
+<script id="item_tpl" type="text/html">
+{{each data as value i}}
+<div class="news-box">
+{{if value.topicImgs&&value.topicImgs.length>0}}
+<div class="img">
+    <a href="/detail/{{value.md5}}/{{value.type}}" target="_blank"><img src="{{value.topicImgs[0]}}" alt="">
+        {{if value.videoTime>0}}<i class="ftype video"><span>{{value.videoTime | getTTx}}</span> </i>{{/if}}</a></div>
+{{/if}}
+<div class="news-bd">
+    <h2><a target="_blank" href="/detail/{{value.md5}}/{{value.type}}">{{value.titleVo}}</a></h2>
+    {{if value.type!='video'}}<p>{{value.summary&&value.summary.length>110?value.summary.substring(0,110):value.summary}}</p>{{/if}}
+    <div class="news-tag">{{if value.createTime}}<span>{{value.createTime | dateFormat:'yyyy-MM-dd'}}</span>{{/if}}&nbsp;&nbsp;&nbsp;&nbsp;
+{{if value.sourceId}}<a target="_blank" href="http://www.ccin.com.cn/user/center?uid={{value.sourceId}}">{{/if}}{{value.source}}{{if value.sourceId}}</a>{{/if}}
+</div>
+    <div class="news-share">
+        <a href="javascript:void(0);">
+		<span data-url="http://h.kyhtech.com:80//home/detail/u0/{{value.type}}/{{value.id}}" data-image="{{value.topicImg}}" data-title="{{value.title}}" data-desc="{{value.summary}}"
+              class="glyphicon glyphicon-share-alt js-mytooltip type-inline-block style-block style-block-three share"
+              data-mytooltip-animate-duration="150" data-mytooltip-direction="left" data-mytooltip-custom-class="align-center"
+              data-mytooltip-template=".share-tmpl" data-mytooltip-theme="light" data-mytooltip-action="click" data-mytooltip-dinamic-template=true
+              aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+</div>
+{{/each}}
+</script>
+
+
+      <!-- json list 模板 -->
+
+
+<footer>
+    <div class="footer">
+        <a href="http://www.ccin.com.cn">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.ccin.com.cn/c/ccin_aboutus">关于我们</a>
+        <!-- &nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">隐私政策</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">广告服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">客服中心</a> --><br>
+        Copyright © 2009-2021 www.ccin.com.cn All Rights Reserved.&nbsp;&nbsp;北京开美沃文化传媒有限公司&nbsp;&nbsp;版权所有<br>
+        地址：北京市西城区六铺炕北小街甲2号&nbsp;&nbsp;《中国化工报》社有限公司&nbsp;&nbsp;&nbsp;&nbsp;邮编：100120<br>
+        国新网备[2007]003号&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.greenchina.tv/about!license.do?licensetype=1" target="_blank">信息网络传播视听许可证：0106149</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="http://res.ccin.com.cn/imgs/zz_2.jpg" target="_blank">广播电视节目制作经营许可证</a><br>
+        国务院新闻办审核备案登记号&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://res.ccin.com.cn/imgs/zz_3.jpg" target="_blank">京ICP证100512号</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;京公网安备 110102000792-1
+        &nbsp;&nbsp;
+        <a href="https://beian.miit.gov.cn" target="_blank">京ICP备08101495号-1</a>
+        
+        
+        
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://res.ccin.com.cn/imgs/zz_1.jpg" target="_blank">营业执照</a><br>
+        网络实名：中化新网&nbsp;&nbsp;|&nbsp;&nbsp;版权所有&nbsp;&nbsp;违者必究
+        <img src="http://c.cnzz.com/wapstat.php?siteid=1188836&r=&rnd=1142585238" width="0" height="0"/>
+         <!--<img src="http://c.topqh.net/x/s/2" width="0" height="0"/>
+        <img src="https://ifire.ngrok.jkhapp.com/adm/x/s/2" width="0" height="0"/>-->
+    </div>
+</footer>
+
+
+</body>
+</html>

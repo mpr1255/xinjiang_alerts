@@ -1,0 +1,956 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+      
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+
+
+<head>
+ 
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>新疆法网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<link rel="stylesheet" href="/prototype/12348-xinjiang-website/pkg/common.css" />
+<link rel="stylesheet" href="/prototype/12348-xinjiang-website/pkg/components.css" />
+  
+
+
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	
+	<link rel="stylesheet" href="/dist/static/css/fixed.css" />
+	<link rel="stylesheet" href="/dist/jhelper_v2.0/jhelper_tool_style.css" />
+	<script src="/dist/static/lib/mod.js"></script>
+	<script type="text/javascript" src="/dist/pkg1/components.js"></script>
+	<script type="text/javascript" src="/dist/pkg1/modules.js"></script>
+	<script type="text/javascript">
+		var $ = require('components/jquery/jquery');
+		var $jhelperServerUrl = '/dist/jhelper_v2.0/';
+	</script>
+</head>
+
+<body class="gray-bg">
+  <div class="page-wrapper">
+	
+	
+
+
+
+<div class="toolbar">
+	<div class="container">
+		<div class="toolbar-slide">
+			<i class="iconfont icon-notification_fill"></i>
+			
+			
+			<ul class="slide-notice">
+				
+				<li><a href="/service/rest/website.Front/eab9d68e8cda430cb92cb796a03c227e/post?active=67f6c3f20a0143e39760f586b9d643f2">[2021-06-29]关于通过2020年国家统一法律职业资格考试的2021年全日制应届本科毕业生等申请授予法律职业资格相关事宜的公告</a></li>
+				
+				<li><a href="/service/rest/website.Front/eab9d68efceb4a1e98d7298757298e86/post?active=67f6c3f20a0143e39760f586b9d643f2">[2021-06-25]司法部关于印发《法医类 物证类 声像资料司法鉴定机构登记评审细则》的通知   司规[2021]2号</a></li>
+				
+				<li><a href="/service/rest/website.Front/eab9d68e98a34413bd30e4642e557cbc/post?active=67f6c3f20a0143e39760f586b9d643f2">[2021-06-08]《新疆维吾尔自治区法治宣传教育条例》（全文）</a></li>
+				
+			</ul>
+		</div>
+		
+		<div class="toolbar-action" style="position: inherit;left: 373px;">
+	      <!-- <a href="#">APP下载</a> -->
+	      <span class="li-spacing"></span>
+	      <a href="/login.jsp">登录</a>
+	    </div>
+	      <span class="li-spacing" style="    display: flex;position: inherit;left: 188px;"></span>
+	    
+	    <a href="javascript:void(0);" onclick="toggleToolBar();">无障碍</a>
+	</div>
+	
+</div>
+	
+<script type="text/javascript" src="/dist/jsencrypt.min.js"></script>
+
+	<script type="text/javascript" src="/dist/jhelper_v2.0/jhelper_config.js"></script>
+	<script type="text/javascript" src="/dist/jhelper_v2.0/jhelper_2.0.js?ver=0322"></script>
+	<script type="text/javascript" src="/dist/tw_cn.js"></script>
+	<script>
+		$("body").attr("onload","initJSHelperEvent()");
+		$(".page-wrapper").attr("id","container");
+	 	var translateDelay = 200;
+		var cookieDomain = "sfj.sh.gov.cn";
+		var msgToTraditionalChinese = "繁體";
+		var msgToSimplifiedChinese = "简体";
+		var translateButtonId = "translateLink";
+		translateInitilization();
+
+		var news = require('modules/js/main');
+
+		news.Share.start();
+
+		require('components/bootstrap/modal');
+		var footer = require('modules/js/main');
+		var respond = require('modules/js/responsive');
+
+		respond.Responsive.init();
+		respond.Responsive.panel();
+
+		footer.Datepicker.init({
+			firstDay : 0,
+			field : document.getElementById('datepicker'),
+			minDate : new Date(2000, 12, 31),
+			maxDate : new Date(2020, 12, 31),
+			format : 'YYYY年MM月DD日',
+		});
+		footer.parsley.init('.expert-form'); 
+	</script><!--[if lt IE 10]>
+<div class="alert is-global is-danger has-icon">
+  <span class="icon">
+    <i class="iconfont icon-prompt-fill"></i>
+  </span>
+  您使用的浏览器版本过低，可能有导致网站部分功能不可用，建议
+  <strong>升级</strong>或
+  <strong>更换</strong>浏览器访问。
+  <a href="/prototype/12348-xinjiang-website/update.html" class="pull-right">升级浏览器</a>
+</div>
+<![endif]-->
+
+
+<div class="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/prototype/12348-xinjiang-website/static/assets/images/logo.png" alt="12348新疆法网">
+    </a>
+    <ul class="nav" id="nav">
+     
+      <li>
+       
+        <a href="/sites/xinjiang/index.jsp?active=394a261c808d431eb873011eb7265cde" class="item">
+          <div class="iconfont icon-home1"></div>
+          <h5 class="title">首页</h5>
+        </a>
+        
+        
+      </li>
+      
+      <li>
+       
+        <a href="/sites/xinjiang/news.jsp?active=67f6c3f20a0143e39760f586b9d643f2" class="item">
+          <div class="iconfont icon-apply"></div>
+          <h5 class="title">普法学法</h5>
+        </a>
+        
+        
+      </li>
+      
+      <li>
+       
+        <a href="/sites/xinjiang/team.jsp?active=0f4806060c7e4b669ea3f997525cacd7" class="item">
+          <div class="iconfont icon-navigation"></div>
+          <h5 class="title">法治地图</h5>
+        </a>
+        
+        
+      </li>
+      
+      <li>
+       
+        <a href="/sites/xinjiang/advice.jsp?active=d95e75bc32f341928555482fc976ea09" class="item">
+          <div class="iconfont icon-online-consult"></div>
+          <h5 class="title">法律咨询</h5>
+        </a>
+        
+        
+      </li>
+      
+      <li>
+       
+        <a href="#" class="item">
+          <div class="iconfont icon-computer"></div>
+          <h5 class="title">法律服务</h5>
+        </a>
+        
+        
+         <ol class="menu">
+          <li class="menu-list">
+            <a href="/sites/xinjiang/service-aid.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">法律援助</a>
+          </li>
+          <li class="menu-list">
+            <a href="/sites/xinjiang/service.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">律师服务</a>
+          </li>
+          <li class="menu-list">
+            <a href="/sites/xinjiang/service-notarization.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">公证服务</a>
+          </li>
+          <li class="menu-list">
+            <a href="/sites/xinjiang/service-identify.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">司鉴服务</a>
+          </li>
+          <li class="menu-list">
+            <a href="/sites/xinjiang/service-mediation.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">人民调解</a>
+          </li>
+          <li class="menu-list">
+             <a href="/sites/xinjiang/judicialExamination.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">法职考试</a>
+         </li>
+         <li class="menu-list">
+             <a href="/sites/xinjiang/epidemic-control.jsp?active=536922cb14254875af0a9307068ce272" class="menu-item">疫情专栏</a>
+         </li>
+        </ol>
+        
+      </li>
+      
+    </ul>
+  </div>
+</div>
+	
+    <div class="channel-head" style="background-image:url('/prototype/12348-xinjiang-website/static/assets/images/banner-advice.jpg')">
+  <h1 class="channel-solgan">学法 · 知法 · 懂法</h1>
+</div>
+<div class="layout">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-narrow">
+        <div class="aside">
+		         
+<div class="submenu">
+  <div class="title">
+    <div class="icon">
+      <i class="iconfont icon-menu-1"></i>
+    </div>
+    <div class="text">留言咨询</div>
+  </div>
+  <ul class="submenu-list">
+  
+    <li class="">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156b86634bc994500b0561e7fa77" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>律师留言咨询</span>
+      </a>
+    </li>
+   
+    <li class="">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156b84444b9da9397628bc38b8f5" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>公证留言咨询</span>
+      </a>
+    </li>
+   
+    <li class="active">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156b09954376a116fb36148e922b" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>人民调解留言咨询</span>
+      </a>
+    </li>
+   
+    <li class="">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156bed254355bb139134d83e7389" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>司法鉴定留言咨询</span>
+      </a>
+    </li>
+   
+    <li class="">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156b69e24c328870bb1a1c76b218" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>法律援助留言咨询</span>
+      </a>
+    </li>
+   
+    <li class="">
+      <a href="/sites/xinjiang/messagelist.jsp?windowId=8969156b6ca742bf931b463d327ef5ed" class="item none">
+        <i class="iconfont icon-setup"></i>
+        <span>仲裁留言咨询</span>
+      </a>
+    </li>
+   
+  </ul>
+</div>
+
+ 
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="main">
+<div class="advice-repo">
+  <div class="advice-list-item">
+    <div class="type">咨询类型：人民调解 劳动人事争议</div>
+    <div class="reply">咨询于<span>07-31 03:48</span></div>
+    <h4 class="title" style="padding-left: 0;">我们去年的工资今年都还没有给</h4>
+    <div class="desc" style="padding-left: 0;">
+    去年在哈密干的活老板总是各种理由，就是不给钱，老板13579800782孙强
+    </div>
+  </div>
+  <ul class="reply-listwarp">
+    <div class="title no-bottom">
+      <span>全部回答</span>
+    </div>
+    
+      
+    <li class="list-watp active">
+      <div class="list-head" style="background-image: url(/prototype/12348-xinjiang-website/static/assets/images/default-male.png);"></div>
+      <span class="phone-number">哈力旦木·哈力克</span>
+     <!--  <span class="adopt-number">
+        采纳率
+        <i>95%</i>
+      </span> -->
+     <!--  <span class="time-number">
+        <i class="iconfont icon-collection_fill"></i>
+        最佳答案
+      </span> -->
+      <p class="list-content">
+      拖欠或扣发工资，职工可以和单位协商解决。
+协商不成的，职工可以向当地的区县级劳动仲裁院（劳动仲裁院设在人力资源社会保障局）申请仲裁，要求补发工资。
+      </p>
+      <!-- <span class="get-number">
+        <i class="iconfont icon-praise-fill active"></i>
+        <i class="iconfont icon-belittling"></i>
+      </span> -->
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+
+
+ 
+
+<div id="piaochuang" class="sidebar" style="overflow: visible;box-shadow: 0 0 0px rgba(0, 0, 0, 0);background-color:rgba(117, 172, 206, 0);border:0">
+	<ul>
+		
+		<li class="ga" style="margin-top:0px;width: 120px; position: relative; z-index: 2000065; display: block;">
+		<span class="clear-box" style="position: absolute; top: 0px; left: 104px; cursor: pointer;">
+		<img style="height: 15px; width: 15px; background-color: white; margin-top: -4.5px;" src="/sites/im/images/icon_close.png">
+		</span> 
+		<a data-toggle="modal" href="http://zwfw.xinjiang.gov.cn/" target="_blank">
+				<img style="height: 120px; width: 120px;" src="/service/rest/tk.File/f9c80bed32ed47a0aa9fb02b55debf74/view">
+				</a>
+				</li>
+		
+		<li class="ga" style="margin-top:20px;width: 120px; position: relative; z-index: 2000065; display: block;">
+		<span class="clear-box" style="position: absolute; top: 0px; left: 104px; cursor: pointer;">
+		<img style="height: 15px; width: 15px; background-color: white; margin-top: -4.5px;" src="/sites/im/images/icon_close.png">
+		</span> 
+		<a data-toggle="modal" href="https://www.xjgzc.com/" target="_blank">
+				<img style="height: 120px; width: 120px;" src="/service/rest/tk.File/46c93a604ed140c9b310342dc78ecde8/view">
+				</a>
+				</li>
+		
+		<li class="ga" style="margin-top:40px;width: 120px; position: relative; z-index: 2000065; display: block;">
+		<span class="clear-box" style="position: absolute; top: 0px; left: 104px; cursor: pointer;">
+		<img style="height: 15px; width: 15px; background-color: white; margin-top: -4.5px;" src="/sites/im/images/icon_close.png">
+		</span> 
+		<a data-toggle="modal" href="http://xj.12348.gov.cn/sites/xinjiang/epidemic-control.jsp?active=536922cb14254875af0a9307068ce272" target="_blank">
+				<img style="height: 120px; width: 120px;" src="/service/rest/tk.File/5f3c92a11fef450d964eed5f84b15554/view">
+				</a>
+				</li>
+		
+	</ul>
+</div>
+ <!-- 侧边栏 -->
+<div class="qrcode-sidebar">
+  <a class="qrcode-link blue" href="#qrcode-alert" data-toggle="modal">
+    <span>APP</span>
+    <br>
+    <span>下载</span>
+  </a>
+  <a class="qrcode-link green" href="#qrcode-alert" data-toggle="modal">
+    <i class="iconfont icon-wechat"></i>
+    <br>
+    <span>公众号</span>
+  </a>
+  <a class="qrcode-link grey" href="javascript:scroll(0,0)">
+    <div class="backtotop">
+      <i class="iconfont icon-arrow-left"></i>
+    </div>
+    <span>顶部</span>
+  </a>
+</div>
+<!-- 弹出窗口 -->
+<div class="modal fade qrcode-alert" id="qrcode-alert">
+  <div class="modal-dialog">
+    <div class="content">
+      <a href="javascript:;" class="close" data-dismiss="modal">&times;</a>
+      <div class="right">
+        <h2 class="title">12348新疆法网APP</h2>
+        <p class="description">12348新疆法网是新疆司法局全力打造的公共法律服务终端，致力于为民众提供全方位，专业的便捷法律服务。普法学法：全面整合全市法律实用信息，提供一键式法律学法资源检索；法律咨询：为您提供一站式各类在线实时法律咨询服务；法律服务：提供一站式司法行政网上办事服务。</p>
+        <div class="clearfix">
+          <div class="item">
+            <img src="/prototype/12348-xinjiang-website/static/assets/images/qrcode-app.png" alt="APP" draggable="false">
+            <span class="text">App下载</span>
+          </div>
+          <div class="item">
+            <img src="/prototype/12348-xinjiang-website/static/assets/images/qrcode-OA.png" alt="公众号" draggable="false">
+            <span class="text">微信公众号</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pc-wrap fixedleft-btn">
+  <div class="iner-wrap">
+    <a href="/login.jsp" data-toggle="modal" class="modal-link">
+      履职评价
+    </a>
+    <!-- <div class="arrow-modal">&gt;</div> -->
+  </div>
+  <!-- <div class="cont-name">欢迎关注上海法院12368微信公众号</div> -->
+</div>
+<div  style="margin-top: 69px; padding: 13px; position: fixed; right: 0; top: calc(50% + 111px); z-index: 1010; width: 73px; height: 68px; padding-bottom: 18px; padding-left: 13px; padding-right: 10px; background-color: rgba(255, 255, 255, .5);">
+	<div class="iner-wrap">
+		<a href="/sites/xinjiang/business-matrix.jsp" target="_blank"
+			style="background-color: #ff7f79; display: block; width: 50px; height: 50px; padding-left: 5px; padding-right: 5px; box-sizing: border-box; color: #fff; font-size: 14px; border-radius: 8px; text-align: center; line-height: 25px;">
+			业务矩阵 </a>
+		<!-- <div class="arrow-modal">&gt;</div> -->
+	</div>
+</div>
+
+<div class="modal fade survey-modal" id="survey" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header choice">
+        <a href="javascript:void(0);" class="close closemodel" data-dismiss="modal" id="show-block">&times;</a>
+        <h4 class="modal-title" id="myModalLabel">新疆维吾尔自治区司法行政机关履职情况满意度评价</h4>
+      </div>
+      <div class="modal-body-survey">
+
+        <form action="" class="survey-form">
+          <div class="form-group">
+            <div class="choice-title clearfix">
+              <div class="choice-name pull-left">司法行政机关选择</div>
+              <div class="choice-attention-one pull-left" id="choice-city">请选择司法行政机关!</div>
+            </div>
+            <div class="address-content">
+            <div class="location-image">新疆维吾尔自治区：</div>
+              <select class="address-main" id="address-country">
+              <option >请选择</option>
+              
+                <option value="eab9e51d007143208943c8bb9c42bbb0">昌吉回族自治州司法局</option>
+                
+                <option value="eab9e51d1a84476d8ae6eaefa2978726">和田地区司法局</option>
+                
+                <option value="eab9e51d1b7b4713b6e10f0a266718ef">巴音郭楞蒙古自治州司法局</option>
+                
+                <option value="eab9e51d30204d2c8694107dc77c855d">吐鲁番市司法局</option>
+                
+                <option value="eab9e51d41b24ab1b837963e776cb082">自治区直辖县级行政区划司法局</option>
+                
+                <option value="eab9e51d5b584977abecbbf2f5a50995">博尔塔拉蒙古自治州司法局</option>
+                
+                <option value="eab9e51d752b456da9b101a238a7595b">伊犁哈萨克自治州司法局</option>
+                
+                <option value="eab9e51d787c4d3f8f57aded33e1561c">喀什地区司法局</option>
+                
+                <option value="eab9e51d8fe14ebdbc9b1da0dfc6df14">乌鲁木齐市司法局</option>
+                
+                <option value="eab9e51dcd5b451d8a4c6d8abbdb52c3">哈密市司法局</option>
+                
+                <option value="eab9e51de20a40c98687087cacbcfa0b">阿克苏地区司法局</option>
+                
+                <option value="eab9e51de5f44af6a8a919b0f03c2819">阿勒泰地区司法局</option>
+                
+                <option value="eab9e51decd245e3bfc6fd3c3efee728">克拉玛依市司法局</option>
+                
+                <option value="eab9e51def0e47399965afe9da7b2407">克孜勒苏柯尔克孜自治州司法局</option>
+                
+                <option value="eab9e51df4744c57b52c23985507279e">塔城地区司法局</option>
+                
+              </select>
+              <select class="address-city" id="address-city" name="bpjjg">
+              </select>
+            </div>
+          </div>
+          <div class="form-group" id="satisfactionEvaluation">
+              <div class="choice-title clearfix">
+                <div class="choice-name pull-left active">请对<span class="colour">机关履职</span>情况进行满意度评价</div>
+                <!-- <div class="comment-attention pull-left">*</div> -->
+              </div>
+              <div class="form-group-body">
+                <div id="takes-office" class="from-choose clearfix">
+                  <div class="pull-left choose-tit">你的满意度：</div>
+                  <ul class="pull-left from-choose-wrap">
+                    <li class="pull-left option-box" name="myd"  value="NotSatisfied">不满意</li>
+                    <li class="pull-left option-box" name="myd"  value="Satisfied">基本满意</li>
+                    <li class="pull-left option-box active" name="myd"  value="MostSatisfied">满意</li>
+                  </ul>
+                </div>
+                <div id="takes-office-form" class="from-choose-other-list">
+                  <div class="form-choose-list clearfix">
+                    <div class="pull-left list-choose-tit">服务态度：</div>
+                    <ul class="pull-left from-choose-wrap">
+                      <li class="pull-left list-option-box" name="fwtd"  value="NotSatisfied">不满意</li>
+                      <li class="pull-left list-option-box" name="fwtd"  value="Satisfied">基本满意</li>
+                      <li class="pull-left list-option-box active" name="fwtd"  value="MostSatisfied">满意</li>
+                    </ul>
+                  </div>
+                  <div class="form-choose-list clearfix">
+                    <div class="pull-left list-choose-tit">效率：</div>
+                    <ul class="pull-left from-choose-wrap">
+                      <li class="pull-left list-option-box" name="xl"  value="NotSatisfied">不满意</li>
+                      <li class="pull-left list-option-box" name="xl"  value="Satisfied">基本满意</li>
+                      <li class="pull-left list-option-box active" name="xl"  value="MostSatisfied">满意</li>
+                    </ul>
+                  </div>
+                  <div class="form-choose-list clearfix">
+                    <div class="pull-left list-choose-tit">环境：</div>
+                    <ul class="pull-left from-choose-wrap">
+                      <li class="pull-left list-option-box" name="hj"  value="NotSatisfied">不满意</li>
+                      <li class="pull-left list-option-box" name="hj"  value="Satisfied">基本满意</li>
+                      <li class="pull-left list-option-box active" name="hj"  value="MostSatisfied">满意</li>
+                    </ul>
+                  </div>
+                  <div class="form-choose-list clearfix">
+                    <div class="pull-left list-choose-tit">能力：</div>
+                    <ul class="pull-left from-choose-wrap">
+                      <li class="pull-left list-option-box" name="nl"  value="NotSatisfied">不满意</li>
+                      <li class="pull-left list-option-box" name="nl"  value="Satisfied">基本满意</li>
+                      <li class="pull-left list-option-box active" name="nl"  value="MostSatisfied">满意</li>
+                    </ul>
+                  </div>
+                  <div class="form-choose-list clearfix">
+                    <div class="pull-left list-choose-tit">廉洁：</div>
+                    <ul class="pull-left from-choose-wrap">
+                      <li class="pull-left list-option-box" name="lj"  value="NotSatisfied">不满意</li>
+                      <li class="pull-left list-option-box" name="lj"  value="Satisfied">基本满意</li>
+                      <li class="pull-left list-option-box active" name="lj"  value="MostSatisfied">满意</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-other clearfix">
+                <div class="pull-left other-label">其他意见建议：</div>
+                <textarea class="pull-left form-control" name="qtyjyjy" id="lz-appraise-text" placeholder="针对服务的态度、效率、环境、能力、廉洁等方面的具体意见和建议"
+                  data-parsley-required="true"></textarea>
+              </div>
+            </div>
+            <div class="fom-group" id="JobSatisfactionEvaluation">
+              <div class="choice-title clearfix">
+                <div class="choice-name pull-left active">请对<span class="colour">以下工作</span>进行满意度评价</div>
+                <!-- <div class="comment-attention pull-left">*</div> -->
+              </div>
+              <div class="job-evaluate-wrap">
+                <ul class="job-teb-wrap clearfix">
+                  <li class="pull-left teb-item active" name="evaluationType" value="rmtj">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">人民调解</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="flyz">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">法律援助</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="gz">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">公证</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="sfjd">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">司法鉴定</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="zc">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">仲裁</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="ls">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">律师</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item" name="evaluationType" value="gjtyflzyzgks">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">国家统一法律<br>职业资格考试</div>
+                    </a>
+                  </li>
+                  <li class="pull-left teb-item"  name="evaluationType" value="pfxc">
+                    <a class="teb-box" href="javascript:;">
+                      <div class="pic-box"></div>
+                      <div class="text">普法宣传</div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="job-evaluate-content">
+                  <div class="form-group-body">
+                    <div id="job-evaluate" class="from-choose clearfix">
+                      <div class="pull-left choose-tit">你的满意度：</div>
+                      <ul class="pull-left from-choose-wrap">
+                        <li class="pull-left option-box" name="myd"  value="NotSatisfied">不满意</li>
+                        <li class="pull-left option-box" name="myd"  value="Satisfied">基本满意</li>
+                        <li class="pull-left option-box active" name="myd"  value="MostSatisfied">满意</li>
+                      </ul>
+                    </div>
+                    <div id="job-evaluate-form" class="from-choose-other-list">
+                      <div class="form-choose-list clearfix">
+                        <div class="pull-left list-choose-tit">服务态度：</div>
+                        <ul class="pull-left from-choose-wrap">
+                          <li class="pull-left list-option-box" name="fwtd"  value="NotSatisfied">不满意</li>
+                          <li class="pull-left list-option-box" name="fwtd"  value="Satisfied">基本满意</li>
+                          <li class="pull-left list-option-box active" name="fwtd"  value="MostSatisfied">满意</li>
+                        </ul>
+                      </div>
+                      <div class="form-choose-list clearfix">
+                        <div class="pull-left list-choose-tit">效率：</div>
+                        <ul class="pull-left from-choose-wrap">
+                          <li class="pull-left list-option-box"  name="xl"  value="NotSatisfied">不满意</li>
+                          <li class="pull-left list-option-box" name="xl"  value="Satisfied">基本满意</li>
+                          <li class="pull-left list-option-box active" name="xl"  value="MostSatisfied">满意</li>
+                        </ul>
+                      </div>
+                      <div class="form-choose-list clearfix">
+                        <div class="pull-left list-choose-tit">环境：</div>
+                        <ul class="pull-left from-choose-wrap">
+                          <li class="pull-left list-option-box" name="hj"  value="NotSatisfied">不满意</li>
+                          <li class="pull-left list-option-box" name="hj"  value="Satisfied">基本满意</li>
+                          <li class="pull-left list-option-box active" name="hj"  value="MostSatisfied">满意</li>
+                        </ul>
+                      </div>
+                      <div class="form-choose-list clearfix">
+                        <div class="pull-left list-choose-tit">能力：</div>
+                        <ul class="pull-left from-choose-wrap">
+                          <li class="pull-left list-option-box" name="nl"  value="NotSatisfied">不满意</li>
+                          <li class="pull-left list-option-box" name="nl"  value="Satisfied">基本满意</li>
+                          <li class="pull-left list-option-box active" name="nl"  value="MostSatisfied">满意</li>
+                        </ul>
+                      </div>
+                      <div class="form-choose-list clearfix">
+                        <div class="pull-left list-choose-tit">廉洁：</div>
+                        <ul class="pull-left from-choose-wrap">
+                          <li class="pull-left list-option-box" name="lj"  value="NotSatisfied" >不满意</li>
+                          <li class="pull-left list-option-box" name="lj"  value="Satisfied">基本满意</li>
+                          <li class="pull-left list-option-box active" name="lj"  value="MostSatisfied">满意</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group-other clearfix">
+                    <div class="pull-left other-label">其他意见建议：</div>
+                    <textarea class="pull-left form-control" id="job-appraise-text"
+                      placeholder="针对服务的态度、效率、环境、能力、廉洁等方面的具体意见和建议" data-parsley-required="true"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-title-label">验证码</div>
+              <div class="address-content clearfix">
+                <input type="text" class="code-main pull-left code-outnone" id="code-focus"
+                  data-parsley-required="true">
+                <div class="code-ensure pull-left" id="code-pic" style="background-image: url(/Kaptcha.jpg?v=1635300157134);"></div>
+                <div class="code-see pull-left">看不清,点击</div>
+                <div class="code-change pull-left">换一换</div>
+								<div class="choice-attention-one pull-left" id="choice-code" style="display:none; width: auto; height: auto; padding-left: 5px; font-size: 16px; line-height: 100%; color: #ff6d56;">验证码错误,请重新输入!</div>
+							</div>
+              <div class="evaluate-explain">说明：请客观提出满意度评价，并且自觉遵守国家有关法律法规，不得发表违法和不适当的言论。</div>
+            </div>
+
+            <div class="form-group submit">
+            	
+              <div class="submit-advise" style='background:#f5f5f5;filter:alpha(opacity=70); opacity:0.7;'><span style='color:#53a4f4;'>确定提交</span></div>
+              <div class="advise-cancel">取消评价</div>
+            </div>
+          </form>
+        <form action="" class="success-form">
+          <div class="form-group">
+            <div class="sucess-image"></div>
+            <div class="success-title">提交成功，感谢您的评价！</div>
+          </div>
+          <div class="form-group submit">
+            <button class="submit-btn" type="submit" id="close-cancel" data-dismiss="modal">关闭</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="footer inverted">
+  <div class="container footer-wrap">
+    <div class="copyright">
+      <div class="img-wrap">
+        <a href="#" class="reg-item"><img src="/prototype/12348-xinjiang-website/static/assets/images/pic_dzjg.png" alt=""></a>
+      </div>
+      <div class="text">
+        <p>版权所有：新疆维吾尔自治区司法厅</p>
+        <p>地址：乌鲁木齐市天山区新泉街626号 邮编：830002</p>
+         <p><span>政府网站标识码 bm13000003</span></p>
+      </div>
+    </div>
+    <div class="reginfo">
+      <div class="text">
+        <p>京ICP备 13016994号-6</p>
+        <p>技术支持：<a href="http://www.homolo.com" style="color:rgba(255,255,255,.6);" target="_blank">上海同道信息技术有限公司</a></p>
+      </div>
+      <div class="img-wrap">
+       <!--  <a href="#" class="reg-item">
+          <img src="/prototype/12348-xinjiang-website/static/assets/images/jiucuo.png" alt="">
+        </a> -->
+        <script id="_jiucuo_" sitecode="bm13000003" src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+$(function () {
+  //  $('.survey-form').parsley();
+  $('.code-change').on('click',function () {
+    $('#code-pic').attr("style","background-image: url(/Kaptcha.jpg?v="+new Date().getTime()+");");
+  })
+
+  // 履职评价的js
+
+  $('#takes-office .option-box').on('click', function () {
+   let idx = $(this).index();
+   console.log('hehe', idx);
+   if (idx === 2) {
+     $('#takes-office-form').hide();
+   } else {
+     $('#takes-office-form').show();
+   }
+   $(this).addClass('active').siblings().removeClass('active');
+ });
+
+ $('#takes-office-form').on('click', '.list-option-box', function () {
+   $(this).addClass('active').siblings().removeClass('active');
+ });
+
+ // 以下工作
+ $('#job-evaluate .option-box').on('click', function () {
+   let idx = $(this).index();
+   console.log('hehe', idx);
+   if (idx === 2) {
+     $('#job-evaluate-form').hide();
+   } else {
+     $('#job-evaluate-form').show();
+   }
+   $(this).addClass('active').siblings().removeClass('active');
+ });
+
+ $('#job-evaluate-form').on('click', '.list-option-box', function () {
+   $(this).addClass('active').siblings().removeClass('active');
+ });
+
+ // teb切换
+
+ $('.job-teb-wrap').on('click', '.teb-item', function() {
+   console.log('hehe')
+   $(this).addClass('active').siblings().removeClass('active');
+ });
+ $('.clear-box').on('click', function() {
+   $(this).parent("li").hide();
+ });
+
+ // 取消评价
+ $('.advise-cancel').click(function() {
+   $('.modal').click();
+ });
+
+ $("#submit-advise").click(function () {
+	   debugger
+     var country = $('#address-country').val();
+     var city = $('#address-city').val();
+     var code = $('#code-focus').val()
+     $("#choice-city").hide()
+     $("#choice-code").hide()
+     var flag = true;
+     if (country == 0 || city == 0) {
+         $("#choice-city").show()
+         flag = false
+     }
+     if (code == '' || code == null) {
+         $("#choice-code").show()
+         flag = false
+     }
+     
+     if (flag) {
+         var obj = serializeArray();
+         obj.code = code;
+         $.ajax({
+             url: '/service/rest/fw.SatisfactionEvaluation/collection/saveSatisfactionEvaluation',
+             type: 'POST',
+             dataType: 'json',
+             data: {
+                 'params': JSON.stringify(obj)
+             },
+             success: function (data) {
+                 debugger
+                 if (data.code == 1) {
+                     $('#code-pic').attr("style", "background-image: url(/Kaptcha.jpg?v=" + new Date().getTime() + ");");
+                     $("input[type=reset]").trigger("click");
+                     $(".survey-form").hide();
+                     $(".success-form").show();
+
+                 } else {
+                     alert(data.description);
+                 }
+             },
+             error: function () {
+                 alert("错误，请联系管理员！")
+             }
+         })
+     }
+
+
+ })
+
+ function serializeArray(){
+	   var evaluation = {};
+	   var satisfactionEvaluation = {};
+	   var JobSatisfactionEvaluation = {};
+	   $("#satisfactionEvaluation").find("li").each(function(i){
+		   if($(this).hasClass("active")){
+		   var name = $(this).attr("name");
+		   var value = $(this).attr("value");
+		   satisfactionEvaluation[name]=value;
+		   }
+	   })
+	   var bpjjg = $("#address-city").val();
+	   var qtyjyjy = $("#lz-appraise-text").val();
+	   satisfactionEvaluation.bpjjg=bpjjg;
+	   satisfactionEvaluation.qtyjyjy=qtyjyjy;
+	   evaluation.satisfactionEvaluation = satisfactionEvaluation;
+	   $("#JobSatisfactionEvaluation").find("li").each(function(i){
+		   if($(this).hasClass("active")){
+		   var name = $(this).attr("name");
+		   var value = $(this).attr("value");
+		   JobSatisfactionEvaluation[name]=value;
+		   }
+	   })
+	   var jobqtyjyjy = $("#job-appraise-text").val();
+	   JobSatisfactionEvaluation.qtyjyjy = jobqtyjyjy;
+	   evaluation.JobSatisfactionEvaluation= JobSatisfactionEvaluation;
+	   return evaluation;
+ }
+ 
+ 
+ 
+  
+  $("#address-country").change(function(){
+		$("#address-city").empty();
+		$("#address-city").append("<option value='0'>请选择</option>");
+		$.ajax( {
+			url:'/service/rest/fw.SatisfactionEvaluation/collection/getOrganizations',
+			type:'GET',
+			dataType:'json',
+			data:{
+			'id':this.value	
+			},
+			success:function(data) {
+				debugger
+				var html="";
+				for(var i=0;i<data.length;i++){
+					html += "<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+				}
+				$("#address-city").append(html);
+			},
+			error : function() {
+				alert("错误，请联系管理员！")
+			}
+	})
+})
+  
+/*   var city = [
+    ["漕河泾", "桂林路", "宜山路", "齐来大厦"],
+    ["七宝", "七宝", "七宝", "七宝"],
+    ["莘庄", "莘庄", "莘庄", "莘庄"],
+    ["虹桥", "虹桥", "虹桥", "虹桥"]
+  ];
+  $(".address-main").change(function () {
+    var sltCountry = document.getElementsByClassName('address-main')[0]; //获得国家下拉框的对象
+    var sltCity = document.getElementsByClassName('address-city')[0]; //获得城市下拉框的对象
+    console.log(sltCountry, sltCity)
+    var country = city[sltCountry.selectedIndex - 1]; //得到对应国家的城市数组
+    sltCity.length = 1; //清空城市下拉框，仅留提示选项。
+    //通过for循环，将城市中的值填充到城市下拉框中
+    for (var i = 0; i < country.length; i++) {
+      sltCity[i + 1] = new Option(country[i], country[i]);
+    }
+  }) */
+
+})
+</script>
+  </div>
+  <script src="/prototype/12348-xinjiang-website/static/lib/mod.js"></script>
+<script type="text/javascript" src="/prototype/12348-xinjiang-website/pkg/modules.js"></script>
+<script type="text/javascript" src="/prototype/12348-xinjiang-website/pkg/components.js"></script>
+<script>
+  var $, jQuery
+  $ = jQuery = require('node_modules/jquery/dist/jquery')
+  var time = 3000
+  var noticeScroll = function () {
+    var $parent = $('.slide-notice')
+    var $first = $parent.find('li:first')
+    var height = $first.height()
+    $first.stop().animate({
+      marginTop: -height + 'px'
+    }, 500, function () {
+      $first.css('marginTop', 0).appendTo($parent)
+    })
+  }
+  var timer = window.setInterval(noticeScroll, time)
+  $('.slide-notice').mouseover(function () {
+    clearInterval(timer)
+  }).mouseout(function () {
+    timer = window.setInterval(noticeScroll, time)
+  })
+
+
+    var main = require('src/main');
+    // mobile use navPanel
+    main.navPanel.init();
+
+
+  var $, jQuery
+  $ = jQuery = require('node_modules/jquery/dist/jquery')
+  $('.with-sub').find('.item').on('click',function (){
+    if($(this).parent().hasClass('active')){
+      $(this).parent().removeClass('active');
+    }else {
+      $('.with-sub').removeClass('active');
+      $(this).parent().addClass('active');
+    }
+    if($(this).parent().hasClass('active')){
+      $('.sub-list').slideUp();
+      $(this).parent().find('.sub-list').slideDown(200);
+    }else {
+      $(this).parent().find('.sub-list').slideUp(200);
+    }
+  });
+</script>
+</body>
+
+</html>

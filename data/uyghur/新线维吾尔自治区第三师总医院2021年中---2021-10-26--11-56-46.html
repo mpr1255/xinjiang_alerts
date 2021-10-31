@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="renderer" content="webkit" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="width=device-width,user-scalable=no" name="viewport" /><meta name="keywords" content="华招网，招标公告，招标动态，中标结果，集中采购" /><meta name="description" content="华招医药网，及时提供全国各地医药招标信息、招标动态，提供项目开标数据，横向/纵向分析，发布招商，全国的产品投标数据库，为企业提供及时、准确的产品投标中标价格, 帮助企业制定合理的报价，增加企业利润。" /><title>
+	华招医药网--新线维吾尔自治区第三师总医院2021年中药配方颗粒采购项目的竞争性磋商公告
+</title>
+    <link href="/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/home/css/style.css" />
+    <link href="/home/artDialog/artDialog/skins/blue.css" rel="stylesheet"
+        type="text/css" />
+    <script src="/js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="/home/artDialog/artDialog/artDialog.js" type="text/javascript"></script>
+    <script src="/home/artDialog/artDialog/plugins/iframeTools.js"
+        type="text/javascript"></script>
+    <script src="/home/js/P/jquery.animate-colors-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?865ab4d927380801282222f10122531e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        //收藏本站
+        function addFavorite() {
+            var title = "华招医药网", url = "https://www.emed.cc";
+            try {
+                window.external.addFavorite(url, title);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");
+                }
+                catch (e) {
+                    art.dialog.tips("抱歉，您所使用的浏览器无法完成此操作。<br/>加入收藏失败，请使用Ctrl+D进行添加", 3);
+                }
+            }
+        }
+        //设为首页
+        function SetHome(obj, url) {
+            var evt = window.event || arguments.callee.caller.arguments[0];
+            evt.stopPropagation ? evt.stopPropagation() : (evt.cancelBubble = true);
+            try {
+                obj.style.behavior = 'url(#default#homepage)';
+                obj.setHomePage(url);
+            } catch (e) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    } catch (e) {
+                        art.dialog.tips("此操作被浏览器拒绝！<br/>请在浏览器地址栏输入“about:config”并回车<br/>然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。", 3);
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage', homePage);
+                }
+                else {
+                    art.dialog.tips("抱歉，您所使用的浏览器无法完成此操作。<br/>您需要手动将【" + url + "】设置为首页。", 3);
+                }
+            }
+        }
+
+        function Next(num, title, type, canshu) {
+            if (num == null) {
+                num = '-1';
+            }
+            if (title == null) {
+                title = '温馨提示';
+            }
+            art.dialog.open('/home/InfoMessage.aspx?role=' + num, {
+                title: title,
+                lock: true,
+                id: 'InfoMessage',
+                width: 530,
+                height: 190,
+
+                close: function () {
+                    var url = art.dialog.data('url');
+                    if (url != undefined) {
+                        if (type != null) {
+                            if (url.indexOf("memberRegister.aspx") == -1) {
+                                //url += "?tkey=" + type + "&" + canshu;
+                                url += "?tkey=" + type;
+                                if (canshu != null) {
+                                    url += "&" + canshu;
+                                }
+                            }
+                        }
+                        $("#hideurl_gz").attr("href", url)[0].click();
+                    }
+                }
+            }, false);
+        }
+        //退出登录
+        function outLogin() {
+            $.ajax({
+                type: "post",
+                url: '/home/Index.ashx',
+                dataType: "text",
+                data: { MenuType: "outLogin" },
+                success: function (data) {
+                    $(".header_box ul li:eq(0)").remove();
+                    $(".login").show();
+
+                    $("#publishRegister").text("立即注册发布产品");
+                    $("#publishRegister").attr("href", '/home/memberRegister.aspx');
+                }
+            });
+        }
+    </script>
+    
+    <link href="css/page.css" rel="stylesheet" type="text/css" />
+    <script src="../js_new/jquery.pagination.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //添加 keywords关键字
+        try {
+            if ("采购,供应,中药,生产,财政".length > 0) {
+                //去掉公共页面的 keywords
+                $("head meta[name='keywords']").remove();
+                $("head meta:last").after('<meta name="keywords" content="采购,供应,中药,生产,财政" />');
+            }
+        }
+        catch (Error) {
+            //alert(Error.Message);
+        }
+
+        var ret = false;
+        function CallbackInfo(page_id, jq) {
+            $.ajax({
+                type: "post",
+                url: "Handler1.ashx",
+                dataType: "text",
+                async: false,
+                data: { MenuType: "IsLogin" },
+                success: function (data) {
+                    if (data != "0") { //已登录
+                        clickOnAcitve(page_id);
+                    }
+                    else { //没有登录
+                        //var canshu = window.location.href.split('?')[1];
+                        var canshu = $("#ctl00_ContentPlaceHolder1_hideQuery").val();
+                        Next(null, null, 31, canshu);
+                        clickOnAcitve(0);
+                    }
+                }
+            });
+        }
+        function clickOnAcitve(pageindex) {
+            var imageLoadding = "<div style=\"text-align:center; margin-top:100px;\"><img src=\"images/loading_emed.gif\" alt=\"\"></div>";
+            $("#divDt").html(imageLoadding);
+            var Subjectid = document.getElementById("ctl00_ContentPlaceHolder1_hidSubjectid").value;
+            //通过ajax访问后台的获取公告动态
+            $.ajax({
+                type: "post",
+                url: "Handler1.ashx",
+                data: { menuType: "MoreSubjectDT", Subjectid: Subjectid, pageindex: pageindex + 1, pagesize: 10 },
+                async: false, //同步
+                success: function (data) {
+                    if (data != "") {
+                        var rData = data.split("#");
+                        $("#divDt").empty().html(rData[0]);
+                        if (rData[1] == "0") {
+                            $("#divDt").html("暂无相关信息");
+                            $("#divDt").height("35");
+                            $("#Pagination").hide();
+                        }
+                        else {
+                            $("#Pagination").show().pagination(rData[1], {
+                                callback: CallbackInfo,
+                                prev_text: '上一页',
+                                next_text: '下一页',
+                                items_per_page: rData[2], //每页显示数量
+                                num_display_entries: 4,
+                                current_page: pageindex,
+                                num_edge_entries: 2
+                            });
+                        }
+                    }
+                    else {
+                        $("#divDt").html("暂无相关信息");
+                        $("#divDt").height("35");
+                        $("#Pagination").hide();
+
+                    }
+                },
+                error: function (response, err) {
+                }
+            });
+        }
+
+
+        function downFileUrlDT(projectId, urlNum) {
+            $.ajax({
+                type: "post",
+                url: "Handler1.ashx",
+                dataType: "text",
+                data: { MenuType: "downFileUrlDT", projectid: projectId, urlNum: urlNum },
+                async: false, //同步
+                success: function (data) {
+                    if (data == "未登陆")//刷新页面
+                    {
+                        //Next();
+                        //var canshu = window.location.href.split('?')[1];
+                        var canshu = $("#ctl00_ContentPlaceHolder1_hideQuery").val();
+                        Next(null, null, 31, canshu);
+                    } 
+                    else if (data == "无权限") {
+                        Next(28);
+                    }
+                    else {
+                        if (data != "") {
+                            window.open(data);
+                        }
+                    }
+                }
+            });
+        }
+
+        //        $(function () {
+        //            clickOnAcitve(0);
+        //        })
+
+        window.onload = function () {
+            clickOnAcitve(0);
+        };
+       
+    </script>
+</head>
+<body>
+    <a id="hideurl_gz" style="display: none"></a>
+    <!--头部-->
+    <div class="header_top">
+        <div class="header_box">
+            <p>
+                欢迎您进入华招医药网！<span>&nbsp;</span><span><a style="color: #666;" href="javascript:addFavorite();">收藏本站</a></span></p>
+            <ul>
+                <li><a style="color: #666;" href="javascript:void(0);" onclick="SetHome(this,'http://www.emed.cc');">
+                    设为首页</a><span>|</span></li>
+                <li><a href="/home/ServiceContent.aspx">服务介绍</a><span>|</span></li>
+                <li><a href="/download.html?isweb=True&isDownloadSet=False" target="_blank">下载中心</a><span>|</span></li>
+                <li><a href="/home/memberRegister.aspx">注册会员</a></li>
+            </ul>
+            <script type="text/javascript">
+                //判断是否登录
+                $.ajax({
+                    type: "post",
+                    url: '/home/Index.ashx',
+                    dataType: "text",
+                    data: { MenuType: "IsLogin" },
+                    success: function (data) {
+                        if (data != "0") { //已登录
+                            var li = "<li>欢迎您！" + data;
+                            li += ' <a href="javascript:outLogin();">退出登录</a>';
+                            li += '<span>|</span>';
+                            li += '<a href="/Index.aspx">会员首页</a>';
+                            li += '<span>|</span></li>';
+                            $(".header_box ul").prepend(li);
+                            //隐藏登录
+                            $(".login").hide();
+
+                            //$("#publishRegister").text("立即发布产品");
+                            //$("#publishRegister").attr("href", '/home/LinkJudge.aspx');
+
+                        }
+                        else { //没有登录
+                            if ($(".header_box ul li").length > 3) {
+                                $(".header_box ul li:eq(0)").remove();
+                                $(".login").show();
+                            }
+                            //$("#publishRegister").text("立即注册发布产品");
+                            //$("#publishRegister").attr("href", '/home/memberRegister.aspx');
+                        }
+                    }
+                });
+            </script>
+        </div>
+        <div class="header_nav">
+            <div class="navbox">
+                <div class="logo">
+                    <a href="/HomeIndex.html">
+                        <img src="/home/images/logo.png" alt="江苏华招网" /></a>
+                </div>
+                <ul>
+                    <li><a href="/HomeIndex.html">首页</a> </li>
+                    <li id="zbli"><a href="/home/InfoList-1-0.html">招标信息
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/InfoList-1-0.html">招标公告</a> <a href="/home/InfoList-2-0.html">
+                                招标动态</a>
+                        </div>
+                    </li>
+                    <li><a href="/home/LinkJudge.aspx?tkey=24" class="linkJudge">招标数据
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/LinkJudge.aspx?tkey=24" class="linkJudge">招标目录</a>
+                            <a href="/home/LinkJudge.aspx?tkey=4" class="linkJudge">开标结果</a>
+                            <a href="/home/LinkJudge.aspx?tkey=5" class="linkJudge">中标结果</a>
+                            <a href="/home/LinkJudge.aspx?tkey=25" class="linkJudge">限价结果</a>
+                            <a href="/home/LinkJudge.aspx?tkey=26" class="linkJudge">调价结果</a>
+                            <a href="/home/LinkJudge.aspx?tkey=27" class="linkJudge">资审结果</a>
+                            <a href="/home/LinkJudge.aspx?tkey=28" class="linkJudge">其他结果</a>
+                        </div>
+                    </li>
+                    <li><a href="/home/LinkJudge.aspx?tkey=6" class="linkJudge">政策文件
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/LinkJudge.aspx?tkey=6" class="linkJudge">基药信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=7" class="linkJudge">医保信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=20" class="linkJudge">新农合信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=21" class="linkJudge">低价药信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=22" class="linkJudge">两票制信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=8" class="linkJudge">一致性评价</a>
+                            <a href="/home/LinkJudge.aspx?tkey=34" class="linkJudge">中国上市药品</a>
+                            <a href="/home/LinkJudge.aspx?tkey=16" class="linkJudge">CDE收审</a>
+                            <a href="/home/LinkJudge.aspx?tkey=11" class="linkJudge">药监信息</a>
+                            <a href="/home/LinkJudge.aspx?tkey=23" class="linkJudge">其他信息</a>
+                        </div>
+                    </li>
+                    <li><a href="/home/LinkJudge.aspx?tkey=18" class="linkJudge">华招分析
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/LinkJudge.aspx?tkey=3&type=4" class="linkJudge">分析报告</a>
+                            <a href="/home/LinkJudge.aspx?tkey=18" class="linkJudge">资讯周报</a>
+                            <a href="/home/LinkJudge.aspx?tkey=19" class="linkJudge">行业期刊</a>
+                        </div>
+                    </li>
+                    <li><a href="/home/LinkJudge.aspx?tkey=9" class="linkJudge">政策资讯
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/LinkJudge.aspx?tkey=9" class="linkJudge">政策法规</a>
+                            <a href="/home/LinkJudge.aspx?tkey=10" class="linkJudge">行业资讯</a>
+                        </div>
+                    </li>
+                    <li><a href="/home/LinkJudge.aspx?tkey=Index" class="linkJudge">华招尊享
+                        <img src="/home/images/push.png" alt="江苏华招网" /></a>
+                        <div class="revisblock">
+                            <a href="/home/LinkJudge.aspx?tkey=VIP1" class="linkJudge">临床路径</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP2" class="linkJudge">年报排名</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP5" class="linkJudge">FDA橙皮书</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP3" class="linkJudge">单病种付费</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP6" class="linkJudge">综合品种分析</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP7" class="linkJudge">品种调研</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP4" class="linkJudge">药品说明书</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP8" class="linkJudge">临床试验数据</a>
+                            <a href="/home/LinkJudge.aspx?tkey=VIP9" class="linkJudge">模拟评分</a>
+                            <a href="/home/LinkJudge.aspx?tkey=Index" class="linkJudge">更多</a>
+                        </div>
+                    </li>
+                    
+                    <li id="wzggli"><a href="/home/WebsiteList.html">网站公告</a> </li>
+                </ul>
+                <div class="right_login">
+                    <div class="serach" id="searchDiv" style="">
+                        <input type="text" name="" style="font-size: 14px; line-height: 20px; height: 20px;
+                            margin-top: 8px; color: #fff;" value="" placeholder="请输入关键词搜索" id="txtkeyWord" />
+                        <a id="Search" style="top: 6px; cursor: pointer;">
+                            <img src="/home/images/search.png" alt="江苏华招网" /></a>
+                    </div>
+                    <div class="login">
+                        <a title="登录" style="color: #0165dd; display: block; width: 62px; height: 36px;"
+                            href="/emedlogin.aspx">登 录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <form name="aspnetForm" method="post" action="InfoDetailDT-1000116125.html?id=1000116125" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODcxNzk5NjEzD2QWAmYPZBYCAgEPZBYCAgEPZBYEAgMPFgIeCWlubmVyaHRtbAXkOTxwIGNsYXNzPSJ0ZWR0aXRsZSI+5paw57q/57u05ZC+5bCU6Ieq5rK75Yy656ys5LiJ5biI5oC75Yy76ZmiMjAyMeW5tOS4reiNr+mFjeaWuemil+eykumHh+i0remhueebrueahOernuS6ieaAp+eji+WVhuWFrOWRijwvcD48cCBjbGFzcz0idGVkc291cmNlIj48c3Bhbj7kv6Hmga/mnaXmupDvvJo8YSBocmVmPSdodHRwOi8vY2NncC1iaW5ndHVhbi5nb3YuY24vWmN5QW5ub3VuY2VtZW50L1pjeUFubm91bmNlbWVudDIvWmN5QW5ub3VuY2VtZW50MzAxMS9SdXAzZ0pkL2E0OVI5cXdubzllRTVnPT0uaHRtbCcgdGFyZ2V0PSdfYmxhbmsnPuWFteWbouaUv+W6nOmHh+i0ree9kTwvYT48L3NwYW4+PHNwYW4gc3R5bGU9Im1hcmdpbi1sZWZ0OiA1MHB4OyI+5Y+R5biD5pel5pyf77yaMjAyMS0xMC0yNjwvc3Bhbj48ZGl2IGNsYXNzPSJ0ZW50ZXh0Ij48UD7pobnnm67mpoLlhrUmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsgPC9QPg0KPFA+Jm5ic3A7Jm5ic3A7Jm5ic3A7IOesrOS4ieW4iOaAu+WMu+mZojIwMjHlubTkuK3oja/phY3mlrnpopfnspLph4fotK3pobnnm67ph4fotK3pobnnm67nmoTmvZzlnKjkvpvlupTllYblupTlnKjkvpvlupTllYbnmbvlvZXmlL/ph4fkupHlubPlj7BodHRwczovL3d3dy56Y3lnb3YuY27ojrflj5bph4fotK3mlofku7bvvIzlubbkuo4yMDIx5bm0MTHmnIgwNeaXpSAxNjowMO+8iOWMl+S6rOaXtumXtO+8ieWJjeaPkOS6pOWTjeW6lOaWh+S7tuOAgiZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyA8L1A+DQo8UD7kuIDjgIHpobnnm67ln7rmnKzmg4XlhrU8L1A+DQo8UD7pobnnm67nvJblj7fvvJpCM1NbMjAyMV00Mjblj7ctMDAxPC9QPg0KPFA+6aG555uu5ZCN56ew77ya56ys5LiJ5biI5oC75Yy76ZmiMjAyMeW5tOS4reiNr+mFjeaWuemil+eykumHh+i0remhueebrjwvUD4NCjxQPumihOeul+mHkemine+8iOWFg++8ie+8mjE1ODg0MDEuNDg8L1A+DQo8UD7mnIDpq5jpmZDku7fvvIjlhYPvvInvvJrmnKzmoIfpobnmi5vkuK3oja/popfnspLljZXku7fvvIzph4fotK3pobnnm67orr7nva7ljZXpobnljZXku7fmjqfliLbku7fvvIzkvpvlupTllYbljZXpobnkuK3oja/popfnspLmiqXku7fkuI3lvpfpq5jkuo7kuK3oja/popfnspLljZXpobnmjqfliLbku7fjgII8L1A+DQo8UD7ph4fotK3pnIDmsYLvvJrnrKzkuInluIjlm77mnKjoiJLlhYvluILljLvnlpfmnI3liqHlhbHlkIzkvZPkuK3oja/phY3mlrnpopfnspLph4fotK0s5YWx6K6h57qmMjAw56eN77ybPC9QPg0KPFA+5qCH6aG55ZCN56ewOuesrOS4ieW4iOaAu+WMu+mZojIwMjHlubTkuK3oja/phY3mlrnpopfnspLph4fotK3pobnnm648L1A+DQo8UD7mlbDph4865LiA5om5PC9QPg0KPFA+6aKE566X6YeR6aKd77yI5YWD77yJOjE1ODg0MDEuNDg8L1A+DQo8UD7nroDopoHmnI3liqHmj4/ov7DmiJbpobnnm67ln7rmnKzmpoLlhrXku4vnu43vvJrnrKzkuInluIjlm77mnKjoiJLlhYvluILljLvnlpfmnI3liqHlhbHlkIzkvZPkuK3oja/phY3mlrnpopfnspLph4fotK3vvIzlhbfkvZPph4fotK3lhoXlrrnor6bop4Hph4fotK3mlofku7bnrKzkuInpg6jph4fotK3pnIDmsYLjgII8L1A+DQo8UD7lpIfms6jvvJrmnKzpobnnm67kvpvotKflkajmnJ/kuLrkuInlubTvvIzmnKzmoIfpobnmi5vkuK3oja/popfnspLljZXku7fvvIzph4fotK3pobnnm67orr7nva7ljZXpobnljZXku7fmjqfliLbku7fvvIzkvpvlupTllYbljZXpobnkuK3oja/popfnspLmiqXku7fkuI3lvpfpq5jkuo7kuK3oja/popfnspLljZXpobnmjqfliLbku7fvvIzlkKbliJnmjInml6DmlYjmipXmoIflpITnkIbjgII8L1A+DQo8UD4mbmJzcDsmbmJzcDsmbmJzcDsg5pys6aG555uu77yI5pivL+WQpu+8ieaOpeWPl+iBlOWQiOS9k+aKleagh++8muS4jeaOpeWPl+iBlOWQiOS9k+aKleagh+OAgiZuYnNwOyA8L1A+DQo8UD7kuozjgIHnlLPor7fkurrnmoTotYTmoLzopoHmsYLvvJo8L1A+DQo8UD4xLuespuWQiOOAiuS4reWNjuS6uuawkeWFseWSjOWbveaUv+W6nOmHh+i0reazleOAi+esrOS6jOWNgeS6jOadoeinhOWumu+8jOW5tuaPkOS+m+OAiuS4reWNjuS6uuawkeWFseWSjOWbveaUv+W6nOmHh+i0reazleWunuaWveadoeS+i+OAi+esrOWNgeS4g+adoeaJgOimgeaxgueahOadkOaWme+8jOWQjOaXtuespuWQiOagueaNruivpemhueebrueJueeCueiuvue9rueahOeJueWumui1hOagvOadoeS7tu+8m+WNleS9jei0n+i0o+S6uuS4uuWQjOS4gOS6uuaIluiAheWtmOWcqOebtOaOpeaOp+iCoeOAgeeuoeeQhuWFs+ezu+eahOS4jeWQjOS+m+W6lOWVhu+8jOS4jeW+l+WPguWKoOWQjOS4gOWMheWPt+aKleagh+aIluiAheacquWIkuWIhuWMheWPt+eahOWQjOS4gOaLm+agh+mhueebruaKleagh++8m+S+m+W6lOWVhuacquiiq+WIl+WFpeKAnOS/oeeUqOS4reWbveKAnee9keermSh3d3cuY3JlZGl0Y2hpbmEuZ292LmNuKeKAnOiusOW9leWkseS/oeiiq+aJp+ihjOS6uuaIlumHjeWkp+eojuaUtui/neazleahiOS7tuW9k+S6i+S6uuWQjeWNleaIluaUv+W6nOmHh+i0reS4pemHjei/neazleWkseS/oeihjOS4uuKAneiusOW9leWQjeWNle+8m+acquWkhOS6juS4reWbveaUv+W6nOmHh+i0ree9kSh3d3cuY2NncC5nb3YuY24p4oCc5pS/5bqc6YeH6LSt5Lil6YeN6L+d5rOV5aSx5L+h6KGM5Li65L+h5oGv6K6w5b2V4oCd5Lit55qE56aB5q2i5Y+C5Yqg5pS/5bqc6YeH6LSt5rS75Yqo5pyf6Ze077yI5Lul6YeH6LSt5Luj55CG5py65p6E5LqO6YCS5Lqk5ZON5bqU5paH5Lu25oiq5q2i5pel5b2T5aSp5Zyo4oCc5L+h55So5Lit5Zu94oCd572R56uZ77yId3d3LmNyZWRpdGNoaW5hLmdvdi5jbu+8ieWPiuS4reWbveaUv+W6nOmHh+i0ree9kSh3d3cuY2NncC5nb3YuY24p5p+l6K+i57uT5p6c5Li65YeG77yM5aaC55u45YWz5aSx5L+h6K6w5b2V5bey5aSx5pWI77yM5L6b5bqU5ZWG6ZyA5o+Q5L6b55u45YWz6K+B5piO6LWE5paZ77ybPC9QPg0KPFA+Mi7okL3lrp7mlL/lupzph4fotK3mlL/nrZbpnIDmu6HotrPnmoTotYTmoLzopoHmsYLvvJrvvIgx77yJ6LSi5pS/6YOo44CB5Zu95a625Y+R5bGV5pS56Z2p5aeU44CK5YWz5LqO5Y2w5Y+R44CK6IqC6IO95Lqn5ZOB5pS/5bqc6YeH6LSt5a6e5pa95oSP6KeB44CL55qE6YCa55+l44CL77yI6LSi5bqTWzIwMDRdMTg15Y+35paH77yJ77yb77yIMu+8ieOAiui0ouaUv+mDqOOAgeeOr+S/neaAu+WxgOWFs+S6jueOr+Wig+agh+W/l+S6p+WTgeaUv+W6nOmHh+i0reWunuaWveeahOaEj+ingeOAi++8iOi0ouW6k1syMDA2XTkw5Y+377yJ77yb77yIM++8iei0ouaUv+mDqOOAgeW3peS4muWSjOS/oeaBr+WMlumDqOOAiuWFs+S6juWNsOWPkeOAiuaUv+W6nOmHh+i0reS/g+i/m+S4reWwj+S8geS4muWxleaaguihjOWKnuazleOAi+eahOmAmuefpeOAi++8iOi0ouW6k+OAlDIwMjDjgJU0NuWPt+aWh++8ie+8m++8iDTvvInotKLmlL/pg6jjgIHlj7jms5Xpg6jjgIrlhbPkuo7mlL/lupzph4fotK3mlK/mjIHnm5Hni7HkvIHkuJrlj5HlsZXmnInlhbPpl67popjnmoTpgJrnn6XjgIvvvIjotKLlupNbMjAxNF02OOWPt+aWh++8ie+8m++8iDXvvInotKLmlL/pg6jjgIHmsJHmlL/pg6jjgIHkuK3lm73mrovnlr7kurrogZTlkIjkvJrjgIrlhbPkuo7kv4Pov5vmrovnlr7kurrlsLHkuJrmlL/lupzph4fotK3mlL/nrZbnmoTpgJrnn6XjgIvvvIjotKLlupNbMjAxN10xNDHlj7fvvInvvIjkuK3lsI/kvIHkuJrkvJjmg6DjgIHnm5Hni7HkvIHkuJrjgIHoioLog73kuqflk4HjgIHnjq/looPmoIflv5fkuqflk4HnrYnvvInvvJs8L1A+DQo8UD4mbmJzcDsmbmJzcDsmbmJzcDsgMy7mnKzpobnnm67nmoTnibnlrprotYTmoLzopoHmsYLvvJrkvpvlupTllYbkuLrnlJ/kuqfkvIHkuJrnmoTlv4Xpobvkvp3ms5Xlj5blvpfjgIroja/lk4HnlJ/kuqforrjlj6/or4HjgIvjgILkvpvlupTllYbkuLroja/lk4Hnu4/okKXkvIHkuJrmiJbku6PnkIblhazlj7jnmoTpnIDmj5DkvpvjgIroja/lk4Hnu4/okKXkvIHkuJrorrjlj6/or4HjgIvjgII8L1A+DQo8UD7kuInjgIHojrflj5bph4fotK3mlofku7Y8L1A+DQo8UD4mbmJzcDsmbmJzcDsgPC9QPg0KPFA+5pe26Ze077yaMjAyMeW5tDEw5pyIMjbml6Xoh7MyMDIx5bm0MTHmnIgwMuaXpe+8jOavj+WkqeS4iuWNiDAwOjAw6IezMTI6MDAs5LiL5Y2IMTI6MDDoh7MyMzo1Oe+8iOWMl+S6rOaXtumXtO+8jOazleWumuiKguWBh+aXpemZpOWklu+8iTwvUD4NCjxQPuWcsOeCue+8muS+m+W6lOWVhueZu+W9leaUv+mHh+S6keW5s+WPsGh0dHBzOi8vd3d3LnpjeWdvdi5jbjwvUD4NCjxQPuaWueW8j++8muS+m+W6lOWVhueZu+W9leaUv+mHh+S6keW5s+WPsGh0dHBzOi8vd3d3LnpjeWdvdi5jbi/lnKjnur/nlLPor7fojrflj5bph4fotK3mlofku7bvvIjov5vlhaXigJzpobnnm67ph4fotK3igJ3lupTnlKjvvIzlnKjojrflj5bph4fotK3mlofku7boj5zljZXkuK3pgInmi6npobnnm67vvIznlLPor7fojrflj5bph4fotK3mlofku7bvvIk8L1A+DQo8UD4mbmJzcDsmbmJzcDsmbmJzcDsg5ZSu5Lu377yI5YWD77yJ77yaMDwvUD4NCjxQPuWbm+OAgeWTjeW6lOaWh+S7tuaPkOS6pCZuYnNwOyZuYnNwOyA8L1A+DQo8UD7mj5DkuqTlk43lupTmlofku7bmiKrmraLml7bpl7TvvJoyMDIx5bm0MTHmnIgwNeaXpTE2OjAw77yI5YyX5Lqs5pe26Ze077yJPC9QPg0KPFA+5oqV5qCH5Zyw54K577yI572R5Z2A77yJ77ya5pS/6YeH5LqRaHR0cDovL2NjZ3AtYmluZ3R1YW4uZ292LmNuLzwvUD4NCjxQPuW8gOagh+aXtumXtO+8mjIwMjHlubQxMeaciDA15pelMTY6MDAg77yI5YyX5Lqs5pe26Ze077yJPC9QPg0KPFA+Jm5ic3A7Jm5ic3A7Jm5ic3A7IOW8gOagh+WcsOeCue+8mu+8iOaUv+mHh+S6kWh0dHA6Ly9jY2dwLWJpbmd0dWFuLmdvdi5jbi/vvInkuI3op4HpnaLlvIDmoIc8L1A+DQo8UD7kupTjgIHlhazlkYrmnJ/pmZA8L1A+DQo8UD4mbmJzcDsmbmJzcDsmbmJzcDsg6Ieq5pys5YWs5ZGK5Y+R5biD5LmL5pel6LW3NeS4quW3peS9nOaXpeOAgjwvUD4NCjxQPuWFreOAgeWFtuS7luihpeWFheS6i+WunCA8L1A+DQo8UD4mbmJzcDs8L1A+DQo8UD4x44CB5pys6aG555uu5a6e6KGM572R5LiK5oqV5qCH77yM6YeH55So55S15a2Q5ZON5bqU5paH5Lu277yb55u45YWz5YaF5a655oyJ6YeH6LSt5paH5Lu26KaB5Y675Li65YeG44CCPC9QPg0KPFA+MuOAgeWQhOS+m+W6lOWVhuW6lOWcqOW8gOagh+WJjeW6lOehruS/neaIkOS4uuaWsOeWhueUn+S6p+W7uuiuvuWFteWbouaUv+W6nOmHh+i0ree9keato+W8j+azqOWGjOWFpeW6k+S+m+W6lOWVhu+8jOW5tuWujOaIkENB5pWw5a2X6K+B5Lmm77yI56ym5ZCI5Zu95a+G5qCH5YeG77yJ55Sz6aKG44CC5Zug5pyq5rOo5YaM5YWl5bqT44CB5pyq5Yqe55CGQ0HmlbDlrZfor4HkuabnrYnljp/lm6DpgKDmiJDml6Dms5XmipXmoIfmiJbmipXmoIflpLHotKXnrYnlkI7mnpznlLHkvpvlupTllYboh6rooYzmib/mi4XjgILmnInmhI/lkJHlj4LkuI7lhbXlm6LljLrln5/nlLXlrZDlvIDor4TmoIfnmoTkvpvlupTllYbvvIzlj6/orr/pl67mlrDnlobmlbDlrZfor4HkuaborqTor4HkuK3lv4PlrpjmlrnnvZHnq5nvvIhodHRwczovL3d3dy54amNhLmNvbS5jbi/vvInmiJbkuIvovb3igJzmlrDnlobmlL/liqHpgJrigJ1BUFDoh6rooYzov5vooYznlLPpoobjgILlpoLpnIDlkqjor6LvvIzor7fogZTns7vmlrDnloZDQeacjeWKoeeDree6vzA5OTEtMjgxOTI5MO+8mzwvUD4NCjxQPiZuYnNwOyZuYnNwOyZuYnNwOyAz44CB5L6b5bqU5ZWG5bCG5pS/6YeH5LqR55S15a2Q5Lqk5piT5a6i5oi356uv5LiL6L2944CB5a6J6KOF5a6M5oiQ5ZCO77yM5Y+v6YCa6L+H6LSm5Y+35a+G56CB5oiWQ0HnmbvlvZXlrqLmiLfnq6/ov5vooYzlk43lupTmlofku7bnmoTliLbkvZzjgILlnKjkvb/nlKjmlL/ph4fkupHmipXmoIflrqLmiLfnq6/ml7bvvIzlu7rorq7kvb/nlKhXSU435Y+K5Lul5LiK5pON5L2c57O757uf44CC5a6i5oi356uv6K+36Iez5YW15Zui5pS/5bqc6YeH6LSt572R77yIaHR0cDovL2NjZ3AtYmluZ3R1YW4uZ292LmNuL++8ieS4i+i9veS4k+WMuuafpeeci++8jOWmguaciemXrumimOWPr+aLqOaJk+aUv+mHh+S6keWuouaIt+acjeWKoeeDree6vzQwMC04ODEtNzE5MOi/m+ihjOWSqOivouOAguWmguWboOS+m+W6lOWVhuiHqui6q+WOn+WboOWvvOiHtOWcqOinhOWumuaXtumXtOWGheaXoOazleato+W4uOino+WvhueahO+8iOWmgu+8mua1j+iniOWZqOaVhemanOOAgeacquWuieijheebuOWFs+mpseWKqOOAgee9kee7nOaVhemanOOAgeWKoOWvhkNB5LiO6Kej5a+GQ0HkuI3kuIDoh7TnrYnvvInvvIzph4fotK3kuK3lv4Mv5Luj55CG5py65p6E5LiN5LqI5byC5bi45aSE55CG77yM6KeG5Li65L6b5bqU5ZWG6Ieq5Yqo5byD5qCH44CCPC9QPg0KPFA+5LiD44CB5Yeh5a+55pys5qyh5oub5qCH5o+Q5Ye66K+i6Zeu77yM6K+35oyJ5Lul5LiL5pa55byP6IGU57O7PC9QPg0KPFA+Jm5ic3A7Jm5ic3A7Jm5ic3A7IDEu6YeH6LSt5Lq65L+h5oGvPC9QPg0KPFA+5ZCN56ew77ya5paw55aG55Sf5Lqn5bu66K6+5YW15Zui56ys5LiJ5biI5oC75Yy76ZmiPC9QPg0KPFA+5Zyw5Z2A77ya5paw55aG55Sf5Lqn5bu66K6+5YW15Zui56ys5LiJ5biI5Zu+5pyo6IiS5YWL5biCPC9QPg0KPFA+6aG555uu6IGU57O75Lq677ya5buW54eVPC9QPg0KPFA+6aG555uu6IGU57O75pa55byP77yaMTg5OTc3NTU5MzY8L1A+DQo8UD4mbmJzcDs8L1A+DQo8UD4yLumHh+i0reS7o+eQhuacuuaehOS/oeaBrzwvUD4NCjxQPuWQjeensO+8muWbvuacqOiIkuWFi+WFtOWbvuW3peeoi+mhueebrueuoeeQhuWSqOivouaciemZkOWFrOWPuDwvUD4NCjxQPuWcsOWdgO+8muaWsOeWhueUn+S6p+W7uuiuvuWFteWbouesrOS4ieW4iOWbvuacqOiIkuWFi+W4gjwvUD4NCjxQPumhueebruiBlOezu+S6uu+8muW8oOe0q+aJrDwvUD4NCjxQPiZuYnNwOyZuYnNwOyZuYnNwOyDpobnnm67ogZTns7vmlrnlvI/vvJoxMzk5OTY3NjUzNDwvUD48L2Rpdj5kAgUPDxYCHgRUZXh0BT08YSBzdHlsZT0nY3Vyc29yOmRlZmF1bHQ7Jz7muLjlrqLkuI3lj6/kuIvovb3pmYTku7bigKbigKY8L2E+ZGRkCNLayPRLRMFzXGqmvUScJMeZsK4=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C5E97C89" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKp4vLXDQKqi8/fDQKO3etXSkTxE4s47wosBKCF20MMIgBWlAE=" />
+    <script type="text/javascript">
+        //菜单样式
+        if ($("#aspnetForm").attr("action").indexOf("InfoList") > -1 || $("#aspnetForm").attr("action").indexOf("InfoDetailGG") > -1 || $("#aspnetForm").attr("action").indexOf("InfoDetailDT") > -1) {
+            $('#zbli').addClass('active').siblings().removeClass('active');
+        }
+        else if ($("#aspnetForm").attr("action").indexOf("WebsiteList") > -1 || $("#aspnetForm").attr("action").indexOf("WebsiteDetail") > -1) {
+            $('#wzggli').addClass('active').siblings().removeClass('active');
+        }
+        else {
+            $(".navbox ul li:eq(0)").addClass('active').siblings().removeClass('active');
+        }
+    </script>
+    
+    <div class="main">
+        <p class="location">
+            当前位置：<a href="../HomeIndex.html">首页</a>>招标动态</p>
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hidSubjectid" id="ctl00_ContentPlaceHolder1_hidSubjectid" value="1000116125" />
+        <div>
+            <div>
+                <div id="ctl00_ContentPlaceHolder1_Con"><p class="tedtitle">新线维吾尔自治区第三师总医院2021年中药配方颗粒采购项目的竞争性磋商公告</p><p class="tedsource"><span>信息来源：<a href='http://ccgp-bingtuan.gov.cn/ZcyAnnouncement/ZcyAnnouncement2/ZcyAnnouncement3011/Rup3gJd/a49R9qwno9eE5g==.html' target='_blank'>兵团政府采购网</a></span><span style="margin-left: 50px;">发布日期：2021-10-26</span><div class="tentext"><P>项目概况&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp; 第三师总医院2021年中药配方颗粒采购项目采购项目的潜在供应商应在供应商登录政采云平台https://www.zcygov.cn获取采购文件，并于2021年11月05日 16:00（北京时间）前提交响应文件。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<P>一、项目基本情况</P>
+<P>项目编号：B3S[2021]426号-001</P>
+<P>项目名称：第三师总医院2021年中药配方颗粒采购项目</P>
+<P>预算金额（元）：1588401.48</P>
+<P>最高限价（元）：本标项招中药颗粒单价，采购项目设置单项单价控制价，供应商单项中药颗粒报价不得高于中药颗粒单项控制价。</P>
+<P>采购需求：第三师图木舒克市医疗服务共同体中药配方颗粒采购,共计约200种；</P>
+<P>标项名称:第三师总医院2021年中药配方颗粒采购项目</P>
+<P>数量:一批</P>
+<P>预算金额（元）:1588401.48</P>
+<P>简要服务描述或项目基本概况介绍：第三师图木舒克市医疗服务共同体中药配方颗粒采购，具体采购内容详见采购文件第三部采购需求。</P>
+<P>备注：本项目供货周期为三年，本标项招中药颗粒单价，采购项目设置单项单价控制价，供应商单项中药颗粒报价不得高于中药颗粒单项控制价，否则按无效投标处理。</P>
+<P>&nbsp;&nbsp;&nbsp; 本项目（是/否）接受联合体投标：不接受联合体投标。&nbsp; </P>
+<P>二、申请人的资格要求：</P>
+<P>1.符合《中华人民共和国政府采购法》第二十二条规定，并提供《中华人民共和国政府采购法实施条例》第十七条所要求的材料，同时符合根据该项目特点设置的特定资格条件；单位负责人为同一人或者存在直接控股、管理关系的不同供应商，不得参加同一包号投标或者未划分包号的同一招标项目投标；供应商未被列入“信用中国”网站(www.creditchina.gov.cn)“记录失信被执行人或重大税收违法案件当事人名单或政府采购严重违法失信行为”记录名单；未处于中国政府采购网(www.ccgp.gov.cn)“政府采购严重违法失信行为信息记录”中的禁止参加政府采购活动期间（以采购代理机构于递交响应文件截止日当天在“信用中国”网站（www.creditchina.gov.cn）及中国政府采购网(www.ccgp.gov.cn)查询结果为准，如相关失信记录已失效，供应商需提供相关证明资料；</P>
+<P>2.落实政府采购政策需满足的资格要求：（1）财政部、国家发展改革委《关于印发《节能产品政府采购实施意见》的通知》（财库[2004]185号文）；（2）《财政部、环保总局关于环境标志产品政府采购实施的意见》（财库[2006]90号）；（3）财政部、工业和信息化部《关于印发《政府采购促进中小企业展暂行办法》的通知》（财库〔2020〕46号文）；（4）财政部、司法部《关于政府采购支持监狱企业发展有关问题的通知》（财库[2014]68号文）；（5）财政部、民政部、中国残疾人联合会《关于促进残疾人就业政府采购政策的通知》（财库[2017]141号）（中小企业优惠、监狱企业、节能产品、环境标志产品等）；</P>
+<P>&nbsp;&nbsp;&nbsp; 3.本项目的特定资格要求：供应商为生产企业的必须依法取得《药品生产许可证》。供应商为药品经营企业或代理公司的需提供《药品经营企业许可证》。</P>
+<P>三、获取采购文件</P>
+<P>&nbsp;&nbsp; </P>
+<P>时间：2021年10月26日至2021年11月02日，每天上午00:00至12:00,下午12:00至23:59（北京时间，法定节假日除外）</P>
+<P>地点：供应商登录政采云平台https://www.zcygov.cn</P>
+<P>方式：供应商登录政采云平台https://www.zcygov.cn/在线申请获取采购文件（进入“项目采购”应用，在获取采购文件菜单中选择项目，申请获取采购文件）</P>
+<P>&nbsp;&nbsp;&nbsp; 售价（元）：0</P>
+<P>四、响应文件提交&nbsp;&nbsp; </P>
+<P>提交响应文件截止时间：2021年11月05日16:00（北京时间）</P>
+<P>投标地点（网址）：政采云http://ccgp-bingtuan.gov.cn/</P>
+<P>开标时间：2021年11月05日16:00 （北京时间）</P>
+<P>&nbsp;&nbsp;&nbsp; 开标地点：（政采云http://ccgp-bingtuan.gov.cn/）不见面开标</P>
+<P>五、公告期限</P>
+<P>&nbsp;&nbsp;&nbsp; 自本公告发布之日起5个工作日。</P>
+<P>六、其他补充事宜 </P>
+<P>&nbsp;</P>
+<P>1、本项目实行网上投标，采用电子响应文件；相关内容按采购文件要去为准。</P>
+<P>2、各供应商应在开标前应确保成为新疆生产建设兵团政府采购网正式注册入库供应商，并完成CA数字证书（符合国密标准）申领。因未注册入库、未办理CA数字证书等原因造成无法投标或投标失败等后果由供应商自行承担。有意向参与兵团区域电子开评标的供应商，可访问新疆数字证书认证中心官方网站（https://www.xjca.com.cn/）或下载“新疆政务通”APP自行进行申领。如需咨询，请联系新疆CA服务热线0991-2819290；</P>
+<P>&nbsp;&nbsp;&nbsp; 3、供应商将政采云电子交易客户端下载、安装完成后，可通过账号密码或CA登录客户端进行响应文件的制作。在使用政采云投标客户端时，建议使用WIN7及以上操作系统。客户端请至兵团政府采购网（http://ccgp-bingtuan.gov.cn/）下载专区查看，如有问题可拨打政采云客户服务热线400-881-7190进行咨询。如因供应商自身原因导致在规定时间内无法正常解密的（如：浏览器故障、未安装相关驱动、网络故障、加密CA与解密CA不一致等），采购中心/代理机构不予异常处理，视为供应商自动弃标。</P>
+<P>七、凡对本次招标提出询问，请按以下方式联系</P>
+<P>&nbsp;&nbsp;&nbsp; 1.采购人信息</P>
+<P>名称：新疆生产建设兵团第三师总医院</P>
+<P>地址：新疆生产建设兵团第三师图木舒克市</P>
+<P>项目联系人：廖燕</P>
+<P>项目联系方式：18997755936</P>
+<P>&nbsp;</P>
+<P>2.采购代理机构信息</P>
+<P>名称：图木舒克兴图工程项目管理咨询有限公司</P>
+<P>地址：新疆生产建设兵团第三师图木舒克市</P>
+<P>项目联系人：张紫扬</P>
+<P>&nbsp;&nbsp;&nbsp; 项目联系方式：13999676534</P></div></div>
+                <div class="enclosure">
+                    <p>
+                        相关附件</p>
+                </div>
+                <span id="ctl00_ContentPlaceHolder1_lbldownloadurl"><a style='cursor:default;'>游客不可下载附件……</a></span>
+            </div>
+            <div class="enclosure">
+                <p>
+                    相关信息</p>
+            </div>
+            <ul class="moredynamic" id="divDt" style="height: 353px;">
+            </ul>
+            <div id="Pagination" class="pagination" style="text-align: center;">
+            </div>
+        </div>
+    </div>
+     <input type="hidden" name="ctl00$ContentPlaceHolder1$hideQuery" id="ctl00_ContentPlaceHolder1_hideQuery" value="id=1000116125" />
+
+    </form>
+    
+    <iframe id="frame_content" scrolling="no" width="100%" height="350" frameborder="0"
+        name="footerFrame" style="min-width:1200px;" src="/home/footer/footer.html"></iframe>
+    
+    <div class="rightfloat">
+        <ul>
+            <li><a href="javascript:;">
+                <img src="/home/images/tool1.png" alt="江苏华招网" /></a>
+                <div class="appbox" style="height: 155px;">
+                    <div class="appcode">
+                        <img src="/home/images/app1.jpg" alt="华招医药APP" />
+                        <p>
+                            华招医药APP</p>
+                    </div>
+                    <div class="appcode">
+                        <img src="/home/images/app2.jpg" class="appimg" alt="华招医药微信公众号" />
+                        <p>
+                            华招医药微信公众号</p>
+                    </div>
+                </div>
+            </li>
+            <li class="talkus"><a href="javascript:;">
+                <img src="/home/images/tool2.png" alt="江苏华招网" /></a>
+                <div class="appbox" style="height: 70px; line-height: 30px;">
+                    <div style="text-align: center; color: #fff;">
+                        <p style="margin-top: 6px;">
+                            025-84635130-8520（销售部）</p>
+                        <p>
+                            025-84635130-8108（客服部）</p>
+                    </div>
+                </div>
+            </li>
+            <li class="talkus"><a title="在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin=2880948429&site=qq&menu=yes"
+                target="_blank">
+                <img src="/home/images/tool4.png" alt="江苏华招网" /></a> </li>
+            <li class="topheader"><a href="javascript:;">
+                <img src="/home/images/tool5.png" alt="江苏华招网" /></a> </li>
+        </ul>
+    </div>
+    <script src="/home/js/Common.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //菜单
+            $('.navbox ul li').click(function (event) {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.navbox ul li').mouseenter(function (event) {
+                $(this).find('.revisblock').show();
+                $(this).find('a').find('img').attr('src', '/home/images/shrinkage.png');
+            });
+
+            $('.navbox ul li').mouseleave(function (event) {
+                $(this).find('.revisblock').hide();
+                $(this).find('a').find('img').attr('src', '/home/images/push.png');
+            })
+            //工具栏
+            $('.rightfloat ul li').mouseenter(function (event) {
+                $(this).find('.appbox').show();
+            });
+
+            $('.rightfloat ul li').mouseleave(function (event) {
+                $(this).find('.appbox').hide();
+            });
+            //回到顶部
+            $(".topheader").click(function () {
+                $(document).scrollTop(0);
+            });
+
+            //隔行变色
+            //            $(".detail_tab tbody tr:odd").css("background-color", "#f7f7f7");
+
+            $("#Search").click(function (e) {
+                $.ajax({
+                    type: "post",
+                    url: "../home/Handler1.ashx",
+                    dataType: "text",
+                    data: { MenuType: "IsLogin" },
+                    async: false, //同步
+                    success: function (data) {
+                        if (data == "8") {
+                            alert("免费会员不支持查询操作！");
+                            //                    alert("免费会员不支持查询操作！");
+                        }
+                        else {
+                            e.stopPropagation();
+                            var keys = $.trim($("#txtkeyWord").val());
+                            if (keys == "") {
+                                CommhighLineTxtBox($("#searchDiv"));
+                                return false;
+                            }
+                            window.location = '/home/SearchAllByP.aspx?keyWord=' + $("#txtkeyWord").val();
+                        }
+                    }
+                });
+
+            });
+
+            $("#txtkeyWord").focus(function () {
+                $(this).css({ "color": "#fff" });
+            }).blur(function () {
+                $(this).css({ "color": "#fff" });
+            });
+
+            //链接权限判断
+            $(document).on("click", "a.linkJudge,a.linkJudgeVIP", function () {
+                var canshu = $(this).attr("href").split('?')[1];
+                var url = "EMEDLogin.aspx";
+                $.ajax({
+                    type: "post",
+                    url: '/home/Index.ashx',
+                    dataType: "text",
+                    async: false, //同步
+                    data: { MenuType: "IsLogin" },
+                    success: function (data) {
+                        if (data != "0") { //已登录
+                            url = '/Index.aspx';
+                        }
+                        else { //没有登录
+                            url = '/EMEDLogin.aspx';
+                        }
+                        url += "?" + canshu;
+                    }
+                });
+                if ($(this).attr("target") == "_self" || $(this).attr("target") == undefined) {
+                    window.location.href = url;
+                }
+                else if ($(this).attr("target") == "_blank") {
+                    window.open(url);
+                }
+                return false;
+            });
+        });
+
+        function CommhighLineTxtBox($txtbox) {
+            $txtbox.css("backgroundColor", '#FFA2A2');
+            $txtbox.animate({ backgroundColor: 'transparent' }, 500, function () {
+                $txtbox.css({ "backgroundColor": '#FFA2A2' });
+                $txtbox.animate({ backgroundColor: 'transparent' }, 500);
+            });
+        }
+
+       
+    </script>
+</body>
+</html>

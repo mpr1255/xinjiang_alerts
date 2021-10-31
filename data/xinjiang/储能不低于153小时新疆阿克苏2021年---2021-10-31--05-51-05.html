@@ -1,0 +1,694 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>储能不低于15%、3小时！新疆阿克苏2021年第二批光伏项目招标 - 综合报道 - 中国储能网</title>
+<meta name="keywords" content="储能" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/templates/ESCN2020/css/style.css?20191229" />
+<script type="text/javascript" charset="utf-8" src="/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/scripts/jquery/jquery.lazyload.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/templates/ESCN2020/js/common.js?20181009"></script>
+<script typet="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    
+    
+<script>
+    
+    $(function () {
+        //图片延迟加载
+        $(".pic").lazyload({ effect: "fadeIn" });
+
+        $.ajax({
+            type: "get",
+            url: "/tools/submit_ajax.ashx?action=get_wx",
+            dataType: "json",
+            async: false,
+            data: { url: encodeURIComponent(location.href.split('#')[0]) },
+            success: function (data) {
+                var d = {
+                    debug: false,////生产环境需要关闭debug模式
+                    appId: data.appid,//appId通过微信服务号后台查看
+                    timestamp: data.timestamp,//生成签名的时间戳
+                    nonceStr: data.nonceStr,//生成签名的随机字符串
+                    signature: data.signature,//签名
+                    jsApiList: [//需要调用的JS接口列表
+                        "onMenuShareAppMessage",
+                    "updateTimelineShareData",
+                    "showOptionMenu",
+                    "updateAppMessageShareData",
+                    "hideMenuItems",
+                    "onMenuShareQQ",
+                    "onMenuShareWeibo",
+                    "onMenuShareQZone"
+                    ]
+                };
+                //console.log(d)
+                wx.config(d);
+            },
+            error: function (xhr, status, error) {
+                alert(status);
+                alert(xhr.responseText);
+            }
+        });
+
+        wx.ready(function () {
+            var link = window.location.href;
+            var protocol = window.location.protocol;
+            var host = window.location.host;
+            var imageUlr = "/upload/202110/31/202110311323560783.png";
+            if (imageUlr == "") {
+                imageUlr = protocol + '//' + host + "/templates/ESCN2020/images/logo.jpg"
+            } else {
+                imageUlr = protocol + '//' + host + imageUlr;
+            }
+            //console.log(imageUlr)
+            //需在用户可能点击分享按钮前就先调用
+            wx.updateAppMessageShareData({
+                title: '储能不低于15%、3小时！新疆阿克苏2021年第二批光伏项目招标', // 分享标题
+                desc: '10月29日，新疆阿克苏发改委发布阿克苏地区2021年第二批光伏发电项目公开招标公告。光伏发电项目总规模60万千瓦，分为5个标段：柯坪县一标段20万千瓦、柯坪县二标段10万千瓦、柯坪县三标段10万千瓦；乌什县一标段10万千瓦、乌什县二标段10万千瓦。每个标段光伏发电项目按不低于…', // 分享描述
+                link: urls1, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: imageUlr,// 自定义图标
+                success: function () {
+                    // 设置成功
+                    //alert('shared success');
+                }
+            })
+
+            wx.updateTimelineShareData({
+                title: '储能不低于15%、3小时！新疆阿克苏2021年第二批光伏项目招标', // 分享标题
+                desc: '10月29日，新疆阿克苏发改委发布阿克苏地区2021年第二批光伏发电项目公开招标公告。光伏发电项目总规模60万千瓦，分为5个标段：柯坪县一标段20万千瓦、柯坪县二标段10万千瓦、柯坪县三标段10万千瓦；乌什县一标段10万千瓦、乌什县二标段10万千瓦。每个标段光伏发电项目按不低于…', // 分享描述
+                link: urls1, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: imageUlr,// 自定义图标
+                success: function () {
+                    // 设置成功
+                }
+            })
+            wx.error(function (res) {
+                //console.log(res.errMsg)
+                //alert(res.errMsg);
+            });
+        });
+    });
+</script>
+    <style>
+	.rel-list{margin-top: 0px;}
+        .left-auto{margin:0px;width:1200px;}
+        .right-260{width:1200px;float:none;margin:0 auto;text-align:center;}
+	.right-260 ul li{float:left;margin: 5px 4.8px;}
+	.adlist ul li{margin: 5px 14px}
+    
+    </style>
+</head>
+
+<body id="news">
+<!--页面头部-->
+<style>
+  .gzh { position: relative; }
+  .gzh div { display: none; }
+  .gzh:hover div { z-index: 100; display: block; position: absolute; left: -100px; top: 20px; }
+  .header .head-nav{height:260px}
+
+
+  .header .head-top{background: #ff3a20;color:#fff;height:50px;font-size:18px}
+  .header .head-top .right-box a{color:#fff;}
+  .header .head-top .right-box strong{ font-size: 22px;color: #fff;font-weight: 100;}
+  .header .head-nav .logo{top:110px;}
+  .header .head-nav .search-b{top:100px; right:0px;   width:480px;}
+  .header .head-nav .search-box{background-color:#fff;border:0;width:410px;}
+  .header .head-nav .search-box .input-box input{border:1px solid #6288D1;border-radius:0;padding-left:10px;height:40px;width: 385px;line-height: 40px; font-size: 14px;}
+  .header .head-nav .search-b a{color: #fff;line-height: 42px;background: #5D86D6;width: 70px;height: 42px;}
+  .header .head-nav .nav-box{top:180px;height:75px}
+  .header .head-nav .nav-box{background: #5D86D6;}
+  .header .head-nav .nav-box li>a{height:56px;display: block;color:#fff;line-height: 30px;margin-top:7px;padding: 3px;    border-radius: 8px;}
+  .header .head-nav .nav-box li>a.sel{background: #E30005;}
+  .header .head-nav .nav-box li>a span{font-size:25px;display: block;}
+  .header .head-nav .nav-box li{width:70px;position:relative}
+  .header .head-top .right-box a img{vertical-align: middle;margin-right:5px;}
+  .header .head-top .right-box a:hover{color:#fff;}
+  .header .head-nav .logo img{vertical-align:middle}
+
+  .header .head-nav .nav-box li .sm_class{display:none;left:0px;position:absolute;top:82px;background-image:url("/templates/ESCN2020/images/head_topbg.png");z-index:1000;padding:15px 20px;border-radius:5px;}
+  .header .head-nav .nav-box li .sm_class a{display:inline-block;width:30px;min-height:95px; background-color:none;font-size:16px;color:#fff; line-height: 18px;vertical-align: top;position:relative}
+  .header .head-nav .nav-box li .sm_class a::after{content:"　";position:absolute;top:0px;left:0px;border-left:1px solid #585858;height:85px}
+  .header .head-nav .nav-box li .sm_class a:first-child::after{border:0}
+  .header .head-nav .nav-box li .sm_class a>span{writing-mode: vertical-lr;writing-mode: tb-lr; }
+  .header .head-nav .nav-box li:hover .sm_class{display:block}
+  .header .head-nav .nav-box li .sm_class:after {width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:13px solid black;
+  opacity:0.7;position:absolute;top:-13px;left:20px;content:"　"}
+   .header .head-nav .nav-box li .sm_class2{left:-30px}
+   .header .head-nav .nav-box li .sm_class2:after{left:50px;}
+
+   .header .head-nav .nav-box li .sm_class3{left:-60px}
+   .header .head-nav .nav-box li .sm_class3:after{left:80px;}
+</style>
+<div class="header">
+    <div class="head-top">
+        <div class="section">
+            <div id="left_menu" class="left-box">
+                欢迎浏览中国储能网
+            </div>
+            <script type="text/javascript">
+                $.ajax({
+                    type: "POST",
+                    url: "/tools/submit_ajax.ashx?action=user_check_login",
+                    dataType: "json",
+                    timeout: 20000,
+                    success: function (data, textStatus) {
+                        if (data.status == 1) {
+                            $("#menu").prepend('<a href="/user/center/exit.html">退出</a><strong>|</strong>');
+                            $("#menu").prepend('<strong>|</strong><a href="/user/center/index.html">会员中心</a><strong>|</strong>');
+                        } else {
+                            $("#menu").prepend('<a href="/register.html"><img src="/templates/ESCN2020/images/ico_reg.png" />注册</a><strong>|</strong>');
+                            $("#menu").prepend('<strong>|</strong><a href="/login.html"><img src="/templates/ESCN2020/images/ico_login.png" />登录</a><strong>|</strong>');
+                        }
+                    }
+                });
+            </script>
+
+            <div id="menu" class="right-box"></div>
+
+        </div>
+    </div>
+    <div class="head-nav">
+        <div class="section">
+            <div style="font-size:0;height:260px;line-height:0;position:absolute"><script type="text/javascript" src="/plugins/advert/advert_js.ashx?id=36"></script></div>
+            <div class="logo">
+                <a href="/index.html"><img src="/templates/ESCN2020/images/logo.jpg" /></a>
+            </div>
+            <div style="border-left: 3px solid #000;height: 40px;text-align: left;font-size: 14px;position: absolute;top: 110px;line-height: 20px;left: 315px;padding-top: 5px;padding-left: 10px;">储能价值推动者<br/>中国化学与物理电源行业协会储能应用分会主管/主办</div>
+            <div class="search-b">
+                <div class="search-box"><div class="input-box">
+                        <input id="keywords" name="keywords" type="text" onkeydown="if(event.keyCode==13){SiteSearch('/search.html', '#keywords');return false};" placeholder="请输入搜索关健字" x-webkit-speech="" />
+                    </div>
+                </div>
+                <a href="javascript:;" onclick="SiteSearch('/search.html', '#keywords');">搜索</a>
+            </div>
+
+            <div class="nav-box">
+                <ul>
+                    <li><a href="###" class="sel"><span>荐</span>推荐</a>
+                        <div class="sm_class">
+                            <a href="/news/321.html">特别推荐</a>
+                            <a href="/news/119.html">国内新闻</a>
+                            <a href="/news/120.html">国际新闻</a>
+                            <a href="/news/122.html">储能资本</a>
+                    </div>
+                    </li>
+                    <li><a href="/zhengce"><span>政</span>政策</a>
+                        <div class="sm_class">
+                            <a href="/news/192.html">国内储能政策</a>
+                            <a href="/news/370.html">国际储能政策</a>
+                            <a href="/news/199.html">电力政策</a>
+                            <a href="/news/197.html">新能源汽车政策</a>
+                            <a href="/news/194.html">可再生能源政策</a>
+                            <a href="/news/201.html">氢能政策</a>
+                            <a href="/news/198.html"><span>5G</span>与区块链政策</a>
+                    </div>
+                    </li>
+                    <li><a href="###"><span>储</span>储能</a>
+                        <div class="sm_class">
+                            <a href="/news/356.html">电网侧</a>
+                            <a href="/news/126.html">电源侧</a>
+                            <a href="/news/125.html">用户侧</a>
+                            <a href="/news/124.html">家庭储能</a>
+                            <a href="/news/140.html">社会化服务功能设施</a>
+                            <a href="/news/128.html">综合能源服务</a>
+                            <a href="/news/172.html">电力物联网</a>
+                            <a href="/news/232.html">区块链</a>
+                            <a href="/news/130.html">智能建筑</a>
+                            <a href="/news/131.html">智慧交通</a>
+                    </div>
+                    </li>
+                    <li><a href="###"><span>数</span>数据
+                </a>
+                        <div class="sm_class">
+                            <a href="/news/177.html">储能数据</a>
+                            <a href="/news/180.html">新能源数据</a>
+                            <a href="/news/181.html">电力数据</a>
+                            <a href="/news/178.html">电动汽车数据</a>
+                            <a href="/news/179.html"><span>5G</span>基站数据</a>
+                            <a href="/news/127.html">传统能源数据</a>
+                            <a href="/news/182.html">动力电池数据</a>
+                    </div></li>
+                    <li><a href="###"><span>技</span>技术
+                </a>
+                    <div class="sm_class">
+                        <a href="/news/147.html">锂电池</a>
+                        <a href="/news/251.html">智能装备</a>
+                        <a href="/news/148.html">铅酸<span>（</span>炭<span>）</span>电池</a>
+                        <a href="/news/149.html">液流电池</a>
+                        <a href="/news/175.html">其他新型储能电池</a>
+                        <a href="/news/285.html">超级电容器</a>
+                        <a href="/news/143.html">抽水蓄能</a>
+                        <a href="/news/145.html">压缩空气储能</a>
+                        <a href="/news/144.html">飞轮储能</a>
+                        <a href="/news/286.html">前沿储能技术</a>
+                        <a href="/news/146.html">知识产权与专利</a>
+                        <a href="/news/137.html">储热技术</a>
+                        <a href="/news/139.html">蓄冷技术</a>
+                        <a href="/news/176.html">储能材料</a>
+                    </div>
+
+                    </li>
+                    <li><a href="/qingchuneng"><span>氢</span>氢能
+                </a></li>
+                    <li><a href="/shichang"><span>市</span>市场
+                </a></li>
+                    <li><a href="/news/108.html"><span>访</span>访谈
+                </a><div class="sm_class">
+                        <a href="/news/158.html">政府声音</a>
+                        <a href="/news/159.html">专家访谈</a>
+                        <a href="/news/160.html">企业访谈</a>
+                    </div></li>
+                    <li><a href="###"><span>安</span>安全
+                </a>
+                    <div class="sm_class">
+                        <a href="/news/291.html">储能电站安全</a>
+                        <a href="/news/252.html">电池回收</a>
+                        <a href="/news/310.html">梯次利用</a>
+                        <a href="/news/257.html">电力安全</a>
+                        <a href="/news/261.html">电动车安全</a>
+                        <a href="/news/256.html">新能源项目建设安全</a>
+                        <a href="/news/260.html">电网安全</a>
+                    </div>
+                    </li>
+                    <li><a href="###"><span>人</span>人才
+                   </a><div class="sm_class">
+                        <a href="/news/282.html">人才招聘</a>
+                        <a href="/news/283.html">人才培养</a>
+                    </div></li>
+                    <li><a href="###"><span>企</span>企业</a>
+                    <div class="sm_class sm_class3">
+                        <a href="/news/322.html">储能系统集成商</a>
+                        <a href="/news/357.html">光伏企业</a>
+                        <a href="/news/358.html">风电企业</a>
+                        <a href="/news/170.html">储热企业</a>
+                        <a href="/news/116.html">电池企业</a>
+                        <a href="/news/104.html">新能源车企</a>
+                        <a href="/news/169.html">车电运营企业</a>
+                        <a href="/news/168.html">通信运营商</a>
+                        <a href="/news/280.html">发电集团</a>
+                        <a href="/news/281.html">电网公司</a>
+                        <a href="/news/173.html">设计院</a>
+                    </div>
+                    </li>
+                  <li>
+                    <a href="###"><span>项</span>项目</a>
+                      <div class="sm_class">
+                        <a href="/news/155.html">招标项目</a>
+                        <a href="/news/117.html">中标项目</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="http://cesa.escn.com.cn/index.html">
+                      <span>协</span>协会
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/biaozhun">
+                      <span>标</span>标准
+                    </a>
+                      
+                  </li>
+                  <li>
+                    <a href="###">
+                      <span>会</span>会展
+                    </a>
+                    <div class="sm_class sm_class2">
+                        <a href="/news/161.html">会议</a>
+                        <a href="/news/162.html">展览会</a>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+  $(function(){
+  
+    $(".nav-box li").mouseover(function(){
+        $(".nav-box li a").removeClass("sel");
+        $(this).find("a").addClass("sel");
+    });
+
+    $.each($(".header .head-nav .nav-box li"), function (i, item) {
+        var count = $(this).find(".sm_class").find("a").size();
+        var w = count * 34;
+        $(this).find(".sm_class").width(w);
+    });
+});
+</script>
+
+<!--/页面头部-->
+
+<!--当前位置-->
+
+<div class="section">
+    <div class="location">
+        <span>您的位置：</span>
+        <a href="/index.html">首页</a> 
+        &nbsp;&gt;&nbsp;<a href="/news/284-1.html">首屏</a>&nbsp;&gt;&nbsp;<a href="/news/287-1.html">储能市场1</a>&nbsp;&gt;&nbsp;<a href="/news/288-1.html">综合报道</a>&nbsp;&nbsp;<a class="btn_back" href="/news/288-1.html">返回</a>
+    </div>
+</div>
+<!--/当前位置-->
+
+<div class="section">
+    <div class="meta">
+        <h2>储能不低于15%、3小时！新疆阿克苏2021年第二批光伏项目招标</h2>
+        <div class="info">
+            <span>作者：中国储能网新闻中心</span>
+            <span>来源：北极星储能网</span>
+            <span>发布时间：2021-10-31</span>
+            <span>浏览：<script type="text/javascript" src="/tools/submit_ajax.ashx?action=view_article_click&channel_id=1&id=1279486&click=1"></script>次</span>
+            <div style="float:right;line-height:40px;"> <!--分享-->           
+      分享到：<div style="float:right;"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
+      <!--/分享--></div>
+        </div>
+    </div>
+      
+   <!--页面左边-->
+   <div class="left-auto">
+       <div class="bg-wrap">
+           
+           <div class="entry">
+               <p style="text-indent:2em;">
+	10月29日，新疆阿克苏发改委发布阿克苏地区2021年第二批光伏发电项目公开招标公告。光伏发电项目总规模60万千瓦，分为5个标段：柯坪县一标段20万千瓦、柯坪县二标段10万千瓦、柯坪县三标段10万千瓦；乌什县一标段10万千瓦、乌什县二标段10万千瓦。每个标段光伏发电项目按不低于15%的装机比例配置储能规模，且额定功率下的储能时长不低于3小时配置。所有光伏发电项目在2022年6月底前建成并网，储能装置在2022年12月底前建成并网。
+</p>
+<p style="text-align:center;text-indent:2em;">
+	<strong>阿克苏地区2021年第二批光伏发电项目公开招标公告</strong>
+</p>
+
+<p style="text-indent:2em;">
+	项目概况
+</p>
+
+<p style="text-indent:2em;">
+	阿克苏地区2021年第二批光伏发电项目的潜在投标人应在新疆泽一项目管理有限公司获取招标文件，并于2021年11月19日10点30分（北京时间）前提交投标文件。
+</p>
+
+<p style="text-indent:2em;">
+	一、项目基本情况
+</p>
+
+<p style="text-indent:2em;">
+	项目编号：2021-XJZYXM-008
+</p>
+
+<p style="text-indent:2em;">
+	项目名称：阿克苏地区2021年第二批光伏发电项目
+</p>
+
+<p style="text-indent:2em;">
+	建设地点：乌什县、柯坪县
+</p>
+
+<p style="text-indent:2em;">
+	标段划分：阿克苏地区2021年第二批光伏发电项目总规模60万千瓦，分为5个标段：柯坪县一标段20万千瓦、柯坪县二标段10万千瓦、柯坪县三标段10万千瓦；乌什县一标段10万千瓦、乌什县二标段10万千瓦。每个标段光伏发电项目按不低于15%的装机比例配置储能规模，且额定功率下的储能时长不低于3小时配置。
+</p>
+
+<p style="text-indent:2em;">
+	（一）所有光伏发电项目在2022年6月底前建成并网，储能装置在2022年12月底前建成并网。
+</p>
+
+<p style="text-indent:2em;">
+	（二）项目应符合国家技术标准和规范要求，并严格按照有关法律法规落实环境保护和安全质量管理等要求。
+</p>
+
+<p style="text-indent:2em;">
+	（三）单个标段的光伏发电项目集约化建设，发电送出工程、储能装置包含在主体项目内。
+</p>
+
+<p style="text-indent:2em;">
+	合同履行期限：按甲乙双方合同约定执行
+</p>
+
+<p style="text-indent:2em;">
+	二、申请人的资格要求
+</p>
+
+<p style="text-indent:2em;">
+	1.满足《中华人民共和国政府采购法》第二十二条规定；
+</p>
+
+<p style="text-indent:2em;">
+	2.落实政府采购政策需满足的资格要求；
+</p>
+
+<p style="text-indent:2em;">
+	3.本项目的特定资格要求；
+</p>
+
+<p style="text-indent:2em;">
+	三、获取招标文件时间、地点和方式
+</p>
+
+<p style="text-indent:2em;">
+	时间：2021年10月30日至2021年11月05日，每天上午10:00至14:00，下午15:30至19:30（北京时间，法定节假日除外）
+</p>
+
+<p style="text-indent:2em;">
+	地点：新疆阿克苏地区阿克苏市幸福南路6号锦程﹒玫瑰园小区1号商铺楼401室
+</p>
+
+<p style="text-indent:2em;">
+	方式：请潜在投标人提供有效的营业执照、法定代表人授权委托书及被委托人身份证件（投标人代表为法定代表人时，只提供法定代表人身份证原件及身份证明书原件），领取采购文件。
+</p>
+
+<p style="text-indent:2em;">
+	售价：200元人民币（售后不退）
+</p>
+
+<p style="text-indent:2em;">
+	四、提交投标文件截止时间、开标时间和地点
+</p>
+
+<p style="text-indent:2em;">
+	时间：2021年11月19日10点30分（北京时间）
+</p>
+
+<p style="text-indent:2em;">
+	地点：阿克苏市北京路25号（体育馆对面）地区为民服务中心B座三楼地区公共资源交易中心开标区
+</p>
+
+<p style="text-indent:2em;">
+	五、公告期限
+</p>
+
+<p style="text-indent:2em;">
+	自本公告发布之日起5个工作日。
+</p>
+
+<p style="text-indent:2em;">
+	六、其他补充事宜
+</p>
+
+<p style="text-indent:2em;">
+	1.提供在“信用中国”网站、中国政府采购网、国家企业信用信息公示系统查询结果截图；
+</p>
+
+<p style="text-indent:2em;">
+	2. 与招标人存在利害关系可能影响招标公正性的单位，不得参加投标。单位负责人为同一人或存在控股、管理关系的不同单位，不得参加同一标段投标，否则，相关投标均无效；
+</p>
+
+<p style="text-indent:2em;">
+	3.本项目接受联合体投标。
+</p>
+
+<p style="text-indent:2em;">
+	注：以上要求不作为最终投标审查资质，具体以招标文件要求为准。
+</p>
+
+<p style="text-indent:2em;">
+	七、凡对本次采购提出询问，请按以下方式联系。
+</p>
+
+<p style="text-indent:2em;">
+	1.采购人信息
+</p>
+
+<p style="text-indent:2em;">
+	名 称：阿克苏地区发展和改革委员会
+</p>
+
+<p style="text-indent:2em;">
+	地 址：阿克苏市文化路地区综合办公二区9号楼219
+</p>
+
+<p style="text-indent:2em;">
+	2.采购代理机构信息
+</p>
+
+<p style="text-indent:2em;">
+	名 称：新疆泽一项目管理有限公司
+</p>
+
+<p style="text-indent:2em;">
+	地 址：新疆阿克苏地区阿克苏市幸福南路6号锦程﹒玫瑰园小区1号商铺楼401室
+</p>
+           </div>			
+   		<div class="line10"></div> 
+       </div>
+           <!--相关资讯-->
+       <div class="rel-box">
+               <h2 class="slide-tit">
+                   <span>关键字:<a href="/search.html?keyword=储能">储能</a> </span>
+               </h2>
+               <div class="line10"></div>
+   		<p style="font-size: 16px;">中国储能网版权说明：<br />1、凡注明来源为“中国储能网：xxx（署名）”，除与中国储能网签署内容授权协议的网站外，未经本网授权，任何单位及个人不得转载、摘编或以其它方式使用上述作品。<br />2、凡本网注明“来源：xxx（非中国储能网）”的作品，均转载与其他媒体，目的在于传播更多信息，但并不代表中国储能网赞同其观点、立场或证实其描述。其他媒体如需转载，请与稿件来源方联系，如产生任何版权问题与本网无关。<br />3、如因作品内容、版权以及引用的图片（或配图）内容仅供参考，如有涉及版权问题，可联系我们直接删除处理。请在30日内进行。<br />4、有关作品版权事宜请联系：13661266197 邮箱：ly83518@126.com</p>
+                <h2 class="slide-tit" style="border:0;height: 30px;">
+                   相关报道
+               </h2>
+                <ul class="side-list">
+               
+                   <li>
+                       <a href="/news/show-1254814.html">加快推动新型储能发展</a>
+                   </li>
+               
+                   <li>
+                       <a href="/news/show-1228861.html">中法联合打造世界领先电池生产中心</a>
+                   </li>
+               
+                   <li>
+                       <a href="/news/show-1217744.html">《锂离子电池储能系统消防安全测试技术规范》团体标准工作会议在杭州召开</a>
+                   </li>
+               
+                   <li>
+                       <a href="/news/show-1228348.html">南方区域调频辅助服务市场将转入正式运行</a>
+                   </li>
+               
+                   <li>
+                       <a href="/news/show-1217739.html">《储能用锂离子电池系统安全通用技术规范》团体标准工作会议在杭州召开</a>
+                   </li>
+               
+                   <li>
+                       <a href="/news/show-1226867.html">国家能源局发布《新型储能项目管理规范（暂行）（征求意见稿）》</a>
+                   </li>
+               
+               </ul>
+           </div>
+           <!--/相关资讯-->
+       </div>
+   </div>
+   <!--/页面左边-->
+   
+	 <div class="clear"></div>
+	<!--/页面右边-->
+	<div class="right-260">
+	    <div class="bg-wrap nobg">	       
+	    <div class="sidebar-box adlist">
+	          <script type="text/javascript" src="/plugins/advert/advert_js.ashx?id=40"></script>
+		<div class="clear"></div>
+	    </div>
+	    
+	    <div class="sidebar-box">
+	       <h2 class="slide-tit" style="color:red;text-align: left;">特别推荐</h2>
+            <a href="/news/321.html" style="font-weight: bold;margin-top: -30px;float: right;">更多&gt;&gt;</a>
+	       <ul class="rel-list">
+            
+	           <li>
+	               <div class="img-box">
+	                   <a title="26省区电改后最新电价一览" href="/news/show-1279454.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/31/202110311316506296.jpg" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="26省区电改后最新电价一览" href="/news/show-1279454.html">26省区电改后最新电价一览</a></h3>
+	           </li>
+	       
+	           <li>
+	               <div class="img-box">
+	                   <a title="中国能建签订金沙江下游风光水储基地首批光伏项目" href="/news/show-1279214.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/31/202110311228592903.png" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="中国能建签订金沙江下游风光水储基地首批光伏项目" href="/news/show-1279214.html">中国能建签订金沙江下游风光水储基地首批光伏项目</a></h3>
+	           </li>
+	       
+	           <li>
+	               <div class="img-box">
+	                   <a title="政策驱动，储能市场顺势而上" href="/news/show-1278701.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/31/202110311009351555.png" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="政策驱动，储能市场顺势而上" href="/news/show-1278701.html">政策驱动，储能市场顺势而上</a></h3>
+	           </li>
+	       
+	           <li>
+	               <div class="img-box">
+	                   <a title="我国全钒液流电池发展状况" href="/news/show-1278650.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/29/202110291256056918.png" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="我国全钒液流电池发展状况" href="/news/show-1278650.html">我国全钒液流电池发展状况</a></h3>
+	           </li>
+	       
+	           <li>
+	               <div class="img-box">
+	                   <a title="专家：投入大，价差小，抽水蓄能盈利难" href="/news/show-1278232.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/29/202110290903199601.png" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="专家：投入大，价差小，抽水蓄能盈利难" href="/news/show-1278232.html">专家：投入大，价差小，抽水蓄能盈利难</a></h3>
+	           </li>
+	       
+	           <li>
+	               <div class="img-box">
+	                   <a title="霍尼韦尔测试液流电池技术，可以存储和调度12小时电力" href="/news/show-1278095.html">
+	                       <img class="pic" src="/images/loadimg.gif" data-original="/upload/202110/28/202110281940224626.png" />
+	                   </a>                          
+	             </div>
+	             <h3><a title="霍尼韦尔测试液流电池技术，可以存储和调度12小时电力" href="/news/show-1278095.html">霍尼韦尔测试液流电池技术，可以存储和调度12小时电力</a></h3>
+	           </li>
+	       
+	       </ul>  
+		 <div class="clear"></div>
+	    </div>
+	    </div>
+	</div>
+	<!--/页面右边-->
+    <div class="clear"></div>
+	<script type="text/javascript" src="/plugins/advert/advert_js.ashx?id=44"></script>
+</div>
+
+<!--页面底部-->
+<div class="footer">
+    <div class="section">
+        <div class="foot-nav">
+            <div class="foot-left">
+                <a href="/content/about.html">关于我们</a>
+                <a href="/content/contact.html">联系方式</a>
+                <a href="/content/vipuser.html">会员服务</a>
+                <a href="/content/more.html">多元化服务</a>
+                <a href="/content/hr.html">招聘信息</a>
+                <a href="/feedback.html">在线留言</a>
+                <a href="/link.html">友情链接</a>
+                <a href="/content/copyright.html">版权申明</a>
+            </div>
+            <div class="foot-right">
+                <img src="/templates/ESCN2020/images/bottomLogo.jpg" />
+            </div>
+        </div>
+        <div class="foot-box">
+            <div class="copyright">
+                <p>广告热线：010-63909927 13501192779</p>
+                <p>版权所有：版权所有 中国储能网© Copyright 2011 - 2021. All Rights Reserved. Power by I5tool.com </p>
+                <p><a  href='http://beian.miit.gov.cn/'  target='_blank'>京ICP备12023756号</a>/京公网安备11010502023804</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6c0f7aa218515d4349edd87a5f853d4d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--/页面底部-->
+</body>
+</html>

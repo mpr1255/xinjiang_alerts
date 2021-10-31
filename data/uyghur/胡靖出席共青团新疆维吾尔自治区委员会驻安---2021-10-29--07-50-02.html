@@ -1,0 +1,509 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+<title id="IndexTitle" runat="server">胡靖出席共青团新疆维吾尔自治区委员会驻安徽省工作委员会成立大会</title>
+	<link rel="stylesheet" href="/base/web/webNew/webcss/images/public.css"/>
+    <link rel="stylesheet" href="/base/web/webNew/webcss/images/index.css"/>
+    
+    
+    <!--  灰色调调用下面css end  -->
+    <link rel="stylesheet" href="/base/web/webNew/js/swiper/css/swiper.min.css" />
+    <script src="/base/web/webNew/js/jquery-3.5.1.min.js"></script>
+    <script src="/base/web/js/aes.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
+    <![endif]-->
+    
+    
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+ <div class="top">
+    <div class="main">
+        <div class="top-tips">您好！欢迎来到安徽共青团！</div>
+        <div class="top-login">
+            <form method="post" name = "frm_user" onkeydown="keydownListen();" action="POST">
+                <label>用户名：</label>
+                <input type="text" name="username" id="txtName" />
+                <label>密码：</label>
+                <input type="password" name="password" id="txtPWD" />
+                
+                <input type="hidden" name="actiontype" value="logon" />
+	    		<input type="hidden" name="screensize" value=""/>
+	    		
+	    		<input type="hidden" name="usernameSec" id="usernameSec" />
+	    		<input type="hidden" name="passwordSec" id="passwordSec" />
+	    		<input type="hidden" name="strFrom" value="portal" />
+	    
+                <button type="button"  style="cursor: pointer;" onclick="login1()" >OA登录</button>
+            </form>
+            
+            <script type="text/javascript">
+	            function login1(){
+	        	    if (frm_user.username.value=="")
+	        	    {
+	        	        alert("请输入您的用户名。");
+	        	        frm_user.username.focus();
+	        	        return ;
+	        	    }
+	        	    if (frm_user.password.value=="")
+	        	    {
+	        	        alert("请输入您的密码。");
+	        	        frm_user.password.focus();
+	        	        return ;
+	        	    }
+	        	    frm_user.screensize.value=window.screen.width;
+	        	   
+	        	     
+	        	    //alert(frm_user.usernameSec.value+"--"+frm_user.passwordSec.value);
+	        	    
+	        	    //frm_user.username.value = '';
+	    			//frm_user.password.value = '';
+	        	    
+	        	    frm_user.action="/base/Auth"; 
+	        	    frm_user.target="_blank";
+	        	   	frm_user.submit();
+	        	}
+	            
+	            function encrypt(value){  
+	            		                
+	        		var key  = CryptoJS.enc.Utf8.parse("1234123412ABCDEF");//十六位十六进制数作为密钥
+	        		var iv   = CryptoJS.enc.Utf8.parse("ABCDEF1234123412");//十六位十六进制数作为密钥偏移量
+	        		//加密
+	        		var encValue = CryptoJS.AES.encrypt(value,key,{iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.Pkcs7});
+	        	    return encValue.toString();  
+	        	}
+	            
+	            
+	        	function keydownListen(){
+	        		if (event.keyCode==13)
+	        	    {
+	        		   login1();
+	        		   return false;
+	        	    }
+	        	}
+            </script>
+            
+            
+        </div>
+        <div class="top-search">
+            <form method="post" name="frm_search" onkeydown="keydownListen2();">
+            
+            
+             	
+             	<select name="strType">
+             		<option value="title">标题</option>
+             		<option value="content">内容</option>
+             	</select>
+                <input type="text" name="keyword" placeholder="请输入您需要查询的内容" />
+                <button type="button" onclick="search();" style="cursor: pointer;">搜索</button>
+            </form>
+            
+            <script type="text/javascript">
+	            function search(){
+	        		if(frm_search.keyword.value == ""){
+	        			alert("请输入关键字再搜索");
+	        			return;
+	        		}else{
+	        			frm_search.action="/base/web/webNew/search.jsp";
+	        	   		frm_search.target="_blank";
+	        	   		frm_search.submit();
+	        	   		return;
+	        		}
+	        		
+	        	}
+	            
+	            function keydownListen2(){
+	        		if (event.keyCode==13)
+	        	    {
+	        			search();
+	        		   return false;
+	        	    }
+	        	}
+            </script>
+        </div>
+    </div>
+</div>
+<div class="top-logo">
+	<img src="/base/web/webNew/webcss/images/top_logo.jpg" class="imgGray" />
+</div>
+
+
+
+
+
+<div class="nav background-linear">
+    <div class="main">
+        <ul>
+            <li><a href="/base/portals.jsp">网站首页</a></li>
+            
+            
+            
+          
+          
+            <li >
+            	
+            	
+	         		<a href="/base/web/webNew/info_list.jsp?pId=1304409675750001" title="工作动态"  target="_blank">工作动态</a>
+	         	
+            
+            
+            	
+	                <dl style="display: none;">
+	                    
+	                    
+	                    
+	                      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415435432270002">要讯快报</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415435489021003">时政热点</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415435520649004&gediType=gedi">各地工作</a></dd>
+						    
+						 
+				  
+	                    
+	                    
+	                </dl>
+                
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         	 	<a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415435432270002&img=1" >图片新闻</a>
+	         	
+            
+            
+            	
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         	 	<a href="javascript:void(0)" >专题栏目</a>
+	         	 
+            
+            
+            	
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         		<a href="/base/web/webNew/info_list.jsp?pId=1415440265794007" title="信息中心"  target="_blank">信息中心</a>
+	         	
+            
+            
+            	
+	                <dl style="display: none;">
+	                    
+	                    
+	                    
+	                      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415446112877012">预决算公开</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415446248175014">团刊简报</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415446209484013">机关建设</a></dd>
+						    
+						 
+				  
+	                    
+	                    
+	                </dl>
+                
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         		<a href="/base/web/webNew/info_list.jsp?pId=1415892820355000" title="组织研究"  target="_blank">组织研究</a>
+	         	
+            
+            
+            	
+	                <dl style="display: none;">
+	                    
+	                    
+	                    
+	                      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415446302156015">调查研究</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415456699572020">青年典型</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415456762018022">命名与表彰</a></dd>
+						    
+						 
+				  
+	                    
+	                    
+	                </dl>
+                
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         	 	<a  >战线网站</a>
+	         	 
+            
+            
+            	
+	                <dl style="display: none;">
+	                    
+	                    
+	                    
+	                    
+						 
+						  	
+						  	
+							
+							<dd><a href="http://www.ahstx.ah.cn/" target="_blank">安徽省团校</a></dd>
+							<dd><a href="http://www.ahyouth.com/">安徽青年报社</a></dd>
+							
+							<dd><a href="http://www.snbl.com.cn/" target="_blank">安徽少年博览杂志社</a></dd>
+							
+							<dd><a href="http://www.ahydf.cn/">安徽省青少年发展基金会</a></dd>
+							
+							
+						  
+				  
+	                    
+	                    
+	                </dl>
+                
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         		<a href="/base/web/webNew/info_list.jsp?pId=1415892955062005" title="部门工作"  target="_blank">部门工作</a>
+	         	
+            
+            
+            	
+	                <dl style="display: none;">
+	                    
+	                    
+	                    
+	                      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415892964153006">办公室</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415892981170007">组织部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415892994169008">宣传部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415893072362014">青少年发展和权益维护部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415893033434011">学校部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415893048874012">少年部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415893057315013">联络部</a></dd>
+						      
+							   		
+						   		 <dd><a target="_blank" href="/base/web/webNew/info_list.jsp?colId=1415893085917015">直属机关党委</a></dd>
+						    
+						 
+				  
+	                    
+	                    
+	                </dl>
+                
+            </li>
+            
+            
+		
+          
+          
+            <li >
+            	
+            	
+	         	 	<a href="/base/web/webNew/info_view.jsp?strId=1417015106608638" target="_blank" >联系我们</a>
+	         	 
+            
+            
+            	
+            </li>
+            
+            
+		
+            
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+ 
+
+
+<!-- 正文 -->
+<div class="index-main">
+    <div class="info-main">
+        <div class="info-main-left">
+            <div class="info-main-location">
+                <span>您现在所在位置：</span>
+                <a href="/base">首页 >></a>
+               
+                
+	      		<a href="/base/web/webNew/info_list.jsp?colId=1304409675750001">工作动态>></a>
+	      		
+	      		<a href="/base/web/webNew/info_list.jsp?colId=1415435432270002">要讯快报</a>
+	    		
+	    
+                
+                <div class="clear"></div>
+            </div>
+            <div class="info-main-left-list">
+                <div class="info-main-left-list-title">
+                    <span class="background-linear">要讯快报</span>
+                </div>
+                <div class="article-main">
+                    <h1>胡靖出席共青团新疆维吾尔自治区委员会驻安徽省工作委员会成立大会</h1>
+                    <div class="article-main-time">
+                        <span>发布时间：2021-10-29</span>
+                        
+                        <span>来源：联络部</span>
+                        <span>阅读次数：97</span>
+                    </div>
+                    <div class="article-main-content">
+                        <p style="TEXT-INDENT: 2em">10月26日，共青团新疆维吾尔自治区委员会驻安徽省工作委员会成立大会在合肥召开。团省委副书记胡靖出席会议并讲话，新疆驻安徽工作组党委书记、组长关锋，团省委联络部、团合肥市委负责同志，新疆驻安徽团工委13名委员及在皖各界青年代表共计40余人参加会议。</p><p style="TEXT-ALIGN: center"><img title="1635478993598079225.png" alt="鍥剧墖1.png" src="http://www.ahyouth.org.cn/base/upload/commaffix/1302767702718001/2021/content/1635478469056996/1635478993598079225.png"/></p><p style="TEXT-INDENT: 2em">会议在庄严的国歌声中拉开序幕。胡靖对新疆驻安徽团工委的成立表示祝贺，并同关锋为新疆驻安徽团工委进行揭牌。</p><p style="TEXT-ALIGN: center"><img title="1635479036710042248.png" alt="鍥剧墖2.png" src="http://www.ahyouth.org.cn/base/upload/commaffix/1302767702718001/2021/content/1635478469056996/1635479036710042248.png"/></p><p style="TEXT-INDENT: 2em">胡靖对新疆驻安徽团工委寄予厚望：一是要加强学习。要进一步深刻学习领会、切实贯彻落实习近平总书记关于民族团结以及青年工作的重要论述，引领在皖新疆青年加强学习，坚定理想信念；二是要建好队伍。要尽快完善团的组织体系，建好基层团组织，广泛联系团员青年，探索优先在新疆青年较集中的非公企业建立团支部，以便迅速推动工作；三要发挥作用。要充分发挥联系青年的桥梁和纽带作用，在新疆青年社会融入、创业就业、子女服务、困难帮扶、宣传新疆等方面积极开展工作，更好地服务新疆青年。</p><p>&nbsp;</p><p style="TEXT-ALIGN: center; TEXT-INDENT: 0em">&nbsp;</p>
+                        
+                        
+                           
+			          	 
+			          	 
+                    </div>
+                              	
+		          	
+          	 
+                </div>
+            </div>
+
+        </div>
+        <div class="info-main-right">
+            
+            
+            
+            <div class="info-main-now-nav">
+                <div class="info-main-now-nav-title"><p class="background-linear">工作动态</p></div>
+                <dl>
+                    
+                    
+                    
+		        	 	<dd><a href="info_list.jsp?colId=1415435432270002">要讯快报</a></dd>
+		         	
+		        	 	<dd><a href="info_list.jsp?colId=1415435489021003">时政热点</a></dd>
+		         	
+		        	 	<dd><a href="info_list.jsp?colId=1415435520649004&type=0">各地工作</a></dd>
+		         	
+         	
+                    
+                </dl>
+            </div>
+            
+            
+            
+            
+            
+
+
+ 
+            
+            
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="main">
+        <p><a href="">皖ICP备05006595号</a> 总访问28222629次<br/>Copyright @ 2008 共青团安徽省委员会 All Rights Reserved 地址:合肥市中山路1号省行政中心2号楼2楼<br/>邮编:230061 Tel:0551-63609713 E-mail: ahtsw@126.com</p>
+        <div class="footer-right-img" >
+            <div style="display:block; position:absolute;right:50px;top:10px;z-index:9999999;"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/13/000/0000/60593788/CA130000000605937880001.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+  
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Initialize Swiper -->
+<script src="js/public.js"></script>
+<script src="js/index.js"></script>
+<!--  灰色调调用下面js  -->
+<!--<script src="js/gray.js"></script>-->
+<!--  灰色调调用下面js end  -->
+</body>
+</html>
+
+
+
