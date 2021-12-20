@@ -1,5 +1,10 @@
 # About the project
 
+> DEPRECATED. 
+> Stopped updating this; rewrote the code and started using SQLite backend; integrated xinjiang alerts into all my other alerts.
+
+#####################################
+
 This is an open source project written in `R` that checks the Google Alerts RSS feed for the terms 新疆 (Xinjiang) and 维吾尔 (Uyghur) hourly, and archives all results in both the Wayback Machine and saving the HTML. The HTML files are stored in this repo. CSV files also in this repo contain the wayback machine's archived link.
 
 ## How it works
